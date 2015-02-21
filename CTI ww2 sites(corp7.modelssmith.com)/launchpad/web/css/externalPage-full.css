@@ -1,0 +1,3054 @@
+/*** start externalPage.css ***/
+/*** start calendarPicker.css ***/
+.datePickerTable {
+	width: 12em;
+	background-color: #FAF8F4;
+}
+
+.datePickerTitle, .datePickerHelp, .datePickerWeekday, .datePickerOptions {
+	background-color: #DEDED5;
+	color: #505050;
+}
+
+.datePickerDayOtherMonth, .datePickerTimeBox { background-color: #E8E8E1; }
+
+.datePickerTable td, .datePickerTable th {
+	vertical-align: middle;
+	text-align: center !important;
+	font-size: 0.9091em;
+	padding: 0 !important;
+	border: 0;
+}
+
+table.datePickerTable thead th {
+	color: #545C6E;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.datePickerTable th.datePickerTitle, .datePickerTable tfoot th {
+	padding: .1em;
+}
+
+.datePickerNav a {
+	font-weight: bold;
+	height: 1.2em;
+	height: 1.2em;
+	line-height: 1.2em;
+}
+
+.datePickerPreviousMonthLink a,
+.datePickerNextMonthLink a {
+	font-size: 1.2em;
+	line-height: 1em;
+	height: 1em;
+	overflow: hidden;
+}
+
+.datePickerTable thead a, .datePickerTable tbody a {
+	padding: .1em .4em;
+	display: block;
+}
+
+.datePickerDayOtherMonth a:link, .datePickerDayOtherMonth a:visited { color: #4C6399; }
+
+.datePickerTable thead a:hover, .datePickerTable tbody a:hover {
+	background-color: #BFF5B3;
+	color: #6C7E62;
+}
+
+.datePickerOptions input.checkbox { vertical-align: middle; }
+
+.datePickerTable .datePickerDayToday a { text-decoration: underline !important; }
+
+.datePickerTable .datePickerStartRange { background-color: #D1DCF0; }
+
+.datePickerTimeBox input.formTextInput {
+	width: 5em !important;
+	margin: 0;
+}
+
+.datePickerTimeBox span {
+	display: block;
+	padding: .1em 0;
+}
+/*** end calendarPicker.css ***/
+
+body {
+	background-color: #B2B2AB;
+	color: black;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+body.dabbleBodyEmbedded {
+	background-color: white;
+}
+
+body, input.text, input.file, textarea, select {
+	font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+}
+
+table { border-collapse: collapse; }
+
+.dabblePageContainer {
+	position: relative;
+	font-size: .75em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 82em;
+}
+
+.dabblePageNoNavigation {
+	width: 70em;
+}
+
+.dabblePageEmbedded {
+	margin-left: 0;
+	width: 100%;
+}
+
+.dabblePageBottomShadow {
+	margin: 0 6px;
+	height: 6px;
+	background-image: url(../images/bg/externalPage/bottom.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+.dabblePageBottomLeftShadow {
+	float: left;
+	background-image: url(../images/bg/externalPage/bottom-left.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 6px;
+	height: 6px;
+}
+
+.dabblePageBottomRightShadow {
+	float: right;
+	background-image: url(../images/bg/externalPage/bottom-right.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	width: 6px;
+	height: 6px;
+}
+
+.dabblePageRightShadow {
+	background-image: url(../images/bg/externalPage/right.png);
+	background-repeat: repeat-y;
+	background-position: right top;
+	padding: 0 6px 0 0;
+}
+
+.dabblePageEmbedded .dabblePageBottomShadow,
+.dabblePageEmbedded .dabblePageBottomLeftShadow,
+.dabblePageEmbedded .dabblePageBottomRightShadow,
+.dabblePageEmbedded .dabblePageRightShadow {
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dabblePageEmbedded .dabblePageBottomLeftShadow,
+.dabblePageEmbedded .dabblePageBottomRightShadow { width: 0; height: 0; }
+
+.dabblePage {
+	background-color: #FFFFFF;
+}
+
+.dabblePageForm {
+	margin: 0;
+}
+
+.dabblePageLogo {
+	padding: 10px 2em 10px 14em;
+	background-color: #365A84;
+}
+
+.dabblePageNoNavigation .dabblePageLogo {
+	padding-left: 2em;
+}
+
+.dabblePage h1 {
+	color: white;
+	margin: 0;
+	padding: 3em 1.7143em .5em 12em;
+	font-size: 1.1667em;
+	background-color: #365A84;
+}
+.dabblePageSection h1 {
+	background-color: transparent !important;
+	color: black;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 1.5em;
+}
+
+.dabblePageSection h2 {
+	font-size: 1.3333em;
+}
+
+.dabblePageSection h3 { font-size: 1.1667em; }
+
+.dabblePageSection h4 { font-size: 1em; }
+
+.dabblePageSection h5 { font-size: .9167em; }
+
+.dabblePageSection h6 { font-size: .8333em; }
+
+.dabblePageNoNavigation .dabblePage h1 {
+	padding-left: 1.7143em;
+}
+
+.dabblePageWithLogo h1 {
+	padding-top: .5em;
+	background-color: #6886AB;
+}
+
+.dabblePageNavigation {
+	position: absolute;
+	overflow: hidden;
+	padding-top: 5em;
+	padding-bottom: 0;
+	width: 12em;
+	top: 0;
+	background-image: url(../images/bg/externalPage/menu.png);
+}
+
+.dabblePage .dabblePageMenu {
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+.dabblePage .dabblePageAdminMenu {
+	padding-bottom: 3em;
+}
+
+.dabblePageMenu li {
+	list-style-type: none;
+}
+
+.dabblePage input.text,
+.dabblePage textarea,
+.dabblePage input.file {
+	font-weight: normal;
+	font-size: 1em;
+	border-width: 1px;
+	border-color: #999 #EEE #EEE #999;
+	border-style: solid;
+}
+
+.dabblePage input.file {
+	font-size: .8182em;
+}
+
+.dabblePage input.button, .dabblePage input.submit, .dabblePage select {
+	font-size: 1em;
+}
+
+.dabblePage input.checkbox {
+	margin-bottom: 0;
+	margin-right: .5em;
+}
+
+.dabblePage input.radio {
+	vertical-align: bottom;
+	margin-bottom: 0;
+}
+
+.dabblePage p,
+.dabblePage ul, 
+.dabblePage ol {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.dabblePageSubmittedData {
+	border-width: 0 0 1px 0;
+	border-color: #EEE;
+	border-style: solid;
+	margin-bottom: .75em;
+}
+
+.dabblePageSection {
+	background-color: white;
+	padding: .5em 0 .5em 0;
+	margin-left: 12em;
+}
+
+.dabblePageView {
+	padding: 0;
+	margin-top: 0;
+}
+
+.dabblePageForm .dabblePageView {
+	padding: 0 0 1.25em 0;
+	overflow: auto;
+}
+
+.dabblePageSubmittedData .dabblePageSection {
+	padding: .1em 0;
+}
+
+.dabblePageNoNavigation .dabblePageSection,
+.dabblePageNoNavigation .dabblePageUserMenu {
+	margin-left: 0;
+}
+
+.dabblePageSection:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.dabblePageSectionErrors {
+	border: 0;
+	padding: 0;
+}
+
+.dabblePageSectionErrors p {
+	margin-top: 1em;
+}
+
+.dabblePageSectionText {
+	padding: 1em 2em 0;
+}
+
+.dabblePageColumn {
+	padding: 0 1em 0 2em;
+/*	width: 66em;*/
+	float: left;
+}
+
+.dabblePageSectionFull .dabblePageColumn {
+	width: 47em;
+	padding-right: 0;
+}
+
+.dabblePageEmbedded .dabblePageSectionFull .dabblePageColumn {
+	width: auto;
+}
+
+.dabblePageSectionHalf .dabblePageColumn { width: 31.5em; }
+
+.dabblePageSectionMini .dabblePageColumn { width: 19.5em; }
+
+.dabblePageFormField { width: 40em; }
+
+.dabblePageSectionHalf .dabblePageFormField { width: 23em; }
+
+.dabblePageSectionMini .dabblePageFormField {	width: 12em; }
+
+.dabblePageFormItem, .dabblePageTextItem {
+	clear: left;
+	float: left;
+	width: 100%;
+}
+
+.dabblePageFormLabel {
+	display: block;
+	float: left;
+	width: 10em;
+	padding: .25em 1em 1em 0;
+	text-align: right;
+	vertical-align: top;
+	font-size: .9167em;
+	font-weight: bold;
+	color: #505050;
+}
+
+.dabblePageFormFieldHeader {
+	font-weight: bold;
+	color: #6E6E6E;
+	font-size: .9091em;
+	padding: .5em 0 .1em 0;
+}
+
+.dabblePageFormField {
+	display: block;
+	float: left;
+	vertical-align: top;
+	font-size: .9167em;
+	padding-bottom: 1em;
+}
+
+.dabblePageReadonly { padding-top: .25em; }
+
+.dabblePageReadonly ul {
+	margin: -.25em 0 0 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.dabblePageReadonly li {
+	background-color: #F0EFEB;
+	margin-bottom: .25em;
+	padding: .25em .5em;
+	float: left;
+	clear: left;
+	display: block;
+	min-height: 1.2em;
+}
+
+.dabblePageFormFieldLink {
+	float: right;
+	margin: .1em 2em 0 1em;
+	font-size: .9091em;
+}
+
+.dabblePageFormFieldSubmitted {
+	padding-top: .25em;
+}
+ 
+.dabblePageFormTextInput {
+	vertical-align: middle;
+}
+
+.dabblePageSectionFull input.text,
+.dabblePageSectionFull textarea,
+.dabblePageSectionFull .dabblePageFieldSearchResults {
+	width: 37.9em;
+}
+
+.dabblePageSectionFull input.file {
+	width: 46.3212em;
+}
+
+.dabblePageSectionHalf input.text,
+.dabblePageSectionHalf textarea,
+.dabblePageSectionHalf .dabblePageFieldSearchResults {
+	width: 20.9em;
+}
+
+.dabblePageSectionHalf select {
+	max-width: 20.9em;
+}
+
+.dabblePageSectionHalf input.file {
+	width: 25.5439em;
+}
+
+.dabblePageSectionMini .dabblePageFormLabel {
+	width: 8.1818em;
+}
+
+.dabblePageSectionMini input.text,
+.dabblePageSectionMini textarea,
+.dabblePageSectionMini .dabblePageFieldSearchResults {
+	width: 10em;
+}
+
+.dabblePageSectionMini select {
+	max-width: 10em;
+}
+
+.dabblePageSectionMini input.file {
+	width: 13.4441em;
+}
+
+.dabblePageSection input.numeric,
+.dabblePageSection input.money,
+.dabblePageSection input.duration {
+	width: 8em;
+}
+
+.dabblePageFormField input.password { width: 10em; }
+
+.dabblePageSection .objectFieldRadioValues {
+	margin: 0;
+	padding: 0;
+}
+
+.dabblePageSection .objectFieldRadioValues li {
+	list-style-type: none;
+	padding: .2em 0 .2em 0;
+	margin: 0;
+}
+
+.dabblePageSectionFormActions {
+	background-color: #6886AB;
+	border-width: 0 0 0 12em;
+	border-color: #6886AB;
+	border-style: solid;
+	margin-left: 0;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.dabblePageNoNavigation .dabblePageSectionFormActions {
+	border-left-width: 0;
+}
+
+.dabblePageEmbedded .dabblePageSectionFormActions {
+	background-color: transparent !important;
+	padding-bottom: 1.5em;
+}
+
+.dabblePageFormActions input.submit,
+.dabblePageFormActions input.button {
+	font-size: 1em;
+}
+
+.dabblePageFormItemRequiredError .dabblePageFormLabel label,
+#dabblePageErrors { color: #A12823; }
+
+#dabblePageErrors {
+	padding-top: .5em;
+}
+
+.dabblePageFormItemRequiredError .dabblePageFormLabel label { background-color: #FFFBD3; }
+
+.dabblePageFieldSearchResults {
+	position: absolute;
+	top: 2em;
+	display: block;
+	z-index: 100;
+	background-color: white;
+	border-width: 0 1px 1px 1px;
+	border-color: #91A7D6;
+	border-style: solid;
+}
+
+.dabblePageFieldSearchResults ul {
+	margin: 0;
+	padding: 0;
+}
+
+.dabblePageFieldSearchResults li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-width: 1px 0 0 0;
+	border-color: #CCC;
+	border-style: solid;
+}
+
+.dabblePageFieldSearchResults a:link,
+.dabblePageFieldSearchResults a:visited {
+	text-decoration: none;
+	display: block;
+	padding: .25em .5em;
+}
+
+a.icon:hover, .dabblePageAutocompleteHighlightedResult { background-color: #D5DDEE; }
+
+.dabblePageFieldAddAnotherButton {
+	margin-top: .25em;
+}
+
+.dabblePageAutocompleteFieldRemoveButton {
+	margin: .25em 3px .25em 3px;
+}
+
+.dabblePageAutocompleteFieldBox {
+	display: block;
+	position: relative;
+}
+
+.dabblePageAutocompleteFieldBox input.text,
+.dabblePageAutocompleteFieldBox select {
+	margin: .25em 0;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+a.icon { padding: .25em; }
+a.icon img { vertical-align: middle; }
+
+a:link, a:visited, .dabblePageFieldSearchResults a:hover {
+	color: #113792;
+	text-decoration: none;
+}
+
+.dabblePageText a:link, .dabblePageText a:visited { text-decoration: underline; }
+a:hover { color: #3661BF; }
+
+.dabblePageMenu li {}
+
+.dabblePageMenu a:link, .dabblePageMenu a:visited {
+	color: black;
+	display: block;
+	text-decoration: none;
+	padding: .5em 1em;
+	font-size: .9167em;
+}
+
+.dabblePageMenu a:hover,
+.dabblePageMenu li.selected a {
+	background-color: #6886AB;
+	color: white !important;
+}
+
+#dabblePageConfirmationMessage {
+	padding: 1em 0 0 0;
+	font-weight: bold;
+	color: #407B36;
+}
+
+.dabblePageFormFileStatusItem {
+	color: #666;
+}
+
+.dabblePageFormFileIcon {
+	background-image: url(../images/icons/upload.gif);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-right: .5em;
+	color: black;
+}
+
+.dabblePageFormFileUploadStatusBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/bg/black-translucent.png);
+}
+
+.dabblePagePopWindow {
+	background-color: white;
+	width: 40em;
+	margin: 8em auto 0 auto;
+}
+
+.dabblePagePopWindowHeader {
+	padding: .5em 1em;
+	background-color: #D1D1CC;
+	font-weight: bold;
+	color: #505050;
+}
+
+.dabblePagePopWindowContent {
+	padding: .5em 1em .1em 1em;
+}
+
+#dabblePageFormFileUploadStatus {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+#dabblePageFormFileUploadStatus li {
+	list-style-type: none;
+}
+
+.dabblePageIE6CoverSelects {
+	display: none;
+}
+
+.dabblePageFormItem .popMenuButton {
+	float: right;
+	margin: 0 0 0 -1.5em;
+}
+
+.dabblePageCalendarPickerBox {
+	position: absolute;
+	top: 1.8em;
+	right: 0;
+	z-index: 5;
+	border: 1px solid #B2B2AB;
+}
+
+.dabblePageIE6CoverSelects { display: none; }
+
+.dabblePageSectionSearch { padding: 0; }
+
+#dabblePageTopMessage {
+	padding-top: 1em;
+}
+
+#dabblePageTopMessage, .dabblePageSearch {
+	background-color: #E0DFD9;
+}
+
+.dabblePageSearch {
+	padding: .2em .75em;
+	border-width: 0 0 1px 0;
+	border-color: #BDBAB1;
+	border-style: solid;
+	color: #505050;
+	font-size: .9167em;
+	font-weight: bold;
+	overflow: auto;
+}
+
+.dabblePageFilters { width: 57em; }
+
+.dabblePageFilter {
+	float: left;
+	width: 28em;
+	padding: .4em 0;
+}
+
+.dabblePageFilterLabel, .dabblePageFilterWithCheckbox .dabblePageFilterValue {
+	float: left;
+	width: 10em;
+	margin: .25em .5em 0 0;
+	text-align: right;
+}
+
+.dabblePageFilterButtons {
+	clear: left;
+	margin: .5em 0 .5em 10em;
+}
+
+.dabblePageFilterWithCheckbox .dabblePageFilterValue { margin-top: 0; }
+
+.dabblePageFilterWithCheckbox .dabblePageFilterLabel {
+	width: auto;
+	margin: .25em .75em 0 0;
+	text-align: left;
+}
+
+.dabblePageFilterValue {
+	float: left;
+}
+
+.dabblePageFilterValue input.text,
+.dabblePageFilterValue select { width: 14em; }
+
+.dabblePageMobileOnly,
+.dabblePageNavigationLinks { display: none; }
+
+.dabblePageBusyLoadingBox {
+	z-index: 10;
+	position: absolute;
+	opacity: .5;
+	background-color: white;
+	text-align: center;
+}
+
+.dabblePageAutocompleteLoading { padding: .3em .3em .2em .3em; }
+
+.dabblePageFieldReadonly {
+	padding: .2em 0;
+	display: block;
+}
+
+.dabblePageUserMenu {
+	font-size: .9167em;
+	height: 2em;
+	margin-left: 13.0904em;
+}
+
+.dabblePageWithView .dabblePageUserMenu {
+	background-color: #F1EEE7;
+}
+
+.dabblePageWithSearch .dabblePageUserMenu,
+.dabblePageWithTopMessage .dabblePageUserMenu {
+	position: relative;
+	float: right;
+	height: 0;
+	z-index: 1;
+}
+
+.dabblePageUserMenu ul {
+	float: right;
+}
+
+.dabblePageUserMenu li {
+	float: left;
+	list-style-type: none;
+}
+
+.dabblePageUserMenu a:link, .dabblePageUserMenu a:visited {
+	display: block;
+	padding: .1em .5em .2em .5em;
+	margin: 0 .5em 0 0;
+	background-color: #365A84;
+	border-color: #365A84;
+	border-width: 0 1px 1px;
+	border-style: solid;
+	color: white;
+}
+
+.dabblePageUserMenu a:hover {
+	opacity: .75;
+}
+
+.dabblePageEmbedded .dabblePageUserMenu a:link,
+.dabblePageEmbedded .dabblePageUserMenu a:visited {
+	margin-top: .25em;
+	margin-right: .25em;
+}
+
+#dabblePagePlaceholder td { padding: 1em; }
+#dabblePagePlaceholder img { vertical-align: middle; }
+
+a.print {
+	background-image: url(../images/icons/print.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 50%;
+	padding-left: 22px !important;
+}
+
+#hiddenBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/bg/black-translucent.png);
+	z-index: 100;
+	overflow: auto;
+}
+
+#printDialogBox {
+	width: 45.83333333em;
+	height: 21em;
+	margin: 0 auto;
+	background-color: white;
+	position: relative;
+	text-align: center;
+}
+
+#printDialogSpinner { padding: 2em; }
+#printDialogSpinner img { padding-bottom: 1em; }
+
+#printDialog {
+	width: 100%;
+	height: 100%;
+}
+
+.dabblePageCommonsLogo {
+	text-align: center;
+	padding: 1em;
+}
+
+/*** end externalPage.css ***/
+/*** start externalPageView.css ***/
+/*** start tables.css ***/
+table {
+  border-collapse: collapse;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+td, th {
+  text-align: left;
+  vertical-align: top;
+}
+
+.tableColumn1 {}
+
+.tableColumn2 {	background-color: #F0EDE6; }
+
+tr.clickRowHover {
+	background-color: #C2D2FF !important;
+	cursor: pointer;
+}
+
+tr.clickRowSelected { background-color: #FFFDCF; }
+/*** end tables.css ***/
+/*** start links.css ***/
+/*** start linkColors.css ***/
+/* Event colours */
+
+.reportCalendar .event.group1, ul.paletteMenu .highlight1, .filterSetMenu .highlight1 { background-color: #2BABA2 !important; }
+
+.reportCalendar .event.group1 .calendarEventField {
+	border-color: #53CCBD;
+}
+
+.reportCalendar .event.group1 .calendarEventField,
+.reportCalendar .event.group1 .calendarEventValue { color: #B1FAF4; }
+
+.reportCalendar a.event.group1:hover, ul.paletteMenu a.highlight1:hover, .filterSetMenu a.highlight1:hover {
+	background-color: #009A90 !important;
+}
+
+.reportFilterBox .filterSet .highlight1, .reportTable .highlight1 td {
+	border-color: #009A90;
+	background-color: #8DDFD9;
+}
+
+.reportTable .highlight1 th, .reportTable .highlight1 td.tableColumn2 {
+	background-color: #87D5CF;
+}
+
+.reportCalendar .event.group2, ul.paletteMenu .highlight2, .filterSetMenu .highlight2 {
+	background-color: #FF8080 !important;
+}
+
+.reportCalendar a.event.group2:hover, ul.paletteMenu a.highlight2:hover, .filterSetMenu a.highlight2:hover {
+	background-color: #FF4747 !important;
+}
+
+.reportFilterBox .filterSet .highlight2, .reportTable .highlight2 td {
+	border-color: #FF4747;
+	background-color: #FFC5C5;
+}
+
+.reportTable .highlight2 th, .reportTable .highlight2 td.tableColumn2 {
+	background-color: #F5BDBD;
+}
+
+.reportCalendar .event.group3, ul.paletteMenu .highlight3, .filterSetMenu .highlight3 {
+	background-color: #FAE56A !important;
+	color: black;
+}
+
+.reportCalendar a.event.group3:hover, ul.paletteMenu a.highlight3:hover, .filterSetMenu a.highlight3:hover {
+	background-color: #FAD811 !important;
+	color: black;
+}
+
+.reportFilterBox .filterSet .highlight3, .reportTable .highlight3 td {
+	border-color: #FAD811;
+	background-color: #FAEEA8;
+}
+
+.reportTable .highlight3 th, .reportTable .highlight3 td.tableColumn2 {
+	background-color: #F0E4A1;
+}
+
+.reportCalendar .event.group4, ul.paletteMenu .highlight4, .filterSetMenu .highlight4 {
+	background-color: #6EDB7C !important;
+}
+
+.reportCalendar a.event.group4:hover, ul.paletteMenu a.highlight4:hover, .filterSetMenu a.highlight4:hover {
+	background-color: #26C33A !important;
+}
+
+.reportFilterBox .filterSet .highlight4, .reportTable .highlight4 td {
+	border-color: #26C33A;
+	background-color: #A8F7B3;
+}
+
+.reportTable .highlight4 th, .reportTable .highlight4 td.tableColumn2 {
+	background-color: #A1EDAC;
+}
+
+.reportCalendar .event.group5, ul.paletteMenu .highlight5, .filterSetMenu .highlight5 {
+	background-color: #D884DA !important;
+}
+
+.reportCalendar a.event.group5:hover, ul.paletteMenu a.highlight5:hover, .filterSetMenu a.highlight5:hover {
+	background-color: #D74FDA !important;
+}
+
+.reportFilterBox .filterSet .highlight5, .reportTable .highlight5 td {
+	border-color: #E97CEC;
+	background-color: #FDBCFF;
+}
+
+.reportTable .highlight5 th, .reportTable .highlight5 td.tableColumn2 {
+	background-color: #F3B4F5;
+}
+
+.reportCalendar .event.group6, ul.paletteMenu .highlight6, .filterSetMenu .highlight6 {
+	background-color: #FF9E49 !important;
+}
+
+.reportCalendar a.event.group6:hover, ul.paletteMenu a.highlight6:hover, .filterSetMenu a.highlight6:hover {
+	background-color: #F70 !important;
+}
+
+.reportFilterBox .filterSet .highlight6, .reportTable .highlight6 td {
+	border-color: #F70;
+	background-color: #FFD3AC;
+}
+
+.reportTable .highlight6 th, .reportTable .highlight6 td.tableColumn2 {
+	background-color: #F5CBA5;
+}
+
+.reportCalendar .event.group7, ul.paletteMenu .highlight7, .filterSetMenu .highlight7 {
+	background-color: #907ABB !important;
+}
+
+.reportCalendar a.event.group7:hover, ul.paletteMenu a.highlight7:hover, .filterSetMenu a.highlight7:hover {
+	background-color: #7058A1 !important;
+}
+
+.reportFilterBox .filterSet .highlight7, .reportTable .highlight7 td {
+	border-color: #7058A1;
+	background-color: #C5BADC;
+}
+
+.reportTable .highlight7 th, .reportTable .highlight7 td.tableColumn2 {
+	background-color: #BCB1D2;
+}
+
+.reportCalendar .event.group8, ul.paletteMenu .highlight8, .filterSetMenu .highlight8 {
+	background-color: #B3A7A2 !important;
+}
+
+.reportCalendar a.event.group8:hover, ul.paletteMenu a.highlight8:hover, .filterSetMenu a.highlight8:hover {
+	background-color: #918782 !important;
+}
+
+.reportFilterBox .filterSet .highlight8, .reportTable .highlight8 td {
+	border-color: #918782;
+	background-color: #BDB1AB;
+}
+
+.reportTable .highlight8 th, .reportTable .highlight8 td.tableColumn2 {
+	background-color: #B3A7A2;
+}
+
+.reportCalendar .event.group0, ul.paletteMenu .highlight0, .filterSetMenu .highlight0 {
+	background-color: transparent !important;
+}
+
+.reportCalendar a.event.group0:hover, ul.paletteMenu a.highlight0:hover, .filterSetMenu a.highlight0:hover {
+	background-color: #E8E4DF !important;
+}
+
+.reportFilterBox .filterSet .highlight0, .reportTable .highlight0 td {
+	border-color: #E8E4DF;
+	background-color: transparent;
+}
+
+.reportTable .highlight0 th, .reportTable .highlight0 td.tableColumn2 {
+	background-color: transparent;
+}
+
+.reportCalendar .event.selectedEvent, .reportCalendar a.event.selectedEvent:hover {
+	background-color: #C9D4E9 !important;
+	color: black;
+}
+
+.reportCalendar .event.selectedEvent .calendarEventField,
+.reportCalendar .event.selectedEvent .calendarEventValue { color: #404550; }/*** end linkColors.css ***/
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a.link, a.linkButton {
+  color: #003399;
+}
+
+.linkButton, .alignWithButton {
+	display: table-cell;
+	border-style: solid;
+	border-width: 1px;
+  border-color: transparent;
+	padding: .25em .4em;
+}
+
+a.linkButton, a.link {
+  cursor: pointer;
+}
+
+.popMenuButton {
+  display: block;
+  position: relative;
+}
+
+.popMenuBox, .reportTableFieldHeader .popMenuBox.right.columnToolsBox {
+  display: none;
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	left: -6px;
+	right: auto;
+	width: 10em;
+}
+
+.calendarPickerBox { width: auto; }
+
+.reportTableObjectHeader .popMenuBox,
+.reportTableObjectHeader .popMenuBox ul,
+.objectFieldName .popMenuBox, .objectFieldName .popMenuBox ul {
+  width: 15em;
+}
+
+.popMenuBox .popMenuSubtotals {
+	width: 15em;
+	left: 15em; 
+}
+
+.popMenuBox.right .popMenuSubtotals {
+	left: -15em;
+}
+
+.popMenuSubtotals a { text-align: right; }
+.subtotalLabel {
+	float: left;
+	padding-right: .5em;
+}
+
+.reportTableObjectHeader .popMenuBox li ul,
+.objectFieldName .popMenuBox li ul {
+  left: 15em;
+  width: 10em;
+}
+
+.compactGroupHeaderWithMenu .popMenuButton a.linkButton { display: block; }
+ 
+.reportTableObjectHeader .popMenuBox li ul ul,
+.objectFieldName .popMenuBox li ul ul {
+  left: 10em;
+}
+
+.popMenuBox.right {
+	left: auto;
+	right: 0;
+}
+
+.popMenuBox ul {
+	width: 10em;
+}
+
+.objectFieldName .popMenuBox ul.autoWidth {
+	width: 20em !important;
+}
+
+.popMenuBox.right ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.popMenuBox.columnToolsBox ul {
+  right: auto;
+  left: 0;
+}
+
+.popMenuBox li {
+	display: block;
+	position: relative;
+}
+
+.popMenuBox a {
+	display: block;
+}
+
+.popMenuBox li {
+	width: 100%;
+}
+
+.popMenuBox li ul {
+	top: 0;
+	left: 10em;
+	margin-left: -6px;
+}
+
+.popMenuBox.right li ul {
+	left: -10em;
+	margin-right: 6px;
+}
+
+
+/* initialy hide all sub menus */
+.popMenuBox li ul {
+	display: none;
+	position: absolute;
+	z-index: 10;
+}
+
+/* display them on hover */
+.popMenuBox li:hover>ul {
+	display: block;
+}
+
+ul.popMenu {
+  font-weight: normal;
+}
+
+ul.popMenu, ul.popMenu ul, .calendarPickerBox {
+	background-image: url(../images/bg/shadow-menu.png);
+	padding: 0 0 6px 6px !important;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+ul.popMenu li {
+  background-color: transparent !important;
+  float: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+ul.popMenu li h4 {
+	display: block;
+	padding: .5em 15px .25em .5em;
+	border-width: 1px 1px 0 0 !important;
+	border-color: #D9D5CC;
+	text-transform: none;
+	letter-spacing: normal;
+	font-size: 1em;
+	color: #9B958A;
+}
+
+ul.popMenu li h4.icon.objects {
+  padding-left: 20px;
+}
+
+ul.popMenu a, ul.popMenu .noLink, ul.popMenu .separator {
+	display: block;
+	background-color: transparent !important;
+	padding: .35em 15px .35em .5em;
+	line-height: 1.2em !important;
+	border-color: #D9D5CC;
+	border-width: 0 1px 0 0;
+	color: black !important;
+}
+
+ul.popMenu .separator {
+	padding: .6em 0 .5em 0;
+}
+
+ul.popMenu .separator hr {
+	height: 1px;
+	color: #D9D5CC;
+	background-color: #D9D5CC;
+}
+
+li.popMenuLongNav a {
+  background-color: #D9D5CC !important;
+  text-align: center;
+}
+
+ul.popMenu .noLink {
+  color: #B3B1A8 !important;
+  width: auto;
+}
+
+ul.popMenu ul a {
+  padding-right: .5em;
+}
+
+.right ul.popMenu a {
+  padding-left: 15px;
+  padding-right: .5em;
+}
+
+.popMenuBox .tableMenu table {
+  width: 100%;
+}
+
+.popMenuBox .tableMenu td {
+	padding: 0;
+	border-width: 0 1px 1px 0;
+	border-color: #CFCDC2;
+	vertical-align: middle;
+}
+
+.popMenuBox .tableMenu.oneColumn td {
+  border-width: 0;
+}
+
+.tableMenu a.icon.checked {
+  padding-left: 14px;
+}
+
+.popMenuBox ul.tableMenu a, .popMenuBox ul.tableMenu .noLink {
+  padding: .35em .5em;
+  border: 0;
+}
+
+a.subMenu {
+	background-image: url(../images/icons/menuSubLeft.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.right a.subMenu {
+	background-image: url(../images/icons/menuSubRight.gif);
+	background-position: left center;
+}
+
+ul.popMenu li a.icon {
+  padding-left: 20px;
+}
+
+ul.popMenu li span.icon.group {
+	background-position: -1998px -405px;
+  padding-left: 25px;
+}
+
+ul.popMenu li span.icon.tag {
+  padding-left: 20px;
+}
+
+ul.popMenu li span.icon.object {
+  padding-left: 16px;
+}
+
+ul.popMenu li a.groupMenu2 {
+  padding-left: 1em;
+}
+
+ul.popMenu li a.groupMenu3 {
+  padding-left: 2em;
+}
+
+ul.popMenu li a.groupMenu4 {
+  padding-left: 3em;
+}
+
+ul.popMenu li a.groupMenu5 {
+  padding-left: 4em;
+}
+
+ul.popMenu li a.icon.addReport {
+  padding-left: 22px;
+}
+
+ul.popMenu li.admin a {
+  border-top-width: 1px;
+  border-top-color: #D6D4CE;
+}
+
+.popMenuBox ul.paletteMenu {
+	left: 63px;
+  width: 63px;
+  padding: 0 0 7px 7px !important;
+}
+
+.popMenuBox.right ul.paletteMenu {
+  left: auto;
+	right: 0;
+}
+
+.popMenuBox ul.paletteMenu li {
+  width: 63px;
+  padding: 0;
+  border: 0;
+}
+
+.popMenuBox .paletteMenu a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0 !important;
+  border-width: 0;
+  margin: 1px 1px 0 0;
+}
+
+a.helpText:link, a.helpText:visited {
+	font-weight: bold;
+	padding: 0 .25em;
+	background-color: #D8E4FF;
+}
+
+a.helpText:hover {
+	background-color: #9FB6ED;
+	color: #00174B;
+}
+a.hint:link, a.hint:visited {
+	color: #4A6D42;
+	font-weight: bold;
+}
+
+a.hint:hover {
+	color: #689B5D;
+}
+
+a.editable:link, a.editable:visited, a.editable.link {
+	color: black;
+	border-width: 1px;
+	border-style: dotted;
+	border-color: transparent transparent #9E9A91 transparent;
+}
+
+a:hover {
+	color: #2A5EC7;
+}
+
+a.editable:hover {
+	background-color: white;
+	color: #88857D;
+	border-color: #9E9A91;
+}
+
+.icon.editable:hover .unsaved {
+  visibility: hidden;
+}
+
+a.linkButton:hover {
+	border-color: #8CBF80 #DEFFD6 #DEFFD6 #8CBF80;
+	color: #1B4710;
+	background-color: #BFF5B3 !important;
+	border-color: #959BA6 #DCE4F2 #DCE4F2 #959BA6;
+}
+
+ul.popMenu a:hover, a.linkButton.nav:hover {
+	background-color: #C2D2FF !important;
+}
+
+a.linkButton.delete:hover,
+a.linkButton.deleteLarge:hover,
+a.linkButton.status.undo:hover {
+	border-color: #BFAB75 #F5E7C4 #F5E7C4 #BFAB75;
+	background-color: #FFD66E !important;
+	color: black;
+}
+
+a.moveHandle:hover {
+  cursor: move;
+}
+
+a.shiftAlt {
+  display: none !important;
+}
+/*** end links.css ***/
+/*** start report.css ***/
+/*** start reportSwitch.css ***/
+.reportTypeSwitch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-position: right bottom !important;
+	z-index: 50;
+}
+
+.reportTypeSwitch li {
+	position: relative;
+  float: left;
+	display: block;
+	background-color: #AEBFCB;
+	background-image: url(../images/bg/viewHeaderCornerPunch.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.reportTypeSwitch a.typeSwitch {
+	border-color: #629AB6;
+	border-width: 0 0 1px 1px;
+	border-style: solid;
+	display: block;
+	width: 31px;
+	font-size: .91em;
+	padding: 1px 0 1px 6px;
+}
+
+.reportTypeSwitch a.icon {
+	height: 28px;
+	padding: 1px 3px;
+}
+
+.globalSpanish .reportTypeSwitch a.calendarView,
+.globalSpanish .reportTypeSwitch a.calendarViewDisabled {
+	width: 35px;
+}
+
+.reportTypeSwitch li.selected a.icon {
+	background-color: #D3DDF0;
+	border-color: #D3DDF0;
+}
+
+.reportTypeSwitch li.disabled { background-color: #D8D9D3; }
+
+.reportTypeSwitch li.disabled a.linkButton:hover { background-color: #BEBFBA !important; }
+
+.disabledViewNote {
+	top: auto;
+	bottom: -31px;
+	left: auto;
+	right: 0;
+	width: 184px;
+	color: black;
+}
+
+.disabledViewNote .popMenu {
+	width: 179px;
+}
+
+.disabledViewNote .popMenu li {
+	width: 169px;
+	padding: 5px 10px 5px 5px;
+	background-image: none;
+}
+
+.disabledViewNote .popMenu li a {
+	display: inline;
+	padding: 0;
+	border: 0;
+  color: #003399 !important;
+}
+
+.disabledViewNote .popMenu li a:hover {
+	background-color: transparent !important;
+	color: #2A5EC7 !important;
+}
+
+/*** end reportSwitch.css ***/
+/*** start reportTable.css ***/
+.reportTable {
+  width: 100%;
+	background-color: #FFFCF5;
+}
+
+.reportTable .description {
+	font-weight: normal;
+	color: #383836;
+}
+
+.reportTable th, .reportTable td {
+	padding: .3em .5em .3em .5em;
+	border-bottom-width: 1px;
+	border-bottom-color: #CFCDC2;
+}
+
+.reportTable .reportTableObjectHeader {
+  padding: 0;
+  width: 28px;
+}
+
+.entryHoverColumn { width: 3em; }
+
+.reportTable thead .reportTableObjectCheck,
+.reportTable .reportTableObjectHeader,
+.reportTable thead .entryHoverColumn,
+.reportTable thead .entryHoverColumnNoCheck {
+	background-color: #DBD9D3;
+	border-bottom-color: #9E9A91;
+}
+
+.reportTable thead .entryHoverColumn,
+.reportTable thead .entryHoverColumnNoCheck {
+	color: #77756F;
+	vertical-align: bottom;
+	padding-bottom: .5em;
+}
+
+.reportTable thead .entryHoverColumnNoCheck {
+	padding-left: .5em;
+}
+
+.reportTable thead .reportTableObjectCheck {
+	vertical-align: bottom;
+}
+
+.reportTable .reportTableObjectCheck {
+  width: 1em;
+  padding: .2em .25em .15em .25em;
+  font-size: 1.4545em;
+}
+
+.reportTableObjectHeader span.icon.group {
+	background-position: -2000px -404px;
+	padding-left: 16px;
+}
+
+.reportTableObjectCheck, .reportTableObjectName, .entryHoverColumn, .entryHoverColumnNoCheck {
+	background-color: #E5E3DC;
+}
+
+.reportTable .entryHoverColumn,
+.reportTable .entryHoverColumnNoCheck {
+	text-transform: uppercase;
+	font-size: 0.8182em;
+	padding: 0;
+}
+
+.reportTable .entryHoverLink, .reportTable .entryHoverLinkNoCheck {
+	display: block;
+	padding: .5em .5em .25em 0;
+}
+
+.reportTable .entryHoverLinkNoCheck { padding-left: .5em; }
+
+.reportTable .tableCellNumeric,
+.reportTable .reportTableGroupSubtotal,
+.reportTable .reportTableGroupSubtotalCompact {
+  text-align: right;
+}
+
+.reportTableTotal td,
+.reportTableTotal th {
+	border-color: #C3AF55;
+	background-color: #E5D78F;
+	color: #47432D;
+}
+
+.reportTable .tableColumn1 {
+	border-bottom-color: #E8E5DF;
+}
+
+.reportTable .tableColumn2 {
+	border-bottom-color: #D9D6D0;
+}
+
+.reportTable th.tableColumn1 {
+	border-bottom-color: #9E9A91;
+	background-color: #F5F2EB;
+}
+
+.reportTable th.reportTableGroupHeader1 {
+	border-bottom-color: #9E9A91;
+	background-color: #F1EEE7;
+}
+
+.reportTableTotal th.tableColumn1,
+.reportTable .tableColumn1.reportTableFieldTotal {
+	border-color: #DAC362;
+	background-color: #FFEF9F;
+}
+
+.reportTable th.tableColumn2 {
+	border-bottom-color: #9E9A91;
+	background-color: #E5E3DC;
+}
+
+.reportTable th.reportTableGroupHeader2 {
+	border-bottom-color: #9E9A91;
+	background-color: #D9D7D0;
+}
+
+.reportTable thead th.reportTableFieldTotal {
+	background-color: #FFF2AE;
+	border-bottom-color: #B29F50;
+}
+
+.reportTable thead th.tableColumn1Total {
+  background-color: #F0E196;
+  border-bottom-color: #B29F50;
+}
+
+.reportTable thead th.tableColumn2Total {
+  background-color: #E5D78F;
+  border-bottom-color: #B29F50;
+}
+
+.reportTable th.tableColumnBoth {
+	border-bottom-color: #9E9A91;
+	background-color: #F5F2EB;
+}
+
+.reportTable th.tableColumnBoth a.linkButton {
+  text-align: center;
+}
+
+.reportTableTotal th.tableColumn2,
+.reportTable .tableColumn2.reportTableFieldTotal,
+.reportTable th.reportTableGroupRowSubtotal {
+	border-color: #CCB75B;
+	background-color: #F0E196;
+}
+
+.reportTableObjectHeader, .reportTableFieldHeader {
+	vertical-align: bottom;
+}
+
+.reportTable .reportTableFieldHeader, .reportTable .compactGroupHeaderWithMenu {
+  padding: 0;
+}
+
+.reportTable .reportTableFieldHeader.noLink,
+.reportCalendar thead th.reportTableFieldHeader.noLink {
+	padding: .25em .5em;
+	color: #42413F;
+}
+
+.reportTableObjectHeader a.linkButton,  .reportTableFieldHeader a.linkButton,
+.reportTableObjectHeader span.alignWithButton,  .reportTableFieldHeader span.alignWithButton {
+  display: block;
+}
+
+/* Grouping */
+
+.reportTable .pivotGroup th.tableColumn1 {
+	background-color: #E5E3DC;
+	border-bottom-color: #CCC9C3;
+}
+
+.reportTable .pivotGroup th.tableColumn2 {
+	background-color: #D6D5CE;
+	border-bottom-color: #C5C2BC;
+}
+
+.reportTable .reportTableCompactGroupHeader {
+  border-width: 0 0 1px 0;
+}
+
+.reportTableGroup a.icon.addFilter {
+	background-position: -502px -52px;
+	padding-left: 17px;
+}
+
+.reportTableGroup:hover a.icon.addFilter, .reportTableGroup a.icon.addFilter:hover {
+	background-position: -2002px -52px;
+}
+
+.reportTable .group1, .reportTable .group3, .reportTable .group5, .reportTable .group7, .reportTable .group9 {
+	background-color: #F7F4ED;
+	border-color: #F7F4ED;
+}
+
+.reportTable .group2, .reportTable .group4, .reportTable .group6, .reportTable .group8, .reportTable .group10 {
+	background-color: #D6D2CE;
+	border-color: #D6D2CE;
+}
+
+.reportTableTotal .group1, .reportTableTotal .group3, .reportTableTotal .group5, .reportTableTotal .group7, .reportTableTotal .group9 {
+	background-color: #FFF3B6;
+	border-color: #FFF3B6;
+}
+
+.reportTable .reportTableGroupSubtotal,
+.reportTable .reportTableGroupSummary,
+.reportTable tbody tr.lastInGroupNoSubtotal td, 
+.reportTable tbody tr.lastInGroupNoSubtotal th,
+.reportTable tr.last td,
+.reportTable tr.last th,
+.reportTable tr.lastInGroupWithTotal td,
+.reportTable tr.lastInGroupWithTotal th,
+.reportTable th.reportTableCompactGroupHeader,
+.reportTable tbody tr th.emptyEnd {
+	border-bottom-color: #999793 !important;
+	border-bottom-width: 1px;
+}
+
+.reportTable tbody tr.lastInGroupNoSubtotal th.empty { border-bottom-width: 0 !important; }
+
+.reportTable tr.lastInGroupWithTotal td,
+.reportTable tr.lastInGroupWithTotal th {
+	border-color: #807E7B;
+	border-style: single;
+	border-width: 0 0 3px 0;
+}
+
+.reportTable .lastInPivotGroup {
+  border-right-width: 1px;
+  border-right-color: #9E9A91;
+}
+
+.reportTable .reportTableTotal .lastInPivotGroup {
+  border-right-color: #B29F50;
+}
+
+.reportTable tbody th.lastInPivotGroup {
+  border-bottom-color: #CCC9C3 !important;
+}
+
+.reportTable tbody tr.aloneInGroup .lastInPivotGroup {
+  border-bottom-color: #9E9A91 !important;
+}
+
+.reportTable tbody tr.lastInGroupNoSubtotal .reportTableFieldTotal {
+  border-bottom-color: #B29F50 !important;
+}
+
+.reportTableTotal .reportTableFieldTotal {
+  border-bottom-width: 0;
+}
+
+tr.clickRowHover a:hover { text-decoration: underline; }
+
+tr.clickRowHover .reportTableObjectName,
+tr.clickRowHover .reportTableObjectCheck,
+tr.clickRowHover .entryHoverColumn,
+tr.clickRowHover .entryHoverColumnNoCheck { background-color: #C3D3EB; }
+
+tr.selected .reportTableObjectName,
+tr.selected .reportTableObjectCheck,
+tr.selected .entryHoverColumn,
+tr.selected .entryHoverColumnNoCheck { background-color: #ADBFD9; }
+
+.reportTable .entryHoverColumn a,
+.reportTable .entryHoverColumnNoCheck a { visibility: hidden; }
+
+.reportTable tr.clickRowHover .entryHoverColumn a,
+.reportTable tr.clickRowHover .entryHoverColumnNoCheck a {
+	visibility: visible;
+}
+
+tr.clickRowHover .tableColumn1 { background-color: #D9E6FA; }
+
+tr.selected .tableColumn1 { background-color: #BECEE8; }
+
+tr.clickRowHover .tableColumn2 { background-color: #D1DCF0; }
+
+tr.selected .tableColumn2 { background-color: #B6C4DE; }
+
+table .reportTableActionBox {
+  padding: .25em 0 .25em 0;
+  background-color: #E5E3DC;
+}
+
+table .reportTableActionBox ul li {
+  float: left;
+  margin-right: .5em;
+  margin-left: .5em;
+	padding-top: .4em;
+	padding-bottom: .35em;
+}
+
+table .reportTableActionBox ul li input {
+  margin-top: -.25em;
+}
+
+table .reportTableActionBox ul li a.linkButton {
+  font-weight: bold;
+  padding-top: .15em;
+}
+
+table .reportTableNavigationBox {
+	padding: .1em 0;
+	background-color: #C4F5B8;
+	border-color: #8F8D89;
+	border-width: 0;
+	border-style: solid;
+}
+
+.reportTableNavigation {
+  width: 100%;
+}
+
+.reportTableNavigation td {
+	border: 0;
+	vertical-align: middle;
+	padding: 0;
+}
+
+/*.reportTableNavigation .navigationJump span {	float: left; }*/
+
+.reportTableNavigation .navigationPage {
+	text-align: center;
+	padding-right: 1em;
+	padding-left: .5em;
+	white-space: nowrap;
+}
+
+.reportTableNavigation .navigationPage a.linkButton {
+  padding-left: .1em;
+  padding-right: .1em;
+  display: inline;
+}
+
+.reportTableNavigation .navigationBatch {
+	text-align: center;
+	width: 18em;
+	color: #608C54;
+}
+
+.reportTableNavigation input.submit { padding-left: .5em; padding-right: .5em; }
+
+.reportTableFieldValue a.summaryLink {
+	color: black;
+}
+.reportTableFieldValue a.summaryLinkHover {
+	text-decoration: underline;
+}
+
+.reportTableFieldValue textarea {
+	width: 100%;
+}
+
+.reportTableFieldValue .objectFieldValueControls td,
+.reportTableFieldValue .objectFieldValueControls th {
+	border: 0;
+	padding: .1em;
+}
+.reportTableFieldValue .objectFieldValueControls th {
+	color: #807D78;
+	text-align: right;
+	font-size: .9091em;
+	vertical-align: middle;
+	padding-right: .25em;
+}
+.reportTableFieldValue .objectFieldValueControls a.linkButton {
+	float: left;
+	white-space: nowrap;
+}
+.reportTableFieldValue .objectFieldValueControls a:hover { text-decoration: none; }
+.reportTableFieldValue .objectFieldValueControls td input.url { width: 15em; }
+/*** end reportTable.css ***/
+/*** start reportTools.css ***/
+/* @override http://mockups/showcolumns/css/reportTools.css */
+
+.reportToolsBox {
+  background-color: #D3DDF0;
+	padding: .4em .4em .4em .6em;
+	overflow: visible;
+}
+
+.reportToolsBox .reportTools {
+	background-color: #D3DDF0;
+}
+
+.reportTools li {
+  display: block;
+  float: left;
+  margin: .1em .25em 0 .25em;
+}
+
+li.presentationReportTools {
+  float: right;
+}
+
+.reportTools li.modifyViewButton { float: right; }
+
+.chartBar li {
+	margin-left: 1.5em;
+	line-height: 2em;
+}
+
+.reportTools ul.popMenu li { margin: 0; }
+
+.reportTools a.linkButton { display: block; }
+
+.reportTools .disabledViewNote {
+	left: 0;
+	top: 0;
+	right: auto;
+	bottom: auto;
+}
+
+#showColumnListBox {
+	position: absolute;
+	z-index: 51;
+	background-image: url(../images/bg/editColumns.png);
+	background-position: left bottom;
+	top: 0;
+	left: 0;
+	right: .5em;
+	padding-bottom: 1.5em;
+}
+
+#showColumnReorderListBox {
+	overflow: hidden;
+	margin: 0 0 .75em 8px;
+	border-width: 1px 0;
+	border-color: #B3B0AB #CCC8C0 #CCC8C0 #CCC8C0;
+	background-color: #E8E5DE;
+	padding: .6em 11em .5em .6em;
+}
+
+#showColumnReorderList {
+	float: left;
+	width: 100%;
+	min-height: 1.8182em;
+}
+
+#showColumnReorderList li {
+	display: block;
+	float: left;
+	padding: .25em .5em;
+	border-width: 1px;
+	margin: 0 0 1px -1px;
+	cursor: move;
+	background-color: #F2EFE9;
+	white-space: nowrap;
+}
+
+#showColumnReorderList li:hover {
+	background-color: #FFFCF5;
+}
+
+.showColumnLists {
+	padding: 0 1em;
+}
+
+.showColumnList {
+}
+
+.showColumnList li, .showColumnAllBox li {
+	position: relative;
+	white-space: nowrap;
+	float: left;
+	width: 15em;
+	margin: 0 !important;
+}
+
+.showColumnList li.showColumnLinkToEditBox {
+	clear: left;
+	width: auto;
+	white-space: nowrap;
+}
+
+.showColumnListNormalFields li {
+	display: none;
+}
+
+.showColumnList label, .showColumnAllBox label {
+	display: block;
+	border-width: 0;
+	padding: .0909em 0 .0909em 1.5em;
+	margin-left: 8px;
+	margin-right: 1em;
+	overflow: hidden;
+	line-height: 1.8em;
+}
+
+.showColumnList label:hover {
+	overflow: visible;
+	position: relative;
+	z-index: 1;
+}
+
+.showColumnAllBox label {
+	margin-left: 0;
+}
+
+.showColumnAllBox {
+	clear: left;
+	padding: .5em 0 0 0;
+	border-width: 1px 0 0 0;
+	margin: .5em .25em 0 .75em;
+	border-style: dotted;
+	border-color: #CCC8C0;
+}
+
+.showColumnAllBox h4,
+.showColumnAllBox label {
+	overflow: visible;
+	float: left;
+	padding-right: 1em;
+}
+
+.showColumnAllBox label {
+	padding-left: 2em;
+	margin-left: -.0909em;
+}
+
+.showColumnAllBox h4 {
+	padding-top: .5em;
+	width: 15em;
+}
+
+.showColumnList li:hover,
+.showColumnList li:hover .checkboxTitle,
+.showColumnAllBox label:hover {
+	background-color: #F2EFE9;
+}
+
+.showColumnList li:hover .checkboxTitle {
+	padding-right: .5em;
+}
+
+.showColumnList input.checkbox, .showColumnAllBox input.checkbox {
+	margin: 0 0 0 -1.5em;
+	vertical-align: middle;
+}
+
+#showColumnListTools {
+	position: absolute;
+	top: .75em;
+	right: .75em;
+}
+
+.showColumnCheckboxTools p {
+	padding: .25em 1em .5em 1em;
+	margin-left: 8px;
+}
+
+#showColumnNewBox {
+	float: right;
+	margin: 0 1em;
+}
+
+.showColumnCheckboxTools { overflow: hidden; }
+
+.showColumnEllipsis {
+	position: absolute;
+	top: .15em;
+	right: -.25em;
+	padding: .25em;
+	z-index: 1;
+	color: #696663;
+	font-weight: bold;
+}
+
+#showColumnSearchBox,
+.showColumnLinkToEditFieldsBox,
+#showColumnNav { padding: .25em 0 .5em .75em; }
+
+#showColumnSearchBox,
+#showColumnNav {
+	float: left;
+}
+
+#showColumnSearchBox { padding-left: 1.75em; }
+
+#showColumnNav ul {
+	position: relative;
+	height: 1.5em;
+}
+#showColumnNav li {
+	float: left;
+}
+#showColumnNavSummary {
+	padding: .25em .75em .25em .25em;
+}
+#showColumnNav a {
+	display: block;
+	width: 0;
+	overflow: hidden;
+}
+
+#showColumnNav a.disabled {
+	color: silver;
+}
+
+#showColumnNav a.disabled:hover {
+	background-color: #E8E5DE !important;
+}
+
+.showColumnList .highlight { background-color: #FFF079; }/*** end reportTools.css ***/
+/*** start reportCalendar.css ***/
+.reportCalendar {
+  width: 100%;
+  background-color: #FFFCF5;
+  position: relative;
+  top: -1px;
+}
+
+.newObjectMenu .addCalendarObject h4.icon.addObject {
+  display: block;
+	padding: 0 0 .5em 24px;
+}
+
+.calendarJumpTool input.formTextInput {
+  width: 4em;
+}
+
+.reportCalendar td, .reportCalendar th {
+  border-color: #D6D4CE;
+}
+
+.reportCalendar thead td, .reportCalendar thead th,
+.reportCalendar tfoot td, .reportCalendar tfoot th {
+	text-align: center;
+  border-width: 1px;
+}
+
+/* Monthly calendar */
+
+.month thead .calendarMonth th,
+.month tfoot .calendarMonth th {
+	padding: .5em;
+	border-color: #ADBDDB #D3DDF0 #ADBDDB #D3DDF0;
+	border-width: 1px 0;
+	background-color: #FFFCF5;
+}
+
+.month thead .calendarDays th {
+	width: 14%;
+	padding: .35em 0;
+	color: #706F6C;
+}
+
+.month thead .calendarDays th,
+.day .calendarDayNavWeek th a,
+.week th.calendarWeekNavWeek a {
+  background-color: #F0EDE6;
+	font-size: .91em;
+	text-transform: uppercase;
+}
+
+.month tbody td {
+  min-height: 8em;
+  border-width: 1px 1px 0 1px;
+}
+
+.month tbody td div.events {
+  position: relative;
+  height: 100%;
+  min-height: 8em;
+}
+
+.month.collapse tbody td {
+	min-height: 1.5em;
+}
+
+.month.collapse tbody td div.events {
+  min-height: 1.5em;
+}
+
+.month tbody .multiDay td {
+  height: auto;
+  border-top-width: 0;
+}
+
+.month tbody .previousMonth,
+.month tbody .nextMonth {
+	background-color: #F0EDE6;
+}
+
+.month tbody th {
+	border-width: 1px 1px 0 1px;
+	text-align: right;
+	padding: .25em;
+	color: #BCBBB5;
+}
+
+.month tbody td h3 {
+  text-align: left;
+	margin: 0 20px 0 0;
+	color: #BCBBB5;
+}
+
+.month tbody .monthWeek h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.month tbody th a,
+.month tbody td h3 a:link,
+.month tbody td h3 a:visited {
+  text-align: left;
+	font-weight: normal;
+  display: block;
+	color: #BCBBB5;
+	padding: 0 .25em;
+}
+
+.month thead th.monthWeek {
+  padding-left: .25em;
+  padding-right: .25em;
+  width: 2em;
+}
+
+.month .monthWeek {
+	background-color: #E1E8F7 !important;
+	border-color: #ADBDDB;
+	border-right-width: 0;
+	vertical-align: middle;
+}
+
+.month tbody .monthWeek h3 a:link,
+.month tbody .monthWeek h3 a:visited {
+  font-size: 1.2em;
+	text-align: center;
+	color: #9E9A91;
+}
+
+.month tbody th a:hover,
+.month tbody td h3 a:hover,
+.month tbody .monthWeek h3 a:hover {
+	color: #1B4710;
+}
+
+.reportCalendar a.addItem {
+	display: block;
+	height: 1em;
+	width: 5px;
+	background-position: -1500px -153px;
+	padding: 0 5px 0 5px;
+}
+
+.month tbody td a.addItem {
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+}
+
+.month tbody td .events:hover a.addItem {
+  visibility: visible;
+}
+
+.month tbody td.previousMonth a.addItem,
+.month tbody td.nextMonth a.addItem {
+  background-color: #F0EDE6;
+}
+
+.reportCalendar .event {
+	display: block;
+	padding: .25em .5em;
+	margin: 0 .25em 0 .25em;
+	border-color: #FFFCF5;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+}
+
+.month .monthEvent th {
+  color: #575757;
+  padding: .25em 1em;
+}
+
+/* Daily calendar */
+
+.day table.calendarDayNavTable { width: 100%; }
+.day .calendarTime, .week .calendarTime {
+  width: 7.5em;
+}
+
+.day thead th {
+  border-width: 0;
+}
+
+.day thead tr.calendarDays th,
+.week thead tr.calendarWeeks th.calendarTime {
+  text-align: left;
+}
+
+.day thead th .calendarDayNavTitle,
+.week thead tr.calendarWeekNavTitle th {
+  border-color: #CFCDC2;
+  border-width: 1px 0 0 0;
+}
+
+.day thead th h2,
+.week thead th h2 {
+  padding: .5em;
+  font-size: 1.2em;
+}
+
+.day .calendarDayNavTable th.calendarNav {
+  width: 4.5%;
+}
+
+.day .calendarDayNavTable th.calendarDayNavWeek {
+  width: 13%;
+}
+
+.week thead th {
+  border-color: #D6D4CE #B3B1A8 #B3B1A8 #B3B1A8;
+  border-width: 1px 1px 0 0;
+}
+
+.week thead th.calendarWeekNavWeek {
+  width: 13%;
+}
+
+.day .calendarDayNavWeek th a,
+.week th.calendarWeekNavWeek a {
+  display: block;
+  padding: .25em;
+  height: 1.2em;
+}
+
+.week th.calendarWeekNavWeek a {
+  padding: .363em;
+  height: auto;
+}
+
+.day .calendarDayNavWeek th a {
+  border-width: 1px 0 1px 1px;
+  border-color: #CFCDC2;
+}
+
+.day .calendarDayNavTable th.today a {
+	background-color: #FFFCF5;
+  color: black;
+  font-size: 1em;
+  height: 1.11em;
+	border-bottom-color: #FFFCF5;
+}
+
+.day .calendarDayNavWeek th.previous a {
+  border-width: 1px 0;
+}
+
+.day tbody th,
+.day tbody td {
+  padding: 0;
+  border-width: 1px 0 0 0;
+  border-color: #F0EDE6;
+}
+
+.week tbody th,
+.week tbody td {
+	padding: 0;
+	border-width: 1px 1px 0 0;
+	border-color: #F0EDE6 #B3B1A8;
+}
+
+.week tbody td.partialDay {
+	border-color: #F0EDE6 #FFFCF5;
+	border-right-width: 0;
+}
+
+.week tbody td.addItemColumn {
+	white-space: nowrap;
+}
+
+.week tbody td.addItemColumn a.addItem {
+  display: inline;
+}
+
+.week tbody td.addItemColumn div.events {
+  display: inline;
+  min-height: auto;
+  padding: 0;
+}
+
+.week tbody tr.allDay td.addItemColumn {
+  white-space: normal;
+}
+
+.week tbody tr.allDay td.addItemColumn a.addItem {
+  float: none;
+  display: block;
+}
+
+.week tbody td.addItemColumn a.moreItemsLink {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.day tbody th,
+.week tbody th {
+	background-color: #F0EDE6;
+	border-color: #D9D6D0 #B3B1A8;
+  height: 1.5em;
+  padding: 0 .5em .4em .5em;
+  color: #765757;
+}
+
+.day tbody th a.addItem,
+.week tbody td a.addItem {
+  margin-top: 1px;
+  float: right;
+  visibility: hidden;
+}
+
+
+.day tbody tr:hover th a.addItem,
+.week tbody td:hover a.addItem {
+  visibility: visible;
+}
+
+.day tbody td {
+  padding: 0;
+}
+
+.day tbody tr.hourTop td {
+  border-color: #CFCDC2;
+}
+
+.week tbody tr.hourTop td {
+  border-top-color: #D6D4CE;
+}
+
+.reportCalendar tbody tr.hourTop th {
+	border-color: #BCBAB0;
+}
+
+.week tbody div.events {
+  position: relative;
+  min-width: 10em;
+}
+
+.day tbody div.events,
+.week tbody div.events {
+  min-height: 1.8em;
+  padding-top: .1em;
+}
+
+.month.collapse tbody div.events a.event {
+  height: 1.2em;
+  overflow: hidden;
+}
+
+/*
+When expanding a.event to cover multiple rows,
+use this formula, where x = number of rows
+1.3*x + 0.6*(x-1)
+*/
+
+.day tbody div.events a.event,
+.week tbody div.events a.event {
+	margin: 0 .1em 0 .1em;
+	padding-top: .2em;
+	padding-bottom: .2em;
+	height: 1.3em;
+	overflow: hidden;
+}
+
+/* General */
+
+a.event {
+  font-weight: normal;
+	background-color: #808080;
+	color: white;
+}
+
+a.event:hover { color: white; }
+
+.calendarEventName {
+  font-weight: bold;
+}
+
+.calendarEventField {
+  font-weight: bold;
+}
+
+.calendarEventField, .calendarEventValue {
+	font-size: .91em;
+}
+
+.reportFilterBox .filterSet.calendar {
+	padding-bottom: 0;
+	border-color: #98A1B3;
+}
+
+.reportFilterBox .reportFilter.event {
+	border-width: .1em 0 0 .8em;
+	padding: .1em 2em .1em .5em;
+	font-size: .91em;
+	margin: 0 -2em 0 -1em;
+}
+
+.reportFilterBox .reportFilter.event .icon.field {
+  padding-left: 2.5em;
+}
+
+.reportFilterBox .reportFilter.event .filterItem {
+  font-weight: normal;
+  padding-left: 2em;
+}
+
+/* Event colors moved to linkColors.css */
+
+/*** end reportCalendar.css ***/
+/*** start reportChart.css ***/
+.reportChartContentsBox {
+	background-color: #FFFCF5;
+}
+
+/*** end reportChart.css ***/
+/*** start printOptions.css ***/
+.exportOtherFormatsBox {
+	position: absolute;
+	z-index: 5;
+	top: auto;
+	right: 0;
+/*	width: 100%;*/
+	border-width: 0 0 4px 0;
+	border-color: #DEDDAD;
+	border-style: solid;
+}
+
+.exportOtherFormatsTable h4 {
+	display: block;
+}
+
+.printDialogFrame .mainBox {
+	margin: 0;
+	padding: 0;
+}
+
+.printDialogFrame {
+	background-color: #FFFDCF;
+}
+
+.mainBox .exportOtherFormatsTable {
+	width: 50em;
+	margin: 0 auto;
+}
+
+.applicationBox .exportOtherFormatsTable {
+	margin: 0;
+	width: auto;
+}
+
+.mainBox .exportOtherFormatsTable td {
+	line-height: 1.5em;
+	width: 33%;
+}
+
+.mainBox .exportOtherFormatsTable label {
+	padding-left: .35em;
+}
+
+.paperOrientationButton {
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0 8px 8px 0;
+}
+
+.paperOrientationButton input {
+	position: absolute;
+	z-index: 5;
+}
+
+#portraitOrientationButton {
+	width: 52px;
+	height: 74px;
+}
+
+#portraitOrientationButton input {
+	top: 52px;
+	left: 16px;
+}
+
+#landscapeOrientationButton {
+	width: 74px;
+	height: 52px;
+}
+
+#landscapeOrientationButton input {
+	top: 16px;
+	left: 3px;
+}
+
+.paperOrientationButton img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.exportOtherFormatsTable th, .exportOtherFormatsTable td {
+	padding: .5em 1em;
+	background-color: #FFFDCF;
+}
+
+.exportOtherFormatsTable td.printStatus {
+	background-color: white;
+}
+
+.exportOtherFormatsTable td.printStatus p {
+	margin: 1em 0;
+	font-size: 1.09em;
+}
+
+.exportOtherFormatsTable th {
+	background-color: #A7A8A3;
+	color: white;
+}
+
+.exportOtherFormatsTable td.subscribeGroup, .exportOtherFormatsTable td.integrateGroup { background-color: #F7F6C1; }
+
+.exportOtherFormatsTable th.subscribeGroup, .exportOtherFormatsTable th.integrateGroup { background-color: #9D9E99; }
+
+.exportOtherFormatsTable .exportGroup { width: 45%; }
+
+.exportOtherFormatsBox li {
+	display: block;
+	margin: .5em 0 1.5em 0;
+}
+
+.exportOtherFormatsBox li p {
+	color: #795657;
+}
+
+.exportOtherFormatsBox li a {
+	font-weight: bold;
+}
+
+.exportOtherFormatsBox li a img {
+	vertical-align: middle;
+}
+
+.pdfCalendarOptions { width: 14em;}
+.pdfCalendarOptions input.formTextInput,
+.pdfCalendarOptions select {	font-size: .91em; }
+.pdfCalendarOptions h5 {
+	float: left;
+	width: 3.5em;
+	margin-right: .5em;
+	padding-top: .4em;
+	text-align: right;
+}
+/*** end printOptions.css ***/
+
+.reportBox {
+	position: relative;
+	margin: 0 0 .5em 19em;
+}
+
+.hideFilters .reportBox {
+	top: -1px;
+	margin-left: 0;
+	clear: left;
+}
+
+.reportHeader {
+	background-color: #D3DDF0;
+	position: relative;
+	border-bottom-width: 1px;
+}
+
+#reportTitleBoxTop {
+	background-color: #D3DDF0;
+	padding: .5em .75em;
+	min-height: 20px;
+}
+
+#reportTitleStatic {
+	font-weight: bold;
+	padding-right: 1em;
+}
+
+#reportTitleStatic .reportTitle {
+	font-size: 1.2727em;
+	font-weight: bold;
+}
+
+#reportTitleStatic .reportModified {
+	padding-left: .5em;
+	color: #5A606E;
+}
+
+#reportTitleStatic a.helpQuestion {
+	font-size: 1em;
+}
+
+#reportTitleStatic .linkButton {
+	display: inline;
+	padding: 0 .25em;
+}
+
+#reportTitleRename input.formTextInput {
+  font-size: 1.11em;
+  width: 17em;
+}
+
+#reportTitleRename input.formButton {
+}
+
+#reportTitleRename {
+	top: 0;
+	left: 0;
+	padding: 15px 20px 10px 25px;
+	z-index: 6;
+	border-color: #B4BCCC;
+}
+
+#reportTitleRename, #activateAlertBox {
+	position: absolute;
+	background-image: url(../images/bg/editview.png);
+	background-position: left bottom;
+}
+
+#activateAlertBox {
+	top: 0;
+	right: .5em;
+	z-index: 56;
+	width: 18em;
+	padding: .5em .5em 2em 2em;
+}
+
+#activateAlertBox input.formTextInput { width: 16em; }
+#activateAlertBox input.formButton { margin: .5em .5em 0 0; }
+
+#reportTitleRename h4 {
+	width: 7em;
+	display: block;
+	float: left;
+	clear: left;
+	margin-top: .25em;
+	margin-bottom: 1.5em;
+}
+
+#reportTitleRename div {
+	padding-left: 8em;
+	margin-bottom: 1em;
+}
+
+.reportTitleSaveOption label {
+	padding-left: .25em;
+}
+
+.reportTitleSaveOption li {
+	padding-bottom: .75em;
+}
+
+#reportDeleteButton {
+	margin-left: 5em;
+}
+
+#reportTitleBoxTop .reportNote,
+#reportTitleBoxTop #reportTitleWarning {
+	padding: .5em 0 0 0;
+	font-weight: normal;
+	color: #4F5259;
+}
+
+.reportTitleNoteEdit textarea {
+	width: 18em;
+}
+
+.relationTitle a.linkButton {
+  font-weight: bold;
+  display: inline;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.reportButtonBox a {
+  display: block;
+}
+
+.reportDescriptionBox {
+  clear: left;
+}
+
+.reportContentsBox {
+	clear: both;
+}
+
+.reportContentsBox.empty {
+  padding: 1em 1em .5em 1em;
+  font-size: 1.2em;
+  background-color: #FFFCF5;
+}
+
+.reportContentsBox.empty p {
+  margin-bottom: 1em;
+}
+/*** end report.css ***/
+/*** start chart.css ***/
+.reportChart {
+	background: #FFFCF3;
+	color: black;
+}
+
+.reportChartNote {
+	padding: .5em 1em;
+	background-color: #F0EDE6;
+	font-weight: bold;
+	text-align: center;
+}
+/*** end chart.css ***/
+
+.reportTable, .reportCalendar {
+	font-size: .9167em;
+	top: 0;
+}
+
+td, th, a, img {
+	border-color: #9E9A91;
+	border-style: solid;
+	border-width: 0;
+	padding: 0;
+	margin: 0;
+}
+
+th .popMenuButton {
+	padding: .25em .5em;
+	position: static;
+}
+
+.reportTable .reportTableObjectHeader { background-color: #F5F2EB; }
+
+table .reportTableNavigationBox {
+	background-color: #DEDCD6;
+	padding: 0;
+}
+
+.externalPageViewNavigation {
+	background-color: #DEDCD6;
+	padding: .5em;
+	text-align: center;
+	font-size: .9167em;
+}
+
+.reportTable .reportTableNavigationBox .navigationPage {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.navigationPage img {
+	padding: 4px 5px 5px;
+	margin: -4px 5px -6px 5px;
+	border: 1px solid #DEDCD6;
+	background-color: #DEDCD6;
+}
+
+.reportCalendar thead h4 img {
+	padding: 4px 5px 5px;
+	margin: -4px 0 -6px 0;
+	border: 1px solid #FFFCF5;
+	background-color: #FFFCF5;
+}
+
+.navigationPage a:hover img, .reportCalendar thead h4 a:hover img {
+	background-color: #D3DDF0;
+	border-color: #C1CCE0 #DAE3F5 #DAE3F5 #C1CCE0;
+}
+
+.reportTable thead .entryHoverColumnNoCheck { padding-bottom: .4em; }
+
+.reportTable .entryHoverLink { padding: .5em .4em .25em; }
+
+.icon.map {
+	background-image: url(../images/icons/map.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-left: 23px;
+}
+
+.reportTableTotal th.tableColumn2,
+.reportTable .tableColumn2.reportTableFieldTotal,
+.reportTable th.reportTableGroupRowSubtotal,
+.reportTable thead th.reportTableFieldTotal {
+	background-color: #50504D;
+	border-color: #9E9A91;
+	color: white;
+}
+
+.reportTable thead th.reportTableFieldTotal {
+	border-color: #1A1A16;
+}
+
+.reportTableTotal td, .reportTableTotal th,
+.reportTableTotal th.tableColumn1, .reportTable .tableColumn1.reportTableFieldTotal {
+	background-color: #5C5C58;
+	border-color: #9E9A91;
+	color: white;
+}
+
+.reportTable tbody .reportTableTotal th,
+.reportTable .reportTableTotal .lastInPivotGroup { border-color: #1A1A16 !important; }
+
+/* calendar */
+
+.reportCalendar thead .calendarWeekNavTitle th,
+.reportCalendar thead .calendarMonth th { border-top: 0; }
+
+.reportCalendar .events h3, .reportCalendar .monthWeek h3 {
+	padding: 0;
+	font-size: 1em;
+	margin: 0;
+}
+
+.reportCalendar thead .calendarMonth th, .reportCalendar thead .calendarWeekNavTitle th, .reportCalendar .calendarDayNavTable thead .calendarDayNavTitle th {
+	padding: .4em;
+}
+
+.reportCalendar thead th h4 {
+	text-transform: none;
+	color: black;
+	letter-spacing: normal;
+	padding: 0;
+	margin: 0;
+}
+
+.reportCalendar .popMenuButton { padding: 0; }
+
+.reportCalendar .event {
+	color: white;
+	overflow: hidden;
+}
+
+.reportCalendar { border-bottom: 1px solid #CFCDC2; }
+
+.reportCalendar th.calendarTime { background-color: #EBE8E1; }
+
+.reportCalendar th.calendarTime,
+.reportCalendar tbody th { padding: .2em .4545em; }
+
+.week tbody div.events {
+  min-width: 9em;
+}
+
+.reportCalendar.day tr.calendarDayNavTitle th {
+	border-bottom: 1px solid white;
+}
+
+.day .calendarDayNavTable th a {
+	height: 1.45em;
+}
+
+.day .calendarTimeAllDay {
+  width: 6em;
+}
+
+.nowrap { white-space: nowrap; }
+/*** end externalPageView.css ***/
+/*** start externalPagePrint.css ***/
+@media print {
+	/* Printer-only stylesheet */
+	
+	* {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	}
+	
+	.dabblePageBottomShadow, .dabblePageBottomLeftShadow, .dabblePageBottomRightShadow, .dabblePageRightShadow { background-image: none !important; }
+	
+	*, body, .dabblePageHeader,	.reportTable, .reportTable thead th,
+	.reportTable tbody th, .reportTable tbody td {
+		background-color: transparent !important;
+	}
+
+	#dabblePageNavigation, #dabblePageSearchForm, #dabblePageUserMenu {
+		display: none;
+	}
+	
+	.dabblePageContainer { width: 70em; }
+	
+	.dabblePageLogo { padding-left: 2em; }
+	
+	.dabblePageSection { margin-left: 0; }
+	
+	.dabblePage .dabblePageHeader h1 {
+		color: black;
+		padding-left: 0;
+	}
+	
+	.dabblePageSectionFormActions { border-left-width: 0; }
+	
+	.reportTable .group1 {
+		border-bottom-width: 0;
+	}
+	
+	.reportTable td, .reportTable th {
+		border-width: 1px;	
+	}
+	
+	td, th, .reportTable .group1.groupJoint,
+	.reportTable .group1.reportTableGroupSubtotal,
+	.reportTable .group1.reportTableGroupSummary,
+	.reportTable .group2.groupJoint,
+	.reportTable .group2.reportTableGroupSubtotal,
+	.reportTable .group2.reportTableGroupSummary,
+	.reportTable tbody tr.lastInGroupNoSubtotal td, 
+	.reportTable tbody tr.lastInGroupNoSubtotal th,
+	.reportTable tr.last td,
+	.reportTable tr.last th,
+	.reportTable tr.lastInGroupWithTotal td,
+	.reportTable tr.lastInGroupWithTotal th,
+	.reportTable th.reportTableCompactGroupHeader,
+	.objectFieldTable td, .objectFieldTable th,
+	.reportTable tr th.lastInPivotGroup {
+		border-color: #707070 #D8D8D8 !important;
+	}
+
+	a.linkButton { border-width: 0 !important; }
+	
+	.reportTable .empty {
+		border-width: 0 0 0 1px;
+		border-left-color: #707070;
+	}
+		
+	.reportTableTotal td,
+	.reportTableTotal th {
+		color: black !important;
+		border-width: 3px 0 !important;
+		border-style: double !important;
+		border-color: black !important;
+	}
+	
+	.reportTable span.alignWithButton { border: 0; }
+	
+	.reportTable .lastInGroupNoSubtotal td,
+	.reportTable th.reportTableCompactGroupHeader {
+		border-bottom-width: 1px;
+	}
+	
+	.entryHoverColumnNoCheck { color: white; }
+	
+	.entryHoverColumn a:link, .entryHoverColumn a:visited,
+	.entryHoverColumn a:hover, .navigationPage img,
+	.reportCalendar thead img { display: none !important; }
+	
+	.reportCalendar th, .reportCalendar td, .reportCalendar a, .reportCalendar span { color: black !important; }
+	
+	.reportCalendar td a.event {
+		overflow: visible !important;
+		height: auto !important;
+		border-width: 1px 0 !important;
+		border-color: #707070 !important;
+		margin-top: 1px;
+		margin-bottom: 1px;
+	}
+	
+	.reportTable .lastInGroupNoSubtotal .reportTableGroup { border-left-width: 0; }
+	
+	input.button, input.submit { display: none; }
+
+}
+/*** end externalPagePrint.css ***/

@@ -1,0 +1,8 @@
+medicalSuccess:
+  layout: layout_medical
+
+MedicalSuccess:
+  layout: layout_medical
+
+default:
+  layout: layout

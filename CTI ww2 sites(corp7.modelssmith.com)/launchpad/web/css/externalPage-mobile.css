@@ -1,0 +1,231 @@
+body {
+	width: 20em;
+}
+
+body, input.text, input.file, textarea, select {
+	font-family: Helvetica, sans-serif;
+}
+
+input.checkbox, input.radio {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.dabblePageContainer {
+	width: 100% !important;
+	margin: 0;
+	font-size: 1em;
+}
+
+.dabblePageBottomShadow,
+.dabblePageBottomLeftShadow,
+.dabblePageBottomRightShadow,
+.dabblePageRightShadow {
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dabblePageBottomLeftShadow, .dabblePageBottomRightShadow { width: 0; height: 0; }
+
+.dabblePageNavigation {
+	position: static;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	width: auto;
+}
+
+div.dabblePageMobileOnly { display: block; }
+tr.dabblePageMobileOnly { display: table-row; }
+
+#dabblePageMenuLink {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	right: 0;
+}
+
+.dabblePageNavigationLinks {
+}
+
+.dabblePageNavigationLinks a:link, .dabblePageNavigationLinks a:visited,
+.dabblePageNavigationLinks a:hover,
+.dabblePageMenu a#toggleFilterLink:link, .dabblePageMenu a#toggleFilterLink:visited,
+.dabblePageMenu a#toggleFilterLink:hover {
+	display: block;
+	padding: .7em;
+	background-color: #000000 !important;
+	color: white !important;
+	font-weight: bold;
+}
+
+#dabblePageMenuLink a {
+	margin-left: 1px;
+}
+
+.dabblePageHeader .dabblePageNavigationLinks a { float: left; }
+
+.dabblePageNavigationLinks .dabblePageMenu {
+	margin: 0;
+}
+
+.dabblePageNavigationLinks .dabblePageMenu a:link,
+.dabblePageNavigationLinks .dabblePageMenu a:visited {
+	font-size: 1em;
+}
+
+.dabblePage .dabblePageMenu {
+	margin: 0;
+	padding: 0 !important;
+}
+
+#dabblePageNavigation {
+	position: absolute;
+	display: none;
+	background-color: white;
+	opacity: .95;
+	width: 100%;
+	top: 2.5em;
+}
+
+.dabblePage h1, .dabblePageLogo {
+	padding: .5em !important;
+}
+
+.dabblePageSection { margin-left: 0; }
+
+.dabblePageSectionFormActions { border-left-width: 0; }
+
+.dabblePageForm .dabblePageView { overflow: visible; }
+
+.dabblePageColumn {
+	width: auto !important;
+	padding: 0 1em;
+	float: none;
+}
+
+.dabblePageFormItem { float: none; width: 20em; }
+
+.dabblePageFormLabel, .dabblePageFormField {
+	float: none;
+	font-size: 1em;
+	width: auto !important;
+}
+
+.dabblePageFormLabel {
+	float: none;
+	text-align: left;
+	padding: 0;
+}
+
+.dabblePageFieldAddAnotherButton {
+	display: block;
+}
+
+.dabblePageColumn select {
+	width: 18em !important;
+}
+
+.dabblePageColumn input.text,
+.dabblePageColumn input.file,
+.dabblePageColumn textarea,
+.dabblePageColumn .dabblePageFieldSearchResults {
+	width: 15em !important;
+}
+
+.dabblePageFormItem .popMenuButton {
+	margin: 0;
+	left: -2em;
+}
+
+.dabblePageCalendarPickerBox {
+	left: auto;
+	right: 0;
+}
+
+.datePickerTable tbody a {
+	padding: .4em .3em;
+}
+
+.datePickerTable thead a {
+	font-size: 1.5em;
+	padding: .1em;
+}
+
+.reportTable .entryHoverColumn a,
+.reportTable .entryHoverColumnNoCheck a {
+	visibility: visible;
+	font-size: 1.5em;
+}
+
+.reportTableNavigation {
+	width: 23em;
+}
+
+.dabblePageSearch input.text { width: 14em; }
+
+.dabblePageUserMenu {
+	display: none;
+	background-color: black !important;
+	position: absolute !important;
+	float: none !important;
+	height: 4em !important;
+	z-index: 6 !important;
+	margin: 0 !important;
+	padding: 1em 0 0 .5em;
+	top: 2.75em;
+	right: 0;
+}
+
+.dabblePageNoNavigation .dabblePageUserMenu {
+	width: 100%;
+}
+
+.dabblePageUserMenu ul {
+	float: none;
+	padding: 0;
+}
+
+.dabblePageUserMenu li {
+	float: none;
+	display: block;
+}
+
+.dabblePageUserMenu a:link, .dabblePageUserMenu a:visited {
+	padding-bottom: .75em;
+	background-color: transparent !important;
+	color: white !important;
+	border-width: 0 !important;
+	text-align: right;
+}
+
+#dabblePageFilterBox { display: none; }
+
+.dabblePageFilters, .dabblePageFilter,
+.dabblePageFilterLabel, .dabblePageFilterValue {
+	width: auto;
+	float: none;
+	text-align: left;
+	margin-right: 0;
+}
+
+.dabblePageFilter { padding: .1em 0; }
+
+.dabblePageLogo img {
+	max-height: 3em;
+	width: auto;
+}
+
+.toggleLink {
+	padding-left: 16px !important;
+	background-repeat: no-repeat;
+}
+.toggleHidden {
+	background-image: url(../images/icons/arrow-right.gif);
+	background-position: 0 50%;
+}
+.toggleRevealed {
+	background-image: url(../images/icons/arrow-down.gif);
+	background-position: 2px 50%;
+}

@@ -1,0 +1,417 @@
+# CTI Leadership Launchpad Schema
+#
+#
+propel:
+#
+#
+#
+# Profile table, represents a participant in the leadership program
+#
+  profile:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    full_name:  longvarchar
+    first_name:  longvarchar
+    middle_name:  longvarchar
+    last_name:  longvarchar
+    address1:  longvarchar
+    address2:  longvarchar
+    city:  longvarchar
+    state_prov:  longvarchar
+    zip_postcode:  longvarchar
+    country:  longvarchar
+    telephone1:  longvarchar
+    telephone2:  longvarchar
+    email1:  longvarchar
+    email2:  longvarchar
+    gender:  varchar(10)
+    age:  longvarchar
+    # the following secret is for encryption
+    secret:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Tribe table, represents a leadership program (all four dates)
+  tribe:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    name:  longvarchar
+    location:  longvarchar
+    retreat1_date:  date
+    retreat2_date:  date
+    retreat3_date:  date
+    retreat4_date:  date
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Tribe Participant table, a join table. Students will only be joined
+# 
+  tribe_participant:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    tribe_id: {type: INTEGER, foreignTable: tribe, foreignReference: id, onDelete: cascade}
+    role:  varchar(50) # choices are participant, assistant, leader
+    created_at:
+    updated_at:
+#
+#
+# Program Questionnaire Form table
+  program_questionnaire:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    nationality:  longvarchar
+    relationship_status:  longvarchar
+    current_profession:  longvarchar
+    past_profession:  longvarchar
+    personal_professional_goals:  longvarchar
+    strengths:  longvarchar
+    holds_you_back:  longvarchar
+    handle_failing:  longvarchar
+    willing_to_fail:  longvarchar
+    willing_to_listen:  longvarchar
+    therapy:  varchar(10)
+    therapy_details:  longvarchar
+    therapy_impact:  longvarchar
+    fundamentals:  integer
+    intermediate_curriculum:  integer
+    certification:  integer
+    quest:  integer
+    icc_curriculum:  integer
+    have_a_coach:  varchar(10)
+    coaching_impact:  longvarchar
+    religious_affiliations:  longvarchar
+    religious_influences:  longvarchar
+    growth_experiences:  longvarchar
+    impact_as_a_leader:  longvarchar
+    challenge:  longvarchar
+    why_this_program:  longvarchar
+    play_level:  varchar(50)
+    what_would_it_take:  longvarchar
+    bring_yourself_back:  longvarchar
+    going_the_distance:  longvarchar
+    i_was_born_to:  longvarchar
+    comments:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Dietary Form table
+  dietary:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    poultry:  varchar(10)
+    beef:  varchar(10)
+    vegetarian:  varchar(10)
+    seafood:  varchar(10)
+    lamb:  varchar(10)
+    vegan:  varchar(10)
+    pork:  varchar(10)
+    dietary_restrictions:  varchar(10)
+    describe_restrictions:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+#
+# Certification Form table
+  certification:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    created_at:
+    updated_at:
+    address:  longvarchar
+    address2:  longvarchar
+    city:  longvarchar
+    state_province:  longvarchar
+    country:  longvarchar
+    zip_postal_code:  longvarchar
+    evening_phone:  longvarchar
+    day_phone:  longvarchar
+    email:  longvarchar
+    fax:  longvarchar
+    mobile:  longvarchar
+    how_many_clients:  longvarchar
+    month_to_begin:  longvarchar
+    languages_coaching:  longvarchar
+    date_completed_process:  longvarchar
+    date_of_synergy:  longvarchar
+    your_certified_coach:  longvarchar
+    cpcc:  varchar(10)
+    pcc:  varchar(10)
+    mcc:  varchar(10)
+    your_coachs_email:  longvarchar
+    call_length:  longvarchar
+    times_a_month:  longvarchar
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#
+#
+# Pod table, represents a pod program 
+  pod:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    name:  longvarchar
+    location:  longvarchar
+    start_date:  date
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Pod Participant table, a join table. Students will only be joined
+# 
+  pod_participant:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    pod_id: {type: INTEGER, foreignTable: pod, foreignReference: id, onDelete: cascade}
+    role:  varchar(50) # 
+    created_at:
+    updated_at:
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Leadership Annual Assisting Questionnaire Form table
+  annual_questionnaire:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    tribe_first_choice: longvarchar
+    tribe_second_choice: longvarchar
+    i_am_type: longvarchar
+    your_tribe_name: longvarchar
+    your_tribe_leader1: longvarchar
+    your_tribe_leader2: longvarchar
+    anything_else: longvarchar
+    contact_telephone: longvarchar
+    contact_email: longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Medical Form table
+  medical:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    height:  longvarchar
+    weight:  longvarchar
+    conditions_physical:  longvarchar
+    conditions_psychological:  longvarchar
+    accommodations:  longvarchar
+    head:  longvarchar
+    neck:  longvarchar
+    whiplash:  longvarchar
+    shoulders:  longvarchar
+    arms:  longvarchar
+    wrists:  longvarchar
+    hands:  longvarchar
+    upper_back:  longvarchar
+    lower_back:  longvarchar
+    pelvis:  longvarchar
+    groin:  longvarchar
+    dislocations:  longvarchar
+    dislocations_where:  longvarchar
+    asthma:  longvarchar
+    do_you_smoke:  longvarchar
+    have_you_ever_smoked:  longvarchar
+    are_you_currently_pregnant:  longvarchar
+    due_date:  date
+    lower_legs:  longvarchar
+    thighs:  longvarchar
+    knees:  longvarchar
+    ankles:  longvarchar
+    feet:  longvarchar
+    internal_organs:  longvarchar
+    heart:  longvarchar
+    lungs:  longvarchar
+    ears:  longvarchar
+    eyes:  longvarchar
+    contact_lenses:  longvarchar
+    dizziness:  longvarchar
+    high_blood_pressure:  longvarchar
+    heart_attack:  longvarchar
+    diabetes:  longvarchar
+    epilepsy_seizures:  longvarchar
+    other_serious_illness:  longvarchar
+    explanation:  longvarchar
+    allergies:  longvarchar
+    medications:  longvarchar
+    name_of_medications:  longvarchar
+    what_are_medications_for:  longvarchar
+    medication_dosages:  longvarchar
+    emergency_contact_name:  longvarchar
+    emergency_relationship:  longvarchar
+    emergency_address:  longvarchar
+    emergency_work_phone:  longvarchar
+    emergency_home_phone:  longvarchar
+    emergency_other_phone:  longvarchar
+    coverage_provider:  longvarchar
+    policy_number: longvarchar
+    other_insurance_information:  longvarchar
+    doctors_name:  longvarchar
+    doctors_contact_info:  longvarchar
+    release_of_liability:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+

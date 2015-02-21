@@ -1,0 +1,14 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  ctidatabase:
+    server: 184.73.210.4
+    port: 3306
+    user: c7user
+    password: 8iKLo9
+  remember_cookie_name: launchpad_remember
+  remember_key_expiration_age: 864000
+  pager:
+    recs_max: 15

@@ -1,0 +1,23 @@
+NOTES:
+Leadership Assistant Form: ctiforms/templates/LeadershipAssistantSuccess.php - http://ww2.thecoaches.com/launchpad/frontend_dev.php/ctiforms/LeadershipAssistant
+- answers in admin: leadership/assistantFormAnswers
+
+Leadership Annual Questionnaire:
+
+
+
+Jan 30, 2013
+
+* Add admin function to add or delete tribes
+* (DONE) deleteTribe action
+* (DONE) addTribe action
+** (DONE) TribePeer::addTribe( $name, $location, $r1_date, $fmid )
+*** (DONE) normalize location
+*** (DONE) normalize date
+*** check to see that a tribe with fmid does not already exist
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+dev:
+  propel:
+    param:
+      classname: DebugPDO
+test:
+  propel:
+    param:
+      classname: DebugPDO
+all:
+  propel:
+    class: sfPropelDatabase
+    param:
+      classname: PropelPDO
+      dsn: 'mysql:dbname=launchpaddb'
+      username: launchpaduser
+      password: 2wSDe3
+      encoding: utf8
+      port: 3306
+      persistent: true
+      pooling: true

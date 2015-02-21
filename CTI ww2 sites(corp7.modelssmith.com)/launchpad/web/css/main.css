@@ -1,0 +1,21 @@
+.btop {
+border-top: solid 1px #000;
+}
+.bleft {
+border-left: solid 1px #000;
+}
+.bright {
+border-right: solid 1px #000;
+white-space:pre-wrap;
+}
+
+.lightbg {
+background-color:#eef;
+}
+.altbg {
+background-color:#eff;
+}
+.emph {
+font-size:105%;
+font-weight:bold;
+}

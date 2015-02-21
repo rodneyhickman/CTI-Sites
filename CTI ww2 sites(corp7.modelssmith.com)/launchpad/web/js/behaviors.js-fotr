@@ -1,0 +1,13 @@
+// show	edit controls
+Event.observe(window, 'load', function(){
+    	$$('.editPanel').each( function(el){ el.hide(); });
+	$$('.hasEdit').each(function(el){  // foreach element with class="hasEdit"
+              var regex   = /(\d+)/;
+              var match = regex.exec(el.id);
+              var editDiv='edit'+match[1];
+              el.onmouseover  = function(){ $(editDiv).show(); }
+              el.onmouseout  = function(){ $(editDiv).hide(); }
+	});
+    });
+
+
