@@ -1,0 +1,642 @@
+/* basic WebX CSS */
+
+/* General */
+
+
+/* Table fix for message body */
+
+.message-body table {
+	border-collapse: collapsed;
+	-webkit-border-vertical-spacing: 1px;
+	-webkit-border-horizontal-spacing: 1px;
+	line-height: 1.6;	
+}
+
+.message-body tr, .message-body td{	
+	border: groove ;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px; 
+	padding-left:4px;
+}
+
+/* Get rid of white space at top of page */
+body {margin: 0px;padding: 0px;}
+body table{border-collapse: collapse;}
+body table td {padding: 0px;}
+body table table {border-collapse: auto;}
+body table table td {padding: auto;}
+
+a.none { background:transparent; } 
+a, a:visited { color: #eb8018; text-decoration: none;}
+a:hover, a:active { color: #eb8018; text-decoration: underline;}
+
+ul {
+	line-height : 15px;
+	list-style: disc outside none;
+	margin: 0 0 0 13px;
+	font-size: 1em;
+	padding: 1px 0px 0px 25px; 
+
+}
+
+ul li ul {margin:0px;padding:0px 0px 5px 12px;}
+
+ol {
+	line-height : 15px;
+	list-style: decimal;
+	margin-left:28px;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+img {
+	border: 0px;
+}
+
+address,form ,input,textarea, b, big, blink, blockquote, body, center, cite, dir, dl, div, em, h1, h2, h3, h4, h5, h6, i, legend, listing, menu, object, ol, p, s, server, small, span, strike, strong, sub, sup, table, td, th, u, ul, li, var, xmp { font-family: verdana, Helvetica, Arial, sans-serif; }
+body,p,ul,li,td, th { font-size: 12px; color: #303030; }
+p, ul, li, img { background:transparent; }
+.2 { font-size: .85em; }
+.text { font-size: 12px; font-family: verdana; }
+code, kbd, pre, samp, tt{ font-family: verdana; font-size: 12px; font-weight: bold; }
+.big { font-size: 1.1em; font-weight:bold;}
+.small { font-size: .9em; font-weight: normal; }
+.small b { font-weight: bold; }
+.stretch { width: 100%; }
+.gray { color: #808080; }
+.white { color: #ffffff; }
+div.spacer5 { height:0px; }
+div.spacer15 { height:5px;}
+blockquote { font-style: italic; margin: 0 10px 0 10px;}
+
+h1 {font-size: 1.7em;
+	font-weight: bold;
+	color: #eb8018;
+	margin-top: 0px;
+	font-family:arial, sans-serif;
+}
+
+div.communityProfileHeader  {
+	font-size: 1.4em;
+	font-weight: normal;
+	color: #808080;
+	margin-top: 0px;
+	font-family:arial, sans-serif;
+}
+h2 {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #eb8018;
+	margin-top: 0px;
+	font-family:arial, sans-serif;
+}
+h3 {
+	font-size: 1.2em;
+	color: #eb8018;
+	font-weight: bold;
+	font-family:arial, sans-serif;
+}
+h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #eb8018;
+	margin-top: 0px;
+	font-family:arial, sans-serif;
+}
+.size1 { font-size: .85em; }
+.size2 { font-size: .9em; }
+.size3 { font-size: 1em; }
+.size4 { font-size: 1.2em; }
+.size5 { font-size: 1.5em; }
+.size6 { font-size: 2em; }
+h1.pathTitle {background:none;}
+h1.blogTitle { color: #A6AF84; border-bottom: 1px dashed #A6AF84; font-size: 1.5em; }
+h1.formSectionHeading {
+	margin:0 0 10px 0; padding:0;
+	background: none;
+	white-space: nowrap;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #eb8018;
+	font-family:arial, sans-serif;
+}
+h3.subtitle{ color: #999; font-size: 1.1em; margin: 0px;}
+.treeTitle { font-weight: bold; }
+.pathTitle {}
+input {margin-right:3px;}
+.backpath {
+	font-weight:normal;
+	font-size: 90%;
+	margin: 0px;
+	padding: 0 5px 0 0;
+}
+.backpath b {
+	font-weight:normal;
+}
+.backpath a, .backpath a:visited {
+	font-weight:normal;
+	color: #303030; text-decoration: none;
+}
+.backpath a:hover, .backpath a:active {
+	font-weight:normal;
+	color: #303030; text-decoration: underline;
+}
+.mlMsg {  }
+.nonbold { font-size: .9em; }
+.red { color:#d92222; }
+.alert { color:#d92222; font-weight: bold; }
+.preparedFor { background:  #FFFFFF;}
+div.margins { margin: .5em; }
+
+.homepagebox {margin-bottom: 5px;border-bottom: 1px solid #808080;}
+.homepageboxhead {color: #FFFFFF; background: #808080; padding: 4px 5px; margin-bottom: 10px; text-align: left;}
+.homepagegroups	{margin: 0 0 5px 0;border-bottom:1px solid #2f72c4;}
+.homepagegroups a , .homepagegroups a :visited {color:#1b3f6a; text-decoration:none;}
+.homepagegroups a:hover, .homepagegroups a :active {color:#1b3f6a; text-decoration:underline;}
+.join {padding: 4px 5px;background:#ea994b;}
+.join a {color:#fff;}
+.toggle {font-size: 12px;}
+.hotspot {color: #eb8018;font-size: 12px;cursor: help;}
+.hotspotall {color: #eb8018;	border-bottom-style: dotted;border-bottom-width: 1px;cursor: help;font-weight: bold;font-size: 12px;}
+
+/* Yellow edit links */
+.wcmsEditLinks { font-size: .9em; background: yellow; color: #000000; border: 1px solid #000000; width: 5em; }
+.hideWcmsEditLinks { font-size: .9em; background: yellow; color: #000000; border: 1px solid #000000; width: 15em; }
+
+/* 1-2-3 forms */
+div.formSection {
+	padding: 0px 0px 2px 0px;
+}
+div.formSection textarea {
+	border: 1px solid #c0c0c0;
+}
+
+div.formSection #txSpaceSignupA_T4R3D2 div.stretch {
+	border: 1px solid #c0c0c0 !important;
+}
+/* causing issues in IE6
+div.formSection input {
+	border: 1px solid #c0c0c0;
+	padding: 2px;
+	vertical-align: middle;
+}
+*/
+
+div.formSectionBegin {}
+
+/*span.formSectionTitle { font-size: 1.7em; }*/
+
+
+/* Tabular Folder View */
+.flHeading { font-size: 93%; color: #000000; font-weight:bold; }
+.flHeading a:link { color: #000000; font-weight:bold; text-decoration: underline; }
+.flTitle { font-size: 93%; font-weight:bold; }
+.flTitle a:link { font-weight:bold; }
+.flHosts { font-size: 88%; }
+.flMsgCount { font-size: 93%; font-weight:bold;  }
+.flNewMsgCount { font-size: 93%; color: #d92222; font-weight: bold; }
+.flAuthorName { font-size: 93%; font-weight:bold;  }
+.flDateFormat { font-size: 88%; font-weight:bold;  }
+.flChatOccupants { font-size: 93%; font-weight: bold; }
+.flLinkDescription { font-size: 93%; }
+.flPathTitle { font-size: 93%; font-weight:bold; }
+.flMarkAsRead  { font-size: 88%; }
+
+/* Tabular Message View with Extras Styles */
+.mlMultiSelect {} /* for "select all" etc. links */
+.mlMessageListCount { color:#808080; font-weight: bold; } /* number of previous or next messages by button row */
+.mlDeletedMsg { color:#808080 } /* for deleted messages, when text is showing */
+.mlAuthorName a { font-weight: bold; }
+.mlAuthorName { font-weight: bold; }
+.mlItemDate {  }
+div.mlMsg blockquote { color:#303030; font-size: 0.9em; margin-top: 0; margin-bottom: 0; margin-left: 15px; } /* for blockquotes (quoting another msg) in messages */
+
+.mlMsgNumber { color:#000000; }
+.mlMsgNumber a { color:#000000; }
+.mlSecondLine { font-weight: bold; }
+.mlTreeTitle { font-weight: bold; }
+.mlAttachments { font-weight: bold; } /* Attachments: */
+.mlAttachmentNames {  }  /* filenames */
+.mlResponseTo {font-size:0.9em; } /* for "Response to:" text */
+.mlReplies {font-size:0.9em; } /* for "Replies to this msg:" text */
+.mlReplies a { } /* for "Replies to this msg:" text */
+.mlReturn {font-size:0.9em; font-style:italic; font-weight:bold; } /* for [Return] link */
+.mlWasEdited {font-size: .9em; color:#808080 } /* "this message was edited..." */
+textarea.stretch { width:81%; }
+.postCount { font-size: 0.8em; color: #808080; }
+.postCount a { color: #808080; text-decoration: underline; }
+
+/* Content Management "Box" Styles */
+.defaultContentBoxBorder {border-bottom: 1px solid #808080;}
+.defaultContentBoxHead { color: #ffffff; padding: 4px 5px; text-align: left; background: #808080;}
+.defaultContentBoxHeadPre { color: #ffffff; padding: 4px 5px; text-align: left;  background: #808080;}
+.defaultContentBoxContent { color: #808080; padding: 5px 2px 5px 2px; overflow:auto; border-bottom:1px solid #808080;}
+.defaultContentBoxContent a, .defaultContentBoxContent a:visited {text-decoration: none;	color: #303030;}
+.defaultContentBoxContent a:hover, .defaultContentBoxContent a:active {text-decoration: underline; color: #303030;}
+
+.login {width:250;}
+
+/* LiveX Styles */
+.liveXDim { color: #808080; font-size:0.9em; }
+.liveXBright { font-size:0.9em; }
+.liveXBright a { color: #FFFFFF; }
+.liveXText { font-size:0.9em; }
+
+/* Styles for All Themes */
+/* doesn't work in IE
+input[type=text] {
+	border: 1px solid #838344;
+	padding: 2px;
+}
+*/
+textarea{font-size: 12px;}
+.date { color: #808080 font-size: 95%; }
+input.stretch { width:95%; }
+.author { color: #000000; font-size: 95%; }
+.blogreplies { color: #808080 font-size: 95%; font-weight: bold; }
+.blogdate {  font-size: 110%; font-weight: bold; }
+.blogcommentdate { color: #808080 }
+.calendar p { font-size: 90%; }
+.rssLink { margin: 5px; text-align: right;}
+.categoryname { font-size: 125%; color: #808080; }
+.blogEntry {  }
+
+/* FAQ Builder Styles */
+.qa { font-size: 3em; font-family: serif; }
+.question { font-weight: bold; }
+.answer { font-size: 1em; }
+
+/*wiki toolbar */
+.toolbar table {
+	border-collapse: collapse;
+	border: 1px solid #808080;
+    margin: 5px 0;
+}
+.toolbar table th {
+	background: #FFFFFF;
+	border: 0px;
+	padding: 5px;
+}
+.toolbar td {
+	background: #FFFFFF;
+	border: 0px;
+	padding: 5px;
+}
+
+/* Friends approve deny spacing*/
+table #txUtilitiesA_T63 td {vertical-align:top; padding:5px;}
+
+/* Group approve deny spacing */
+table #txUtilitiesA_T84 td {vertical-align:top; padding:5px;}
+table #txUtilitiesA_T64 td {vertical-align:top; padding:5px;}
+
+/*Invite log */
+.whoInvitedCell {width:50px; padding-left:2px;}
+.whenInvitedCell {width:200px; padding-left:2px;}
+.invitedToCell {padding-left:2px;}
+#txUtilitiesA_T55R2D3 {padding-left:2px;}
+
+.right {float:right;}
+.left {float:left;}
+
+/*
+===== Styles for Generic Container A =====
+*/
+
+div.genericA{
+	background-color: #ffffff;
+	border: 1px solid #838344;
+	color: #808080;
+}
+div.genericA a, div.genericB a:visited  {
+	color: #303030; text-decoration: underline;
+}
+div.genericA a:hover, div.genericB a:active  {
+	color: #303030; text-decoration: none;
+}
+div.genericA h4{
+	color: #ffffff;
+	padding: 5px 8px;
+        align: center;
+	background-color: #838344;
+}
+div.genericA div {
+	padding-left: 2px!important;
+
+}
+div.genericA p {
+	
+}
+
+
+div.genericA div.foot, div.genericB .spacer5 {
+	display: none;
+}
+
+div.genericA input.text {
+
+	border: 1px solid #808080;
+
+	width: 90%;
+
+}
+
+/*
+===== Styles for Log in box =====
+*/
+
+div.genericAL{
+	background-color: #D3D3BE;
+	border-bottom: 1px solid #FFFFFF;
+	line-height: 130%;
+	color: #000000;
+}
+div.genericAL a, div.genericAL a:visited  {
+	color: #000000; text-decoration: underline;
+}
+div.genericAL a:hover, div.genericAL a:active  {
+	color: #eb8018; text-decoration: none;
+}
+div.genericAL h4{
+	background:#838344;
+	color: #FFFFFF;
+	padding: 5px 8px;
+	margin: 0px;
+}
+div.genericAL div {
+	margin: 5px 3px;
+}
+div.genericAL p {
+	
+}
+
+div.genericAL input.text {
+	border: 1px solid #808080;
+	width: 90%;
+}
+div.genericAL .foot, div.genericAL .spacer5 {
+	display: none;
+}
+
+
+/*
+===== Styles for wide log container A=====
+*/
+
+div.genericAwide, div.genericBwide{
+	background-color: #EEEEEE;
+	margin:10px 0;
+	border-bottom: 1px solid #808080;
+	line-height: 130%;
+	color: #000000;
+	width:600px;
+
+}
+div.genericAwide a, div.genericAwide a:visited, div.genericBwide a, div.genericBwide a:visited  {
+	color: #000000; text-decoration: underline;
+}
+div.genericAwide a:hover, div.genericAwide a:active, div.genericBwide a:hover, div.genericBwide a:active  {
+	color: #eb8018; text-decoration: none;
+}
+div.genericAwide h4, div.genericBwide h4{
+	background:#808080;
+	color: #FFFFFF;
+	padding: 5px 8px;
+	margin: 0px;
+}
+div.genericAwide div, div.genericBwide div {
+	margin: 5px 3px;
+}
+div.genericAwide p, div.genericBwide p  {
+	
+}
+
+div.genericAwide input.text, div.genericBwide input.text {
+	border: 1px solid #808080;
+	width: 90%;
+}
+div.genericAwide .foot, div.genericAwide .spacer5, div.genericBwide .foot, div.genericBwide .spacer {
+	display: none;
+}
+
+/*
+===== Styles for Generic Container B =====
+*/
+div.genericB{
+	background-color: #ffffff;
+	border-bottom: 1px solid #808080;
+	color: #808080;
+}
+div.genericB a, div.genericB a:visited  {
+	color: #303030; text-decoration: none;
+}
+div.genericB a:hover, div.genericB a:active  {
+	color: #303030; text-decoration: underline;
+}
+div.genericB h4{
+	color: #ffffff;
+	font-weight:normal;
+	padding: 4px 5px;
+    text-align: left;
+	background-color: #808080;
+}
+div.genericB div {padding-left: 2px!important;}
+div.genericB p {}
+div.genericB div.foot, div.genericB .spacer5 {display: none;}
+
+
+/*
+===== Styles for Generic Container C =====
+*/
+div.genericC{
+	background-color: #FFF0E1;
+	margin-top:10px;
+	border: 1px solid #c0c0c0;
+	line-height: 130%;
+	color: #000000;
+	padding: 8px 8px 8px 8px;
+}
+div.genericC a, div.genericC a:visited  {
+	color: #000000; text-decoration: underline;
+}
+div.genericC a:hover, div.genericC a:active  {
+	color: #eb8018; text-decoration: none;
+}
+div.genericC h4{
+	color: #eb8018;
+	padding: 0px 0px 5px 0px;
+	margin: 0px 0px 5px 0px;
+	background: url(/fimages/horizontalline_full.gif) bottom left repeat-x;
+}
+div.genericC div {
+	padding: 0px !important;
+	margin: 0px;
+}
+div.genericC p {
+	
+}
+
+div.genericC input.text {
+	border: 1px solid #808080;
+	width: 90%;
+}
+div.genericC div.foot, div.genericC .spacer5 {
+	display: none;
+}
+
+div.genericC ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+	
+}
+div.genericC li {
+	margin: 0px;
+	padding: 0px 0px 0px 12px;
+	background: url(/fimages/bullet_orangearrow.gif) 0px 4px no-repeat;
+
+}
+
+
+/*
+===== Styles for Generic Container D =====
+*/
+
+div.genericD{
+	background: #FFFFFF url(/fimages/eldis_feathers.gif) bottom left no-repeat;
+	margin-top:10px;
+	border: 1px solid #644F3A;
+	line-height: 130%;
+	color: #000000;
+	padding: 8px 8px 30px 8px;
+}
+div.genericD a, div.genericD a:visited  {
+	color: #000000; text-decoration: underline;
+}
+div.genericD a:hover, div.genericD a:active  {
+	color: #eb8018; text-decoration: none;
+}
+div.genericD h4{
+	color: #eb8018;
+	padding: 0px 0px 5px 0px;
+	margin: 0px 0px 5px 0px;
+	background: url(/fimages/horizontalline_full.gif) bottom left repeat-x;
+}
+div.genericD div {
+	padding: 0px !important;
+	margin: 0px;
+}
+div.genericD p {
+	
+}
+
+div.genericD input.text {
+	border: 1px solid #808080;
+	width: 90%;
+}
+div.genericD div.foot, div.genericD .spacer5 {
+	display: none;
+}
+.item {
+	background: #EEEEEE;
+	padding: 10px;
+}
+.item h3 {
+	margin: 0px  0px 8px 0px ;
+	padding: 0px;
+}
+.item h3 a, .item h3 a:visited {
+	color: #303030;
+}
+.item p {
+	margin: 0px  0px 8px 0px ;
+	padding: 0px;
+}
+
+p.itemmore {
+	background: transparent url(/fimages/horizontalline_full.gif) bottom left repeat-x;
+	padding-bottom: 10px;
+}
+
+table#invitationSent {margin-bottom:10px;}
+table#invitationSent td {padding-right:10px;}
+
+
+/*
+===== Styles for Generic Container E =====
+*/
+div.genericE{
+	background-color : #FFFFFF;
+	font : normal 0.6em Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color:#303030;
+	margin: 0px 0 0 0;
+
+}
+/* fix peekaboo bug in IE 6 \*/
+* html div.genericC {height: 1%}
+/* end hck */
+
+div.genericE h4{
+	font-size : 1.1em;
+	font-weight : normal;
+	list-style-type:none;
+	background:#FFFFFF url(/Images/C_containerTop.gif) no-repeat bottom;
+
+	padding : 2px 2px 2px 2px;
+}
+
+#rightPanel div.genericE img.illustration {
+	padding: 0;
+	margin: 4px 4px 4px 0px;
+	float: left;
+	
+}
+
+div.genericE li {
+	list-style-type:none;
+	padding: 0px 2px 2px 5px;
+	margin: 0px 0px 0px 0px;
+	border: 0;
+	text-align:left;
+	background:url(/Images/C_containerLine.gif) no-repeat bottom;
+}
+
+
+div.genericE div.foot{
+	background:url(/Images/C_containerDown.gif) bottom no-repeat;
+	padding: 1px; /* height: 3px; doesn't work in ie7 */
+	font-height: 1px;
+	line-height: 1px;
+}
+
+div.genericE div.footMidPanel {
+	background:url(/Images/C_midPanelDown.gif) bottom no-repeat;
+	height:6px;
+}
+
+
+/*
+===== Feedburner styles =====
+*/
+
+div.feedburnerFeedBlock .headline a , div.feedburnerFeedBlock .headline a:visited  {color:#303030;font: bold 1.2em Verdana, sans-serif; text-decoration:none;}
+div.feedburnerFeedBlock .headline a:hover, div.feedburnerFeedBlock .headline a:active {color:#303030;font: bold 1.2em Verdana, sans-serif; text-decoration:underline;}
+div.feedburnerFeedBlock li {
+	background: transparent url(/fimages/horizontalline_full.gif) top left repeat-x;
+	list-style: none;
+    margin: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+div.feedburnerFeedBlock p {
+	line-height:1px;
+}
+
+.ftitle {font-weight:bold; font-size:1.2em;margin-bottom:-10px;}
+table .subform td {padding: 7px;}
+
+.defaultContentBoxBorder .apost {padding:3px 0}
+.googlesearch {margin:-5px -2px;padding:5px;}
