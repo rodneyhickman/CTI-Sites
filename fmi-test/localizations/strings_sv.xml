@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROPERTIES xmlns="http://www.filemaker.com/xmlproperties">
+	
+	<PROPERTY NAME="page.title">Test av PHP egen webbpublicering </PROPERTY>
+	<PROPERTY NAME="page.test-name">PHP egen webbpublicering</PROPERTY>
+	<PROPERTY NAME="page.label.server">Server:</PROPERTY>
+	
+	<!-- status messages -->
+	<PROPERTY NAME="message.success">PHP-anslutningen till databasen FMServer_Sample verkar ha lyckats. Nedanstående tabell visar data från databasexemplet.</PROPERTY>
+	
+	<PROPERTY NAME="message.failure">PHP-anslutningen till databasen FMServer_Sample verkar ha misslyckats.</PROPERTY>
+	
+	
+	<!-- error messages -->
+	<PROPERTY NAME="message.error.unknown">Ett oväntat fel inträffade. Läs dokumentationen för FileMaker om du vill ha mer hjälp.</PROPERTY>
+
+	<PROPERTY NAME="message.error.no-php-api">PHP API hittades inte.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.100">Databasen FMServer_Sample kräver en fil som inte kunde hittas.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.101">En nödvändig post saknas.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.102">Ett nödvändigt fält saknas.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.105">Den begärda layouten kunde inte hittas.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.200">Du har inte tillräcklig behörighet för att få åtkomst till poster i databasen FMServer_Sample. Öppna databasen i FileMaker Pro och se till att ditt konto har [Fullständig åtkomst].</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.211">Lösenordet för detta konto har förfallit. Öppna databasen FMServer_Sample med FileMaker Pro, ändra lösenordet för det här kontot och försök sedan igen.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.401">Sökningen som utfördes med PHP-testet matchade inga poster.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.802">Databasen FMServer_Sample är inte öppen eller också har gästkontot inte aktiverat utökad behörighet för fmphp. Använd FileMaker Server Admin när du vill öppna databasen eller öppna filen i FileMaker Pro och aktivera utökad behörighet.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.955">PHP-testet anger inget databasnamn.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.956">Denna Web Publishing Engine har redan för många aktiva sessioner. Om du använder FileMaker Server Admin, ökar du antalet sessioner av Web Publishing Engine, kopplar bort en aktiv session eller väntar tills fler sessioner blir tillgängliga.</PROPERTY>
+
+	<!-- errors I don't think will ever happen... -->
+	<PROPERTY NAME="message.error.fm.9">Du har inte tillräcklig behörighet för att visa poster i databasen. Öppna databasen i FileMaker Pro och se till att ditt konto har [Fullständig åtkomst].</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.210">Kontot i databasen FMServer_Sample är inaktiv. Öppna databasen med FileMaker Pro, aktivera detta konto och försök igen.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.212">Ogiltigt användarkonto och/eller lösenord</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.213">Användarkontot och/eller lösenordet finns inte</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.6">Värden för Web Publishing Engine kunde inte hittas. Se till att du har korrekt värdadress och försök igen.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.7">Web Publishing Engine nekar anslutningar. Se till att webbservern har startat och försök igen.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.22">PHP-testet kunde inte kommunicera med Web Publishing Engine. Se till att du har aktiverat PHP-publicering och att databasen har aktiverat den utökade behörigheten fmphp.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.26">Ett nätverkfel uppstod när data lästes från Web Publishing Engine. Försök igen.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.27">PHP-webbservern har inte tillräckligt med tillgängligt minne för att ansluta till Web Publishing Engine.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.28">Tiden gick ut för anslutningen till Web Publishing Engine medan svar inväntades. Om problemet kvarstår ska du kontrollera att du inte har en brandvägg som stör anslutningen. Se också till att FileMaker Server svarar.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.51">Säkerhetscertifikatet i Web Publishing Engine är ogiltigt.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.52">Anslutningen till Web Publishing Engine lyckades men returnerade inte något svar.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.55">Ett nätverkfel uppstod när en fråga skickades till Web Publishing Engine. Försök igen.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.56">Ett nätverkfel uppstod när data lästes från Web Publishing Engine. Försök igen.</PROPERTY>
+	
+	<!-- database labels -->
+	<PROPERTY NAME="db.title">America 24/7 Collection</PROPERTY>
+</PROPERTIES>

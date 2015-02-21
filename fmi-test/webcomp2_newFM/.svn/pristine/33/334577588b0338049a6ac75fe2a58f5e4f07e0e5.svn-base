@@ -1,0 +1,107 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+
+use YAML qw( Load );
+use Smart::Comments;
+use Data::Dumper;
+use Date::Manip;
+use DBI;
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+`touch getstudents.touch`;
+
+$|++;
+print "Subject: cron: getstudents_yaml\n";
+
+my $dbh = DBI->connect("DBI:mysql:mentordb",'mentoruser','2wSDe3');
+
+my $query = 'fmi-test/webcomp2_newFM/getstudents_courses.php?postkey=fjgh15t';
+my $server = 'webcomp.modelsmith.com';
+
+print "Getting Students\n";
+my $ua = LWP::UserAgent->new;
+$ua->timeout(120);
+$ua->env_proxy;
+my $response = $ua->get("http://$server/$query");
+my $yaml;
+if($response->is_success){
+    $yaml = $response->content;
+} else {
+
+    die $response->status_line;
+}
+print Dumper  $yaml;
+
+print "Done.\n";
+
+print "Size of YAML: ",length($yaml),"\n";
+
+print "Loading YAML\n";
+
+
+my $hashref = Load($yaml);
+
+### $hashref
+
+
+my @students = @{$hashref->{doc}{contacts}};
+
+
+
+print " - Done.\n";
+print "Number of records: ".scalar @students.".\n";
+
+
+
+my $err;
+foreach my $s (@students) {
+  ### $s
+  next if $s->{email} eq '';  # skip if email missing
+
+
+  my @courses = split(',', $s->{courses});
+  my ($fun,$ful,$bal,$pro,$itb);
+  foreach my $c (@courses) {
+    if ($c =~ m/fun/i) {
+      $fun = $c;
+    }
+    elsif ($c =~ m/ful/i) {
+      $ful = $c;
+    }
+    elsif ($c =~ m/bal/i) {
+      $bal = $c;
+    }
+    elsif ($c =~ m/pro/i) {
+      $pro = $c;
+    }
+    elsif ($c =~ m/itb/i) {
+      $itb = $c;
+    }
+
+  }
+  
+  ### doing: $s->{email}
+  my ($id) = $dbh->selectrow_array('SELECT id FROM student WHERE fm_id=?',undef,$s->{fm_id});
+  if ($id < 1) { # not found, so try email instead
+    ($id) = $dbh->selectrow_array('SELECT id FROM student WHERE email=?',undef,$s->{email});
+  }
+  if ($id > 0) {
+    $dbh->do('UPDATE student SET name=?,email=?,level=?,last_activity=?,course_fundamentals=?,course_fulfillment=?,course_balance=?,course_process=?,course_in_the_bones=?,updated_at=NOW() WHERE id=?',undef,$s->{first_name}.' '.$s->{last_name},$s->{email},0+$s->{level},format_date($s->{last_activity}),$fun,$ful,$bal,$pro,$itb,$id);
+    $err = $dbh->errstr;
+    print $err if $err;
+  }
+  else {
+    $dbh->do('INSERT INTO student (fm_id,name,email,level,last_activity,course_fundamentals,course_fulfillment,course_balance,course_process,course_in_the_bones,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,NOW(),NOW())',undef,$s->{fm_id},$s->{first_name}.' '.$s->{last_name},$s->{email},0+$s->{level},format_date($s->{last_activity}),$fun,$ful,$bal,$pro,$itb);
+    $err = $dbh->errstr;
+    print $err if $err;
+  }
+}
+
+sub format_date{
+  my($date) = @_;
+  my($m,$d,$y,$t) = ($date =~ m{(\d+)/(\d+)/(\d+)\s+(.*)});
+  return "$y-$m-$d $t";
+}
+print "Done.\n";

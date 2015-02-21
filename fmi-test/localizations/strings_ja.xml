@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROPERTIES xmlns="http://www.filemaker.com/xmlproperties">
+	
+	<PROPERTY NAME="page.title">PHP カスタム Web 公開テスト </PROPERTY>
+	<PROPERTY NAME="page.test-name">PHP カスタム Web 公開</PROPERTY>
+	<PROPERTY NAME="page.label.server">サーバー:</PROPERTY>
+	
+	<!-- status messages -->
+	<PROPERTY NAME="message.success">FMServer_Sample データベースの PHP 接続に成功しました。 以下の表は、サンプルデータベースからのデータを表示します。</PROPERTY>
+	
+	<PROPERTY NAME="message.failure">FMServer_Sample データベースの PHP 接続に失敗しました。</PROPERTY>
+	
+	
+	<!-- error messages -->
+	<PROPERTY NAME="message.error.unknown">予想外のエラーが発生しました。 追加のヘルプに関しては、FileMaker のマニュアルを参照してください。</PROPERTY>
+
+	<PROPERTY NAME="message.error.no-php-api">PHP API が見つかりませんでした。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.100">FMServer_Sample データベースが要求するファイルが見つかりませんでした。</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.101">必要なレコードが不明です。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.102">必要なフィールドが不明です。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.105">必要なレイアウトが見つかりませんでした。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.200">FMServer_Sample データベース内のレコードにアクセスするのに十分なアクセス権がありません。 FileMaker Pro でデータベースを開き、自分のアカウントが [完全アクセス] を持っているか確認します。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.211">このアカウントのパスワードの期限が切れています。 FileMaker Pro で FMServer_Sample データベースを開き、このアカウント用のパスワードを変更し、再度実行してください。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.401">PHP テストにより実行された検索に一致するレコードはありませんでした。</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.802">FMServer_Sample データベースが開いていないか、ゲストアカウントの fmphp 拡張アクセス権が有効化されていません。 FileMaker Server Admin を使用して、FileMaker Pro の中でデータベースかファイルを開き、拡張アクセス権を有効化します。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.955">PHP テストはデータベース名を指定しません。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.956">この Web 公開エンジンにはすでに多すぎるアクティブセッションが存在します。 FileMaker Server Admin を使用して、Web 公開エンジン数を増やし、アクティブセッションの接続を解除するか、セッションが利用可能になるまでしばらくの間待ちます。</PROPERTY>
+
+	<!-- errors I don't think will ever happen... -->
+	<PROPERTY NAME="message.error.fm.9">データベース内のレコードを表示するのに十分なアクセス権を持っていません。 FileMaker Pro でデータベースを開き、自分のアカウントが [完全アクセス] を持っているか確認します。</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.210">FMServer_Sample データベース内のアカウントが無効です。 FileMaker Pro を使用してデータベースを開き、このアカウントを有効化し、再度実行してください。</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.212">無効なユーザーアカウントまたはパスワード、あるいはその両方</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.213">ユーザーアカウントまたはパスワード、あるいはその両方が存在しません。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.6">Web 公開エンジンホストが見つかりませんでした。 正しいホストアドレスを使用しているか確認し、再度実行します。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.7">Web 公開エンジンが接続を拒否しています。 Web サーバーが開始していることを確認し、再度実行します。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.22">PHP テストが Web 公開エンジンと通信できません。PHP 公開が有効化され、データベースの fmphp 拡張アクセス権限が有効化されていることを確認します。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.26">Web 公開エンジンからデータを読み込み中にネットワークエラーが発生しました。 再実行してください。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.27">PHP Web サーバーにおいて、Web 公開エンジンに接続するのに利用できるメモリが十分ではありません。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.28">応答を待っている間に、Web 公開エンジンへの接続がタイムアウトしました。 この問題が続く場合は、接続に干渉しているファイアウォールがないかを確認します。 また、FileMaker Server が応答していることを確認します。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.51">Web 公開エンジン上のセキュア証明書が無効です。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.52">Web 公開エンジンへの接続は成功しましたが、応答がありません。</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.55">Web 公開エンジンへリクエストを送信する際にネットワークエラーが発生しました。 再実行してください。</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.56">Web 公開エンジンからデータを読み込み中にネットワークエラーが発生しました。 再実行してください。</PROPERTY>
+	
+	<!-- database labels -->
+	<PROPERTY NAME="db.title">America 24/7 Collection</PROPERTY>
+</PROPERTIES>

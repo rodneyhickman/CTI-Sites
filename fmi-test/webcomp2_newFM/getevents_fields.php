@@ -1,0 +1,49 @@
+<?php
+require_once ('FileMaker.php');
+require_once ('Student.php');
+
+$start = $_GET['start'];
+$range = $_GET['range'];
+
+if($range > 0 && $range < 501){
+
+  $fm = new FileMaker(); 
+
+// changed 3/10/12
+
+$fm->setProperty('database', Student::DATABASE); 
+$fm->setProperty('username', Student::USERNAME); 
+$fm->setProperty('password', Student::PASSWORD);
+
+
+// FindAll
+// Usage: $fm->newFindAllCommand('LAYOUT',$values);
+// $findCommand =& $fm->newFindAllCommand('Form View'); 
+
+// Find with criteria
+$findCommand =& $fm->newFindCommand('Web Event'); 
+$findCommand->addFindCriterion('ev_date_d','>='.date('m/d/Y')); 
+
+
+
+
+$findCommand->setRange($start, $range);
+$result = $findCommand->execute();
+
+if (FileMaker::isError($result)) {
+  die('<p>'.$result->getMessage().' (error '.$result->code.')</p>');
+}
+
+// Get records from found set 
+$records = $result->getRecords(); 
+if(count($records) == 0){
+  break;
+}
+
+$count = count($records);
+echo "doc:\n";
+echo "  count: $count\n";
+
+print_r($records);
+
+}

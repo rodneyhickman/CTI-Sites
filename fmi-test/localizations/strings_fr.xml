@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROPERTIES xmlns="http://www.filemaker.com/xmlproperties">
+	
+	<PROPERTY NAME="page.title">Test de publication Web personnalisée PHP </PROPERTY>
+	<PROPERTY NAME="page.test-name">Publication Web personnalisée PHP</PROPERTY>
+	<PROPERTY NAME="page.label.server">Serveur :</PROPERTY>
+	
+	<!-- status messages -->
+	<PROPERTY NAME="message.success">La connexion PHP à la base de données FMServer_Sample a réussi. Le tableau ci-dessous affiche les données provenant de la base de données exemple.</PROPERTY>
+	
+	<PROPERTY NAME="message.failure">La connexion PHP à la base de données FMServer_Sample a échoué.</PROPERTY>
+	
+	
+	<!-- error messages -->
+	<PROPERTY NAME="message.error.unknown">Une erreur imprévue s'est produite. Consultez la documentation de FileMaker pour obtenir plus d'aide.</PROPERTY>
+
+	<PROPERTY NAME="message.error.no-php-api">L'API PHP est introuvable.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.100">La base de données FMServer_Sample requiert un fichier introuvable.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.101">Un enregistrement requis est manquant.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.102">Une rubrique requise est manquante.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.105">Le modèle requis est introuvable.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.200">Vous ne disposez pas des autorisations suffisantes pour accéder aux enregistrements de la base de données FMServer_Sample. Ouvrez la base de données dans FileMaker Pro et vérifiez que votre compte est en [Accès intégral].</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.211">Le mot de passe de ce compte a expiré. Ouvrez la base de données FMServer_Sample avec FileMaker Pro, modifiez le mot de passe de ce compte, puis réessayez.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.401">La recherche effectuée par le test PHP n'a pas trouvé d'enregistrements.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.802">La base de données FMServer_Sample n'est pas ouverte ou le compte invité n'a pas d'autorisation étendue activée pour fmphp. Utilisez FileMaker Server Admin pour ouvrir la base données ou le fichier dans FileMaker Pro et activer l'autorisation étendue.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.955">Le test PHP n'indique pas de nom de base de données.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.956">Ce moteur de publication Web a déjà trop de sessions actives. A l'aide de FileMaker Server Admin, augmentez le nombre de sessions du moteur de publication Web, déconnectez une session active ou attendez que davantage de sessions soient disponibles.</PROPERTY>
+
+	<!-- errors I don't think will ever happen... -->
+	<PROPERTY NAME="message.error.fm.9">Vous n'êtes pas autorisé à visualiser les enregistrements de cette base de données. Ouvrez la base de données dans FileMaker Pro et vérifiez que votre compte est en [Accès intégral].</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.210">Le compte de la base de données FMServer_Sample est inactif. Ouvrez la base de données avec FileMaker Pro, activez ce compte, puis réessayez.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.212">Compte utilisateur et/ou mot de passe non valide.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.213">Le compte utilisateur et/ou le mot de passe n'existe pas</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.6">L'hôte du moteur de publication Web est introuvable. Vérifiez l'adresse de l'hôte et recommencez.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.7">Le moteur de publication Web refuse les connexions. Vérifiez que le serveur Web a démarré et recommencez.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.22">Le test PHP n'a pas pu communiquer avec le moteur de publication Web.  Vérifiez que vous avez activé la publication PHP ainsi que le privilège étendu fmphp de la base de données.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.26">Une erreur réseau s'est produite lors de la lecture de données à partir du moteur de publication Web. Réessayez.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.27">Le serveur Web PHP ne dispose pas d'assez de mémoire pour se connecter au moteur de publication Web.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.28">La connexion au moteur de publication Web a expiré en attendant une réponse. Si ce problème persiste, vérifiez qu'un pare-feu n'interfère pas avec la connexion. Assurez-vous également que FileMaker Server répond.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.51">Le certificat sécurisé du moteur de publication Web n'est pas valide.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.52">La connexion au moteur de publication Web a réussi, mais n'a renvoyé aucune réponse.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.55">Une erreur réseau s'est produite lors de l'envoi d'une requête au moteur de publication Web. Réessayez.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.56">Une erreur réseau s'est produite lors de la lecture de données à partir du moteur de publication Web. Réessayez.</PROPERTY>
+	
+	<!-- database labels -->
+	<PROPERTY NAME="db.title">America 24/7 Collection</PROPERTY>
+</PROPERTIES>

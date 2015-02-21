@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROPERTIES xmlns="http://www.filemaker.com/xmlproperties">
+	
+	<PROPERTY NAME="page.title">Test Pubblicazione Web personalizzata PHP </PROPERTY>
+	<PROPERTY NAME="page.test-name">Pubblicazione Web personalizzata PHP</PROPERTY>
+	<PROPERTY NAME="page.label.server">Server:</PROPERTY>
+	
+	<!-- status messages -->
+	<PROPERTY NAME="message.success">La connessione PHP al database FMServer_Sample sembra essere stata stabilita. La tabella in basso mostra i dati del database di esempio.</PROPERTY>
+	
+	<PROPERTY NAME="message.failure">La connessione PHP al database FMServer_Sample non è stata stabilita.</PROPERTY>
+	
+	
+	<!-- error messages -->
+	<PROPERTY NAME="message.error.unknown">Errore imprevisto. Per ulteriori informazioni consultare la documentazione FileMaker.</PROPERTY>
+
+	<PROPERTY NAME="message.error.no-php-api">Impossibile trovare l'API PHP.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.100">Il database FMServer_Sample richiede un file non trovato.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.101">Manca un record richiesto.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.102">Manca un campo obbligatorio.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.105">Impossibile trovare il formato richiesto.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.200">L'utente non dispone di privilegi sufficienti per accedere ai record del database FMServer_Sample. Aprire il database in FileMaker Pro e assicurarsi che l'account sia di tipo [Accesso completo].</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.211">La password per questo account è scaduta. Aprire il database FMServer_Sample database in FileMaker Pro, cambiare la password per questo account, quindi riprovare.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.401">La ricerca eseguita dal test PHP non ha prodotto nessun record.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.802">Il database FMServer_Sample non è aperto o per l'account Ospite non è abilitato il privilegio esteso fmphp. Usare FileMaker Server Admin per aprire il database o aprire il file in FileMaker Pro e abilitare il privilegio esteso.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.955">Il test PHP non specifica un nome per il database.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.956">Per questo Motore di Pubblicazione Web sono attive già troppe sessioni. Utilizzando FileMaker Server Admin, aumentare il numero di sessioni del Motore di Pubblicazione Web, scollegare una sessione attiva o attendere che si liberino altre sessioni.</PROPERTY>
+
+	<!-- errors I don't think will ever happen... -->
+	<PROPERTY NAME="message.error.fm.9">L'utente non dispone di privilegi sufficienti per visualizzare i record del database. Aprire il database in FileMaker Pro e assicurarsi che l'account sia di tipo [Accesso completo].</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.210">L'account nel database FMServer_Sample è inattivo. Aprire il database in FileMaker Pro, abilitare questo account e riprovare.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.212">Account utente e/o password non validi</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.213">Il nome utente e/o la password non esistono</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.6">Impossibile trovare l'host del Motore di Pubblicazione Web. Assicurarsi che l'indirizzo dell'host sia corretto e riprovare.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.7">Il Motore di Pubblicazione Web sta rifiutando le connessioni. Assicurarsi che il server Web sia avviato e riprovare.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.22">Il test PHP non è stato in grado di comunicare con il Motore di Pubblicazione Web. Assicurarsi che la pubblicazione PHP sia abilitata e che per il database sia abilitato il privilegio esteso fmphp.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.26">Errore di rete durante la lettura dei dati dal Motore di Pubblicazione Web. Riprovare.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.27">Il server Web PHP non dispone di memoria sufficiente per connettersi al Motore di Pubblicazione Web.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.28">La connessione al Motore di Pubblicazione Web è scaduta durante l'attesa di una risposta. Se il problema persiste, assicurarsi che un firewall non stia interferendo con la connessione. Inoltre, assicurarsi che FileMaker Server stia rispondendo.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.51">Il certificato di protezione sul Motore di Pubblicazione Web non è valido.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.52">La connessione al Motore di Pubblicazione Web è stata stabilita, ma non è stata restituita nessuna risposta.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.55">Errore di rete durante l'invio di una richiesta al Motore di Pubblicazione Web. Riprovare.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.56">Errore di rete durante la lettura dei dati dal Motore di Pubblicazione Web. Riprovare.</PROPERTY>
+	
+	<!-- database labels -->
+	<PROPERTY NAME="db.title">America 24/7 Collection</PROPERTY>
+</PROPERTIES>

@@ -1,0 +1,249 @@
+#!/usr/bin/perl
+# this is used to read an Excel 97-2004 file and update/insert records into
+# the database. 
+ 
+
+
+use Spreadsheet::Read; # reads Excels files
+use Smart::Comments '####';
+use Getopt::Euclid;
+use Data::Dumper;
+use Date::Manip qw(UnixDate ParseDate);
+use DBI;
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+
+# Getopt::Euclid args 
+my $excel_file = $ARGV{'-excel_file'}; # number of minutes after which to stop;
+my $dry_run    = $ARGV{'-dry_run'};    # don't update the database, just report
+
+$|++;
+ 
+
+# connect to local database
+my $dbh = DBI->connect("DBI:mysql:mentordb",'mentoruser','2wSDe3');
+
+
+
+
+# why build a map? so that you don't have to change the update/insert code below
+# if the source field names change
+my %map = (
+  'fm_id'         => '_CNTCT_ID',
+  'first_name'    => 'First Name',
+  'last_name'     => 'Last Name',
+  'email'         => 'Email',
+  'last_activity' => 'Modified_Timestamp',
+  'level'         => 'Max_Level_Completed',
+);
+
+# build the spreadsheet iterator. It will iterate over each row.
+my ($spreadsheet_it,@columns) = spreadsheet_iterator_maker( $excel_file, 
+                                                 sub { 1 }, 
+                                                 { column_names => 1,
+                                                   'map' => \%map,
+                                                 } 
+                                               );
+
+
+
+
+
+my $err;
+my $count;
+# now iterate over each row
+while (my $s = $spreadsheet_it->() ) { #### Updating |===[%]                     |
+
+
+
+  ### $s
+
+  # skip if email is blank - we don't store those
+  next if $s->{email} eq '';  
+  
+  ### doing: $s->{email}
+  my ($id) = $dbh->selectrow_array('SELECT id FROM student WHERE fm_id=?',undef,$s->{fm_id});
+  if ($id < 1) { # not found, so try email instead
+    ($id) = $dbh->selectrow_array('SELECT id FROM student WHERE email=?',undef,$s->{email});
+  }
+  if ($id > 0) {
+    if ($dry_run) {
+      print "Update: $s->{first_name} $s->{last_name}, $s->{email}\n";
+    }
+    else {
+      $dbh->do('UPDATE student SET fm_id=?,name=?,email=?,level=?,last_activity=?,updated_at=NOW() WHERE id=?',undef,$s->{fm_id},$s->{first_name}.' '.$s->{last_name},$s->{email},0+$s->{level},format_date($s->{last_activity}),$id);
+      $err = $dbh->errstr;
+      print $err if $err;
+    }
+  }
+  else {
+    if ($dry_run) {
+      print "Insert: $s->{first_name} $s->{last_name}, $s->{email}\n";
+    }
+    else {
+      $dbh->do('INSERT INTO student (fm_id,name,email,level,last_activity,created_at,updated_at) values (?,?,?,?,?,NOW(),NOW())',undef,$s->{fm_id},$s->{first_name}.' '.$s->{last_name},$s->{email},0+$s->{level},format_date($s->{last_activity}));
+      $err = $dbh->errstr;
+      print $err if $err;
+    }
+  }
+}
+
+print "\n";
+
+####### Local subroutines #########
+
+
+
+sub format_date{
+
+
+  my $d = UnixDate(ParseDate("today"),"%Y-%m-%d"); # temp return... excel dates need conversion
+  return $d;
+
+  my($date) = @_;
+  my($m,$d,$y,$t) = ($date =~ m{(\d+)/(\d+)/(\d+)\s+(.*)});
+  return "$y-$m-$d $t";
+}
+
+
+sub spreadsheet_iterator_maker { 
+  my($excel_file,$filter,$options) = @_;
+
+  ### $options
+
+  return undef
+    unless -f $excel_file;
+
+  my $ref = ReadData($excel_file);
+
+  # ### $ref
+
+  my $num_of_sheets = $ref->[0]{sheets};
+  my $sheet_num     = 1;
+  my $row           = 1;
+
+  ### $num_of_sheets
+
+  # 1st sheet
+  my $sheet = $ref->[$sheet_num];
+  my $cells = $sheet->{cell};
+  my $maxcol = $sheet->{maxcol};
+  my $maxrow = $sheet->{maxrow};
+
+  ### $maxcol
+  ### $maxrow
+
+  # column names
+  my @column_names = ();
+  if($options->{column_names}){
+    # get first column
+    @column_names = map { $cells->[$_][$row] } 1 .. $maxcol ;
+    $row++;
+    foreach (@column_names) {
+      # scrub all non-printing chars... columns names will frequently have
+      # hidden formatting chars
+      s{[^A-Za-z0-9\_\-\. ]}{}gms;
+    }
+    ### @column_names;
+  }
+
+
+  # and here is the iterator...
+
+  my $iterator = sub {
+    # get the next row
+    while ( 1 ) {
+      ### $row
+
+      my @cell_values = map { $cells->[$_][$row] } 1 .. $maxcol ;
+      foreach (@cell_values) {
+        # scrub all non-printing chars...
+        s{[^A-Za-z0-9\_\-\.\@\' ]}{}gms;
+      }
+      ### @cell_values
+
+      if ($row > $maxrow) {
+	# for now, just return after first sheet
+	last;
+
+	# get next sheet
+	$sheet_num++;
+	last if $sheet_num > $num_of_sheets;
+
+	$sheet = $ref->[$sheet_num];
+	$cells = $sheet->{cell};
+	$maxcol = $sheet->{maxcol};
+	$maxrow = $sheet->{maxrow};
+      }
+
+      $row++;
+
+      if( $filter->($row - 1, @cell_values) ){
+        if ( $options->{column_names} && $options->{'map'} ) {
+          my $map = $options->{map};
+          my $hashref = { };
+          # refactor opportunity here...
+          foreach my $col( @column_names ) {
+            my $val = shift @cell_values;
+            foreach my $key (keys %$map) {
+              if ($col eq $map->{$key}) {
+                $hashref->{$key} = $val;
+              }
+            }
+          }
+          return $hashref;
+        }
+        else {
+          return @cell_values;
+        }
+      }
+      
+    }
+    # exhausted, time to hang it up. return an empty array
+    return ();     
+
+  };
+
+
+  return ($iterator,@column_names);
+}
+
+
+
+
+
+__END__
+=head1 NAME
+
+getstudents_xls - read Excel file and update the students table for Coach Match
+
+=head1 VERSION
+
+0.1
+
+=head1 USAGE
+
+=head1 REQUIRED ARGUMENTS
+
+=over
+
+=item  -e[xcel_file] [=] <excel_file>
+
+    The Excel file
+
+=back
+
+=head1 OPTIONS
+
+=over
+
+=item  -d[ry_run]
+
+    Don't update the database, just report what would happen.
+
+=back
+
+=cut
+
+

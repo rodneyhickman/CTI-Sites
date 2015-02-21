@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROPERTIES xmlns="http://www.filemaker.com/xmlproperties">
+	
+	<PROPERTY NAME="page.title">PHP Custom Web Publishing Test </PROPERTY>
+	<PROPERTY NAME="page.test-name">PHP Custom Web Publishing</PROPERTY>
+	<PROPERTY NAME="page.label.server">Server:</PROPERTY>
+	
+	<!-- status messages -->
+	<PROPERTY NAME="message.success">The PHP connection to the FMServer_Sample database appears successful. The table below displays data from the sample database.</PROPERTY>
+	
+	<PROPERTY NAME="message.failure">The PHP connection to the FMServer_Sample database failed.</PROPERTY>
+	
+	
+	<!-- error messages -->
+	<PROPERTY NAME="message.error.unknown">An unexpected erorr occurred. Consult the FileMaker documentation for additional assistance.</PROPERTY>
+
+	<PROPERTY NAME="message.error.no-php-api">The PHP API could not be found.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.100">The FMServer_Sample database requires a file that could not be found.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.101">A required record is missing.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.102">A required field is missing.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.105">The required layout could not be found.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.200">You don't have sufficient privileges to access records in the FMServer_Sample database. Open the database in FileMaker Pro and make sure your account has [Full Access].</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.211">The password for this account has expired. Open the FMServer_Sample database with FileMaker Pro, change the password for this account, then try again.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.401">The find perfomed by the PHP Test matched no records.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.802">The FMServer_Sample database is not open or the guest account does not have the fmphp extended privilege enabled. Use FileMaker Server Admin to open the database or open the file in FileMaker Pro and enable the extended privilege.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.955">The PHP test does not specify a database name.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.fm.956">This Web Publishing Engine already has too many active sessions. Using FileMaker Server Admin, increase the number of Web Publishing Engine sessions, disconnect an active session, or wait a while for more sessions to become available.</PROPERTY>
+
+	<!-- errors I don't think will ever happen... -->
+	<PROPERTY NAME="message.error.fm.9">You do not have sufficient privileges to view records in the database. Open the database in FileMaker Pro and make sure your account has [Full Access].</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.210">The account in the FMServer_Sample database is inactive. Open the database with FileMaker Pro, enable this account, and try again.</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.212">Invalid user account and/or password</PROPERTY>
+
+	<PROPERTY NAME="message.error.fm.213">User account and/or password does not exist</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.6">The Web Publishing Engine host could not be found. Make sure you have the correct host address and try again.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.7">The Web Publishing Engine is refusing connections. Make sure the web server is started and try again.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.22">The PHP test was not able to communicate with the Web Publishing Engine. Make sure you have PHP publishing enabled and the database has the fmphp extended privilege enabled.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.26">A network error occurred while reading data from the Web Publishing Engine. Try again.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.27">The PHP web server does not have enough memory available to connect to the Web Publishing Engine.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.28">The connection to the Web Publishing Engine timed out while waiting for a response. If this problem persists, make sure you don't have a firewall interefering with the connection. Also, ensure that FileMaker Server is responding.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.51">The secure certificate on the Web Publishing Engine is invalid.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.52">Connection to the Web Publishing Engine was successful, but it didn't return any response.</PROPERTY>
+
+	<PROPERTY NAME="message.error.curl.55">A network error occurred while sending a request to the Web Publishing Engine. Try again.</PROPERTY>
+	
+	<PROPERTY NAME="message.error.curl.56">A network error occurred while reading data from the Web Publishing Engine. Try again.</PROPERTY>
+	
+	<!-- database labels -->
+	<PROPERTY NAME="db.title">America 24/7 Collection</PROPERTY>
+</PROPERTIES>

@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/webcomp2_newfm/!svn/ver/13/trunk
+END
+getevents_fields.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getevents_fields.php
+END
+getsitedata.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getsitedata.php
+END
+set_unsubscribe.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_unsubscribe.php
+END
+getcountry.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getcountry.php
+END
+getstudents_yaml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_yaml
+END
+set_terms.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_terms.php
+END
+getstudents_yaml_courses
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_yaml_courses
+END
+lookup.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/webcomp2_newfm/!svn/ver/2/trunk/lookup.php
+END
+getstudents_xls
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_xls
+END
+set_unsubscribe_bulk.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_unsubscribe_bulk.php
+END
+portal_account.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/webcomp2_newfm/!svn/ver/11/trunk/portal_account.php
+END
+authenticate_fmid.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/webcomp2_newfm/!svn/ver/2/trunk/authenticate_fmid.php
+END
+addlead.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/webcomp2_newfm/!svn/ver/2/trunk/addlead.php
+END
+authenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/webcomp2_newfm/!svn/ver/2/trunk/authenticate.php
+END
+getleaders.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getleaders.php
+END
+portal_account_update.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_account_update.php
+END
+portal_account_email.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_account_email.php
+END
+portal_events.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/webcomp2_newfm/!svn/ver/8/trunk/portal_events.php
+END
+portal_course_register.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/webcomp2_newfm/!svn/ver/13/trunk/portal_course_register.php
+END
+geteventsR.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/webcomp2_newfm/!svn/ver/2/trunk/geteventsR.php
+END
+Student.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/webcomp2_newfm/!svn/ver/2/trunk/Student.php
+END
+phptest.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/webcomp2_newfm/!svn/ver/2/trunk/phptest.php
+END
+set_bridging_content.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_bridging_content.php
+END
+set_certification_cc_card.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_certification_cc_card.php
+END
+portal_record_exists.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_record_exists.php
+END
+set_pw.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_pw.php
+END
+portal_course_waitlist.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_course_waitlist.php
+END
+set_org.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_org.php
+END
+portal_courses.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_courses.php
+END
+getevents.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getevents.php
+END
+abletogetrecord.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/webcomp2_newfm/!svn/ver/3/trunk/abletogetrecord.php
+END
+xtea.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/webcomp2_newfm/!svn/ver/2/trunk/xtea.class.php
+END
+new_commlog.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/webcomp2_newfm/!svn/ver/2/trunk/new_commlog.php
+END
+authenticate_cpcc.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/webcomp2_newfm/!svn/ver/2/trunk/authenticate_cpcc.php
+END
+getlevel.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getlevel.php
+END
+getstudents.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents.php
+END
+shared_secret.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/webcomp2_newfm/!svn/ver/2/trunk/shared_secret.php
+END
+getstudents_courses.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_courses.php
+END
+getstudents_certification.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_certification.php
+END
+portal_course_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/webcomp2_newfm/!svn/ver/2/trunk/portal_course_test.php
+END
+getstudents_yaml_cert
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/webcomp2_newfm/!svn/ver/2/trunk/getstudents_yaml_cert
+END
+newrec.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/webcomp2_newfm/!svn/ver/2/trunk/newrec.php
+END
+portal_course_cancel.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/webcomp2_newfm/!svn/ver/9/trunk/portal_course_cancel.php
+END
+set_grant.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/webcomp2_newfm/!svn/ver/2/trunk/set_grant.php
+END
