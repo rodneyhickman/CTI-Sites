@@ -1,0 +1,204 @@
+# CTI Leadership Launchpad Schema
+#
+#
+propel:
+#
+#
+#
+# Profile table, represents a participant in the leadership program
+#
+  profile:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    full_name:  longvarchar
+    first_name:  longvarchar
+    middle_name:  longvarchar
+    last_name:  longvarchar
+    perm_address1:  longvarchar
+    perm_address2:  longvarchar
+    perm_city:  longvarchar
+    perm_state_prov:  longvarchar
+    perm_zip_postcode:  longvarchar
+    perm_country:  longvarchar
+    other_address1:  longvarchar
+    other_address2:  longvarchar
+    other_city:  longvarchar
+    other_state_prov:  longvarchar
+    other_zip_postcode:  longvarchar
+    other_country:  longvarchar
+    telephone1:  longvarchar
+    telephone2:  longvarchar
+    email1:  longvarchar
+    email2:  longvarchar
+    referred_by: longvarchar
+    gender:  varchar(10)
+    age:  longvarchar
+    # the following secret is for encryption
+    secret:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# Leadership application
+  leadership:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    program_preference:  longvarchar
+    preferred_date1:  longvarchar
+    preferred_date2:  longvarchar
+    preferred_date3:  longvarchar
+    how_started:  longvarchar
+    what_impact:  longvarchar
+    why_take:  longvarchar
+    desired_impact:  longvarchar
+    how_accountable:  longvarchar
+    what_bring:  longvarchar
+    why_applying:  longvarchar
+    what_size:  longvarchar
+    background:  longvarchar
+    understood_agreements:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#
+#
+# coach_training application
+  coachtraining:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    program_preference:  longvarchar
+    core_preferred_date1:  longvarchar
+    core_preferred_date2:  longvarchar
+    core_preferred_date3:  longvarchar
+    cert_preferred_date1:  longvarchar
+    cert_preferred_date2:  longvarchar
+    cert_preferred_date3:  longvarchar
+    what_choose:  longvarchar
+    fundamentals_exp:  longvarchar
+    your_vision:  longvarchar
+    how_support:  longvarchar
+    why_applying:  longvarchar
+    what_size:  longvarchar
+    background:  longvarchar
+    anything_else:  longvarchar
+    created_at:
+    updated_at:
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#
+# exec_coach application
+  execcoach:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    created_at:
+    updated_at:
+    bio_resume: longvarchar
+    photo: longvarchar  
+# see http://www.beutelevision.com/edit/wiki.pl?SymfonyExamples/UploadFile
+    home_country: longvarchar
+    phone_home: longvarchar
+    phone_office: longvarchar
+    phone_mobile: longvarchar
+    skype: longvarchar
+    time_zone: longvarchar
+    language_fluency: longvarchar
+    education: longvarchar
+    certifications: longvarchar
+    authorized_to_work: longvarchar
+    years_cti: longvarchar
+    what_capacity: longvarchar
+    corporate_clients: longvarchar
+    training_style: longvarchar
+    publication_engagements: longvarchar
+    expertise: longvarchar
+    industries: longvarchar
+    types_of_coaching: longvarchar
+    number_of_executives: longvarchar
+    outcomes_tracked: longvarchar
+    work_visa: longvarchar
+    travel_visa: longvarchar
+    media_exposure: longvarchar
+    size_of_group: longvarchar
+    endorsements: longvarchar
+    utilization_corp_forl: longvarchar
+    utilization_corp_coach: longvarchar
+    utilization_exec_coach: longvarchar
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
