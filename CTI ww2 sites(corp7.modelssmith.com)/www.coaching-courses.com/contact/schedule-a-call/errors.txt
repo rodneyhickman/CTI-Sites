@@ -1,0 +1,34 @@
+line 185 column 1 - Warning: <input> element not empty or not closed
+line 189 column 57 - Warning: <input> element not empty or not closed
+line 191 column 57 - Warning: <input> element not empty or not closed
+line 211 column 57 - Warning: <input> element not empty or not closed
+line 217 column 57 - Warning: <input> element not empty or not closed
+line 223 column 57 - Warning: <input> element not empty or not closed
+line 227 column 57 - Warning: <input> element not empty or not closed
+line 283 column 57 - Warning: <input> element not empty or not closed
+line 293 column 57 - Warning: <input> element not empty or not closed
+line 295 column 57 - Warning: <input> element not empty or not closed
+line 297 column 57 - Warning: <input> element not empty or not closed
+line 299 column 57 - Warning: <input> element not empty or not closed
+line 327 column 169 - Warning: <br> element not empty or not closed
+line 387 column 181 - Warning: unescaped & or unknown entity "&builderType"
+line 391 column 1 - Warning: <input> dropping value "OILB_EMAIL" for repeated attribute "name"
+line 389 column 1 - Warning: <input> element not empty or not closed
+line 394 column 1 - Warning: <input> element not empty or not closed
+line 394 column 61 - Warning: <input> element not empty or not closed
+line 265 column 57 - Warning: <select> attribute "id" has invalid value "00N40000001OeVs"
+line 283 column 57 - Warning: <input> attribute "id" has invalid value "00N40000001OeVx"
+line 289 column 57 - Warning: <textarea> attribute "id" has invalid value "00N40000001OeVt"
+line 289 column 57 - Warning: <textarea> proprietary attribute "type"
+line 289 column 57 - Warning: <textarea> proprietary attribute "wrap"
+line 379 column 1 - Warning: <script> inserting "type" attribute
+line 379 column 131 - Warning: <script> inserting "type" attribute
+line 387 column 1 - Warning: <form> attribute value "POST" must be lower case for XHTML
+Info: Doctype given is "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Info: Document content looks like HTML Proprietary
+26 warnings, 0 errors were found!
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium
