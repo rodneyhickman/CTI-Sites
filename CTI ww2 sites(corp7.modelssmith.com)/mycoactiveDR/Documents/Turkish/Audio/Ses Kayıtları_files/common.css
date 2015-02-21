@@ -1,0 +1,995 @@
+
+    /* Common Styles */
+    img {border-style: none;}
+    a:active {outline: none;}
+    a:focus {outline: none;}
+    input textarea select {font: 100% Arial, 'Helvetica Neue', Helvetica, sans-serif; vertical-align: middle;}
+    table {border-collapse: collapse;}
+    strong, b {font-weight: bold;}
+    em, i{font-style: italic;}
+  
+    /* skinInclude.standardPage start */
+  body.os-wrapbody {color:#333333;background:#E4E4E4 url(http://login.mycoactive.com/dir-icon/2026637/13/omni-bg.icon) repeat-x;margin:0;font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;font-size:10pt;}div.os-wrapper {margin:0px auto;background-color:#FFFFFF;width:1024px;}div.os-main {margin:0px auto;width:996px;}div.os-main div.os-footer{clear:both;}div.os-container {overflow:hidden;padding:0 0 20px;margin:8px 0 0;width:996px;text-align:left;}div.os-container  p,div.os-container  th,div.os-container  td,div.os-container  input,div.os-container  textarea{color:#333333;font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;font-size:10pt;}div.os-container  div.os-sidebarleft{float:left;width:201px;padding:0 0 1px;margin:0px 15px 0px 0px;}div.os-container  div.os-sidebarleft div.os-component{width:201px;}div.os-container  div.os-sidebarright{float:right;}div.os-container  div.os-sidebarright div.os-component{width:201px;}div.os-container  div.os-contentcolumn{float:left;width:778px;display:inline;margin:0 0 0 0px;}div.os-header {text-align:left;}
+    /* skinInclude.standardPage finish */
+  a {color:#5d87a1;text-decoration:none;}a:hover {text-decoration:underline;background-color:transparent;color:#5d87a1;}div.os-clear {clear:both;}span.os-memberlink img{vertical-align:middle;}div.os-recentlogins span.os-logintime{display:block;padding-left:4px;color:#666666;font-style:italic;}div.os-recentlogins span.os-memberlink img{vertical-align:bottom;margin-bottom:-2px;margin-top:-2px;}div.os-bozomessage {padding:4px;border:1px solid #CC0000;font-weight:bold;margin:8px 0px;}div.os-popup {width:auto;padding:8px;text-align:left;background:#FFFFFF;}div.os-popup  a{color:#5d87a1;background-color:transparent;}div.os-popup  a:hover{color:#5d87a1;background-color:transparent;}div.os-popup  div.os-bar{width:auto;}div.os-popup  div.os-users{width:562px;margin:0 8px;}div.os-popup  div.os-users div.os-title{font-weight:bold;margin:8px 0;}div.os-popup  div.os-users UL{list-style-type:none;margin:0;padding:0;overflow:hidden;}div.os-popup  div.os-users UL LI{font-weight:normal;float:left;}div.os-popup  div.os-users UL LI div.os-miniprofile{width:179px;clear:both;margin:5px 0 5px 0;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profilepicture{float:left;overflow:hidden;width:36px;height:36px;margin:3px 3px 25px 0;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profilepicture img.os-img{height:auto;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profileinfo{overflow:hidden;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-memberlink a{font-weight:bold;margin:0 3px 0 0;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-memberlink span.os-score{float:right;}div.os-popup  div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-date{color:#666666;font-style:italic;}div.os-bar {width:100%;clear:both;}div.os-bar  ul{list-style-type:none;margin-top:0px;margin-bottom:0px;margin-left:0px;padding:0px;}div.os-bar  ul.os-breadcrumb{line-height:24px;height:24px;}div.os-bar  li{list-style-type:none;float:left;}div.os-bar  h1,div.os-bar  h2,div.os-bar  h3,div.os-bar  h4,div.os-bar  h5,div.os-bar  h6{margin:0px;line-height:24px;}div.os-bar  div.os-left{float:left;display:inline;width:49%;}div.os-bar  div.os-left li{padding-right:4px;}div.os-bar  div.os-center{float:left;text-align:center;}div.os-bar  div.os-center li{padding-left:4px;padding-right:4px;}div.os-bar  div.os-right{float:right;display:inline;width:49%;text-align:right;}div.os-bar  div.os-right ul{float:right;}div.os-bar  div.os-clear{clear:both;}table.os-contenttable {border:1px solid #D1D1D1;background-color:#FFFFFF;color:#333333;width:100%;margin:8px 0;}table.os-contenttable  td,table.os-contenttable  th{border-bottom:1px solid #D1D1D1;padding:4px;text-align:left;}table.os-contenttable  td ul{padding:0;margin:0;}table.os-contenttable  td li{list-style-type:none;padding-bottom:5px;}table.os-contenttable  td div.os-hbarparent{border:#D1D1D1 2px solid;position:relative;width:300px;}table.os-contenttable  td div.os-hbarparent div.os-hbar{background-color:#5d87a1;color:#FFFFFF;height:15px;}table.os-contenttable  td div.os-hbarparent div.os-hbardata{position:absolute;top:0px;left:2px;font-weight:bold;}table.os-contenttable tr.os-head{background-color:#F4F4F4;color:#333333;}table.os-contenttable tr.os-head td.os-head{font-weight:bold;}table.os-contenttable tr.os-head th{background-color:#F4F4F4;color:#666666;padding:2px 4px;text-align:left;font-size:9pt;}table.os-contenttable tr.os-head h1,table.os-contenttable tr.os-head h2,table.os-contenttable tr.os-head h3,table.os-contenttable tr.os-head h4,table.os-contenttable tr.os-head h5,table.os-contenttable tr.os-head h6{font-size:12pt;color:#333333;font-weight:bold;margin:0px;}div.os-jabberform label.os-label{width:130px;float:left;text-align:right;padding-right:20px;font-size:10pt;font-weight:bold;}div.os-jabberform div.os-field{width:440px;float:left;margin-bottom:8px;}div.os-jabberform div.os-field td label{font-size:10pt;}div.os-jabberform div.os-field span label{padding-right:10px;vertical-align:bottom;}div.os-jabberform div.os-section{font-size:12pt;border-bottom:1px solid #D1D1D1;margin-bottom:8px;padding-bottom:2px;}div.os-jabberform div.os-fieldinfo{width:130px;float:left;padding:6px;}div.os-jabberform div.os-fieldinfo label.os-label{width:100%;float:none;}div.os-jabberform div.os-fieldinfo div.os-description{padding-top:8px;font-style:italic;}div.os-borderradius {border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}div.os-popinbackground {background-color:#000000;filter:alpha(opacity=50);opacity:0.5;-moz-opacity:0.5;z-index:20;}body.os-popinwindow {color:#333333;margin:0;padding:0;width:595px;height:auto;background-color:transparent;background-image:none;font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;font-size:10pt;text-align:center;}body.os-popinwindow  a:hover{color:#5d87a1;background-color:transparent;}body.os-popinwindow div.os-dialogshadow{visibility:hidden;}div.os-popinwindow {margin:0;padding:0;text-align:left;width:595px;border:1px solid #7f7f7f;background-color:#ffffff;}div.os-popinwindow div.os-popin{width:594px;font-family:Arial, Helvetica, sans-serif;font-size:9pt;}div.os-popinwindow div.os-popin div.os-popinhead{width:594px;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;background-color:#D1D1D1;color:#333333;height:28px;width:574px;margin:8px auto 0 auto;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left{width:480px;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1{font-size:9pt;font-weight:bold;color:#333333;padding:3px 0 0 26px;margin:0 0 0 4px;background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_app_blogs_24.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-blogheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_blogs_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-chatheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_chat_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-commentheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_comment_22.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-forumheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_app_discussions_22.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-filerepositoryheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_files_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-ideashareheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_ideashare_22.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-pollheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_weeklypoll_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-profileheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_members_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-left h1.os-wikiheader{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_wiki_22_new.icon) no-repeat scroll 0 50%;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-center{width:20px;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-right{width:50px;}div.os-popinwindow div.os-popin div.os-popinhead div.os-bar div.os-right a.os-popinclose{float:right;background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/ico_close_22.icon) no-repeat 50% 50%;width:28px;height:28px;text-decoration:none;}div.os-popinwindow div.os-popin div.os-popincontent{width:574px;margin:8px auto;padding:0 !important;}div.os-popinwindow div.os-popin div.os-popincontent div.os-displaypanel div.os-panel div.os-head{display:none;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform{margin:0 auto 6px auto;overflow:auto;max-height:540px;padding:8px;border:1px solid #D1D1D1;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform div.os-section{background-color:#E4E4E4;border:1px solid #D1D1D1;color:#333333;-moz-border-radius:4px;-webkit-border-radius:4px;margin-bottom:12px;padding:3px 3px 3px 10px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform div.os-section span.os-label{font-size:15px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform div.os-section p{margin:0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform p.os-messagesuccess{margin:10px 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform h3{margin-bottom:18px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform div.os-field{width:380px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-jabberform div.os-field TEXTAREA{font-family:Arial, Helvetica, sans-serif;font-size:9pt;}div.os-popinwindow div.os-popin div.os-popincontent div.os-messagedisplaydefault div.os-leftblock{padding-bottom:0px;margin-bottom:0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-messagedisplaydefault div.os-rightblock{padding-bottom:0px;margin-bottom:0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-bar{width:auto;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users{margin:0 8px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users div.os-title{font-weight:bold;margin:8px 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL{list-style-type:none;margin:0;padding:0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI{font-weight:normal;float:left;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile{width:184.666666666667px;clear:both;margin:5px 0 5px 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profilepicture{float:left;overflow:hidden;width:36px;height:36px;margin:3px 3px 25px 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profilepicture img.os-img{height:auto;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profileinfo{width:100%;overflow:hidden;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-memberlink a{font-weight:bold;margin:0 3px 0 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-memberlink span.os-score{float:right;}div.os-popinwindow div.os-popin div.os-popincontent div.os-users UL LI div.os-miniprofile div.os-profileinfo div.os-date{color:#666666;font-style:italic;}div.os-popinwindow div.os-popin div.os-popincontent div.os-preview{overflow:auto;max-height:540px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-controlpage div.os-jabberform{width:534px;-moz-border-radius:0 0 0 0;border:none;margin-bottom:0px;max-height:auto;overflow:auto;padding:0 0 0 0;}div.os-popinwindow div.os-popin div.os-popincontent div.os-controlpage div.os-buttonrow{text-align:right;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport label.os-label{width:140px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport h3{margin-bottom:18px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport div.os-field{width:300px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport div.os-field SELECT{width:296px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport div.os-field TEXTAREA{width:290px;height:50px;font-family:Arial, Helvetica, sans-serif;font-size:9pt;}div.os-popinwindow div.os-popin div.os-popincontent div.os-tosreport div.os-errormessage{width:auto;text-align:center;color:#CC0000;}div.os-popinwindow div.os-popin div.os-popincontent div.os-subscribe{clear:both;border:1px solid #D1D1D1;margin-bottom:8px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-subscribe div.os-message{margin-top:0;border:none;}div.os-popinwindow div.os-popin div.os-popincontent div.os-subscribe div.os-frequency{padding:8px 0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-subscribe div.os-frequency table{margin:8px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-postactions{overflow:hidden;width:574px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message{margin-top:0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplaydefault{position:static;background-color:#FFFFFF;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplaypictureframe{position:static;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplaystandard div.os-bar{width:auto;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplaypostcard div.os-leftblock{width:660px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplaypostcard div.os-rightblock{width:66px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-messagedisplayclassic div.os-bar{width:auto;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message div.os-msgbody{position:static;}div.os-popinwindow div.os-popin div.os-popincontent div.os-postoptions{position:inherit;}div.os-popinwindow div.os-popin div.os-popincontent div.os-rightblock{width:595px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-ok{text-align:center;margin-top:8px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-managecomments{width:570px;height:300px;overflow:auto;}div.os-popinwindow div.os-popin div.os-popincontent div.os-managecomments table.os-dataform{border:1px solid #D1D1D1;width:545px;margin:2px 0px 0px 2px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-managecomments table.os-dataform tr.os-head th{text-align:left;font-size:15px;background:transparent;color:#333333;}div.os-popinwindow div.os-popin div.os-popincontent div.os-managecomments table.os-dataform tr.os-head td{font-size:15px;background:transparent;border:1px solid #D1D1D1;color:#333333;}div.os-popinwindow div.os-popin div.os-popincontent div.os-managecomments table.os-dataform td.os-value{font-size:11px;padding:5px;border:1px solid #D1D1D1;}div.os-popinwindow div.os-popin div.os-popincontent div.os-sitenavigator{position:relative;}div.os-popinwindow div.os-popin div.os-popincontent div.os-sitenavigator div.os-description{margin:0px 0px 8px 0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-sitenavigator div.os-bar{position:relative;}div.os-popinwindow div.os-popin div.os-popincontent div.os-addedittags{position:relative;margin:8px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-addedittags SPAN.os-label{font-weight:bold;margin:0px 3px 0px 0px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-addedittags INPUT.os-field{padding:2px;width:200px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-addedittags div.os-taghint{color:#666666;padding:2px;margin:6px 0px 0px 33px;}div.os-popinwindow div.os-popin div.os-popincontent table.os-dataform{background:none;width:95%;}div.os-popinwindow div.os-popin div.os-popincontent div.os-message{padding:8px 4px;}div.os-popinwindow div.os-popin div.os-popincontent div.os-buttonbar div.os-left{width:auto;}div.os-popinwindow div.os-error div.os-popin div.os-popinhead div.os-bar div.os-left h1{background:transparent url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_warning_24.icon) no-repeat scroll 0 50%;}body.os-popinwide {width:795px;}div.os-popinwide {width:795px;}div.os-popinwide div.os-popintop{width:795px;}div.os-popinwide div.os-popintop div.os-popintopright{width:785px;}div.os-popinwide div.os-popin{width:794px;}div.os-popinwide div.os-popin div.os-popinhead{width:794px;}div.os-popinwide div.os-popin div.os-popinhead div.os-bar{width:774px;}div.os-popinwide div.os-popin div.os-popinhead div.os-bar div.os-left{width:680px;}div.os-popinwide div.os-popin div.os-popincontent{width:774px;}div.os-popinwide div.os-popin div.os-popincontent div.os-jabberform{width:754px;padding:8px;}div.os-popinwide div.os-popin div.os-popincontent div.os-jabberform div.os-field{width:490px;}div.os-popinwide div.os-popin div.os-popincontent div.os-controlpage div.os-jabberform{width:734px;}div.os-popinwide div.os-popin div.os-popincontent div.os-managecomments{width:770px;}div.os-popinwide div.os-popin div.os-popincontent div.os-managecomments table.os-dataform{width:745px;}div.os-popinwide div.os-popinfoot{width:795px;}div.os-popinwide div.os-popinfoot div.os-popinfootright{width:782px;}body.os-popinnarrow {width:395px;}div.os-popinnarrow {width:395px;}div.os-popinnarrow div.os-popintop{width:395px;}div.os-popinnarrow div.os-popintop div.os-popintopright{width:385px;}div.os-popinnarrow div.os-popin{width:394px;}div.os-popinnarrow div.os-popin div.os-popinhead{width:394px;}div.os-popinnarrow div.os-popin div.os-popinhead div.os-bar{width:374px;}div.os-popinnarrow div.os-popin div.os-popinhead div.os-bar div.os-left{width:280px;}div.os-popinnarrow div.os-popin div.os-popincontent{width:374px;}div.os-popinnarrow div.os-popin div.os-popincontent div.os-jabberform{width:354px;padding:8px;}div.os-popinnarrow div.os-popin div.os-popincontent div.os-jabberform div.os-field{width:190px;}div.os-popinnarrow div.os-popin div.os-popincontent div.os-controlpage div.os-jabberform{width:354px;}div.os-popinnarrow div.os-popinfoot{width:395px;}div.os-popinnarrow div.os-popinfoot div.os-popinfootright{width:382px;}div.os-advancedsearch {padding:8px 0;}div.os-advancedsearch  H2{font-size:8pt;color:#666666;font-weight:bold;text-align:left;margin:0;padding:0 0 10px 8px;}div.os-advancedsearch  TABLE{width:100%;text-align:left;margin:0px 0px 10px 8px;}div.os-advancedsearch  TABLE TD{margin:0;padding:0 3px 8px 0;}div.os-advancedsearch  TABLE TD.os-advsrchleft{font-size:9pt;width:25%;font-weight:bold;}div.os-advancedsearch  TABLE TD.os-advsrchright{width:75%;}div.os-advancedsearch  TABLE TD.os-advsrchright INPUT{border:1px solid #D1D1D1;width:150px;padding:2px;clear:both;}div.os-advancedsearch  TABLE TD.os-advsrchright SELECT{border:1px solid #D1D1D1;padding:1px;width:210px;margin:0px 2px 0px 0px;clear:both;}div.os-advancedsearch  div.os-find TD.os-advsrchleft{font-size:12pt;}div.os-advancedsearch  div.os-criteria TD.os-advsrchleft{text-indent:5px;}div.os-advancedsearch  div.os-criteria TD.os-advsrchright INPUT{width:133px;}div.os-advancedsearch  div.os-criteria TR.os-hideblog-to{display:none;}div.os-advancedsearch  div.os-bynumber TD.os-advsrchleft{padding-left:5px;}div.os-advancedsearch  div.os-bynumber TD.os-advsrchright INPUT{width:133px;}div.os-buttonbar {height:35px;}div.os-buttonbar  ul{margin-left:0px;padding-left:0px;}div.os-buttonbar  div.os-left{width:33%;}div.os-buttonbar  div.os-left li{padding-right:6px;}div.os-buttonbar  div.os-center{width:34%;}div.os-buttonbar  div.os-center li{padding-right:3px;padding-left:3px;}div.os-buttonbar  div.os-right{width:33%;}div.os-buttonbar  div.os-right li{padding-left:6px;}div.os-appheader div.os-bar{background-color:#E4E4E4;border-color:#E4E4E4;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;height:33px;margin:0px;width:100%;position:relative;}div.os-appheader div.os-bar div.os-left{width:100%;height:33px;overflow:hidden;}div.os-appheader div.os-bar div.os-right{position:absolute;top:0;right:2px;width:auto;height:33px;}div.os-appheader div.os-bar div.os-right ul{position:relative;margin:0;padding:0;}div.os-appheader div.os-bar div.os-right ul li{padding:0;}div.os-appheader div.os-bar div.os-right ul li a{display:inline-block;height:29px;line-height:29px;margin:2px 0px 2px 0px;padding:0 6px 0 20px;font-weight:bold;color:#333333;font-size:8pt;}div.os-appheader div.os-bar div.os-right ul li a:hover{background-color:#CCCCCC;-moz-border-radius:4px;text-decoration:none;}div.os-appheader div.os-bar h1{font-size:18pt;padding:5px 0px 5px 32px;color:#5d87a1;font-weight:normal;background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_app_members_24_new.icon) no-repeat scroll 5px 50%;}div.os-appheader a.os-btnmanage{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_manage_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnsearch{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico-search.icon) no-repeat scroll 0 50%;}div.os-appheader a.os-btnmyprofile{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_myprofile_22.icon) no-repeat scroll 0 50%;}div.os-appheader a.os-btnbadge{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico-badges_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnbrowse{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_view_all_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnback{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_back_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnbackstage{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_manage_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnedit{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_edit_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btndelete{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_delete_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnpost{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_add_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btntag{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_add_tag_22.icon) no-repeat scroll  0 50%;}div.os-appheader a.os-btnsubscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_subscribe_22.icon) no-repeat scroll 0px 50%;}div.os-appheader a.os-btnunsubscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_unsubscribe_22.icon) no-repeat scroll 0px 50%;}div.os-appheader div.os-info{clear:both;line-height:1.1;padding:14px 8px;}div.os-maincontentpanel div.os-appheader{padding:0px 6px;}ul.os-menu {list-style:none;margin:0px;margin-bottom:12px;padding:1px;position:absolute;top:-600px;border:1px solid #5d87a1;background-color:#EEF7FC;color:#333333;text-align:left;}ul.os-menu  li{margin:3px 5px;white-space:nowrap;font-size:9pt;}ul.os-menu  li a{padding:1px 0px;}ul.os-menu  li a:hover{background-color:transparent;color:#5d87a1;text-decoration:underline;}ul.os-menu  li a.os-menuitem{padding:0px 0px 0px 16px;}ul.os-menu  li a.os-menuitem:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/check_red.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 16px;}a.os-menu {background:url(http://login.mycoactive.com/dir-icon/2026637/4/arrow_down.icon) no-repeat scroll right 50%;}ul.os-discactionmenu  a.os-postmsg{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_add_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-createpoll{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_app_polls_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-manage{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_manage_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-markread{background:url(http://login.mycoactive.com/dir-icon/2026637/4/tools_markread.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-postmsg:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_add_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-createpoll:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_app_polls_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-manage:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_manage_22.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-discactionmenu  a.os-markread:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/tools_markread.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}UL.os-ratingsdropdown  LI A{background:transparent !important;padding:0px 0px 0px 0px;}UL.os-ratingsdropdown  LI A:hover{background:transparent !important;padding:0px 0px 0px 0px;}ul.os-messageinterest  a.os-hiinterest{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_flag_yellow.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-messageinterest  a.os-neutralinterest{background: none;padding:0px 0px 0px 22px;}ul.os-messageinterest  a.os-lowinterest{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_flag_blue.icon) no-repeat scroll 0 50%;padding:0px 0px 0px 22px;}ul.os-messageinterest  a.os-hiinterest:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_flag_yellow.icon) no-repeat scroll 0 50%;}ul.os-messageinterest  a.os-neutralinterest:hover{background: none;}ul.os-messageinterest  a.os-lowinterest:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_flag_blue.icon) no-repeat scroll 0 50%;}ul.os-messagetools  a.os-msgtool-unsubscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_unsubscribe_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-msgtool-subscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_subscribe_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-btnsubscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_subscribe_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-btnunsubscribe{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_unsubscribe_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-msgtool-manage{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_manage_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-msgtool-add{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_add_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-msgtool-polls{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_app_polls_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}ul.os-messagetools  a.os-msgtool-print{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_print_22.icon) no-repeat scroll 0 50%;padding:2px 0px 2px 22px;}div.os-stdnavbar {background-color:#5d87a1;border-color:#5d87a1;border-bottom:0px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;overflow:hidden;width:100%;height:33px;}div.os-stdnavbar ul{margin:0;padding:6px 4px 0 0;float:right;overflow:hidden;}div.os-stdnavbar li{float:left;list-style:none;line-height:15px;background:url(http://login.mycoactive.com/dir-icon/2026637/13/sep-2.icon) no-repeat 0 6px;padding:0px 6px 0 7px;margin:0 0 0 -1px;}div.os-stdnavbar li a{color:#FFFFFF;padding:4px 7px 8px;text-decoration:none;float:left;}div.os-stdnavbar li a:hover{color:#5d87a1;background-color:#d4dee8;}div.os-stdnavbar li a.active,div.os-stdnavbar li a.active:hover{color:#5d87a1;font-weight:bold;background-color:#FFFFFF;}div.os-paginator {height:24px;font-size:8pt;font-weight:normal;line-height:24px;padding:0px;overflow:hidden;text-align:center;background-color:#F4F4F4;position:relative;border:1px solid #D1D1D1;-moz-border-radius:4px;-webkit-border-radius:4px;}div.os-paginator  a,div.os-paginator  a:hover{text-decoration:none;color:#333333;padding:0px;background-color:transparent !important;}div.os-paginator  ul{margin-top:0px;margin-bottom:0px;}div.os-paginator  div.os-caption{text-align:center;}div.os-paginator  div.os-left{width:32%;}div.os-paginator  div.os-left a,div.os-paginator  div.os-left a:hover{padding-left:22px;}div.os-paginator  div.os-center{width:33%;}div.os-paginator  div.os-center span{padding:0px 3px;}div.os-paginator  div.os-center a{float:none !important;display:inline !important;}div.os-paginator  div.os-center a:hover{text-decoration:underline;}div.os-paginator  div.os-right{width:32%;}div.os-paginator  div.os-right a,div.os-paginator  div.os-right a:hover{padding:0 22px 0 4px;}div.os-paginator  a.os-first{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_first_22.icon) no-repeat;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;}div.os-paginator  a.os-first:hover{text-decoration:underline;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;}div.os-paginator  a.os-firstdisabled{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_first_dsbld_22.icon) no-repeat;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;cursor:default;}div.os-paginator  a.os-prev{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_previous_22.icon) no-repeat;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;}div.os-paginator  a.os-prev:hover{text-decoration:underline;background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_previous_22.icon) no-repeat;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;}div.os-paginator  a.os-prevdisabled{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_previous_dsbld_22.icon) no-repeat;padding-left:22px;float:left;margin:0 3px 0 9px;padding:0 0 0 22px;cursor:default;}div.os-paginator  a.os-last{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_last_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 7px 0 0;}div.os-paginator  a.os-last:hover{text-decoration:underline;background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_last_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 7px 0 0;}div.os-paginator  a.os-lastdisabled,div.os-paginator  a.os-lastdisabled:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_last_dsbld_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 7px 0 0;cursor:default;}div.os-paginator  a.os-next{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_next_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 11px 0 0;}div.os-paginator  a.os-next:hover{text-decoration:underline;background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_next_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 11px 0 0;}div.os-paginator  a.os-nextdisabled,div.os-paginator  a.os-nextdisabled:hover{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_navigate_next_dsbld_22.icon) no-repeat 100% 0;float:left;padding:0 22px 0 0;margin:0 11px 0 0;cursor:default;}div.os-sidebar div.os-component{font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;font-size:8pt;font-weight:normal;color:#333333;padding:0px 0px 5px 0px;margin-bottom:8px;border:1px solid #D1D1D1;background-color:#F4F4F4;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;overflow:hidden;}div.os-sidebar div.os-component div.os-panel div.os-head{font-size:12pt;font-weight:bold;color:#5d87a1;padding:8px 10px 0 10px;visibility:visible;}div.os-sidebar div.os-component div.os-panel div.os-head div.os-h2{border-bottom:1px solid #CCCCCC;padding-bottom:4px;width:100%;color:#5d87a1;}div.os-sidebar div.os-component div.os-panel div.os-head h2{font-size:12pt;font-weight:bold;border-bottom:1px solid #CCCCCC;padding-bottom:4px;display:block;width:100%;margin:0px;color:#5d87a1;}div.os-sidebar div.os-component div.os-panel div.os-body{margin:8px 10px;background-color:transparent;border:none;}div.os-sidebar div.os-component div.os-panel div.os-body div.os-folders div.os-folder{clear:both;}div.os-sidebar div.os-component div.os-panel div.os-body div.os-folders div.os-folder A.os-foldername{font-weight:bold;}div.os-sidebar div.os-component div.os-panel div.os-body ul{list-style-type:none;margin:0;padding:0;}div.os-sidebar div.os-component div.os-panel div.os-body li{list-style-position:outside;list-style-type:none;float:none;}div.os-sidebar div.os-component div.os-panel div.os-body li div.os-info{padding-left:4px;color:#666666;font-style:italic;}div.os-sidebar div.os-mostreadposts li{padding-bottom:8px;}div.os-sidebar div.os-toc li{padding-bottom:8px;}div.os-sidebar div.os-developertools li{padding-bottom:8px;}div.os-sidebar div.os-discussions{width:100%;clear:both;}div.os-sidebar div.os-aboutauthor p{margin-bottom:0px;margin-top:0px;width:116px;float:left;color:#333333;}div.os-sidebar div.os-aboutauthor a{font-weight:bold;}div.os-sidebar div.os-aboutauthor div.os-profilepicture img{width:36px;height:36px;float:left;margin-right:7px;}div.os-sidebar div.os-miniprofile{position:relative;clear:both;min-height:55px;}div.os-sidebar div.os-miniprofile div.os-profilepicture{position:relative;float:left;overflow:hidden;width:36px;height:36px;margin:3px 3px 20px 0;}div.os-sidebar div.os-miniprofile div.os-profilepicture img.os-img{height:auto;}div.os-sidebar div.os-miniprofile div.os-profileinfo{overflow:hidden;position:relative;}div.os-sidebar div.os-miniprofile div.os-profileinfo div.os-subject a{font-weight:normal;margin:0 3px 0 0;}div.os-sidebar div.os-miniprofile div.os-profileinfo div.os-memberlink a{font-weight:bold;margin:0 3px 0 0;}div.os-sidebar div.os-miniprofile div.os-profileinfo div.os-memberlink span.os-score{float:right;}div.os-sidebar div.os-miniprofile div.os-profileinfo div.os-date{color:#666666;font-style:italic;}div.os-sidebar div.os-discussions div.os-miniprofile{min-height:55px;}div.os-sidebar div.os-discussions div.os-miniprofile div.os-profileinfo div.os-subject a{font-weight:bold;margin:0 3px 0 0;}div.os-sidebar div.os-discussions div.os-miniprofile div.os-profileinfo div.os-memberlink a{font-weight:normal;margin:0 3px 0 0;}div.os-sidebar div.os-featuredmessages div.os-miniprofile{margin-bottom:10px;}div.os-sidebar div.os-featuredmessages div.os-miniprofile div.os-profileinfo div.os-subject a{font-weight:bold;margin:0 3px 0 0;}div.os-sidebar div.os-featuredmessages div.os-miniprofile div.os-profileinfo div.os-memberlink a{font-weight:normal;margin:0 3px 0 0;}div.os-sidebar div.os-entrysearch input{clear:both;margin:2px 5px 0 0;}div.os-sidebar div.os-entrysearch a{display:block;float:left;clear:both;}div.os-sidebar div.os-lastblogentry div.os-blogviewlink{text-align:right;clear:both;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headparent{background:#F4F4F4 url('http://login.mycoactive.com/dir-icon/2026637/10/applist_down.icon') no-repeat 4px 50%;font-size:10pt;font-weight:bold;padding:4px 4px 4px 18px;color:#5d87a1;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headparent:active{background-color:#CCCCCC;color:#333333;cursor:pointer;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headparent:hover{background-color:#CCCCCC;color:#333333;cursor:pointer;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headlink{background:#F4F4F4 url('http://login.mycoactive.com/dir-icon/2026637/10/applist_down.icon') no-repeat 4px 50%;font-size:10pt;font-weight:bold;padding:4px 4px 4px 18px;color:#5d87a1;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headlink:hover{background-color:#CCCCCC;color:#333333;cursor:pointer;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-headlink:hover a{background-color:transparent;color:#333333;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-body{display:block;margin:3px 4px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-body UL LI{background:url('http://login.mycoactive.com/dir-icon/2026637/10/bullet_black.icon') no-repeat scroll 0px -2px;padding-left:15px;margin:0px 0px 3px 0px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-body UL LI.os-currentwebtag{background:url('http://login.mycoactive.com/dir-icon/2026637/10/bullet_black.icon') no-repeat scroll 0px -2px ;padding-left:12px;margin:0px 0px 3px 0px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-body UL LI.os-currentwebtag A{background-color:#CCCCCC;color:#333333;padding:0px 3px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelopen div.os-body UL LI.os-currentwebtag A:hover{background-color:#CCCCCC;color:#333333;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headparent{background:#F4F4F4 url('http://login.mycoactive.com/dir-icon/2026637/10/applist_up.icon') no-repeat 4px 50%;color:#5d87a1;font-size:10pt;font-weight:bold;padding:4px 4px 4px 18px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headparent:active{background-color:#CCCCCC;color:#333333;cursor:pointer;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headparent:hover{background-color:#CCCCCC;color:#333333;cursor:pointer;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headlink{background:#F4F4F4 url('http://login.mycoactive.com/dir-icon/2026637/10/applist_up.icon') no-repeat 4px 50%;color:#5d87a1;font-size:10pt;font-weight:bold;padding:4px 4px 4px 18px;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headlink:hover{background-color:#CCCCCC;color:#333333;cursor:pointer;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-headlink:hover a{background-color:transparent;color:#333333;text-decoration:none;}div.os-sidebar div.os-osmenu div.os-accordionparent div.os-panelclosed div.os-body{display:none;}div.os-sidebar div.os-recentpoll div.os-widgetpollquestion{font-size:10pt;font-weight:bold;color:#333333;margin-bottom:6px;}div.os-sidebar div.os-recentpoll div.os-pollchoices{margin:5px 0px;}div.os-sidebar div.os-recentpoll div.os-pollchoices div.os-pollchoice{padding-top:5px;font-size:9pt;color:#333333;clear:both;}div.os-sidebar div.os-recentpoll div.os-pollchoices div.os-pollchoice LABEL{color:#333333;margin:0 0 0 5px;}div.os-sidebar div.os-recentpoll div.os-widgetpollmyvote{margin-top:5px;clear:both;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar{clear:both;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li{clear:both;margin-bottom:6px;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-hbar{background-color:#E4E4E4;height:10px;width:1px;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-hbarholder{background-color:#FFFFFF;border:2px solid #D1D1D1;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-htext{margin:2px 0;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-htextvotenumber{display:inline;padding-right:2px;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-htextvotenumbersuffix{display:inline;padding-right:2px;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-htextvotepercent{display:inline;}div.os-sidebar div.os-recentpoll div.os-widgetpollresultshbar li div.os-htextvotepercentsuffix{display:inline;padding-right:2px;}div.os-sidebar div.os-recentpoll div.os-widgetpollbuttonbar{text-align:center;}div.os-maincontentpanel {width:100%;font-size:10pt;}div.os-maincontentpanel div.os-content{padding:0px 8px 0px 8px;}div.os-maincontentpanel {border:1px solid #D1D1D1;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;padding-top:6px;}div.os-maincontentpanel  div.os-content{padding:0px 6px 0px 6px;}div.os-maincontentpanel  div.os-contentfoot{height:8px;}div.os-pagefooter {margin:0 auto;width:1024px;padding:26px 0 25px;}div.os-pagefooter ul{margin:0;padding:0  0 11px;float:right;font-size:10px;clear:both;overflow:hidden;}div.os-pagefooter ul li{float:left;padding-right:9px;padding-left:9px;background:url(http://login.mycoactive.com/dir-icon/2026637/13/sep-3.icon) no-repeat 0 2px;list-style:none;margin:0 0 0 -1px;}div.os-pagefooter ul li a{text-decoration:none;color:#5d87a1;}div.os-pagefooter ul li a:hover{text-decoration:none;background-color:transparent;color:#5d87a1;}div.os-pagefooter ul li.os-last{padding-right:1px;}div.os-pagefooter a.os-mzinga{float:right;background:url(http://login.mycoactive.com/dir-icon/2026637/13/powered-by-mzinga-sm.icon) no-repeat;width:115px;height:45px;overflow:hidden;text-indent:-9999px;clear:right;margin:-2px 3px 0 0;}div.os-tabs {width:100%;margin:8px 0px 0px 8px;clear:both;position:relative;top:1px;}div.os-tabs  ul{list-style-type:none;margin-left:8px;padding-left:0px;}div.os-tabs  ul li.os-tab{list-style-type:none;float:left;padding:3px 2px;margin:0px 1px;border-top:1px solid #D1D1D1;border-left:1px solid #D1D1D1;border-right:1px solid #D1D1D1;-moz-border-radius-topright:6px;-webkit-border-top-right-radius:6px;-moz-border-radius-topleft:6px;-webkit-border-top-left-radius:6px;}div.os-tabs  ul li.os-tab a{padding:0px 8px;font-size:8pt;}div.os-tabs  ul li.os-current{background-color:#F4F4F4;border-bottom:1px solid #F4F4F4;}div.os-tabs  ul li.os-nc{background-color:#E4E4E4;border-bottom:1px solid #D1D1D1;}div.os-tabsubhead div.os-bar{width:100%;height:24px;margin:0px;background-color:#F4F4F4;border:1px solid #D1D1D1;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}div.os-tabsubhead div.os-bar div.os-left{padding-left:8px;}div.os-tabsubhead div.os-bar div.os-left h2{margin-top:0px;margin-bottom:0px;font-size:12pt;font-weight:bold;line-height:24px;}div.os-tabsubhead div.os-bar div.os-right{width:40%;}div.os-tabsubhead div.os-bar div.os-right ul{position:relative;margin:0;padding:0;}div.os-tabsubhead div.os-bar div.os-right ul li a{display:inline-block;margin:1px 1px 1px 0px;height:22px;line-height:22px;padding:0px 5px 0px 21px;font-weight:bold;color:#333333;background-color:#F4F4F4;font-size:8pt;}div.os-tabsubhead div.os-bar div.os-right ul li a:hover{color:#333333;background-color:#CCCCCC;text-decoration:none;-moz-border-radius:4px;-webkit-border-radius:4px;}div.os-tabsubhead div.os-bar div.os-right ul li span.os-selected a{color:#333333;background-color:#CCCCCC;}div.os-tabsubhead div.os-info{clear:both;line-height:14pt;margin:8px;}div.os-subhead div.os-bar{width:auto;height:24px;line-height:24px;margin:0px 0px 8px 0px;background-color:#F4F4F4;border:1px solid #D1D1D1;-moz-border-radius:4px;-webkit-border-radius:4px;}div.os-subhead div.os-bar div.os-left{padding-left:8px;}div.os-subhead div.os-bar div.os-left h2{margin-top:0px;margin-bottom:0px;font-size:10pt;font-weight:bold;}div.os-subhead div.os-bar div.os-right{width:40%;}div.os-subhead div.os-bar div.os-right ul{position:relative;margin:0;padding:0;}div.os-subhead div.os-bar div.os-right li{line-height:22px;}div.os-subhead div.os-bar div.os-right li a.os-btnback{background:url(http://login.mycoactive.com/dir-icon/2026637/4/ico_back_22.icon) no-repeat scroll 5px 50%;}div.os-subhead div.os-bar div.os-right li a.os-btnsearch{background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_search_22.icon) no-repeat scroll 5px 50%;}div.os-subhead div.os-bar div.os-right li a{-moz-border-radius:4px;-webkit-border-radius:4px;display:block;margin:1px 1px 1px 0px;height:22px;line-height:22px;padding:0px 6px 0px 25px;font-weight:bold;color:#333333;font-size:8pt;}div.os-subhead div.os-bar div.os-right li a:hover{background-color:#CCCCCC;text-decoration:none;}div.os-subhead div.os-info{clear:both;line-height:14pt;margin:8px;}div.os-breadcrumbbar {margin:0 5px 5px 5px;width:auto;clear:both;line-height:9pt;font-size:9pt;}div.os-breadcrumbbar  A,div.os-breadcrumbbar  A:hover{font-size:9pt;}div.os-breadcrumbbar  SPAN{color:#666666;font-size:9pt;margin:0 3px;}div.os-breadcrumbbar  SPAN.os-first{color:#333333;font-size:9pt;margin:0 0 0 0;}div.os-tagcloud div.os-panel div.os-body div.os-taglist ul li{float:left;clear:none;padding-bottom:0px;}div.os-tagcloud div.os-taglist ul{margin:0px;padding:0px;}div.os-tagcloud div.os-taglist ul li{list-style-type:none;float:left;line-height:30px;}div.os-tagcloud div.os-taglist ul li a{display:inherit;padding:0px 4px;}div.os-tagcloud div.os-taglist ul li a.os-tag5{font-size:14pt;color:#5d87a1;}div.os-tagcloud div.os-taglist ul li a.os-tag4{font-size:12pt;color:#789ab2;}div.os-tagcloud div.os-taglist ul li a.os-tag3{font-size:10pt;color:#94afc4;}div.os-tagcloud div.os-taglist ul li a.os-tag2{font-size:9pt;color:#b2c6d6;}div.os-tagcloud div.os-taglist ul li a.os-tag1{font-size:8pt;color:#d4dee8;}div.os-tagcloud div.os-taglist ul li a:hover{color:#5d87a1;background:transparent;}div.os-results div.os-description{overflow:hidden;clear:both;margin:8px 8px 24px 8px;}div.os-results div.os-description span{font-weight:bold;}div.os-results div.os-resultitem{border-top:1px solid #D1D1D1;margin:8px;padding:12px 0;}div.os-results div.os-resultitem div.os-header{font-size:10pt;}div.os-results div.os-resultitem div.os-header span{margin-left:3px;}div.os-results div.os-resultitem div.os-header a{color:#5d87a1;font-weight:bold;}div.os-results div.os-resultitem div.os-header a:hover{color:#5d87a1;background-color:transparent;}div.os-results div.os-resultitem div.os-header span.os-counter{float:right;color:#666666;font-size:8pt;padding-right:3px;}div.os-results div.os-resultitem div.os-postedonbar{font-size:8pt;}div.os-results div.os-resultitem div.os-postedonbar span.os-date{padding-right:4px;color:#666666;}div.os-results div.os-resultitem div.os-postedonbar span.os-by{padding-right:4px;}div.os-results div.os-resultitem div.os-postedonbar span.os-memberlink{padding-right:4px;}div.os-results div.os-resultitem div.os-msgexcerpt{margin:6px 0 4px 0;}div.os-results div.os-resultitem div.os-infobar{color:#333333;font-size:8pt;}div.os-results div.os-resultitem div.os-infobar span.os-delim{padding:0 4px;font-weight:bold;}div.os-results div.os-resultitem div.os-infobar span.os-count{color:#666666;font-size:8pt;padding:0 4px;}div.os-results div.os-resultitem a{color:#5d87a1;}div.os-results div.os-resultitem a:hover{color:#5d87a1;background-color:transparent;}div.os-results UL{list-style-type:none;list-style-position:outside;}div.os-results LI{list-style-type:none;list-style-position:outside;}
+		form {
+		display:inline;
+		}
+		.fb-login-btn {
+		float:left;
+		height:22px;
+		}
+		.fb-username {
+		float:right;
+		padding-right:2px;
+		padding-top:2px;
+		}
+		.fb-login-btn a{
+		background:#29447E url(http://login.mycoactive.com/dir-icon/2026637/13/facebook_connect_sprite.icon) no-repeat scroll left -232px;
+		display:inline-block;
+		padding:0 0 0 1px;
+		cursor:pointer;
+		line-height:10px;
+		}
+		.fb-login-btn span {
+		background:#5F78AB url(http://login.mycoactive.com/dir-icon/2026637/13/facebook_connect_sprite.icon) repeat scroll 0 0;
+		border-bottom:1px solid #1A356E;
+		border-top:1px solid #879AC0;
+		color: #FFFFFF;
+		display:block;
+		font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+		font-weight:bold;
+		font-size:7pt;
+		margin:1px 1px 0 17px;
+		padding:2px 6px 3px;
+		text-shadow:none;
+		}
+
+		.os-cart-link {
+		background:url(http://login.mycoactive.com/dir-icon/2026637/4/os-cart-ico.icon) no-repeat;
+		height: 22px;
+		width: 22px;
+		cursor: pointer;
+		}
+		.os-company-logo {
+		background:url(http://login.mycoactive.com/dir-icon/2026637/14/os-company-logo.icon) no-repeat;
+		height:66px;
+		width:145px;
+		}
+		/* The footer is not in os-wrapper/os-main, so it should span all the way accross  */
+		.os-footer {
+		height:100px;
+		margin:0 auto;
+		overflow:hidden;
+		padding-top:10px;
+		position:relative;
+		width: 1024px;
+		}
+		.os-page-header {
+		height:200px;
+		overflow:hidden;
+		position:relative;
+		width: 996px;
+		}
+		.os-discussionlist .os-header, .os-messagelist .os-header,
+		.os-discussionlist .os-footer, .os-messagelist .os-footer {
+		height: auto;
+		overflow: visible;
+		width: auto;
+		}
+
+		.os-discussionlist .os-header .os-bar ul li, .os-messagelist .os-header .os-bar ul li,
+		.os-discussionlist .os-footer .os-bar ul li, .os-messagelist .os-footer .os-bar ul li {
+		background: transparent;
+		}
+
+		.os-discussionlist .os-footer .os-bar .os-left ul, .os-messagelist .os-footer .os-bar .os-left ul{
+		float: none;
+		}
+
+		.os-inbox-link {
+		background:url(http://login.mycoactive.com/dir-icon/2026637/4/Ico_inbox_22.icon) no-repeat;
+		width: 22px;
+		height: 22px;
+		cursor: pointer;
+		}
+		.os-logout-link, .os-user-header a {
+		font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;
+		font-size: 9pt;
+		font-weight: bold;
+		line-height: 24px;
+		color: #5d87a1;
+		cursor:pointer;
+		vertical-align:middle;
+		}
+		.os-logout-link:hover, .os-user-header a:hover {
+		background-color: transparent;
+		color: #5d87a1;
+		text-decoration:underline;
+		}
+		.os-main-nav {
+		background-color: #5d87a1;
+		border-color: #5d87a1;
+		border-bottom: 0px;
+		border-radius: 4px;
+		
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    overflow:hidden;
+    /*width:100%;*/
+    width: 996px;
+    height: 33px;
+    }
+    .os-main-nav li {
+    background:url(http://login.mycoactive.com/dir-icon/2026637/13/os-main-nav-sep.icon) no-repeat 0 6px;
+		float:left;
+		font-size: 9pt;
+		line-height:15px;
+		list-style:none;
+		margin:0 0 0 -1px;
+		padding:0 6px 0 7px;
+		}
+		
+		
+		.os-main-nav li a {
+		color: #FFFFFF;
+		float:left;
+		background: #5d87a1;
+		font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;
+		font-size: 10pt;
+		text-transform:uppercase;
+		cursor:pointer;
+		padding:4px 7px 8px;
+		}
+		.os-main-nav li a.os-selected-nav {
+		background-color: #FFFFFF;
+		color: #5d87a1;
+		font-weight:bold;
+		}
+		.os-main-nav li a.os-active-item {
+		background-color: #d4dee8;
+		color: #5d87a1;
+		font-weight:bold;
+		}
+		.os-main-nav li a:hover, .os-main-nav li a.os-main-nav-hover {
+		background: #d4dee8;
+		color: #5d87a1;
+		text-decoration: none;
+		}
+		.os-main-nav ul {
+		float:right;
+		margin:0;
+		overflow:hidden;
+		padding:6px 4px 0 0;
+		}
+		.os-main-nav ul ul {
+		display: none;
+		}
+		.os-main-nav-menu .x-menu-item-icon {
+		width: 0;
+		}
+		.os-main-nav-menu {
+		text-align:left;
+		background: #EEF7FC none;
+		border:1px solid #D1D1D1;
+		}
+		.os-main-nav-menu a.x-menu-item{
+		color: #333333;
+		}
+		.os-main-nav-menu .x-menu-item-active {
+		background: #b2c6d6 none;
+		}
+		.os-main-nav-menu .x-menu-item-active a.x-menu-item:hover{
+		background-color:#b2c6d6;
+		}
+		.os-main-nav-menu .x-menu-item-arrow, .os-main-nav-menu .x-menu-item-active a.x-menu-item-arrow:hover {
+		background-image: url(http://login.mycoactive.com/dir-icon/2026637/10/os-right-arrow-ico.icon);
+		}
+		.os-poweredby {
+		background:url(http://login.mycoactive.com/dir-icon/2026637/13/powered-by-mzinga-sm.icon) no-repeat;
+		height:45px;
+		overflow:hidden;
+		text-indent:-9999px;
+		width:115px;
+		}
+		.os-user-header {
+		width: 200px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: center;
+		}
+		.os-wrapper,
+		.os-wrapper .os-layout-element input,
+		.os-wrapper .os-layout-element select{
+		font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;
+		font-size:10pt;
+		}
+		.searchcriteriabox {
+		border:1px solid #D1D1D1;
+    font-weight:normal;
+    width: 151px;
+    padding: 2px 0px;
+    }
+    /* KSF: experience/domain and role selectors */
+    SELECT.os-page-header-select{
+    border:1px solid #D1D1D1;
+    font-weight:normal;
+    width: 245px;
+    padding: 2px;
+    }
+    SELECT.os-role-select{
+    border:1px solid #D1D1D1;
+    font-weight:normal;
+    width: 72px;
+    padding: 2px;
+    }
+
+    .searchrowitem {
+    text-align: left;
+    border: 0 none;
+    white-space:nowrap;
+    margin:0;
+    padding:2px 2px 2px 10px;
+    }
+
+    /* BUTTON STYLES: BEGIN */
+    .searchrowitem button.os-btn::-moz-focus-inner{
+    padding: 0px 3px 0px 3px;
+    border: 0px;
+    }
+
+    .searchrowitem button.os-btn:focus::-moz-focus-inner {
+    padding: 0px 3px 0px 3px;
+    border-color: transparent ! important;
+    }
+
+    .searchrowitem button.os-btn {
+    position: relative;
+    border: 0;
+    cursor: pointer;
+    overflow: visible; /* removes extra side padding in IE */
+    color: #FFFFFF;
+    font-size: 9pt;
+		font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		height:31px;
+		
+				padding:0 12px 0 0px; /*For firefox, safari and others.*/
+			
+		margin-left: 4px;
+		margin-right: 4px;
+		text-align:center;
+		background:url(http://login.mycoactive.com/dir-icon/2026637/13/os-btn-r-bg.icon) right -3px no-repeat;
+		vertical-align: baseline;
+		-moz-outline: 0 none;
+		outline: invert none 0px;
+		}
+		.searchrowitem button.os-btn span {
+		
+				margin: -1px 0px 0px 0px; /* -1 margin here is for webkit browsers (safari, chrome, etc) */
+			
+		position: relative;
+		display: block;
+		white-space: nowrap;
+		padding:0 0 0 14px;
+		height:31px;
+		line-height:31px;
+		background:url(http://login.mycoactive.com/dir-icon/2026637/13/os-btn-l-bg.icon) left -3px no-repeat;
+		}
+		.searchrowitem button.os-btn:active {
+		background-position: right -79px;
+		}
+		.searchrowitem button.os-btn:active span {
+		background-position: left -79px;
+		}
+		.searchrowitem button.os-btn:hover, .searchrowitem button.os-btn:focus {
+		background-position: right -41px;
+		}
+		.searchrowitem button.os-btn:hover span, .searchrowitem button.os-btn:focus span {
+		background-position: left -41px;
+		}
+		.searchrowitem button.os-btn.os-btn-disabled {
+		background-position: right -117px;
+		}
+		.searchrowitem button.os-btn.os-btn-disabled span {
+		background-position: left -117px;
+		}
+		/* BUTTON STYLES: END */
+
+
+		.os-transparent-mask {
+		z-index: 20000;
+		position: absolute;
+		top:0;
+		left:0;
+		-moz-opacity: 0;
+		opacity: .0;
+		filter: alpha(opacity=0);
+		background-color: black;
+		width: 100%;
+		height: 100%;
+		zoom: 1;
+		}
+
+		
+		.os-plain-wrapper .os-container, .os-plain-wrapper .os-main{
+		width: 947px;
+		}
+		
+
+		.os-plain-wrapper div.os-container div.os-contentcolumn {
+		width: 720px;
+		}
+
+		body.os-plain-body {
+		background: none;
+		}
+		
+
+
+		.os-tabcontent {
+		border: 1px solid #D1D1D1;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 6px 8px 6px 8px;
+    }
+
+    .os-tabcontentpanel {
+    padding-bottom: 20px;
+    }
+
+
+      
+      div.os-tabcontent div.os-contentcolumn{
+      width: 762px;
+      }
+      .os-page-header #os-layout-element-2
+	{
+		position:absolute;left:743px;top:4px;
+	}
+
+	.os-page-header #os-layout-element-5
+	{
+		position:absolute;left:7px;top:135px;
+	}
+
+	.os-page-header #os-layout-element-6
+	{
+		position:absolute;left:899px;top:135px;
+	}
+
+	.os-page-header #os-layout-element-8
+	{
+		position:absolute;left:949px;top:135px;
+	}
+
+	.os-page-header #os-layout-element-10
+	{
+		position:absolute;left:5px;top:163px;
+	}
+
+	.os-page-header #os-layout-element-20
+	{
+		position:absolute;left:6px;top:-8px;
+	}
+
+	.os-page-header #os-layout-element-21
+	{
+		position:absolute;left:660px;top:59px;
+	}
+
+	.os-footer #os-layout-element-9
+	{
+		position:absolute;left:897px;top:-2px;
+	}
+
+	.os-footer #os-layout-element-18
+	{
+		position:absolute;left:9px;top:34px;
+	}
+
+	.os-footer #os-layout-element-19
+	{
+		position:absolute;left:10px;top:5px;
+	}
+
+	
+
+    .os-admin-link {
+    background:url(http://login.mycoactive.com/dir-icon/2026637/4/os-admin-ico.icon) no-repeat;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    z-index:998;
+    }
+    .os-admin-link a {
+    padding: 3px 9px;
+    }
+    .os-admin-link a:hover
+    {
+    background-color: transparent;
+    }
+  div.os-page-header {height:200px;overflow:hidden;position:relative;}div.os-page-footer {height:100px;overflow:hidden;position:relative;}span.os-prefix {padding-right:.5em;}div.os-user-header span.os-prefix{font-weight:bold;vertical-align:middle;font-size:9pt;padding-right:3px;}
+
+
+    body.os-popinwindow div.os-actionpanel {
+    position:relative;
+    width:32px;
+    height:32px;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-up {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_0.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer  div.os-up-hover {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_1.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-up-down {
+    position:absolute;
+    top:1px;
+    left:1px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_2.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-up {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_0.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-up-hover {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_1.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-up-down {
+    position:absolute;
+    top:1px;
+    left:1px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveUp_2.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-down {
+    position:absolute;
+    top:16px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveDown_0.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-down-hover {
+    position:absolute;
+    top:16px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveDown_1.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-down-down {
+    position:absolute;
+    top:16px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveDown_2.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-top {
+    position:absolute;
+    top:0px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveTop_0.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-top-hover {
+    position:absolute;
+    top:0px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveTop_1.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-top-down {
+    position:absolute;
+    top:0px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveTop_2.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-bottom {
+    position:absolute;
+    top:16px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveBottom_0.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-bottom-hover {
+    position:absolute;
+    top:16px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveBottom_1.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-uploadcontainer div.os-bottom-down {
+    position:absolute;
+    top:16px;
+    left:16px;
+    width:15px;
+    height:15px;
+    background-image:url(/dir-icon/0/16/btn_moveBottom_2.icon);
+    background-repeat:no-repeat;
+    }
+
+    body.os-popinwindow div.os-unchecked {
+    background-image:url(/dir-icon/0/10/cbx_blank.icon);
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:15px;
+    width:15px;
+    }
+
+    body.os-popinwindow div.os-checked {
+    background-image:url(/dir-icon/0/10/cbx_check.icon);
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:15px;
+    width:15px;
+    }
+  
+
+    /* img tag replace start */
+    /* duplicated in skin.common.xml */
+
+    .os-icon {
+    display:inline-block;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    }
+
+    .os-icon-c {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/c.icon) repeat 0 0;
+    /* width and height are inline. */
+    }
+
+    .os-icon-blank {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/blank.icon) repeat 0 0;
+    /* width and height are inline. */
+    }
+
+    .os-icon-admin_splash {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/14/admin_splash.icon) no-repeat center center;
+    width: 345px;
+    height: 190px;
+    }
+
+    .os-icon-calendar {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/calendar.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    padding: 0px 3px;
+    }
+
+    .os-icon-calendar-off {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/calendar-off.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    padding: 0px 3px;
+    }
+
+    .os-icon-calendar-arrow-left {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/calendar-arrow-left.icon) no-repeat center center;
+    width: 13px;
+    height: 22px;
+    }
+
+    .os-icon-calendar-arrow-right {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/calendar-arrow-right.icon) no-repeat center center;
+    width: 13px;
+    height: 22px;
+    }
+
+    .os-icon-eventBullet {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/eventBullet.icon) no-repeat center right;
+    width: 16px;
+    height: 18px;
+    padding: 0px 0px 0px 5px;
+    }
+
+    .os-icon-folderX {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/folderX.icon) no-repeat center center;
+    width: 18px;
+    height: 13px;
+    }
+
+    .os-icon-folder {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/folder.icon) no-repeat center center;
+    width: 18px;
+    height: 13px;
+    }
+
+    .os-icon-assessments {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/assessments.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-arrow_up {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/arrow_up.icon) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    }
+
+    .os-icon-arrow_down {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/arrow_down.icon) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    }
+
+    .os-icon-events {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/events.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-curricula {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/curricula.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-lendinglibrary {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/lendinglibrary.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-cert-check {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/cert-check.icon) no-repeat center center;
+    width: 22px;
+    height: 20px;
+    }
+
+    .os-icon-check-conflicts-final {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/check-conflicts-final.icon) no-repeat center center;
+    width: 17px;
+    height: 20px;
+    }
+
+    .os-icon-conflict {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/conflict.icon) no-repeat center center;
+    width: 18px;
+    height: 17px;
+    }
+
+    .os-icon-courses {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/courses.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-date-picker {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/date-picker.icon) no-repeat center center;
+    width: 22px;
+    height: 20px;
+    }
+
+    .os-icon-delete {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/delete.icon) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    }
+
+    .os-icon-deletedays {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/deletedays.icon) no-repeat center center;
+    width: 21px;
+    height: 20px;
+    }
+
+    .os-icon-deleteinstructors {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/deleteinstructors.icon) no-repeat center center;
+    width: 21px;
+    height: 19px;
+    }
+
+    .os-icon-deleterooms {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/deleterooms.icon) no-repeat center center;
+    width: 21px;
+    height: 20px;
+    }
+
+    .os-icon-enlarge {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/enlarge.icon) no-repeat center center;
+    width: 10px;
+    height: 5px;
+    }
+
+    .os-icon-filter {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/filter.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-icons-minus-button {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/icons-minus-button.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-icons-plus-button {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/icons-plus-button.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-important {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/important.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-login-dot {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/login-dot.icon) no-repeat center center;
+    width: 18px;
+    height: 15px;
+    }
+
+    .os-icon-new-day {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/new-day.icon) no-repeat center center;
+    width: 22px;
+    height: 20px;
+    }
+
+    .os-icon-plus {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/plus.icon) no-repeat center center;
+    width: 16px;
+    height: 24px;
+    }
+
+    .os-icon-printview {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/printview.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-program {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/program.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-reason {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/reason.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-schedule {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/schedule.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-selfpacedcourses {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/selfpacedcourses.icon) no-repeat center center;
+    width: 40px;
+    height: 41px;
+    }
+
+    .os-icon-shrink {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/shrink.icon) no-repeat center center;
+    width: 10px;
+    height: 5px;
+    }
+
+    .os-icon-small-minus {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/small-minus.icon) no-repeat center center;
+    width: 9px;
+    height: 9px;
+    }
+
+    .os-icon-small-plus {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/small-plus.icon) no-repeat center center;
+    width: 9px;
+    height: 9px;
+    }
+
+    .os-icon-smred {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/smred.icon) no-repeat center center;
+    width: 16px;
+    height: 12px;
+    }
+
+    .os-icon-sortdown {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/sortdown.icon) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    }
+
+    .os-icon-sortup {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/sortup.icon) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    }
+
+    .os-icon-trashcan {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/trashcan.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-up {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/up.icon) no-repeat center center;
+    width: 14px;
+    height: 16px;
+    }
+
+    .os-icon-warning {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/warning.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-program_critical {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/13/program_critical.icon) no-repeat center center;
+    width: 23px;
+    height: 11px;
+    }
+
+    .os-icon-program_ontrack {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/13/program_ontrack.icon) no-repeat center center;
+    width: 23px;
+    height: 11px;
+    }
+
+    .os-icon-program_warning {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/13/program_warning.icon) no-repeat center center;
+    width: 23px;
+    height: 11px;
+    }
+
+    .os-icon-arrow-big-left {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/arrow-big-left.icon) no-repeat center center;
+    width: 12px;
+    height: 16px;
+    }
+
+    .os-icon-arrow-big-right {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/arrow-big-right.icon) no-repeat center center;
+    width: 12px;
+    height: 16px;
+    }
+
+    .os-icon-arrow-small-left {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/arrow-small-left.icon) no-repeat center center;
+    width: 9px;
+    height: 12px;
+    }
+
+    .os-icon-arrow-small-right {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/arrow-small-right.icon) no-repeat center center;
+    width: 9px;
+    height: 12px;
+    }
+
+    .os-icon-journal {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/journal.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-lookup {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/lookup.icon) no-repeat center center;
+    width: 24px;
+    height: 14px;
+    }
+
+    .os-icon-top {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/4/top.icon) no-repeat center center;
+    width: 19px;
+    height: 19px;
+    }
+
+    .os-icon-printcc {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/print_certificate.icon) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    }
+
+    .os-icon-quicklink {
+    background: transparent url(http://login.mycoactive.com/dir-icon/2026637/10/level2menu.icon) no-repeat center center;
+    width: 16px;
+    height: 12px;
+    }
+
+    /* img tag replace finish */
+
+  
+		/*standalone site style made more common as used in integrated and standalone wrapper */
+
+		.os-logout-link a, .os-user-header a {
+		font-family:Freight Sans, Arial, Helvetica, Geneva, sans-serif;
+		font-size: 9pt;
+		font-weight: bold;
+		line-height: 24px;
+		color: #5d87a1;
+		cursor:pointer;
+		vertical-align:middle;
+		}
+		.os-logout-link a:hover, .os-user-header a:hover {
+		background-color: transparent;
+		color: #5d87a1;
+    text-decoration:underline;
+    }
+
+    .os-footer {
+    height:100px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+    width: 1024px;
+    }
+  div.os-loginform div.os-minilogin u{text-decoration:none;}div.os-loginform div.os-minilogin label{font-weight:bold;display:block;}div.os-loginform div.os-minilogin input{margin-bottom:5px;}div.os-loginform div.os-minilogin div.os-miniloginsavepwd label{display:inline;}div.os-loginform div.os-minilogin div.os-miniloginotherbuttons{padding-top:10px;}div.os-loginform div.os-minilogin div.os-miniloginotherbuttons a,div.os-loginform div.os-minilogin div.os-miniloginotherbuttons a:link,div.os-loginform div.os-minilogin div.os-miniloginotherbuttons a:visited,div.os-loginform div.os-minilogin div.os-miniloginotherbuttons a:hover,div.os-loginform div.os-minilogin div.os-miniloginotherbuttons a:active{font-size:8pt;padding-right:4px;margin-right:4px;}div.os-loginform div.os-minilogin div.os-miniloginbutton a{height:18px;top:5px;width:46px;border-width:0px;display:block;}div.os-loginform div.os-minilogin div.os-miniloginwelcomemessage{line-height:14px;}div.os-loginform div.os-postmessageoff{clear:left;float:left;display:none;}div.os-loginform div.os-bar{border:1px solid #999999;clear:both;display:block;width:125px;}div.os-loginform div.os-bar div.os-left{width:35px;background:#EEE;}div.os-loginform div.os-bar div.os-right{text-align:center;width:85px;}div.os-loginform div.os-postmessageerror div.os-postmessageicon{background:transparent url('http://login.mycoactive.com/dir-icon/2026637/5/result_error.icon') no-repeat 3px 3px;width:32px;height:32px;}div.os-loginform div.os-postmessageafter div.os-postmessageicon{background:transparent url('http://login.mycoactive.com/dir-icon/2026637/5/result_success.icon') no-repeat 3px 3px;width:32px;height:32px;}div.os-loginform div.os-postmessagebefore div.os-postmessageicon{background:transparent url('http://login.mycoactive.com/dir-icon/2026637/5/result_alert.icon') no-repeat 3px 3px;width:32px;height:32px;}table.os-userpickerdropdown {background-color:#EEF7FC;color:#333333;border:1px solid #333333;text-align:left;}table.os-userpickerdropdown  tr.os-userpickerdropdownrow{background-color:#EEF7FC;text-align:left;}table.os-userpickerdropdown  tr.os-userpickerdropdownrowactive{background-color:#b2c6d6;color:#EEF7FC;text-align:left;}div.os-nopagesplashimage {margin-top:40px;}
+    IFRAME.twitter-share-button {
+    height: 27px !important;
+    }
+
+    .btn, .hcount .count-o {
+    height: 26px !important;
+    }
+
+    .btn .label {
+    padding-top: 3px !important;
+    }
+  

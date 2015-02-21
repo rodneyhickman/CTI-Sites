@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0048)http://login.mycoactive.com/exp/cert_tr/page/ses -->
+<html class=" ext-strict"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Ses Kayıtları
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <meta name="URI" content="/app/function/homepage/homepage.jsp">
+    <meta name="xsl" content="">
+    <meta name="controllerClass" content="null">
+    <meta name="viewName" content="null">
+    <meta name="role" content="Learner">
+    <meta name="experienceUrl" content="cert_tr">
+    <meta name="uiWebtag" content="zzippu00020z">
+    <link rel="stylesheet" type="text/css" href="./Ses Kayıtları_files/ext-all-2.2.css">
+
+        <link rel="stylesheet" type="text/css" href="./Ses Kayıtları_files/common.css">
+        <link rel="stylesheet" type="text/css" href="./Ses Kayıtları_files/lms.css">
+        <link rel="stylesheet" type="text/css" href="./Ses Kayıtları_files/qs;browserType=400">
+
+    <script type="text/javascript" src="./Ses Kayıtları_files/ext-base-2.2.js"></script>
+    <script type="text/javascript" src="./Ses Kayıtları_files/ext-all-2.2.js"></script>
+    <script type="text/javascript" src="./Ses Kayıtları_files/header.js"></script>
+    <script type="text/javascript" src="./Ses Kayıtları_files/extExtensions-2.2.js"></script>
+        
+        <script type="text/javascript" src="./Ses Kayıtları_files/mzinga.js"></script>        
+        
+        <script type="text/javascript" src=""></script>        
+    
+    
+    <script type="text/javascript">
+        function openHelp(helpFileName){
+            window.open('/exp/cert_tr/app/help/help.jsp?helpfile=' + helpFileName,'HelpPage','resizable=yes,height=600,width=500');
+        }
+    
+        var viewport = null;
+        var graphicsdir = "";
+	    var calendarLoaded = false;
+	    function openCalendar(dateField,displayDateField,formName,returnDateFormat, startYearAdjustment, totalYears, doNotDisplayCurrentYear, relativePlacementId, useInternal) {
+			var myurl = '/exp/cert_tr/app/xslprocess.ctl?addToGoBack=false&xsl=calendar.xsl&startYearAdjustment=' + startYearAdjustment + '&doNotDisplayCurrentYear=' + doNotDisplayCurrentYear + '&totalYears=' + totalYears + '&returnDateFormat=' + returnDateFormat + '&displayDateField=' + displayDateField + '&dateField=' + dateField + '&formField=' + formName +'&useInternal='+useInternal+ '&xmlServlet=servlet/Select&objectType=com.knowledgeplanet.baseObject.CalendarInfo&LocaleString=tr_TR_Turkish&useFixedWidth=false';
+			var argc = openCalendar.arguments.length;
+	        if (!calendarLoaded) {
+				if ( argc < 8 ){
+				    loadPopUp("Calendar", //windowid
+				            'Tarih Seçme', //title
+				            340, //width
+				            410, //height
+				            myurl,//url
+				            "calendar", //windowname
+				            "", //graphicsdir
+				            false);//horizon-align
+				}else{
+					loadPopUp("Calendar", //windowid
+							'Tarih Seçme', //title
+							340, //width
+							410, //height
+							myurl,//url
+							"calendar", //windowname
+							"", //graphicsdir
+					        false,//horizon-align
+					        relativePlacementId,//html object id to place popup next to
+					        'TOP');
+				}
+				calendarLoaded = true;
+	        }else{
+				if (argc == 8){
+					tmpElement=document.getElementById(relativePlacementId);
+					newPosition = positionByElement(tmpElement, 340, 410,'TOP','');
+					leftPosition = newPosition.x;
+					topPosition =  newPosition.y;
+					 
+					movePopup("Calendar",leftPosition,topPosition);
+				}
+				calendar.location.href=myurl;				
+	        }
+	        
+	        showbox("Calendar");
+	    }
+
+        function editOptions(category){
+            document.editPersonalization.Category.value = category;
+            document.editPersonalization.submit();
+        }
+        function showPrintableView(inId){
+            var cssId = inId;
+            if (window.preprocessPrintableView) {
+                preprocessPrintableView();
+            }
+            var printWindow = window.open("/app/function/reporting/printableview.html" + ((cssId != "") ? ("?id=" + cssId) : ""),"printViewWindow","width=640,height=480,scrollbars=yes,menubar=yes");
+            if (!printWindow) {
+                alert('Açılan pencereler engelleniyor. Yazdırılabilir görünümü görebilmek için açılan pencereleri etkinleştirmelisiniz.');
+            }
+        }
+        
+        function launchElementkEReference() {
+            var ekwin = window.open("/exp/cert_tr/app/servlet/navigation?RequestTarget=ElementkEReference&addToGoBack=false", "topic", "width=740, height=540, top=10, left=10, directories=no, location=no, menubar=no, scrollbars=no, status=no, toolbar=yes, resizable=yes");
+            if (!ekwin) {
+                alert('Bu site için açılan pencereleri engellediniz. e-Referans Kitaplığına erişim için açılan pencereleri etkinleştirmelisiniz.');
+            }
+        }
+
+        function loadPopUp(aWindowId, aTitle, aWidth, aHeight, aURL, aWindowName, aGraphicsDir, aDisplayNowFlag, elementToPlaceBy, aVerticalAlignment, aHorizontalAlignment, isExternalLink, hideTitleBar, isResizable, isMoveable, isCloseable){  
+            if (isResizable == null) {
+                isResizable = true;
+            }
+        
+            if (isMoveable == null) {
+                isMoveable = true;
+            }
+            
+            if (isExternalLink == null) {
+                isExternalLink = true;
+            }
+        
+            if (isCloseable == null) {
+                isCloseable = true;
+            }
+            
+            if (hideTitleBar == null) {
+                hideTitleBar = false;            
+            }
+            
+            if (aDisplayNowFlag == null) {
+                aDisplayNowFlag = false;
+            }
+            
+            if (hideTitleBar == true) {
+                aTitle = '';  
+                isCloseable  = false;     
+            }
+            
+            if (elementToPlaceBy && elementToPlaceBy != null) {
+                if(!aVerticalAlignment || aVerticalAlignment==""){
+                    aVerticalAlignment = "BELOW";
+                }
+                if(!aHorizontalAlignment || aHorizontalAlignment==""){
+                    aHorizontalAlignment = "left";
+                }
+            }
+            
+            var configs = {
+                id: aWindowId,
+                width: aWidth,
+                height: aHeight,
+                title: aTitle,
+                elementToPlaceBy: elementToPlaceBy,
+                resizable: isResizable,
+                modal: false,
+                closable: isCloseable,
+                draggable: isMoveable,
+                header: hideTitleBar,
+                url: aURL,
+                isExternalLink: isExternalLink,
+                windowName: aWindowName,
+                displayNow: aDisplayNowFlag,
+                verticalAlignment: aVerticalAlignment,
+                horizontalAlignment: aHorizontalAlignment
+            }
+            
+            if (Ext.WindowMgr.get(aWindowId) ) {
+                if (aDisplayNowFlag) {
+                    Ext.WindowMgr.get(aWindowId).show();
+                }
+            } else {
+                new mzinga.lms.ui.PopUp(configs);
+            }
+        }
+        
+        function showbox(id){
+            Ext.WindowMgr.get(id).show();
+        }
+        
+        function changecontent(id,text) {
+            var popup = Ext.WindowMgr.get(id);
+            var iframe = popup.items.itemAt(0);
+            if (iframe != null) {
+                iframe.body.update(text);
+            } else { 
+                popup.body.update(text);
+            }
+            popup.doLayout();
+        }
+        
+        function hidebox(id){
+            setTimeout(function(){Ext.WindowMgr.get(id).hide();},1);
+        }
+        
+        function changetitle(id,aTitle){ 
+            Ext.WindowMgr.get(id).setTitle(aTitle);               
+        }
+        
+        function movePopup(popupId,leftPos,topPos){
+            var popup = Ext.WindowMgr.get(popupId);
+            mzinga.lms.ui.movePopup(popup,leftPos,topPos);
+        }
+        
+        function positionByElement(anElement, aWidth, aHeight, aVerticalAlignment, aHorizontalAlignment) {
+            var extElement = Ext.get(anElement.id);
+            return mzinga.lms.ui.getPopupPosition(extElement, aWidth, aHeight, aVerticalAlignment, aHorizontalAlignment);
+        }
+        
+        function getSize(sizeType){
+            return eval('window.inner'+sizeType) ||
+                    eval('document.body.client'+sizeType) ||
+                    eval('document.documentElement.client'+sizeType);
+        }
+        
+        function resizeWindow(windowId, width, height) {
+            var window = Ext.WindowMgr.get(windowId);
+            window.setHeight(height);
+            window.setWidth(width);
+        }
+        
+        function centerWindow(windowId) {
+            var window = Ext.WindowMgr.get(windowId);
+            window.center();
+        }
+	</script>
+ 
+    
+    <meta name="objectName" content="Ses Kayıtları">
+        <meta name="pageId" content="homepage/homepage.jsp">
+        <meta name="pageAction" content="exp/cert_tr/page/ses">
+    <script src="./Ses Kayıtları_files/TempestNS.Widget.js" type="text/javascript"></script><script type="text/javascript" src="./Ses Kayıtları_files/zzippx00001"></script><script type="text/javascript" src="./Ses Kayıtları_files/zzippx00001(1)"></script><script type="text/javascript" src="./Ses Kayıtları_files/TempestNS.ModalDialog.js"></script></head>
+    
+    <body class="  ext-safari" id="ext-gen28">
+		<form method="post" name="xslControllerForm" target="_top" action="http://login.mycoactive.com/exp/cert_tr/app/servlet/navigation">
+        	<input type="hidden" name="RequestSource" value="tbd">
+        	<input type="hidden" name="RequestTarget" value="">
+        	<input type="hidden" name="RoleSwitchTarget" value="FALSE">
+            <input type="hidden" name="setClient" value="">
+    	</form>
+        <form name="communityHomeForm" action="http://login.mycoactive.com/exp/cert_tr/app/servlet/navigation" method="post">
+            <input name="selectedUrl" type="hidden" value="">
+            <input name="RequestTarget" type="hidden" value="">
+            <input name="showDetails" type="hidden" value="true">
+        </form>
+
+        <form name="communityLinkForm" action="http://login.mycoactive.com/exp/cert_tr/app/communitysso.ctl" method="post">
+            <input name="seamlesswebtag" type="hidden" value="">
+            <input name="skipSSO" type="hidden" value="true">
+        </form>
+
+        <form name="login" action="http://login.mycoactive.com/app/adminframe.jsp" method="POST" target="_top">
+            <input type="hidden" name="first_enter" value="N">
+            <input type="hidden" name="name" value="">
+            <input type="hidden" name="usrerror" value="F">
+            <input type="hidden" name="error_detail" value="">
+            <input type="hidden" name="setClient" value="MenuContext|">
+            <input type="hidden" name="setClient" value="menuRole|Admin">
+        </form>
+        <form name="logoutForm" action="http://login.mycoactive.com/app/logout.ctl" target="_top" method="post">
+            <input type="hidden" name="state" value="logoff">
+        </form>
+        <form action="http://login.mycoactive.com/app/personalization.ctl" name="editPersonalization" method="post">
+              <input name="actionRequested" type="hidden" value="retrieve">
+              <input name="Category" type="hidden" value="">
+        </form>
+        <form method="post" name="navigationPageForm" target="_top" action="http://login.mycoactive.com/exp/cert_tr/app/servlet/navigation">
+            <input type="hidden" name="Page" value="">
+        </form>
+
+
+        
+            <div class="os-wrapper">
+                <div class="os-main">
+                    
+                    
+
+
+
+
+
+<div xmlns:html="http://www.w3.org/TR/REC-html40" class="os-page-header"><div id="os-layout-element-20"><img src="./Ses Kayıtları_files/Sertifikasyon-header2.png"></div><div onclick="document.logoutForm.submit();" class="os-logout-link" id="os-layout-element-8">Çıkış</div>
+<div id="os-layout-element-21"></div>
+<div onclick="document.login.submit();" class="os-admin-link" id="os-layout-element-6" ext:qtip="Yönetici"></div>
+<script type="text/javascript">
+                Ext.fly('os-layout-element-6').set({'ext:qtip':'Yönetici'});
+            </script>
+<div id="os-layout-element-5">
+<div class="os-user-header">
+<strong><a href="http://login.mycoactive.com/exp/cert_tr/app/aboutme/aboutMe.do">Hoş Geldiniz Program Admin</a></strong>
+</div>
+</div>
+<div id="os-layout-element-10">
+<div class="os-main-nav" id="experienceMenu">
+<ul>
+<li>
+<a id="ExperienceMenu|Homepages0" href="http://login.mycoactive.com/exp/cert_tr/page/home">My Co-Active Home</a>
+</li>
+<li>
+<a id="ExperienceMenu|Discussions" href="http://login.mycoactive.com/exp/cert_tr/zzippe00022dx">Tartışma</a>
+</li>
+<li>
+<a id="ExperienceMenu|Pages0" href="http://login.mycoactive.com/exp/cert_tr/page/kitabi">El Kitabı / Oku</a>
+</li>
+<li>
+<a id="ExperienceMenu|Pages01" href="./Ses Kayıtları_files/Ses Kayıtları.html">Ses Kayıtları</a>
+</li>
+<li>
+<a id="ExperienceMenu|Pages012" href="http://login.mycoactive.com/exp/cert_tr/page/aramalar">Açık Konu Aramalar</a>
+</li>
+<li>
+<a id="ExperienceMenu|Pages0123" href="http://login.mycoactive.com/exp/cert_tr/page/formlar">Formlar</a>
+</li>
+<li>
+<a id="ExperienceMenu|SocialProfilesCommunity" href="http://login.mycoactive.com/exp/cert_tr/zzippp00001">Üyeler</a>
+</li>
+</ul>
+</div>
+</div>
+<script language="javascript">
+            var hideTask = new Ext.util.DelayedTask(Ext.menu.MenuMgr.hideAll);
+            var initialPage = 'Pages01';
+
+            //Returns the name of the node without the tree pathing info.
+            function getActualName(aFullName) {
+                var nameArray = aFullName.split("|");
+                return nameArray[nameArray.length-1];
+            }
+
+            function generateMenu() {
+                var i=0;
+                var menu;
+                var menuElement;
+                var menuElements = Ext.query('.os-main-nav>ul>li');
+                var targetElement;
+                for (i=0;i < menuElements.length; i++) {
+                    targetElement = Ext.fly(menuElements[i]).down('a');
+                    //if (getActualName(targetElement.id) == initialPage) {
+                    //	targetElement.addClass("os-selected-nav");
+                    //}
+                    menuElement = Ext.fly(menuElements[i]).down('ul');
+                    if (menuElement) {
+                        menu = new Ext.menu.Menu({
+                            cls: 'os-main-nav-menu',
+                            id: targetElement.id+'menu',
+                            items: processMenu(targetElement, menuElement),
+                            listeners: {
+                                itemclick: setMenuContext,
+                                mouseover: cancelHide,
+                                mouseout: hideMenu
+                            }
+                        });
+                        targetElement.hover(showMenu, hideMenu);
+                    }
+                    targetElement.context = targetElement.id;
+                    targetElement.on({
+                        click: setMenuContext.createCallback(targetElement)
+                    });                            
+                }
+            };
+
+            function hideMenu(aMenu, aTarget) {
+                if (Ext.isIE6 && aTarget.id) {
+                    Ext.fly(aTarget.id).removeClass('os-main-nav-hover');
+                }
+                hideTask.delay(200);
+            }
+            
+            function cancelHide() {
+                hideTask.cancel();
+            }
+            
+            function setMenuContext(aMenuItem, anEvent) {
+                mzinga.ui.setCookie('menuContext',getActualName(aMenuItem.context),{path:'/'});
+            }
+
+            function showMenu(anEvent, aTarget) {
+                if (Ext.isIE6) {
+                    Ext.fly(aTarget.id).addClass('os-main-nav-hover');
+                }
+                cancelHide();
+                var menu = Ext.menu.MenuMgr.get(aTarget.id+'menu');
+                if (menu) {      
+                    if(Ext.isIE){
+                        if(document.documentMode == '8'){
+                            menu.minWidth = '';                            
+                        }
+                    }
+                    menu.show(aTarget);
+                }
+            }
+
+            function processMenu(topLevelElement, aMenuElement) {
+                var subMenuElement;
+                var menuItemConfig;
+                var menuLink;
+                var menuItemList = [];                          
+                var menuItem = aMenuElement.down('li');
+                while(menuItem != null) {
+                    menuLink =  menuItem.down('a');
+                    //if (getActualName(menuLink.id) == initialPage) {
+                    //    topLevelElement.addClass("os-selected-nav");
+                    //}
+                    menuItemConfig = {
+                        text: menuLink.dom.innerHTML,
+                        href: menuLink.dom.getAttribute('href'),
+                        context: menuLink.id                                     
+                    }
+                    if (menuLink.dom.getAttribute('target')) {
+                        menuItemConfig.hrefTarget = menuLink.dom.getAttribute('target');
+                    }
+
+                    subMenuElement = menuItem.down('ul');
+                    if (subMenuElement) {
+                        menuItemConfig.menu = new Ext.menu.Menu({
+                            cls: 'os-main-nav-menu',
+                            items: processMenu(topLevelElement, subMenuElement),
+                            listeners:{
+                                itemclick: setMenuContext,
+                                mouseover: cancelHide,
+                                mouseout: hideMenu
+                            }
+                        });
+                    }
+                    menuItemList.push(menuItemConfig);                  
+                    menuItem = menuItem.next('li');                 
+                }
+                return menuItemList;                
+            }
+            
+            Ext.onReady(generateMenu);
+        </script>
+</div>
+
+                                        
+                    
+
+
+                                        
+                
+                    <div class="os-container">
+                        <table id="homepageContainer">
+        
+                <colgroup>
+            
+                    <col width="70">
+            
+                    <col width="30">
+            
+                </colgroup>
+        
+        <tbody><tr>
+            </tr><tr>
+<td class="homepageCell" width="70%" id="ext-gen16">
+                                  
+                                    
+
+
+
+
+
+
+<div class="os-box x-panel" id="ext-gen13"><div class="x-panel-tl"><div class="x-panel-tr"><div class="x-panel-tc"><div class="os-box-header html-header x-panel-header x-unselectable" id="ext-gen14"><span class="x-panel-header-text">
+            
+                                        
+            <h2 style="font-size: 20px;">Ses Kaydı</h2>
+            
+        </span></div></div></div></div>
+    
+        
+    
+    
+<div class="x-panel-bwrap" id="ext-gen17"><div class="x-panel-ml"><div class="x-panel-mr"><div class="x-panel-mc"><div class="os-box-body Ses-Kaydı-box-body x-panel-body" id="ext-gen15">
+        <div class="os-widgetparent" id="PTWidget0"><div class="os-sidebar">
+	<div class="os-component.clienthtml">
+		<div class="os-htmlwidget">
+			<div class="os-panel">
+				<div class="os-body">
+					• Modül Ses Kaydi #01A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/01A_Hosgeldin.wav">Hos geldin ve Güçlü Iliskiler</a>”<br>
+<br>
+• Modül Ses Kaydi #01B: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/01B_Supervizyon.wav">Süpervizyon</a>”<br>
+<br>
+• Modül Ses Kaydi #02A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/02A_Co_Active_Model.wav">Co-Active® Model</a>”<br>
+<br>
+• Modül Ses Kaydi #02B: “<a href="http://ctivideo.s3.amazonaws.com/K%C3%B6_eta_lar_-demo-Emel2014-05-27-at-21.37.mov">Kösetaslari Co-Active® Koçluk Demosu</a>”<br>
+<br>
+• Modül Ses Kaydi #03A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/03A_Doyumun.wav">Doyum’un Pekistirilmesi</a>”<br>
+<br>
+• Modül Ses Kaydi #03B: <a href="http://ctimp3s.s3.amazonaws.com/audios-838/Doyum-Demosu_Fulfillment-Demo.m4a">“Doyum Co-Active® Koçluk Demosu”</a><br>
+<br>
+• Modül Ses Kaydi #04A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/04A_Dengenin.wav">Denge’nin Pekistirilmesi</a>”<br>
+<br>
+• Modül Ses Kaydi #04B: <a href="http://ctimp3s.s3.amazonaws.com/Denge-Co-Active-Ko%C3%A7luk-Demosu_Balance-Demo.caf">“Denge Co-Active® Koçluk Demosu” </a><br>
+<br>
+• Modül Ses Kaydi #05A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/05A_Prosesin.wav">Proses’in Pekistirilmesi</a>”<br>
+<br>
+• Modül Ses Kaydi #05B: “<a href="http://ctimp3s.s3.amazonaws.com/audios-852/Process-demosu.m4a">Proses Co-Active® Koçluk Demosu</a>” <br>
+<br>
+• Modül Ses Kaydi #06A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/06A_Ogrenimi.wav">Ögrenimi derinlestirme ve Eylemi ilerletme</a>”<br>
+<br>
+• Modül Ses Kaydi #06B: “<a href="http://ctivideo.s3.amazonaws.com/6B-request-challenge-talep-etme-s%C4%B1n%C4%B1rlar%C4%B1-zorlama.mov">Talep etme, Sinirlari Zorlama ve Düsündürme Co-Active® Koçluk Demosu</a>”<br>
+<br>
+• Modül Ses Kaydi #06C: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/06C_Dip.wav">The Dip</a>”<br>
+<br>
+• Modül Ses Kaydi #07A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/07A_Dinleme.wav">Dinleme ve Öz-Yönetim</a>”<br>
+<br>
+• Modül Ses Kaydi #07B: “<a href="http://ctivideo.s3.amazonaws.com/Powerful-questions-demo.mov">Güçlü Sorular Co-Active® Koçluk Demosu</a>” <br>
+<br>
+• Modül Ses Kaydi #08A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/08A_Merak.wav">Merak ve Sezgi</a>”<br>
+<br>
+• Modül Ses Kaydi #08B: “<a href="http://ctimp3s.s3.amazonaws.com/Sezgi-Demosu-intuition-demo.WMA">Sezgi Co-Active® Koçluk Demosu</a>” <br>
+<br>
+• Modül Ses Kaydi #09A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/09A_Konuya.wav">Konuya degil, kisinin bütününe koçluk yapmak</a>”<br>
+<br>
+• Modül Ses Kaydi #09B: <a href="http://ctimp3s.s3.amazonaws.com/audios-838/Kisiye-degil-konuya-kocluk_Coach-the-person-not-the-topic.m4a">“Konuya degil, kisinin bütününe koçluk yapmak Co-Active® Koçluk Demosu”<br>
+</a><br>
+• Modül Ses Kaydi #10: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/10_Etik.wav">Etik</a>”<br>
+<br>
+• Modül Ses Kaydi #11A: “<a href="http://ctimp3s.s3.amazonaws.com/audios-753-Turkey/11A_Toparlamak.wav">Her seyi Bir Araya Getirmek</a>”<br>
+<br>
+• Modül Ses Kaydi #11B: “<a href="http://ctimp3s.s3.amazonaws.com/11B-Genel-Co-Active-Ko%C3%A7luk-Demosu.m4a">Genel Co-Active® Koçluk Demosu</a>” <br>
+<br>
+• Modül Ses Kaydi #12A: “<a>Dönüsümü Harekete Geçirmek: Sen, Profesyonel Koç</a>”<br>
+<br>
+• Modül Ses Kaydi #12B: <a href="http://ctivideo.s3.amazonaws.com/Profesyonel-Kocluk-Demosu_Professional-Coach-demo.mov">“Profesyonel Koç Co-Active® Koçluk Demosu”</a>
+				</div><div class="os-foot">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+                                        <div id="homepageWidget1" class="widgetPreloading" style="display: none;">Yükleniyor...</div>
+    </div></div></div></div><div class="x-panel-bl x-panel-nofooter"><div class="x-panel-br"><div class="x-panel-bc"></div></div></div></div></div>
+
+
+                                    <div class="homepageColumnItemSpacer"></div>
+</td>
+<td class="homepageCell" width="30%" id="ext-gen22">
+                                  
+                                    
+
+
+
+
+
+
+<div class="os-box x-panel" id="ext-gen19"><div class="x-panel-tl"><div class="x-panel-tr"><div class="x-panel-tc"><div class="os-box-header html-header x-panel-header x-unselectable" id="ext-gen20"><span class="x-panel-header-text">
+            
+                                        
+            <h2 style="font-size: 20px;">Podcasts</h2>
+            
+        </span></div></div></div></div>
+    
+        
+    
+    
+<div class="x-panel-bwrap" id="ext-gen23"><div class="x-panel-ml"><div class="x-panel-mr"><div class="x-panel-mc"><div class="os-box-body Podcasts-box-body x-panel-body" id="ext-gen21">
+        <div class="os-widgetparent" id="PTWidget1"><div class="os-sidebar">
+	<div class="os-component.clienthtml">
+		<div class="os-htmlwidget">
+			<div class="os-panel">
+				<div class="os-body">
+					• <em><a href="http://ctivideo.s3.amazonaws.com/Kocluk%20surecleri%20podcast.mov">Koçluk Süreçler 1</a></em><br>
+• <em><a href="http://ctivideo.s3.amazonaws.com/kocluk%20surecleri%20podcast%202.mov">Koçluk Süreçler 2</a></em> <br>
+<br>
+• <em><a href="http://ctivideo.s3.amazonaws.com/Donusumu-harekete-gecir.mov">Dönüsümü Harekete Geçirmek 1</a></em> <br>
+• <em><a href="http://ctivideo.s3.amazonaws.com/donusumu-harekete-gecir-2.mov">Dönüsümü Harekete Geçirmek 2</a></em><br>
+<br>
+• <em><a href="http://ctimp3s.s3.amazonaws.com/audios-852/Sabotur.m4a">Sabotör</a></em> <br>
+<br>
+• <em><a href="http://ctimp3s.s3.amazonaws.com/Sorumluluk-Aldirmak_Accountability.mp3">Sorumluluk</a></em>
+				</div><div class="os-foot">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+                                        <div id="homepageWidget2" class="widgetPreloading" style="display: none;">Yükleniyor...</div>
+    </div></div></div></div><div class="x-panel-bl x-panel-nofooter"><div class="x-panel-br"><div class="x-panel-bc"></div></div></div></div></div>
+
+
+                                    <div class="homepageColumnItemSpacer"></div>
+</td>
+</tr>
+
+        </tbody></table>
+                    </div>
+                
+                </div> 
+            </div>
+            
+            
+
+
+
+
+
+<div id="southRegion" class="os-footer" xmlns:html="http://www.w3.org/TR/REC-html40"><div id="os-layout-element-9"></div><div id="os-layout-element-18"><img src="./Ses Kayıtları_files/cti-mycoactive_footer.png"></div><div id="os-layout-element-19"><p>
+	<strong><a href="mailto:alitumay@gmail.com">SORULAR? ILETISIM CTI<br>
+	</a></strong></p>
+</div></div>
+
+            
+        
+
+        <!-- end div containing whole page -->
+
+
+		
+            
+<script language="JavaScript">
+    var sessionTimeoutId;
+    
+        sessionTimeoutId = setTimeout("openWarning()", 1495000);
+    
+    
+    var clearCookiesId;
+    clearCookiesId = setTimeout("clearcookies()", 1795000);
+    
+	function clearcookies(){
+	    document.logoutForm.state.value = "";
+	    document.logoutForm.submit();
+	}
+	
+	function resetTimeout(){
+		clearTimeout(sessionTimeoutId);
+		clearTimeout(clearCookiesId);
+		sessionTimeoutId = null;
+		sessionTimeoutId = setTimeout("openWarning()", 1495000);
+		clearCookiesId = setTimeout("clearcookies()", 1795000);
+	}
+
+    function extend(){
+        document.extendSessionForm.submit();
+        sessionTimeoutId = setTimeout("openWarning()", 1495000);
+        clearTimeout(clearCookiesId);
+        clearCookiesId = null;
+        clearCookiesId = setTimeout("clearcookies()", 1795000);
+    }
+
+    function openWarning() {
+	    Ext.Msg.show({msg:'Uyarı! İşlem yapmadığınız için oturumunuzun süresi dolmak üzere. Oturumunuzun süresini uzatmak ster misiniz?',
+	        buttons: Ext.Msg.OKCANCEL,
+	        icon: Ext.Msg.WARNING,
+	        fn: function(btn) {
+	            if (btn=='ok') {
+	                extend();
+	            }
+	            clearInterval(warningTimer);
+	            document.title = mytitle;
+	        }
+	    });
+	    window.focus();
+	    mytitle = document.title;
+	    i = 295000/1000;
+	    var warningTimer = setInterval(function (){if (i>0){document.title = i-- + " - " + mytitle;}else {document.title = mytitle; }},1000);
+    }
+</script>
+<form method="post" name="extendSessionForm" target="extendSession" action="http://login.mycoactive.com/exp/cert_tr/app/servlet/navigation">
+    <input type="hidden" name="shortCircuitRequest" value="true">
+    <input type="hidden" name="addToGoBack" value="false">
+    <input type="hidden" name="bypassSessionCleaner" value="true">
+</form>
+<iframe name="extendSession" src="./Ses Kayıtları_files/blank.html" width="1" height="1" style="visibility: hidden;padding:0;"></iframe>
+		    
+      
+        <script type="text/javascript">
+        
+                function layoutPage() {                    
+                    //Round the corners
+                    var currentBox;
+                    var boxElements = Ext.DomQuery.select('.os-box');
+                    var i=0;
+                    var tmpElement;
+                    var tmpHeight;
+                    var tmpHeight;
+                    var tmpParent;                
+                    for (i=0;i < boxElements.length; i++) {                       
+                        currentBox = Ext.get(boxElements[i]);
+                        currentBox.addClass('x-panel');
+                        tmpElement = currentBox.down('.os-box-header');
+                        if (tmpElement) {
+                            tmpElement.addClass('x-panel-header');
+                        } else {
+                            currentBox.addClass('os-box-headless');
+                        }
+                        tmpElement = currentBox.down('.os-box-body');
+                        if (tmpElement) {
+                            tmpElement.addClass('x-panel-body');
+                        }
+                        tmpParent = currentBox.parent();
+                        if (tmpParent.hasClass('os-box-fit')) {                        
+                            tmpHeight = tmpParent.getComputedHeight();
+                        } else if (currentBox.hasClass('os-box-fit')) {
+                            tmpHeight = currentBox.getComputedHeight();
+
+                        } else {
+                            tmpHeight = '100%';
+                        }
+                        if (tmpHeight <=0) {
+                            tmpHeight = '100%';
+                        }
+                        //tmpHeight = 'auto';
+                        
+                        new Ext.Panel({
+                            height: tmpHeight,
+                            applyTo: currentBox,
+                            frame: true,
+                            resizable: true
+                        });
+                        
+                    }
+
+                    var layoutItems = null;
+                    
+                    mzinga.lms.ui.layoutObserver.fireLayoutReady();
+                    
+                } // end [function layoutPage()]
+
+                var inAfterLayoutViewport = false;
+                
+                function afterlayoutviewport(eventViewport, layout) {
+                    
+                    if (eventViewport.items) {
+
+                        if(inAfterLayoutViewport == true) {
+                            return;
+                        }
+                        
+                    	inAfterLayoutViewport = true;
+
+                        var tabPanel = eventViewport.items.first(); // only one
+                        
+                        var tallestHeight = 200; // minimum
+
+                        if(tabPanel.activeTab.ctype == "Ext.ux.ManagedIframePanel") {
+                            // +20 for some margin error I believe.
+                            var someHeight = resizeMangedIframe(tabPanel.activeTab);
+                            
+                            if(someHeight > tallestHeight) {
+                                tallestHeight = someHeight;
+                            }
+                        } 
+                    	
+                        var tabCount = tabPanel.items.getCount();
+
+                        var tabIndex = 0;
+                        while(tabIndex < tabCount) {
+
+                        	var someTabPanel = tabPanel.items.itemAt(tabIndex); // many tabs, using specified
+                        	
+                        	var panelScrollArea = someTabPanel.body.first();
+
+                        	var someHeight;
+                            if(panelScrollArea.dom.offsetHeight) {
+                                // in tab with content.
+                            	someHeight = panelScrollArea.dom.offsetHeight;
+                            } else {
+                            	someHeight = 0;
+                            }
+                            
+                            if(someHeight > tallestHeight) {
+                            	tallestHeight = someHeight;
+                            }
+                            
+                        	tabIndex = tabIndex + 1;
+                        }
+
+                        var slack = 3;
+                        var diff = tallestHeight - tabPanel.activeTab.el.dom.offsetHeight;
+                        
+                        if(Math.abs(diff) > slack) {
+                            eventViewport.setHeight(eventViewport.el.dom.offsetHeight + diff);
+                        }
+
+                        inAfterLayoutViewport = false;
+                    }
+                } // end [function doOnShow()]
+            
+                Ext.onReady(function() {
+                    layoutPage();
+                    renderUi();
+                });
+        
+            function renderUi() {
+            	Ext.QuickTips.init();
+             
+                    mzinga.lms.ui.addScript('/dir-script/2026637/TempestNS.Widget.js');                
+            
+            } // end [function renderUi()]
+        </script>
+        
+        <iframe name="registerPresence" src="./Ses Kayıtları_files/update.html" width="1" height="1" style="visibility: hidden;"></iframe>
+        
+    
+
+<div id="ext-comp-1003" class="x-tip" style="position: absolute; z-index: 20000; visibility: hidden; display: none;"><div class="x-tip-tl"><div class="x-tip-tr"><div class="x-tip-tc"><div class="x-tip-header x-unselectable" id="ext-gen29"><span class="x-tip-header-text"></span></div></div></div></div><div class="x-tip-bwrap" id="ext-gen30"><div class="x-tip-ml"><div class="x-tip-mr"><div class="x-tip-mc"><div class="x-tip-body" id="ext-gen31" style="height: auto;"></div></div></div></div><div class="x-tip-bl x-panel-nofooter"><div class="x-tip-br"><div class="x-tip-bc"></div></div></div></div></div><span class="_hsShareImage hsShareImage" style="display: none;">Share Image</span><div class="os-modaldialog" style="position: absolute; display: none;"></div></body></html>

@@ -1,0 +1,19 @@
+
+
+/* Client Styles (Forum Prop nav.clientStyles) */
+
+/* 3 links */
+   
+@import url('http://www.coactive.com/assets/css/primary_mzinga.css');
+ 
+@import url('http://www.coactive.com/assets/css/cti_custom.css');
+ 
+@import url('http://www.thecoaches.com/data/m_ind_newcss.css');
+.os-addfriend {
+display:none;
+}
+/* End of Client Styles */
+  
+/* CustomStyles Template */
+
+/* End CustomStyles Template */
