@@ -1,0 +1,90 @@
+# CTI Mentor Program Schema
+# created May 15, 2009 (T. Beutel)
+#
+propel:
+#
+# 
+#
+  student:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id}
+    fm_id: {type: INTEGER}
+    name: varchar(100)
+    email: varchar(100)
+    level: {type: INTEGER}
+    last_activity: date
+    in_the_bones_date: date
+    course_fundamentals: varchar(25)
+    course_fulfillment: varchar(25)
+    course_balance: varchar(25)
+    course_process: varchar(25)
+    course_in_the_bones: varchar(25)
+    created_at:
+    updated_at:
+#
+# 
+#
+  profile:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    name: varchar(100)
+    email: varchar(100)
+    location: varchar(100)
+    niche: longvarchar
+    expertise: longvarchar
+    # undeclared foreign key
+    sf_guard_user_id: integer
+    agree_clicked: timestamp
+    number_of_contacts_made: integer
+    phone: varchar(100)
+    created_at:
+    updated_at:
+#
+# 
+#
+  profile_extra:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    attribute: varchar(100)
+    value: longvarchar
+    created_at:
+    updated_at:
+#
+# 
+#
+  activity:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    client_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    coach_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    activity_date: timestamp
+    decription: varchar(100)
+    created_at:
+    updated_at:
+#
+# 
+#
+  feedback:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    feedback_date: timestamp
+    attribute: varchar(100)
+    value: longvarchar
+    created_at:
+    updated_at:
+#
+# 
+#
+  course_dates:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id:   {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    course: varchar(100)
+    course_date: timestamp
+    created_at:
+    updated_at:
+#
+# 
+#
+
+#
+# 
+#
+ 
