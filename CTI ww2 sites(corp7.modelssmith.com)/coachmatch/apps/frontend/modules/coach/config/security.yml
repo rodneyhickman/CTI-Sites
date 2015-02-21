@@ -1,0 +1,12 @@
+search:
+  is_secure: on
+
+searchResults:
+  is_secure: on
+
+contact:
+  is_secure: on
+
+all:
+  is_secure: off
+

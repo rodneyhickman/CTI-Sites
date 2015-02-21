@@ -1,0 +1,6 @@
+homeClient:
+  credentials: can_be_coached
+
+all:
+  is_secure: on
+

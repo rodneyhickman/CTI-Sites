@@ -1,0 +1,70 @@
+/* properties specific to internal template #13 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_13_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 206px;}
+
+div#content div#main {width: 657px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 19px;}
+
+div#content div#main div.pri {float: right; width: 500px; margin-left: 0px; padding-right: 40px;}
+
+div#content div#main div.pri p#intro {margin-bottom: 38px;}
+
+div#content div#main div.sec {float: left; width: 114px; margin-right: 0px;}
+
+div#content div.sec ul {margin-top: 7px;}
+
+div#content div.sec ul li {line-height: 155%; margin-bottom: 11px; background-position: 0 0.14em; font-weight: bold;}
+
+div#content div#main h1 {padding-top: 0px; margin-top: 1px; margin-bottom: 25px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.2em; margin-top: 0px; margin-bottom: 0px;}
+
+div#content div#sidebar {float: right; width: 228px; margin: 0px; padding: 0px;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+div#content div#sidebar div.pri blockquote {margin: 12px; margin-top: 20px; text-align: left;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px;}
+
+
+
+div.book-category {float: left; margin-bottom: 38px; clear: both; width: 500px;}
+
+div.book-category h2 {border-bottom: 1px solid #32110a; margin: 0px; padding-bottom: 3px;}
+
+
+
+div.book-category dl {float: left; margin: 0px; padding: 0px;}
+
+div.book-category dt {float: left; width: 43px; margin-top: 10px; clear: both;}
+
+div.book-category dd {float: right; width: 450px; margin-top: 10px;}
+
+div.book-category dd a {display: block; font-weight: bold;}
+
+div.book-category dd cite {display: block; font-style: italic; clear: both;}
+
+
+
+div.book-listing {float: left; margin: 0px; padding: 0px; margin-top: 15px; margin-bottom: 5px;}
+
+div.book-listing img {float: left; width: 43px; clear: both;}
+
+div.book-listing p {float: right; width: 450px; margin: 0px; padding: 0px; padding-top: 5px;}
+
+div.book-listing p a {display: block; font-weight: bold; line-height: 140%;}
+
+div.book-listing p cite {display: block; font-style: italic; clear: both; margin-top: 2px;}
+
+
+
+.stuff {margin-bottom: 35px;}
+
+#book1 {display: block; width: 125px; float: left;}
+
+#book1div {width: 370px; float: right;}
+

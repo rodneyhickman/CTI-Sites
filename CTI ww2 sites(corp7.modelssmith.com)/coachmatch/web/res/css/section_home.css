@@ -1,0 +1,64 @@
+/* augmentative to coaches-training-institute.css */
+
+div#broadcast {height: 430px; width: 920px;}
+
+h1 {font-weight: bold; color: #32110a; margin-top: 0px; font-size: 1.3em; margin-bottom: 0px; margin-top: 5px; width: 545px; height: 31px; display: block; text-transform: uppercase;}
+
+li.current {background-image: url('/res/img/nav-indicators/generic.jpg');}
+
+li.current a {color: #32110a;}
+
+div#sub-nav {background-color: #699bbc; text-align: right; color: #ffffff;}
+
+div#sub-nav p {margin: 0px; padding: 0px; padding-bottom: 3px;}
+
+div#cta-area {border-top: 0px none; padding-top: 0px; padding-bottom: 15px;}
+
+
+
+
+
+/* content styles */
+
+div#content {padding-bottom: 63px; padding-top: 23px; background-color: #efede1; margin-bottom: 20px;}
+
+div#content div#main {width: 545px; padding-right: 35px;}
+
+div#content div#sidebar {float: right; width: 310px; padding-left: 10px;}
+
+
+
+/* home page promo section styles */
+
+ul#home-promo {float: left; width: 310px; padding: 0px; list-style: none; border-bottom: 2px solid #32110a; margin: 0px; margin-bottom: 15px;} 
+
+ul#home-promo li {float: left; font-weight: bold; display: inline; font-size: 0.94em; margin: 0px; border-right: 1px solid #cccccc; line-height: 100%; padding: 7px;}
+
+ul#home-promo li#home-promo-active {background-color: #32110a; color: #ffffff;}
+
+ul#home-promo li#home-promo-brand {border-right: 0px none; padding: 0px;}
+
+ul#home-promo li#home-promo-brand img {float: left; margin-right: 6px; margin-top: 2px;}
+
+ul#home-promo li a {text-decoration: none; text-transform: uppercase;}
+
+ul#home-promo li#home-promo-active a {color: #ffffff;}
+
+div#content div#sidebar dl {padding-right: 50px;}
+
+div#content div#sidebar dt {margin: 0; padding: 0;}
+
+div#content div#sidebar dd {font-size: 0.94em; line-height: 122%;}
+
+
+
+p#morespecials {font-size: 0.9em;}
+
+
+
+
+
+
+
+
+

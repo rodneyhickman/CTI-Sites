@@ -1,0 +1,55 @@
+/* properties specific to internal template #4 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_4_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 105px;}
+
+div#content div#main {width: 403px; margin: 0px; padding: 0px; padding-right: 17px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#sidebar {float: right; width: 420px; margin: 0px; padding: 0px; padding-left: 20px; padding-right: 20px; padding-top: 43px;}
+
+div#content div#sidebar h2 {line-height: 100%;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+h1 {margin-top: 0px; padding-top: 0px; margin-bottom: 25px;}
+
+h2 {color: #32110a; margin: 0; padding: 0; line-height: 100%; font-size: 1.2em;}
+
+div#content div#sidebar div.pri {float: left; clear: both; margin-bottom: 27px;}
+
+div#content div#sidebar div.sec {float: left;}
+
+div#content div#sidebar div.pri h2 {float: left; width: 300px; font-size: 1.5em; margin-top: 1px;}
+
+div#content div#sidebar div.pri p.intro {float: right; width: 100px; text-align: right; padding-top: 6px;}
+
+
+
+/* specific to coach training || courses || registration */
+
+div#content div#sidebar div.pri h2 span {display: block; font-weight: normal; margin-top: 4px; padding-bottom: 20px;}
+
+div#content div#sidebar div.pri p.intro span {display: block;}
+
+div#content div#sidebar div.pri p.intro span#packageprice {font-size: 1.6em; font-weight: bold; margin-bottom: 8px;}
+
+div#content div#sidebar div.pri p.intro span#savings {margin-bottom: 4px;}
+
+
+
+form div.fieldset {border-top: 1px solid #32110a; background-color: #f7f6f0; padding-top: 19px; padding-bottom: 27px; padding-left: 10px; padding-right: 10px; margin-bottom: 11px;}
+
+form div.legend {font-weight: bold; font-size: 1.1em;}
+
+form fieldset {border: 0px none;}
+
+form fieldset.courseunit label {display: block; margin-top: 8px; font-weight: bold; font-size: 0.95em;}
+
+form fieldset.courseunit label span {font-weight: normal;}
+
+form fieldset.courseunit select {width:360px;font-size: 0.9em; margin-top: 2px; margin-bottom: 3px;overflow:hidden;}
+
+form input#addtocart {float: right; margin-top: 15px;}

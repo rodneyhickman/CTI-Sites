@@ -1,0 +1,72 @@
+/* properties specific to internal template #7 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 920px; padding: 0px; background-image: url('/res/img/bkgds/internal_7_content.gif'); background-repeat: no-repeat; background-position: bottom;}
+
+
+
+div#content div#main {width: 920px; margin: 0px; margin-bottom: 23px; padding: 0px;}
+
+
+
+div#content div#main div#breadcrumbs {margin-bottom: 5px;}
+
+div#content div#main div.pri {float: left; width: 451px; margin-left: 0px; padding-left: 10px; padding-right: 0px;}
+
+div#content div#main div.pri h1 {padding-top: 0px; margin-top: 14px; margin-bottom: 25px; font-size: 1.9em;}
+
+div#content div#main div.pri dl#intro {margin-right: 76px;}
+
+div#content div#main div.pri dt {margin-bottom: 2px;}
+
+div#content div#main div.pri dt strong {display: block; font-size: 0.9em;}
+
+div#content div#main div.pri dt span#featured-video-title {display: block; font-size: 1.28em; color: #534b72; font-style: italic; line-height: 115%;}
+
+
+
+div#content div#main div.sec {float: right; width: 459px; margin-left: 0px; padding-right: 0px;}
+
+
+
+
+
+div#content div#main h2 {font-size: 1.3em; margin-top: 0px; margin-bottom: 0px; padding-top: 0px;}
+
+div#content div#main div.sec h2 {margin-top: 16px; margin-bottom: 1px;}
+
+
+
+div#content div#sidebar {float: right; width: 920px; margin: 0px; padding: 0px; padding-top: 36px; padding-bottom: 106px; background-image: url('/res/img/bkgds/internal_8_multimedia.gif'); background-repeat: repeat-y; background-position: center;}
+
+
+
+div#content div#sidebar div.pri {float: left; width: 680px; margin: 0px; padding: 0px; padding-left: 10px;}
+
+div#content div#sidebar div.pri div {width: 200px; padding-right: 18px; margin: 0px;}
+
+div#content div#sidebar div.pri div#merge {float: left; width: 446px; padding-right: 0px;}
+
+div#content div#sidebar div.pri div#teleconferences {float: left;}
+
+div#content div#sidebar div.pri div#podcasts {float: right;}
+
+div#content div#sidebar div.pri div#videos {float: right; margin-right: 10px;}
+
+div#content div#sidebar div.pri h2 {font-size: 1.2em;}
+
+div#content div#sidebar div.pri ul {list-style-type: none; margin-left: 0px; padding-left: 0px; text-align: left;}
+
+div#content div#sidebar div.pri ul li {margin-left: 0px; margin-bottom: 20px; padding-left: 0px;}
+
+
+
+
+
+div#content div#sidebar div.sec {float: right; width: 202px; margin: 0px; padding: 0px; padding-left: 14px; padding-right: 14px; color: #32110a;}
+
+div#content div#sidebar div.sec blockquote {text-align: left; font-weight: normal;}
+
+
+

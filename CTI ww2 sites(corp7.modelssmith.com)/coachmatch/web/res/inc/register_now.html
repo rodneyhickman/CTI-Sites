@@ -1,0 +1,58 @@
+<div class="sec">
+  <h2>Pricing &#38; Registration</h2>
+<script type="text/javascript">
+function formval(fields){
+  for(var i=0;i<fields.length;i++){
+    if(fields[i].checked){
+      return true;
+    }
+  }
+  alert("Please select a course or package before clicking the 'Register Now' button");
+  return false;
+}
+</script>
+  <form action="/coach-training/courses/register.html" method="post" onsubmit="return formval(this.package);">
+
+% if($c){
+  <div class="bulletradio">
+  <input id="course1" name="package" type="radio" value="<% $courses{$c}->{value} %>" />
+  <p>
+  <label id="l_package1" for="package1"><% $courses{$c}->{name} %>,</label>
+  <span class="bold">Cost: <% $courses{$c}->{cost} %></span> 
+  <a class="pricingdetails" href="/_temp/pricing.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="Pricing Details"><img src="/res/img/pricing_details.gif" alt="Pricing Details" /></a>
+  </p>
+  </div>
+% }
+
+  <p class="intro">Please select a course package:</p>
+  <div class="bulletradio">
+  <input id="package1" name="package" type="radio" value="01" />
+  <p>
+  <label id="l_package1" for="package1">Package A: Complete Core,</label>
+  Includes ALL Coach Training Courses, <span class="bold">Cost: $4,275</span> (savings of $1,050.00) <a class="pricingdetails" href="/_temp/pricing.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="Pricing Details"><img src="/res/img/pricing_details.gif" alt="Pricing Details" /></a>
+  </p>
+  </div>
+  <div class="bulletradio">
+  <input id="package2" name="package" type="radio" value="02" />
+  <p>
+  <label id="l_package2" for="package2">Package B: Complete Core + Certification</label>
+  Includes ALL Coach Training Courses and Certification, <span class="bold">Cost: $8,075</span> (savings of $1,650.00) <a class="pricingdetails" href="/_temp/pricing.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="Pricing Details"><img src="/res/img/pricing_details.gif" alt="Pricing Details" /></a>
+  </p>
+  </div>
+  <input id="register" name="register" type="image" src="/res/img/submit_register_now.gif" alt="Register Now" />
+  </form>
+</div>
+<%args>
+$c => undef
+</%args>
+<%init>
+my %courses = (
+ fun => { name=>'Course 1: Fundamentals', cost=>'$725',value=>'03',url=>'course_fundamentals.html' },
+ ful => { name=>'Course 2: Fullfillment', cost=>'$1,150',value=>'04',url=>'course_fulfillment.html' },
+ bal => { name=>'Course 3: Balance', cost=>'$1,150',value=>'05',url=>'course_balance.html' },
+ pro => { name=>'Course 4: Process', cost=>'$1,150',value=>'06',url=>'course_process.html' },
+ itb => { name=>'Course 5: In The Bones', cost=>'$1,150',value=>'07',url=>'course_inthebones.html' },
+);
+if(! exists $courses{$c}){ $c=undef }
+</%init>
+

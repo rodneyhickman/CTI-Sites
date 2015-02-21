@@ -1,0 +1,66 @@
+CTI Coach Match
+===========
+
+Purpose:
+Allow students of the Synergy course (the final course in the series) to coach students in the previous four courses. 
+
+
+Description:
+Students who take Synergy are allowed to sign in and express their availability to coach over the phone. These Synergy students create a brief description of themselves, including their area of focus (ie. corporate, creative, moms, etc.) These students are known as "coaches" for the purposes of this webapp.
+
+Students who have not taken Syngery are allowed to sign in and search for a coach.  These student area known as "students" for the purposes of this webapp.
+
+In addition to the above, a small number of CTI personnel are allowed to sign in as administrators.
+
+Once a student finds and contacts the coach, the coach indicates that they have accepted the students request and they do the coaching offline. The coach is only allowed to coach two students.
+
+Students in US/Canada are distinguised from students in UK/Europe so that they do not need to be concerned with long distance calls.
+
+The "Coach Match" webapp is typically only used as long as the students are taken the CTI courses. Once a student has graduated from the courses, the use a different coach match system located at http://www.coactivenetwork.com/webx?ctiFindACoach@@
+
+
+Technical Description:
+The URL is currently http://ww2.thecoaches.com/index.php/
+
+The Coach Match webapp is written in PHP, using Symfony 1.2.4 framework. See http://symfony.com/legacy/doc/book/1_2
+
+The ORM is Propel 1.3.0. See http://symfony.com/legacy/doc/book/1_2/en/08-Inside-the-Model-Layer
+
+Please note that in Propel, each model is represented by a model and a peer. The peer is similar to a "Collection of Models" in other ORMs. 
+
+The schema is specified in config/schema.yml
+
+Models ( lib/model )
+====
+
+Student and StudentPeer represents student data that is cached from FileMaker. New data is cached every 15 minutes via crontab. Since student data in FileMaker does not change frequently, only a few records are updated each time. 
+
+Profile and ProfilePeer represent a student/coach that can sign in and use the Coach Match webapp. A profile is created from a Student record when the student first signs in. The bulk of methods relating to what a student can do are located in Profile.
+
+ProfileExtra and ProfileExtraPeer are additional attribute/value pairs keyed to a Profile.
+
+Activity and ActvityPeer record contact activity between a coach and a student. 
+
+Feedback and FeedbackPeer are for feedback from students/coaches that gets sent to CTI administrators.
+
+CourseDates and CourseDatesPeer are unused.
+
+SfGuard* models are used for credentialing and sign ins. This is based on the standard Symfony SfGuard plugin. See: http://www.symfony-project.org/plugins/sfGuardPlugin/3_1_0
+
+
+Modules ( apps/frontend/modules/* )
+=====
+
+main/*
+This is where studentscoaches/administrators sign in. It also contains actions for forgetten password, etc.
+
+profile/*
+This is where students can view/update their profile and search for coaches
+
+coach/*
+This is where coaches can view/update their profile
+
+admin/*
+This is where administrators can manage students and coaches
+
+
