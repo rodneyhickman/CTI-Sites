@@ -1,0 +1,28 @@
+/* augmentative to coaches-training-institute.css */
+
+h1 {color: #534b72;}
+
+h2 {color: #32110a;}
+/*h2 {color: #534b72;}*/
+
+li.current {background-image: url('/res/img/nav-indicators/resources.jpg');}
+
+li.current a {color: #534b72;}
+
+div#sub-nav {background-color: #ffffff; color: #32110a; background-image: url('/res/img/bkgds/divider_sub-nav_resources_content.jpg'); background-repeat: no-repeat; background-position: bottom;}
+
+div.sub-nav {background-image: url('/res/img/bkgds/divider_sub-nav_resources.jpg') ! important;}
+
+div#sub-nav ul#section-nav li a:hover {color: #534b72;}
+
+
+
+
+
+/*
+
+div#content div#sidebar a:hover {color: #534b72;}
+
+a:hover.taglink {color: #534b72;}
+
+*/

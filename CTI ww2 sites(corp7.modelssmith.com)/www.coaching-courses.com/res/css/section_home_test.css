@@ -1,0 +1,77 @@
+/* augmentative to coaches-training-institute.css */
+
+div#broadcast {height: 430px; width: 920px;}
+
+h1 {font-weight: bold; color: #32110a; margin-top: 0px; font-size: 1.3em; margin-bottom: 0px; margin-top: 5px; width: 545px; height: 31px; display: block; text-transform: uppercase;}
+
+li.current {background-image: url('/res/img/nav-indicators/generic.jpg');}
+
+li.current a {color: #32110a;}
+
+div#sub-nav {background-color: #699bbc; text-align: right; color: #ffffff;}
+
+div#sub-nav p {margin: 0px; padding: 0px; padding-bottom: 3px;}
+
+div#cta-area {border-top: 0px none; padding-top: 0px; padding-bottom: 15px;}
+
+
+
+
+
+/* content styles */
+
+div#content {padding-bottom: 63px; padding-top: 23px; background-color: #efede1; margin-bottom: 20px;}
+
+div#content div#main {width: 545px; padding-right: 35px; padding-top: 10px;}
+
+div#content div#sidebar {float: right; width: 310px; padding-left: 10px;}
+
+
+
+/* home page promo section styles */
+
+ul#home-promo { float: left; width: 285px; padding: 0px 0 0 15px; list-style: none; border-bottom: 5px solid #c3bead; margin: 5px 0px 20px 0; } 
+ul#home-promo li {float: left; display: inline; font-size: 16px; margin: 0px; border-right: 1px solid #ccc7b7; line-height: 100%; padding: 7px 25px; font-weight: normal; }
+.home-promo-active {background: #cec9b8 url(/res/img/index-lower-tab-active.gif); color: #5c4d41;}
+ul#home-promo li#home-promo-brand {border-right: 0px none; padding: 0px;}
+ul#home-promo li#home-promo-brand img {float: left; margin-right: 6px; margin-top: 2px;}
+ul#home-promo li a {text-decoration: none; text-transform: none; color: #5c4d41; }
+.home-promo-active a {color: #5c4d41;}
+
+.home-lower-left { float:left; border-right: 1px solid #ccc7b7; padding-right: 35px; margin-left: 10px; min-height: 435px; }
+.home-lower-left h3 { margin-bottom: 4px; }
+ul#twitter_update_list { list-style-type: none; margin: 0px 0 0 10px; }
+ul#twitter_update_list li { margin-bottom: 15px; line-height: 1.4em; }
+.home-lower-center { float:left; border-right: 1px solid #ccc7b7; padding: 0 25px 0 5px; width: 245px; min-height: 435px; }
+.home-lower-center h2 { text-indent: -9999px; height: 30px; width: 205px; background: url(/res/img/index-lower-events.gif) no-repeat; margin-bottom: 20px; margin-left: 30px; }
+.home-lower-center dl { margin-left: 8px; }
+.home-lower-center dt { color: #c66930; font-weight: bold; margin-bottom: 0px; padding-left: 0px; }
+.home-lower-center dd { font-size: 11px; line-height: 1.4em; }
+.home-lower-right { float:left; padding-left: 35px; width: 231px; }
+.home-lower-right h2 { text-indent: -9999px; height: 30px; width: 206px; background: url(/res/img/index-lower-specials.gif) no-repeat; margin-bottom: 20px; }
+.home-lower-right dl { padding: 0 30px 0 8px; margin-bottom: 30px; }
+.home-lower-right dt { font-weight: bold; margin-bottom: 4px; padding-left: 0px; line-height: 1.3em; }
+.home-lower-right dd { font-size: 11px; line-height: 1.4em; margin-bottom: 10px; }
+
+.blog-entry { margin-bottom: 20px; line-height: 1.4em; margin-left: 10px; }
+.calendar-entry { margin-bottom: 20px; }
+.calendar-page { background: #4c839f; width: 35px; float: left; margin-left: 30px; margin-right: 12px; color: #FFF; font-size: 8px; font-weight: bold; text-align: center; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; }
+p.month { margin-bottom: 0px; padding: 4px 0px; line-height: 1.0em; text-transform: uppercase; }
+p.day { background: #d5d1c3; margin-bottom: 0px; color: #66514a; font-size: 18px; padding: 4px 0px; -moz-border-radius-bottomleft: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; }
+.calendar-info { float: left; width: 155px; font-size: 11px; line-height: 1.4em; }
+.clear { clear: both; }
+
+p#morespecials {font-size: 0.9em; font-weight: bold;}
+
+#homeWidget {padding: 10px 0px 10px 10px; background-color: #efede1; width: 300px; font-size: 0.94em; line-height: 115%;}
+
+#addCode {float: left; width: 300px; padding: 0px; list-style: none; border-top: 2px solid #32110a; margin: 0px; margin-top: 15px; padding-top: 10px;} 
+
+#home-specials {  }
+#home-news     { display:none; }
+#home-events   { display:none; }
+.home-promo-active {background-color: #32110a; color: #ffffff;}
+.home-promo-active a {color: #ffffff;}
+
+
+

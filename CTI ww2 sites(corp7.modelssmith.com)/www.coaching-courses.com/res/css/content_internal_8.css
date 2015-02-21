@@ -1,0 +1,61 @@
+/* properties specific to internal template #8 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 920px; padding: 0px; background-image: url('/res/img/bkgds/internal_8_content.gif'); background-repeat: no-repeat; background-position: bottom;}
+
+div#content div#main {width: 910px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-left: 10px; margin-bottom: 25px;}
+
+div#content div#main div.pri {float: left; width: 437px; padding: 10px;}
+
+div#content div#main div.sec {float: right; width: 437px; padding: 10px;}
+
+div#content div#main h1 {margin-left: 10px; margin-top: 0px; padding-top: 0px; margin-bottom: 24px;}
+
+div#content div#main p#intro {margin-left: 10px; margin-bottom: 32px;}
+
+
+
+div#content div#faq h2 {margin: 0; margin-top: 16px; margin-bottom: 0px; padding: 0; line-height: 100%; font-size: 1.32em;}
+
+
+
+/* specific to coach training || faq */
+
+
+
+div#content div#faq {float: left; width: 920px; background-image: url('/res/img/bkgds/internal_8_faq.gif'); background-repeat: repeat-y; background-position: center; min-height: 300px;}
+
+
+
+div#content div#faq dl.bulleted-arrowed {margin-top: 14px;}
+
+div#content div#faq dl.bulleted-arrowed dt {font-size: 1.0em; background-image: url('/res/img/bkgds/standard_arrow_icon.gif'); background-repeat: no-repeat; background-position: 0 0.25em; padding-left: 1.5em; font-weight: normal; margin-bottom: 10px;}
+
+div#content div#faq dl.bulleted-arrowed dt a {text-decoration: none;}
+
+div#content div#faq dl.bulleted-arrowed dt a:hover {text-decoration: underline;}
+
+div#content div#faq dl.bulleted-arrowed dd {font-size: 0.96em; margin: 0px; padding-left: 1.7em; padding-top: 3px; line-height: 140%; margin-top: -10px; margin-bottom: 20px;}
+
+
+
+a.showdd:hover {cursor: pointer;}
+
+
+
+div#content div#faq blockquote {margin-bottom: 20px; }
+
+div#content div#faq blockquote p {margin-bottom: 0px; padding-bottom: 0px;}
+
+div#content div#faq blockquote cite {font-weight: normal; margin-top: 3px;}
+
+
+
+ol.silentol {list-style-type: none; margin-left: 0px; padding-left: 0px; padding-top: 0px; margin-top: 0px; margin-bottom: 5px;}
+
+ol.silentol li {margin-bottom: 10px;}
+
+ol.silentol li dfn {display: block; font-style: italic;}
