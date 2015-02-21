@@ -1,0 +1,29 @@
+/* properties specific to internal template #9 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_9_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 105px;}
+
+div#content div#main {width: 333px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#main div.pri {text-align: left;}
+
+div#content div#main div.pri ul {list-style-type: none; margin-left: 0px; padding-left: 0px;}
+
+div#content div#main div.pri ul li {margin-left: 0px; padding-left: 0px;}
+
+div#content div#main h1 {padding-top: 0px; margin-top: 20px; margin-bottom: 24px; font-size: 1.9em;}
+
+div#content div#sidebar {float: right; width: 552px; margin: 0px; padding: 0px;}
+
+
+
+div#content div#sidebar div.pri blockquote {margin: 20px; margin-top: 23px; padding-bottom: 25px; border-bottom: 2px solid #ffffff;}
+
+div#content div#sidebar div.pri h2 {font-size: 1.86em; margin-top: 21px; margin-bottom: 0px; margin-left: 20px; margin-right: 20px; font-weight: normal;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px; display: inline;}
+
+div#content div#sidebar div.pri blockquote span.accessibility-hide {display: inline; visibility: visible;}
