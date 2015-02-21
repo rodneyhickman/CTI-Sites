@@ -1,0 +1,163 @@
+.png24bit {
+	visibility: hidden;
+}
+
+.dabblePageContainer,
+.dabblePageRightShadow,
+.dabblePage h1,
+.dabblePageSection,
+.dabblePageMenu,
+.dabblePageMenu li,
+.dabblePageMenu a,
+.dabblePageHeader {
+	display: inline-block;
+}
+
+.dabblePageBottomShadow,
+.dabblePageBottomLeftShadow,
+.dabblePageBottomRightShadow { display: none; }
+
+.dabblePageRightShadow {
+	background-image: none;
+}
+
+.dabblePageNavigation {
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/weblatest/images/bg/externalPage/menu.png',sizingMethod='scale');
+	left: 0;
+}
+
+.dabblePageAutocompleteFieldRemoveButton {
+	margin: 0;
+}
+
+.dabblePageFieldSearchResults {
+	left: 0;
+}
+
+.dabblePageFormFileUploadStatusBox {
+	position: absolute;
+	z-index: 100;
+	top: expression((-this.offsetParent.offsetTop + document.documentElement.scrollTop) + 'px');;
+	left: expression((-this.offsetParent.offsetLeft + document.documentElement.scrollLeft) + 'px');
+	width: expression(document.documentElement.clientWidth + 'px');
+	height: expression(document.documentElement.clientHeight + 'px');
+	background-image: url(../images/bg/grey-1half.gif);
+}
+
+.dabblePagePopWindow {
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color='#333333', direction='135', strength='3');
+}
+
+.dabblePageIE6CoverSelects {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+}
+
+.dabblePageCalendarPickerBox .dabblePageIE6CoverSelects {
+	width: 12em;
+}
+
+.dabblePageCalendarPickerBox .datePickerTable {
+	position: relative;
+	z-index: 5;
+}
+
+.dabblePageFormFileFlash {
+	display: inline-block;
+}
+
+.dabblePageSectionFull .dabblePageFormFileFlash {
+	width: 37.9em;
+}
+
+.dabblePageSectionHalf .dabblePageFormFileFlash {
+	width: 20.9em;
+}
+
+.dabblePageSectionMini .dabblePageFormFileFlash {
+	width: 11em;
+}
+
+.dabblePageFormItem .popMenuButton {
+	left: -1.3em;
+	margin: 0 -1.5em 0 0;
+}
+
+.popMenuButton, .alignWithButton {
+	border: 0 !important;
+}
+
+.linkButton {
+	border-width: 0;
+	margin: 1px;
+}
+
+.linkButton:hover {
+	border-width: 1px;
+	margin: 0;
+}
+
+.dabblePageBusyLoadingBox {
+  filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=50);
+}
+
+.dabblePageWithSearch .dabblePageUserMenu,
+.dabblePageWithTopMessage .dabblePageUserMenu {
+	background-color: transparent;
+	width: 20em;
+	position: absolute;
+	right: .5em;
+	float: none;
+	margin: 0;
+}
+
+.dabblePageUserMenu a:hover {
+	color: white;
+}
+
+.dabblePageSearch, #dabblePageTopMessage {
+	zoom: 1;
+}
+
+#hiddenBox {
+	background-image: none;
+	position: absolute;
+	top: 0;
+}
+
+#printDialogBox {
+	padding: 0 1em 1em;
+	background-color: white;
+}
+
+.dabblePageSectionHalf select {
+	width: 20.9em;
+}
+
+.dabblePageSectionMini select {
+	width: 10em;
+}
+
+select.dabblePageFormIESelect {
+	width: auto !important;
+	position: relative;
+	margin-right: -100%;
+	z-index: 100;
+}
+
+.dabblePageCommonsLogo a {
+	zoom: 1;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/weblatest/images/powered-by-dabble-db.png',sizingMethod='crop')
+}
+
+.dabblePageCommonsLogo img {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	cursor: pointer;
+}

@@ -1,0 +1,82 @@
+#
+# To update project after schema change, do:
+# (backup database)
+# symfony propel:build-model; symfony propel:build-sql; symfony propel:insert-sql
+# (restore database)
+
+Import:
+http://ww2.thecoaches.com/scholarship/frontend_dev.php/admin/flexformImport
+
+Login:
+http://ww2.thecoaches.com/scholarship/frontend_dev.php/flexform/index
+
+
+TODO:
+* Flexform->displayForm (with answers)
+* Flexform->update (from $sf_parameter_holder->getNames(), loop through names - they should match FlexformAnswer->getParamName() )
+** note, Profile info is duplicated in Flexform. Profile is still used for searches, etc.
+** decide which params to look for to put in profile
+* Flexform->exportMergeFile (HTML)  see: http://www.beutelevision.com/edit/wiki.pl?PhpExamples/WordDocFromPhp
+* (DONE) flexform/requestNewPassword action
+
+Plan: 5/31/13
+* Merge ExecCoach into word docs and ZIP
+** see $profile->getExeccoachArray ... and leadership/executeForlMergeTemplate
+
+Plan: 5/30/13
+* (DONE) add code for upload in form reader
+* (DONE) add code for upload in action
+* (DONE) add code for [info] section
+* (DONE) add code for getting photo and resume
+* (DONE) test form
+* (DONE) test downloading zip
+* (DONE) send to Jennet
+
+Plan: 5/29/13
+* (DONE) finish admin page for FORL
+* (DONE) finish FORL applicant page
+* (DONE) create merge template action
+* add whole form
+* add code for uploads (ajax?)
+
+
+Plan: 5/27/13
+* (DONE) create code to display form with answers
+* (DONE) create code to save answers
+* create admin page for FORL
+
+Plan: 5/24/13
+* (DONE) add Filemaker login to flexform module and test (see portal)
+* (DONE) create admin action to import form
+* (DONE) Flexform::newFormFromSections()
+* create code to display form
+* create admin action to make forms active
+
+Plan: 5/23/13
+* (DONE) Flexform->exportAnswerArray --> to replace  Profile->getZZZArray
+* (DONE) save SQL data and instantiate new schema (again)
+* (DONE) create flexform module
+* find Filemaker login code (see portal)
+
+Plan: 5/22/13
+* (DONE) save SQL data and instantiate new schema (again)
+* (DONE) create commonTools::createParamName( $text ) --> creates param_name with 30 chars or less
+
+* (PARTIAL) ProfilePeer::SearchForlApplicants
+* (PARTIAL) ProfilePeer::AllForlApplicants
+* executeExportForl action
+* executeExportAllForl action
+* Executeexportallforlzip action
+* create Flexform->newFromSections( $sections ) --> use commonTools::createParamName( )
+
+Plan: 5/21/13
+* (DONE) save SQL data and instantiate new schema
+
+
+Plan: 5/20/13
+* (DONE) Create FlexibleForm.class.php
+* (DONE) importFromText
+* (DONE) flexformReader action - http://ww2.thecoaches.com/scholarship/frontend_dev.php/admin/flexformReader
+
+
+

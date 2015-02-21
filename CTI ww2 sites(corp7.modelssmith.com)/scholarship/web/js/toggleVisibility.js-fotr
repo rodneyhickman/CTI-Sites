@@ -1,0 +1,9 @@
+function toggleVisibility(sId){
+  var me=document.getElementById(sId);
+  if (me.style.visibility=="hidden"){
+     me.style.visibility="visible";
+  }
+  else {
+     me.style.visibility="hidden";
+  }
+}

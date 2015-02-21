@@ -1,0 +1,41 @@
+.dabblePageSection {
+	zoom: 1;
+}
+
+.dabblePageNavigation {
+	left: 0;
+}
+
+.dabblePageAutocompleteFieldRemoveButton {
+	margin: 0;
+}
+
+.dabblePageFieldSearchResults {
+	left: 0;
+}
+
+.dabblePageBusyLoadingBox {
+  filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=50);
+}
+
+.dabblePageWithSearch .dabblePageUserMenu,
+.dabblePageWithTopMessage .dabblePageUserMenu { margin: 0 .5em 0 0;
+	zoom: 1;
+}
+
+.dabblePageAutocompleteFieldBox,
+#dabblePageTop { zoom: 1; }
+
+.dabblePageSectionHalf select {
+	width: 20.9em;
+}
+
+.dabblePageSectionMini select {
+	width: 10em;
+}
+
+select.dabblePageFormIESelect {
+	width: auto !important;
+	position: relative;
+	z-index: 100;
+}

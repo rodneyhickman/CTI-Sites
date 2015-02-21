@@ -1,0 +1,58 @@
+Thank you for your purchase of an ebook from A Book Apart. Our ebooks are available in three formats: ePub, PDF, and Mobi. 
+
+The ePub format is the industry standard and is supported by all iOS devices (iPhone, iPad, iPod), as well as the Nook, Sony Reader, Stanza, and Adobe Digital Editions. 
+
+The Mobi format is supported by Amazon's Kindle.
+
+The PDF can be read in Adobe Acrobat or Preview (on the Mac), as well as many other devices and programs.
+
+In addition, two books--CSS3 for Web Designers and Responsive Web Design--also include a video ePub. The video ePub is supported only by iOS devices (iPhone, iPad, iPod); it is identical to the standard ePub save for one exception: where appropriate, static screenshots have been replaced by video demonstrations.
+
+Instructions for installing your ebook into several common readers follow below. For advice on installing your ebook on other readers, please seek support from your reader's maker.
+
+
+------------------------
+IPHONE/IPAD
+------------------------
+
+Drag the standard or video ePub file into iTunes and sync your iPhone/iPad/iPod to iTunes. 
+
+
+------------------------
+NOOK
+------------------------
+
+Add the standard ePub file to the "my documents" folder of your Nook. 
+
+
+------------------------
+STANZA
+------------------------
+
+Connect your iPhone or iPad to your Mac and navigate to the Apps tab under the device. Select Stanza. Drag the standard ePub file to the Stanza Documents list.
+
+
+------------------------
+SONY READER
+------------------------
+
+Connect your Sony Reader to your computer. Drag the standard ePub file to the Reader icon in the left column of the Reader Library software.
+
+
+------------------------
+ADOBE DIGITAL EDITIONS
+------------------------
+
+In the Library menu, click Add Item to Library and select the standard ePub file. 
+
+
+------------------------
+KINDLE
+------------------------
+
+Connect your Kindle to your computer and drag the Mobi file to the documents folder on your Kindle. 
+
+
+Questions? support@abookapart.com
+
+
