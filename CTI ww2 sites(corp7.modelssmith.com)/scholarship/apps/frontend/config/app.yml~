@@ -1,0 +1,21 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+# IMPORTANT: do a symfony cc after making changes
+
+# default values
+all:
+  ctidatabase:
+    server: 184.73.210.4
+    port: 3306
+    user: c7user
+    password: 8iKLo9
+  remember_cookie_name: launchpad_remember
+  remember_key_expiration_age: 864000
+  webcomp:
+    postkey: fjgh15t
+    postkey2: fjgh12fgt
+    baseurl: http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM
+    authen: authenticate.php
+    recordexists: abletogetrecord.php
+    newpw: set_pw.php
+    commlog: new_commlog.php

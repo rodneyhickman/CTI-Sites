@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coaching One - Orientation Call</title>
+    <meta name="description" content="my Co-Active Student Portal Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="stylesheet" href="../Content/css/normalize.css">
+    <link rel="stylesheet" href="../Content/css/main.css">
+    <script src="../scripts/modernizr-2.8.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/non-security.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <div class="os-wrapper">
+        <div class="os-main">
+            <div class="os-page-header">
+                <div class="os-company-logo1">
+                    <img style="padding-top:15px;" src="../Content/images/faculty-header.png" />
+                </div>
+
+                <div style="float: right; margin-top: 15px;">Welcome&nbsp;<span id="userName"></span>!&nbsp;&nbsp;&nbsp;&nbsp;<a id="logout">Logout</a></div>
+                <div id="facultyViewAsDropDown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        View As <strong><span id="veiwAsLabel">Faculty</span></strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="javascript:showStudentView();">Student</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Faculty</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div>
+                    <div class="os-main-nav">
+                        <ul>
+                            <li>
+                                <a href="facultyExams.html">Examiners</a>
+                            </li>
+                            <li>
+                                <a href="facultyCPLS.html">CPLS</a>
+                            </li>
+                            <li>
+                                <a href="facultyOrientationCall.html">Orientation Call</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="os-container-box">
+                <div class="os-box os-box-fit">
+                    <div class="os-box-header">
+                        <h2>Orientation Call Leader Resources and Call</h2>
+                    </div>
+                    <div style="text-align:left;padding:12px;">
+                            <strong><a href="../Documents/English/Audio/Orientation_Alignment.mp3">Orientation Alignment Call</a></strong><br/>
+                            A link to the call recorded on December 7, 2012 is located here.<br>
+                            <br/>
+                            <strong><a href="../Documents/English/CPL_Orientation.pdf">2014 Orientation Time Line</a></strong><br/>
+                            The most current timeline for Orientation Call Leaders is located here.<br>
+                            <br/>
+                            <strong><a href="../Documents/English/Orientation_Call_Schedule_2014_v1.0.doc">2014 Orientation Call Schedule</a></strong><br/>
+                            Most current schedule of 2014 Orientation Call dates and leaders.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="table-responsive" style="width:966px; margin: 0 auto;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="mailto:support@coactive.com">QUESTIONS? CONTACT CTI</a>
+                        </strong>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right;"><img src="../Content/images/cti-mycoactive_footer.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="../scripts/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../scripts/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+</body>
+</html>

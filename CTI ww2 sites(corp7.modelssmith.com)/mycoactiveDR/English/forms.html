@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coaching One - Forms</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta name="description" content="my Co-Active Student Portal Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="stylesheet" href="../Content/css/normalize.css">
+    <link rel="stylesheet" href="../Content/css/main.css">
+    <script src="../scripts/modernizr-2.8.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/non-security.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <div class="os-wrapper">
+        <div class="os-main">
+            <div class="os-page-header">
+                <div class="os-company-logo1">
+                    <img style="padding-top:15px;" src="../Content/images/student-header.png" />
+                </div>
+
+                <div style="float: right; margin-top: 15px;">Welcome&nbsp;<span id="userName"></span>!&nbsp;&nbsp;&nbsp;&nbsp;<a id="logout">Logout</a></div>
+                <div id="facultyViewAsDropDown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        View As <strong><span id="veiwAsLabel">Student</span></strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Student</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFacultyView();">Faculty</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div>
+                    <div class="os-main-nav">
+                        <ul>
+                            <li>
+                                <a href="forms.html">Forms</a>
+                            </li>
+                            <li>
+                                <a href="manual.html">Manual</a>
+                            </li>
+                            <li>
+                                <a href="exams.html">Exams</a>
+                            </li>
+                            <li>
+                                <a href="open.html">Open Topics</a>
+                            </li>
+                            <li>
+                                <a href="audio.html">Audios</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Student Forms</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:8px;">
+
+                                            <a target="_blank" href="../Documents/English/Certified_Coach_Change.doc"><strong><font color="#7F2D2F">Certified Coach Change</font></strong></a> Use this form if you change your certified coach during your Program. Instructions are included on the form.<br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Client_Release_Authorization.doc"><strong><font color="#7F2D2F">Client Release Authorization</font></strong></a> Use for this form for Client Release Authorization. You should have the signed form in hand prior to recording your client. Electronic signatures are NOT acceptable on these forms. DO NOT alter this form with anything other than the info it asks for or it will be invalid. The original form, with your clients signature, should be kept by the coach and a scanned or faxed copy will need to be submitted to CTI by the end of your Program. PLEASE DO NOT HAVE YOUR CLIENT SUBMIT THIS FORM TO CTI.<br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Client_Roster.doc"><strong><font color="#7F2D2F">Client Roster</font></strong></a> Use this form for keeping track of each client you are counting for Certification hours.<br />
+                                            <br />
+                                            <div>
+                                                <a target="_blank" href="../Documents/English/Internal_Coaches.doc"><strong><font color="#7F2D2F">Documentation for Internal Coaches</font></strong></a>
+                                                Fill out this form if you will be using internal clients (people within your workplace) during your Program.
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div>
+                                                <a target="_blank" href="../Documents/English/Group_Relationship_Coaching.doc"><strong><font color="#7F2D2F">Group/Relationship Coaching</font></strong></a> Use this form to keep track of group or relationship coaching hours during your Program. Instructions are included on the form.<br />
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <a target="_blank" href="../Documents/English/GSR_form.pdf"><strong><font color="#7F2D2F">Group Supervision Review</font></strong></a> Use this form with your Group Supervision Calls. Your version <strong>does not</strong> get submitted to CTI, as your supervisor will be submitting their version of this form. Print out copies of this form to use during your Supervision Calls.<br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Individual_Client_Tracking_Sheet.doc"><strong><font color="#7F2D2F">Individual Client Tracking Sheet</font></strong></a> You <strong>can</strong> use this form for each of your clients. <strong>This form does not get turned in to CTI.</strong> However, this format aligns with ICF requirements and will help you prepare information needed for the Total Hours Tracking Sheet that will be submitted to CTI. <br />
+                                            <br />
+                                            <div>
+                                                <a target="_blank" href="../Documents/English/ISR_form.pdf"><strong><font color="#7F2D2F">Individual Supervision Review</font></strong></a> Use this form with your Individual Supervisions. This form does not get submitted to CTI. Your supervisors will be submitting their version of the form. Print out copies of this form to use during your Supervision Calls.<br />
+                                            </div>
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Supervisor_Contacts.pdf"><strong><font color="#7F2D2F">Supervisor Contact Sheet</font></strong></a> This form has the contact info for the Supervisors. Check your Welcome Documents for the names of the two Supervisors whom you were assigned.<br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Student_MPR.doc"><strong><font color="#7F2D2F">Mid-Program Review</font></strong></a> This is the Mid-Program Review form for you to download, complete and email privately to your CPL. <br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Supervisor_Assessment_Scale.pdf"><strong><font color="#7F2D2F">Supervision Assessment Scale</font></strong></a> This contains Supervision scoring information and the Supervision Assessment Scale.<br />
+                                            <br />
+                                            <a target="_blank" href="../Documents/English/Total_Coaching_Hours_Tracking_Sheet.xls"><strong><font color="#7F2D2F">Total Hours Tracking Sheet</font></strong></a> This form is <strong>required</strong> to submit your required 100 coaching hours to CTI. Submit this form <strong>at least</strong> 30 days prior to taking your Oral Exam.
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Client Game</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:8px;">
+                                         
+                                                The Client Game is set up
+                                                to help you reach your client goals. There are several areas set up to discuss obtaining new clients. Share how you've obtained new clients. Post goals, client leads and get support with accountability. <br/>
+                                                <br/>
+                                                A shortcut to to the <strong>Client Game Discussion Area</strong> is found on MY CO-ACTIVE.COM in the <strong>Announcements Area</strong>. Also check the Discussion Area for a link to a recording of your
+                                                Client Game Call if you need a refresher along the way.<br/>
+                                                <br/>
+                                                When you get a new client and let us know how you did it. Inspire each other, it’s fun!<br/>
+                                                <br/>
+                                                <strong>Steal Freely!</strong> Sometimes all one needs to get started is a boost. Here are a few sample introduction letters that you are free to borrow... in pieces or as a whole.<br/>
+                                                <br/>
+                                                <ul>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/Sample_1.doc"><strong><font color="#7F2D2F">Sample Letter 1</font></strong></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/Sample_2.doc"><strong><font color="#7F2D2F">Sample Letter 2</font></strong></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/Sample_3.doc"><strong><font color="#7F2D2F">Sample Letter 3</font></strong></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/Sample_4.doc"><strong><font color="#7F2D2F">Sample Letter 4</font></strong></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/Client_Welcome_Packet_Sample.doc"><strong><font color="#7F2D2F">Client Welcome Packet Sample</font></strong></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="table-responsive" style="width:966px; margin: 0 auto;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="mailto:support@coactive.com">QUESTIONS? CONTACT CTI</a>
+                        </strong>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right;"><img src="../Content/images/cti-mycoactive_footer.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../scripts/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../scripts/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+</body>
+</html>

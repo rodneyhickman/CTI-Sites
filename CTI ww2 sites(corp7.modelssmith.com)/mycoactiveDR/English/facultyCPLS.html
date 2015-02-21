@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coaching One - CPLS</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta name="description" content="my Co-Active Student Portal Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="stylesheet" href="../Content/css/normalize.css">
+    <link rel="stylesheet" href="../Content/css/main.css">
+    <script src="../scripts/modernizr-2.8.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/non-security.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <div class="os-wrapper">
+        <div class="os-main">
+            <div class="os-page-header">
+                <div class="os-company-logo1">
+                    <img style="padding-top:15px;" src="../Content/images/faculty-header.png" />
+                </div>
+                <div style="float: right; margin-top: 15px;">Welcome&nbsp;<span id="userName"></span>!&nbsp;&nbsp;&nbsp;&nbsp;<a id="logout">Logout</a></div>
+                <div id="facultyViewAsDropDown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        View As <strong><span id="veiwAsLabel">Faculty</span></strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="javascript:showStudentView();">Student</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Faculty</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+                <div>
+                    <div class="os-main-nav">
+                        <ul>
+                            <li>
+                                <a href="facultyExams.html">Examiners</a>
+                            </li>
+                            <li>
+                                <a href="facultyCPLS.html">CPLS</a>
+                            </li>
+                            <li>
+                                <a href="facultyOrientationCall.html">Orientation Call</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>CPL Resources</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:12px;">
+                             
+                                                <strong>
+                                                    CPL Manual &amp; Timelines<br>
+                                                </strong>
+                                                <ul>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/CPL_Ch1_Introduction_v6.00.pdf">Introduction</a>
+                                                    </li>
+                                                    <li>
+                                                        • #00 <a target="_blank" href="../Documents/English/PDF/CPL_Orientation.pdf">Orientation Call</a>
+                                                    </li>
+                                                    <li>
+                                                        • #01 <a target="_blank" href="../Documents/English/PDF/01_Empowered_Relationships.pdf">Empowered Relationships</a>
+                                                    </li>
+                                                    <li>
+                                                        • #02 <a target="_blank" href="../Documents/English/PDF/02_Cornerstones.pdf"><em>The Cornerstones</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #03 <a target="_blank" href="../Documents/English/PDF/03_Int_of_Fulfillment.pdf"><em>Integration of the Principle of Fulfillment </em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #04 <a target="_blank" href="../Documents/English/PDF/04_Int_of_Balance.pdf"><em>Integration of the Principle of Balance</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #05 <a target="_blank" href="../Documents/English/PDF/05_Int_of_Process.pdf"><em>Integration of the Principle of Process</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #06 <a target="_blank" href="../Documents/English/PDF/06_Forward-Deepen.pdf"><em>The Context of Forward the Action/Deepen the Learning</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #07 <a target="_blank" href="../Documents/English/PDF/07_Listening_and_Self-Management.pdf"><em>The Contexts of Listening and Self-Management</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #08 <a target="_blank" href="../Documents/English/PDF/08_Curiosity_and_Intuition.pdf"><em>The Contexts of Curiosity and Intuition</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #09 <a target="_blank" href="../Documents/English/PDF/09_Coach_Person_Not_Topic.pdf"><em> Coach the Whole Person, Not the Topic</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #10 <a target="_blank" target="_blank" href="../Documents/English/PDF/10_Ethics.pdf"><em>Ethics</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #11 <a target="_blank" href="../Documents/English/PDF/11_Bringing_It_All_Together.pdf"><em>Bringing It All Together</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #12 <a target="_blank" href="../Documents/English/PDF/12_Evoking_Transformation.pdf"><em>Evoking Transformation</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • #13 <a target="_blank" href="../Documents/English/PDF/13_Completion.pdf"><em>Completion</em></a>
+                                                    </li>
+                                                </ul>
+                                                <br />
+                                                <br />
+                                                <strong>Forms/Resources</strong>
+                                                A list of all forms needed for the Program, along with other helpful documents are located here.<br>
+                                                <ul>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/Marking_Supervision_Form.doc"><em>Marking the Supervision Form</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/GSR_form.pdf"><em>Group Supervision Form</em></a> - Completed forms to be&nbsp; emailed to statsheet@coactive.com
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/ISR_form.pdf"><em>Individual Supervision Form</em></a> - Completed forms to be emailed to statsheet@coactive.com
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" target="_blank" href="../Documents/English/PDF/Student_MPR.doc"><em>Mid-Program Review Form</em></a> - Completed forms to be emailed to mpr@coactive.com
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/TriadAssignmentsWithGroupSupervisions.xls"><em>Triad Assignment Spreadsheet</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" target="_blank" href="../Documents/English/PDF/Triad_Template_3_in_a_row_1.xls"><em>Triad Assignment Spreadsheet (3 in a row)</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/CPL_Quality_Review_Form.doc"><em>CPL Quality Review</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/List_of_Announcements.doc"><em>List of Announcements</em></a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/Homework_Journal_Questions.doc"><em>Homework Journal Questions</em></a>
+                                                    </li>
+                                                </ul>
+                                                <br/>
+                                                <br/>
+                                                <strong>Audio Transcripts</strong>
+                                                <ul>
+                                                    <li>
+                                                        <a target="_blank" href="../Documents/English/PDF/audio_transcripts.pdf">Click here</a> to download transcripts of the current Audios.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Written Exam</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:12px;">
+                                           
+                                                <strong>Written Exam Forms &amp; Resources</strong><br/>
+                                                Below are links to documents for facilitation of the Written Exam:<br>
+                                                <ul>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/CTI_Written_Exam.doc">CTI Written Exam</a> - Completed and graded Exams to be emailed to writtenexam@coactive.com
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/Written_Exam_Answer_Key_September_2012.doc">Answer Key</a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/CPL_Tabulator_for_Sept_2012_Written_Exam.xlsx">Tabulator</a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/CTI_Written_Exam_Procedures.doc">Written Exam Procedures</a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/Exam_Scores_Template.xls">Scores Template</a>
+                                                    </li>
+                                                    <li>
+                                                        • <a target="_blank" href="../Documents/English/PDF/Written_Exam_Score_Key_Sept_2012.doc">Scores Key</a>
+                                                    </li>
+                                                </ul>                                                                                      
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Sample Calls</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:12px;">
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_1.mp3">Malone Module #1</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_2.mp3">Malone Module #2</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_3.mp3">Malone Module #3</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_4.mp3">Malone Module #4</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_5.mp3">Malone Module #5</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_6.mp3">Malone Module #6</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_7.mp3">Malone Module #7</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_8.mp3">Malone Module #8</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_9.mp3">Malone Module #9</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_10.mp3">Malone Module #10</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_11.mp3">Malone Module #11</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_12.mp3">Malone Module #12</a><br>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/Malone_Module_13.mp3">Malone Module #13</a><br>
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Special Training Calls</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:12px;">
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/cpl_captain_crew.mp3">Captain &amp; Crew</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/angel_on_shoulder.mp3">Angel on Shoulder Demo</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/Audio/inside_guide.mp3">Inside Guide Demo</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <br/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="table-responsive" style="width:966px; margin: 0 auto;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="mailto:support@coactive.com">QUESTIONS? CONTACT CTI</a>
+                        </strong>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right;"><img src="../Content/images/cti-mycoactive_footer.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="../scripts/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../scripts/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+</body>
+</html>

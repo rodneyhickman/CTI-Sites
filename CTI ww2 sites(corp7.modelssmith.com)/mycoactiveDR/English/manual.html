@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>my Co-active</title>
+    <meta name="description" content="my Co-Active Student Portal Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="stylesheet" href="../Content/css/normalize.css">
+    <link rel="stylesheet" href="../Content/css/main.css">
+    <script src="../scripts/modernizr-2.8.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/non-security.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="os-wrapper">
+        <div class="os-main">
+            <div class="os-page-header">
+                <div class="os-company-logo1">
+                    <img style="padding-top:15px;" src="../Content/images/student-header.png" />
+                </div>
+                <div style="float: right; margin-top: 15px;">Welcome&nbsp;<span id="userName"></span>!&nbsp;&nbsp;<a id="logout">Logout</a></div>
+                <div id="facultyViewAsDropDown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        View As <strong><span id="veiwAsLabel">Student</span></strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Student</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFacultyView();">Faculty</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+                <div>
+                    <div class="os-main-nav">
+                        <ul>
+                            <li>
+                                <a href="forms.html">Forms</a>
+                            </li>
+                            <li>
+                                <a href="manual.html">Manual</a>
+                            </li>
+                            <li>
+                                <a href="exams.html">Exams</a>
+                            </li>
+                            <li>
+                                <a href="open.html">Open Topics</a>
+                            </li>
+                            <li>
+                                <a href="audio.html">Audios</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>           
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>CPPC Manual Information</h2>
+                                        </div>
+                                        <div style="text-align:left;">
+                                            <p>
+                                                This section includes PDF versions of the chapters and sections of the CPCC Manual. You can download chapters by clicking on the links below.
+                                            </p>
+                                            <p>
+                                                To download the Chapter all at once, click on the CHAPTER TITLE.
+                                            </p>
+                                            <p>
+                                                To download the entire U.S. Standard size manual as a ZIP file,<a href="../Documents/English/ZIP/CPCC_Manual.zip">CLICK HERE.</a></p>
+                                            <p>
+                                                To download the entire A4 size manual as a ZIP file, <a href="../Documents/English/Zip/CPCC_Manual_A4.zip">CLICK HERE.</a>
+                                            </p>
+                                            <p>
+                                                If you are looking for a usable form, please click on FORMS in the menu bar rather than download the chapter. The chapters will have samples of forms, but not forms you can download and use.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>CPPC Manual Chapters 1, 2, and 3</h2>
+                                        </div>
+                                        <div style="text-align:left;">
+                                            <p>
+                                                <strong>Chapter 1:</strong>&nbsp;<a target="_blank" href="../Documents/English/PDF/CPCC_01_Intro.pdf">Introduction</a>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/WELCOME_TO_CERTIFICATION.pdf">Welcome to Certification</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/ASSUMPTIONS_PROMISES.pdf">Assumptions and Promises</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/STARTING_POWERFULLY.pdf">Starting Powerfully</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/RESOURCES_YOU_WILL_NEED.pdf">Resouces You Will Need</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/CPCC_REQUIREMENTS.pdf">Certification Program Requirments</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/WEEKS_1_25.pdf">Weeks 1-25 CPCC Program</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/PROGRAM_COMPLETION.pdf">Program Completion</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/OPTIONAL_ACTIVITIES.pdf">Optional Activities</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/CPCC_REQUIREMENTS.pdf">Requirements for the ICF ACC Credential</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/TELEPHONE_CALL_GUIDELINES.pdf">Telephone Call Guidelines and Equipment</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/100_COACHING_HOURS.pdf">100 Coaching Hours</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/FAQ.pdf">Frequently Asked Questions</a>
+                                                </li>
+                                             </ul>
+                                            <br/>
+                                            <p>
+                                                <strong>Chapter 2:</strong>&nbsp;<a target="_blank" href="../Documents/English/PDF/CPCC_02_Modules.pdf">Program Guide</a>
+                                            </p>
+                                            <p>
+                                                Click on "Program Guide" to print or view the entire six-month Program Guide for Certification.
+                                            </p>
+                                            <br/>
+                                            <p>
+                                                <strong>Chapter 3:</strong>&nbsp;<a target="_blank" href="../Documents/English/PDF/CPCC_03_Reading.pdf">Reading</a>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_01.pdf">Empowered Relationships, Reading #1</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_02.pdf">The Cornerstones, Reading #2</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_03.pdf">Integration of the Principle of Fulfillment, Reading #3</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_04.pdf">Integration of the Principle of Balance, Reading #4</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_05.pdf">Integration of the Principle of Process, Reading #5</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_06.pdf">The Context of Forward the Action/Deepen the Learning, Reading #6</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_07.pdf">The Contexts of Listening and Self-Management, Reading #7</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_08.pdf">The Contexts of Curiosity and Intuition, Reading #8</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_09.pdf">Coach the Whole Person, Not the Topic, Reading #9</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_10.pdf">Ethics, Reading #10</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_11.pdf">Bringing It All Together, Reading #11</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/Reading_12.pdf">Evoking Transformation, Reading #12</a>
+                                                </li>                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>CPPC Manual Chapters 4 and 5</h2>
+                                        </div>
+                                        <div style="text-align:left;">
+                                            <p>
+                                                <strong>Chapter 4:</strong>&nbsp;<a target="_blank" href="../Documents/English/PDF/CPCC_04_Supervision.pdf">Supervision</a></p>
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SUPERVISION.pdf">Supervision</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SUPERVISION_ASSESSMENT_SCALE.pdf">Supervision Assessment Scale: The Bottom Line</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/EXAMPLE_SUPERVISION_REVIEW_FORM.pdf">Example: Assessment on a Supervision Review Form</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/INSTRUCTIONS_CLIENT_RELEASE_AUTHORIZATION_FORM.pdf">Instructions for a client release authorization form</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SAMPLE_CLIENT_RELEASE_AUTHORIZATION_FORM.pdf">Sample client release authorization form</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SAMPLE_GROUP_SUPERVISION_REVIEW_FORM.pdf">Sample group supervision review form</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SAMPLE_INDIVIDUAL_SUPERVISION_REVIEW_FORM.pdf">Sample individual supervision review form</a>
+                                                </li>
+                                            </ul>
+
+                                            <p>
+                                                <strong>Chapter 5:</strong>&nbsp;<a target="_blank" href="../Documents/English/PDF/CPCC_05_References.pdf">References</a></p>
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/THE_CO_ACTIVE_MODEL.pdf">The co-active model</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/FOUR_CORNERSTONES.pdf">Four cornerstones of co-active coaching</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/EIGHT_WAYS.pdf">Eight ways to move aside saboteur voices</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/SIX_WAYS_TO_CLARIFY_VALUES.pdf">Six ways to clarify values</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/GLOSSARY.pdf">Glossary</a></li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/READING_FOR_PARTICIPANTS.pdf">Recommended reading</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="../Documents/English/PDF/AUDIOS.pdf">Audio recordings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Learning Hub Links</h2>
+                                        </div>
+                                        <div style="text-align:left;">
+                                            <p>
+                                                Here are links to the different sections of the Learning Hub you used while going through the Core Curriculum.
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    • <a target="_blank" href="http://www.thecoaches.com/learning-hub/fundamentals/">Fundamentals</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="http://www.thecoaches.com/learning-hub/intermediate/fulfillment/">Fulfillment</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="http://www.thecoaches.com/learning-hub/intermediate/balance/">Balance</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="http://www.thecoaches.com/learning-hub/intermediate/process/">Process</a>
+                                                </li>
+                                                <li>
+                                                    • <a target="_blank" href="http://www.thecoaches.com/learning-hub/intermediate/synergy/">Synergy</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="os-container-box">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Order a Hardcopy</h2>
+                                        </div>
+                                        <div style="text-align:left;">
+                                            <p>
+                                                If you would like to order a hardcopy of the CPCC Manual and your shipping address is in North America, please <a target="_blank" href="https://marketplace.mimeo.com/CPCCv7NoAM">CLICK HERE</a> to place your order and enter the password below.
+                                            </p>
+                                            <p>
+                                                Password: mycoactive
+                                            </p>
+                                            <p>
+                                                If you would like to order a hardcopy of the CPCC Manual and your shipping address IS NOT in North America, please <a target="_blank" href="https://marketplace.mimeo.co.uk/CPCCIntlv7">CLICK HERE</a> to place your order and enter the password below. Your shipping charges will be lower.
+                                            </p>
+                                            <p>
+                                                Password: mycoactive
+                                            </p>
+                                            <p>
+                                                **Delivery Options will be available to pick from when you place your order**
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="table-responsive" style="width:966px; margin: 0 auto;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="mailto:support@coactive.com">QUESTIONS? CONTACT CTI</a>
+                        </strong>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right;"><img src="../Content/images/cti-mycoactive_footer.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../scripts/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../scripts/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+</body>
+</html>

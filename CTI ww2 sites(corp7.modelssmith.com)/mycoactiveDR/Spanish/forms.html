@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formularios</title>
+    <meta name="description" content="my Co-Active Student Portal Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="stylesheet" href="../content/css/normalize.css">
+    <link rel="stylesheet" href="../content/css/main.css">
+    <script src="../scripts/modernizr-2.8.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/non-security.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="os-wrapper">
+        <div class="os-main">
+            <div class="os-page-header">
+                <div class="os-company-logo1">
+                    <img style="padding-top:15px;" src="../Content/images/certificacion-spanish.png" />
+                </div>
+                <div style="float: right; margin-top: 15px;">Bienvenido&nbsp;<span id="userName"></span>!&nbsp;&nbsp;<a id="logout">Cerrar sesión</a></div>
+                <div id="facultyViewAsDropDown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Vista como <strong><span id="veiwAsLabel">estudiante</span></strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">estudiante</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFacultyView();">facultad</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+                <div>
+                    <div class="os-main-nav">
+                        <ul>
+                            <li>
+                                <a href="forms.html">Formularios</a>
+                            </li>
+                            <li>
+                                <a href="manual.html">Manual / Libro</a>
+                            </li>
+                            <!--<li>
+                        <a href="exams.html">Exams</a>
+                    </li>-->
+                            <li>
+                                <a href="open.html">Llamadas Tema Abierto</a>
+                            </li>
+                            <li>
+                                <a href="audio.html">Audios / Podcasts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="os-container-box" style="width:100%;">
+                                    <div class="os-box os-box-fit">
+                                        <div class="os-box-header">
+                                            <h2>Formularios estudiantes</h2>
+                                        </div>
+                                        <div style="text-align:left;padding:10px;">
+                                            <ul>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Cambio_de_Coach_Certificado.doc"><em>Cambio de Coach Certificado</em></a> Utiliza este formulario en caso de cambiar de coach certificado durante el Programa de Certificación. Las instrucciones están dentro del documento.<br>
+                                                    <br>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Autorizacion_de_Cliente.doc"><em>Autorización del Cliente</em></a> Utiliza este formulario de Autorización del Clientes, deberás tenerlo firmado antes de realizar la grabación de la sesión. Las firmas electrónicas NO están permitidas en estos formularios. NO alteres este documento o perderá su validez. El documento original firmado por tus clientes, deberás conservarlo, escanearlo y enivarlo a Augere al finalizar el Programa. POR FAVOR NO HAGAS QUE TU CLIENTE ENVIE ESTE DOCUMENTO A CTI.<br>
+                                                    <br>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Lista_de_Clientes.doc"><em>Listado de Clientes</em></a> Utiliza este formulario para hacer el seguimiento de cada cliente que estés contando para las horas de Certificación.<br>
+                                                    <br>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Documentacion_para_Coaches_Internos.doc"><em>Documentación para Coaches Internos</em></a>
+                                                    Utiliza este formulario si tienes clientes internos (gente de tu misma empresa) durante tu Programa de Certificación.
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Coaching_de_Grupos.doc"><em>Coaching de Grupos o de Relaciones</em></a> Utiliza este formulario si vas a contar horas de coaching grupal o de relaciones para tu Programa de Certificación. Podrás encontrar la información en el documento.<br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/GSR_es.pdf"><em>Plantilla de Supervisión Grupal</em></a>
+                                                    Utiliza esta plantilla en las llamadas de supervisión grupal. Esta plantilla no se entrega a CTI, tus supervisores enviarán su versión de la plantilla. Imprímete copias de esta plantilla para utilizarlas durante las llamadas de supervisión grupal.<br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Seguimiento_de_Cliente_Individual.doc"><em>Hoja de Seguimiento de Cliente Individual</em></a> Puedes utilizar este formulario para cada uno de tus clientes. Este formulario NO se deberá entregar a CTI. Aunque, el formulario está alineado a los requisitos de ICF y te ayudará a preparar la Hoja de Seguimiento del Total de Horas de Coaching que deberás entregar a CTI. <br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/ISR_es.pdf"><em>Plantilla de Supervisón Individual</em></a>
+                                                    Utiliza esta plantilla en las supervisiones individuales. Esta plantilla no se entrega a CTI, tus supervisores enviarán su versión de la plantilla. Imprímete copias de esta plantilla para utilizarlas durante las llamadas de supervisión.<br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Listado_de_Supervisores.pdf"><em>Lista de Supervisores</em></a>
+                                                    Esta lista tiene los datos de contacto de los supervisores. Revisa tu Dossier de Bienvenida para confirmar los nombres de los dos supervisores asignados.<br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/MPR_es.doc"><em>Revisión de Mitad de Programa</em></a>
+                                                    Éste documento de Revisión de Mitad de Programa es para descargar, completar y enviar por correo electrónico a tu CPL. <br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Utilizacion_Plantilla.pdf"><em>Utilización de la Plantilla de Supervisión</em></a>
+                                                    La plantilla contiene información de puntuación de la Supervisión y la Escala de Evaluación de la Supervisión.<br>
+                                                    <br />
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" href="../Documents/Spanish/Total_Horas_Coaching_12_Meses.xls"><em>Seguimiento horas coaching</em></a> Es imprensidible enviar este documento con las 100 horas de coaching a CTI. Envía este formulario al menos 30 días antes de realizar el examen oral.
+                                                    <br />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="table-responsive" style="width:966px; margin: 0 auto;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="mailto:CTIspain@coactive.com" style="color: rgb(29, 111, 202); text-decoration: none;">¿ TIENES UNA PREGUNTA ? CONTACTA CON CTI SPAIN</a>
+                        </strong>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right;"><img src="../Content/images/cti-mycoactive_footer.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/jquery-2.1.1.min.js"><\/script>')</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+</body>
+</html>
