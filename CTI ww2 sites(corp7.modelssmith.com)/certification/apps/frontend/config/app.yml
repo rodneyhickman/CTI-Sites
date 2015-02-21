@@ -1,0 +1,5 @@
+# default values
+all:
+  smtp_server_ip: 127.0.0.1
+  base_domain: ww2.thecoaches.com
+  pager_recs_max: 10

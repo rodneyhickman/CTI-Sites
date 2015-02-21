@@ -1,0 +1,18 @@
+line 250 column 109 - Warning: <br> element not empty or not closed
+line 354 column 181 - Warning: unescaped & or unknown entity "&builderType"
+line 358 column 1 - Warning: <input> dropping value "OILB_EMAIL" for repeated attribute "name"
+line 356 column 1 - Warning: <input> element not empty or not closed
+line 361 column 1 - Warning: <input> element not empty or not closed
+line 361 column 61 - Warning: <input> element not empty or not closed
+line 283 column 3 - Warning: <label> anchor "l_package1" already defined
+line 346 column 1 - Warning: <script> inserting "type" attribute
+line 346 column 131 - Warning: <script> inserting "type" attribute
+line 354 column 1 - Warning: <form> attribute value "POST" must be lower case for XHTML
+Info: Doctype given is "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Info: Document content looks like XHTML 1.0 Transitional
+10 warnings, 0 errors were found!
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium
