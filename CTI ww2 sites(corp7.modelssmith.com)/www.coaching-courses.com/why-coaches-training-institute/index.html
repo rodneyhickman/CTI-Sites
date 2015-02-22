@@ -25,19 +25,19 @@
 </script>
 <script type="text/javascript" src="../res/js/swfobject.js">
 </script>
-  <script type="text/javascript">
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-21451781-3']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-   </script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58567053-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta name="google-site-verification" content="1HHcoLrudwWGTgWqzH8WCtUM2s7CB9E6IuD-xRWcRDE" />
 </head>
 
 <body>
@@ -112,31 +112,33 @@ insert_social_bookmarking();
       </ul><!-- #end -->
 
       <div id="broadcast">
-        <div id="flashContent">
-          <img src="../res/img/no_flash_why.jpg" alt="Co-active. Changing Business. Transforming Lives." usemap="#logobutton" /> <map id="logobutton" name="logobutton">
-            <area shape="rect" coords="822,0,899,103" href="../index.html" title="CTI Home" alt="CTI Home" />
-          </map>
-        </div><script type="text/javascript">
-//<![CDATA[
+                                        <div id="flashContent" style="position:relative">
 
-                                                var flashvars = {
+						<img src="../res/img/why-cti-static.png" alt="Executive Life Coach Andrew Denne" usemap="#logobutton" />
+                                                <img src="../res/img/connect-animation-yellow.gif" alt="Intro animation" style="position:absolute;top:41px;left:9px;" />
+                                                <img src="../res/img/yellow-blinker-play.gif" alt="Play Button" id="movie-control" style="position:absolute;top:200px;left:395px;cursor:pointer;" />
+                                                <video width="460" height="310" style="position:absolute;top:0px;left:460px;" id="movie-player">
+                                                <source src="http://ctivideo.s3.amazonaws.com/why-cti-cropped.mp4" type="video/mp4">
+                                                </video>
+						<map id="logobutton" name="logobutton">
 
-                                                        channel: "why_cti"
+							<area shape="rect" coords="822,0,899,103" href="../index.html" title="CTI Home" alt="CTI Home" />
 
-                                                };
+						</map>
 
-                                                var params = {
-                                                
-                                                        wmode: "transparent"
-                                                
-                                                };
-
-                                                var attributes = {};
-
-                                                swfobject.embedSWF("/res/swf/cti_storyteller.swf", "flashContent", "920", "310", "8.0.0","", flashvars, params, attributes);
-
-//]]>
-</script>
+					</div>
+                                        <script>
+                                        $('#movie-control').click(function(){
+                                        if ($(this).attr('src') == '../res/img/yellow-blinker-pause.gif') {
+                                          $(this).attr('src', '../res/img/yellow-blinker-play.gif');
+                                          $('#movie-player').get(0).pause();
+                                        } else {
+                                          $(this).attr('src', '../res/img/yellow-blinker-pause.gif');
+                                          $('#movie-player').get(0).play();
+                                        }
+                                        });
+                                        </script>
+				
       </div>
 
       <div id="sub-nav" class="sub-nav">
@@ -194,11 +196,13 @@ insert_social_bookmarking();
         </div>
 
         <div id="sidebar">
+      
           <div id="testimonials">
             <blockquote>
               <p>"If you place your focus on the calling which comes from your heart, the purpose you have, then you can do anything."</p><cite>Wim Vermaak</cite><span class="accessibility-hide">,</span> <span class="normtext"><abbr title="Coaches Training Institute">Executive Co-active Coach</abbr> Amsterdam, The Netherlands</span>
             </blockquote>
           </div>
+
 
           <div id="related-links">
             <h2>Related Links</h2>
@@ -213,6 +217,7 @@ insert_social_bookmarking();
               <li><a href="../leaders/the-leaders/index.html">Faculty Leaders</a></li>
             </ul>
           </div>
+          <div style="margin-top: 20px; margin-right: 15px; float: right"><a href="../contact/schedule-a-call/"><img src="../images/more_info.gif"></a><br>&nbsp;</div>
         </div>
       </div><!-- ctaAreaId -->
 
@@ -312,5 +317,23 @@ function popUp(url)
         } catch(err) {}
 //]]>
 </script>
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 952935738;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/952935738/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 </body>
 </html>
