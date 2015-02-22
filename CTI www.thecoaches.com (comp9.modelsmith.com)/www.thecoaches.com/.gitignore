@@ -1,0 +1,17 @@
+*.bak
+*~
+*/cache/
+*/cache/*
+*/log/
+*/log/*
+*/data/
+*/data/*
+logs/*
+mason-data/*
+*/_notes
+*/_notes/*
+CI_test/
+blog_backup/
+blog_backup_20120131/
+ee_newsletter/zcti/expressionengine/cache/
+vision/zctiv/expressionengine/cache/
