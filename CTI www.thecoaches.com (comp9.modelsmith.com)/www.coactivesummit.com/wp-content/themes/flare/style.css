@@ -1,0 +1,24 @@
+/*
+Theme Name: 	Flare WordPress Theme
+Theme URI: 		http://flare.bringthepixel.com
+Description: 	Got questions? Visit our <a href="http://bringthepixel.com/support/">support forum</a>.
+License: 		Located in the 'Licensing' folder
+License URI: 	Located in the 'Licensing' folder 
+Author: 		bring the pixel
+Author URI: 	http://www.bringthepixel.com/
+Version: 		1.6.0
+Tags:  			blue, white, two-columns, threaded-comments, sticky-post, translation-ready, custom-menu 
+*/
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, address,
+dl, ol, ul, table,
+legend, hr, figure {	
+	margin-bottom:12px;
+}
+
+#primary-nav {
+margin-top: 0px;
+};
+
+.breadcrumbs { display:none; }
+

@@ -1,0 +1,27 @@
+/*
+Theme Name: 	Flare Child WordPress Theme
+Theme URI: 		http://flare.bringthepixel.com
+Description: 	Got questions? Visit our <a href="http://bringthepixel.com/support/">support forum</a>. 
+Author: 		bring the pixel
+Author URI: 	http://www.bringthepixel.com/
+Template: 		flare
+Version: 		1.0
+*/
+/* Place your modifications below */
+
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, address,
+dl, ol, ul, table,
+legend, hr, figure {	
+	margin-bottom:12px;
+}
+
+hr,
+.divider.type-simple { margin: 0px; border-width:1px 0 0 0; }
+
+#primary-nav {
+margin-top: 0px;
+};
+
+.breadcrumbs { display:none; };
+
