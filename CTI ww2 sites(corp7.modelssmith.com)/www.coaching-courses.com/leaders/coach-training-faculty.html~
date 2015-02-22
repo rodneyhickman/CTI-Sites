@@ -1,0 +1,1547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+
+		<title>CTI: Our Faculty: Coach Training Faculty</title>
+
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+
+		<meta http-equiv="Content-Language" content="en" />
+
+		<meta name="language" content="en" />
+
+		<meta name="keywords" content="coach training, leadership training, organizational coach training, co-active, become a coach, training coaching, coach certification, coaching certification, coach training, coaching as a career, transformational learning, in person training, face to face training, mentoring, business coaching, business transformation, personal transformation, worldwide coaching, change career, improve career, help people, people to people, active listening, Henry Kimsey-House, Karen Kimsey-House, CPCC, Co-active Coaching, co-Active model, co-Active Leadership" />
+
+		<meta name="description" content="CTI, The Coaches Training Institute trains more coaches around the world than any other training group. Using our Co-active model, we helped establish the coach training industry and were a founder of the ICF. Through our coach training, you can become an ICF certified coach. Through our Leadership training, you can raise your leadership skills to new and unexpected heights. Our Organizational training helps companies train their managers to get the most out of happy employees." />
+
+		<meta name="author" content="The Coaches Training Institute (CTI)" />
+
+		<meta name="copyright" content="Copyright &#169; 2009 The Coaches Training Institute. All rights reserved." />
+
+		<meta name="googlebot" content="noarchive,nosnippet" />
+
+		<link rel="icon" href="../../favicon.ico" />
+
+		<link rel="shortcut icon" href="../../favicon.ico" />
+
+		<link rel="stylesheet" type="text/css" href="../../res/css/coaches-training-institute.css" />
+
+		<link rel="stylesheet" type="text/css" href="../../res/css/section_our-leaders.css" />
+
+		<link rel="stylesheet" type="text/css" href="../../res/css/content_internal_6.css" />
+
+		<script type="text/javascript" src="../../res/js/coaches-training-institute.js"> </script>
+
+		<script type="text/javascript">out_stuffvis();</script>
+
+		<script type="text/javascript" src="../../res/js/jquery-1.3.1.min.js"> </script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function () { 
+
+				$(".stuff").hide(); 
+
+				$(".stuff").css("visibility","visible"); 
+
+				$('.showstuff').click(function(){
+
+                        var linkid = $(this).attr("id");
+
+						var count = linkid.length;
+
+						linkid = linkid.substr('1',count);
+
+						var ddid = "#"+linkid;
+
+						$(ddid).slideToggle();
+
+                        return false;
+
+                });
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="page">
+
+			<div id="tools">
+
+				<!-- generalID -->
+<!-- #startgeneral -->
+<ul id="general">
+        <li id="socbook">
+          <script type="text/javascript">
+//<![CDATA[
+insert_social_bookmarking();
+//]]>
+</script> <noscript><a href="index.html#main-headline" class="accessibility-hide">Headline</a><span class="divider accessibility-hide">&nbsp;|&nbsp;</span></noscript>
+        </li>
+
+        <li><a href="../../index.html">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
+
+        <li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&nbsp;|&nbsp;</span></li>
+
+        <li><a href="http://www.coactivenetwork.com/webx?ctiFindACoach@@" class="offsite">Find A Coach</a><span class="divider">&nbsp;|&nbsp;</span></li>
+
+
+ <!--       <li><a href="../../contact/newsletter/index.html"><abbr title="Electronic Mail Newsletter">e-Newsletter</abbr></a><span class="divider">&nbsp;|&nbsp;</span></li>  -->
+
+
+        <li><a href="../../contact/index.html">Contact Us</a></li>
+      </ul>
+<!-- #end -->
+<!-- -->
+
+				<!-- eCommerceID -->
+<!-- #startecommerce -->
+<ul id="ecommerce"><!--
+        <li><a href="http://www.amerisites.com/sc/cart.cgi?item=a-6814" class="offsite">My Cart</a><span class="divider">&nbsp;|&nbsp;</span></li>
+
+        <li><a id="checkout" href="http://www.amerisites.com/sc/gt.cgi?item=a-6814" class="offsite" name="checkout">Checkout</a></li>
+--> </ul>
+<!-- #end -->
+<!-- -->
+
+			</div>
+
+			<div id="primary">
+
+				<!-- contactNavID -->
+<!-- #startcontactnav -->
+
+      <ul id="contact-nav">
+        <li id="contacttop"><a href="../../contact/schedule-a-call/" class="arrowlink">Contact a Programme Advisor: <span class="bold black">+44(0)845 299 8199</span></a></li>
+
+        <li><a href="../../contact/conference/" class="arrowlink">Join Us for a <span class="bold black">Free Info Call</span></a></li>
+
+        <li><a href="../../international/" class="arrowlink"><abbr title="Coaches Training Institute">CTI</abbr> <span class="bold black">International</span></a></li>
+      </ul><!-- #end -->
+<!-- #end -->
+<!-- -->
+
+				<ul id="main-nav">
+
+					<li><a href="../../why-coaches-training-institute/index.html">Why <abbr title="Coaches Training Institute">CTI</abbr>?</a></li>
+
+					<li><a href="../../coach-training/index.html">Coach Training</a></li>
+
+					<li><a href="../../leadership/index.html">Leadership</a></li>
+
+					<li><a href="../../organizations/index.html">For Organisations</a></li>
+
+					<li class="current"><a href="../index.html">Our Faculty</a></li>
+
+					<li><a href="../../resources/index.html">Resources</a></li>
+
+				</ul>
+
+				
+
+				<div id="broadcast">
+
+					<img src="../../res/img/page-banners/content_our-leaders.gif" width="920" height="124" alt="Our Leaders" usemap="#logobutton" />
+
+					<map id="logobutton" name="logobutton">
+
+						<area shape="rect" coords="822,0,899,103" href="../../index.html" title="CTI Home" alt="CTI Home" />
+
+					</map>
+
+				</div>
+
+				<div id="sub-nav">
+
+					<ul id="section-nav">
+
+						<li class="current"><a href="/leaders/coach-training-faculty.html">Coach Training Faculty</a></li>
+
+						<li><a href="/leaders/leadership-program-faculty.html">Leadership Faculty</a></li>
+
+						<!-- <li><a href="/leaders/guest-leaders/index.html">Guest Leaders</a></li> -->
+
+						<li><a href="/leaders/become-a-faculty/index.html">Become a Faculty Member</a></li>
+
+					</ul>
+
+				</div>
+
+
+
+				<div id="content">
+
+					<div id="main">
+
+						
+
+						<div id="breadcrumbs">
+
+						<p><span id="youarehere" class="accessibility-hide">You are here:&#160;</span> <a href="../../index.html">Home</a><span class="divider">&#160;||&#160;</span><a href="../index.html">Our Faculty</a><span class="divider">&#160;||&#160;</span><a href="index.html" class="here">The Leaders</a></p>
+
+						</div>
+
+
+
+						<h1 id="main-headline">Coach Training Faculty</h1>
+
+
+
+						<div class="pri">
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Allen-Chuck.jpg" width="207" height="115" alt="Photo of Chuck Allen"/>
+								<div class="bio">
+									<h2>Chuck Allen, CPCC, PCC</h2>
+									<p>Chuck is the Co-Founder of Organic Communication (http://www.organiccomm.com), a consulting firm that provides coaching and training in persuasive communication, leadership and conflict management. He is also an Executive Coach for the Executive MBA Program of Loyola Marymount University. For ten years, Chuck has coached and trained leaders in sectors ranging from non-profit to aerospace, medicine, technology and the federal government. Prior to his coaching career Chuck worked in such diverse fields as information technology, public relations, public health, technical writing, journalism, event planning and child development.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/barrie-gail.jpg" width="207" height="115" alt="Photo of Gail Barrie"/>
+								<div class="bio">
+									<h2>Gail Barrie, CPCC, PCC</h2>
+									<p>Celebrator extraordinaire of the fullness and diversity of life, Gail founded BOLD MOVES, a dynamic international portfolio company through which she offers customized coaching, consulting, training and creative services for individuals and relationship systems. Gail&rsquo;s devotion to expanding the range of human potential has served people in private and corporate sectors, from prison inmates to CEOs, from her own backyard to Siberia. An avid spiritualist and metaphysician, Gail enlivens and calls forth &lsquo;practical magic&rsquo;. Specializing in relationship, sexuality and creative expression, Gail champions people toward crafting sustainable experiences filled with the pleasure and splendor of being truly alive. Gail is the author of <em>Unwrapping Your Presence: Living Life in Celebration</em>.</p>
+								</div>
+			</div>
+
+						
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Barton-Tony.jpg" width="207" height="115" alt="Photo of Tony Barton"/>
+								<div class="bio">
+									<h2>Tony Barton, CPCC, PCC</h2>
+									<p>
+									Tony is Mr Red Kite &ndash; or at least that&rsquo;s how many people know him through his coaching business &lsquo;Red Kite World&lsquo;. After a successful 20 year career in marketing, Tony left his &lsquo;velvet rut&rsquo; and discovered some really interesting products to market through coaching &ndash; like aliveness, joy and courage. He is an authorized Team Diagnostic Facilitator and an MBTI assessor. Tony brings many &lsquo;red kite&rsquo; qualities to his work as a coach and front of room leader and is known for his great sense of play, fun and groundedness. In addition to his work with <abbr title="Coaches Training Institute">CTI</abbr> he also runs his own &lsquo;Simply Inspiring&rsquo; workshops and adventure holidays. Married with 3 grown children, Tony lives in the UK.
+									</p>
+								</div>
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/anne-betz.jpg" width="107" height="115" alt="Photo of Ann Betz" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ann Betz, CPCC</h2>
+
+									<p>Ann has both a passion and a gift for making teachings and theory real, understandable, and powerfully applicable in day-to-day life. Ann is the co-founder of BEabove Leadership, which focuses on helping individuals, non-profits and businesses remember their innate capacity to lead, work and live &ldquo;above the line,&rdquo; thus increasing their effectiveness and engagement. Ann has deep experience in both corporate America and the non-profit sector, ranging from work as a contract trainer in a large corporate leadership program to co-founding a non-profit organization to provide coaching and leadership training to national service programs. Ann has also worked internationally with women&rsquo;s groups in both Costa Rica and Nepal.</p>
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/marco-buschman.jpg" width="107" height="115" alt="Photo of Marco Buschman" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Marco Buschman, CPCC, ACC</h2>
+
+									<p>Marco is a results driven person with a broad experience and strong feeling and attention for &lsquo;hard&rsquo; and &lsquo;soft&rsquo; sides of organizational and personal development. He is an international certified coach and a proud leader for Coaches Training Institute. Besides his training at the Royal Military Academy, Master of Business Administration at Nijmegen University and many coach related trainings, he worked for over 13 years as a manager within (non-)profit organizations. In addition he worked as (international) trainer and coach. First being employed by a large Dutch Training Institute, and from 2007 on within his own company.</p>
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/susan-carlisle.jpg" width="107" height="115" alt="Photo of Susan Carlisle" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Susan Carlisle, MA, CPCC, PCC</h2>
+
+									<p>Twelve years ago Susan discovered CTI, and out of that experience she created a successful coaching career. The foundation of her work is supporting people to have the courage and conviction to live a soulful and spirited live, to live a life of freedom and liberation. She has worked with corporate executive, small business owners, coaches&hellip;people who what to live a life of meaning that honors what matters most to them. In July of 2010 Susan became a Staff Leader for CTI, which allows her the opportunity to work with CTI on many more levels of development and leadership. Susan feels like she is a walking billboard for the joy of following your heart, doing what you love and living a fulfilling life.</p>
+<p>&nbsp;</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/craig-carr.jpg" width="107" height="115" alt="Photo of Craig Carr" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Craig Carr, CPCC, PCC</h2>
+
+									<p>A client recently told Craig she wanted to hire him because, &ldquo;you have done so many things!&rdquo; With a post-graduate degree in counseling psychology and certificates in hand, Craig set out on his first careers in psychotherapy and, later, 15 years as a Chinese Medicine physician. He has steeped his work with a keen interest and awareness for metaphysics, quantum physics and money-physics. This probably explains why he enjoys working with investors, entrepreneurs and Dreamers. Craig is the co-creator (with Jil Windsor) of <em>Danger, Sex and Magic: Coaching Beyond the Forbidden and Taboo</em>, a multi-formatted coaching and coach training program.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								 <img src="http://www.thecoaches.com/res/img/photos/pat-carrington-house.jpg" width="107" height="115" alt="Photo of Pat Carrington-House" style="margin-left:100px;"/> 
+
+								<div class="bio">
+
+									<h2>Pat Carrington-House, CPCC, PCC</h2>
+
+									<p>Pat&rsquo;s passion and dream is to sail around the world with his family. This is one way he inspires others that cross his path to make choices in their lives that will allow them to truly follow their hearts. Pat is a co-founder of Dolphin Leadership <abbr title="Incorporated">Inc.</abbr>, a company dedicated to uncovering the passion that lives uniquely in every human being. Since 1998 he has coached and delivered programs inside companies using his insight, energy, and humor to empower individuals and organizations to take actions that are in line with the legacy they want to leave. Pat and his family departed on his dream sailing trip in the fall of 2008. He will be flying to the Co-Active Leadership Program from wherever he is on his circumnavigation, bringing with him the inspiration and courage of his personal &lsquo;Hero&rsquo;s Journey.&rsquo;</p>
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Ben-Chanoch-Dori.jpg" width="207" height="115" alt="Photo of Dori Ben-Chanoch"/>
+								<div class="bio">
+									<h2>Dori Ben-Chanoch, PCC, CPCC</h2>
+									<p>
+									Dori specializes in Executive Coaching, working closely in one-on-one settings with executives in order to hone their skills. Dori is a certified behavioral coach, who has worked in training and development for the last 15 years. He specializes in executive presence, interpersonal communication skills, and emotional intelligence using a model of open and honest communication. In the past, Dori served as a president of a successful financial services company, and has extensive experience as a top sales producer and sales manager.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Blumenthal-Eileen.jpg" width="207" height="115" alt="Photo of Eileen Blumenthal"/>
+								<div class="bio">
+									<h2>Eileen Blumenthal, JD, MA, CPCC, PCC</h2>
+									<p>
+									JD, Hastings  College of Law<br/>
+									MA, Education, Harvard  University<br/>
+									Eileen founded Rocket Science Coaching &amp; Consulting in 1995 and works at the intersection of humor, insight and ease. She comes to coaching after careers in non-profit management, employment law, and higher education administration, always favoring work with individuals finding their way. In addition to serving on CTI&rsquo;s faculty as an examiner and supervisor, Eileen provides coaching and consulting internationally, most recently with PEPFAR-funded agencies in Mozambique combating HIV&#47;AIDS. She is the co-designer of, and lead trainer for, the Great Plains Public Health Leadership Institute peer coaching program for emerging public health leaders. Eileen is a Bikram yoga enthusiast, and she and her partner are the humble guardians of a very smart cattle dog, Gracie.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Cain-Sandra.jpg" width="207" height="115" alt="Photo of Sandra Cain"/>
+								<div class="bio">
+									<h2>Sandra Cain, CPCC, PCC</h2>
+									<p>
+									Sandra coaches individuals, pairs and teams. Her background includes 15 years experience in large organizations with a variety of leadership and personal development roles. Her stand for this work is that while we are here, we might as well be conscious and intentional about who we are, what we do and how we live. Sandra also has a strong belief that life is meant to be a fun adventure and that just about everything is funny, given enough time. When not coaching or training, she loves rollerblading, hot yoga and cruising in a vintage speedboat with her husband and their beagles.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ariane-cherbuliez.jpg" width="107" height="115" alt="Photo of Ariane Cherbuliez" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ariane Cherbuliez, MBA, MEd, PCC, CPCC</h2>
+
+									<p>Ariane takes a firm stance that compassion and a wacky sense of humor can go a long way toward unlocking blocks and creating momentum. Clients compare working with her to swinging from the monkey bars: just the right degree of challenge, continually new ways of looking at your situation, and a rubber mat of compassion creating safety beneath. Her clients credit her with helping them get unstuck, become more deeply connected to themselves, and find a flow of action to achieve both their personal goals and those of the organizations they work within. Ariane gets great joy from gardening, singing in a chorus, and taking part in adventures with her daughter and husband. She lives and grows in a cohousing community in Cambridge, MA.</p>
+<p>&nbsp;</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Clark-Leslie.jpg" width="207" height="115" alt="Photo of Leslie Clark"/>
+								<div class="bio">
+									<h2>Leslie Clark, CPCC, PCC</h2>
+									<p>Although known for her calm and steady presence, Leslie may surprise you with her lust for an extraordinary life and bold choices. In 2000 she abandoned a successful 15 year career in the hospitality industry for exotic simplicity and tranquility in the Mayan Riviera town of Playa del Carmen, Mexico. Over the span of 8 1/2 years Leslie learned Spanish, built a home with 3 apartments, acquired two dogs, made lifetime friends, and weathered 3 hurricanes. In late 2008 a new dream called her back to the US where Leslie now continues her tropical lifestyle in Florida near family. Shifting from a &ldquo;play not to lose&rdquo; to a &ldquo;play to win&rdquo; mindset, is a theme in her private coaching practice. Leslie has built her leadership development platform using coactive coaching, structural consulting, 7th generation thinking, and the principles of permaculture. She customizes rigorous individual and small group corporate leadership programs primarily for social entrepreneurs, green technologies, and green revolutionaries.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/CliffordRonnie.jpg" width="207" height="115" alt="Photo of Veronica (Ronnie) Clifford"/>
+								<div class="bio">
+									<h2>Veronica (Ronnie) Clifford, CPCC, PCC</h2>
+									<p>
+									Ronnie spent 20 years working in sales, marketing and commercial roles and 10 years working as a software engineer. She coaches corporate executives and coaches in training and a variety of people in between. Ronnie delivers leadership training and personal development coaching for IBM UK, working at all levels within the organization to maximize the human potential that is available. Ronnie splits her time in the UK between London and Devon. She is a keen traveler and loves to work with people. Ronnie is never happier than when she is with her close friends &amp; family or singing in the Choir!
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/judith-cohen.jpg" width="107" height="115" alt="Photo of Judith Cohen" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Judith Cohen, CPCC, MCC, MSW</h2>
+
+									<p>AMLS, University of Michigan<br />
+MSW, University of California, Berkeley<br />
+Judith is the developer of The Opportunity Game, a coaching method that fosters resilience, compassion and personal and group transformation. She was hired as the first CTI Certification Examiner in 1996 and is still passionately committed to training coaches to be masterful while having fun in the process of learning. Judith is the head coach for the Effective Influence Conference of Cross Cultural Communications, Inc. as well a a T-Group facilitator at the Stanford University Graduate School of Business and the University of San Francisco Law School. After living in the Bay Area for 35 years, Judith has recently decided to become bi-coastal and to live in NYC for several months a year.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Colman-Deborah.jpg" width="207" height="115" alt="Photo of Deborah Colman"/>
+								<div class="bio">
+									<h2>Deborah Colman, MA, CPCC, MCC</h2>
+									<p>MA, Education, University of Toronto<br />
+Deborah loves to laugh and believes that when we cultivate joy in our relationships and lives we are better equipped to embrace the darkness. As a seasoned business woman Deborah is passionate about humanizing the organizations in which we work and she inspires executives and high potential managers to think in possibility and embrace and excel in purposeful leadership. She is widely recognized by her clients, peers and students alike as an inspiring and wise leader who is committed to generating transformative learning and sustainable results. Prior to becoming a coach and trainer she worked in the public healthcare industry as an organizational development consultant and physical therapist.</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Conger-Nancy.jpg" width="207" height="115" alt="Photo of Nancy Conger"/>
+								<div class="bio">
+									<h2>Nancy Conger, CPCC, PCC</h2>
+									<p>Nancy is a spirited blend of fierceness and fun. She has run her own coaching practice since 1998, inspiring people to cultivate and express creativity in business and personal arenas. Nancy does plenty of creative stretching herself as author, playwright, musician and budding visual artist. Before coaching Nancy spent a decade in financial services management and Human Resources, and now enjoys bringing coaching skills into organizations to help them become more productive and alive.</p>
+								</div>
+			</div>
+	
+<!--			<div class="biowrap">
+								<img src="/res/img/photos/Danly-Maria.jpg" width="207" height="115" alt="Photo of Maria Danly"/>
+								<div class="bio">
+									<h2>Maria Danly, MA, CPCC</h2>
+									<p>MA in Intuition Medicine<br />Known as &ldquo;The Money Magic Coach,&rdquo; Maria not only helps her clients pass their CPCC examinations, she offers them easy, simple systems to brand, package and price their services so they can move away from &lsquo;dollars-for-hours&rsquo; work quickly and create more money, time and freedom in their businesses. &ldquo;Whatever business my clients may be in, they are all in the business of marketing themselves. I help my clients to achieve their dreams and financially support themselves so they can get on with their greater purposes in their lives.&rdquo;</p>
+								</div>
+			</div>  -->
+	
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Darst-Cynthia.jpg" width="207" height="115" alt="Photo of Cynthia Loy Darst"/>
+								<div class="bio">
+									<h2>Cynthia Loy Darst, MFA, CPCC, MCC</h2>
+									<p>
+									Master of Fine Arts, University of California, San Diego<br/>
+									As one of the founders of the International Coach Federation (ICF) and one of the first to gain the designation of Master Certified Coach (MCC), Cynthia is internationally known as a pioneer in the world of coaching. She was one of the first leaders for The Coaches Training Institute. Cynthia also serves as the Director of Leader Development for The Center for Right Relationship (CRR). Passionate about raising the bar on the coaching profession, Cynthia has been developing new ideas for advanced coaches who are ready to take their work towards artistry and mastery. Playful and provocative, a day with Cynthia is guaranteed to bring new juice and fun to your coaching.
+									</p>
+								</div>
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/marlena-decarion.jpg" width="107" height="115" alt="Photo of Marlena deCarion" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Marlena deCarion, CPCC, PCC</h2>
+
+									<p>Marlena is committed to unleashing the human potential in all of us, what she calls &ldquo;radical transformation.&rdquo; She is a full time coach and trainer for the CTI, working with clients around personal and professional vision and action. She fell in love with the co-active coaching model after life as an Outward Bound instructor and manager. She masterfully challenges our stuck ways of thinking and connects people to the truth of who they are. She brings years of mindfulness practice to her coaching as well as training in somatic therapies and deep inquiry. She is currently being trained as a meditation teacher and has been called a pragmatic mystic, integrating spiritual principles in practical, everyday life.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/tina-de-meeus.jpg" width="107" height="115" alt="Photo of Tina de Mee&ucirc;s" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Tina de Mee&ucirc;s, CPCC, PCC</h2>
+
+									<p>BA (Hons) European Business Administration<br />
+Tina is a passionate and highly experienced multi-lingual executive coach and program leader. She focuses on working with international professionals who view their development and leadership essential to success. She has coached and trained across cultures and countries, driven by curiosity, love for diversity and quest for authenticity. Her belief in deep-rooted self-motivation and inspiration led her to coaching and leadership development. She brings her strong communication skills and keen knowledge of cultural differences to bear on the work she does with complex and highly diverse teams.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/yossi-eilot.jpg" width="107" height="115" alt="Photo of Yossi Eilot" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Yossi Eilot, CPCC, PCC</h2>
+
+									<p>Yossi is passionate about building bridges in relationships between people and nations. He is an avid believer in striving for peace, through the Co-active approach. As Co-CEO and partner at CTI-Israel, Yossi leverages his background in economics, business administration, and international marketing and brings more than 30 years of experience in business and management, in the multidisciplinary corporate world and in various cultures and organizations. Yossi is a personal business coach who works with people who choose to be leaders in their lives, entrepreneurs, executives, and coaches. He is lovingly married to Haviva and is a proud father to their four children as well as a happy grandfather to three enchanting grandchildren.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/johann-entz-von-zerssen.jpg" width="107" height="115" alt="Photo of Johann (Hannes) Entz-von Zerssen" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Johann (Hannes) Entz-von Zerssen, CPCC, PCC, ORSCC</h2>
+
+									<p>Hannes passionately creates higher levels of trust within individuals and organizations in order for them to operate more smoothly and efficiently. More trust, more ease, more joy. He works as a coach and process consultant with individuals and teams with 5C! Concept GmbH mostly in Europe and North America. Hannes co-founded CTI Germany and partnered with CTI to bring the Co-Active Model into the German language. He worked for 15 years as a Manager and Executive in the transportation and logistics industry in various European countries and Canada and brings a wealth of intercultural experience to clients. Hannes loves to be out and about on the water, paddling, rowing or sailing&mdash;even in bad weather.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Filante-Steven.jpg" width="207" height="115" alt="Photo of Steven Filante"/>
+								<div class="bio">
+									<h2>Steven Filante, CPCC, PCC</h2>
+									<p>Steven Filante works with clients to uncover their truest expression and bring their unique vision into reality. He coaches small business owners and executives who need a coaching ally to translate their vision of change into the world. In addition to experience in men&rsquo;s work and Earth-based initiation, Steven developed Awakening the Soul-Body Connection work which helps people experience and use the many energetic strengths available in their body. He brings passion, intelligence and play to training and coaching. When not working, Steven loves bicycling, skiing, backpacking, kayaking and snorkeling. Steven lives in rural northern Pennsylvania with his partner Virginia where they cultivate earth awareness and organic flowers and vegetables.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Flannery-Grace.jpg" width="207" height="115" alt="Photo of Grace Flannery"/>
+								<div class="bio">
+									<h2>Grace Flannery,  MS, CPCC, PCC</h2>
+									<p>MS, Chemistry, University  of Illinois<br/>
+									Grace is an executive and team coach, trainer and facilitator dedicated to the cultivation of exceptional leadership for individuals, teams and organizations. She is the founder and president of Leading Spirit, Inc., providing strategic services for leaders of non profit organizations since 1999. Grace applies her expertise in organizational development, relationship dynamics and change management to build clients&rsquo; capacity for skillful execution of their leadership agenda. She works with senior executives to ensure that their actions are grounded in wisdom and powered by purpose. Grace has 25 years experience in coaching, management and board positions in philanthropy, the arts, education, health and social services.
+									</p>
+								</div>
+							</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Fowler-Kim.jpg" width="207" height="115" alt="Photo of Kim Fowler"/>
+								<div class="bio">
+									<h2>Kim Fowler, CPCC</h2>
+									<p>
+									Kim is Principal of MESA Coaching. She ignites individuals, executives and teams into mindful, efficient, spirited action. Kim combines her inspiration from the natural beauty of the Southwest to lead her clients to discard limitation and create professional and personal paths of growth, challenge, acceptance and joy. She has twenty-five years of management experience in the government, nonprofit and academic sectors. Kim also coaches individuals and family systems that have loved ones living with dementia. She focuses on opening new ways of communicating with themselves and the person(s) they have known for so long, whom it seems they now don&rsquo;t know at all.
+									</p>
+								</div>
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/clark-friedrichs.jpg" width="107" height="115" alt="Photo of Clark Friedrichs" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Clark Friedrichs, CPCC</h2>
+
+									<p>Clark is an adventurer. From an early age, Clark explored the world with curiosity and fascination and eventually studied Geography at the University of Colorado. After receiving his degree, he began to work for National Geographic magazine as a researcher. Continuing his exploration of humanity, Clark worked as a massage therapist before discovering coaching and brings his adventuring spirit to coaching. He has worked with thousands of people all over the world and has trained thousands more. Currently Clark lives in Barcelona, Spain, and works with people ranging from executives to coaches-in-training. He speaks Spanish and English and has designed advanced courses for experienced coaches and training seminars for leaders.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ken-gimm.jpg" width="107" height="115" alt="Photo of Ken Kyongsup Gimm" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ken Kyongsup Gimm, PhD, CPCC, PCC</h2>
+
+									<p>PhD, University of Pennsylvania, Philadelphia<<br />
+Ken is the CEO of the Korean Leadership Center and the Korea Coaching Center. He was a pioneering force in bringing coaching to Korea, serving as the founding president of the Korea Coaches Association, and the first chapter leader of the ICF Korea Chapter. His background includes more than thirty years of experience in leadership and coach training, executive coaching and consulting. Ken works with senior executives of Korean and multinational corporations, top government officials, and business leaders.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/susan-gimm.jpg" width="107" height="115" alt="Photo of Susan Youngsoon Gimm" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Susan Youngsoon Gimm, PhD, CPCC, PCC</h2>
+
+									<p>PhD, University of Pennsylvania, Philadelphia<br />
+As President of CTI Korea, Susan is one of the pioneers who introduced the coaching profession to Korea. Her background includes over 30 years of teaching at the college level, training coaches, and serving as an elder of a Presbyterian church. She leads the CTI courses and works with Asian, Korean, and expat executives, and women leaders. Susan has trained many Co-active coaches in Korea and translated the <em>Co-Active Coaching</em> book into the Korean language.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ursula-glunk.jpg" width="107" height="115" alt="Photo of Ursula Glunk" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ursula Glunk, PhD, MS, CPCC</h2>
+
+									<p>MS, Psychology, Mannheim University, Germany<br />
+PhD, Organization Studies, Tilburg University, The Netherlands<br />
+Ursula enjoys variety and aliveness in her work. She has more than fifteen years of teaching and research experience in the field of Organizational Behavior. As a leadership developer, trainer, facilitator, and coach she works with executives from multinational corporations, United Nations organizations, NGOs, and educational institutions. Ursula reads widely and enjoys conversations that matter combined with good food. She loves playfulness and laughter just as much as walking in silence.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Goncalves-Desai-Anne-Marie.jpg" width="207" height="115" alt="Photo of Anne-Marie Goncalves-Desai"/>
+								<div class="bio">
+									<h2>Anne-Marie Gon&ccedil;alves Desai, CPCC</h2>
+									<p>MA in Communication and Linguistics, Lyon University, France<br />
+MA in International Relations, Free University of Brussels, Belgium
+<br />Anne-Marie is a multilingual executive, team coach and trainer. She runs workshops in leadership development with a strong focus on emotional intelligence and trains managers to use coaching as a management style. She is passionate about growing leaders and helping organizations to create sustainable relationships across cultures. Before coaching, Anne-Marie&rsquo;s 15 year career in communications consultancy included team and project management. She has lived and worked in France, England, America and is currently based in Brussels where she is an accredited coach and trainer to the EU institutions. Outside coaching, she finds immense joy in dancing with her daughters.</p>
+								</div>
+			</div>
+	
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Gutin-Wendy.jpg" width="207" height="115" alt="Photo of Wendy Gutin"/>
+								<div class="bio">
+									<h2>Wendy Gutin, CPCC, PCC</h2>
+									<p>Wendy loves to work with people who are making transformational changes in their lives - be it creating a non-profit, starting a new business, racing in a triathlon or moving across the world. She loves to work with motivated folks who want to expand their creativity, take more risks and go for what they really want. She coaches executives and business owners/companies on leadership and life, and also works with new coaches in training. She brings warmth, wisdom, a sense of humor and a varied background that includes being a journalist, a teacher, and a mother of five amazing children. Wendy believes that coaching creates opportunities for transformation, self-awareness and discovery for those who are willing to believe in and commit to the pursuit of their dreams.</p>
+								</div>
+			</div>
+	
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/caroline-hall.jpg" width="207" height="115" alt="Photo of Caroline Hall"/>
+
+								<div class="bio">
+
+									<h2>Caroline MacNeill Hall, MA, CPCC, PCC</h2>
+
+									<p>Caroline is an executive coach and author who works with individuals and organizations to build leadership grounded in respect and fascination, authenticity and authority. A sunny soul who believes that laughter lubricates leading, Caroline is as elegant and fierce as she is funny and friendly. Her great joy is to move, inspire and connect human beings as they embrace and develop their authentic selves and their creative power to lead change in the world. Before becoming a coach, she was a journalist and ghost author of 13 books, mostly for psychologists. Along with CTI co-founder Laura Whitworth and colleague Rick Tamlyn, Caroline is co-author of the book <em>The Bigger Game: Why Playing a Bigger Game Designs Who You Want to Become</em>. Her words are arrows and bubbles; when she speaks, people are inspired to move toward their higher selves.</p>
+
+								</div>
+
+							</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Halsey-Akasha.jpg" width="207" height="115" alt="Photo of Akasha Halsey"/>
+								<div class="bio">
+									<h2>Akasha Halsey, CPCC, PCC</h2>
+									<p>Akasha combines her gift for congeniality with a steely emphasis on excellence. Using wisdom gleaned from a varied background of sales, education, marketing and spirituality, Akasha&rsquo;s expertise is evident in her communication skills and her ability to connect with your uniqueness and vitality. Her bold humor and quirky outlook make her a sought after speaker.<span>&nbsp; </span>As an author and performer, her focus is on advancing our ability to claim our greatness and understand each other. Akasha is the owner of Life Force Coaching and a long-time contributor to the coaching community. She lives with her cats, Sid and Nancy.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/sam-house.jpg" width="207" height="115" alt="Photo of Sam House"/>
+
+								<div class="bio">
+
+									<h2>Sam House, CPCC, MCC</h2>
+
+									<p>Since he was an 11-year old captain of Campus School crossing guards, Sam has actively engaged in guiding people across the street and beyond for many years. As founder of Soulutions Leadership and Coaching, Sam provides customized, experiential-based leadership development programs and coaching to executives, managers, teams and individuals around the world. Sam has trained people in coaching skills on three continents, from such diverse settings as corporate boardrooms to federal prisons and everything in between. Formerly a psychotherapist and social worker, Sam has extensive experience in in-patient psychiatric settings, day treatment programs, counseling centers, and his own long-standing private practice, where he specialized in family and couples therapy. When not engrossed in his work, Sam can be found enjoying his family, messing around in boats, biking the back roads or playing his guitar.</p>
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/jeff-jacobson.jpg" width="207" height="115" alt="Photo of Jeff Jacobson"/>
+
+								<div class="bio">
+
+									<h2>Jeff Jacobson, CPCC, PCC</h2>
+
+									<p>Jeff coaches and plays with people who yearn for bold, Technicolor lives. He has been involved in coaching and human growth work since 1994. Prior to coming to the world of coaching and leading for the Co-Active Leadership Program, Jeff worked in the field of language teaching and Chinese/English interpreting. His experience living in East and Southeast Asia for three years ripped apart his world view and taught him to love things like seaweed, good directions and fine, fine storytelling. In addition to his own coaching practice, Jeff travels internationally for <abbr title="Coaches Training Institute">CTI</abbr> leading coaching workshops.</p>
+
+								</div>
+
+							</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/jebsen-leni-christine.jpg" width="207" height="115" alt="Photo of Christine Jebsen Leni"/>
+								<div class="bio">
+									<h2>Leni Christine Jebsen, PCC, CPCC, ORSC</h2>
+									<p>Leni comes from a background of law and graphic design prior to choosing a new career as business developer and coach.<span>&nbsp; </span>In 2003 she founded C-MOMENTUM  AS, a Norwegian based business and leadership coaching company that is successfully helping organizations and individuals navigate change and embrace dynamic improvement.<span>&nbsp; </span>Leni&rsquo;s particular skill is empowering people to make powerful, value based choices.<span>&nbsp; </span>With her direct and straightforward manner of engagement Leni works with clients from a wide range of cultures and backgrounds. She is a leadership and team coach, trainer and facilitator dedicated to inspire people to have healthy relationships in work and life.<span>&nbsp; </span>As a mother of four she spends her time with her family and friends, and is passionate about dancing Argentine Tango.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ji-yun-kang.jpg" width="107" height="115" alt="Photo of Ji-Yun Kang" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ji-Yun Kang, PhD, MEd, CPCC, PCC</h2>
+
+									<p>Ph D, Fiber Science, Seoul National University, Seoul, Korea<br />
+MEd, Human Resource Development, University of Minnesota-Twin Cities<br />
+Ji-Yun comes from a science and research background. Living in a medical community, she works with physicians and their families on issues of work-life balance and coping with stress. She is a facilitator for a non-profit organization, Rochester Diversity Council and works with clients from many different nations and cultural backgrounds. With her gentle yet powerful spirit, Ji-Yun guides her clients into claiming their magnificence. She is passionate about diversity issues in the workplace and the community. Ji-Yun is currently living in Minnesota with her husband and two children, her greatest source of joy and gratitude.</p> 
+
+								</div>
+
+							</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/kataros-athena.jpg" width="207" height="115" alt="Photo of Athena Katsaros"/>
+								<div class="bio">
+									<h2>Athena Katsaros, CPCC</h2>
+									<p>Athena is passionate about people living lives they love and doing work that is deeply fulfilling. As a co-founder of IdeaTribe she works with individuals, teams, and organizations. Athena is a partner who listens, challenges, encourages, and guides her clients to reach beyond what they thought was possible to what they truly want. Athena has extensive experience in the corporate arena as a marketing strategist and in the non-profit world as a board member and team coach. She is a committed advocate for peace and as a member of the Business Council for Peace, Athena co-develops and delivers training and mentoring programs for businesswomen in post-conflict countries, including Afghanistan and Rwanda. She regularly leads workshops at Esalen Institute, which she considers her spiritual home.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/kegg-bill.jpg" width="207" height="115" alt="Photo of Bill Kegg"/>
+								<div class="bio">
+									<h2>Bill Kegg, CPCC, MCC</h2>
+									<p>For the past 14 years Bill has coached, mentored and trained over 6,000 coaches and leaders from 20 countries through his firm NOW Coaching &amp; Training. He specializes in working with &ldquo;Ripplemakers&rdquo; &ndash; individuals committed to being their best to ripple forth the change needed in the world. Whether they are high-potential executives, entrepreneurs, or stay at home parents, Bill grows their self-awareness, competences, and unique style to effect the greatest change at work, home, and life. Bill uses his humor, insight, and rigor to inspire excellence. He lives just outside New   York City where he grew up. He is an award-winning video producer and Boston marathoner. Bill feels blessed to be collaborating with CTI&rsquo;s founders, leaders, staff, and international partners &ndash; extraordinary individuals committed to co-activating humanity.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/janet-keller.jpg" width="107" height="115" alt="Photo of Janet Keller" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Janet Keller, CPCC, PCC</h2>
+
+									<p>Janet is an executive coach working with leaders and teams in public benefit organizations. In her work she focuses on increasing personal and organizational sustainability, creating visions with traction, and cultivating enjoyment. Currently, Janet is Executive Director of The Change Initiative USA, promoting Communities That Can!, a comprehensive capacity-building approach for change-makers in the health promotion and community development sectors. She has taught coaching, communication and leadership skills for the S.F. Small Business Administration and the University of California, Berkeley Extension. Janet lives in the San Francisco Bay Area and is the proud mom of an 11-year-old daughter.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Kelley-Dorcas.jpg"  height="115" alt="Photo of Dorcas Kelley"/>
+								<div class="bio">
+									<h2>Dorcas Kelley, MBA, CPCC, PCC, CMC</h2>
+									<p>Master of Business Administration, University of California, Los Angeles<br/>
+									Dorcas has a driving passion to transform the world of coaching, one coach at a time, by helping each one discover their power and confidence as a leader in their coaching work, business and life. She balances a grounded presence with a wry sense of humor, playfully illuminating both our greatness and our humanity. In her roles of author, coach, trainer and consultant, she works with executives, business owners and entrepreneurs to reach the next level of success in their professional and personal lives. In addition, her book <i>The Business of Coaching</i><sup>&reg;</sup> is a popular resource for coaches, now in its 4th edition. When she&rsquo;s not consumed by her work or her writing, you&rsquo;ll find her hiking with her dogs, digging in her garden, or volunteering at local non-profits.
+									</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/kellogg-virginia.jpg" width="207" height="115" alt="Photo of Virginia Kellogg"/>
+								<div class="bio">
+									<h2>Virginia Kellogg, CPCC, MCC</h2>
+									<p>Virginia is a founding partner of Leadership that Works Inc. where she designs coaching and leadership training programs that help leaders become more authentic, productive, and responsive to the needs of the world. Virginia holds a big vision for the coaching field, helping coaches to find ways to make coaching skills and orientation become a &ldquo;positive virus&rdquo; in the world. Through her work, she holds the vision of coaching skills being integrated into the work of activists, educators and nonprofit professionals. She is passionate about creating a new face on the coaching field, one that includes all humans and one that provides services for all humans. With Hide Enomoto and Sam House, she has co-designed The World is my Client, a program that creates a deeply personal intersection between coaching and the world. She works with nonprofit leaders, community organizers and other leaders to create soul-connected and powerful change with ease.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/kendall-trudy.jpg" width="207" height="115" alt="Photo of Trudy Kendall"/>
+								<div class="bio">
+									<h2>Trudy Kendall, CPCC, PCC</h2>
+									<p>Trudy coaches individuals in organizations, cultivating conscious and powerful leadership in all aspects of work and life.<span>&nbsp; </span>Her background includes over 20 years of corporate leadership in international organizations, and coaching teams and individuals.<span>&nbsp; </span>For nine years Trudy served on CTI&rsquo;s executive team holding a variety of positions including Director of Strategic Initiatives and Co-President.<span>&nbsp; </span>She was and still is dedicated to high-quality coaching around the world.<span>&nbsp; </span>She has also served on the boards of non-profit organizations supporting women in transition. In relationship with Trudy you will encounter an endearing combination of grounded warmth and quirky, playful humor.<span>&nbsp; </span>For Trudy, life is a grand adventure and she has a passionate interest in exploring with others the deeper questions of life and leadership.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/melanie-keveles.jpg" width="107" height="115" alt="Photo of Melanie Keveles" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Melanie Keveles, MA, CPCC, MCC</h2>
+
+									<p>Masters of Education, University of New York at Albany<br />
+This career and life coach who is truly committed to everyone deserving the opportunity to express themselves as fully as possible has been dubbed a &ldquo;midwife for new ideas.&rdquo; Melanie&rsquo;s concern that people have the opportunity to offer their gifts to the world comes from her serial careers as a college teacher, outplacement consultant, Web content developer, radio talk show host and career and life coach. She is the author of two books: <em>Fired for Success</em> and <em>Scrappy Startups: How 15 Ordinary Women Turned their Unique Ideas into Profitable Business</em>. Melanie named her business Starting Fresh Coaching LLC, a beacon for the desire for continuous learning and renewed hope.</p> 
+
+								</div>
+
+							</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/kintner-milne.jpg" width="207" height="115" alt="Photo of Milne Kintner, CPCC, PCC"/>
+								<div class="bio">
+									<h2>Milne Kintner, CPCC, PCC</h2>
+									<p>In her private coaching practice, Milne works with executives and managers at all levels of corporations, lawyers, physicians, symphonic conductors (people who are expected always to be right); poets and artists (who try to be true); scientists (who test for truth), and entrepreneurial people who purposely don't pay attention to &ldquo;true&rdquo; or &ldquo;right&rdquo;. Previous to coaching, her most compelling work was as a performance artist and mixed-media artist; in Mentoring, Intuition, and Leadership Development at the University of Minnesota in Minneapolis, Minnesota, USA; and as a parent to two daughters. She has always been interested in what it means (and takes) to live a life well, be grateful, and feel satisfaction. Milne lives in Minnesota in the USA and Provence in France.</p>
+								</div>
+			</div>
+	
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/knecht-kat-kehres.jpg" width="207" height="115" alt="Photo of Kat Kehres Knecht"/>
+								<div class="bio">
+									<h2>Kat Kehres Knecht, CPCC, PCC</h2>
+									<p>Kat is a co-founder of The Relationship Coaching Company along with her husband Curtis. Together they have developed a program that uses the &ldquo;7 Keys to Relationship Success&rdquo; to teach and coach individuals and couples how to create extraordinary relationships.<span>&nbsp; </span>Kat combines her passion for romance with her co-active coaching and leadership skills in a way that is unique and powerful. She specializes in helping women entrepreneurs who are looking for a fulfilling love life. Kat has her own weekly radio show and makes regular contributions to the media including Choice Magazine. Kat&rsquo;s favorite downtime activities include meandering by the ocean, digging into an art project just for fun, and getting lost in juicy conversations with her family and friends.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ute-kueffner.jpg" width="107" height="115" alt="Photo of Ute Kueffner" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ute Kueffner, MBA, CPCC, PCC</h2>
+
+									<p>MBA, University of Nuremberg, Germany<br />
+Ute worked 15 years as a senior leader in the software industry. She holds a global perspective as a result of her worldwide engagements and a long term business assignment in California. Ute has coached executives of multinational organizations and professionals outside corporations. She works with clients who want to make a life rather than just a living. She supports her clients in creating a meaningful life that is inspired by the heart and aligned with unique capabilities in the pursuit of creating value. In her coaching Ute integrates arts such as dancing, painting and singing. Her style is intuitive, visionary and goal-oriented. Ute coaches in English and German.</p> 
+
+								</div>
+
+							</div>
+
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Loiseaux-Roxane.jpg" width="207" height="115" alt="Photo of Roxane Loiseaux"/>
+								<div class="bio">
+									<h2>Roxane Loiseaux,  MA, CPCC</h2>
+									<p>MA, Philosophy, University  of Amiens<br/>
+									Roxane works with senior executives in multinational corporations, directors of small companies as well as on systems within organizations, both as a trainer and as a coach. She brings her focus and rigor, together with warmth and lightness, at the service of individuals&rsquo; self-awareness, empowered choices and full presence. She supports individuals in aligning their lives by integrating the personal and the professional. Her holistic approach incorporates her philosophical background and her belief in the wisdom of the body. Roxane&rsquo;s intent is for individuals to invest in themselves and in their lives, and by doing so, to contribute to the various systems they belong to&mdash;families, communities, organizations&mdash;to co-create a more sustainable future now.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Lopez-Fernando.jpg" width="207" height="115" alt="Photo of Fernando Lopez"/>
+								<div class="bio">
+									<h2>Fernando Lopez, CPCC</h2>
+									<p>Dual degree in Management and Technology from the Wharton School and the School of Engineering at the University of Pennsylvania.<br/>
+									Fernando&rsquo;s passion is helping leaders, teams, and organizations create the space for powerful collaboration. He takes this passion beyond the business world with Project Bridgespace--a nonprofit project that advocates for innovative conflict resolution at a local and global level. Having lived in Toronto, New  York, Mexico, Hawaii, Munich, and Brazil, Fernando is comfortable operating across different cultures. Before coaching, Fernando was a product manager where he bridged business and technology teams.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/stephanie-lovinger.jpg" width="107" height="115" alt="Photo of Stephanie Lovinger" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Stephanie Lovinger, CPCC, PCC</h2>
+
+									<p>Stephanie has been coaching, training and inspiring individuals and organizations to be better communicators since 1993. Her work has taken her everywhere from the cutting edge tech companies of Silicon Valley to Government Agencies. She currently focuses on individuals and leaders born between 1954 and 1965, also known as &ldquo;Generation Jones,&rdquo; and she finds that her clients want to create meaningful work and make powerful transitions from traditional employment to entrepreneurial livelihoods that are viable for the future. Her clients are drawn to her special blend of incisiveness, creativity and humor. Stephanie often combines image consulting with her coaching for powerful internal and external transformation.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/lupinsky-leslie.jpg" width="207" height="115" alt="Photo of Leslie Lupinsky"/>
+								<div class="bio">
+									<h2>Leslie Lupinsky, CPCC, MCC</h2>
+									<p>Leslie has provided over 5000 hours of professional coaching to small business owners, solo entrepreneurs and coaches for over 14 years.<span>&nbsp; </span>Her passion for business development from the heart has inspired her to develop five successful business development programs.<span>&nbsp; </span>Her most recent popular program is called Inspired-On-Demand and she has co-facilitated over 500 participants in this fun approach to growing a small business and has been sponsored by CTI in her business development programs since 1998. Leslie is the co-author of <em>The Inspired Business Approach: Building Your Business From Inspiration, not Perspiration</em>.</p>
+								</div>
+			</div>
+		
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/joni-mar-BW.jpg" width="207" height="115" alt="Photo of Joni Mar"/>
+								<div class="bio">
+									<h2>Joni Mar, CPCC, MCC</h2>
+									<p>Joni excels in coaching high performance individuals, leaders and corporate teams to generate more powerful results and increase engagement. By focusing on authentic leadership, innovation and relationship management, Joni inspires her clients to live their lives purposefully and passionately. Joni brings to her coaching 20 years as an award winning television journalist and entrepreneur. She is a newspaper columnist on workplace issues, creator of a business development program for executives transitioning into entrepreneurship, and co-author of the book <em>The Inspired Business Approach: Building Your Business From Inspiration, not Perspiration</em>. She is certified in The Leadership Circle, designs and delivers internal coaching programs and corporate workshops. Joni cherishes her active family life, salsa and gardening.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Martin-Nick.jpg" width="207" height="115" alt="Photo of Nick Martin"/>
+								<div class="bio">
+									<h2>Nick Martin, MSc, CPCC</h2>
+									<p>Master of Science, Management Development and Training, University of Bristol<br />Following a first career as a chartered accountant with one of the major accounting firms, Nick has been working in training and development since 1994.<span>&nbsp; </span>As a trainer he works with leaders in organizations from local charities to large multinationals. <span>&nbsp;</span>As a coach he works with owners of small businesses, and with people with brains who are realizing that they have a body and emotions as well.<span>&nbsp; </span>His vision is of a world where we live more lightly with one another and with our planet.<span>&nbsp; </span>He is accredited to use a range of psychometric instruments, including MBTI, FIRO-B, the Leadership Circle and the Team Diagnostic Assessment.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Mattsson-Pamela.jpg" width="207" height="115" alt="Photo of Pamela Mattsson"/>
+								<div class="bio">
+									<h2>Pamela Mattsson, CPCC, PCC</h2>
+									<p>Pamela is a model for living a passionate and balanced life.<span>&nbsp; </span>She specializes in what she calls Life Leadership and is deeply committed to her clients&rsquo; success, happiness and wildest dreams.<span>&nbsp; </span>Pamela firmly believes that life leadership is about taking responsibility for what you are creating in your life, reconnecting to your inner core, your humanness and authentically honoring your values.<span>&nbsp; </span>She is a co-founder of eKCosystem a corporate training company committed to bringing the Human BEING into Business.<span>&nbsp; </span>Pamela&rsquo;s coaching style combines her immense entrepreneurial and business experience with her intense compassion and powerful intuition.<span>&nbsp; </span>She works magic with individuals, couples, and businesses as they realign their daily actions with their deepest desires and values in order to unleash powerful potential. Pamela currently splits her time between Sweden and the US.<span>&nbsp; </span>She is a proud mother of four, an avid chef and world traveler.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/anne-grete-mazziotta.jpg" width="207" height="115" alt="Photo of Anne Grete Mazziotta"/>
+
+								<div class="bio">
+
+									<h2>Anne Grete Mazziotta, MA, CPCC, PCC</h2>
+
+									<p>Anne Grete models the power of the feminine and brings this to her role as leader in the Co-Active Leadership Program and workshop leader for other <abbr title="Coaches Training Institute">CTI</abbr> programs. Her presence fosters tremendous safety and openness to individuals and groups and deepens their personal discovery process. She is passionate about the possibilities of people coming together and forming communities to effect immense positive change in one other and the world. Prior to becoming a coach in 1996, she worked as a counselor in a variety of settings including a women's prison, secondary schools, and a mental health day treatment facility. She has also worked as a massage therapist and has held a life long interest in the healing arts.</p>
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/McGuffin-Nina.jpg" width="207" height="115" alt="Photo of Nina McGuffin"/>
+								<div class="bio">
+									<h2>Nina McGuffin, MS, PCC, CPCC</h2>
+									<p>Master of Social Science, University of Chicago,<br/>
+									Nina works with leaders and teams to maximize their success by helping them develop new leadership and interpersonal skills. Her expertise includes leadership development, organizational and relationship systems, emotional intelligence, and personal effectiveness. Known for her warmth and insight, Nina has a proven track record in coaching and developing leaders for client companies. She has designed and co-led a variety of training programs for leaders and teams with outcomes ranging from developing up-and-coming leaders to building trust within a cross-functional team. Nina is passionate about increasing emotional intelligence so leaders and teams can achieve more with less effort.
+									</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/McHall-Michele.jpg" width="207" height="115" alt="Photo of Michele McHall"/>
+								<div class="bio">
+									<h2>Michele McHall MA, CPCC, MCC 
+									</h2>
+									<p>Master of Arts, Depth Psychology, Pacific Graduate Institute<br />Michele is passionate about coaching the Whole IQ, the Spirit, Heart, Mind, and Body intelligences, and the respective energy, feelings, thoughts, and forms that each intelligence governs. She coaches individuals, groups, and leads retreats with a focus on a path of intentional transformation that support people to transform from the inside out by discovering the depth and dimension of their naturally, creative, resourceful and wholeness. In coaching the Whole IQ, Michele inspires people to connect with their soul&rsquo;s dream&mdash;a state of harmony, divine connection, and balance. As a former actress and figure skater, Michele loves the arts and is a wild and crazy sports fan.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Medlicott-Sarah.png" width="207" height="115" alt="Photo of Sarah Medlicott"/>
+								<div class="bio">
+									<h2>Sarah Medlicott, CPCC, PCC</h2>
+									<p>Sarah is a dynamic international trainer, who engages people in living into their personal and professional potential. With a focus on leadership and legacy coaching, she works with visionary leaders and entrepreneurs to gain mastery in their lives. Sarah founded her company, Affinity International, in 2000. Sarah leads a Women&rsquo;s Leadership Program based on the Five Elements of Chinese Medicine to assist women to engage in discovering their authentic expression of powerful feminine leadership. With a background in international economic development, Sarah has worked closely with the Silicon Valley Center for International Trade Development (SVCITD) to assist small and medium-sized businesses to develop trade globally, and served as Interim Director from 2004 - 2005. One of Sarah&rsquo;s passions is to assist greater cross-cultural awareness and understanding in the world.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ken-mossman.jpg" width="107" height="115" alt="Photo of Kenneth Mossman" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Kenneth Mossman, MFA, CPCC, PCC</h2>
+
+									<p>Ken Mossman brings three decades of leadership experience across a breadth of industries and locales to his work. His coaching clients are primarily Fathers who recognize that being a winning executive, a solid leader and a great dad needn&rsquo;t be mutually exclusive. Passionately committed to an unapologetically creative, expressive life, he also works with &ldquo;Creative Cliff-Jumpers,&rdquo; including film makers, actors, writers, musicians and visual artists. Ken&rsquo;s love of coaching and teaching, and his quirky, often absurd way of seeing the world, add up to a leadership style that&rsquo;s lively, intuitive, eccentric, fun and more than slightly irreverent. He lives with his wife and son&mdash;and an expanding quiver of guitars&mdash;in Upstate New York.</p> 
+
+								</div>
+
+							</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Naude-Jonelle.jpg" width="207" height="115" alt="Photo of Jonelle Naude"/>
+								<div class="bio">
+									<h2>Jonelle Naude, MSc, CPCC</h2>
+									<p>Master of Science in Psychology, Stellenbosch   University, South Africa<br />Jonelle coaches individuals in their journey to become self-aware, authentic and responsible leaders. In addition to personal coaching, her coaching practice is focused on personal and leadership development as a medium for constructive work with offenders and general social upliftment, especially in the context of South Africa. Jonelle is also involved and committed to the professionalization of coaching internationally and the building of a scientific-practitioner based coaching culture. A passion for human development and the belief that any transformation or healing is possible in the presence of big love, lies at the heart of Jonelle&rsquo;s work.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/ken-oakley.jpg" width="107" height="115" alt="Photo of Ken Oakley" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Ken Oakley, CPCC, PCC</h2>
+
+									<p>Ken is a trainer, leadership consultant, and coach dedicated to helping people achieve their full potential and thrive in all areas of their lives. With over 25 years of experience, he has worked with thousands of people worldwide to maximize joy, satisfaction, and effectiveness. Ken focuses on three areas: relationship coaching &ndash; helping people find and enhance healthy relationships; business building &ndash; using social media to simplify marketing and leverage results; and somatic learning &ndash; accessing the wisdom of the body. Ken is currently director of social marketing for Inspired on Demand, a business development company specializing in helping solo-entrepreneurs build thriving businesses.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Parry-Antony.jpg" width="207" height="115" alt="Photo of Antony Parry"/>
+								<div class="bio">
+									<h2>Antony Parry, CPCC, PCC</h2>
+									<p>
+									Antony worked for more than three decades as a news reporter, editor and a trainer of journalists on four continents. He now coaches individuals, teams and relationships, and specializes in writers, consultants and financial experts&mdash;or anyone else who turns up with a sense of fun and adventure. He still turns his hand to writing and course design and can be found dancing Morris on the streets of England&mdash;complete with bells, stick and hankies.
+									</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Peck-Doug.jpg" width="207" height="115" alt="Photo of Doug Peck"/>
+								<div class="bio">
+									<h2>Doug Peck, MS, CPCC</h2>
+									<p>MS in Computer Science from Stevens Institute of Technology<br />In addition to over 30 corporate years as a senior executive, software pioneer, and engineer, Doug is a yachtsman, chef, opera-lover, diver, art historian, musician, mechanic, and world traveler. He is curious about everything, pretty good at most things, and always looking for unusual adventure&mdash;which is how he came to coaching. Doug is passionate about finding how to make things work, especially the lives of his executive clients and the teams that he coaches. He celebrates the discovery and use of your full, unique potential, and the adventure of the journey, with enthusiasm and compassion. Co-owner of North Star Coaching, Doug is certified in The Leadership Circle and other tools, and trained in Relationship Systems coaching.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/sue-powell.jpg" width="107" height="115" alt="Photo of Sue Powell" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Sue Powell, MBA, CPCC</h2>
+
+									<p>MBA, Manchester Business School<br />
+Sue works with executives and their teams in multinational organizations as well as with private individuals and groups. Her background includes over 15 years as a senior leader in sales and marketing for corporations. Sue now designs and delivers leadership and team programs to transform awareness and behavior, to create greater fulfillment and improve performance. She is known for bringing a combination of directness, humor, pragmatism, and playfulness to her work. Sue is also a trained Relationship and Career Coach. Sue splits her time between London and Eire and loves to travel. When she&rsquo;s not working she enjoys being with close friends &amp; family, dancing and singing.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/gonan-premfors.jpg" width="107" height="115" alt="Photo of Gonan Premfors" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Gonan Premfors, CPCC</h2>
+
+									<p>With a career that spans the airline, leisure and financial industries, Gonan is one of the main drivers of the coaching movement on the Arabian Pensinsula. The founder of CTI UAE and the Gulf Cooperation Council countries she works tirelessly to bring CTI&rsquo;s training and philosophy to course participants and corporations in the region. She coaches entrepreneurs, business leaders, and professional athletes and regularly works with government entities with leader development. Gonan is a passionate mother and together with Henry Kimsey-House she has developed the Parentology concept.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/johan-premfors.jpg" width="107" height="115" alt="Photo of Johan Premfors" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Johan Premfors, CPCC</h2>
+
+									<p>Johan is a former banker and stockbroker turned entrepreneur and coach. His background serves him well in his practice, which includes entrepreneurs, bankers, business owners and senior managers. In addition to being a CTI leader and a coach Johan manages CTI in the Arabian Peninsula. He is based in Dubai and regularly travels throughout the region. Born in Sweden but with a childhood spent in countries including Pakistan, Kenya and Turkey, Johan loves the cultural diversity of the Middle East as well as the challenges and opportunities that arise from the region.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/Prout-Clive.jpg" width="107" height="115" alt="Photo of Clive Prout" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Clive Prout, MA, CPCC, PCC</h2>
+
+									<p>MA, Engineering and Management, University of Cambridge, England<br />
+As &ldquo;The Sabbatical Coach&rdquo;, Clive&rsquo;s work has been featured in Kiplinger&rsquo;s Personal Finance, Outside Magazine, Forbes.com, and Men&rsquo;s Journal. He helps successful professionals use a sabbatical to navigate a transformation in their relationship with work. His first career was in the computer software industry, most notably as Director of Marketing for a UK Internet company in the period leading up to it&rsquo;s successful IPO. In 1997, Clive took an extended sabbatical, to live, study and work in a yoga meditation ashram for 5 years &ndash; an experience that gives a strong spiritual context to his life and work as a coach. He lives with his wife, Abigail and their two young daughters in Common Ground &ndash; an award winning, affordable, net-zero energy housing co-perative on Lopez Island in WA State.</p> 
+
+								</div>
+
+							</div>
+
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/Redding-LA.jpg" width="107" height="115" alt="Photo of LA Reding" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>LA Reding, M.Ed., CPCC, MCC</h2>
+
+									<p>LA has been striding down a path of leadership all her life. She is an unconventional woman with a wicked sense of humor. LA admits to being an intuitive introvert who works from the inside out. She takes risks while being light, caring and pushing hard. She will do whatever it takes for you to be your best and to go where you haven&rsquo;t gone before. LA has a stately presence that creates safety and trust. Her deep passion is for people to embody mastery and knows that individual mastery is unique and shows up in fascinating ways. Not one to waste words, her career has spanned 40 years of service in the field of human relations. Currently LA is working with Fortune 100 companies around the world to help leaders own their own power and style from the inside out. Her mission is to identify and serve a new generation of global leaders.</p>
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Renaud-Ron.jpg" width="207" height="115" alt="Photo of Ron Renaud"/>
+								<div class="bio">
+									<h2>Ron Renaud, CPCC, PCC </h2>
+									<p>Whether speaking to hundreds, coaching or training someone one-on-one, Ron&rsquo;s style is fun and rigorous. He believes that holding the tension between the two is where growth, productivity and life satisfaction occur. It is with this approach and from this perspective that Ron engages his audiences and creates lasting results for both individuals and organizations. Ron&rsquo;s most fulfilling work takes place at home in upstate New   York, where he and his wife are raising two boys to be good men. A student of history and success principles in every area of life, Ron thoroughly enjoys discussing and teaching the principles that promote individual liberty and prosperity.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Richardson-Sandra.jpg" width="207" height="115" alt="Photo of Sandra Richardson"/>
+								<div class="bio">
+									<h2>Sandra Richardson, PCC, CPCC</h2>
+									<p>Sandra is passionate about unleashing the unique potential that lies within people and particularly enjoys working with people on confidence building. She has run Chrysalis Coaching for almost 10 years and prior to that worked in-house as a career coach and HR manager for a blue chip organization, having transitioned from an earlier career in public relations. Sandra has a warm and insightful style. She is open, honest and passionate about people. Sandra is an Authorized Team Diagnostic Facilitator, is MBTI qualified and has a diploma in Solutions-Focused counseling.<span>&nbsp; </span>She also runs Simply Inspiring Retreats, which are coaching-led time-outs to help people revitalize their lives. Sandra lives in the UK.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Roeske-Kate.jpg" width="207" height="115" alt="Photo of Kate Roeske"/>
+								<div class="bio">
+									<h2>Kate Roeske, MA, CPCC</h2>
+									<p>Master of Arts from Cambridge University<br/>
+									Kate brings over 15 years experience to her coaching, training and consulting work. She works with Fortune 500 companies and non-profits providing inspirational and action-oriented coaching and training. Kate is dedicated to working within organizations and helping individuals step into their own unique style of leadership. She believes strongly that these individuals and organizations both benefit as a result of focusing on individual leadership and creating more work-life balance. Kate&rsquo;s earlier work as an Account and Planning Director for Fortune 500 companies has given her a deep understanding of the issues that leaders, teams and individuals in corporate environments face. She currently is living her own dream in Boulder, Colorado.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/camilla-rogers.jpg" width="107" height="115" alt="Photo of Camilla Rogers" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Camilla Rogers, MA, CPCC, PCC</h2>
+
+									<p>MA, Organization Development/Psychology, Sonoma State University<br />
+Camilla coaches those who seek a greater depth of their spirituality and want to honor their highest creative expressions in the world. To empower her clients conscious creation, Camilla has melded her exploration and understanding of depth psychology with her 30 years of metaphysical study, and developed a journal method she calls Personal Storying ~ a Co-Creative Process to Author Your Chosen Destiny. In her training work within corporate and business environments, Camilla engages executives, front-line managers and team leaders hungry to embrace co-active coaching skills and enhance their personal communication effectiveness. Camilla is the founder of Personal Storygems, a digital storytelling company.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Roppel-Chuck.jpg" width="207" height="115" alt="Photo of Chuck Roppel"/>
+								<div class="bio">
+									<h2>Chuck Roppel, CPCC, MCC</h2>
+									<p>Chuck was trained and functioned as Catholic Priest in the early years of his career and from this role evolved into health promotion and disease prevention work within the framework of Community Mental Health Centers in Kentucky and California. He has been Director of the San Francisco Mental Health Association and the Director of the California State Department of Mental Health&rsquo;s Office of Prevention and Mental Health Promotion.<span>&nbsp; </span>Since 2000, Chuck had been a faculty member of the Coaches Training Institute, maintaining a private life coaching practice and training Co-Active coaches throughout the world.<span>&nbsp; </span>Chuck&rsquo;s mantra focuses on right relationship with self and other as the underpinning of a life well lived.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/Rueda-Pilar.jpg" width="107" height="115" alt="Photo of Pilar Rueda Garc&iacute;a Yakar" style="margin-left:100px;"/> 
+
+								<div class="bio">
+
+									<h2>Pilar Rueda Garc&iacute;a Yakar, CPCC, PCC</h2>
+
+									<p>Pilar worked for more than 10 years in different high-tech companies managing and leading multi-disciplinary teams before becoming a coach. Her passion for coaching comes from her belief that more than a methodology, coaching is a language, which enables a different way of being in relationship with oneself and with others based on individuals owning our freedom to choose consciously and create new realities. She coaches and trains in English, Spanish and Hebrew, all of which she speaks fluently, and her clients include executives from different companies ranging from family business to corporations. Pilar has lived in various countries across 3 continents and currently lives in Madrid with her husband and child.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/schmidt-jeaneen.jpg" width="207" height="115" alt="Photo of Jeaneen Schmidt"/>
+								<div class="bio">
+									<h2>Jeaneen R. Schmidt, CPCC, PCC</h2>
+									<p>Jeaneen thrives on coaching female executives and professionals who are committed to realizing and achieving their deepest potential in their professional and personal lives. She holds the vision that professional success, fulfillment and sustainability can co-exist. Prior to founding her coaching practice in 2000, Jeaneen spent 15 years as a leader and executive in the corporate world productively building businesses and motivating employees to create success for themselves and their organizations. Jeaneen is a world-class sailor, having placed 17th in North America on an all female crew. She has practiced meditation since 1991 and brings a strong intuitive sense to everything.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Schneider-Lorry.jpg" width="207" height="115" alt="Photo of Lorry Schneider"/>
+								<div class="bio">
+									<h2>Lorry Schneider,  MS, CPCC, PCC</h2>
+									<p>MS, McGill University<br/>
+									Lorry has been co-leading workshops with <abbr title="Coaches Training Institute">CTI</abbr> since 2000 and he has been a Supervisor in the Certification program since 2002. He is passionate about the Co-active Model and feels incredibly blessed to be so involved with the transformative work of <abbr title="Coaches Training Institute">CTI</abbr>. Lorry&rsquo;s primary focus as a corporate coach is around effective leadership based on the Co-active Model. His personal life coaching approach based on the expression: &ldquo;You can lead a horse to water but you can&rsquo;t make him&#47;her drink&rdquo;; Lorry likes to say that his clients are all &ldquo;thirsty thoroughbreds&rdquo;. The most fulfilling aspects of Lorry&rsquo;s life are his work, gardening, and road biking and; most of all, his wife Wendy, and his 4 daughters: Hillary, Becca, Tanya, and Emily.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/jill-schropp.jpg" width="107" height="115" alt="Photo of Jill Schropp" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Jill Schropp, MPA, CPCC, PCC</h2>
+
+									<p>Bush Leadership Fellow, Harvard University <br />
+Master in Public Administration, University of Washington <br />
+Jill brings to coaching and CTI faculty positions a life-long commitment to inspiring individuals to realize their dreams and make a positive difference in the world. Her more than 35 years of progressive leadership in the private, public and non-profit sectors include being a newspaper and magazine editor, spearheading major political campaigns on behalf of human rights and the environment and special honors for her journalistic and community endeavors. A depth of spirit and playfulness infuse her many interests and she has huge gratitude for her life with her partner, two Golden retrievers, a spaniel mix, three cats and the magical morning conifered mist of the Pacific Northwest.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/SHAPIRO-BETH.jpg" width="207" height="115" alt="Photo of Beth Shapiro"/>
+								<div class="bio">
+									<h2>Beth Shapiro, MA, CPCC, PCC</h2>
+									<p>Master in Public Administration from Harvard&rsquo;s Kennedy School<br/>
+									Beth is passionate about working with individuals and organizations seeking to solve problems and create community both locally and globally. She coaches, trains, and consults on leadership development, teaming, and workforce engagement. Beth is also trained as a Relationship Systems Coach. Her background includes 20 years of leadership in the private and non-profit sectors. In addition to coaching, Beth designs and delivers powerful, custom experiential trainings aimed at increasing workforce engagement and mission effectiveness.
+									</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Sheridan-Andrew.jpg" width="207" height="115" alt="Photo of Andrew Sheridan"/>
+								<div class="bio">
+									<h2>Andrew Sheridan, CPCC</h2>
+									<p>After an invigorating career with Deutsche Bank, Andrew chose to leave the corporate world and undertake in-depth study and research in the fields of social science, psychology and management theory. Currently completing a BSc with the Australian College of Applied Psychology, Andrew has lived and worked in Luxembourg, the UK, Germany and Australia. British by birth, his upbringing in central Europe has shaped his strong interest in cultural diversity, and he is fluent in both French and German. Andrew&rsquo;s vision of people living their lives fully at choice led him to found On The Up Professional Coaching, a business that works with select professionals wanting to have a bigger impact in the world. A self-confessed agent-of-change, Andrew loves working with people who know that the status quo is not enough. Andrew is currently based in Luxembourg.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Shewan-Mary_Beth.jpg" width="207" height="115" alt="Photo of Mary Beth Shewan"/>
+								<div class="bio">
+									<h2>Mary Beth Shewan, MS, CPCC, MCC</h2>
+									<p>Master of Science, Career Counseling, Georgia  State University<br />Mary Beth is a Certification Program Leader, Client Game Leader, and Orientation Call Leader for CTI. She is a Lifestyle Entrepreneur who has been a professional coach for 13+ years, and owner of Wholelife Coaching. Mary Beth inspires her students and clients to create their lives and businesses in accord with their essence; a real life example for those who are looking to expand their consciousness through self-love, compassion, and intuition, awakening the grounded, integrated leader in each individual. A teacher of teachers, Mary Beth&rsquo;s greatest joy is to facilitate the growth in those who are here to serve humanity.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Shilon-Abi.jpg" width="207" height="115" alt="Photo of Abi Shilon"/>
+								<div class="bio">
+									<h2>Abi Shilon, MBA, CPCC, PCC</h2>
+									<p>Master of Business Administration, University of Derby<br/>
+									Trained as an engineer, Abi has 27 years of experience in high tech. During this career Abi managed teams that developed equipment and software for international telecommunication companies and managed R&amp;D, marketing and business development groups. Abi is an entrepreneur, coach and a leader who founded CTI-Israel in 2003. As a coach, Abi works with entrepreneurs, high tech organizations, executives and mid-level corporate managers, and community leaders. He also facilitates groups in effective leadership, communication skills and vision creation. Abi is a seasoned clarinet player, playing mostly classical chamber music with amateur ensembles.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/art-shirk.jpg" width="207" height="115" alt="Photo of Art Shirk"/>
+
+								<div class="bio">
+
+									<h2>Art Shirk, MBA, EdD, MCC, CPCC</h2>
+
+									<p>MBA, Boston University <br />
+EdD, Columbia University&rsquo;s Teachers College <br />
+Art&rsquo;s playful blend of humor and deep respect for all that&rsquo;s entailed in &lsquo;being human&rsquo; are at the heart of his work as a consultant and coach focused on putting transformative learning into action for individuals, teams and organizations. Art has worked as a leadership and organization development consultant at a range of organizations. He is a founding partner of Coaching Hall International based in Bogota, Colombia&mdash;a venture that emerged from his own Co-Active Leadership experience. Art earned his doctoral degree from Columbia University in 2006 from the Department of Organization and Leadership at Teachers College. His doctoral research focused on essential aspects of the Co-Active leadership experience. Art is lead designer on CTI products and a senior faculty member.</p>
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/lori-shook.jpg" width="107" height="115" alt="Photo of Lori Shook" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Lori Shook, MS, CPCC, MCC</h2>
+
+									<p>Since 1996 Lori has been passionate about the holistic nature of the Co-active coaching model and the possibilities for human development that it holds. She has been leading CTI courses since 1998, has held most training positions at CTI, assisted with the creation of a leader development process in 2001 and trained a number of course leaders and certification pod leaders over a period of several years. Lori was instrumental in international expansion of CTI and held the position of International Director in 2006-7. She lives in France and intends to move to London in 2011. Lori enjoys incorporating the latest teachings from the field of neuroscience into her coaching. She coaches a variety of clients and maintains that coaching is about the human being and their inner work regardless of their position or field of work.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Sigetich-Andrea.jpg" width="207" height="115" alt="Photo of Andrea Sigetich"/>
+								<div class="bio">
+									<h2>Andrea Sigetich, MS, CPCC, MCC</h2>
+									<p>Master of Science in Human Resources Management from the University of Utah.<br/>
+									Andrea brings more than 3 decades of management and leadership development experience to her work as a consultant, coach, author, and mentor. Before opening SageCoach in 1997, she held senior leadership positions in Fortune 500 technology organizations. Andrea coaches leaders, develops leadership strategies, and trains coaching skills in both large and small organizations. She enthusiastically pursues hiking, kayaking, and skiing from her home in Bend, Oregon. To bring balance to her life, Andrea has twice stored all her belongings to go on the road&mdash;once for four months and once for nine months. Her future will include more long-term hiking adventures and springer spaniels.
+									</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Simons-Inge.jpg" width="207" height="115" alt="Photo of Inge Simons"/>
+								<div class="bio">
+									<h2>Inge Simons, MBA, MsC, CPCC, PCC</h2>
+									<p>Inge brings close to 20 years of international corporate experience to coaching and training engagements and is currently running three companies. Being passionate about bringing more diversity to the boardroom, Inge works with both Fortune 500 and leading edge companies and to make a difference. She dances in English, French, German and Flemish. Inge is the Chief Wizard of a clan which includes daughter Lola, son Louis, and her husband along with 3 flatcoated retrievers and 4 cats. The family is on the move in Switzerland, Austria and Belgium.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/skibbins-marla-morein.jpg" width="207" height="115" alt="Photo of Marla Skibbins"/>
+								<div class="bio">
+									<h2>Marla Morein Skibbins, CPCC, MCC</h2>
+									<p>Marla has been coaching and training since 1996.<span>&nbsp; </span>Marla is a passionate advocate for entrepreneurs, managers and leaders in organizations thriving in their work and in their lives. Her coaching is an unusual blend of business savvy and spiritual perspective. She knows the ins and outs of being a successful business person and the pitfalls a professional may encounter while developing their business. She is founder of MyFullPractice.com a company dedicated to coaches building a thriving coaching business. Marla resides in Sea Ranch on the Sonoma coast in California and coaches and trains internationally.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Solberg-Tapper-Pam.jpg" width="207" height="115" alt="Photo of Pam Solberg-Tapper"/>
+								<div class="bio">
+									<h2>Pam Solberg-Tapper, MHSA, CPCC, PCC
+									</h2>
+									<p>Masters Degree in Health Services Administration, University of St Francis<br />As an internationally experienced coach and consultant, Pam provides the tools and spark to help her clients articulate their vision, and improve their performance as well as their quality of life. Pam is the President of Coach for Success, Inc., which provides coaching and consulting in the following areas: visioning, executive level leadership development, on-boarding, 360 administration/action planning, transition and change, and organizational development. Pam is dedicated to working with leaders that make a positive impact with humanity, the environment or with animals. Her quest is to run a marathon on all 7 continents. As of 2009, she has completed North America, South America, Europe, Australia and Antarctica. Only Asia and Africa left.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Storkholm-David.jpg" width="207" height="115" alt="Photo of David Storkholm"/>
+								<div class="bio">
+									<h2>David Storkholm, CPCC, PCC</h2>
+									<p>David is specializes in coaching and leadership training. He creates powerful spaces for learning that explores the potential, talent and self leadership.<span>&nbsp; </span>David combines his artistic background as a musician, his education at the internationally acclaimed leadership program KaosPilots and his CTI training into a cocktail of hands on experience, intuition, curiosity, knowledge and creativity. As a team leader at the KaosPilots, an organization where the aim is to create the frames where young, creative minds become leaders, David enjoys the opportunity to support young potential step into their dreams. David lives in Denmark with his wife and two children.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/stover-jeremy.jpg" width="207" height="115" alt="Photo of Jeremy Stover"/>
+								<div class="bio">
+									<h2>Jeremy Stover, CPCC</h2>
+									<p>Jeremy has a special talent for working with young, visionary leaders, new managers, and executives in the high-tech and software industry. He provides a fresh perspective to individuals and teams working in fast-paced, high-stress environments. He understands the challenges of leading or being a member of a virtual team that spans the globe and is able to help his clients communicate more effectively and achieve tangible results. Jeremy is a principal in IdeaTribe, a company focused on helping companies communicate more effectively and develop stronger relationships, and is on the faculty at the Coaches Training Institute. Jeremy currently lives in San Francisco with his wife, Elyse.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/eva-szita-morris.jpg" width="107" height="115" alt="Photo of Eva Szita-Morris" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Eva Szita-Morris, PhD, CPCC, PCC, ORSCC</h2>
+
+									<p>Eva brings to her coaching a rich variety of personal and international business life experiences. Eva has an international clientele and leads a group of associates. She coaches on mid-career reviews and changes for both newly appointed and established leaders. She has delivered top level corporate assignments in leadership training. Eva is particularly skillful in creating learning, and then supporting actions using her real, authentic coaching style &ndash; where she evokes her clients&rsquo; inherent leadership qualities, while operating within codes of strong professional ethics, integrity, and a commitment to excellence.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/rick-tamlin.jpg" width="207" height="115" alt="Photo of Rick Tamlyn"/>
+
+						  <div class="bio">
+
+									<h2>Rick Tamlyn, MFA, CPCC, MCC</h2>
+
+									<p>Rick is a sought-after leader in the human development field and works internationally as an experiential keynote speaker, workshop/seminar leader, and as a personal leadership coach. As a Co-Founder of &lsquo;It&rsquo;s All Made Up, Inc&rsquo;. and &lsquo;The Bigger Game,&rsquo; Rick has delivered over 300 Co-Active Coaching/Leadership workshops, Bigger Game workshops, and conference keynote sessions in both the public and private sectors. Along with CTI co-founder Laura Whitworth and colleague Caroline MacNeill Hall, Rick is co-author of the book <em>The Bigger Game: Why Playing a Bigger Game Designs Who You Want to Become</em>. Rick&rsquo;s personal &lsquo;Bigger Game&rsquo; is to develop and enhance leadership skills within individuals, organizations and communities, for the sake of a more fulfilled and sustainable world something for which our entire planet hungers.</p>
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Treister-Goran-Anat-copy.jpg" width="207" height="115" alt="Photo of Anat Treister-Goran"/>
+								<div class="bio">
+									<h2>Anat Treister-Goren, Ph.D., CPCC, PCC, ORSCC</h2>
+									<p>Anat specializes in executive coaching, individual and collaborative leadership development, relationship and team coaching. Her diverse background includes an extensive academic career in the field of brain and language processing, communicative deficits in schizophrenia, serving as an executive in technology R&amp;D, and marketing and business development, and professional acting and singing. Anat created the Hebrew version for the <i>Co-Active Coaching</i> book leading a local team to clearly rewrite the model for the local culture. She is a full time coach and leader with a focus on executive coaching, women in leadership positions, people in crossroads, and personal development.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Valdiserri-Susan.jpg" width="207" height="115" alt="Photo of Susan Valdiserri"/>
+								<div class="bio">
+									<h2>Susan Valdiserri, MS, PCC, CPCC</h2>
+									<p>Master of Science, Managerial Communication, Northwestern University<br />Susan&rsquo;s professional career has spanned various line and management positions in engineering, sales, consulting, information technology services, marketing, and HR business units with a Fortune 100 Information Technology Company. Her current focus is coaching sales leaders and teams and developing and delivering learning programs for the same audience. She brings her leadership and coaching experience from various business disciplines and academia to help her clients develop higher emotional intelligence and leadership impact. Susan is passionate about unleashing the power of teams through collaboration, and revealing the heart of leaders through authentic connection. Susan believes that holistic health and wellness are key to staying present and engaged in life.</p>
+								</div>
+			</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/angelique-van-dam.jpg" width="107" height="115" alt="Photo of Angelique van Dam" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Angelique van Dam, Drs, CPCC, ACC</h2>
+
+									<p>Angelique will call you forth in your unique leadership. Permission to be all and everything that you are is key! Coaching has been part of all Angelique&rsquo;s professional life: first as a medical doctor and an acupuncturist and now in her own coaching and training company. This professional experience combined with her life experience as a mother of 3, who has lived abroad for many years with the family, come together in her coaching and leadership training for corporations and individuals. One of three Dutch CTI leaders, Angelique is multilingual and has extensive international experience. She believes that connecting soul, body, heart and mind will give you endless possibilities, whatever comes your way.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/john-vercelli.jpg" width="207" height="115" alt="Photo of John Vercelli"/>
+
+								<div class="bio">
+
+									<h2>John Vercelli, MA, CPCC</h2>
+
+									<p>MA, Education, Stanford University<br />
+John Vercelli is a principal of Chain Reaction Partners, LLC (CRP) and leads, designs and delivers leadership programs nationally and internationally. John works with individuals on their inner journey, helping them to re-connect with their higher purpose and to express that through their work, leading to greater fulfillment and results. For the past fifteen years, he has helped leaders build high performing organizations through coaching, training, team building, and consulting. John is adept at translating complex ideas into easily understood and applied models or tools that have a &ldquo;practical wisdom&rdquo; to them. John&rsquo;s vision includes work environments in which co-workers call out the best in each other and are proactive, responsible and willing to take risks, moving themselves and the company to higher performance.</p>
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/james-von-hendy.jpg" width="107" height="115" alt="Photo of James Von Hendy" style="margin-left:100px;"/> 
+
+								<div class="bio">
+
+									<h2>James Von Hendy, MA, CPCC, PCC</h2>
+
+									<p>James founded BladeDancer Coaching and Consulting in 1999 where he combines his passion for excellence in deed and spirit with his abiding love for creativity, innovation, and the limitless possibilities of human endeavor. He discovered coaching late in a 21 year career in high tech when he was seeking better models for mentoring, particularly with regard to establishing a culture of enjoyment and life balance. Entrepreneurs, spiritual leaders, and creative artists have been especially drawn to his private coaching practice. Alongside coaching, James writes poetry, fiction, and essays, and hikes and bird watches in the beautiful Santa Cruz Mountains with his wife and friends.</p> 
+
+								</div>
+
+							</div>
+
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Vu-Mai.jpg" width="207" height="115" alt="Photo of Mai Vu"/>
+								<div class="bio">
+									<h2>Mai Vu, MA, CPCC, PCC</h2>
+									<p>Masters in Management from John F. Kennedy University <br />
+Mai&rsquo;s expertise is to coach Asian leaders to capitalize and honor their own uniqueness to succeed and be effective in the global business market. Her focus is her deep understanding of the Eastern and Western philosophies and mental models, from which she shows her clients ways to integrate the best of both worlds into their leadership. Mai&rsquo;s ideal clients are executives who strive to make a difference in the world, who are called to lead authentically and are willing to have a lasting impact. Mai&rsquo;s career includes: 10 years of corporate management background; 15 years of pioneering in the coaching and leadership development field; and 10 years of consulting work with corporate leaders to build a leadership culture in their organization.</p>
+								</div>
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/wheat-emma.jpg" width="207" height="115" alt="Photo of Emma Wheat"/>
+								<div class="bio">
+									<h2>Emma Wheat, CPCC</h2>
+									<p>Emma is a highly skilled developer of people, facilitating the growth, learning and well being of individuals and their teams. Emma works with teams and individuals in the corporate world to identify strengths and challenges together with understanding and addressing issues that hold them back from outstanding performance. The result is an increase in both positivity and productivity, creating relationships that produce inspiring results. Emma blends her past experiences of teacher and corporate management in the events arena, with powerful coaching to create changes within leaders at all levels. Her background as an educator, board director, leader, and facilitator of workshops allows her to work towards synergy and change for her clients to lead their lives from a place of conviction, not fear.</p>
+								</div>
+			</div>
+
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Wikander-David.jpg" width="207" height="115" alt="Photo of David Wikander"/>
+								<div class="bio">
+									<h2>David Wikander, CHT, CPCC, PCC</h2>
+									<p>David is always one for adventure, exploring and diversity. Having studied and practiced in a wide range of disciplines has given David a renaissance spirit.
+With over 25 years experience leading personal growth workshops and leadership development as the focus of his previous whitewater rafting company, David works with individuals, couples, and teams, and is trained as a relationship systems coach. David&rsquo;s work is about helping his clients feel empowered in their lives, and maintain healthy conscious relationships, while being in balance with body, mind and spirit.</p>
+								</div>
+			</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/cat-williford.jpg" width="107" height="115" alt="Photo of Cat Williford" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Cat Williford, CPCC, MCC</h2>
+
+									<p>One of the first six coaches CTI certified in 1994, one of the first CTI leaders and one of the first coaches to receive the MCC designation from the ICF, Cat is a pioneer and champion of the coaching profession. She is known as the woman executive&rsquo;s secret weapon and &ldquo;Coach&rsquo;s Coach.&rdquo; Clients include executive mangers based across the UK, Europe, Australia and North America. Passionate about deliberate and authentic communication, Cat developed &ldquo;Dynamic Speaking Skills&rdquo; to train leaders to speak with power, from vision, to inspire a team and to sell an idea. Cat is commanding with any group size and activity: keynote speeches, TV guest expert, addressing legislative bodies, and training people.</p> 
+
+								</div>
+
+							</div>
+							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Wilson-Signy.jpg" width="207" height="115" alt="Photo of Signy Wilson"/>
+								<div class="bio">
+									<h2>Signy Wilson, MIR, CPCC, PCC</h2>
+									<p>Masters of Industrial Relations and Human Resources, Queen&rsquo;s University, Kingston  ON<br/>
+									Sign&yacute; brings her dynamic enthusiasm and focused directness to her work as a coach and workshop leader. Placing high value on honoring people and their life paths, Sign&yacute; has developed diverse experience in identifying and working with human potential, drawing out excellence in all people. A visionary, Sign&yacute; has presented illuminating workshops in an authentic and engaging way for over 10 years. In speaking from her heart, she encourages and inspires both groups and individuals to see how they are capable of amazing things. Sign&yacute;&rsquo;s passion for people coupled with her survival of cancer, sparks her fiercely held perspective that every human life is precious. She combines the power of fun, faith and ease to create and re-establish focus and balance in people&rsquo;s personal and business lives.
+									</p>
+								</div>
+							</div>
+
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/jil-windsor.jpg" width="107" height="115" alt="Photo of Jil Windsor" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Jil Windsor, CPCC, PCC</h2>
+
+									<p>Jil is a live-wire, fire-breathing, full-hearted woman who sometimes says, &ldquo;I&rsquo;ve lived a very long time&rdquo;. Not really that old but has forgotten her age, she is sexy and wise and loves to be with people who are the movers and shakers on the planet. She has raised three amazing children, been part of the British rock and roll scene, and trained extensively in body psychotherapy and as a Master NLP practitioner. She has presented to countless coaches through numerous workshops and traveled around the planet except to the poles which are definitely too cold for her. She is the co-creator of <em>Danger, Sex and Magic: Coaching Beyond the Forbidden and Taboo</em>, a multi-formatted coaching and coach training program. She currently lives in California and Florida, loving Life.</p> 
+
+								</div>
+
+							</div>
+
+			<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/woodbridge-elizabeth.jpg" width="207" height="115" alt="Photo of Elizabeth Woodbridge"/>
+								<div class="bio">
+									<h2>Elizabeth Woodbridge, CPCC, PCC</h2>
+									<p>Elizabeth&rsquo;s specialty is working with individuals and teams to develop effective communication and leadership skills to consciously create their desired results using practical tools for a fast-paced and rapidly evolving world. She has been developing and leading workshops in personal development, wellness, leadership and coaching for the past 15 years. Her professional experience includes Executive Director of non-profit organizations, board development, special events coordination, sales and public relations. She is grateful to her own coach for his support in going forward to fulfill a dream of moving from the USA to Paris where she is joyfully based.</p>
+								</div>
+			</div>
+.							
+							<div class="biowrap">
+								<img src="http://www.thecoaches.com/res/img/photos/Wyss-Sabina.jpg" width="207" height="115" alt="Photo of Sabina Wyss"/>
+								<div class="bio">
+									<h2>Sabina Wyss, MCC, CPCC</h2>
+									<p>Lehrerpaten (Degree) in Education, Language, and Psychology from Lehrerseminar University, Bern Switzerland<br/>
+									Devoted to supporting clients and groups in finding and living their life purpose, Sabina coaches with warmth, fierceness and humor in Europe, America and Africa. She has trained in Europe and the U.S. as a coach, vision quest guide, holistic health professional and teacher. Sabina divides her life between her homes in Switzerland at the foot of the alps, in Colorado in the Redrock-Sandcanyons, and near the ocean in San Diego. She leads groups into the Sahara desert by camel back on vision quests and on foot into canyons of the U.S. Southwest for life changing coaching-nature-adventures. Sabina leads a foundation for the nomads of the Sahara desert and co-stewards Sage Canyon Ranch in Southwest  Colorado, a place for nature based consciousness evolution.
+									</p>
+								</div>
+							</div>
+							
+							<div class="biowrap">
+
+								<img src="http://www.thecoaches.com/res/img/photos/juhree-zimmerman.jpg" width="107" height="115" alt="Photo of Juhree Zimmerman" style="margin-left:100px;"/>
+
+								<div class="bio">
+
+									<h2>Juhree Zimmerman, RN, BScN, MEd, CPCC, ORSCC, MCC</h2>
+
+									<p>Juhree is a passionate coach, trainer and international consultant. She facilitates teams and leadership development in a variety of organizations, including health care, finance and Fortune 500 companies. Her company, Strategy for Synergy, is based on the concept that all individuals and organizations can create a synergy to exceed their own expectations. Juhree calls on her work in strategic planning, policy development, systems work and coaching to support individual and organizational change and find new ways to manage conflict, while increasing productivity. She is an associate faculty member of the UBC School of Nursing and teaches coaching skills to undergraduate and graduate nursing students.</p> 
+
+								</div>
+
+							</div>
+
+
+
+
+					  </div>
+
+
+
+
+
+					</div>
+
+				</div>
+
+
+
+				<!-- ctaAreaId --><div id="cta-area">
+
+<dl class="cta" id="cta1">
+
+<dt><a href="../../leadership/index.html"><img src="../../res/img/cta_leadership.gif" width="195" height="42" alt="Leadership: Why Now?" /></a></dt>
+
+<dd><a href="../../leadership/index.html">There is no more important time to have a powerful, positive and lasting impact within your organization, profession, family or community<span class="arrowlink">.</span></a></dd>
+</dl>
+
+<dl class="cta" id="cta2">
+
+<dt><a href="http://www.coactivenetwork.com/"><img src="../../res/img/cta_join-our-network.gif" width="195" height="42" alt="Join Our Network" /></a></dt>
+
+<dd><a href="http://www.coactivenetwork.com/">The universal gathering place for <abbr title="Coaches Training Institute">CTI</abbr> graduates to assemble in one central community
+
+<span class="arrowlink">.</span>
+
+</a></dd>
+
+</dl>
+
+<dl class="cta" id="cta3">
+
+<dt><a href="../../contact/schedule-a-call/index.html"><img src="../../res/img/cta_schedule-a-call.gif" width="195" height="42" alt="Schedule a Call" /></a></dt>
+
+<dd><a href="../../contact/schedule-a-call/index.html">Do you want to hear more about Co-active Coaching? Please feel free to contact <abbr title="Coaches Training Institute">CTI</abbr> at +44(0)845 299 8199 or click here to register
+
+<span class="arrowlink">.</span>
+
+</a></dd>
+
+</dl>
+
+
+<!-- #startcta4 -->
+<dl class="cta" id="cta4">
+<!-- newsletter signup temporarily commented out
+          <dt><img src="res/img/cta_newsletter-sign-up.gif" width="195" height="42" alt="Newsletter Sign-Up" /></dt>
+
+          <dd>
+            <script language="Javascript" src="http://builder.campaigner.com/app/campaigner/calendar/calendar.js" type="text/javascript">
+</script><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+function popUp(url)
+{
+ appWindows = window.open(url, "Member", "toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=250");
+}
+//]]>
+</script> 
+
+
+            <form id="subscribe" name="optin" target="Member" method="post" action="http://builder.campaigner.com/app/campaigner/services/optinlist/processoptinrequest.jsp?oilb=90754287&amp;builderType=free">
+
+              <input type="hidden" name="OILB_MAIL_PREF" value="multi-part" /><input id="newsletter" name="newsletter" type="text" /><input value="Submit" onclick="javascript:popUp('');document.optin.submit();" id="submit" name="submit" type="image" src="res/img/arrow_submit.jpg" alt="&gt;" /> <label id="label_newsletter" for="newsletter">Enter your email address above</label> <input type=
+              "HIDDEN" name="commitcontact" value="true" /><input type="HIDDEN" name="builderType" value="free" />
+            </form>
+          </dd>
+-->          
+        </dl>
+<!-- #end -->
+
+</div>
+
+<!-- -->
+
+				
+
+				<!-- used for cross-browser stabilizion of layout -->
+
+				<div class="pageclear"></div>
+
+
+
+			</div>
+
+			
+
+			<div id="footer">
+
+				<img id="cti-logo-tagged" src="../../res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/>
+
+				<div id="footer-content">
+
+					<!-- footerNavId --><div id="footer-nav">
+<div id="footer-legal">Copyright &#169; 2009 The Coaches Training Institute. All rights reserved. <a id="privacy-link" href="../../legal/privacy.html">Privacy Policy</a><span class="divider">&#160;|&#160;</span><a href="../../legal/disclosure.html">Disclosure</a></div>
+<ul id="quick-nav">
+<li><a href="../../index.html">Home</a><span class="divider">&#160;|&#160;</span></li>
+<li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&#160;|&#160;</span></li>
+<li><a href="../../jobs/index.html">Jobs</a><span class="divider">&#160;|&#160;</span></li>
+<li><a href="../../contact/index.html">Contact Us</a></li>
+</ul>
+</div>
+<!-- -->
+
+					<img id="icf-logo" src="../../res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+
+				</div>
+
+				
+
+			</div>
+
+
+
+		</div>
+
+	<script type="text/javascript">
+
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+	</script>
+
+	<script type="text/javascript">
+
+	try {
+
+	var pageTracker = _gat._getTracker("UA-5715102-1");
+
+	pageTracker._trackPageview();
+
+	} catch(err) {}</script>
+
+	</body>
+
+</html>

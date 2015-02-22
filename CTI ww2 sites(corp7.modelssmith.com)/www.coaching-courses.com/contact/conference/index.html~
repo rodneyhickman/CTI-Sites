@@ -150,39 +150,49 @@ insert_social_bookmarking();
           <div id="breadcrumbs">
             <p><span id="youarehere" class="accessibility-hide">You are here:&nbsp;</span> <a href="../../index.html">Home</a><span class="divider">&nbsp;||&nbsp;</span><a href="../index.html" class="here">Free Info Call</a></p>
           </div>
-
-
-
-
-
 <h1 class="main-headline">Join Us for a Free Inspiration Call</h1>
-<p><strong>Do you want to learn more about the transformative power of Co-active Coaching?</strong></p>
+<p><strong>Join our next Inspiration Call with CTI Founder Karen Kimsey House</strong></p>
 
           <div>
-<p style="text-align:center;">Next Call: January 29th<br />The End of Victimhood: &nbsp;a Closer Look at Co-Active Leadership with Sam House,&nbsp;<strong>CPCC, MCC and CTI Leadership Program Faculty Leader.</strong></p>
-</div>
-<div>
-<p>&nbsp;</p>
-</div>
-<div>
-<p><strong>Our next information call, on January 29th, 19.00 UK time, will discuss: &nbsp;&lsquo;</strong>The End of Victimhood: &nbsp;a Closer Look at Co-Active Leadership&rsquo;<strong>, with the CTI Leadership Faculty Leader Sam House&nbsp;&nbsp;</strong></p>
-<div>
 
-</div>
-<div>
-<p>In this call Sam House invites you to take a closer look at Co-Active Leadership, as a vehicle and pathway, for transforming the polarization which contributes to a conflicted world. &nbsp;By making clear the distinctions and synergy between Co-Active coaching and Co-Active leadership, Sam will help to clarify how the Co-Active way, can empower us all to take greater responsibility for our lives and the emerging needs of the world around us. &nbsp;</p>
-</div>
-</div>
-<div>
-<p>This is a wonderful opportunity for both coaches as well as anyone new to CTI, to learn about the transformative power of Co-Active Leadership.</p>
-<p>To sign up simply use the automated form below, or contact one of our program advisors direct on &nbsp;<a style="color: blue; text-decoration: underline;" href="mailto:UKinfo@coactive.com">UKinfo@coactive.com</a>&nbsp;&nbsp;or +44 (0)845 299 8199.</p>
-</div>
-          
-         
+            <p>Join CTI Co-Founder and CEO Karen Kimsey House for our forthcoming Inspiration Call, where together with our host Clark Friedrichs, she will be discussing the evolution of coaching, and the key role it has to play in helping society shift its focus from ME to WE.
+<br /><br /><strong>January 29th 2014 at 10 am PST, 6pm UK, 7pm CET.</strong><br /><br />Whether you are already a coach, or just considering training, then this call is the perfect opportunity to discover:<br /></p>
+			<ul>
+				<li>
+					Why and how Co-Active Coaching is recognized as a leadership development competency.
+				</li>
+				<li>
+					How and why humanity needs to shift its focus from ME to WE, without losing sight of our unique expression as individuals.
+				</li>
+				<li>
+					Where Co-Active Coaching is today, and how CTI sees it evolving over the next 10 years.
+				</li>
+			</ul>
+			
 
+			<div>
+				<table>
+					<tr>
+						<td align="top">
+								<img src="../../res/img/photos/karen-kimsey-house-1.jpg" alt="Photo of Karen Kimsey-House"/>
+						</td>
+						<td>
+							<h2>Karen Kimsey-House, MFA, <abbr title="Certified Professional Co-Active Coach">CPCC</abbr>, <abbr title="Master Certified Coach">MCC</abbr>, Co-founder, CEO &amp; Director</h2>
+
+							<p>One of the earliest recognized luminaries in the coaching profession, Kimsey-House founded CTI in 1992 with Laura Whitworth and Henry Kimsey-House.
+							They created the Co-Active philosophy of relationship that informs CTI�s world-renowned coaching and leadership programs. She also is the co-author of        <i>Co-Active Coaching</i>, the best-selling industry bible, which will soon be out in its third edition. A successful entrepreneur, Kimsey-House
+							founded and directed the Learning Annex San Francisco adult education program in 1986 and grew it into one of the most admired programs under the
+							national Learning Annex brand. She received her MFA in Communications and Theater from Temple University in Philadelphia. Committed to pioneering
+							Co-Activity in challenged environments and troubled populations, Kimsey-House continues to lead CTI workshops and is a dynamic keynote speaker around
+							the world. On a mission of global, transformative change, she lives with her husband, Henry Kimsey-House, by the Pacific Ocean.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		<br /><strong>Your host:</strong>  Clark Friedrichs, CPCC<br /><br />As a CTI Coach Training Faculty member and erstwhile host of our old format Information Call, Clark is an adept interviewer capable of creating content rich experiences, which meet the needs of all participants whatever their awareness of coaching.<br /><br />To sign up simply use the automated form below, or contact one of our program advisors direct on <a href="mailto:UKinfo@coactive.com">UKinfo@coactive.com</a> &nbsp;or +44 (0)845 299 8199.</p>
           <div class="pri">
             <form action="http://www.thecoaches.com/docs/form.html" method="post" id="myform" name="myform">
-                        <input name="recipient" value="UKinfo@thecoaches.com" type="hidden" />
+                        <input name="recipient" value="UKinfo@coactive.com" type="hidden" />
 
 <input name="subject" value="FREE INFORMATION CALL ON CO-ACTIVE COACHING (www.coaching-courses.com/contact/conference/index.html)" type="hidden" /><input name="redirect" value="http://www.coaching-courses.com/contact/conference/thank-you.html" type="hidden" />
 
@@ -296,7 +306,8 @@ insert_social_bookmarking();
                   <option value="---------------------------------------">
                     ---------------------------------------
                   </option>
-                    <script src="http://www.thecoaches.com/data/webinar_uk.js"></script>
+                    <option value="January 29th">January 29th</option>
+                    <!-- <script src="http://www.thecoaches.com/data/webinar_uk.js"></script> -->
 
                 </select>
               </fieldset><input name="save" value="Sign Up" class="awesomesubmit" onclick="document.getElementById('myform').submit();" id="Button1" type="button" /><input name="cancel" value="Cancel" class="awesomesubmit" onclick="JavaScript:GetLayout();" id="Button2" type="button" />
@@ -395,11 +406,31 @@ function popUp(url)
   </div>
 
   <!-- Edit this list to change dates -->
+  <!--
   <div id="datelist">
 <ul>
 <li>September 25, 2012 - 19:00 hours GMT</li>
 
 </ul>
   </div>
+  -->
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 952935738;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/952935738/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 </body>
 </html>

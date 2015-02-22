@@ -137,7 +137,7 @@ While there will be certain logistical duties for you as an assistant, the bigge
 Your job will be to hold the space for learning in the room. This means that you must be alert and aware throughout the entire course - that you be present at Levels 2 & 3 for whatever may be needed to facilitate the learning. While we know you will learn a great deal from assisting, we ask that you commit to service -- being and doing whatever is needed for the course to have the maximum impact for the participants.</p> 
 <p>
 Since assisting is such a popular experience, please keep in mind that assistant slots often fill three or four months in advance, so sign up early. 
-Please note that you can only assist in courses that you have completed <em>in the last 5 years</em>. </p>
+</p>
 <p><strong>ASSISTING REQUIREMENTS</strong></p>
 <p>
 In order for everyone to have a positive experience, please read the following requirements and indicate your understanding by checking the box and typing your name in the space provided below.</p>
@@ -154,7 +154,7 @@ In order for everyone to have a positive experience, please read the following r
 </p>
 <p style="margin-bottom: 0">
   <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
-<form action="http://www.thecoaches.com/form.html" method="post" enctype="application/x-www-form-urlencoded" name="assisting" style="margin-top: 0; margin-bottom: 0;" onsubmit="javascript:return hasAgreed(this)">
+<form action="http://www.thecoaches.com/docs/form.html" method="post" enctype="application/x-www-form-urlencoded" name="assisting" style="margin-top: 0; margin-bottom: 0;" onsubmit="javascript:return hasAgreed(this)">
   <input name="recipient" value="ukregistration@thecoaches.com" type="hidden">
   <input name="subject" value="UK Co-Active Coaching Assistant Sign-up Form (www.coaching-courses.com/coach-training/be-an-assistant/)" type="hidden">
   <input name="redirect" value="http://www.coaching-courses.com/coach-training/be-an-assistant/thank-you.html" type="hidden">
@@ -196,7 +196,7 @@ function showCoursesFor(region){
 
 
 
-<script src="http://www.thecoaches.com/coach-training/be-an-assistant/uk_courses.html"></script>
+<script src="http://www.thecoaches.com/docs/coach-training/be-an-assistant/uk_courses.html"></script>
 
 
 
