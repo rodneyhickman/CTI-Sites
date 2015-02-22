@@ -1,0 +1,1019 @@
+#!/usr/bin/perl
+# Usage: make_cal_cache
+# By Thomas Beutel for Coaches Training Institute
+
+use strict;
+
+use DBI;
+use Template;
+use List::Util qw(sum min max reduce);
+use Date::Manip;
+use Smart::Comments;
+use Data::Dumper;
+
+#-------------------------- Setup -----------------------
+
+# global variables (yes, globals are bad)
+use vars qw( $dbh $index_template $grid_template $midweek_template $curriculum_grid_template $grid_template_old $subregion_grid_template $location_template $serial_number $series_not_stand_alone  $preferred_call_time);
+
+# Database	    
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+# Get last serial number in course_series table
+$serial_number = get_last_serial_number() + 1;
+
+# Templates
+$index_template = q{
+<div id="[% country_id %]" style="width:230px;margin-top:12px;">
+  <h2>[% country %]</h2>
+  <ul class="bulleted-arrowed">
+[% FOREACH r = regions %] 
+    <li><a href="/coach-training/dates-and-locations/#[% r.region_code %]" class="onpage">[% r.region_name %]</a></li>
+[% END %]
+  </ul>
+</div>
+};
+
+
+$grid_template = q{
+<a name="[% region.region_code %]" id="[% region.region_code %]"></a>
+            <h2>[% region.region_name %] [% region.region_weekend %]<br />[% region.region_extra %]</h2>
+
+            <p style="color: red; margin-bottom: 4px; font-size: 10px;">(mouse over each date for specific venue information)</p>
+
+            <table class="new regiongrid" >
+              <thead>
+                <tr>
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat 0 0;">1. Fundamentals</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -10px 0;">2. Fulfillment</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -18px 0;">3. Balance</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -18px 0;">4. Process</th>
+
+                  <th>5. Synergy</th>
+                </tr>
+              </thead>
+
+              <tbody>
+[% FOREACH item IN grid %]
+                <tr>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.4.fmid %]">[% item.4.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.3.fmid %]">[% item.3.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.2.fmid %]">[% item.2.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.1.fmid %]">[% item.1.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.0.fmid %]">[% item.0.start_date_formatted %]</a></td>
+                </tr>
+[% END %]
+
+                <tr>
+                  <td colspan="5"><em>For additional dates please contact a Program Advisor at 800-691-6008 x3</em></td>
+                </tr>
+              </tbody>
+            </table>
+
+<script type="text/javascript">
+//<![CDATA[
+// execute your scripts when the DOM is ready. this is a good habit
+$(function() {
+[% FOREACH n = [ 0 .. 4 ] %]
+[% FOREACH m = [ 0 .. 4 ] %]
+[% IF grid.${n}.${m}.fmid %]
+$('#[% grid.$n.$m.fmid %]').tooltip({tip:'#[% grid.$n.$m.location %]',offset:[45, 2],effect:'slide'});
+[% END %]
+[% END %]
+[% END %]
+});
+//]]>
+</script>
+
+};
+
+
+$midweek_template = q{
+
+            <h3 style="margin-top:-40px;">[% region.region_name %] - Midweek Series</h3>
+
+            <p style="color: red; margin-bottom: 4px; font-size: 10px;">(mouse over each date for specific venue information)</p>
+
+            <table class="new regiongrid" >
+              <thead>
+                <tr>
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat 0 0;">1. Fundamentals</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -10px 0;">2. Fulfillment</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -18px 0;">3. Balance</th>
+
+                  <th style="background: url(/res/img/table-head-arrows.gif) no-repeat -18px 0;">4. Process</th>
+
+                  <th>5. Synergy</th>
+                </tr>
+              </thead>
+
+              <tbody>
+[% FOREACH item IN grid %]
+                <tr>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.4.fmid %]">[% item.4.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.3.fmid %]">[% item.3.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.2.fmid %]">[% item.2.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.1.fmid %]">[% item.1.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.0.fmid %]">[% item.0.start_date_formatted %]</a></td>
+                </tr>
+[% END %]
+
+                <tr>
+                  <td colspan="5"><em>For additional dates please contact a Program Advisor at 800-691-6008 x3</em></td>
+                </tr>
+              </tbody>
+            </table>
+
+<script type="text/javascript">
+//<![CDATA[
+// execute your scripts when the DOM is ready. this is a good habit
+$(function() {
+[% FOREACH n = [ 0 .. 4 ] %]
+[% FOREACH m = [ 0 .. 4 ] %]
+[% IF grid.${n}.${m}.fmid %]
+$('#[% grid.$n.$m.fmid %]').tooltip({tip:'#[% grid.$n.$m.location %]',offset:[45, 2],effect:'slide'});
+[% END %]
+[% END %]
+[% END %]
+});
+//]]>
+</script>
+
+};
+
+
+
+
+
+$curriculum_grid_template = q{
+
+
+            <p style="color: red; margin-bottom: 4px; font-size: 10px;margin-top:-40px;">(mouse over each date for specific venue information)</p>
+
+            <table class="new regiongrid">
+              <thead>
+                <tr>
+                  <th style="background: #EBE9DA;" colspan="5">Meet the New Co-Active Model Workshop&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+              </thead>
+
+              <tbody>
+[% FOREACH item IN grid %]
+                <tr>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.0.fmid %]">[% item.0.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.1.fmid %]">[% item.1.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.2.fmid %]">[% item.2.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.3.fmid %]">[% item.3.start_date_formatted %]</a></td>
+                  <td><a target="_blank" href="javascript:void(0)" id="[% item.4.fmid %]">[% item.4.start_date_formatted %]</a></td>
+                </tr>
+[% END %]
+
+                <tr>
+                  <td colspan="5"><em>[% pricing %]</em><br /><a class="smallbtn" href="/coach-training/courses/register-curr-update.html?package=[% package %]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a></td>
+                </tr>
+              </tbody>
+            </table>
+
+<script type="text/javascript">
+//<![CDATA[
+// execute your scripts when the DOM is ready. this is a good habit
+$(function() {
+[% FOREACH n = [ 0 .. 4 ] %]
+[% FOREACH m = [ 0 .. 4 ] %]
+[% IF grid.${n}.${m}.fmid %]
+$('#[% grid.$n.$m.fmid %]').tooltip({tip:'#[% grid.$n.$m.location %]',offset:[45, 2],effect:'slide'});
+[% END %]
+[% END %]
+[% END %]
+});
+//]]>
+</script>
+
+};
+
+
+
+
+
+
+$location_template = q{
+            <div id="[% site.site_code %]" class="tooltip">
+              <p><strong>[% site.site_name %]</strong><br />
+               [% site.city %], [% site.state %]</p><a href="[% site.site_url %]" class="pdf" target="_blank">Detailed venue info</a>
+            </div>
+};
+
+#-------------------------- Create HTML -----------------------
+
+
+# create the HTML for the given countries
+#my @countries = ( 'United States', 'Canada' );
+my @countries = ( 'United States', 'Canada', 'Singapore' );
+my $index_html    = reduce { $a . $b } map { make_index_html($_) } @countries;
+my $grid_html     = reduce { $a . $b } map { make_grid_html($_)  } @countries;
+my $location_html = reduce { $a . $b } map { make_location_html($_) } @countries;
+
+# store the INDEX and GRID HTML's
+$dbh->do('UPDATE calendar_cache set idx=?, html=?, location=?, created=now() where id=9',undef,$index_html,$grid_html,$location_html);
+
+
+remove_old_course_series($serial_number); # clean up course_series table
+
+open(OUT,">/www/www.thecoaches.com/calendar_cache/9-cache.html")
+ or die "Can't open cache file";
+print OUT $grid_html;
+close(OUT);
+
+exit;
+
+#-------------------------- Iteration subroutines -------------------
+
+sub Iterator (&) { return $_[0] }  # syntactic sugar for iterators
+
+sub make_index_html {
+  my ($country) = @_;
+  my $html = '';
+  my $regions = [ ];
+  my $parent_regions_seen = { };
+
+  # get regions for this country, with course count > 0
+  my $region_it = make_region_iterator($country, 
+                                       sub { region_course_count($_[0]) > 0 }
+                                     );
+
+  while ( my $region = $region_it->() ) {
+    # skip if fast track, do not list in index
+    next if ($region->{region_code} =~ m/ FT /xms);
+
+    if (exists $region->{parent_region}) {
+      # skip if parent region was already seen
+      next if(exists $parent_regions_seen->{$region->{parent_region}} && $parent_regions_seen->{$region->{parent_region}} > 0);
+      $parent_regions_seen->{$region->{parent_region}}++;
+    }
+
+    push(@$regions, $region);
+  }
+
+  # make country_id as lower case and subsitute spaces with dashes
+  my $country_id = lc $country;
+  $country_id =~ s/ [ ] /-/gxms;
+
+  my $template = Template->new();
+
+  my $vars = {
+    country    => $country,
+    country_id => $country_id,
+    regions    => $regions,
+  };
+
+  $template->process(\$index_template,$vars,\$html);
+
+  # ### $html
+  return $html;
+}
+
+
+sub make_grid_html {
+  my ($country) = @_;
+  my $html = '';
+  my $parent_regions_seen = { };
+
+
+  my $region_it = make_region_iterator($country, 
+                                       sub { region_course_count($_[0]) > 0  }
+                                     );
+
+  my $template = Template->new();
+  
+  while( my $region = $region_it->() ){
+    my $series_it = make_series_iterator($region);
+    my @grid;
+    while ( my $series = $series_it->() ) {
+      push(@grid,$series);
+    }
+
+    my @grid_temp    = sort by_series_dates @grid;
+
+
+    # @grid_sorted represents weekend series
+    my @grid_sorted;
+    @grid_sorted  = grep { $_->[0]->{midweek} != 1 and $_->[4]->{midweek} != 1 } @grid_temp;
+
+
+    # @grid_midweek represents midweek series
+    my @grid_midweek = grep { $_->[0]->{midweek} == 1 or  $_->[4]->{midweek} == 1 } @grid_temp;
+
+
+    # BUSINESS RULE EXCEPTION: rename for orlando or any fast track
+    if ($region->{region_code} eq 'ORL' 
+        or $region->{region_code} =~ m/ FT \z /xms) {
+      $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Cohort Series</b>';
+      $region->{region_weekend} = '';
+    }
+    else {
+      $region->{region_weekend} = '- Weekend Courses';
+    }
+   
+    if (exists $region->{parent_region}) {
+      my $parent = $region->{parent_region};
+      # skip if parent region was already seen
+      if(exists $parent_regions_seen->{$parent} && $parent_regions_seen->{$parent} > 0){
+	$region->{region_name} =~ s/$parent<br.*?>//ms;  # remove parent region name up to and including the break
+      }
+      $parent_regions_seen->{$region->{parent_region}}++;
+    }
+
+
+    ### @grid_sorted
+    # store grid in database in course_series table
+    store_course_series($serial_number,@grid_temp);
+
+#print Dumper  @grid_sorted;
+
+    my $vars = {
+      region => $region,
+      grid   => \@grid_sorted,
+    };
+
+
+# ### $vars
+
+    $template->process(\$grid_template,$vars,\$html);
+
+
+
+
+
+    # #################### iterator for Midweek Series ####################
+    #
+    #
+
+    if (scalar @grid_midweek > 0)  {
+    
+    my $vars1 = {
+      region => $region,
+      grid   => \@grid_midweek,
+    };
+
+
+    $template->process(\$midweek_template,$vars1,\$html);
+
+  }
+
+
+    # #################### iterator for Curriculum Update Workshop ####################
+    #
+    #
+
+    my $curr_update_it = make_curr_update_it($region);
+
+    my @upd_grid;  
+    # structure: [ 
+    #               [ { course }, { course }, { course }, { course }, { course } ], 
+    #               [ { course }, { course }, { course }, { course }, { course } ], 
+    #               ...
+    #            ]
+
+    my @row ;
+    #my $pricing = 'Early Bird Ticket $125 through December 9, 2011.  Full price of $175 from December 10, 2011 through workshop date.';
+    my $pricing = 'Ticket price is $175';
+    my $package = 11;
+    my $i = 0;
+    while ( my $course = $curr_update_it->() ) {
+      push(@row,$course);
+      if ($course->{start_date} =~ m/2011/) {
+        $pricing = 'Workshop price is $175.';
+        $package = 10;
+      }
+      $i++;
+      if ($i > 4) {
+        $i = 0;
+        push(@upd_grid,[@row]);
+        @row = ( );
+      }
+    }
+
+    if (@row) {
+        push(@upd_grid,[@row]);
+    }
+
+    if (@upd_grid) {
+    
+      #print Dumper @upd_grid;
+
+      my $vars = {
+        region  => $region,
+        grid    => \@upd_grid,
+        pricing => $pricing,
+        package => $package,
+      };
+      
+      $template->process(\$curriculum_grid_template,$vars,\$html);
+    }
+    
+  }
+
+# ### $html
+
+
+  
+  return $html;
+}
+
+sub make_location_html {
+  my ($country) = @_;
+  my $html = '';
+
+  my $site_it = make_site_iterator(  );
+
+  my $template = Template->new();
+  
+  while( my $site = $site_it->() ){
+    my $vars = {
+      site => $site,
+    };
+
+    $template->process(\$location_template,$vars,\$html);
+  }
+
+  return $html;
+}
+
+sub make_site_iterator {
+  my $sites = $dbh->selectall_arrayref('SELECT site_code,site_name,city,state,site_url FROM site_data',{Columns=>{}});
+
+  # Exception for Singapore
+  push(@$sites,{site_code=>'Singapore',site_name=>'Singapore',city=>'Singapore',state=>'',site_url=>''});
+
+  return Iterator {
+    my $site = shift @$sites;
+    last unless $site;
+    next if $site->{site_url} eq '';
+    #next if $site->{site_url} !~ m/\.pdf/i;
+    if($site->{city} eq ''){
+	$site->{city} = '--city missing--';
+    }
+    if($site->{state} eq ''){
+	$site->{state} = '--state/prov missing--';
+    }
+    next if $site->{city} eq '';
+    if($site->{site_url} !~ m/\/docs/){
+	$site->{site_url} =~ s/thecoaches\.com/thecoaches.com\/docs/ms; # add /docs into URL
+    }
+    return $site;
+  };
+}
+
+sub make_curr_update_it {
+  my ($region) = @_;
+
+  my $region_code = $region->{region_code};
+  my $courses;
+
+  # exceptions
+
+  if($region_code eq 'xxxSCOC') {
+    #$region_code = 'SC';
+    $courses =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'OC%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and course_type_id=149 ORDER BY start_date DESC",{Columns=>{}},'SC');
+  }
+  elsif($region_code eq 'SCLA') {
+    #$region_code = 'SC';
+    $courses =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'LA%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and course_type_id=149 ORDER BY start_date DESC",{Columns=>{}},'SC');
+  }
+  else {
+    $courses =  $dbh->selectall_arrayref('SELECT * from event_calendar where region=? and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and course_type_id=149 ORDER BY start_date DESC',{Columns=>{}},$region_code);
+  }
+
+  if ($region->{region_code} eq 'xxxSR') {
+    push(@$courses,
+         {
+           assistant_count => '0',
+           assistant_wait_count => '0',
+           booking_link => 'http://www.thecoaches.com/pdfs/SR-CTI.pdf',
+           call_time => '',
+           course_type_id => 149,
+           date => '11/20/2011',
+           day_of_week => 'Friday',
+           end_date => undef,
+           end_date_formatted => undef,
+           event => 'Curriculum Update Workshop',
+           fmid => '1',
+           id => '3641',
+           location => 'SR-TBA',
+           pod_name => '0',
+           region => 'SR',
+           series_id => '0',
+           start_date => '2011-11-20 00:00:00',
+           start_date_formatted => 'Nov 20, 2011',
+           student_count => '0',
+           total => '0'
+         }
+       );
+  }
+
+
+  return Iterator {
+    return shift @$courses;
+  };
+}
+
+
+
+sub make_series_iterator {
+  my ($region) = @_;
+
+  ### series_iterator: $region
+
+  # BUSINESS RULE EXCEPTION: return SF fast track dates if '0SR'
+  # (change this to 0SRxxx to turn off)
+  if ($region->{region_code} eq 'SRFTxxx') {
+    my $series = [
+  # the following was retrieved by turning smart comments on
+           {
+             assistant_count => '0',
+             assistant_wait_count => '0',
+             booking_link => 'http://www.thecoaches.com/pdfs/SR-CTI.pdf',
+             call_time => 'Fast Track',
+             course_type_id => 7,
+             date => '05/14/2010',
+             day_of_week => 'Friday',
+             end_date => undef,
+             end_date_formatted => undef,
+             event => 'In The Bones',
+             fmid => '14681',
+             id => '3641',
+             location => 'SR-TBA',
+             pod_name => '0',
+             region => 'SR',
+             series_id => '0',
+             start_date => '2010-05-14 00:00:00',
+             start_date_formatted => 'May 14, 2010',
+             student_count => '0',
+             total => '0'
+           },
+           {
+             assistant_count => '0',
+             assistant_wait_count => '0',
+             booking_link => 'http://www.thecoaches.com/pdfs/SR-CTI.pdf',
+             call_time => 'MIDWEEK/Fast Track',
+             course_type_id => 6,
+             date => '04/13/2010',
+             day_of_week => 'Tuesday',
+             end_date => undef,
+             end_date_formatted => undef,
+             event => 'Process',
+             fmid => '14705',
+             id => '3643',
+             location => 'SR-TBA',
+             pod_name => '0',
+             region => 'SR',
+             series_id => '0',
+             start_date => '2010-04-13 00:00:00',
+             start_date_formatted => 'April 13, 2010',
+             student_count => '0',
+             total => '0'
+           },
+           {
+             assistant_count => '0',
+             assistant_wait_count => '0',
+             booking_link => 'http://www.thecoaches.com/pdfs/SR-BW.pdf',
+             call_time => 'Fast Track',
+             course_type_id => 5,
+             date => '04/09/2010',
+             day_of_week => 'Friday',
+             end_date => undef,
+             end_date_formatted => undef,
+             event => 'Balance',
+             fmid => '14706',
+             id => '3644',
+             location => 'SR-TBA',
+             pod_name => '0',
+             region => 'SR',
+             series_id => '0',
+             start_date => '2010-04-09 00:00:00',
+             start_date_formatted => 'April  9, 2010',
+             student_count => '0',
+             total => '0'
+           },
+
+    ];
+    my @array = ( $series ); 
+    return Iterator {
+      return shift @array;
+    }
+  }
+
+  my $course_it = make_course_iterator($region);  
+  return Iterator {
+    return undef if $course_it->('exhausted?');
+    my $series = [
+      $course_it->('itb'),
+      $course_it->('pro'),
+      $course_it->('bal'),
+      $course_it->('ful'),
+      $course_it->('fun'),
+    ];
+### series: $series
+    return $series;
+  };
+}
+
+sub make_region_iterator {
+  my ($country,$filter) = @_;
+
+  # select all regions
+  my $regions = $dbh->selectall_arrayref('SELECT region_code,region_name FROM regions WHERE country=?',{Columns=>{}},$country);
+
+  # filter out unwanted regions (usually we filter out those regions with no courses)
+  my @regions = grep { $filter->($_) } @$regions;
+
+  # filter out any regions with SC in the code
+  @regions = grep { $_->{region_code} ne 'SC' && $_->{region_code} ne 'FL' && $_->{region_code} ne 'NC'} @regions;
+ 
+  # BUSINESS RULE EXCEPTION: add SF fast track
+  # uncomment the following, and add the series above in make_series_iterator
+
+  if ($country eq 'Singapore') {  
+    # push(@regions,{ 
+    #   region_code => 'SG',
+    #   region_name => 'Singapore',
+    # });
+  }
+
+  if ($country eq 'United States') {  
+
+    # add additional regions
+
+    # fast track locations here and in make_course_iterator
+    push(@regions,{ 
+     region_code => 'SRFT',
+    region_name => 'San Francisco Bay Area, CA ',
+    });
+    push(@regions,{ 
+      region_code => 'DCFT',
+      region_name => 'Washington, DC Metro ',
+    });
+
+    # subregions here. Subregions must have parent regions defined, The parent region will be listed only once in the index and the grid
+
+    # push(@regions,{ 
+    #   region_code => 'SCOC',
+    #   region_name => 'Southern California<br />&nbsp;&nbsp;<span style="font-size:92%">Orange County, CA</span>',
+    # parent_region => 'Southern California',
+    # });
+    push(@regions,{ 
+      region_code => 'SCLA',
+      region_name => 'Southern California<br>&nbsp&nbsp;<span style="font-size:92%">Los Angeles, CA</span>',
+      parent_region => 'Southern California',
+    });
+    push(@regions,{ 
+      region_code => 'SCSD',
+      region_name => 'Southern California<br>&nbsp&nbsp;<span style="font-size:92%">San Diego, CA</span>',
+      parent_region => 'Southern California',
+    });
+
+    # push(@regions,{ 
+    #   region_code => 'FLMIA',
+    #   region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Miami, FL</span>',
+    #   parent_region => 'Florida',
+    # });
+    push(@regions,{ 
+      region_code => 'FLFL',
+      region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Ft. Lauderdale, FL</span>',
+      parent_region => 'Florida',
+    });  
+    # push(@regions,{ 
+    #   region_code => 'FLORL',
+    #   region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Orlando, FL</span>',
+    #   parent_region => 'Florida',
+    # });
+    push(@regions,{ 
+      region_code => 'NCCHA',
+      region_name => 'North Carolina<br>&nbsp&nbsp;<span style="font-size:92%">Charlotte, NC</span>',
+      parent_region => 'North Carolina',
+    });  
+    # push(@regions,{ 
+    #   region_code => 'NCRA',
+    #   region_name => 'North Carolina<br>&nbsp&nbsp;<span style="font-size:92%">Raleigh, NC</span>',
+    #   parent_region => 'North Carolina',
+    # });
+  }
+
+  # BUSINESS RULE EXCEPTION: make Esalen sort after San Rafael
+  @regions = map { 
+    $_->{region_name}  = 'San Francisco Bay Area<br />&nbsp;&nbsp;Esalen Institute, Big Sur, CA' if $_->{region_code} eq 'Esalen';
+    $_->{region_extra} = '<em>English Speaking Courses, English Material, and French Speaking Coaching Assistants</em>' if $_->{region_code} eq 'MON';
+    $_->{region_name}  = 'Singapore &nbsp;&nbsp;<em><a href="http://www.thecoaches.com/coach-training/pricing-registration-singapore">Click here for pricing information or to register</a>.&nbsp; To schedule a phone appointment with a program advisor, email&nbsp;<a href="mailto:UKinfo@coactive.com">UKinfo@coactive.com</a> or +44 845 299 8199.</em>' if $_->{region_code} eq 'SG';
+
+    # ===============================  put Brigitte's city notifications here ===============================
+    #$_->{region_extra} = '<span style="color:#d00;">Due to the 2010 Winter Olympics in Vancouver, our Fulfillment course will be held in Seattle, WA.</span>' if $_->{region_code} eq 'VAN';
+    #$_->{region_extra} = '<span style="color:#d00;">New Co-active Coaching Course in Montreal</span>' if $_->{region_code} eq 'MON';
+    $_ } @regions;
+  
+
+  # sort by region name: compare region_name (or region_code if names equal)
+  @regions = sort { $a->{region_name} eq $b->{region_name} 
+                      ? $a->{region_code} cmp $b->{region_code}
+                      : $a->{region_name} cmp $b->{region_name} } @regions;
+
+  return Iterator {
+    return shift @regions;
+  };
+}
+
+sub make_course_iterator {
+  my ($region) = @_;
+  # courses for this region in reverse start_date order
+  # also account for "stand-alone" fundamentals courses
+
+  my $region_code = $region->{region_code}; 
+
+  # exceptions
+  if($region_code eq 'SRFT') { # add fast track locations here and in make_region_iterator
+    $region_code = 'SR';
+  }
+  if($region_code eq 'DCFT') {
+    $region_code = 'DC';
+  }
+
+  my $courses1 =  $dbh->selectall_arrayref('SELECT * from event_calendar where fmid!=15745 AND region=? and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC',{Columns=>{}},$region_code);
+
+
+  # exceptions
+
+  if($region_code eq 'xxxSCOC') {
+    #$region_code = 'SC';
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where fmid!=15745 AND region=? AND location LIKE 'OC%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'SC');
+  }
+  elsif($region_code eq 'SCLA') {
+    #$region_code = 'SC';
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where fmid!=15745 AND region=? AND location LIKE 'LA%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'SC');
+  }
+  elsif($region_code eq 'SCSD') {
+    #$region_code = 'SC';
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where fmid!=15745 AND region=? AND location LIKE 'SD%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'SC');
+  }
+  elsif($region_code eq 'FLMIA') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND city LIKE 'miami%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
+  }
+  elsif($region_code eq 'FLFL') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'FTL%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
+  }
+  elsif($region_code eq 'FLORL') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND city LIKE 'orlando%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
+  }
+  elsif($region_code eq 'NCCHA') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'CHAR%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'NC');
+  }
+  elsif($region_code eq 'NCRA') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'RAL%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'NC');
+  }
+
+  elsif($region_code eq 'SG') { # Singapore
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region='sg' AND TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=139 OR course_type_id=140 OR course_type_id=141 OR course_type_id=142 OR course_type_id=143) ORDER BY start_date DESC",{Columns=>{}});
+    foreach my $course (@$courses1) {
+      $course->{course_type_id} = $course->{course_type_id} - 136;
+    }
+  }
+
+
+  my $courses = [ ];
+
+  # fill course array with fast track courses if this is a fast track region code
+  if ($region->{region_code} =~ m/FT$/) {  # i.e. 'SRFT'
+    #allow only fasttrack courses
+    foreach my $course (@$courses1) {
+      if ($course->{call_time} =~ m/fast/i) {
+        push(@$courses,$course);
+      }
+    }
+  }
+
+  # else fill with non fast-track courses
+  else {
+    #allow only non-fasttrack courses
+    foreach my $course (@$courses1) {
+      if ($course->{call_time} !~ m/fast/i) {
+        push(@$courses,$course);
+      }
+    }
+  }
+
+  # iterator returns courses in order of itb, pro, bal, ful, fun, 
+  # in reverse date order
+
+  my %types = (
+    fun => 3,
+    ful => 4,
+    bal => 5,
+    pro => 6,
+    itb => 7,
+  );
+
+  my $date                   = '2040-01-01 00:00:00'; # a date far in the future
+
+ 
+
+  return Iterator { # return the farthest course of type "$type"
+    my $type        = shift;  # $type will be one of fun, ful, bal, pro, itb  (synergy = itb)
+
+    # if we are starting with 'itb', clear series flag
+    if ($type eq 'itb'){
+      $series_not_stand_alone = 0; # '1' indicates that this is not a standalone series. We determine this below when we have a course
+      $preferred_call_time = '';   # 'weekend' or 'midweek'. This is determined below for certain regions like 'SR' and 'NY'
+    }
+
+    # exhausted test
+    if ($type eq 'exhausted?') {
+      if (@$courses){
+        my @temp = map { [$_->{event},$_->{date}] } @$courses;
+        ### courses not exhausted: @temp
+        $date = '2040-01-01 00:00:00';
+        return 0; # not empty
+      }
+      return 1; # empty
+    }
+
+
+    my $course;
+
+### $type
+### $series_not_stand_alone
+
+    # match only non-standalone courses
+    if ($series_not_stand_alone == 1) {
+
+      if ($preferred_call_time eq 'weekend') {
+        $course = extract($courses,
+                          sub { # match type and make sure date is earlier
+                          $_[0]->{course_type_id} == $types{$type}
+                          and
+                          ($_[0]->{call_time} =~ m/weekend/i || $_[0]->{call_time} !~ m/midweek/i)
+                          and
+                          $_[0]->{call_time} !~ m/alone/i
+                          and
+                          Date_Cmp( ParseDate($date),ParseDate($_[0]->{start_date}) )>0
+                          }
+                        );
+        ### Found next weekend course
+        ### $course
+      } elsif ($preferred_call_time eq 'midweek') {
+        $course = extract($courses,
+                          sub { # match type and make sure date is earlier
+                          $_[0]->{course_type_id} == $types{$type}
+                          and
+                          $_[0]->{call_time} =~ m/midweek/i
+                          and
+                          $_[0]->{call_time} !~ m/alone/i
+                          and
+                          Date_Cmp( ParseDate($date),ParseDate($_[0]->{start_date}) )>0
+                          }
+                        );
+        ### Found next midweek course
+        ### $course
+      } else {
+        $course = extract($courses,
+                          sub { # match type and make sure date is earlier
+                          $_[0]->{course_type_id} == $types{$type}
+                          and
+                          $_[0]->{call_time} !~ m/alone/i
+                          and
+                          Date_Cmp( ParseDate($date),ParseDate($_[0]->{start_date}) )>0
+                          }
+                        );
+        ### non-standalone
+      }
+    } 
+
+    # match any course
+    else {
+            $course = extract($courses,
+                sub { # match type and make sure date is earlier
+                  $_[0]->{course_type_id} == $types{$type}
+                  and
+                  Date_Cmp( ParseDate($date),ParseDate($_[0]->{start_date}) )>0
+                }
+              );
+      ### any course found
+    }
+
+
+    if($course){
+
+      # ### $course
+      
+      # mark this series as NOT stand alone
+      if ($course->{call_time} !~ m/alone/msi) {
+        $series_not_stand_alone = 1;
+      }
+
+      ### $series_not_stand_alone
+
+      # BUSINESS RULE EXCEPTION = mark 'midweek' or 'weekend' for certain regions, but do not mark for fast track because
+      # fast-track series usually have both midweek and weekend courses
+      if ( $course->{call_time} !~ /fast/i && ( $course->{region} eq 'SR' || $course->{region} eq 'NY' || $course->{region} eq 'CGY' || $course->{region} eq 'MN') ) {
+        if ( $course->{day_of_week} eq 'Friday' || $course->{call_time} =~ m/weekend/i || $course->{call_time} eq '0'){
+          $course->{weekend} = 1;
+          $preferred_call_time = 'weekend'; 
+        }
+        else {
+          $course->{midweek} = 1;
+          $preferred_call_time = 'midweek';
+        }
+      }
+      
+      #$course->{start_date_formatted} =~ s/(...)([^ ]+)([ ].*)/$1$3/
+       # if $course->{start_date_formatted} !~ m/May/i; # shorten January to Jan, etc.
+
+      $date = $course->{start_date};
+
+      # if course starts today and it is past 2PM Pacific time, then show completed
+      my $pst_hour = UnixDate( Date_ConvTZ(ParseDate("now"), "", "PST"), "%H");
+      if ( Date_Cmp( ParseDate($course->{start_date}), ParseDate("today") ) == 0 and $pst_hour >= 14) {
+        $course->{start_date_formatted} = '<span style="text-decoration:line-through;">Completed</span>';
+      }
+      return $course;
+    }
+    elsif ($series_not_stand_alone) { # course is empty, most likely because it was in the past
+      my $empty_course = { start_date_formatted => '<span style="text-decoration:line-through;">Completed</span>' };
+      return $empty_course;
+    }
+    return undef;
+  };
+}
+
+sub extract {
+  my ($arrayref,$match) = @_;
+  foreach (0..$#$arrayref) {
+    #my $exclude = 0;
+    #foreach my $fmid (@$excludes) {
+    #  $exclude = 1 if ($arrayref->[$_]->{fmid} == $fmid); 
+    #}
+    if ( $match->($arrayref->[$_])) {
+      return splice (@$arrayref,$_,1);
+    }
+  }
+  return undef;
+}
+
+sub by_series_dates { # series sorter
+  Date_Cmp(ParseDate($a->[4]->{start_date}),ParseDate($b->[4]->{start_date}))
+  || Date_Cmp(ParseDate($a->[3]->{start_date}),ParseDate($b->[3]->{start_date}))
+  || Date_Cmp(ParseDate($a->[2]->{start_date}),ParseDate($b->[2]->{start_date}))
+  || Date_Cmp(ParseDate($a->[1]->{start_date}),ParseDate($b->[1]->{start_date}))
+  || Date_Cmp(ParseDate($a->[0]->{start_date}),ParseDate($b->[0]->{start_date}))
+}
+
+
+sub region_course_count {
+  my ($region) = @_;
+  my ($count) = $dbh->selectrow_array('SELECT count(id) from event_calendar where region=? and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7 OR course_type_id=139 OR course_type_id=140 OR course_type_id=141 OR course_type_id=142 OR course_type_id=143) ORDER BY start_date DESC',{Columns=>{}},$region->{region_code});
+  ### region: $region
+  ### count: $count
+  return $count;
+}
+
+
+# course_series table functions
+
+sub store_course_series {
+  my($serial_number,@grid) = @_;
+
+  # @grid is an array of array_refs
+
+  foreach my $series (@grid) {
+    my $series_is_fast_track = 0;
+    my $series_region = '';
+    my @course_id = ( );
+
+    foreach my $course (@$series) {
+      $series_region ||= $course->{region}; # if region blank, fill it
+      if ( !$series_is_fast_track && $course->{event} =~ m/fast/i) { # if event name matches fast track, flag series
+        $series_is_fast_track = 1;
+      }
+      $course_id[ $course->{course_type_id} ] = $course->{id}; # @course_id array is indexed by course_type_id, which is 3 through 7 for Fun through ITB
+    }
+
+    # create new course_series record
+    $dbh->do('INSERT INTO course_series (serial_number,region,course1_id,course2_id,course3_id,course4_id,course5_id,is_fast_track,created) values (?,?,?,?,?,?,?,?,NOW())',undef,$serial_number,$series_region,$course_id[3],$course_id[4],$course_id[5],$course_id[6],$course_id[7],$series_is_fast_track)
+  }
+
+}
+
+sub get_last_serial_number {
+  my ($serial_number) = $dbh->selectrow_array('SELECT serial_number FROM course_series ORDER BY serial_number DESC',undef);
+  return $serial_number || 555;
+}
+
+sub remove_old_course_series {
+  my ($serial_number) = @_;
+  if ($serial_number > 1) {
+    $dbh->do('DELETE FROM course_series WHERE serial_number < ?',undef,$serial_number);
+  }
+}
+__DATA__

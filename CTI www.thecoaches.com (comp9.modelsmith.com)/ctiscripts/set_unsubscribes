@@ -1,0 +1,78 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+
+use Data::Dumper;
+use Date::Manip;
+use DBI;
+use JSON; # imports encode_json, decode_json, to_json and from_json.
+
+
+use strict;
+
+$|++;
+#print "Subject: cron: set_unsubscribes\n";
+print "Started\n";
+
+my $dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+my $uri = 'http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/set_unsubscribe_bulk.php';
+my $ua = LWP::UserAgent->new;
+$ua->timeout(120);
+$ua->env_proxy;
+
+# Example:
+
+# my $json = encode_json( 
+#   { 'subscribers' => 
+#       [ 
+#         { 'em' => 'ping@me.com', 'unsub_type' => 'marketing' } 
+#       ] 
+#   } 
+# );
+
+
+
+# get rows from database
+
+my $data = { 'subscribers' => [ ] };
+my $rows = $dbh->selectall_arrayref( "SELECT id,data_email,type FROM unsubscribes WHERE updated_FM_at IS NULL or updated_FM_at<'2000-01-01' ORDER BY id DESC LIMIT 4", { Columns => {} } );
+
+foreach my $row (@$rows) {
+  push( @{$data->{subscribers}}, { 'em' => $row->{data_email}, 'unsub_type' => $row->{type} } );
+}
+
+#print Dumper $data;
+
+
+my $data_json = encode_json( $data );
+
+my $response = $ua->post( $uri, ['postkey' => 'fjgh15t', 'data' => $data_json] );
+my $result;
+if($response->is_success){
+    $result = $response->content;
+} else {
+    $result = 'failed';
+}
+
+# if ok, update database rows
+
+print "Result: $result\n";
+
+if ($result =~ m/ok/) {
+  foreach my $row (@$rows) {
+    $dbh->do( 'UPDATE unsubscribes SET updated_FM_at=NOW() WHERE id=?', undef, $row->{id} );
+  }
+  my $count = scalar @$rows;
+  # get current unsub count
+  my ($unsub_count) = $dbh->selectrow_array( "SELECT count(*) FROM unsubscribes WHERE updated_FM_at IS NULL or updated_FM_at<'2000-01-01'", { Columns => {} } );
+  
+  if($count > 0 or $unsub_count > 0){
+    #`echo "FileMaker update count: $count, Remaining: $unsub_count" | mail -s 'Unsubscribe notification' ping\@me.com`;
+      print "FileMaker update count: $count, Remaining: $unsub_count\n";
+  }
+}
+
+#print "Done.\n";
+
+

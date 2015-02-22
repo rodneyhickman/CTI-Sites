@@ -1,0 +1,166 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+
+use XML::Simple;
+use Data::Dumper;
+use Date::Manip;
+use DBI;
+
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+$|++;
+print "Subject: cron: getsite_data\n";
+
+my $dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+my $query = 'fmi-test/webcomp2_newFM/getsitedata.php';
+my $server = 'http://crm.thecoaches.com';
+
+print "Getting Site Data\n";
+my $ua = LWP::UserAgent->new;
+$ua->timeout(120);
+$ua->env_proxy;
+my $response = $ua->get("http://$server/$query");
+my $xml;
+if($response->is_success){
+    $xml = $response->content;
+} else {
+    die $response->status_line;
+}
+
+print "Done.\n";
+
+print "Size of XML: ",length($xml),"\n";
+
+# UTF8 to ASCII translations (should be using CPAN module to do this)
+$xml =~ s/\xe2\x80\x99/\'/gs;
+$xml =~ s/\xe2\x80\x98/\'/gs;
+$xml =~ s/\xe2\x80\x9c/\"/gs;
+$xml =~ s/\xe2\x80\x9d/\"/gs;
+
+#my ($foo) = ($xml =~ m/(....Hare)/s);
+#my @a=split"",$foo;
+#for(@a){printf"\\x%02x\n",ord}
+#exit;
+
+#open(CMD,"|/usr/local/bin/xmlpretty --PrettyWhiteNewline --PrettyWhiteIndent --CatchEmptyElement")
+#    or die "Can't xmlpretty";
+#print CMD $xml;
+
+print "Hash-ifying\n";
+my $hashref = XMLin($xml);
+my @records = @{$hashref->{ROW}}; # Array of hashrefs (Yay!)
+print "Done.\n";
+print "Number of records: ".scalar @records.".\n";
+
+#print Dumper @records;
+
+
+
+
+
+
+# The following maps FileMaker fields to MySql fields (ideally they would just be the same)
+my %map = (
+	   'Country'     => 'country',
+	   'Directions'  => 'directions',
+	   'Directions_URL' => 'directions_url',
+	   'Site_code'   => 'site_code',
+	   'Site_Name'   => 'site_name',
+	   'Address'     => 'address',
+	   'City'        => 'city',
+	   'State'       => 'state',
+	   'Zip'         => 'zip',
+	   'region'      => 'region',
+	   'Hotel_Phone' => 'hotel_phone',
+	   'Site_URL'    => 'site_url',
+	   );
+
+my %reverse_map = map { $map{$_} => $_ } keys %map;
+
+my $table      = 'site_data';
+my @columns    = qw(site_code site_name address city state zip region hotel_phone site_url country directions directions_url);
+my $pkey       = $columns[0];
+my $insert_sql = "INSERT INTO $table (".join(',',@columns).") VALUES (". '?,' x $#columns."?)";
+my $update_sql = "UPDATE $table SET ".join(',',map{"$_=?"}@columns[1..$#columns])." WHERE $pkey=?";
+
+
+#print Dumper \@records;
+#print Dumper \@columns;
+#exit;
+
+
+
+my ($adds,$updates);
+my %ids;
+print "Adding and updating...\n";
+foreach my $record (@records){
+
+  next if $record->{Site_code} eq '' or ref $record->{Site_code};
+
+    $ids{$record->{Site_code}}++; # mark as used
+
+    # Map a row from the record hash. If any value is ref type, make it undef
+    my @row = map { ref $record->{$reverse_map{$_}} ? undef : $record->{$reverse_map{$_}} } @columns;
+
+    # Is this record already in the DB? ...
+    my $sth = $dbh->prepare("SELECT $pkey FROM $table WHERE $pkey=?");
+    $sth->execute( $row[0] );
+    my @fetchrow = $sth->fetchrow_array;
+
+    # ... if not, insert it ...
+    if($fetchrow[0] eq ''){
+      print "Adding:\n";
+      print $insert_sql."\n";
+      print Dumper $record;
+      print Dumper \@row;
+      $adds++;
+      $sth = $dbh->prepare($insert_sql);
+      $sth->execute( @row );
+
+    # ... else update it
+    } else {
+      $updates++;
+      $sth = $dbh->prepare($update_sql);
+      $sth->execute( @row[1..$#row],$row[0] );
+    }
+}
+print "Done.\n";
+print "Adds: $adds\n";
+print "Updates: $updates\n";
+
+
+
+#print Dumper \@records,\%ids;
+exit;
+__END__
+
+
+# old leftover code
+
+print "Removing old records";
+my $sth = $dbh->prepare("DELETE FROM $table WHERE CURDATE()>start_date");
+$sth->execute();
+print " - done.\n";
+
+print "Removing events no longer in list.\n";
+my $eventids = $dbh->selectall_arrayref(
+	      "SELECT fmid FROM event_calendar");
+foreach my $eventid (@$eventids){
+    my $id = $eventid->[0];
+    unless($ids{$id}){
+	my $sth = $dbh->prepare("DELETE FROM $table WHERE fmid=?");
+	$sth->execute($id);
+	print "Event: $id\n";
+    }
+}
+
+print "Done.\n";
+
+
+
+
+
+

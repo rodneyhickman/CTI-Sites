@@ -1,0 +1,19 @@
+bash-2.03$ crontab -l
+#10,25,40,59 9-17 * * * /home/ctiadmin/bin/make_calendar 2>&1
+10,25,40,55 7-17 * * * /home/ctiadmin/bin/make_cal_cache 2>&1
+12,27,42,57 7-17 * * * /home/ctiadmin/bin/make_cal_cache_uk 2>&1
+
+5,20,35,50 7-17 * * * /home/ctiadmin/bin/getevents_yaml 2>&1
+
+5 10 * * * /home/ctiadmin/bin/make_assisting_cal 2>&1
+5 12 * * * /home/ctiadmin/bin/make_assisting_cal 2>&1
+5 14 * * * /home/ctiadmin/bin/make_assisting_cal 2>&1
+5 16 * * * /home/ctiadmin/bin/make_assisting_cal 2>&1
+5 18 * * * /home/ctiadmin/bin/make_assisting_cal 2>&1 | mail 'ping@mac.com'
+
+
+#6 19 * * * /home/ctiadmin/bin/getsite_data      2>&1 | mail 'ping@mac.com'
+#7 19 * * * /home/ctiadmin/bin/make_exams        2>&1 | mail 'ping@mac.com'
+#9 19 * * * /home/ctiadmin/bin/getregions        2>&1 | mail 'ping@mac.com'
+
+40 15 * * * /home/ctiadmin/Co-Active-Network/get_logs_sequentially 2>&1 | mail 'ping@mac.com'

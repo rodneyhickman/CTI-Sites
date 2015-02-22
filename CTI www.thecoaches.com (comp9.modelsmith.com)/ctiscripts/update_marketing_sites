@@ -1,0 +1,96 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+use HTTP::Request::Common qw(POST);  
+use Smart::Comments;
+use Date::Manip;
+use YAML qw( Load );
+use JSON;
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+`touch mktcal.touch`;
+
+$|++;
+print "Subject: cron: update_marketing_sites\n";
+
+
+
+my $query = 'fmi-test/webcomp2_newFM/getsitedata.php';
+my $server = 'crm.thecoaches.com';
+
+print "Getting Site Data\n";
+my $ua = LWP::UserAgent->new;
+$ua->timeout(120);
+$ua->env_proxy;
+my $response = $ua->get("http://$server/$query");
+my $yaml;
+if($response->is_success){
+    $yaml = $response->content;
+} else {
+    die $response->status_line;
+}
+
+print "Done.\n";
+
+print "Size of YAML: ",length($yaml),"\n";
+
+print "Loading YAML\n";
+
+my $hashref = Load($yaml);
+
+
+
+
+my @sites = @{$hashref->{doc}{sites}};
+
+print "Sites: ".scalar(@sites)."\n";
+
+# The following maps FileMaker fields to MySql fields (ideally they would just be the same)
+my %map = (
+       'Country'        => 'country',
+       'Directions'     => 'directions',
+       'Directions_URL' => 'directions_url',
+       'code'           => 'site_code',
+       'name'           => 'site_name',
+       'address'        => 'address',
+       'city'           => 'city',
+       'state'          => 'state',
+       'zip'            => 'zip',
+       'region'         => 'region',
+       'phone'          => 'hotel_phone',
+       'url'            => 'site_url',
+    );
+
+ my %reverse_map = map { $map{$_} => $_ } keys %map;
+
+my @list;
+my @columns    = qw(site_code site_name address city state zip region hotel_phone site_url country directions directions_url);
+
+foreach my $record (@sites){
+    # Map a row from the record hash. If any value is ref type, make it undef
+    my %array = map { 
+	ref $record->{$reverse_map{$_}} 
+	? undef 
+	: $_ => $record->{$reverse_map{$_}} 
+    } @columns;
+
+    push(@list,\%array);
+}
+
+print "List: ".scalar(@list)."\n";
+my $json = encode_json(\@list);
+
+#print $json;
+
+
+
+    my $req = POST 'http://www.thecoaches.com/mktcal/index.php/admin/updateSites', [
+	'json' => $json
+    ];
+    $req->authorization_basic('coactive', 'coactive');
+    my $content = $ua->request($req)->as_string; 
+    #print $content;
+
+    
+

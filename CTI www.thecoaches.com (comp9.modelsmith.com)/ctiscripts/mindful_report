@@ -1,0 +1,78 @@
+#!/usr/bin/perl
+
+use strict;
+use Smart::Comments;
+
+# get tracking ids from log files, brute grep
+
+my $logfiles = "/www/www.thecoaches.com/logs/access_log.130*";
+
+### $logfiles
+
+my $cmd = "grep 'gif?tid' $logfiles";
+
+open(CMD,"$cmd|") or die;
+
+my %ids = ( );
+
+### checking access_log
+
+while(<CMD>){
+    if(m/access_log.*?:([^ ]+).*\[([^ ]+).*gif\?tid=([^ ]+)/){
+	push(@{$ids{$3}},{ time => $2, ip => $1 });
+    }
+
+    if(m/tid=([^ ]+)/){
+	my $id = $1;
+	m/.*\[([^ ]+).*GET (\/[^ ]+)/ms;
+	if($2 !~ '/res' && $2 !~ '/images'){
+	    push(@{$ids{$id}},{ time => $1, url => $2 });
+	}
+    }
+
+}
+
+close CMD;
+
+### %ids
+die 'done';
+
+# foreach my $id (keys %ids){
+#     #print "\n\nID: $id\n\n";
+#     my $cmd = "grep '$id' $logfiles";
+#     open (CMD,"$cmd|") or die;
+#     while(<CMD>){
+# 	#print;
+# 	m/.*\[([^ ]+).*GET (\/[^ ]+)/ms;
+# 	if($2 !~ '/res' && $2 !~ '/images'){
+# 	    push(@{$ids{$id}},{ time => $1, url => $2 });
+# 	}
+#     }
+# }
+
+### %ids
+
+print "<html><body>";
+
+foreach my $id (keys %ids){
+    print "<pre>ID: $id\n";
+    foreach my $data (@{$ids{$id}}){
+	if($data->{ip}){
+	    print "  Initial visit: $data->{time}\n";
+	    print "  IP Address:    $data->{ip}\n";
+	} 
+    }
+    print "\n";
+    foreach my $data (@{$ids{$id}}){
+	if($data->{url}){
+	    print "  Time:          $data->{time}\n";
+	    print "  URL:           <b>$data->{url}</b>\n";
+	} 
+    }
+    print "\n\n</pre>";
+}
+
+
+print "</body></html>";
+
+

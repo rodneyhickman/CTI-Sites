@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+
+curl "http://www.thecoaches.com/portal/index.php/main/checkAssistingWaitlists?key=1qASw2" > /dev/null; 
+
+
+

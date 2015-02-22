@@ -1,0 +1,185 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+#use XML::Simple;
+use YAML qw( Load );
+use Smart::Comments;
+use Date::Manip;
+use DBI;
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+`touch getevents.touch`;
+
+$|++;
+print "Subject: cron: getevents\n";
+
+my $dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+my $query = 'fmi-test/webcomp2_newFM/geteventsR.php';
+#my $server = 'webcom.thecoaches.com:591';
+my $server = '72.18.232.61';
+
+my $hashref;
+my @events;
+
+my $number_of_records = 2;
+for (my $start=0; $start<3; $start=$start+$number_of_records){
+    print "Getting Events starting at $start\n";
+    my $ua = LWP::UserAgent->new;
+    $ua->timeout(120);
+    $ua->env_proxy;
+    my $response = $ua->get("http://$server/$query?start=$start&range=$number_of_records");
+    my $yaml;
+    if($response->is_success){
+	$yaml = $response->content;
+    } else {
+
+	die $response->status_line;
+    }
+
+    print "Done.\n";
+
+    print "Size of YAML: ",length($yaml),"\n";
+
+    print "Loading YAML\n";
+
+    $hashref = Load($yaml);
+
+### $hashref
+
+    push(@events, @{$hashref->{doc}{events}});
+
+    my $count = $hashref->{doc}{count};
+    print "Count: $count\n";
+
+    # last iteration if the number of records returned
+    # was less than requested
+    last if $count < $number_of_records;
+}
+
+
+
+
+
+print " - Done.\n";
+print "Number of records: ".scalar @events.".\n";
+
+
+
+
+#print "Keeping  only 'Publish'-able events";
+#@events = grep { $_->{Publish} eq 'Publish' } @events;
+#print " - Done.\n";
+#print "Number of records: ".scalar @events.".\n";
+
+#my $today = ParseDate('today');
+#print "Keeping only current and future events";
+#@events = grep { Date_Cmp(ParseDate($_->{date}),$today) >= 0 } @events;
+#print " - Done.\n";
+#print "Number of records: ".scalar @events.".\n";
+
+my $table      = 'event_calendar';
+
+my @columns    = qw(fmid date event region location call_time course_type_id series_id assistant_count assistant_wait_count booking_link pod_name leader_name);
+my $pkey       = $columns[0];
+my $insert_sql = "INSERT INTO $table (".join(',',@columns).") VALUES (". '?,' x $#columns."?)";
+my $update_sql = "UPDATE $table SET ".join(',',map{"$_=?"}@columns[1..$#columns])." WHERE $pkey=?";
+
+my ($adds,$updates);
+my %ids;
+print "Adding and updating events";
+foreach my $event (@events){
+
+    next unless $event->{'publish'} eq 'Publish';
+    next if $event->{'location'} =~ m/CXL/;
+
+    $ids{$event->{fmid}}++;
+
+    # Map a row from the event hash. If any value is ref type, make it undef
+    my @row = map { (ref $event->{$_} or $event->{$_} eq undef) ? 0 : $event->{$_} } @columns;
+
+### @row
+
+
+
+    # Is this event already in the DB? ...
+    my $sth = $dbh->prepare("SELECT $pkey FROM $table WHERE $pkey=?");
+    $sth->execute( $row[0] );
+    my @fetchrow = $sth->fetchrow_array;
+
+    # ... if not, insert it ...
+    if($fetchrow[0] eq ''){
+      $adds++;
+      $sth = $dbh->prepare($insert_sql);
+      $sth->execute( @row );
+
+    # ... else update it
+    } else {
+      $updates++;
+      $sth = $dbh->prepare($update_sql);
+      $sth->execute( @row[1..$#row],$row[0] );
+    }
+}
+print " - done.\n";
+print "Adds: $adds\n";
+print "Updates: $updates\n";
+
+my ($removes);
+print "Removing unpublished and cancelled events.\n";
+foreach my $event (@events){
+    next unless $event->{'location'} =~ m/CXL/ or $event->{'publish'} ne 'Publish';
+
+    print "Event: $event->{fmid}\n";
+    my $sth = $dbh->prepare("DELETE FROM $table WHERE fmid=?"); # course_type_id=1 is for certification pods
+    $sth->execute($event->{'Event_ID'});
+    $removes++;
+}
+print "Removes: $removes\n";
+
+print "Removing old events";
+my $sth = $dbh->prepare("DELETE FROM $table WHERE (TO_DAYS(now())-TO_DAYS(start_date))>-1 AND course_type_id!=120");
+$sth->execute();
+print " - done.\n";
+
+print "Removing old webinars";
+my $sth = $dbh->prepare("DELETE FROM $table WHERE (TO_DAYS(now())-TO_DAYS(start_date))>0 AND course_type_id=120");
+$sth->execute();
+print " - done.\n";
+
+print "Removing events no longer in list.\n";
+my $eventids = $dbh->selectall_arrayref(
+	      "SELECT fmid FROM event_calendar WHERE course_type_id<>1");
+foreach my $eventid (@$eventids){
+    my $id = $eventid->[0];
+    unless($ids{$id}){
+	my $sth = $dbh->prepare("DELETE FROM $table WHERE fmid=?");
+	$sth->execute($id);
+	print "Event: $id\n";
+    }
+}
+
+
+print "Formatting dates in table";
+my $events = $dbh->selectall_arrayref(
+	      "SELECT id,date FROM event_calendar", { Columns => {} });
+
+foreach my $event (@$events) {
+    my $date = ParseDate($event->{date});
+  $event->{start_date}           = UnixDate($date,
+					    '%Y-%m-%d 00:00:00');
+  $event->{start_date_formatted} = UnixDate($date,
+					    '%B %e, %Y');
+  $event->{day_of_week}          = UnixDate($date,
+					    '%A');
+  my $sth = $dbh->prepare('UPDATE event_calendar SET start_date=?,start_date_formatted=?,day_of_week=? WHERE id=?');
+  $sth->execute($event->{start_date},$event->{start_date_formatted},$event->{day_of_week},$event->{id});
+}
+print " - done.\n";
+
+
+# TO DO: update site_data
+
+
+
+

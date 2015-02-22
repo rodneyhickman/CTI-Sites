@@ -1,0 +1,245 @@
+#!/usr/bin/perl
+# T. Beutel 12/6/2005
+
+
+use Date::Manip;
+use DBI;
+use Data::Dumper;
+use Sys::Hostname;
+use strict;
+use vars qw(%region_names);
+
+print "Subject: cron: make_orsc_assisting_cal\n";
+
+# The result of this 
+my $HTML;
+my $INDEX;
+
+my $dbh;
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+# Get all Fun, Ful, Bal, Pro, and ITB events
+
+my $sql = <<EOT ;
+SELECT id,fmid,event,course_type_id,region,location,date,start_date,assistant_count,assistant_wait_count FROM event_calendar WHERE
+  course_type_id='18' OR
+  course_type_id='21' OR
+  course_type_id='22' OR
+  course_type_id='23' OR
+  course_type_id='53'
+EOT
+
+my $events = $dbh->selectall_arrayref($sql, { Columns => {} });
+
+# Special exception for Calgary U.
+
+foreach my $event (@$events){
+  $event->{region} = 'CLG' if($event->{location} eq 'Calgary U');
+}
+
+# Get all the regions being used in events
+
+my %all_regions;
+map { $all_regions{$_->{region}}++ } @$events;
+
+# Get the region names by country
+
+foreach my $country ('United States','Canada') {
+print "Country: $country\n";
+
+  $INDEX .=<<EOT ;
+    <tr><td>&nbsp;</td></tr>
+    <tr><td><h2>$country</h2></td></tr>
+EOT
+
+
+  my $names = $dbh->selectall_arrayref('SELECT region_code,region_name from regions where country=?',{ Columns => {} },$country);
+  %region_names = map { $_->{region_code},$_->{region_name} } @$names;
+
+  print Dumper \%region_names;
+
+  # Get only this country's regions from the events' regions
+
+  my %regions = map { $_,1 } grep { exists $region_names{$_} } keys %all_regions;
+
+print Dumper \%regions;
+
+  # Do each region in sort order
+  foreach my $region (sort by_name keys %regions) {
+
+    print "Region: $region\n";
+
+    # Get only this region's events using grep
+    my @region_events =
+      grep { $_->{region} eq $region } @$events;
+
+    # skip region if unless it has events
+    next unless @region_events;
+
+    # Initial counts
+    my $total_events  = scalar @region_events;
+    my $placed_events = 0;
+
+    print "Total events: $total_events\n";
+
+    # $placed_events is the number of events 'placed' into the calendar. Once $placed_events == $total_events,
+    # the calendar is complete for this region
+
+    # map dates to delta days from jan 1, 2000
+    foreach my $event (@region_events) {
+      my $err;
+      my $values = DateCalc(ParseDate('1/1/2000'),ParseDate($event->{date}),\$err);
+      my ($weeks,$days) = $values =~ m/0:0:(\d+):(\d+)/;
+      $event->{delta} = $weeks*7+$days;
+      #print "$event->{date} $event->{course_type_id} $event->{delta}\n";
+    }
+
+
+    my @region_events_sorted = sort { $a->{delta} <=> $b->{delta} } @region_events;
+
+    #  print Dumper @region_events_sorted if $region eq 'DC';
+
+
+    my @region_series;
+    while ($placed_events < $total_events) {
+
+      # start a new series (i.e. a line in the calendar
+      my $series = { };
+      my $delta  = 9999;
+
+      # fill the series starting from the right (i.e. In The Bones)
+      foreach my $type (53,23,22,21,18) {
+	my @events = grep { $_->{course_type_id} == $type and not $_->{placed} } @region_events_sorted;
+
+	# Get the closest earlier event
+	my ($closest_earlier_event) =
+	  reverse
+	    sort { $a->{delta} <=> $b->{delta} }
+	      grep { $_->{delta} < $delta } @events;
+
+
+
+	# if there was one, put the date in the series
+	if ($closest_earlier_event) {
+	  $series->{$type} = { date  => $closest_earlier_event->{date},
+			       delta => $closest_earlier_event->{delta},
+			       # mark the color red if the location says -HOLD
+			       decoration => 
+			       ( $closest_earlier_event->{assistant_count} > 1 
+				 and $closest_earlier_event->{assistant_wait_count} > 1 ) ? 'line-through' : 'none',
+			     };
+	  $delta = $closest_earlier_event->{delta};
+	  $closest_earlier_event->{placed}++;
+	  $placed_events++;
+	}
+      }
+
+      push(@region_series,$series);
+
+    }
+
+    #print Dumper \@region_series  if($region eq 'SR');
+    # create some HTML
+
+
+$INDEX .=<<EOT ;
+    <tr><td><a href="#$region">$region_names{$region}</a></td></tr>
+EOT
+
+	# Now store the calendar for this city code.
+$HTML .=<<EOT ;
+<!------------------------------------------------------>
+<p><a name="$region"></a></p>
+<table width="430" border="0" class="normal">
+<tr>
+<td width="331">&nbsp;<br>
+<span class="header1"><b>$region_names{$region}</b></span>
+EOT
+
+# Make an exception for certain sites like Calgary University
+
+if($region eq 'CLG'){
+  $HTML .=<<EOT ;
+<br><br>CTI Courses in Calgary are offered by the University of Calgary.  If you are interested in registering, please call the university directly at 403-220-2877 or <a href="http://www.cted.ucalgary.ca/professionaldesignations/programs/coaching.html">click here to enroll</a> through the University's website.   Pricing is in Canadian dollars and may vary from CTI prices.
+EOT
+} else { 
+  $HTML .=<<EOT ;
+<a href="/info/assisting-form.html" class="text">Register to Assist</a>
+EOT
+}
+
+$HTML .=<<EOT ;
+ </td>
+<td>
+<center>
+<a href="#top" class="text">TOP</a>
+</center>
+</td>
+</tr>
+</table>
+<table cellspacing="1" cellpadding="0" width="447" border="1" class="normal">
+<tr>
+<td width="19%" valign="top" bgcolor="white">
+<center>
+<b>Fundamentals</b><br>
+</center>
+</td>
+<td width="20%" valign="top" bgcolor="white">
+<center>
+<b>Fulfillment</b><br>
+</center>
+</td>
+<td width="20%" valign="top" bgcolor="white">
+<center>
+<b>Balance</b><br>
+</center>
+</td>
+<td width="20%" valign="top" bgcolor="white">
+<center>
+<b>Process</b><br>
+</center>
+</td>
+<td width="20%" valign="top" bgcolor="white">
+<center>
+<b>In The Bones</b><br>
+</center>
+  </td>
+  </tr>
+EOT
+
+    foreach my $series (sort using_special_magic @region_series) {
+      $HTML .= "<tr>\n";
+      foreach my $cell (18,21,22,23,53) {
+        $series->{$cell}{decoration} ||= 'none';
+	$HTML .=<<EOT ;
+<td valign="top" width="19%" align="center"><span style="text-decoration:$series->{$cell}{decoration};">$series->{$cell}{date}</span>&nbsp;</td>
+EOT
+      }
+      $HTML .= "</tr>\n";
+    }
+    $HTML .= "</table>\n\n\n";
+  }
+}
+
+print "Saving HTML code in calendar_cache...\n";
+
+# store the INDEX and HTML
+my $sth = $dbh->prepare('UPDATE calendar_cache set idx=?, html=?, created=now() where id=4');
+$sth->execute($INDEX,$HTML);
+
+print "Done.\n";
+
+exit;
+
+# the using_special_magic subroutine sorts series by looking at all the dates in the series
+sub using_special_magic {
+  $a->{18}{delta} <=> $b->{18}{delta} ||
+  $a->{21}{delta} <=> $b->{21}{delta} ||
+  $a->{22}{delta} <=> $b->{22}{delta} ||
+  $a->{23}{delta} <=> $b->{23}{delta} ||
+  $a->{53}{delta} <=> $b->{53}{delta}
+}
+
+
+# by_name sorts by region name
+sub by_name { $region_names{$a} cmp $region_names{$b} }

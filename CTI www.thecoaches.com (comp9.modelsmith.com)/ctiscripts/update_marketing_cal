@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+
+use LWP::UserAgent qw(new get timeout env_proxy);
+use HTTP::Request::Common qw(POST);  
+use Smart::Comments;
+use Date::Manip;
+use lib '/usr/local/lib/sun4-solaris';
+use strict;
+
+`touch mktcal.touch`;
+
+$|++;
+print "Subject: cron: update_marketing_cal\n";
+
+
+
+my $query = 'fmi-test/webcomp2_newFM/geteventsJSON.php';
+my $server = 'crm.thecoaches.com';
+
+my $hashref;
+my @events;
+
+my $number_of_records = 20;
+for (my $start=0; $start<3001; $start=$start+$number_of_records){
+    print "Getting Events starting at $start\n";
+    my $ua = LWP::UserAgent->new;
+    $ua->timeout(120);
+    $ua->env_proxy;
+    my $response = $ua->get("http://$server/$query?start=$start&range=$number_of_records");
+    my $json;
+    if($response->is_success){
+      $json = $response->content;
+    } else {
+      die $response->status_line;
+    }
+    #print $json."\n";
+    print length($json)."\n";
+    last if length($json) < 10;
+
+    my $req = POST 'http://www.thecoaches.com/mktcal/index.php/admin/updateEvents', [
+	'json' => $json
+    ];
+    $req->authorization_basic('coactive', 'coactive');
+    my $content = $ua->request($req)->as_string; 
+    #print $content;
+    sleep 2;
+    
+}

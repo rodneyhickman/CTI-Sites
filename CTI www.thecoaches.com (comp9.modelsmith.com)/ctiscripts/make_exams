@@ -1,0 +1,132 @@
+#!/usr/bin/perl
+# T. Beutel 12/23/2003
+
+use Date::Manip;
+use DBI;
+use Data::Dumper;
+use Sys::Hostname;
+use strict;
+use vars qw(%region_names);
+
+print "Subject: cron: $0\n";
+
+# The result of this script
+my $HTML;
+my $INDEX;
+
+my $dbh;
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+# Get all Exams
+
+my $sql = <<EOT ;
+SELECT id,fmid,event,course_type_id,region,location,date,start_date FROM event_calendar WHERE 
+  course_type_id='2' AND (TO_DAYS(start_date) - TO_DAYS(NOW())) > 0
+EOT
+
+
+
+my $events = $dbh->selectall_arrayref($sql, { Columns => {} });
+#print Dumper $events;
+
+
+# Get the region names
+
+my $names = $dbh->selectall_arrayref('SELECT region_code,region_name from regions',{ Columns => {} });
+%region_names = map { $_->{region_code},$_->{region_name} } @$names;
+
+#print Dumper \%region_names;
+
+# Get all the regions being used in events
+
+my %regions;
+map { $regions{$_->{region}}++ } @$events;
+
+# Do each region in sort order
+foreach my $region (sort by_name keys %regions) {
+
+  print "Region: $region\n";
+
+  # Get only this region's events using grep
+  my @region_events =
+    grep { $_->{region} eq $region } @$events;
+
+  # skip region if unless it has events
+  next unless @region_events;
+
+  # Initial counts
+  my $total_events  = scalar @region_events;
+  my $placed_events = 0;
+
+  print "Total events: $total_events\n";
+
+  # $placed_events is the number of events 'placed' into the calendar. Once $placed_events == $total_events,
+  # the calendar is complete for this region
+
+  # map dates to delta days from jan 1, 2000
+  foreach my $event (@region_events) {
+    my $err;
+    my $values = DateCalc(ParseDate('1/1/2000'),ParseDate($event->{date}),\$err);
+    my ($weeks,$days) = $values =~ m/0:0:(\d+):(\d+)/;
+    $event->{delta} = $weeks*7+$days;
+    #print "$event->{date} $event->{course_type_id} $event->{delta}\n";
+  }
+
+
+
+
+
+  #print Dumper \@region_series  if($region eq 'SR');
+  # create some HTML
+
+
+  $INDEX .=<<EOT ;
+<tr><td><a href="#$region">$region_names{$region}</a></td></tr>
+EOT
+
+  # Now store the calendar for this city code.
+  $HTML .=<<EOT ;
+<!------------------------------------------------------>
+<p><a name="$region"></a></p>
+<table width="430" border="0" class="normal">
+<tr>
+<td width="331"><span class="header1"><b>$region_names{$region}</b></span> <a href="/info/hotels.html#$region" class="text">Hotel Info</a></td>
+<td>
+<center>
+<a href="#top" class="text">TOP</a>
+</center>
+</td>
+</tr>
+</table>
+<table cellspacing="1" cellpadding="0" width="100" border="1" class="normal">
+<tr>
+<td valign="top" bgcolor="white">
+<center>
+<b>Exam Dates</b><br>
+</center>
+</td>
+</tr>
+EOT
+
+
+  foreach my $event (sort by_date @region_events){
+    $HTML .= "<tr><td><center>$event->{date}</center></td></tr>\n";
+  }
+
+  $HTML .= "</table>\n\n\n";
+}
+
+
+# store the INDEX and HTML
+my $sth = $dbh->prepare('UPDATE calendar_cache set idx=?, html=?, created=now() where id=2');
+$sth->execute($INDEX,$HTML);
+
+
+
+exit;
+
+# by_date
+sub by_date { Date_Cmp(ParseDate($a->{date}),ParseDate($b->{date})) }
+
+# by_name sorts by region name
+sub by_name { $region_names{$a} cmp $region_names{$b} }

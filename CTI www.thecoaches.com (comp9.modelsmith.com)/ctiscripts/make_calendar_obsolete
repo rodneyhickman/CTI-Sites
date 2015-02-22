@@ -1,0 +1,363 @@
+#!/usr/bin/perl
+# T. Beutel 12/23/2003
+# Added Calgary U stuff 7/30/04
+
+# Next step:
+# - 7/7/06: add midweek series
+#   - logic: if SR and date is M, Tu, We or Th, then make as SRMW
+#   - for SRMW, instead of hotel, use: "New! Midweek series"
+
+
+use Date::Manip;
+use DBI;
+use Data::Dumper;
+use Sys::Hostname;
+use strict;
+use vars qw(%region_names);
+
+`touch make_calendar.touch`;
+
+print "Subject: cron: make_calendar\n";
+
+# The result of this 
+my $HTML;
+my $INDEX;
+
+# Midweek Days hash
+my $days = { Mon=>1, Tue=>1, Wed=>1, Thu=>1 };
+
+
+# Database	    
+my $dbh;
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+
+# Get all Fun, Ful, Bal, Pro, and ITB events
+
+my $sql = <<EOT ;
+SELECT id,fmid,event,course_type_id,region,location,date,start_date,booking_link,call_time FROM event_calendar WHERE 
+  course_type_id='3' OR
+  course_type_id='4' OR
+  course_type_id='5' OR
+  course_type_id='6' OR
+  course_type_id='7'
+EOT
+
+my $events = $dbh->selectall_arrayref($sql, { Columns => {} });
+
+# Special exception for Calgary U.
+
+foreach my $event (@$events) {
+  #  $event->{region} = 'CLG' if($event->{location} eq 'Calgary U');
+  #  $event->{region} = 'CLG' if($event->{location} eq 'CalgaryU');
+  #  $event->{region} = 'LUWO' if($event->{location} eq 'UnivWOnt');
+  #  $event->{region} = 'UCD' if($event->{location} eq 'UC Davis');
+
+  #my $day = UnixDate($event->{start_date},'%a'); #'
+  #if($days->{$day}){
+
+  #print $event->{call_time},"\n";
+
+#  if ($event->{call_time} =~ m/mid/i) {
+  if ($event->{call_time} =~ m/mid/i and $event->{call_time} !~ m/fast/i) {
+
+    if ($event->{region} eq 'SR') {
+      $event->{region} = 'SRMW';
+    } elsif ($event->{region} eq 'DC') {
+      $event->{region} = 'DCMW';
+    } elsif ($event->{region} eq 'ORLXX') {
+      $event->{region} = 'ORLMW';
+    } elsif ($event->{region} eq 'NY') {
+      $event->{region} = 'NYMW';
+    } elsif ($event->{region} eq 'CHI') {
+      $event->{region} = 'CHIMW';
+    } elsif ($event->{region} eq 'TOR') {
+      $event->{region} = 'TORMW';
+    } elsif ($event->{region} eq 'CLG') {
+      $event->{region} = 'CLGMW';
+    } elsif ($event->{region} eq 'CGY') {
+      $event->{region} = 'CGYMW';
+    }
+  }
+
+  if ($event->{call_time} =~ m/fast/i) {
+    if ($event->{region} eq 'SR') {
+      $event->{region} = 'SRFT';
+    } 
+  }
+
+
+}
+
+# Get all the regions being used in events
+
+my %all_regions;
+map { $all_regions{$_->{region}}++ } @$events;
+
+# Get the region names by country
+
+foreach my $country ('United States','Canada') {
+print "Country: $country\n";
+
+  $INDEX .=<<EOT ;
+    <tr><td>&nbsp;</td></tr>
+    <tr><td><h2>$country</h2></td></tr>
+EOT
+
+
+  my $names = $dbh->selectall_arrayref('SELECT region_code,region_name from regions where country=?',{ Columns => {} },$country);
+  %region_names = map { $_->{region_code},$_->{region_name} } @$names;
+           # a space is added to the region_name so that the midweek or fasttrack
+           # sorts AFTER the regular classes
+  $region_names{SRMW} = $region_names{SR}.' ' if $country eq 'United States';
+  $region_names{SRFT} = $region_names{SR}.' ' if $country eq 'United States';
+  $region_names{DCMW} = $region_names{DC}.' ' if $country eq 'United States';
+  $region_names{NYMW} = $region_names{NY}.' ' if $country eq 'United States';
+  $region_names{ORLMW} = $region_names{ORL}.' ' if $country eq 'United States';
+  $region_names{CHIMW} = $region_names{CHI}.' ' if $country eq 'United States';
+  $region_names{CLGMW} = $region_names{CLG}.' ' if $country eq 'Canada';
+  $region_names{CGYMW} = $region_names{CGY}.' ' if $country eq 'Canada';
+  $region_names{TORMW} = $region_names{TOR}.' ' if $country eq 'Canada';
+
+  print Dumper \%region_names;
+
+  # Get only this country's regions from the events' regions
+
+  my %regions = map { $_,1 } grep { exists $region_names{$_} } keys %all_regions;
+
+  print 'Regions: ',Dumper \%regions;
+
+  # Do each region in sort order
+  foreach my $region (sort by_name keys %regions) {
+    my $reg_header_flag = 0;
+
+    print "Region: $region\n";
+
+    # Get only this region's events using grep
+    my @region_events =
+      grep { $_->{region} eq $region } @$events;
+
+    # skip region if unless it has events
+    next unless @region_events;
+
+    # Initial counts
+    my $total_events  = scalar @region_events;
+    my $placed_events = 0;
+
+    print "Total events: $total_events\n";
+
+    # $placed_events is the number of events 'placed' into the calendar. Once $placed_events == $total_events,
+    # the calendar is complete for this region
+
+    # map dates to delta days from jan 1, 2000
+    foreach my $event (@region_events) {
+      my $err;
+      my $values = DateCalc(ParseDate('1/1/2000'),ParseDate($event->{date}),\$err);
+      my ($weeks,$days) = $values =~ m/0:0:(\d+):(\d+)/;
+      $event->{delta} = $weeks*7+$days;
+      #print "$event->{date} $event->{course_type_id} $event->{delta}\n";
+    }
+
+
+    my @region_events_sorted = sort { $a->{delta} <=> $b->{delta} } @region_events;
+
+    #  print Dumper @region_events_sorted if $region eq 'DC';
+
+
+    my @region_series;
+    while ($placed_events < $total_events) {
+
+      # start a new series (i.e. a line in the calendar
+      my $series = { };
+      my $delta  = 9999;
+
+      # fill the series starting from the right (i.e. In The Bones)
+      foreach my $type (7,6,5,4,3) {
+	my @events = grep { $_->{course_type_id} == $type and not $_->{placed} } @region_events_sorted;
+
+	# Get the closest earlier event
+	my ($closest_earlier_event) =
+	  reverse
+	    sort { $a->{delta} <=> $b->{delta} }
+	      grep { $_->{delta} < $delta } @events;
+
+
+
+	# if there was one, put the date in the series
+	if ($closest_earlier_event) {
+	  $series->{$type} = { date  => $closest_earlier_event->{date},
+			       delta => $closest_earlier_event->{delta},
+			       booking_link => $closest_earlier_event->{booking_link},
+			       # mark the color red if the location says -HOLD or region says SRMW
+			       color => ($closest_earlier_event->{location} =~ m/-HOLD$/
+                                         #or $closest_earlier_event->{region} eq 'SRMW'
+                                        ) ? 'red' : 'black',
+
+			     };
+	  $delta = $closest_earlier_event->{delta};
+	  $closest_earlier_event->{placed}++;
+	  $placed_events++;
+	}
+      }
+
+      push(@region_series,$series);
+
+    }
+
+    #print Dumper \@region_series  if($region eq 'SR');
+    # create some HTML
+
+
+
+	# Now store the calendar for this city code.
+
+# Add region header...
+
+if($reg_header_flag == 0) {
+#    if(1){
+  $reg_header_flag = 1;
+  my $region_norm = $region;
+  $region_norm =~ s/MW$//; 
+$INDEX .=<<EOT ;
+    <tr><td><a href="#$region_norm">$region_names{$region_norm}</a></td></tr>
+EOT
+
+$HTML .=<<EOT ;
+
+<p><a name="$region_norm"></a></p>
+
+<h4>$region_names{$region_norm}</h4>
+
+EOT
+ 
+
+# Make an exception for certain sites like Calgary University and Univ Western Ontario
+
+# if($region eq 'CLG'){
+#   $HTML .= q{
+# <br><br>CTI Courses in Calgary are offered by the University of Calgary.  If you are interested in registering, please call the university directly at 403-220-2988 or <a href="http://conted.ucalgary.ca/business/professionaldesignations/">click here to enroll</a> through the University's website.   Pricing is in Canadian dollars and may vary from CTI prices.
+# };
+# #'
+# } 
+
+# elsif($region eq 'LUWO'){
+#   $HTML .= q{
+# <br><br>The following CTI Courses are offered by the University of Western Ontario.  If you are interested in registering, please call the university directly at  (519) 661-3658 or <a href="http://www.uwo.ca/cstudies/">click here to enroll</a> through the University's website.   Pricing is in Canadian dollars and may vary from CTI prices.
+# };
+# #'
+# }
+
+# elsif($region eq 'UCD'){
+#   $HTML .= q{
+# <br><br>
+# The following CTI Courses are offered by the University of California, Davis.  If you are interested in registering, please call the university directly at 1-800-752-0881 or <a href="http://www.extension.ucdavis.edu/courses/courselisting.asp?unit=BM2&prgList=COA&coursearea=Coaching">click here to enroll</a> through the University's website.   Pricing may vary from CTI prices.
+# };
+# #'
+
+# }
+
+
+$HTML .=<<EOT ;
+
+EOT
+
+}
+
+
+
+if($region =~ m/MW$/){  # ... midweek series
+
+$HTML .=<<EOT ;
+
+<p><span style="color:#f00"><br>Midweek series</span>.</p>
+EOT
+}
+
+if($region =~ m/SRFT$/){  # ... fasttrack
+
+$HTML .=<<EOT ;
+
+<p><span style="color:#f00"><br>Fast Track series</span>.</p>
+EOT
+}
+
+
+
+
+$HTML .=<<EOT ;
+<table width="525" class="course">
+<tr class="color">
+<td width="19%" valign="top">
+<center>
+<b>Fundamentals</b><br>
+</center>
+</td>
+<td width="20%" valign="top">
+<center>
+<b>Fulfillment</b><br>
+</center>
+</td>
+<td width="20%" valign="top">
+<center>
+<b>Balance</b><br>
+</center>
+</td>
+<td width="20%" valign="top">
+<center>
+<b>Process</b><br>
+</center>
+</td>
+<td width="20%" valign="top">
+<center>
+<b>In The Bones</b><br>
+</center>
+  </td>
+  </tr>
+EOT
+
+    foreach my $series (sort using_special_magic @region_series) {
+
+	#print Dumper $series;
+
+      $HTML .= "<tr>\n";
+      foreach my $cell (3,4,5,6,7) {
+	  $HTML .= '<td valign="top" align="center">';
+          if($series->{$cell}{booking_link} =~ m/ http /xms ){
+	      $HTML .= '<a href="' . $series->{$cell}{booking_link} . '" target="_blank">';
+	      $HTML .= $series->{$cell}{date} . '</a>';
+          }
+	  else {
+	      $HTML .= $series->{$cell}{date} . '&nbsp;';
+	  }
+
+	$HTML .=<<EOT ;
+</td>
+EOT
+      }
+      $HTML .= "</tr>\n";
+    }
+    $HTML .= "</table>\n\n\n";
+  }
+}
+
+print "Saving HTML code in calendar_cache...\n";
+
+# store the INDEX and HTML
+my $sth = $dbh->prepare('UPDATE calendar_cache set idx=?, html=?, created=now() where id=1');
+$sth->execute($INDEX,$HTML);
+
+print "Done.\n";
+
+exit;
+
+# the using_special_magic subroutine sorts series by looking at all the dates in the series
+sub using_special_magic {
+  $a->{3}{delta} <=> $b->{3}{delta} ||
+  $a->{4}{delta} <=> $b->{4}{delta} ||
+  $a->{5}{delta} <=> $b->{5}{delta} ||
+  $a->{6}{delta} <=> $b->{6}{delta} ||
+  $a->{7}{delta} <=> $b->{7}{delta}
+}
+
+
+# by_name sorts by region name
+sub by_name { $region_names{$a} cmp $region_names{$b} }
