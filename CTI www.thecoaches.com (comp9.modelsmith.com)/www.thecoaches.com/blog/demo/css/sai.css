@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background: url("../img/bg-main.jpg") repeat-x scroll center top #beba9f;}
+
+.bannerWrapper {
+    background: none repeat scroll 0 0 #fff;
+    margin: 0 auto;
+	
+    
+}
+
+.interiorBanner {
+    background: none repeat scroll 0 0 #e4bd38 !important;
+}
+.interiorBanner {
+    border-radius: 0 0 0 24px;
+    height: 125px;
+    margin: 0 auto;
+}
+ 
+.interiorBanner h1 {
+    background: url("../img/banner-mask.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    color: #fff;
+    font-size: 36px;
+    height: 55px;
+    margin: 0 !important;
+    padding: 70px 0 0 15px;
+    text-transform: uppercase;
+}
+
+
+
+div.subnav ul li{list-style:none;}
+div.subnav ul li a {
+    border-bottom: 0px solid #fff;
+    display: block;
+    height: 23px;
+    line-height: 23px;
+    padding: 2px 10px 0;
+    text-decoration: none;
+}
+
+/*.row{
+background: url("../img/bg_sidebar.gif") repeat-y scroll 660px top #ffffff !important;
+min-width:100%;
+}	*/
+
+ 
