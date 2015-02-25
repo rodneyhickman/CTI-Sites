@@ -1,0 +1,49 @@
+#cr_admin_bottom ul {
+	list-style: square;
+	margin-left: 20px;
+}
+
+#cr_admin_bottom_right {
+	float: right;
+	margin-left: 20px;
+}
+
+
+
+
+#wrapper {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.accordionButton {	
+	width: 800px;
+	height: 20px;
+	float: left;
+	cursor: pointer;
+	margin-bottom: 10px;
+	
+	background: url('wp-admin-heading.png') no-repeat;
+	color: #FFFFFF;
+	font-size: 10px;
+	padding-left: 10px;
+	padding-top: 1px;
+	}
+ 
+.accordionContent {	
+	float: left;
+	background: #efefef;
+	margin-bottom: 10px;
+	padding: 0px 10px;
+	display: none;
+	border: solid 1px #cccccc;
+	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	clear: both;
+	overflow: hidden;
+	width: 780px;
+	}
+
+
