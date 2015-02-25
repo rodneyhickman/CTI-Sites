@@ -1,0 +1,122 @@
+/*
+Theme Name: CTI blog
+Theme URI: http://www.thecoaches.com
+Description: CTI blog theme
+Version: 1.1
+Author: Session Creative, Inc.
+*/
+
+.sidebar-module {
+	margin: 45px 0 0px 0px;
+	}
+.sidebar-module li {
+	list-style-type: none;
+	}
+.sidebar-module h2 { color: #32110a;
+	font-size: 1.4em;
+	font-weight: bolder;
+	margin: 20px 0 0 0px;
+	text-transform: uppercase; 
+	}
+
+.clear {clear: both; }
+.postEntry { border-bottom: 2px solid #cdcab6; padding: 0 10px 40px 10px; margin-bottom: 40px; }
+.more { margin: 0px 0 10px 0; background: #311109; -moz-border-radius: 6px; -webkit-border-radius: 6px; padding: 1px 5px 1px 8px; color: #FFF !important; font-size: 10px; float: left; font-weight: bold; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; }
+.more:hover { background: #5DA1CD; }
+h2.blogheader { font-size: 20px !important; margin: 30px 0 20px 0 !important; display: block; }
+h2.blogheader a { text-decoration: none; font-size: 20px; margin: 30px 0 20px 0; display: block; }
+h2.return a { color: #5DA1CD; text-decoration: none; margin-left: 10px; }
+h2.return a:hover { text-decoration: underline; }
+.postEntry img { border: 5px solid #ebe9da; }
+img.alignright { margin-left:20px; vertical-align:text-top; float:right; }
+div.alignright { margin-left:20px; vertical-align:text-top; float:right; }
+div.alignleft { margin-right:20px; vertical-align:text-top; float:left; }
+img.alignleft { margin:0 20px 0 0 !important; padding: 0px !important; vertical-align:text-top; float:left; border: 5px solid #ebe9da; }
+div.alignleft p.wp-caption-text,
+div.aligncenter p.wp-caption-text { font-style:italic; }
+div.aligncenter { text-align:center; width:100% !important; margin-top:20px; }
+
+/*.wp-caption-text { background: #ebe9da; padding: 5px 10px 10px 10px; font-weight: bold; margin-bottom: 20px; }*/
+/* IMAGE CAPTION
+/* ----------------------------------------------*/
+
+.wp-caption {
+      border: 1px solid #ddd;
+      text-align: center;
+      background-color: #f3f3f3;
+      padding-top: 4px;
+      margin: 10px;
+      /* For rounded corner */
+      -moz-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      }
+
+.wp-caption img {
+      margin-bottom: 5px;
+      padding: 0;
+      border: 0 none;
+      }
+
+.wp-caption p.wp-caption-text {
+      font-size: 11px;
+      line-height: 17px;
+      padding: 0 4px 5px;
+      margin: 0;
+      }
+
+/* IMAGE POSITIONING
+/* ----------------------------------------------*/
+
+.aligncenter, div.aligncenter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+
+.alignright {
+      float: right;
+      }
+
+.alignleft {
+      float: left;
+      }
+
+
+/* End captions */
+
+ol.wpp-list {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+
+    counter-reset: li-counter;
+}
+
+ol.wpp-list > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    min-height: 2em;
+    border-left: 2px solid #CCCCCC;
+}
+
+ol.wpp-list > li:before {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    width: 0.8em;
+    font-size: 2em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    color: #464646;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+ol.wpp-list li span.wpp-stats { display:block; }
