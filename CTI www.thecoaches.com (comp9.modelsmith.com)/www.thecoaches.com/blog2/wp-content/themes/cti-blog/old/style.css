@@ -1,0 +1,29 @@
+/*
+Theme Name: CTI blog
+Theme URI: http://www.thecoaches.com
+Description: CTI blog theme
+Version: 1.0
+Author: Session Creative, Inc.
+*/
+
+.sidebar-module {
+	margin: 45px 0 0px 30px;
+	}
+.sidebar-module li {
+	list-style-type: none;
+	}
+.sidebar-module h2 { color: #32110a;
+	font-size: 0.9em;
+	font-weight: bolder;
+	margin: 20px 0 0 0px;
+	text-transform: uppercase; 
+	}
+.postEntry { border-bottom: 1px solid #32110a; padding: 0 0 10px 0px; }
+.more { margin: -10px 0 0 0; padding: 0; }
+h2.blogheader a { text-decoration: none; }
+
+img.alignleft { margin-right:10px; vertical-align:text-top; float:left; }
+div.alignleft { margin-right:10px; vertical-align:text-top; float:left; }
+div.alignleft p.wp-caption-text,
+div.aligncenter p.wp-caption-text { font-style:italic; }
+div.aligncenter { text-align:center; width:100% !important; margin-top:20px; }
