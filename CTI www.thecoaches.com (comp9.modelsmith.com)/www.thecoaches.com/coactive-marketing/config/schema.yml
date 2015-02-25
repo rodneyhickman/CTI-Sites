@@ -1,0 +1,158 @@
+# CTI Co-active Sales Class schema
+#
+# To update project after schema change, do:
+# (backup database)
+# symfony propel:build-model
+# symfony propel:build-sql
+# symfony propel:insert-sql
+# (restore database)
+#
+#
+propel:
+#
+#
+  profile:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    fmid:           {type: INTEGER}
+    name: longvarchar
+    email: longvarchar
+    purpose: longvarchar
+    
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+  group:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    start_date: date
+    name: longvarchar
+    
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+#
+#
+  homework:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    group_id: {type: INTEGER, foreignTable: group, foreignReference: id }
+    week_starting: date
+    ss_commit: {type: INTEGER}
+    ss_completed: {type: INTEGER}
+    clients_commit: {type: INTEGER}
+    clients_completed: {type: INTEGER}
+    points_commit: {type: INTEGER}
+    points_earned: {type: INTEGER}
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#
+#
+  audio:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    description: longvarchar
+    url: longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#
+  document:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    description: longvarchar
+    url: longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
