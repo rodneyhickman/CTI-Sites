@@ -1,0 +1,19 @@
+Updated:
+
+(DONE) Profile->isRegistered()
+
+(DONE) GroupPeer::currentGroup()
+
+(DONE) GroupPeer::futureCourses()
+
+(DONE) HomeworkPeer::register()
+
+
+
+
+Actions updated:
+
+Participant
+  executeHome()
+  executePickCourse()
+  executePickCourseProcess()
