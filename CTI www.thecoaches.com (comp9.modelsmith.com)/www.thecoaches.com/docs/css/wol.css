@@ -1,0 +1,19 @@
+td { 
+font:11px Verdana;
+ }
+#results {
+	width: 664px;
+	color: #111;
+	float:left;
+	font-size: 10px;
+	line-height: 1.8em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+#results #wheel {
+	width: 300px;
+	float:left;
+	}
+#results #chart {
+	width: 364px;
+	float:left;
+	}
