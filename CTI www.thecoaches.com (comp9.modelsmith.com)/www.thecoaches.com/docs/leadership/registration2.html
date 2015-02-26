@@ -1,0 +1,1270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Solaris (vers 25 March 2009), see www.w3.org" />
+
+  <title>CTI: Leadership: Registration</title>
+  <meta http-equiv="Content-type" content=
+  "text/html; charset=us-ascii" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="keywords" content=
+  "coach training, leadership training, organizational coach training, co-active, become a coach, training coaching, coach certification, coaching certification, coach training, coaching as a career, transformational learning, in person training, face to face training, mentoring, business coaching, business transformation, personal transformation, worldwide coaching, change career, improve career, help people, people to people, active listening, Henry Kimsey-House, Karen Kimsey-House, CPCC, Co-Active Coaching, co-Active model, co-Active Leadership" />
+  <meta name="description" content=
+  "CTI, The Coaches Training Institute trains more coaches around the world than any other training group. Using our Co-Active model, we helped establish the coach training industry and were a founder of the ICF. Through our coach training, you can become an ICF certified coach. Through our Leadership training, you can raise your leadership skills to new and unexpected heights. Our Organizational training helps companies train their managers to get the most out of happy employees." />
+  <meta name="author" content=
+  "The Coaches Training Institute (CTI)" />
+  <meta name="copyright" content=
+  "Copyright &copy; 2009 The Coaches Training Institute. All rights reserved." />
+  <meta name="nullbot" content="noarchive,nosnippet" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+	<script src="/js/smooth/mootools.js" type="text/javascript"></script>
+<script src="/js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="/js/nav.js" type="text/javascript"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/quest_enrollment.js" type="text/javascript"></script>
+<script type="text/javascript" src="/res/js/coaches-training-institute.js">
+</script>
+
+<link rel="stylesheet" type="text/css" href="/res/css/lytebox.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+
+		<link rel="stylesheet" type="text/css" href="/res/css/section_leadership.css" />
+
+		<link rel="stylesheet" type="text/css" href="/res/css/content_internal_8.css" />
+
+		<script type="text/javascript" src="/res/js/lytebox.js">
+</script>
+
+<script type="text/javascript">
+function switchDiv(id){
+  //alert(val);
+  document.getElementById('download').style.display="none";
+  document.getElementById('online').style.display="none";
+  document.getElementById(id).style.display="block";
+}
+
+ function IsValidEmail(str) {
+  return (str.indexOf(".") > 2) && (str.indexOf("@") > 0);
+ }
+
+ function IsNumeric(sText){
+   var ValidChars = "0123456789.";
+   var IsNumber=true;
+   var Char;
+
+
+   for (i = 0; i < sText.length && IsNumber == true; i++)
+      {
+      Char = sText.charAt(i);
+      if (ValidChars.indexOf(Char) == -1)
+         {
+         IsNumber = false;
+         }
+      }
+   return IsNumber;
+
+ }
+
+ function IsEmpty(aTextField) {
+   if ((aTextField.value.length==0) ||
+   (aTextField.value==null)) {
+      return true;
+   }
+   else { return false; }
+ }
+
+
+ function ValidateForm(form)
+ {
+
+   if(IsEmpty(form.name))
+   {
+      alert('You have not entered a name');
+      form.name.focus();
+      return false;
+   }
+
+
+
+   if (!IsValidEmail(form.email.value))
+   {
+      alert('Please enter a valid email address');
+      form.email.focus();
+      return false;
+   }
+
+   if(IsEmpty(form.phone))
+   {
+      alert('You have not entered your preferred phone number');
+      form.phone.focus();
+      return false;
+   }
+
+
+ return true;
+
+}
+
+function addParams(form)
+{
+  var redirect = 'http://www.cartserver.com/sc/cart.cgi';
+
+  if(form.op31.checked != 1){
+      alert("Please read the CTI Policies and indicate your agreement by checking the checkbox");
+      form.op31.focus();
+      return false;
+   }
+
+
+  var item = '';
+
+  var op1 = document.getElementById('op1');
+  var op2 = document.getElementById('op2');
+  var op3 = document.getElementById('op3');
+  var op4 = document.getElementById('op4');
+  var op5 = document.getElementById('op5');
+  var op6 = document.getElementById('op6');
+  var op31 = document.getElementById('op31');
+
+  var op1v = '';  if(op1){op1v = op1.value}
+  var op2v = '';  if(op2){op2v = op2.value}
+  var op3v = '';  if(op3){op3v = op3.value}
+  var op4v = '';  if(op4){op4v = op4.value}
+  var op5v = '';  if(op5){op5v = op5.value}
+  var op6v = '';  if(op6){op6v = op6.value}
+
+  var op31v = ''; if(op31.checked == 1){op31v = op31.value}
+
+
+  if(op1v != ''){
+    item=document.getElementById('itemnc').value;
+  } else if(op3v != ''){
+    item=document.getElementById('itemec').value;
+  } else if(op5v != ''){
+    item=document.getElementById('itemsp').value;
+  } 
+  document.getElementById('onlineredir').value = redirect + "?item="+escape(item)+"&op1="+escape(op1v)+"&op2="+escape(op2v)+"&op3="+escape(op3v)+"&op4="+escape(op4v)+"&op5="+escape(op5v)+"&op6="+escape(op6v)+"&op31="+escape(op31v);
+    //alert(form.redirect.value);
+  return true;
+}
+</script>
+
+	    <link rel="stylesheet" type="text/css" href="/res/css/home-footer.css" />
+	<script type="text/javascript" src="/res/js/coaches-training-institute.js"> </script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="/res/js/specials.js"> </script>
+	<script type="text/javascript" src="/res/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/res/js/jquery.expire.js"> </script>
+	<script language="JavaScript" type="text/javascript">
+	var html = '';
+	var count = 0;
+	google.setOnLoadCallback(function(){
+	jQuery.contentExpirator('expire');
+	$.get('/blog/feed/', function(xml){
+	        $("item", xml).each(function(){
+	                count++;
+	                if(count > 3) return false;
+	                $(this).find("link").each(function(){
+	                        html += "<div class='blog-entry'><strong><a href='" + getNodeText(this) +"'> ";
+	                }).end().find("title").each(function(){
+	                        html += getNodeText(this) + "</a></strong>";
+	                }).end().find("description").each(function(){
+	                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+	                }).end().find("link").each(function(){
+	                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
+	                });
+	        });
+	        $("#home-news").html(html);
+	});
+	});
+	
+	function getNodeText(node)
+	{
+	        var text = "";
+	        if(node.text) text = node.text;
+	        if(node.firstChild) text = node.firstChild.nodeValue;
+	        return text;
+	}
+	</script>
+
+  <script src="http://www.google.com/jsapi"></script>
+	<script>
+	google.load("jquery", "1.3.2");
+	google.setOnLoadCallback(function() {
+	var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+	var myArray  = myRe.exec(document.URL);   
+	var path = myArray[1] ? myArray[1] : myArray[3];
+	//alert(path);
+	$("#sub-nav li").removeClass('current');
+	$("#sub-nav a[href="+path+"]").parent().addClass('current');
+	});
+	</script>
+
+</head>
+
+<body>
+  <div id="page">
+    <div id="tools">
+      <!-- generalID --><& '/res/inc/id_general.html'
+      &><!-- -->
+       <!-- eCommerceID --><& '/res/inc/id_ecommerce.html'
+      &><!-- -->
+    </div>
+
+    <div id="primary">
+      <!-- contactNavID --><& '/res/inc/id_contact-nav.html'
+      &><!-- -->
+
+      
+				<!-- #startmainnav -->
+				<ul id="main-nav">
+					<li><a href="/why-coaches-training-institute/">Why <abbr title="Coaches Training Institute">CTI</abbr>?</a></li>
+					<li><a href="/coach-training/">Coach Training</a></li>
+					<li class="current"><a href="/leadership/">Leadership</a></li>
+					<li><a href="/organizations/">For Organizations</a></li>
+					<li><a href="/leaders/">Our Faculty</a></li>
+					<li><a href="/resources/">Resources</a></li>
+					<!-- <li><a href="/profiles/">Profiles</a></li> -->
+				</ul>
+     			<!-- #end -->
+				
+				
+				<div id="sub-nav">
+
+					<ul id="section-nav">
+        <li><a href="/leadership/program-overview/">Program Overview</a></li>
+        <li><a href="/leadership/retreats/">Retreats</a></li>
+        <li><a href="/leadership/dates-and-locations/">Dates &#38; Locations</a></li>
+        <li><a href="/leadership/faqs/"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+        <li><a href="/leadership/registration.html"><abbr title="Pricing">Pricing &amp; Registration</abbr></a></li>
+        <li><a href="/why-coaches-training-institute/faqs/">Accreditation</a></li>
+        <li><a href="/leadership/profiles-and-testimonials/">Profiles &amp; Testimonials</a></li>
+        <li><a href="/leadership/creating-from-self/">Creating from Self</a></li>
+      </ul>
+
+
+				</div>
+
+      <div id="broadcast">
+        <img src="/res/img/page-banners/content_leadership.gif"
+        width="920" height="124" alt="Leadership" usemap=
+        "#logobutton" /> <map id="logobutton" name="logobutton">
+          <area shape="rect" coords="822,0,899,103" href="/" title=
+          "CTI Home" alt="CTI Home" />
+        </map>
+      </div>
+
+
+      <div id="content" style="background-image: none;">
+        <div id="main">
+          
+          <div id="breadcrumbs">
+            <p><span id="youarehere" class="accessibility-hide">You are here:&nbsp;</span> <a href="/">Home</a><span class="divider">&nbsp;||&nbsp;</span><a href="/leadership/">Leadership</a><span class="divider">&nbsp;||&nbsp;</span><a href="/leadership/retreats/" class="here">Registration</a></p>
+          <div style="margin: -5px 0 0px 0px; float: right; "><script type="text/javascript">insert_social_bookmarking();</script></div>
+
+						</div>
+
+          <div class="pri">
+            <h1 id="main-headline">Registration</h1>
+
+            <h2>Program Fees</h2>
+
+
+      <p>
+		The total program cost is $11,900.00 (US programs) or &#8364;11,500.00 (European programs). This cost includes tuition, meals and 
+        residential fees for all four retreats. Payment options are available 
+        for the balance, provided 25% of the total is paid at least three weeks 
+        prior to each of the four retreats. Invoices are available upon request. CTI only accepts U.S. funds. Exchange rate is determined by your financial institution on the date of the transaction. CTI is not responsible for any fluctuations or transaction fees charged by your financial institution. </p>
+          
+        <h2>Registration</h2>  
+      <p style="margin-bottom: 0;">
+		An $975.00 deposit (US programs) or  &#8364;975.00 (European  programs) is required to reserve a space in the program of your 
+        choice, payable by check (US only), credit card or wire transfer. This payment will 
+        be applied toward tuition and/or fees in the event of a cancellation or 
+        transfer.</p>
+          
+            <p>&nbsp;</p>
+      <h3 style="margin-top: 0;">Please choose from one of the following registration options:</h3>
+
+<p>
+       <select id="reg_option" onchange="switchDiv(this.value);">
+<option value="----">--- Select an option ---</option>
+<option value="online" SELECTED>Online Registration</option>
+<option value="download">Download and print registration form</option>
+     </select>
+</p>
+
+<!-- start of forms -->
+<div style="float:left; width:500px;">                        
+  <div id="download" style="display:none;">
+
+
+
+    <p>To download and print the Registration Form, please enter your name, phone and email address and press Submit</p>
+    
+    <form action="/form.html" method="POST" name="form1" id="form1" style="margin-bottom: 0;" onsubmit="javascript:return ValidateForm(this)">
+
+      <p> 
+        <input type="hidden" name="recipient" value="leadership@thecoaches.com">
+
+        <input type="hidden" name="subject" value="Leadership Enrollment Download Form">
+        <input type="hidden" name="redirect" value="/leadership/leadership-download-ef.html">
+        
+        <strong></strong><strong>Name:</strong> 
+        <input type="text" name="name" size="50" maxlength="50">
+        <br>
+        <strong>Email:</strong> 
+        <input type="text" name="email" size="30" maxlength="30">
+        <br>
+        <strong></strong><strong>Phone 
+          Number: </strong> 
+        <input type="text" name="phone">
+      </p>
+
+      <p style="margin-bottom: 0;"><strong> 
+          <input type="submit" name="This completes leadership download  Form" value="Submit Form" tabindex="20">
+        </strong><strong> 
+          <input type="reset" value="Clear Form" tabindex="21" name="reset">
+      </strong></p>
+
+    </form>
+  </div><!-- id="download" -->
+  
+  <div id="online">
+
+
+    <form action="/form.html" method="POST" name="form2" id="form2" style="margin-bottom: 0" onsubmit="addParams(this);">
+
+      <p> 
+        <input type="hidden" name="recipient" value="leadership@thecoaches.com">
+
+        <input type="hidden" name="subject" value="Leadership Registration Form">
+        <input type="hidden" id="onlineredir" name="redirect" value="/leadership/policy.html">
+        <input type="hidden" name="Additional Note" value="Applicant should have completed a credit card payment via Amerisite Cart Server - please double check">
+
+        
+
+        <table border="0" cellpadding="2" cellspacing="0" class="textNormal">
+
+
+          <tr>
+            <td class="right">First Name:</td>
+            <td class="bodytext"><input type="text" name="First Name" tabindex="2" size="34"
+                                        maxlength="25"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Last Name:</td>
+            <td class="bodytext"><input type="text" name="Last Name" tabindex="3" size="34"
+                                        maxlength="50"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Gender:</td>
+            <td class="bodytext"><input type="radio" name="gender" tabindex="4" value="Male"> Male &nbsp;&nbsp;&nbsp;<input type="radio" name="gender" tabindex="4" value="Female"> Female</td>
+          </tr>
+
+          <tr>
+            <td class="right">Home Phone:</td>
+            <td class="bodytext"><input type="text" value="( ) " name="Home Phone" tabindex="5"
+                                        size="25" maxlength="25"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Work Phone:</td>
+            <td class="bodytext"><input type="text" value="( )" name="Work Phone" tabindex="6"
+                                        size="25" maxlength="25"> Ext:
+              <input type="text" name="Work Phone Ext." tabindex="7" size="5"
+                     maxlength="15"> optional
+            </td>
+          </tr>
+
+          <tr>
+            <td class="right">Mobile Phone:</td>
+            <td class="bodytext"><input type="text" value="( )" name="Mobile Phone" tabindex="8"
+                                        size="25" maxlength="25"> optional</td> 
+          </tr>
+
+          <tr>
+            <td class="right">Contact E-mail:</td>
+            <td class="bodytext"><input type="text" name="Contact Email" tabindex="9" size="34"
+                                        maxlength="100"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Address Line 1:</td>
+            <td class="bodytext"><input type="text" name="Address Line 1" tabindex="10" size="40"
+                                        maxlength="150"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Address Line 2:</td>
+            <td class="bodytext"><input type="text" name="Address Line 2" tabindex="11" size="40"
+                                        maxlength="150"></td>
+          </tr>
+
+          <tr>
+            <td class="right">City:</td>
+            <td class="bodytext"><input type="text" name="City" tabindex="12" size="40"
+                                        maxlength="75"></td>
+          </tr>
+
+          <tr>
+            <td class="right">State:</td>
+            <td class="bodytext"><select name="State" size="1" tabindex="13">
+
+                <option selected value="">&nbsp;--Choose One--
+                <option value="USA: AL">USA: Alabama
+                <option value="USA: AK">USA: Alaska
+                <option value="USA: AZ">USA: Arizona
+                <option value="USA: AR">USA: Arkansas
+                <option value="USA: CA">USA: California
+                <option value="USA: CO">USA: Colorado
+                <option value="USA: CT">USA: Connecticut
+                <option value="USA: DE">USA: Delaware
+                <option value="USA: FL">USA: Florida
+                <option value="USA: GA">USA: Georgia
+                <option value="USA: HI">USA: Hawaii
+                <option value="USA: ID">USA: Idaho
+                <option value="USA: IL">USA: Illinois
+                <option value="USA: IN">USA: Indiana
+                <option value="USA: IA">USA: Iowa
+                <option value="USA: KS">USA: Kansas
+                <option value="USA: KY">USA: Kentucky
+                <option value="USA: LA">USA: Louisiana
+                <option value="USA: ME">USA: Maine
+                <option value="USA: MD">USA: Maryland
+                <option value="USA: MA">USA: Massachusetts
+                <option value="USA: MI">USA: Michigan
+                <option value="USA: MN">USA: Minnesota
+                <option value="USA: MS">USA: Mississippi
+                <option value="USA: MO">USA: Missouri
+                <option value="USA: MT">USA: Montana
+                <option value="USA: NE">USA: Nebraska
+                <option value="USA: NV">USA: Nevada
+                <option value="USA: NH">USA: New Hampshire
+                <option value="USA: NJ">USA: New Jersey
+                <option value="USA: NM">USA: New Mexico
+                <option value="USA: NY">USA: New York
+                <option value="USA: NC">USA: North Carolina
+                <option value="USA: ND">USA: North Dakota
+                <option value="USA: OH">USA: Ohio
+                <option value="USA: OK">USA: Oklahoma
+                <option value="USA: OR">USA: Oregon
+                <option value="USA: PA">USA: Pennsylvania
+                <option value="USA: RI">USA: Rhode Island
+                <option value="USA: SC">USA: South Carolina
+                <option value="USA: SD">USA: South Dakota
+                <option value="USA: TN">USA: Tennessee
+                <option value="USA: TX">USA: Texas
+                <option value="USA: UT">USA: Utah
+                <option value="USA: VT">USA: Vermont
+                <option value="USA: VA">USA: Virginia
+                <option value="USA: WA">USA: Washington
+                <option value="USA: DC">USA: Washington DC
+                <option value="USA: WV">USA: West Virginia
+                <option value="USA: WI">USA: Wisconsin
+                <option value="USA: WY">USA: Wyoming
+                <option value="---------------------------">
+                <option value="CANADA: Alberta AB">CANADA: Alberta AB
+                <option value="CANADA: British Columbia BC">CANADA: British Columbia BC
+                <option value="CANADA: Manitoba MB">CANADA: Manitoba MB
+                <option value="CANADA: New Brunswick NB">CANADA: New Brunswick NB
+                <option value="CANADA: Newfoundland NF">CANADA: Newfoundland NF
+                <option value="CANADA: Northwest Territories NT">CANADA: Northwest Territories NT
+                <option value="CANADA: Nova Scotia NS">CANADA: Nova Scotia NS
+                <option value="CANADA: Nunavut Territory NT">CANADA: Nunavut Territory NT
+                <option value="CANADA: Ontario ON">CANADA: Ontario ON
+                <option value="CANADA: Prince Edward Is. PE">CANADA: Prince Edward Is. PE
+                <option value="CANADA: Quebec QC">CANADA: Quebec QC
+                <option value="CANADA: Saskatchewan SK">CANADA: Saskatchewan SK
+                <option value="CANADA: Yukon Territory YT">CANADA: Yukon Territory YT
+                <option value="---------------------------">
+                <option value="OTHER - Not Listed">OTHER - Not Listed
+              </select>
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td class="right">Region or Province:</td>
+            <td class="bodytext"><input type="text" name="Region or Province"
+                                        tabindex="14" size="34" maxlength="50"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Zip/Postal Code:</td>
+            <td class="bodytext"><input type="text" name="Zip Code/Postal Code"
+                                        tabindex="15" size="34" maxlength="50"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Country:</td>
+            <td class="bodytext">
+              <select id="Country" name="Country" tabindex="16" size="1">
+
+                <option value="Afghanistan">Afghanistan
+                <option value="Albania">Albania
+                <option value="Algeria">Algeria
+                <option value="Samoa">American Samoa
+                <option value="Andorra">Andorra
+                <option value="Angola">Angola
+                <option value="Anguilla">Anguilla
+                <option value="Antigua and Barbuda">Antigua and Barbuda
+                <option value="Argentina">Argentina
+                <option value="Armenia">Armenia
+                <option value="Aruba">Aruba
+                <option value="Australia">Australia
+                <option value="Austria">Austria
+                <option value="Azerbaijan">Azerbaijan
+                <option value="Bahamas">Bahamas
+                <option value="Bahrain">Bahrain
+                <option value="Bangladesh">Bangladesh
+                <option value="Barbados">Barbados
+                <option value="Belarus">Belarus
+                <option value="Belgium">Belgium
+                <option value="Belize">Belize
+                <option value="Benin">Benin
+                <option value="Bermuda">Bermuda
+                <option value="Bhutan">Bhutan
+                <option value="Bolivia">Bolivia
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina
+                <option value="Botswana">Botswana
+                <option value="Brazil">Brazil
+                <option value="British Virgin Islands">British Virgin Islands
+                <option value="Brunei Darussalam">Brunei Darussalam
+                <option value="Bulgaria">Bulgaria
+                <option value="Burkina Faso">Burkina Faso
+                <option value="Burundi">Burundi
+                <option value="Cambodia">Cambodia
+                <option value="Cameroon">Cameroon
+                <option value="Canada">Canada
+                <option value="Cape Verde">Cape Verde
+                <option value="Cayman Islands">Cayman Islands
+                <option value="Central African Republic">Central African Republic
+                <option value="Chad">Chad
+                <option value="Chile">Chile
+                <option value="China">China
+                <option value="Colombia">Colombia
+                <option value="Comoros">Comoros
+                <option value="Congo">Congo, Republic of
+                <option value="Zaire">Congo, Democratic Republic of
+                <option value="Cook Islands">Cook Islands
+                <option value="Costa Rica">Costa Rica
+                <option value="Ivory Coast">Cote D'Ivoire
+                <option value="Croatia">Croatia
+                <option value="Cuba">Cuba
+                <option value="Cyprus">Cyprus
+                <option value="Czech Republic">Czech Republic
+                <option value="Denmark">Denmark
+                <option value="Djibouti">Djibouti
+                <option value="Dominica">Dominica
+                <option value="Dominican Republic">Dominican Republic
+                <option value="Ecuador">Ecuador
+                <option value="Egypt">Egypt
+                <option value="El Salvador">El Salvador
+                <option value="Equatorial Guinea">Equatorial Guinea
+                <option value="Eritrea">Eritrea
+                <option value="Estonia">Estonia
+                <option value="Ethiopia">Ethiopia
+                <option value="Falkland Islands">Falkland Islands
+                <option value="Faroe Islands">Faroe Islands
+                <option value="Fiji">Fiji
+                <option value="Finland">Finland
+                <option value="France">France
+                <option value="French Guiana">French Guiana
+                <option value="French Polynesia">French Polynesia
+                <option value="Gabon">Gabon
+                <option value="Gambia">Gambia
+                <option value="Georgia">Georgia
+                <option value="Germany">Germany
+                <option value="Ghana">Ghana
+                <option value="Gibraltar">Gibraltar
+                <option value="Greece">Greece
+                <option value="Greenland">Greenland
+                <option value="Grenada">Grenada
+                <option value="Guadeloupe">Guadeloupe
+                <option value="Guatemala">Guatemala
+                <option value="Guinea">Guinea
+                <option value="Guinea Bissau">Guinea Bissau
+                <option value="Guyana">Guyana
+                <option value="Haiti">Haiti
+                <option value="Honduras">Honduras
+                <option value="Hong Kong">Hong Kong
+                <option value="Hungary">Hungary
+                <option value="Iceland">Iceland
+                <option value="India">India
+                <option value="Indonesia">Indonesia
+                <option value="Iran">Iran
+                <option value="Iraq">Iraq
+                <option value="Ireland">Ireland
+                <option value="Israel">Israel
+                <option value="Italy">Italy
+                <option value="Jamaica">Jamaica
+                <option value="Japan">Japan
+                <option value="Jordan">Jordan
+                <option value="Kazakhstan">Kazakhstan
+                <option value="Kenya">Kenya
+                <option value="Kiribati">Kiribati
+                <option value="Kuwait">Kuwait
+                <option value="Kyrgyzstan">Kyrgyzstan
+                <option value="Laos">Laos
+                <option value="Latvia">Latvia
+                <option value="Lebanon">Lebanon
+                <option value="Lesotho">Lesotho
+                <option value="Liberia">Liberia
+                <option value="Libya">Libya
+                <option value="Liechtenstein">Liechtenstein
+                <option value="Lithuania">Lithuania
+                <option value="Luxembourg">Luxembourg
+                <option value="Macau">Macau
+                <option value="Macedonia">Macedonia
+                <option value="Madagascar">Madagascar
+                <option value="Malawi">Malawi
+                <option value="Malaysia">Malaysia
+                <option value="Maldives">Maldives
+                <option value="Mali">Mali
+                <option value="Malta">Malta
+                <option value="Martinique">Martinique
+                <option value="Marshall Islands">Marshall Islands
+                <option value="Mauritania">Mauritania
+                <option value="Mauritius">Mauritius
+                <option value="Mexico">Mexico
+                <option value="Micronesia">Micronesia
+                <option value="Moldova">Moldova
+                <option value="Monaco">Monaco
+                <option value="Mongolia">Mongolia
+                <option value="Montserrat">Montserrat
+                <option value="Morocco">Morocco
+                <option value="Mozambique">Mozambique
+                <option value="Myanmar">Myanmar
+                <option value="Namibia">Namibia
+                <option value="Nepal">Nepal
+                <option value="Netherlands">Netherlands
+                <option value="Netherlands Antilles">Netherlands Antilles
+                <option value="New Caledonia">New Caledonia
+                <option value="New Zealand">New Zealand
+                <option value="Nicaragua">Nicaragua
+                <option value="Niger">Niger
+                <option value="Nigeria">Nigeria
+                <option value="Norfolk Island">Norfolk Island
+                <option value="North Korea">North Korea
+                <option value="Northern Mariana Islands">Northern Mariana Islands
+                <option value="Norway">Norway
+                <option value="Oman">Oman
+                <option value="Pakistan">Pakistan
+                <option value="Palau">Palau
+                <option value="Panama">Panama
+                <option value="Papua New Guinea">Papua New Guinea
+                <option value="Paraguay">Paraguay
+                <option value="Peru">Peru
+                <option value="Philippines">Philippines
+                <option value="Poland">Poland
+                <option value="Portugal">Portugal
+                <option value="Puerto Rico">Puerto Rico
+                <option value="Qatar">Qatar
+                <option value="Reunion">Reunion
+                <option value="Romania">Romania
+                <option value="Russia">Russia
+                <option value="Rwanda">Rwanda
+                <option value="Saint Helena">Saint Helena
+                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis
+                <option value="Saint Lucia">Saint Lucia
+                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                <option value="Saint Vincent/Grenadines">Saint Vincent/Grenadines
+                <option value="Samoa">Samoa
+                <option value="San Marino">San Marino
+                <option value="Saotome and Principe">Saotome and Principe
+                <option value="Saudi Arabia">Saudi Arabia
+                <option value="Senegal">Senegal
+                <option value="Seychelles">Seychelles
+                <option value="Sierra Leone">Sierra Leone
+                <option value="Singapore">Singapore
+                <option value="Slovak Republic">Slovak Republic
+                <option value="Slovenia">Slovenia
+                <option value="Solomon Islands">Solomon Islands
+                <option value="Somalia">Somalia
+                <option value="South Africa">South Africa
+                <option value="South Korea">South Korea
+                <option value="Spain">Spain
+                <option value="Sri Lanka">Sri Lanka
+                <option value="Sudan">Sudan
+                <option value="Suriname">Suriname
+                <option value="Swaziland">Swaziland
+                <option value="Sweden">Sweden
+                <option value="Switzerland">Switzerland
+                <option value="Syria">Syria
+                <option value="Taiwan">Taiwan
+                <option value="Tajikistan">Tajikistan
+                <option value="Tanzania">Tanzania
+                <option value="Thailand">Thailand
+                <option value="Togo">Togo
+                <option value="Tokelau">Tokelau
+                <option value="Tonga">Tonga
+                <option value="Trinidad and Tobago">Trinidad and Tobago
+                <option value="Tunisia">Tunisia
+                <option value="Turkey">Turkey
+                <option value="Turkmenistan">Turkmenistan
+                <option value="Turks and Caicos Islands">Turks and Caicos Islands
+                <option value="Uganda">Uganda
+                <option value="Ukraine">Ukraine
+                <option value="United Arab Emirates">United Arab Emirates
+                <option value="Great Britain">United Kingdom
+                <option selected value="United States">United States
+                <option value="United States Virgin Islands">U.S. Virgin Islands
+                <option value="Uruguay">Uruguay
+                <option value="Uzbekistan">Uzbekistan
+                <option value="Vanuatu">Vanuatu
+                <option value="Vatican City">Vatican City
+                <option value="Venezuela">Venezuela
+                <option value="Vietnam">Vietnam
+                <option value="Western Sahara">Western Sahara
+                <option value="Samoa">Western Samoa
+                <option value="Yemen">Yemen
+                <option value="Yugoslavia">Yugoslavia
+                <option value="Zambia">Zambia
+                <option value="Zimbabwe">Zimbabwe
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="right">Web Address:</td>
+            <td class="bodytext"><input type="text" value="http://" name="Web Site Address"
+                                        tabindex="17" size="34" maxlength="100"> optional</td>
+          </tr>
+
+
+          <tr>
+            <td class="right">Referred by:</td>
+            <td class="bodytext"><input type="text" value="" name="Referred by"
+                                        tabindex="18" size="34" maxlength="100"></td>
+          </tr>
+
+          <tr>
+            <td class="right">Coupon Code:</td>
+            <td class="bodytext"><input type="text" value="" name="Coupon Code"
+                                        tabindex="19" size="34" maxlength="100"></td>
+          </tr>
+
+          <tr><td>&nbsp;</td><td></td></tr>              
+
+          <tr>
+            <td colspan="2"><b>Deposit:</b> The Deposit of $975 (US programs) or &euro;975 (European programs) is payable at time of registration.<br />
+              <b>Please select one of the following payment options for the remaining balance:</b><br /><br />
+              <p  style="text-indent:-17px; padding-left:17px;">
+                <input type="radio" name="Payment Option" value="in full" checked>	In Full: $11,900 (US programs) or &euro;11,500. (European programs) due 3 weeks prior to the program start date</p>
+              <p  style="text-indent:-17px; padding-left:17px;">
+                <input type="radio" name="Payment Option" value="quarterly">	Quarterly: $2,000 (US programs) or &euro;1,900(European programs) due prior to the first retreat 
+                and in 3 additional installments of $2,975 or &euro;2,875 3 weeks prior to each retreat start date</p>
+              <p  style="text-indent:-17px; padding-left:17px;">
+                <input type="radio" name="Payment Option" value="monthly">	Monthly: approximately $910.00 (US programs) or approximately &euro;877.00 (European programs) per month for 12 months, beginning 2 months prior to Retreat 1 (25% of the total program fees must be paid 3 weeks prior to each retreat start date)</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">My agreement below authorizes CTI to automatically charge my credit card. I understand that balances due will be automatically charged according to the payment option selected above.<br />
+              <input type="radio" name="Does applicant agree to credit card charges?" value="Yes"> <b>I Agree</b><br />
+              <input type="radio" name="Does applicant agree to credit card charges?" value="No" checked> <b>I do not agree</b>
+            </td>
+          </tr>
+        </table>         
+
+
+
+<p>&nbsp;</p>
+
+<input id="op31" name="op31" type="checkbox" value="Agreed to policies"> Yes, I have read and agree to <a class="pricingdetails" href="/_temp/policy_leadership.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>
+        
+
+
+
+
+
+
+
+        <input type="hidden" name="itemnc" id="itemnc" value="a-6814^LP^Total Cost USD $11,900, Deposit USD $975 <br> Leadership Package Northern California^975.00^1^^^^^">
+
+      <p>&nbsp;</p>
+      <p>Please select your preferred Location and Program Dates:</p>
+
+      <h2>Northern California, USA</h2>
+
+      <p><strong>Leadership First Choice</strong><br>
+
+
+        <select name="op1" id="op1" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% my $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$retreats){
+            <option value=" 1st choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+        </select>
+
+
+
+
+      <p><strong>Leadership Second Choice</strong><br>
+
+
+
+        <select name="op2" id="op2" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$retreats){
+            <option value=" 2nd choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+
+        </select>
+
+
+
+
+      <p>
+        <input type="image" border="0" name="This completes leadership download Form" src="/images/button_addtocart.gif" value="Submit Form" >
+      </p>
+
+
+
+
+      <input type="hidden" name="itemec" id="itemec" value="a-6814^LP^Total Cost USD $11,900, Deposit USD $975 <br> Leadership Package East Coast^975.00^1^^^^^">
+
+      <p>&nbsp;</p>
+
+
+      <h2>East Coast, USA</h2>
+
+      <p><strong>Leadership First Choice</strong><br>
+
+
+        <select name="op3" id="op3" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$BOI_retreats){
+            <option value=" 1st choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+        </select>
+
+
+
+
+
+
+      <p><strong>Leadership Second Choice</strong><br>
+
+
+        <select name="op4" id="op4" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$BOI_retreats){
+            <option value=" 2nd choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+
+        </select>
+
+
+      <p>
+        <input type="image" border="0" name="This completes leadership download Form" src="/images/button_addtocart.gif" value="Submit Form"></p>
+
+
+
+
+
+      <input type="hidden" name="itemsp" id="itemsp" value="a-6814^LP^Total Cost Euro 11,500, Deposit Euro 975 <br> Leadership Package Spain^975.00^1^^^^^">
+
+      <p>&nbsp;</p>
+
+      <h2>Sitges, Spain</h2>
+
+      <p><strong>Leadership First Choice</strong><br>
+
+
+        <select name="op5" id="op5" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$ES_retreats){
+            <option value=" 1st choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+        </select>
+
+
+
+
+
+      <p><strong>Leadership Second Choice</strong><br>
+
+
+        <select name="op6" id="op6" size="1">
+
+          <option value="">You have not yet made a Retreat selection.</option>
+          <option value="">-----------------------------------------------------</option>
+% $prev = '';
+% foreach my $r (sort { $a->{id} <=> $b->{id} } @$ES_retreats){
+            <option value=" 2nd choice: <% $r->{retreat1} %>, <% $r->{retreat2} %>, <% $r->{retreat3} %>, <% $r->{retreat4} %> ">
+              Retreats starting in <% $r->{month} %>
+% if ($r->{month} eq $prev) {
+              (2nd group)
+% }
+            </option>
+% $prev = $r->{month}; }
+
+
+        </select>
+
+
+
+      <p>
+        <input type="image" border="0" name="This completes leadership download Form" src="/images/button_addtocart.gif" value="Submit Form" >
+
+      </p>
+
+    </form>
+
+  </div><!-- id="online" -->
+</div>
+
+<!-- end of forms -->
+
+
+     
+          </div>
+</div>
+
+          <div id="sidebar">
+          <!--<img src=
+          "/res/img/testimonial_pics/big/class_02_long.gif" width=
+          "345" height="114" alt="Leadership Training at CTI" />-->
+
+          <div class="pri">
+
+          <div style="margin-left:0px">
+<a href="http://www.thecoaches.com/contact/schedule-a-call/"><img src="/images/more_info_sm.gif"></a><br />&nbsp;</div>
+
+<h2>Dates &amp; Locations</h2>
+
+            <p class="intro">In choosing a program, please be sure
+            that you can attend all four retreats of that program.
+            You will have the same leaders and fellow participants
+            throughout the course of the program. Please Note: In
+            order to be put on the waiting list for a full program,
+            you must be registered in another open program.
+            <a href="/leadership/dates-and-locations/"><br />
+            <strong><br />
+            Click here for more information on<br />
+            Dates &amp; Locations</strong></a></p>
+          </div>
+
+          <div class="sec">
+
+
+            <h2>Pricing &amp; Registration</h2>
+
+            <p>The total program cost for the <abbr title=
+            "United States">US</abbr> programs is <abbr title=
+            "United States Dollars">USD</abbr> $11,900.00. An
+            $975.00 deposit is due upon registration.</p>
+
+            <p>The total cost for the Spain program is
+            &euro;11,500.00. An &euro;975.00 deposit is due
+            upon registration. This fee includes tuition, meals and
+            residential fees for all four retreats.</p>
+          </div>
+        </div>
+      </div>
+     <!-- ctaAreaId --><!-- & '/res/inc/id_cta-area.html' & --><!-- -->
+        
+        <!-- used for cross-browser stabilizion of layout -->
+        <div class="pageclear"></div>
+      <!-- /div -->
+  	 </div>
+
+
+	<!-- ctaAreaId --><& '/res/inc/id_tabbed-footer-1.html' &><!-- -->
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/cti_coaches.json?callback=twitterCallback2&amp;count=4"></script>
+<script type="text/javascript">
+	// Enable footer tab functionality
+	(function($) {
+		$('#footerMain .tabs a').click(function(event) {
+			// Prevent default click behavior
+			// ev.preventDefault();
+			event.preventDefault();
+
+			// Set up some variables and grab some resuable DOM references
+			var $t = $(this), // Quick ref for the clicked link
+				$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+				id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+				visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel (Tuck, Centers, Corporate)
+				tgtName = id.substr(6); // Get the name of the target panel to show, like above
+		
+			$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+			$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+		});
+
+	})(jQuery);
+</script>
+
+  <script type="text/javascript">
+//<![CDATA[
+
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+  //]]>
+  </script><script type="text/javascript">
+//<![CDATA[
+
+        try {
+
+        var pageTracker = _gat._getTracker("UA-5715102-1");
+
+        pageTracker._trackPageview();
+
+        } catch(err) {}
+  //]]>
+  </script>
+</body>
+</html>
+<%once>
+use Data::Dumper;
+use List::MoreUtils qw{ uniq };
+use Date::Manip qw{ ParseDate UnixDate DateCalc };
+use CTI::Database qw( get_sql );
+
+
+
+</%once>
+<%init>
+my $fun_events;
+
+
+my $BOI_sql = <<'EOS';
+SELECT id,event,start_date_formatted,end_date_formatted FROM event_calendar
+WHERE (course_type_id=11 or course_type_id=12 or course_type_id=13 or course_type_id=14)
+AND location like '%BOI'
+EOS
+
+my $ES_sql = <<'EOS';
+
+SELECT id,event,start_date_formatted,end_date_formatted FROM event_calendar
+WHERE (course_type_id=11 or course_type_id=12 or course_type_id=13 or course_type_id=14)
+AND (location='SPAIN' or location like 'ES%')
+EOS
+
+my $sql =<<'EOS';
+SELECT id,event,start_date_formatted,end_date_formatted FROM event_calendar
+WHERE (course_type_id=11 or course_type_id=12 or course_type_id=13 or course_type_id=14)
+AND (location='MTree' OR location='Wildwood' OR location='Sequoia' OR location="WESTERBEKE")
+EOS
+
+my ($events) = $dbh->selectall_arrayref( $sql, {Columns=>{}} );
+  for (@$events){
+    $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+    $_->{pod} = $1;
+    my $days = $2 < 2 ? 6 : 5; # 6 days for retreats 1 and 2, 5 days for the rest
+    $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+    $_->{month} = "$1 $2";
+    $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+    #$_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+  }
+
+# get names of #1 retreat (i.e. Salmon 1)
+my @pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$events; # 
+
+# get names of #1 retreat (i.e. Salmon 1)
+my @months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$events; # 
+
+                    
+
+
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $retreats = [ ];
+
+foreach my $pod (@pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$events;
+
+  push(@$retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+  
+         
+}
+
+# Spain 
+
+  my ($ES_events) = $dbh->selectall_arrayref($ES_sql,{Columns=>{}});
+  for (@$ES_events){
+    $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+    $_->{pod} = $1;
+    my $days = $2 < 3 ? 5 : 4; # 6 days for retreats 1 and 2, 5 days for the rest
+    $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+    $_->{month} = "$1 $2";
+    $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+    #$_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+  }
+# get names of #1 retreat (i.e. Salmon 1)
+my @ES_pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$ES_events; # 
+
+# get months and sort them
+my @ES_months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$ES_events; # 
+
+                    
+
+
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $ES_retreats = [ ];
+
+foreach my $pod (@ES_pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$ES_events;
+
+  push(@$ES_retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+  
+         
+}
+
+
+
+# BOI
+
+  my ($BOI_events) = $dbh->selectall_arrayref($BOI_sql,{Columns=>{}});
+  for (@$BOI_events){
+    $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+    $_->{pod} = $1;
+    my $days = $2 < 3 ? 5 : 4; # 6 days for retreats 1 and 2, 5 days for the rest
+    $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+    $_->{month} = "$1 $2";
+    $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+    #$_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+  }
+# get names of #1 retreat (i.e. Salmon 1)
+my @BOI_pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$BOI_events; # 
+
+# get months and sort them
+my @BOI_months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$BOI_events; # 
+
+                    
+
+
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $BOI_retreats = [ ];
+
+foreach my $pod (@BOI_pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$BOI_events;
+
+  push(@$BOI_retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+  
+         
+}
+
+
+
+
+</%init>
+

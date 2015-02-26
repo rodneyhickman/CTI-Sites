@@ -1,0 +1,6 @@
+Options +Indexes
+
+AuthName "Restricted"
+AuthType Basic
+AuthUserFile /www/www.thecoaches.com/etc/.htpasswd
+Require valid-user
