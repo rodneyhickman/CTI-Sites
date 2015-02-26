@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Way</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script src="js/smooth/mootools.js" type="text/javascript"></script>
+<script src="js/smooth/jd.gallery.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="css/launch.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('#step3a').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step3a',1);
+       } else {
+         updateStep('step3a',0);
+       }
+     });
+ $('#step3b').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step3b',1);
+       } else {
+         updateStep('step3b',0);
+       }
+     });
+ $('#step3c').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step3c',1);
+       } else {
+         updateStep('step3c',0);
+       }
+     });
+ $('#step3d').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step3d',1);
+       } else {
+         updateStep('step3d',0);
+       }
+     });
+  function updateStep(step,value){
+     $.get('updateLW.html?s='+escape(step)+'&v='+escape(value)+'&ctr=westerbeke');
+  }
+  $('#go').click(function(){
+    window.location.href='launchpadLW_home.html';
+  });
+ });
+</script>
+
+
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	<li><a href="http://www.thecoaches.com/leadership">Return to Co-Active Leadership home »</a></li>
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="http://www.thecoaches.com/"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="images/int_header_launchpad-lw.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+           
+           <p>1. Fill out  <a href="http://ww2.thecoaches.com/launchpad/ctiforms/DietaryRequirements" style="color: #990000">online Dietary Requirements form.</a><br />
+             </p>
+           <p>2. Download the <a href="pdfs/WesterbekeTravel-Planning-V2.0.pdf" target="_blank" style="color: #990000">Travel Planning PDF</a> 
+		   <!-- and <a href="pdfs/TRYP-hotel-reservation.pdf" target="_blank" style="color: #990000">Hotel Reservation PDF</a> -->
+		   . <br />
+           Make sure you read this sheet in its entirety PRIOR to booking any flights or hotels. This will provide all the information you need to make your travel plans for Retreat 1.</p>
+           <p>3. Download the <a href="pdfs/Westerbeke-Directions-Packing-V3-0.pdf" target="_blank" style="color: #990000">Directions &amp; Packing PDF</a>. <br />
+           This document provides information that is essential as you pack and prepare to leave for the retreat. If you are driving, the driving directions are also in this document.</p>
+           <!-- <p>*Once the form has been submitted you will receive an email confirmation and copy of your answers. If any of your answers should change prior to retreat 1, please update your form using the link in your confirmation email and contact CTI Customer Service at 415-451-6000 ext 701 or <a href="mailto:leadership@thecoaches.com">leadership@thecoaches.com</a>.</p> -->
+            
+            
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+<& /google_analytics.mas &></body>
+<script src="js/nav.js" type="text/javascript"></script>
+   </html>
+<%init>
+my $username = $m->scomp('authenLW_Westerbeke.mas');
+my ($step3a,$step3b,$step3c,$step3d) = $dbh->selectrow_array('SELECT step3a,step3b,step3c,step3d FROM landing WHERE email=?',undef,$username);
+</%init>

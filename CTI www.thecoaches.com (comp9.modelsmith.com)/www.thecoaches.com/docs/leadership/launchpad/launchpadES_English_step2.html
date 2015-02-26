@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script src="js/smooth/mootools.js" type="text/javascript"></script>
+<script src="js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="js/nav.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/launch.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('#step2a').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step2a',1);
+       } else {
+         updateStep('step2a',0);
+       }
+     });
+ $('#step2b').click(
+     function() {
+       if($(this).attr('checked')==1){
+         updateStep('step2b',1);
+       } else {
+         updateStep('step2b',0);
+       }
+     });
+  function updateStep(step,value){
+     $.get('updateES.html?s='+escape(step)+'&v='+escape(value));
+  }
+  $('#go').click(function(){
+    window.location.href='launchpadES_English_home.html';
+  });
+ });
+</script>
+
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	<li><a href="index.html">Return to Co-Active Leadership home »</a></li>
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="/index.html"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="images/int_header_launchpad-es.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+
+           
+		   <p><a href="launchpadES_English_home.html" style="color:#888">Return to Launchpad home without completing this step</a></p>
+           <h1 style="margin-top:20px">Step 2</h1>
+           <p>1. Fill out <a href="http://ww2.thecoaches.com/launchpad/ctiforms/ProgramQuestionnaire" style="color: #990000">online background, personal info, and intention form</a><br />
+			  2. If you would prefer, you can preview the questions and complete this form offline by downloading the <a href="/pdfs/LP-Questionnaire-v2.09.pdf" style="color: #990000" target="_blank">PDF</a> or <a href="/pdfs/LP-Questionnaire-v2.09.doc" style="color: #990000">Word</a> document. Please note that you will still need to submit your answers online using the form in number 1 above
+              .
+
+
+           </p>
+           <p>You will need to complete this form in one sitting. Please be sure that you have at least 30 minutes available before you begin. </p>
+           <!-- <p>*Once the form has been submitted you will receive an email confirmation and copy of your answers. If any of your answers should change prior to retreat 1, you can update the information using a link provided in the email.</p> -->
+           <p style="margin-top:20px"><strong>Once you have completed the online form,  check the 
+           box
+	        below <br />
+           and click "Complete" to record that you have completed Step 2.</strong></p>
+		   <div id="checkbox">
+            <input name="completed" type="checkbox" id="step2a" <% $step2a ? 'CHECKED' : '' %> /> 
+            Fill out online Background, Personal Info, &amp; Intention form<br />
+			<input id="go" type="button" value="Complete" style="margin-top:5px" /></div>
+            
+            
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+<& /google_analytics.mas &></body>
+</html>
+<%init>
+my $username = $m->scomp('authenES.mas');
+my ($step2a,$step2b) = $dbh->selectrow_array('SELECT step2a,step2b FROM landing WHERE email=?',undef,$username);
+</%init>

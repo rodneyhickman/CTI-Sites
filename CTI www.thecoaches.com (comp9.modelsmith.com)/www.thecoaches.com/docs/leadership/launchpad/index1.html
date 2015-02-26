@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script src="js/smooth/mootools.js" type="text/javascript"></script>
+<script src="js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="js/nav.js" type="text/javascript"></script>
+<style>
+.map-mcc {background-image: url(images/map-icon-us-mcc.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin: 30px 0 0 20px;}
+.map-ca {background-image: url(images/map-icon-us-ca.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin: 30px 0 0 20px;}
+.map-nc {background-image: url(images/map-icon-us-nc.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin-left: 20px;}
+.map-sp {background-image: url(images/map-icon-sitges.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin-left: 20px;}
+
+.map-ja {background-image: url(/docs/images/japan_star.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin-left: 20px;}
+.map-il {background-image: url(/docs/images/israel_star.gif); background-repeat: no-repeat; padding: 5px 0 0 40px; height: 50px; display: block; width: 400px; margin-left: 20px;}
+</style>
+
+
+  <script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+var myArray  = myRe.exec(document.URL);   
+var path = myArray[1] ? myArray[1] : myArray[3];
+//alert(path);
+$("#sub-nav li").removeClass('current');
+$("#sub-nav a[href="+path+"]").parent().addClass('current');
+});
+</script>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	<li><a href="http://www.thecoaches.com/leadership">Return to Co-Active Leadership home »</a></li>
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="http://www.thecoaches.com/"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="images/int_header_leadership.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+             		<h1>To access your leadership launchpad, please click the correct location for your Co-Active Leadership Program.</h1>
+                    <div class="map-ca"><p><a href="launchpadCA_home.html"><strong>US &ndash; West Coast, Northern California</strong></a></p></div>
+
+                    <div class="map-nc"><p><a href="launchpadNC_home.html"><strong>US &ndash; East Coast, North Carolina</strong></a></p></div>
+                    <div class="map-sp"><p><a href="launchpadES_home.html"><strong>Spain &ndash; Sitges</strong></a></p></div>									                    <div class="map-il"><p><a href="launchpadIL_home.html"><strong>Israel</strong></a></p></div>									                   <!-- <div class="map-ja"><p><a href="launchpadJA_home.html"><strong>Japan &ndash; Hagoromo</strong></a></p></div> -->
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+
+
+
+   

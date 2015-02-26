@@ -1,0 +1,14 @@
+<% $value %>
+<%init>
+my $args    = $m->request_args();
+my ($step,$value) = @{$args}{'s','v'};
+
+my $username = $m->scomp('authenTR.mas');
+
+if($username){
+  if ($step =~ m/^step[123][abcde]?$/ and $value =~ m/^[01]$/) {
+    $dbh->do("UPDATE landing SET $step=? WHERE email=?",undef,$value,$username);
+  }
+}
+
+</%init>

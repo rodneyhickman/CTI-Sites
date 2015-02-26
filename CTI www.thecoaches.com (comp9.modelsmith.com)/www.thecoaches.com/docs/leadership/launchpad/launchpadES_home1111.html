@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script src="js/smooth/mootools.js" type="text/javascript"></script>
+<script src="js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="js/nav.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/launch.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+
+ });
+</script>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	<li><a href="index.html">Return to Co-Active Leadership home »</a></li>
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="index.html"><img src="images/cti_logo.gif" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="images/int_header_launchpad-es.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+             		<h1>Congratulations! Your leadership journey begins here.</h1>
+           <p style="font-size: 11px; border-bottom: 1px solid #ccc; margin-bottom: 10px">You have initiated your journey by registering and now you must complete three important steps prior to the first retreat. Please complete these steps as soon as possible. The sooner you set your leadership intention, the more powerful your leadership journey will be.
+ These steps are critical and time sensitive: 
+           <strong>failure to complete them on time could jeopardize your participation</strong>. If you have questions or need additional assistance please don't hesitate to call CTI Customer Service at 415-451-6000 ext 701 or <a href="mailto:leadership@thecoaches.com">leadership@thecoaches.com</a>.</p>
+           
+           <div id="launch01"><a href="launchpadES_step1.html"><img src="images/<% $step1 ? 'step1_completed' : 'step1_not' %>.gif" /></a>
+           <p><span class="taskheader">Task details</span><br />
+             <ul>
+             <li>Fill out and submit online medical information and release of liability form.</li>
+             </ul>
+             </p>
+           </div>
+           <div id="launch02"><a href="launchpadES_step2.html"><img src="images/<% $step2a ? 'step2_completed' : 'step2_not' %>.gif" /></a>
+           <p><span class="taskheader" style="margin-left:5px">Task details</span><br />
+             <ul>
+             <li>Fill out and submit online   background, personal    info, and intention form</li>
+             <li>Download background   questionnaire PDF (optional)</li>
+             
+             </ul>
+             </p>
+           </div>
+           
+           <div id="launch03"><a href="launchpadES_step3.html"><img src="images/<% $step3a && $step3b && $step3c  ? 'step3_completed' : 'step3_not' %>.gif" /></a>
+           <p><span class="taskheader" style="margin-left:10px">Task details</span><br />
+             <ul>
+             <li>Download Travel Planning PDF</li>
+             <li>Download Directions &amp; Packing PDF</li>
+             <li>Fill out and submit online   Travel Plans form</li>
+            
+             </ul>
+             </p>
+           </div>
+
+<div style="clear:both;">&nbsp;</div>
+         <div style="margin-left:25px;">
+           <ul>
+             <li style="color:#990000">All 3 steps must be completed no later than 4 weeks prior to your retreat 1 start date</li>
+             <li style="color:#990000">If in the event your registration is within 4 weeks of your retreat 1 start date, please complete all 3 steps immediately.</li>
+           </ul>
+         </div>
+
+         
+           
+         </div>
+         <!-- End Main Content -->
+
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+<& /google_analytics.mas &></body>
+</html>
+<%init>
+my $username = $m->scomp('authenES.mas');
+my ($step1,$step2a,$step2b,$step3a,$step3b,$step3c,$step3d) = $dbh->selectrow_array('SELECT step1,step2a,step2b,step3a,step3b,step3c,step3d FROM landing WHERE email=?',undef,$username);
+</%init>

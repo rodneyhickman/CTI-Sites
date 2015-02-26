@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+   $('#go').click(function(){
+     $('#loginform').submit();
+   });
+ });
+</script>
+
+  <script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+var myArray  = myRe.exec(document.URL);   
+var path = myArray[1] ? myArray[1] : myArray[3];
+//alert(path);
+$("#sub-nav li").removeClass('current');
+$("#sub-nav a[href="+path+"]").parent().addClass('current');
+});
+</script>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	<li><a href="index.html">Return to Co-Active Leadership home »</a></li>
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="index.html"><img src="images/cti_logo.gif" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="images/int_header_launchpad.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+	 <h1>You are logged out</h1>         
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+<& /google_analytics.mas &></body>
+</html>
+<%once>
+use CTI::Secret;
+use Digest::SHA1;
+</%once>
+<%init>
+my $args    = $m->request_args();
+my ($email) = @{$args}{'email'};
+my $err      = '';
+
+my %c = eval{ Apache2::Cookie->fetch };
+my ($username,$MAC);
+my %values;
+if(exists $c{session}){
+  %values   = $c{session}->value;
+  $username = lc $values{username}; # lower case so that it matches database
+  $MAC      = $values{MAC};
+}
+
+my $session_ok = $MAC eq Digest::SHA1::sha1_hex( $username, Secret::value() );
+
+if ($username) {
+  $email =~ s/[^a-zA-Z0-9\.\-\_\@]//g; # remove invalid chars
+  $email = lc $email;
+  # make login cookie
+  Apache2::Cookie->new
+      ( $r,
+        -name  => 'session',
+        -value => { username => $username, # add expires as additional data
+                    MAC =>
+                      Digest::SHA1::sha1_hex
+                          ( $username, Secret::value() ) },
+        -path  => '/',
+        -domain => '.thecoaches.com',
+        -expires => '-1d',
+      )->bake($r);
+
+  # add to database if not already exists
+   ($username) = $dbh->selectrow_array('SELECT email FROM landing WHERE email=?',undef,$email);
+
+   if(not $username){
+   $dbh->do('INSERT INTO landing (email,created,updated) values (?,NOW(),NOW())',undef,$email);
+  $username = $email;
+   }
+  $session_ok = 1;
+  
+}
+
+   $m->redirect('launchpad_login.html') if $session_ok;
+</%init>
+
+
+   
