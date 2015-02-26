@@ -1,0 +1,173 @@
+<%once>
+use Data::Dumper;
+use List::MoreUtils qw{ uniq };
+use Date::Manip qw{ ParseDate UnixDate DateCalc };
+use CTI::Database qw( get_sql );
+
+my $NA_sql  = get_sql( 'get_north_american_leadership_retreats' );
+my $ES_sql = get_sql( 'get_spanish_leadership_retreats' );
+my $BOI_sql = get_sql( 'get_boi_leadership_retreats' );
+</%once>
+<%init>
+
+
+# North American Events
+my ($events) = $dbh->selectall_arrayref($NA_sql,{Columns=>{}});
+for (@$events){
+  $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+  $_->{pod} = $1;
+  my $days = $2 < 3 ? 5 : 4; # 6 days for retreats 1 and 2, 5 days for the rest
+  $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+  $_->{month} = "$1 $2";
+  $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+  $_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+}
+
+# get names of #1 retreat (i.e. Salmon 1)
+my @pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$events; # 
+
+# get month of #1 retreat (i.e. Salmon 1)
+my @months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$events; # 
+
+                    
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $retreats = [ ];
+
+foreach my $pod (@pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$events;
+
+  push(@$retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+         
+}
+
+
+# Spain 
+
+  my ($ES_events) = $dbh->selectall_arrayref($ES_sql,{Columns=>{}});
+  for (@$ES_events){
+    $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+    $_->{pod} = $1;
+    my $days = $2 < 3 ? 5 : 4; # 6 days for retreats 1 and 2, 5 days for the rest
+    $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+    $_->{month} = "$1 $2";
+    $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+    $_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+  }
+# get names of #1 retreat (i.e. Salmon 1)
+my @ES_pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$ES_events; # 
+
+# get months and sort them
+my @ES_months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$ES_events; # 
+
+                    
+
+
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $ES_retreats = [ ];
+
+foreach my $pod (@ES_pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$ES_events;
+
+  push(@$ES_retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+  
+         
+}
+
+
+
+# BOI
+
+  my ($BOI_events) = $dbh->selectall_arrayref($BOI_sql,{Columns=>{}});
+  for (@$BOI_events){
+    $_->{event} =~ m/ ( .*? ) [ ] ( \d ) \z /xms; # get pod name
+    $_->{pod} = $1;
+    my $days = $2 < 3 ? 5 : 4; # 6 days for retreats 1 and 2, 5 days for the rest
+    $_->{start_date_formatted} =~ m/ \A ( \w+ ) .*? (\d\d\d\d) \z /xms; # get month
+    $_->{month} = "$1 $2";
+    $_->{sort_id} = UnixDate(ParseDate($_->{start_date_formatted}),"%Y%m%d");
+    $_->{end_date_formatted} = UnixDate(DateCalc(ParseDate($_->{start_date_formatted}),"+ $days days"),"%B %d, %Y");
+  }
+# get names of #1 retreat (i.e. Salmon 1)
+my @BOI_pod_names = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{pod} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$BOI_events; # 
+
+# get months and sort them
+my @BOI_months = 
+  uniq 
+  grep { $_ ne '' }
+  map  { $_->{month} if $_->{event} =~ m/ [ ] 1 \z /xms; } 
+  @$BOI_events; # 
+
+                    
+
+
+# Foreach #1 retreat, get #2, #3, #4 retreats and create $retreats hashref
+
+my $BOI_retreats = [ ];
+
+foreach my $pod (@BOI_pod_names) {
+  my @events = 
+    sort { $a->{sort_id} <=> $b->{sort_id} }
+    grep { $_->{pod} eq $pod } 
+    @$BOI_events;
+
+  push(@$BOI_retreats,
+       {
+         id       => eval { $events[0]->{sort_id} },
+         month    => eval { $events[0]->{month}   },
+         retreat1 => eval { $events[0]->{start_date_formatted} . ' - ' . $events[0]->{end_date_formatted} },
+         retreat2 => eval { $events[1]->{start_date_formatted} . ' - ' . $events[1]->{end_date_formatted} },
+         retreat3 => eval { $events[2]->{start_date_formatted} . ' - ' . $events[2]->{end_date_formatted} },
+         retreat4 => eval { $events[3]->{start_date_formatted} . ' - ' . $events[3]->{end_date_formatted} },
+       });
+  
+         
+}
+
+</%init>
+
+
+   

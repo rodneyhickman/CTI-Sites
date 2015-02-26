@@ -1,0 +1,13 @@
+
+  <script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+var myArray  = myRe.exec(document.URL);   
+var path = myArray[1] ? myArray[1] : myArray[3];
+//alert(path);
+$("#sub-nav li").removeClass('current');
+$("#sub-nav a[href="+path+"]").parent().addClass('current');
+});
+</script>

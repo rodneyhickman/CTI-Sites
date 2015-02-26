@@ -1,0 +1,18 @@
+Test
+<%once>
+use Mail::Sendmail; 
+
+</%once>
+<%init>
+#my $args     = $m->request_args();
+my %mail = (  To      => 'ping@me.com', 
+                From    => 'webserver@thecoaches.com',
+                Message => 'c2 to c5 test',
+                Subject => 'c2 to c5 test',
+                Smtp    => '69.59.182.20');
+
+Mail::Sendmail::sendmail(%mail) or die $Mail::Sendmail::error;
+
+</%init>
+
+

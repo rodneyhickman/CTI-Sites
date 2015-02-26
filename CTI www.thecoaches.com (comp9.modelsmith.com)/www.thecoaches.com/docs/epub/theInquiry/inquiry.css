@@ -1,0 +1,18 @@
+body, td, form, ul, span, input, select, textarea, button, caption {font-family: Verdana, Arial, Sans-serif; font-size: 11px;}
+.border1 {border: #000000; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 1px}
+.border2 {border: #000000; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.border3 {border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+font.small {font-family: Verdana, Arial, Sans-serif; font-size:10px; color:#0D5782 }
+font.title {font-family: Verdana, Arial, Sans-serif; font-size:11px; font-weight:normal; color:#0D5782 }
+A {text-decoration: none; color: #000000}
+A:hover {text-decoration: underline; color: #000000}
+A.orange {text-decoration: none; color: #F18231;font-weight:bold}
+A.orange:hover {text-decoration: underline; color: #F18231;font-weight:bold}
+A.blue {text-decoration: none; color: #0D5782;font-weight:bold}
+A.blue:hover {text-decoration: underline; color: #0D5782;font-weight:bold}
+A.blue2 {text-decoration: none; color: #0D5782}
+A.blue2:hover {text-decoration: underline; color: #0D5782}
+font.cw {font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 7.5pt; color:#0D5782;}
+a.cw {text-decoration: none; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 7.5pt; color:#0D5782;}
+a.cw:hover {text-decoration: underline; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 7.5pt; color:#0D5782;}
+li { margin-top: 4 }

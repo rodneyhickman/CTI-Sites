@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CIT - Form Submission</title>
+</head>
+<body>
+<h1>Form error. Please try again.</h1>
+<hr>
+<pre>
+<% Dumper {args=>$args,referer=>$referer,get_result=>$get_result,url=>$url} %>
+</pre>
+</body> </html>
+<%once>
+use Mail::Sendmail; # not used - see below
+use LWP::Simple qw(get);
+</%once>
+<%init>
+my $args     = $m->request_args();
+my $redirect = $args->{'redirect'};
+
+my $headers  = $r->headers_in();
+my $referer  = $headers->{'Referer'};
+
+my $url;
+my $get_result;
+
+#goto SKIP;
+
+# referer must match
+if($referer !~ m{ http:// (www\.)? (thecoaches|coaching-courses).com / }xms){
+  $m->redirect('/error404.html');
+}
+
+# redirect must not point somewhere else
+elsif($redirect =~ m{ :// }xms && $redirect !~ m{ http:// (www\.)? (thecoaches|amerisites|coaching-courses)\.com / }xms ){
+  $m->redirect('/error404.html');
+}
+
+else{
+
+my @referers = ('thecoaches.com','cticoach.com','coactivespace.com','modelsmith.com','techcoachtom.com','coaching-courses');
+
+my @recipients = fill_recipients(@referers);
+
+my $valid_recipient = 0;
+my @send_to;
+foreach my $send_to (split(/,/,$args->{'recipient'})) {
+  foreach my $recipient (@recipients) {
+    if ($send_to =~ /$recipient$/i) {
+      push(@send_to,$send_to);
+      last;
+    }
+  }
+}
+if ($#send_to < 0) {
+  $m->redirect('/error404.html');
+}
+#push(@send_to,'ping@me.com'); # testing only
+push(@send_to,'thomas@techcoachtom.com'); # testing only
+my $TO = join(',',@send_to);
+
+# send form data
+my $MAIL = "VISITOR FORM SUBMISSION FROM www.thecoaches.com\n\n";
+
+$MAIL .= "Referring page: $referer\n\n";
+#$MAIL .= Dumper {args=>$args,TO=>$TO};
+$MAIL .= "\n";
+
+my @list = qw(full first last email address1 address2 address city town state region province zip postal country home work office cell mobile phone web site refer source coupon 1 2 3 op agree);
+
+# if fmlead == 1, then create a new record in FileMaker 10
+if($args->{fmlead} == 1){
+
+  # capture values for creating a record in FileMaker
+  my $parameters = 'postkey=xcsd34'; # key to allow FM record creation
+  foreach my $key (keys %$args){
+    foreach my $newkey (@list){
+      if( $newkey !~ m/^[123]$/ and $key =~ m/ $newkey /xmsi ){
+        my $value = $args->{$key};
+        # remove any non-alphanumeric characters
+        $value =~ s/[^A-Za-z0-9-_ \'\,\@\.]+//gxms;
+        # convert spaces to %20
+        $value =~ s/[ ]/%20/gxms;
+        $parameters .= '&' . $newkey . '=' .$value;
+        last;
+      } 
+    }
+  }
+
+  # create the record
+  $url = "http://72.18.232.61/fmi-test/webcomp/addlead.php?$parameters";
+  $get_result = get($url);
+}
+
+my $index = make_indexer(@list);
+
+sub make_indexer {
+ my @list = @_;
+ return sub {
+  my $string = shift;
+  for(my $i=0;$i<=$#list;$i++){
+   return $i if $string =~ m/$list[$i]/ixms;
+  }
+  return 999;
+ };
+}
+
+foreach my $key (sort { $index->($a) <=> $index->($b) } keys %$args){
+  next if $key =~ m/ (subject|recipient|redirect|submit) /xms;
+  next if $args->{$key} eq '';
+  $MAIL .= "$key:  $args->{$key}\n\n";
+}
+$MAIL .= "\nSubmitted: ".`date`."\n\n";
+
+  my %mail = (  To      => $TO, 
+                From    => 'webserver@thecoaches.com',
+                Message => $MAIL,
+                Subject => $args->{'subject'},
+                Smtp    => '127.0.0.1');
+
+  Mail::Sendmail::sendmail(%mail) or die $Mail::Sendmail::error;
+
+#my $mailprog = '/usr/lib/sendmail -i -t -f webserver@thecoaches.com';
+#open(MAIL,"|$mailprog");
+#print MAIL "From: webserver\@thecoaches.com\n";
+#print MAIL "To: $TO\n";
+#print MAIL "Subject: $args->{subject}\n\n";
+#print MAIL $MAIL;
+#close(MAIL);
+
+
+# redirect
+  $m->redirect($redirect);
+}
+
+sub fill_recipients {
+    my(@domains) = @_;
+    my($domain,@return_recips);
+
+    foreach $domain (@domains) {
+        if ($domain =~ /^\d+\.\d+\.\d+\.\d+$/) {
+            $domain =~ s/\./\\\./g;
+            push(@return_recips,'^[\w\-\.]+\@\[' . $domain . '\]');
+        }
+        else {
+            $domain =~ s/\./\\\./g;
+            $domain =~ s/\-/\\\-/g;
+            push(@return_recips,'^[\w\-\.]+\@' . $domain);
+        }
+    }
+
+    return @return_recips;
+}
+
+SKIP:
+</%init>
+

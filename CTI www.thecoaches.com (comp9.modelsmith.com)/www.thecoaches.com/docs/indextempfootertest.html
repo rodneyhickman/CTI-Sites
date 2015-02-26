@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Language" content="en" />
+<title>The Coaches Training Institute CTI | Life Coaching | Executive Life Coaching | Business Coaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
+<meta name="description" content="Life Coaching: CTI, The Coaches Training Institute trains more coaches around the 
+world than any other training group.  Visit our Website to learn more!"></meta>
+<meta name="robots" content="all"></meta>
+<meta name="author" content="CTI"></meta>
+<meta name="keywords" content="life coaching, executive coaching, business coaching, life coach, executive coach, 
+life coach training, personal coach training, coaching school, become a life coach, co-active coaching, best life 
+coach training, how to become a life coach, Henry Kimsey-House, Karen Kimsey-House, CTI, the coaches training 
+institute"></meta>
+<meta name="language" content="en" />
+<meta name="copyright" content="Copyright &#169; 2012 The Coaches Training Institute. All rights reserved." />
+
+<link rel="icon" href="/favicon.ico" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/holiday.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/section_home.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/home-footer-test.css" />
+	<script type="text/javascript" src="/res/js/coaches-training-institute.js"> </script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="/res/js/specials.js"> </script>
+	<script type="text/javascript" src="/res/js/swfobject.js"> </script>
+
+	<style type="text/css">
+	@font-face {
+    font-family: 'UniversLt';
+    src: url('/res/css/harvar3-webfont.eot');
+    src: url('/res/css/harvar3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/res/css/harvar3-webfont.woff') format('woff'),
+         url('/res/css/harvar3-webfont.ttf') format('truetype'),
+         url('/res/css/harvar3-webfont.svg#UniversLt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+	</style>
+<!--[if lte IE 6]>
+	<style>.calendar-page { margin-left: 15px;}</style>
+<![endif]-->
+
+<!-- SHADOWBOX FILES -->
+<link href="/res/shadowbox-3.0.3/shadowbox.css" type="text/css" rel="stylesheet" media="screen" />	
+<!-- JS -->
+<script type="text/javascript" src="/res/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/res/js/jquery.expire.js"> </script>
+<script type="text/javascript" src="/res/shadowbox-3.0.3/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+    // a darker overlay looks better on this particular site
+    overlayOpacity: 0.8,
+    // setupDemos is defined in assets/demo.js
+    language: 'en',
+    players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv'] 
+});
+</script>
+	<script type="text/javascript" src="/res/js/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#slideshow").cycle({
+		  fx: 'fade',
+		  timeout: 8500,
+		  speed:   1200,
+		  pager:   '#nav',
+		 // pagerEvent: 'mouseover',
+		  pause:   1
+		 // before:  onBefore
+		});
+	});
+	$(function() {
+		$('#slider').cycle({ 
+		    fx:     'scrollUp', 
+		   // prev:   '#prev1', 
+		   // next:   '#next1', 
+		   //  pager:  '#slidernav',
+	        continuous:  0,
+	      	timeout: 8500,
+		  	speed:   1200
+		   // timeout: 0 
+		});
+	});
+	</script>
+
+<script type="text/javascript" src="/res/js/jcarousellite_1.0.1.pack.js"></script>
+<script type="text/javascript">
+$( function()
+{
+    $( '#ticker' ).jCarouselLite(
+    {
+        vertical: true,
+        visible:  4,
+        auto:     4000,
+        speed:    750
+    });
+});
+</script>
+<script language="JavaScript" type="text/javascript">
+var html = '';
+var count = 0;
+$(document).ready(function() {
+jQuery.contentExpirator('expire');
+$.get('/blog/feed/', function(xml){
+        $("item", xml).each(function(){
+                count++;
+                if(count > 3) return false;
+                $(this).find("link").each(function(){
+                        html += "<div class='blog-entry'><strong><a href='" + getNodeText(this) +"'> ";
+                }).end().find("title").each(function(){
+                        html += getNodeText(this) + "</a></strong>";
+                }).end().find("description").each(function(){
+                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+                }).end().find("link").each(function(){
+                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
+                });
+        });
+        $("#home-news").html(html);
+});
+                        
+var myRe     = /\/#(.+)$/; // grab just the anchor
+var loc = $(location).attr('href');
+var myArray  = myRe.exec(loc);   // get just the *.html portion of the URL
+var anchor = myArray[1];
+
+if(anchor=='specials'){
+                        $('#home-promo li').removeClass('home-promo-active');
+                        $('#tabSpecials').addClass('home-promo-active');
+                        $('#home-promo').removeClass('activeCTI');
+                        $('#home-promo').addClass('activeSpecials');
+                        $('.panel').hide();
+                        $('#footerSpecials').show();
+}
+                        
+});
+
+function getNodeText(node)
+{
+        var text = "";
+        if(node.text) text = node.text;
+        if(node.firstChild) text = node.firstChild.nodeValue;
+        return text;
+}
+
+                        
+</script>
+
+</head>
+
+<body>
+
+	<div id="page">
+
+		<div id="tools">
+			<!-- generalID --><& '/res/inc/id_general.html' &><!-- -->
+			<!-- eCommerceID --><& '/res/inc/id_ecommerce.html' &><!-- -->
+		</div>
+
+
+
+		<div id="primary" style="padding-top: 20px; padding-right: 10px">
+
+			<!-- contactNavID --><& '/res/inc/id_contact-nav.html' &><!-- -->
+
+                <!--<div class="holiday"><p>The CTI offices will be closed from noon (PST) on December 23rd until 8am (PST) on January 3, 2011.  We will be happy to speak with you when we return.<br />Happy Holidays and Happy New Year!</p></div>-->
+
+                <ul id="main-nav" style="width:910px; height:23px; margin:0; margin-top:30px; padding-bottom:0;">
+					<li><a href="/why-coaches-training-institute/">Why <abbr title="Coaches Training Institute">CTI</abbr>?</a></li>
+					<li><a href="/coach-training/">Coach Training</a></li>
+					<li><a href="/leadership/">Leadership</a></li>
+					<li><a href="/organizations/">For Organizations</a></li>
+					<li><a href="/leaders/">Our Faculty</a></li>
+					<li><a href="/resources/">Resources</a></li>
+					<!-- <li><a href="/profiles/">Profiles</a></li> -->
+					<li style="float:right; margin: 0; padding:0; position: absolute; top: 73px; padding-left: 30px;"><a href="/"><img src="/res/img/brand_coactive.png" height="34" width="175" /></a></li>
+				</ul>
+			
+
+
+			<div id="broadcast" style="margin-top:0; padding-top:0;">
+
+				<div id="nav"></div>
+				<div id="slideshow">
+			  		<div id="" class="feature active" style="width: 920px; height: 347px;">
+						<img src="/res/img/img_home_why.jpg" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="why">
+								<li class="why"><a href="http://www.thecoaches.com/why-coaches-training-institute/" class="here">Why CTI?</a></li>
+								<li class="train"><a href="http://www.thecoaches.com/coach-training/">Coach Training</a></li>
+								<li class="leader"><a href="http://www.thecoaches.com/leadership/">Leadership</a></li>
+								<li class="org"><a href="http://www.thecoaches.com/organizations/">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 920px; height: 347px;">
+						<img src="/res/img/img_home_train.jpg" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="train">
+								<li class="why"><a href="http://www.thecoaches.com/why-coaches-training-institute/">Why CTI?</a></li>
+								<li class="train"><a href="http://www.thecoaches.com/coach-training/" class="here">Coach Training</a></li>
+								<li class="leader"><a href="http://www.thecoaches.com/leadership/">Leadership</a></li>
+								<li class="org"><a href="http://www.thecoaches.com/organizations/">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 920px; height: 347px;">
+						<img src="/res/img/img_home_leader-1.jpg" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="leader">
+								<li class="why"><a href="http://www.thecoaches.com/why-coaches-training-institute/">Why CTI?</a></li>
+								<li class="train"><a href="http://www.thecoaches.com/coach-training/">Coach Training</a></li>
+								<li class="leader"><a href="http://www.thecoaches.com/leadership/" class="here">Leadership</a></li>
+								<li class="org"><a href="http://www.thecoaches.com/organizations/">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 920px; height: 347px;">
+						<img src="/res/img/img_home_org.jpg" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="org">
+								<li class="why"><a href="http://www.thecoaches.com/why-coaches-training-institute/">Why CTI?</a></li>
+								<li class="train"><a href="http://www.thecoaches.com/coach-training/">Coach Training</a></li>
+								<li class="leader"><a href="http://www.thecoaches.com/leadership/">Leadership</a></li>
+								<li class="org"><a href="http://www.thecoaches.com/organizations/" class="here">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN PAGE CONTENT -->
+			<div id="content">
+					<div style="float:right; margin: 0; padding:0; position: relative; top: -20px;"><span style=" margin: 0;"><script type="text/javascript">insert_social_bookmarking();</script></span></div>
+					<div class="main-col-one">
+					<div class="section">
+					    <h3 style="margin-bottom: 10px; color: #699BBC;">Questions?</h3>
+				        <div>
+				        	<h4 style="margin-bottom: 1px;"><a href="http://www.thecoaches.com/coach-training/" style="color: #699BBC;">How do I get started?</a></h4>
+				        	Please call us at 800-691-6008 <br />Option 3<br />
+				        	<a href="http://www.thecoaches.com/contact/schedule-a-call/">Email one of our Program Advisors</a><br />
+				        	<a href="<% $booking_link %>" target="_blank">Sign up for a free webinar</a><br />
+				        	<a href="http://www.thecoaches.com/coach-training/">Learn more about our programs</a><br />
+				        	<!-- a href="">See our curriculum map</a -->
+				        </div>
+				    </div>
+					<div class="section">
+					    <h3 style="color: #699BBC;">Transform Your Business</h3>
+				        <div>
+				        	<p><a href="http://www.thecoaches.com/coach-training/business-builder/"><strong>Building Business</strong></a>&trade;<br />
+				        	<a href="http://www.thecoaches.com/coach-training/business-builder/assessments-and-tools/"><strong>The Leadership Circle</strong></a><br />
+				        	<a href="http://www.thecoaches.com/coactive-sales/"><strong>Co-Active Sales</strong></a></p>
+				        </div>
+				    </div>
+				</div>
+				<div class="main-col-two">
+					<div class="section">
+					    <h3 style="color: #699BBC;">Why Choose CTI?</h3>
+						<div id="ticker">
+							<ul>
+					        	<li>100% Money Back Fundamentals Guarantee</li>
+								<li>Largest coach training school in the world</li>
+								<li>Courses offered in over 20 different countries</li>
+								<li>Proven success with more than 35,000 trained coaches</li> 
+								<li>Proprietary Co-Active Model provides a powerful learning structure</li>
+					    		<li><a href="http://www.thecoaches.com/why-coaches-training-institute/">Click here</a> for more info on why CTI may be the right choice for you.</li>
+					        	<li>Co-Active Network with over 18,000 members provides ongoing professional support</li>
+								<li>CTI was the first school to receive accreditation with the ICF as an ACTP school.</li>
+								<li>Unparalleled quality of course leaders is widely regarded in coach training industry</li>
+								<li>Prestigious CPCC designation may be earned through our ICF accredited certification program</li>
+								<li>Our founders authored <em>Co-Active Coaching</em>, which is now in its third edition</li>
+								<li><em>Co-Active Coaching</em> has become widely known as the definitive text on coach training</li>
+							</ul>
+				        </div>
+			        </div>
+				</div>
+				<div class="main-col-three">
+					<div class="section">
+					    <div>
+					    	<p style="color: #32110A; font-family: 'Arial', sans-serif; font-size: 14px; line-height: 20px; font-weight: normal; margin-top: 12px;">“With its third updated edition, <em>Co-Active Coaching</em> remains the bible of coaching guides.” <span style="color: #32110A; font-family: 'Arial', sans-serif; font-size: 12px; font-weight: normal; margin-left: 20px; display: block;">-- STEPHEN R. COVEY, Best-selling author of <em>The 7 Habits of Highly Effective People</em></span></p>
+				        	<img src="/images/img_Front-Cover-7-home-sm.jpg" border="0" alt="Co-Active Coaching, Third Edition" title="Co-Active Coaching, Third Edition" width="131" height="163" style="margin-bottom: 12px; float: left;" />
+				        	<p style="color: #32110A; float: left; font-family: 'Arial',sans-serif; font-size: 12px; font-weight: normal; margin-top: 15px; width: 130px;">To celebrate the release of the third edition of <em>Co-Active Coaching</em>, CTI is making two chapters available to you for free download.<br />
+				        	<em><a href="http://www.thecoaches.com/resources/multimedia/two-free-chapters-co-active-coaching.html" style="font-family: 'Georgia', serif; font-size: 12px; font-weight: normal; margin-right: 20px; display: block; text-align: right; margin-top: 6px;">Read More &raquo;</a></em></p>
+				        </div>
+				    </div>
+				</div>
+			</div>
+			
+
+     <!-- ctaAreaId --><!-- & '/res/inc/id_cta-area.html' & --><!-- -->
+        
+        <!-- used for cross-browser stabilizion of layout -->
+        <div class="pageclear"></div>
+      <!-- /div -->
+  	 </div>
+
+	<!-- Specials, News, Blog --><& '/res/inc/id_tabbed-footer-1test.html' &><!-- -->
+<a name="specials"></a>
+	<!-- script src="http://code.jquery.com/jquery-latest.js"></script -->
+	<!-- include All Cycle plugins -->
+	
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/cti_coaches.json?callback=twitterCallback2&amp;count=4"></script>
+
+<script type="text/javascript">
+	// Enable footer tab functionality
+	(function($) {
+		$('#footerMain .tabs a').click(function(event) {
+			// Prevent default click behavior
+			// ev.preventDefault();
+			event.preventDefault();
+
+			// Set up some variables and grab some resuable DOM references
+			var $t = $(this), // Quick ref for the clicked link
+				$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+				id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+				visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel
+				tgtName = id.substr(6); // Get the name of the target panel to show, like above
+		
+			$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+			$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+		});
+
+	})(jQuery);
+</script>
+
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-5715102-1");
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+
+% if(exists $args->{cpcc}){
+<!-- cpcc flag -->
+% }        
+</body>
+
+</html>
+<%init>
+my $args = $m->request_args();
+if(exists $args->{cpcc}){
+  # record referer
+}
+my ($booking_link) = $dbh->selectrow_array("select booking_link from event_calendar where course_type_id=120 and `event` like 'fun%' order by fmid desc limit 1",undef);
+</%init>
