@@ -1,0 +1,19 @@
+Updated:
+
+Profile->isRegistered()
+
+GroupPeer::currentGroup()
+
+GroupPeer::futureCourses()
+
+HomeworkPeer::register()
+
+
+
+
+Actions updated:
+
+Participant
+  executeHome()
+  executePickCourse()
+  executePickCourseProcess()
