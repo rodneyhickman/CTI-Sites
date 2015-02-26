@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!-- This page is IFRAMED into other pages. Please do not delete -->
+<head>
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/home-footer.css" />
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/res/js/specials.js"> </script>
+<style>
+body { background:none; }
+</style>
+
+</head>
+<body>
+
+<& '/res/inc/id_tabbed-footer-1.html' &>
+
+<script type="text/javascript">
+	// Enable footer tab functionality
+	(function($) {
+		$('#footerMain .tabs a').click(function(event) {
+			// Prevent default click behavior
+			// ev.preventDefault();
+			event.preventDefault();
+
+			// Set up some variables and grab some resuable DOM references
+			var $t = $(this), // Quick ref for the clicked link
+				$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+				id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+				visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel
+				tgtName = id.substr(6); // Get the name of the target panel to show, like above
+		
+			$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+			$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+		});
+
+	})(jQuery);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+google.setOnLoadCallback(function() {
+  $.getJSON("/data/json_endpoint.php", function(data){
+    $.each(data, function(key,value){
+      $('#datelistdrop').append('<option value="'+value+'">'+value+'</option>'); // ... and append it to the <select>
+      $('#datelistdrop option:nth-child(3)').attr('selected',1);
+    });
+  });
+});
+
+
+
+<select name="1st. Choice - Telecourse to attend" id="datelistdrop" tabindex="18" style="width: 300px; margin-bottom: 10px;">
+  <option value="No first choice was made" selected="selected">--First Choice--</option>
+  <option value="---------------------------------------">---------------------------------------</option>
+</select>
+
+

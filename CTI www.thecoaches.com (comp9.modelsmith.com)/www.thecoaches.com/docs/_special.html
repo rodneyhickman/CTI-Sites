@@ -1,0 +1,10 @@
+<% $special %>
+<%flags>
+inherit=>undef
+</%flags>
+<%init>
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+my $html = $m->scomp('/res/inc/id_tabbed-footer-1.html');
+my ($special) = ($html =~ m{<h3>Specials!</h3>.*?(<dl.*?</dl>)}ms);
+
+</%init>

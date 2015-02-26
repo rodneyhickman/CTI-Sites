@@ -1,0 +1,174 @@
+<script>
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
+}
+
+function hideAssessment() {
+    var bodyDataText = getElementsByClassName(document,'body-dataText');
+    n = bodyDataText.length;
+    for (var i = 0; i < n; i++) {
+        var e = bodyDataText[i];
+        e.style.display='none';
+    }
+    var data = getElementsByClassName(document,'data');
+    n = data.length;
+    for (var i = 0; i < n; i++) {
+        var e = data[i];
+        e.style.display='none';
+    }
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+window.onload = function () {
+    var trackerTitle = 0;
+
+    var detailsDiv = document.getElementById("detailsDiv")
+    if(detailsDiv) detailsDiv.style.display='none';
+
+    var osDetails1 = getElementsByClassName(document,'os-detail-list');
+    if(osDetails1 && osDetails1.length > 0){
+        osDetails = osDetails1[0].getElementsByTagName('li');
+        var n = osDetails.length;
+        for (var i = 0; i < n; i++) {
+            var e = osDetails[i];
+            if(e.innerHTML.match(/Price:/)){
+                e.style.display='none';
+            }
+            else if(e.innerHTML.match(/(Tracker:|Feedback Survey\.|Program Review:|Homework for)/)){
+                trackerTitle = 1;
+                var str = e.innerHTML;
+                e.innerHTML = str.replace(/Description: ?/i,"");
+            }
+        }
+    }
+
+    var titleText = getElementsByClassName(document,'page-titleText');
+    n = titleText.length;
+    for (var i = 0; i < n; i++) {
+        var e = titleText[i];
+        var str = e.innerHTML;
+        e.innerHTML = str.replace(/(\#01.*Relationships.*|Completion|#13.*|#06.*):/i,"");
+        str = e.innerHTML;
+        e.innerHTML = str.replace(/Mid-Program Review/,"<h2>Mid-Program Review</h2>");
+	if(e.innerHTML.match(/Homework Journal/i){
+           var startOverElements = getElementsByClassName(document, 'os-btn'){
+             for(var j=0; j<startOverElements.length; j++){
+               var startOverBtn = startOverElements[j];
+               if(startOverBtn.innerMatch.match(/Start Over/i){
+                 startOverBtn.style.display='none';
+               }
+             }
+           }
+        }
+    }
+    
+    titleText = getElementsByClassName(document,'os-left');
+    n = titleText.length;
+    for (var i = 0; i < n; i++) {
+        var e = titleText[i];
+        var str = e.innerHTML;
+        e.innerHTML = str.replace(/#06A /i,"");
+        var str = e.innerHTML;
+        e.innerHTML = str.replace(/Results/i,"Progress");
+    }
+    
+
+    if(trackerTitle == 1){
+        var osLeft = getElementsByClassName(document,'os-left');
+        if(osLeft.length > 1){
+            var e = osLeft[1];
+            e.style.display='none';
+        }
+    }
+
+    var homeworkResults = 0;
+    var headingText = getElementsByClassName(document,'HEADING');
+    n = headingText.length;
+    for (var i = 0; i < n; i++) {
+        var e = headingText[i];
+        var str = e.innerHTML;
+        e.innerHTML = str.replace(/((Name)?: #01 Empowered Relationships.*:|Name: #(06|13).*:|Name:.*Completion:|Name:.*Learning:)/i,"");
+        str = e.innerHTML;
+        e.innerHTML = str.replace(/>:/,">");
+        if(e.innerHTML.match(/Name:\s+Homework/)){
+            homeworkResults = 1;
+        }
+        str = e.innerHTML;
+        e.innerHTML = str.replace(/Name:\s+Homework/,"Homework");
+        if(e.innerHTML.match(/Coaching Hours Tracker/i)){
+            hideAssessment();
+        }
+    }
+
+    var osMain = getElementsByClassName(document,'os-main');
+    if(osMain && osMain.length > 0){
+    var h2Text = osMain[0].getElementsByTagName('h3');
+    n = h2Text.length;
+    for (var i = 0; i < n; i++) {
+        var e = h2Text[i];
+        str = e.innerHTML;
+        e.innerHTML = str.replace(/:/,"");
+        e.style.fontSize = "20px";
+        if(homeworkResults == 0 && e.innerHTML.match(/(Homework Journal|Feedback Survey)/i)){
+            window.console && window.console.log(e.innerHTML);
+            var hrNode = document.createElement('hr');
+            insertAfter(e, hrNode);
+            var txtNode = document.createTextNode('Click "Save and Leave Unfinished" at the bottom of this page when you complete your answers. Your answers will be saved and available the next time you visit. Do not click "Finish" until you have completed all questions.'); 
+            var pNode = document.createElement('p');
+            pNode.appendChild(txtNode);
+            insertAfter(e, pNode);
+            break;
+        }
+    }
+    h2Text = osMain[0].getElementsByTagName('h2');
+    n = h2Text.length;
+    for (var i = 0; i < n; i++) {
+        var e = h2Text[i];
+        e.style.fontSize = "20px";
+        if(e.innerHTML.match(/Completion Tracker/i)){
+            window.console && window.console.log(e.innerHTML);
+            var hrNode = document.createElement('hr');
+            insertAfter(e, hrNode);
+            var txtNode = document.createTextNode('Click "Save and Leave Unfinished" at the bottom of this page when you complete your answers. Your answers will be saved and available the next time you visit. Do not click "Finish" until you have completed all questions.'); 
+            var pNode = document.createElement('p');
+            pNode.appendChild(txtNode);
+            //insertAfter(e, pNode);
+            break;
+        }
+       
+
+    }
+    }
+
+    var resultString = getElementsByClassName(document,'resultString');
+    n = resultString.length;
+    for (var i = 0; i < n; i++) {
+        var e = resultString[i];
+        var str = e.innerHTML;
+        e.innerHTML = str.replace(/#06A /i,"");
+    }
+
+}
+</script>

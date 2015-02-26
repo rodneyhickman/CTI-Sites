@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.os-slbuttonbar:nth-of-type(1) {
+    display: none;
+}
+

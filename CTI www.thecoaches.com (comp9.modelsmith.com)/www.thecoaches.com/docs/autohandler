@@ -1,0 +1,7 @@
+% $m->call_next();
+<%init>
+#$dbh = DBI->connect("DBI:mysql:database=CTIDATABASE;host=216.93.162.204;port=3306",'webuser','8iKLo9');
+$dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+my ($Second, $Minute, $Hour, $Day, $Month, $Year, $WeekDay, $DayOfYear, $IsDST) = localtime(time) ;
+$Year += 1900;
+</%init>

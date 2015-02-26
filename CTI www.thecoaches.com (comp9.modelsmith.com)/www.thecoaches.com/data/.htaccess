@@ -1,0 +1,4 @@
+<Files *.js>
+SetHandler application/x-httpd-php
+</Files>
+

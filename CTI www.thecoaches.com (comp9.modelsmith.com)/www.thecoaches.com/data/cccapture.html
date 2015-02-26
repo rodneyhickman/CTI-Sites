@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">  
+window.onload = load;  
+function load()  
+{  
+ var form1=document.getElementById("cccapture");
+ form1.submit();
+}  
+</script>  
+</head>
+<body>
+<p>Coach Training Institute</p>
+<p>If this form does not transfer to the shopping cart, please press the &ldquo;Submit Credit Card&rdquo; button.</p>
+<form id="cccapture" action="http://www.cartserver.com/sc/cart.cgi" method="post">
+<input type="hidden" name="item" value="a-6814^CERT-CARD^Coaching Certification: If a deposit is already on file your credit card will not be charged at this time.  &lt;span style='color:#f00;font-weight:bold;'&gt;The shopping cart will reflect a $0.00 balance; however, if you have not paid a deposit we will charge your credit card as specified in the Program Fees.&lt;/span&gt; Your credit card number will be safely stored for recurring billing charges per the certification billing schedule. Please proceed by pressing the &ldquo;Pay with Credit Card&rdquo; button below and entering your card information.^0.00^1^^^^^">
+<p>
+<input type="submit" name="card_capture" value="Submit Credit Card" />
+</p>
+</form>
+</body>
+</html>
+
+<%init>
+  Apache2::Cookie->new
+  ( $r,
+    -name  => 'certredirect',
+    -value => { redirect => 'yes' },
+    -path  => '/',
+    -domain => '.thecoaches.com',
+    -expires => '+1d',
+  )->bake($r);
+</%init>
