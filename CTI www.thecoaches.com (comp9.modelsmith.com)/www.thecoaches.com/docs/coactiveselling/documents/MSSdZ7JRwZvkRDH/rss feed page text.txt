@@ -1,0 +1,132 @@
+<div class="static">
+<h1>RSS Feeds<h1>
+<p class="green-line">___________________________________________________________________________</p>
+<p>Every "latest news" category for Tech Investor News' 20 individually-curated topics has its own always-updating RSS feed and Twitter feed. Choose from below:<p>
+<div style="float:left;width:250px">
+<h2>Home Page</h2>
+<p>
+<a href="http://techinvestornews.com/Tech-News/Latest-Tech-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TechInvestNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Tech News</p>
+
+<p>
+<a href="http://techinvestornews.com/Tech-News/Tech-Bloggers-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINTechBloggers" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Tech Bloggers</p>
+
+<h2>Feeds by Company</h2>
+
+<p>
+<a href="http://techinvestornews.com/Google/Latest-Google-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINGoogleNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Google News</p>
+
+<p>
+<a href="http://techinvestornews.com/Facebook/Latest-Facebook-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINFacebookNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Facebook News</p>
+
+<p>
+<a href="http://techinvestornews.com/Microsoft/Latest-Microsoft-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINMSFTNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Microsoft News</p>
+
+<p>
+<a href="http://techinvestornews.com/Intel/Latest-Intel-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINIntelNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Intel News</p>
+
+<p>
+<a href="http://techinvestornews.com/Amazon/Latest-Amazon-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINAmazonNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Amazon News</p>
+
+<p>
+<a href="http://techinvestornews.com/Cisco/Latest-Cisco-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINCiscoNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Cisco News</p>
+
+<p>
+<a href="http://techinvestornews.com/IBM/Latest-IBM-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINIBMNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest IBM News</p>
+
+<p>
+<a href="http://techinvestornews.com/Oracle/Latest-Oracle-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINOracleNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Oracle News</p>
+
+<p>
+<a href="http://tin2.techinvestornews.com/HP/Latest-HP-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINHPNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest HP News</p>
+
+</div>
+
+<div style="float:left;width:250px">
+
+
+
+<h2>Apple Investor News</h2>
+
+<p>
+<a href="http://techinvestornews.com/Apple/Latest-Apple-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/AppleInvestNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Apple News</p>
+
+<p>
+<a href="http://techinvestornews.com/Apple/Apple-Rumors-and-Bloggers-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/AAPLRumors" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Apple Rumors + Bloggers</p>
+
+
+
+<h2>Feeds by Topic</h2>
+
+<p>
+<a href="http://techinvestornews.com/Mobile/Latest-Mobile-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINMobileNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Mobile News</p>
+
+
+<p>
+<a href="http://techinvestornews.com/Cloud/Latest-Cloud-Computing-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINCloudNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Cloud Computing News</p>
+
+<p>
+<a href="http://techinvestornews.com/Enterprise/Latest-Enterprise-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINBizCompNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Enterprise News</p>
+<p>
+<a href="http://techinvestornews.com/Internet/Latest-Yahoo-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINYahooNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Yahoo! News</p>
+<p>
+<a href="http://techinvestornews.com/Semis/Latest-Semiconductor-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINSemisNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Semiconductor News</p>
+<p>
+<a href="http://techinvestornews.com/Gadgets/Latest-Gadget-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINGadgetsNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Gadget News</p>
+<p>
+<a href="http://techinvestornews.com/Green/Latest-Green-Tech-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINGreenTech" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Green Tech News</p>
+<p>
+<a href="http://techinvestornews.com/E-Comm/Latest-E-Commerce-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINECommNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest E-Commerce News</p>
+<p>
+<a href="http://techinvestornews.com/Gaming/Latest-Gaming-Biz-News-RSS" target="_blank"><img src="assets/img/icon_rss.png" /></a>
+<a href="https://twitter.com/TINGamingNews" target="_blank"><img src="assets/img/icon_twitter.png" /></a>
+ Latest Gaming Biz News</p>
+
+
+
+</div>
+
+<div style="clear:both;"></div>
+<p>If you'd like to syndicate our news columns for your site or app, or if you want customized newsfeeds for your organization, please visit our Syndication page.</p>
+<p class="green-line">_____________________________________________________________________________</p>

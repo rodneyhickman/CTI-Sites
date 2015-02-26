@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="/res/css/mentor.css" />
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+ $('a.deletebtn').click( function() {
+   return confirm('Are you show you want to delete?');
+ });
+});
+</script>
+<style>
+
+.pri table { width:400px; }
+.pri table input#signin_username,
+.pri table input#signin_password { width:270px }
+#portraits { padding-left:30px; }
+.notify { color:#a00; border:solid 1px #ccc; background: #eee; padding:10px; font-size:1.1em;}
+
+table.events { width: 575px; }
+table.events th { text-align:left; font-size:1.1em; }
+
+
+table.events tr:nth-child(even) { background-color: #F0F5F8; border: solid 1px #AAD; }
+table.events tr:nth-child(odd) { background-color: #D9E6EE; border: solid 1px #AAD; }
+table.events tr:first-child { background-color: #EBE9DA; border: solid 1px #AAD; }
+
+</style>
+<link rel="stylesheet" type="text/css" media="screen" href="/portal/css/main.css" />
+</head>
+<body>
+<div id="page">
+  <img id="portraits" src="/images/course-materials-portraits.png" />
+<div id="tools">
+  <!-- generalID --><!-- -->
+  <!-- eCommerceID --><!-- -->
+  <!-- courseMaterialsID --><ul id="ecommerce">
+<li><!--<a href="/" class="offsite">CTI <b>Home</b></a> &raquo;--> </li>
+
+</ul>
+<!-- -->
+</div>
+<div id="primary">
+  <!-- contactNavID --><!-- -->
+  <ul id="main-nav">
+  </ul>
+  
+<div id="broadcast">
+  <img src="/res/img/page-banners/content_coactiveselling_cti.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+  <map id="logobutton" name="logobutton">
+  <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+  </map>
+</div>
+
+
+<div id="content">
+
+<div id="main">
+  <div id="breadcrumbs">
+  </div>
+  <div class="sec">
+</div>
+  <div class="pri">
+<h1>Leader Page</h1>
+    
+    <p>Welcome <% $first_name %><br />&raquo; <a href="login.html?logout=1">Logout</a><br />&nbsp;</p>
+
+% if($action eq 'delete'){
+<p class="notify">Participant has been deleted.</p>
+% }
+
+<h2>Participant Files</h2>
+    <p>&nbsp;</p>
+
+
+    
+<table class="events">
+<tr>
+<th>Participant</th>
+<th>Files</th>
+<th></th>
+</tr>
+
+% foreach my $c (@client_list){
+<tr>
+<td><a href="mailto:<% $c->{email} %>"><% $c->{first_name} %> <% $c->{last_name} %></a></td>
+<td>
+% foreach my $f (@{$c->{files}}){
+% my ($base_url) = ($f->{directory} =~ m/(documents.*)/);
+  <a href="<% $base_url %>/<% $f->{filename} %>" target="_blank"><% $f->{filename} %></a> <% $f->{modified_at} %><br />
+% }
+  <td><a class="deletebtn" href="leader.html?action=delete&delete_id=<% $c->{id} %>">delete participant</a></td>
+</tr>
+% }
+</table>
+
+  </div>
+
+</div>
+
+</p>
+
+
+<!-- ctaAreaId -->
+
+<div id="cta-area">
+
+</div>
+
+<!-- -->
+
+</div>
+
+
+<!-- used for cross-browser stabilizion of layout -->
+<div class="pageclear"></div>
+</div>
+<div id="footer">
+  <img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/>
+<div id="footer-content">
+  <!-- footerNavId --><div id="footer-nav">
+<div id="footer-legal">Copyright &#169; 2011 The Coaches Training Institute. All rights reserved. <a id="privacy-link" href="http://www.thecoaches.com/legal/privacy.html">Privacy Policy</a><span class="divider">&#160;|&#160;</span><a href="http://www.thecoaches.com/legal/disclosure.html">Disclosure</a></div>
+<ul id="quick-nav">
+</ul>
+</div>
+<!-- -->
+  <img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<%once>
+use DBI;
+use JSON;
+use Data::Dumper;
+use Date::Manip;
+</%once>
+<%init>
+my $username = $m->scomp('authen.mas');
+my $args     = $m->request_args();
+# Example: my ($addx)   = @{$args}{'add.x'};
+my ($delete_id,$action) = @{$args}{'delete_id','action'};
+my $result;
+my $data;
+
+
+
+my ($id,$first_name,$last_name,$role) = $dbh->selectrow_array('SELECT id,first_name,last_name,role FROM selling_contact WHERE email=?',undef,$username);
+
+#if($id < 1){ # if not in database, get data from FileMaker
+#    my $url = "http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/portal_account.php?postkey=fjgh15t&em=$username";
+#    $result = `/usr/bin/curl '$url'`;
+#    $data = decode_json($result);
+#    my $key = random_key();
+#    if($id < 1){
+#    $dbh->do('INSERT INTO selling_contact (first_name,last_name,email,role,hash,created_at,modified_at) values (?,?,?,?,?,now(),now())',undef,$data->{first_name},$data->{last_name},$username,'client',$key,);
+# }
+#}
+
+# if not leader, redirect
+if($role!~m/leader/){
+  $m->redirect('index.html');
+}
+
+if($delete_id > 0 and $action eq 'delete'){
+  $dbh->do("UPDATE selling_contact SET role='deleted' WHERE id=?",undef,$delete_id);
+}
+
+my $clients     = get_client_files($dbh);
+my @client_list = sort { $a->{first_name} cmp $b->{first_name} } map { $clients->{$_} } keys %$clients;
+
+sub random_key {
+    my $text = "bcdfghjkmnpqrstvwxyzABCDEFGHJKLMNPRSTUVWXYZ23456789";
+    my $length = int(rand() * 2) + 14;
+    my $x = 0;
+    my $key = "";
+    while ($x<$length) {
+      my $ranNo = int(rand() * length($text));
+      my $a = substr($text, $ranNo, 1);
+      $key .= $a; $x++;
+    }
+  return $key;
+}
+
+sub get_client_files {
+  my ($files) = $dbh->selectall_arrayref("SELECT selling_contact.id,first_name,last_name,email,filename,selling_file.modified_at,directory FROM selling_file,selling_contact WHERE selling_contact.id=selling_file.selling_contact_id AND role='client'",{Columns=>{}});
+
+  my $clients = { };
+  foreach my $f (@$files){
+    my $id = $f->{id};
+    if( ! exists $clients->{$id}){
+      $clients->{$id} = {
+      first_name => $f->{first_name},
+      last_name  => $f->{last_name},
+      email      => $f->{email},
+      id         => $id,
+      files      => [ ],
+      };
+    }
+    push(@{$clients->{$id}->{files}},{ filename => $f->{filename}, directory => $f->{directory}, modified_at => UnixDate(ParseDate($f->{modified_at}),"%b %d") });
+  }
+
+
+
+
+
+  return $clients; # hashref of clients
+}
+</%init>

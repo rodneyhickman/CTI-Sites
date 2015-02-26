@@ -1,0 +1,44 @@
+<html>
+<body>
+<p>Uploading file</p>
+</body>
+</html>
+<%init>
+my $username = $m->scomp('authen.mas');
+my $args     = $m->request_args();
+my ($file)   = @{$args}{'upfile'};
+
+
+my $upload_path = '/www/www.thecoaches.com/docs/coactiveselling/documents';
+my ($id,$first_name,$last_name,$role,$hash) = $dbh->selectrow_array('SELECT id,first_name,last_name,role,hash FROM selling_contact WHERE email=?',undef,$username);
+
+if($id > 0){
+  # process upload
+  my $q = $m->cgi_object() ;
+  my $h = $q->uploadInfo($file);
+  my $realFile = "$upload_path/$hash/$file";
+  
+  open (OUTFILE, ">$realFile");
+  binmode OUTFILE ;
+  my $buffer ;
+  while (my $bytesread=read($file,$buffer,1024)) {
+    print OUTFILE $buffer;
+  }
+  close OUTFILE;
+
+  my ($file_id) = $dbh->selectrow_array('SELECT id FROM selling_file WHERE selling_contact_id=? AND filename=?',undef,$id,$file);
+
+  # insert file into database if not exist
+  if ($file_id < 1) {
+    $dbh->do('INSERT INTO selling_file (selling_contact_id,filename,directory,created_at,modified_at) values (?,?,?,now(),now())',undef,$id,$file,"$upload_path/$hash");
+  }
+
+  # else, just update the modify time 
+  else {
+    $dbh->do('UPDATE selling_file SET modified_at=NOW() WHERE id=?',undef,$file_id);
+  }
+ }
+
+$m->redirect('index.html'); 
+</%init>
+

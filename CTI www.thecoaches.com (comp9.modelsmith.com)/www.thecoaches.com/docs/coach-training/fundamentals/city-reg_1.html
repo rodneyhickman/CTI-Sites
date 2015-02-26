@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+
+  <title>CTI: Coach Training: Fundmentals Course in <% $region_name %></title>
+  <meta http-equiv="Content-type" content="text/html; charset=us-ascii" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="keywords" content=
+  "coach training, leadership training, organizational coach training, co-active, become a coach, training coaching, coach certification, coaching certification, coach training, coaching as a career, transformational learning, in person training, face to face training, mentoring, business coaching, business transformation, personal transformation, worldwide coaching, change career, improve career, help people, people to people, active listening, Henry Kimsey-House, Karen Kimsey-House, CPCC, Co-Active Coaching, co-Active model, co-Active Leadership" />
+  <meta name="description" content=
+  "CTI, The Coaches Training Institute trains more coaches around the world than any other training group. Using our Co-Active model, we helped establish the coach training industry and were a founder of the ICF. Through our coach training, you can become an ICF certified coach. Through our Leadership training, you can raise your leadership skills to new and unexpected heights. Our Organizational training helps companies train their managers to get the most out of happy employees." />
+  <meta name="author" content="The Coaches Training Institute (CTI)" />
+  <meta name="copyright" content="Copyright &copy; 2009 The Coaches Training Institute. All rights reserved." />
+  <meta name="nullbot" content="noarchive,nosnippet" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+  <link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+  <link rel="stylesheet" type="text/css" href="/res/css/content_internal_4a.css" />
+  <link rel="stylesheet" type="text/css" href="/res/css/lytebox.css" media="screen,projection" />
+  <script type="text/javascript" src="/res/js/lytebox.js"></script>
+  <script type="text/javascript" src="/res/js/coaches-training-institute.js"></script>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">
+//<![CDATA[
+  google.load("jquery", "1.3.2");
+  google.setOnLoadCallback(function() {
+  var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+  var myArray  = myRe.exec(document.URL);   
+  var path = myArray[1] ? myArray[1] : myArray[3];
+  //alert(path);
+  $("#sub-nav li").removeClass('current');
+  $("#sub-nav a[href="+path+"]").parent().addClass('current');
+  });
+  //]]>
+  </script>
+
+<script language="javascript">
+ function hasAgreed(form) {
+    if(form.agree_to_policies.checked == false) {
+      alert("Please read the CTI Policies and indicate your agreement by checking the checkbox.");
+      return false;
+    }
+
+  adjustDeposit(form);
+  return true;
+ }
+
+function adjustDeposit(form){
+ if(isLessThan3Weeks(form.op1.value)||
+    isLessThan3Weeks(form.op3.value)||
+    isLessThan3Weeks(form.op5.value)||
+    isLessThan3Weeks(form.op7.value)||
+    isLessThan3Weeks(form.op9.value)
+    ){
+   form.item.value = setFullPrice(form.item.value);
+ }
+}
+
+function isLessThan3Weeks( val ){
+var today=new Date();
+//var today=new Date(2009,9,5); // for testing
+
+// get year, month, day from val
+// example:  <option value="1st Fundamentals: Boston Metro, MA - September 11, 2009">Fundamentals - Boston Metro, MA - September 11, 2009</option>
+
+var myregex = new RegExp(/([A-Za-z]+)\s+(\d+),\s+(\d+)/);
+var matches = myregex.exec( val );
+//alert(matches);
+if(matches != null){
+var year  = matches[3];
+var month = convertMonth(matches[1]);
+var day   = matches[2];
+var selDate=new Date(year,month,day) //Month is 0-11 in JavaScript
+
+
+//Set 3 weeks in milliseconds
+var three_weeks=1000*60*60*24*21  // 1000 msec * 60 secs * 60 mins * 24 hours * 21 days
+
+
+//alert("today: "+today+"  selection: "+selDate+"  t/f: "+(( selDate.getTime()-today.getTime() ) < three_weeks));
+
+//Calculate difference btw the two dates, and convert to days
+return ( ( selDate.getTime()-today.getTime() ) < three_weeks );
+}
+
+return null;
+
+}
+
+function convertMonth( month ){
+if(month.match(/jan/i)){ return 0; }
+if(month.match(/feb/i)){ return 1; }
+if(month.match(/mar/i)){ return 2; }
+if(month.match(/apr/i)){ return 3; }
+if(month.match(/may/i)){ return 4; }
+if(month.match(/jun/i)){ return 5; }
+if(month.match(/jul/i)){ return 6; }
+if(month.match(/aug/i)){ return 7; }
+if(month.match(/sep/i)){ return 8; }
+if(month.match(/oct/i)){ return 9; }
+if(month.match(/nov/i)){ return 10; }
+if(month.match(/dec/i)){ return 11; }
+return 0;
+}
+
+function setFullPrice( sel ){
+ // Example: a-6814^A1FUL^Course 2: Fulfillment USD $1,150^250.00^1^^^^^
+ return sel.replace(/(([0-9]+)\,)?([0-9]+)\^(\d+)\.00/,"$1$3^$2$3.00");
+}
+
+</script>
+
+<style>
+.lineheight13 { line-height:1.3em }
+.pricing div {
+  float:left;
+  width:150px;
+  margin:0;
+  padding:0;
+  }
+.pricing div:nth-child(odd) {
+  width:450px;
+  }
+.pricehead {
+  font-weight:bold;
+  border-bottom:solid 1px #32110A;
+}
+</style>
+</head>
+
+<body>
+  <div id="page">
+    <div id="tools">
+      <!-- generalID --><& '/res/inc/id_general.html' &><!-- -->
+       <!-- eCommerceID --><& '/res/inc/id_ecommerce.html' &><!-- -->
+    </div>
+
+    <div id="primary">
+      <!-- contactNavID --><& '/res/inc/id_contact-nav.html' &><!-- -->
+
+      <ul id="main-nav">
+        <li><a href="/why-coaches-training-institute/">Why <abbr title="Coaches Training Institute">CTI</abbr>?</a></li>
+
+        <li class="current"><a href="/coach-training/">Coach Training</a></li>
+
+        <li><a href="/leadership/">Leadership</a></li>
+
+        <li><a href="/organizations/">For Organizations</a></li>
+
+        <li><a href="/leaders/">Our Faculty</a></li>
+
+        <li><a href="/resources/">Resources</a></li>
+
+        <li><a href="/profiles/">Profiles</a></li>
+      </ul>
+
+      <div id="sub-nav">
+        <ul id="section-nav">
+          <li><a href="/coach-training/courses/">Courses</a></li>
+
+          <li><a href="/coach-training/certification/">Certification</a></li>
+
+          <li><a href="/coach-training/dates-and-locations/">Dates &amp; Locations</a></li>
+
+          <li><a href="/coach-training/courses/pricing.html">Pricing &amp; Registration</a></li>
+
+          <li><a href="/coach-training/assessments-and-tools/">Assessments &amp; Tools</a></li>
+
+          <li><a href="/coach-training/faqs/"><abbr title="Frequently Asked Questions">FAQS</abbr></a></li>
+
+          <li><a href="/coach-training/profiles-and-testimonials/">Profiles</a></li>
+
+          <li><a href="/coach-training/business-builder/">Business Builder</a></li>
+
+          <li><a href="/coach-training/be-an-assistant/">Assisting</a></li>
+        </ul>
+      </div>
+
+      <div id="broadcast">
+        <img src="/res/img/page-banners/content_coach-training.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" /> <map id="logobutton" name="logobutton">
+          <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+        </map>
+      </div>
+
+      <div id="content">
+        <div id="main">
+          <div id="breadcrumbs">
+            <p><span id="youarehere" class="accessibility-hide">You are here:&nbsp;</span> <a href="/">Home</a><span class="divider">&nbsp;||&nbsp;</span><a href="/coach-training/">Coach Training</a><span class="divider">&nbsp;||&nbsp;</span><a href="/coach-training/be-an-assistant/" class="here">Be an Assistant</a></p>
+
+            <div style="margin: -5px 0 0px 0px; float: right;">
+              <script type="text/javascript">
+//<![CDATA[
+              insert_social_bookmarking();
+              //]]>
+              </script>
+            </div>
+          </div>
+
+          <h1 id="main-headline" class="lineheight13">Co-Active Coaching Fundamentals<br />in <% $region_name %></h1>
+
+          <div class="pri"></div>
+
+          <div class="sec">
+            <p>The 2&frac12; day Co-Active Fundamentals course is the first course in our Co-Active Coaching curriculum. Whether you are interested in using coaching skills in your current profession, considering a career in coaching, or just wanting to improve your communication with the important people in your life, Co-Active Fundamentals has something for you.</p>
+            <p>Hands-on training provides a powerful introduction to the techniques and skills of Co-Active Coaching. The focus is on participation and practical experience rather than lecture, with numerous opportunities to coach and receive feedback on your newly acquired coaching skills. At the end of the course, your will have a very clear idea just how coaching might fit into your life.</p>
+            <h2>Outcomes:</h2>
+
+            <ul class="followsh2">
+         
+	<p>&raquo; Learn to design effective relationship alliances with others<br />
+	&raquo; Use the Co-Active Coaching model to enhance your communication<br />
+	&raquo; Distinguish and use three levels of listening to deepen your relationships<br />
+	&raquo; Explore a simple tool for maintaining balance in your life</li>
+            </ul>
+
+            
+
+<form action="http://www.amerisites.com/sc/cart.cgi" method="POST" id="form2" style="margin-bottom: 0" onsubmit="return hasAgreed(this);">
+
+<input type="hidden" name="item" value="a-6814^A1FUN^Course 1: Fundamentals USD $725^725.00^1^^^^^">
+<div class="fieldset">
+  <fieldset class="courseunit">
+  <div class="legend"><a href="/coach-training/courses/#course_fundamentals">Course 1: Co-Active Fundamentals</a></div>
+    <div>
+    <label id="l_fundloc1" for="fundloc1">Co-Active Fundamentals &mdash; <span>Course Dates</span></label>
+    <select id="fundloc1" name="op1">
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$fun_events){
+
+    <option value="<% $event->{fullprice} %>1st Fundamentals: <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Fundamentals - <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+    </select>
+
+    <p>&nbsp;<br />
+    <i>For additional dates please contact a Program Advisor at 1-800-691-6008 x3</i></p>
+    </div>
+  </fieldset>
+</div>
+
+<p>
+<input id="agree" name="agree_to_policies" type="checkbox"> Yes, I have read and agree to <a class="pricingdetails" href="/_temp/policy.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>
+
+<p>&nbsp;</p>
+
+<div class="pricing">
+  <div class="pricehead"><p>Package/Course Payment Description<p></div>
+  <div class="pricehead"><p>Price</p></div>
+  <div>
+    <p><b>*Starter: Co-Active Coaching Fundamentals Course Only</b><br />Fundamentals = paid in full at the time of registration</p></div>
+  <div><b>$725</b></div>
+</div>
+<div style="clear:both"></div>
+
+
+<input id="addtocart" name="addtocart" type="image" src="/res/img/submit_add_to_cart.gif" alt="Add to Cart" />
+
+</form>
+<div style="clear:both">&nbsp;</div>
+
+
+
+            <p><b>If you need assistance, please contact a Program Advisor at 1-800-691-6008 option 3 on weekdays between 8:00 am and 4:00 pm Pacific Time.</b>
+            Mention &ldquo;google&rdquo; when booking your course and receive $200 off the price of Fundamentals, our introductory course.</p>
+          </div>
+        </div>
+
+        <div id="sidebar">
+          <div class="pri">
+
+  <h1>Registration</h1>
+  
+<p>Before registering, please read our policies.</p>
+
+  <p>
+  <a class="pricingdetails" href="/_temp/policy.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">Click here to read CTI policies</a>
+</p>
+  
+  <p>Please make your choice for the course(s). If your course is not available, we will contact you to discuss other options. You will receive written notification of your enrollment status by email.</p>
+
+
+  
+
+  <p>Your enrollment in a course is based on the receipt of funds for both the deposit and balance due. In the process of enrolling you in your requested course, <abbr title="Coaches Training Institute">CTI</abbr> will notify you if there are insufficient funds. If we do not hear from you within 48 hours of our notification, your requested space in the course will be released. <strong>Please wait for confirmation of your enrollment before making travel plans. All course enrollments are subject to availability.</strong></p>
+
+
+
+
+</div>
+
+        </div>
+      </div><!-- ctaAreaId --><& '/res/inc/id_cta-area.html' &><!-- -->
+       <!-- used for cross-browser stabilizion of layout -->
+
+      <div class="pageclear"></div>
+    </div>
+
+    <div id="footer">
+      <img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives." name="cti-logo-tagged" />
+
+      <div id="footer-content">
+        <!-- footerNavId --><& '/res/inc/id_footer-nav.html' &><!-- -->
+         <img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation" name="icf-logo" />
+      </div>
+    </div>
+  </div><script type="text/javascript">
+//<![CDATA[
+
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+  //]]>
+  </script><script type="text/javascript">
+//<![CDATA[
+
+  try {
+
+  var pageTracker = _gat._getTracker("UA-5715102-1");
+
+  pageTracker._trackPageview();
+
+  } catch(err) {}
+  //]]>
+  </script>
+</body>
+</html>
+
+
+<%once>
+use Date::Manip qw{ ParseDate UnixDate DateCalc Date_Cmp };
+</%once>
+<%init>
+my $args = $m->request_args;
+my $region = $args->{r} || 'SR';
+
+my $sql = 'SELECT region_name FROM regions WHERE region_code=?';
+my ($region_name) = $dbh->selectrow_array($sql,undef,$region);
+
+
+my @months = qw(January February March April May June July August September October November December);
+my ($mn,$yr)=(localtime)[4,5];
+$mn += 2;
+$yr += 1900;
+my @month_select;
+for(0..9) {
+  my $mon = $mn + $_;
+  if ($mon > 11) {
+    $yr++;
+    $mn -= 12;
+    $mon -= 12;
+  }
+  push (@month_select,"$months[$mon] $yr");
+}
+
+
+my $fun_events = $dbh->selectall_arrayref(
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE course_type_id=\'3\' and event_calendar.location NOT LIKE \'%HOLD\' AND region=? and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+{ Columns => {} },$region); 
+
+
+  my $locations = $dbh->selectall_arrayref(
+'SELECT region,site_code,city,region_name FROM site_data,regions WHERE site_data.region=regions.region_code',
+{ Columns => {} });
+
+my %locs = map{ $_->{site_code} => "$_->{region_name} ($_->{city})"} @$locations;
+
+</%init>
+  
+
+
+  

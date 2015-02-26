@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<title>CTI: Coach Training and Certification: Register for Full-Circle Coach Training</title>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="Content-Language" content="en" />
+
+<meta name="language" content="en" />
+
+<meta name="keywords" content="coach training, leadership training, organizational coach training, co-active, become a coach, training coaching, coach certification, coaching certification, coach training, coaching as a career, transformational learning, in person training, face to face training, mentoring, business coaching, business transformation, personal transformation, worldwide coaching, change career, improve career, help people, people to people, active listening, Henry Kimsey-House, Karen Kimsey-House, CPCC, Co-Active Coaching, co-Active model, co-Active Leadership" />
+
+<meta name="description" content="CTI, The Coaches Training Institute trains more coaches around the world than any other training group. Using our Co-Active model, we helped establish the coach training industry and were a founder of the ICF. Through our coach training, you can become an ICF certified coach. Through our Leadership training, you can raise your leadership skills to new and unexpected heights. Our Organizational training helps companies train their managers to get the most out of happy employees." />
+
+<meta name="author" content="The Coaches Training Institute (CTI)" />
+
+<meta name="copyright" content="Copyright &#169; 2009 The Coaches Training Institute. All rights reserved." />
+
+<meta name="nullbot" content="noarchive,nosnippet" />
+
+<link rel="icon" href="/favicon.ico" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_4a.css" />
+
+<script type="text/javascript" src="/res/js/coaches-training-institute.js"> </script>
+
+  <link rel="stylesheet" type="text/css" href="/res/css/lytebox.css" media="screen,projection" />
+  <script type="text/javascript" src="/res/js/lytebox.js">
+</script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/res/css/home-footer.css" />
+	<script type="text/javascript" src="/res/js/coaches-training-institute.js"> </script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="/res/js/specials.js"> </script>
+	<script type="text/javascript" src="/res/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/res/js/jquery.expire.js"> </script>
+	<script language="JavaScript" type="text/javascript">
+	var html = '';
+	var count = 0;
+	google.setOnLoadCallback(function(){
+	jQuery.contentExpirator('expire');
+	$.get('/blog/feed/', function(xml){
+	        $("item", xml).each(function(){
+	                count++;
+	                if(count > 3) return false;
+	                $(this).find("link").each(function(){
+	                        html += "<div class='blog-entry'><strong><a href='" + getNodeText(this) +"'> ";
+	                }).end().find("title").each(function(){
+	                        html += getNodeText(this) + "</a></strong>";
+	                }).end().find("description").each(function(){
+	                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+	                }).end().find("link").each(function(){
+	                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
+	                });
+	        });
+	        $("#home-news").html(html);
+	});
+	});
+	
+	function getNodeText(node)
+	{
+	        var text = "";
+	        if(node.text) text = node.text;
+	        if(node.firstChild) text = node.firstChild.nodeValue;
+	        return text;
+	}
+	</script>
+<script language="javascript">
+ function hasAgreed(form) {
+
+    if(form.agree_to_policies.checked == false) {
+      alert("Please read the CTI Policies and indicate your agreement by checking the checkbox.");
+      return false;
+    }
+
+
+  adjustTotalPrice(form);
+  return true;
+ }
+
+function adjustDeposit(form){
+ if(isLessThan3Weeks(form.op1 ? form.op1.value : '')||
+    isLessThan3Weeks(form.op3 ? form.op3.value : '')||
+    isLessThan3Weeks(form.op5 ? form.op5.value : '')||
+    isLessThan3Weeks(form.op7 ? form.op7.value : '')||
+    isLessThan3Weeks(form.op9 ? form.op9.value : '')
+    ){
+   form.item.value = setFullPrice(form.item.value);
+ }
+}
+
+function adjustTotalPrice(form){
+ /* Normal package price is just the deposits added together. Here we add
+    the full price delta to those courses that are within 21 days. CTI
+    reserves the right to verify final price before student is admitted
+    to course(s).
+ */
+ var additional_deposit=0;
+ var package_deposit=0;
+
+ var fun_price; var fun_discount;
+ var ful_price; var ful_discount;
+ var bal_price; var bal_discount;
+ var pro_price; var pro_discount;
+ var itb_price; var itb_discount;
+
+                               
+                                
+ if(form.pkg && form.pkg.value=="01" && singaporeSelected(form) ){
+   package_deposit = 1800;
+   fun_price = 1000; fun_discount = 0;
+   ful_price = 1600; ful_discount = 350;
+   bal_price = 1600; bal_discount = 350;
+   pro_price = 1600; pro_discount = 350;
+   itb_price = 1600; itb_discount = 350;
+   form.item.value = "a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $6,000 - Package A^985.00^1^^^^^"; 
+ }
+ else if(form.pkg && form.pkg.value=="01"){
+   package_deposit = 985;
+   fun_price = 725; fun_discount = 0;
+   ful_price = 985; ful_discount = 65;
+   bal_price = 985; bal_discount = 65;
+   pro_price = 985; pro_discount = 65;
+   itb_price = 985; itb_discount = 65;
+ }
+ else if(form.pkg && form.pkg.value=="02" && singaporeSelected(form)){
+   package_deposit = 2000;
+   fun_price = 1000; fun_discount = 0;
+   ful_price = 1600; ful_discount = 350;
+   bal_price = 1600; bal_discount = 350;
+   pro_price = 1600; pro_discount = 350;
+   itb_price = 1600; itb_discount = 350;
+   form.item.value = "a-6814^A3FULL^Co-Active Professional Co-Active Coach Pathway, USD $10,600 - Package B^1185.00^1^^^^^"; 
+} 
+ else if(form.pkg && form.pkg.value=="02"){
+   package_deposit = 1185;
+   fun_price = 725; fun_discount = 0;
+   ful_price = 985; ful_discount = 75;
+   bal_price = 985; bal_discount = 75;
+   pro_price = 985; pro_discount = 75;
+   itb_price = 985; itb_discount = 75;
+ } 
+ else if(form.pkg && form.pkg.value=="03" && singaporeSelected(form)){
+   fun_price = 1000; fun_discount = 0;
+   package_deposit = fun_price;
+   form.item.value = "a-6814^A1FUN^Course 1: Fundamentals USD $1000^1000.00^1^^^^^";
+ }
+ else if(form.pkg && form.pkg.value=="03"){
+   fun_price = 725; fun_discount = 0;
+   package_deposit = fun_price;
+ } 
+ else if(form.pkg && form.pkg.value=="04" && singaporeSelected(form)){
+   ful_price = 1600; ful_discount = 350;
+   package_deposit = ful_discount;
+ form.item.value = "a-6814^A1FUL^Course 2: Fulfillment USD $1,600^350.00^1^^^^^";
+ }
+ else if(form.pkg && form.pkg.value=="04"){
+   ful_price = 1250; ful_discount = 250;
+   package_deposit = ful_discount;
+ } 
+ else if(form.pkg && form.pkg.value=="05" && singaporeSelected(form)){
+   bal_price = 1600; bal_discount = 350;
+   package_deposit = bal_discount;
+ form.item.value = "a-6814^A1BAL^Course 3: Balance USD $1,600^350.00^1^^^^^";
+ }
+ else if(form.pkg && form.pkg.value=="05"){
+   bal_price = 1250; bal_discount = 250;
+   package_deposit = bal_discount;
+ } 
+ else if(form.pkg && form.pkg.value=="06" && singaporeSelected(form)){
+   pro_price = 1600; pro_discount = 350;
+   package_deposit = pro_discount;
+ form.item.value = "a-6814^A1PRO^Course 4: Process USD $1,600^350.00^1^^^^^";
+ }
+ else if(form.pkg && form.pkg.value=="06"){
+   pro_price = 1250; pro_discount = 250;
+   package_deposit = pro_discount;
+ } 
+ else if(form.pkg && form.pkg.value=="07" && singaporeSelected(form)){
+   itb_price = 1600; itb_discount = 350;
+   package_deposit = itb_discount;
+ } 
+ else if(form.pkg && form.pkg.value=="07"){
+   itb_price = 1250; itb_discount = 250;
+   package_deposit = itb_discount;
+ form.item.value = "a-6814^A1ITB^Course 5: Synergy USD $1,600^350.00^1^^^^^";
+ }
+
+
+ if(isLessThan3Weeks(form.op1 ? form.op1.value : '')){
+   additional_deposit = additional_deposit + 0; // fundamentals already in full price
+ }
+ if(isLessThan3Weeks(form.op3 ? form.op3.value : '')){
+   additional_deposit = additional_deposit + (ful_price - ful_discount); 
+ }
+ if(isLessThan3Weeks(form.op5 ? form.op5.value : '')){
+   additional_deposit = additional_deposit + (bal_price - bal_discount); 
+ }
+ if(isLessThan3Weeks(form.op7 ? form.op7.value : '')){
+   additional_deposit = additional_deposit + (pro_price - pro_discount); 
+ }
+ if(isLessThan3Weeks(form.op9 ? form.op9.value : '')){
+   additional_deposit = additional_deposit + (itb_price - itb_discount); 
+ }
+
+ //alert( form.item.value );
+ form.item.value = setPrice( form.item.value, package_deposit, additional_deposit );
+ //alert( form.item.value );
+
+
+}
+
+function singaporeSelected(form){
+  var myRegex=/Singapore/i;
+  if(form.op1 && form.op1.value.match(myRegex)){ return true; }
+  if(form.op3 && form.op3.value.match(myRegex)){ return true; }
+  if(form.op5 && form.op5.value.match(myRegex)){ return true; }
+  if(form.op7 && form.op7.value.match(myRegex)){ return true; }
+  if(form.op9 && form.op9.value.match(myRegex)){ return true; }
+  return false;
+}
+
+function setPrice( sel, package_price, delta ){
+ // Example: a-6814^A1FUL^Course 2: Fulfillment USD $1,250^250.00^1^^^^^
+ var total = package_price + delta;
+ return sel.replace(/(([0-9]+)\,)?([0-9]+)([^\^0-9]*)\^(\d+)\.00/,"$1$3$4^" + total + ".00");
+}
+
+
+
+function isLessThan3Weeks( val ){
+var today=new Date();
+//var today=new Date(2009,9,5); // for testing
+
+// get year, month, day from val
+// example:  <option value="1st Fundamentals: Boston Metro, MA - September 11, 2009">Fundamentals - Boston Metro, MA - September 11, 2009</option>
+
+var myregex = new RegExp(/([A-Za-z]+)\s+(\d+),\s+(\d+)/);
+var matches = myregex.exec( val );
+//alert(matches);
+if(matches != null){
+var year  = matches[3];
+var month = convertMonth(matches[1]);
+var day   = matches[2];
+var selDate=new Date(year,month,day) //Month is 0-11 in JavaScript
+
+
+//Set 3 weeks in milliseconds
+var three_weeks=1000*60*60*24*21  // 1000 msec * 60 secs * 60 mins * 24 hours * 21 days
+
+
+//alert("today: "+today+"  selection: "+selDate+"  t/f: "+(( selDate.getTime()-today.getTime() ) < three_weeks));
+
+//Calculate difference btw the two dates, and convert to days
+return ( ( selDate.getTime()-today.getTime() ) < three_weeks );
+}
+
+return null;
+
+}
+
+function convertMonth( month ){
+if(month.match(/jan/i)){ return 0; }
+if(month.match(/feb/i)){ return 1; }
+if(month.match(/mar/i)){ return 2; }
+if(month.match(/apr/i)){ return 3; }
+if(month.match(/may/i)){ return 4; }
+if(month.match(/jun/i)){ return 5; }
+if(month.match(/jul/i)){ return 6; }
+if(month.match(/aug/i)){ return 7; }
+if(month.match(/sep/i)){ return 8; }
+if(month.match(/oct/i)){ return 9; }
+if(month.match(/nov/i)){ return 10; }
+if(month.match(/dec/i)){ return 11; }
+return 0;
+}
+
+function setFullPrice( sel ){
+ // Example: a-6814^A1FUL^Course 2: Fulfillment USD $1,150^250.00^1^^^^^
+  
+ return sel.replace(/(([0-9]+)\,)?([0-9]+)([^\^0-9]*)\^(\d+)\.00/,"$1$3$4^$2$3.00");
+}
+
+
+</script>
+
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+var myRe     = /\.com(?:(\/.+\/)([^\/]+.html)|(\/.+\/))$/;
+var myArray  = myRe.exec(document.URL);
+var path;
+if(myArray){
+  path = myArray[1] ? myArray[1] : myArray[3];
+}
+//alert(path);
+$("#sub-nav li").removeClass('current');
+$("#sub-nav a[href="+path+"]").parent().addClass('current');
+});
+</script>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="tools">
+
+  <!-- generalID --><& '/res/inc/id_general.html' &><!-- -->
+
+  <!-- eCommerceID --><& '/res/inc/id_ecommerce.html' &><!-- -->
+
+</div>
+
+<div id="primary">
+
+  <!-- contactNavID --><& '/res/inc/id_contact-nav.html' &><!-- -->
+
+	<ul id="main-nav" style="margin-bottom: 0">
+		<li><a href="/why-coaches-training-institute/">Why <abbr title="Coaches Training Institute">CTI</abbr>?</a></li>
+		<li class="current"><a href="/coach-training/">Coach Training</a></li>
+		<li><a href="/leadership/">Leadership</a></li>
+		<li><a href="/organizations/">For Organizations</a></li>
+		<li><a href="/leaders/">Our Faculty</a></li>
+		<li><a href="/resources/">Resources</a></li>
+		<!--     <li><a href="/profiles/">Profiles</a></li> -->
+	    <li style="float:right; margin: 0; padding:0; position: absolute; top: 73px; padding-left: 30px;"><a href="/"><img src="/res/img/brand_coactive.png" height="34" width="175" /></a></li>
+	</ul>
+	<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+	<div id="sub-nav">
+		<ul id="section-nav" style="margin-bottom: 0">
+			<li class="current sub"><a href="/coach-training/courses/">Courses</a></li>
+			<li><a href="/coach-training/certification/">Certification</a></li>
+			<li><a href="/coach-training/dates-and-locations/">Dates &#38; Locations</a></li>
+			<li><a href="/coach-training/courses/pricing.html">Pricing &amp; Registration</a></li>
+			<li><a href="/coach-training/faqs/"><abbr title="Frequently Asked Questions">FAQS</abbr></a></li>
+			<li><a href="/coach-training/profiles-and-testimonials/">Profiles</a></li>
+			<li><a href="/coach-training/business-builder/">Building Business</a></li>
+			<li><a href="/coach-training/be-an-assistant/">Assisting</a></li>
+		</ul>
+	</div>
+
+
+  	<div id="broadcast">
+		<img src="/res/img/page-banners/content_coach-training.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+		<map id="logobutton" name="logobutton">
+		<area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+		</map>
+	</div>
+
+
+
+<div id="content">
+
+<div id="main">
+
+  
+
+<div id="breadcrumbs">
+
+  <p><span id="youarehere" class="accessibility-hide">You are here:&#160;</span> <a href="/">Home</a><span class="divider">&#160;||&#160;</span><a href="/coach-training/">Coach Training</a><span class="divider">&#160;||&#160;</span><a href="/coach-training/courses/">Courses</a><span class="divider">&#160;||&#160;</span></span><a href="/coach-training/courses/registration_package1.html" class="here">Registration</a></p>
+
+<div style="margin: -5px 0 0px 0px; float: right; "><script type="text/javascript">insert_social_bookmarking();</script></div>
+
+						</div>
+
+
+
+<div class="pri" >
+
+<!--  <h1 id="main-headline"></h1> -->
+
+  
+  
+% if($package eq "01"){
+  <h2>Package A: <span>Co-Active Coaching Skills Pathway</span></h2>
+  <p class="intro"><span id="packageprice">$4,665</span> <span id="savings">Savings of $1,060!</span> </p>
+% } elsif($package eq "02") {
+  <h2>Package B: <span>Certified Professional Co-Active Coach Pathway</span></h2>
+  <p class="intro"><span id="packageprice">$9,225</span> <span id="savings">Savings of $1,600!</span> <a class="pricingdetails" href="http://www.thecoaches.com/coach-training/courses/pricing1.html">Pricing Details</a></p>
+% } elsif($package eq "03") {
+  <h2>Individual Course: <span></span></h2>
+  <p class="intro"><span id="packageprice">$725</span> <span id="savings"></span> </p>
+% } elsif($package eq "08") {
+  <h2>Certification: <span></span></h2>
+  <p class="intro"><span id="packageprice">$5,100</span> <span id="savings"></span> </p>
+% } else {
+  <h2>Individual Course: <span></span></h2>
+  <p class="intro"><span id="packageprice">$1,250</span> <span id="savings"></span> </p>
+% }
+  
+<form action="http://www.cartserver.com/sc/cart.cgi" method="POST" id="form2" style="margin-bottom: 0" onsubmit="return hasAgreed(this);">
+
+% if($package eq "01"){
+<input type="hidden" name="pkg" value="01">
+<input type="hidden" name="item" value="a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $4,665 - Package A^985.00^1^^^^^">
+% } elsif($package eq "02") {
+<input type="hidden" name="pkg" value="02">
+<input type="hidden" name="item" value="a-6814^A3FULL^Co-Active Professional Co-Active Coach Pathway, USD $9,225 - Package B^1185.00^1^^^^^">
+% } elsif($package eq "03") {
+<input type="hidden" name="pkg" value="03">
+<input type="hidden" name="item" value="a-6814^A1FUN^Course 1: Fundamentals USD $725^725.00^1^^^^^">
+% } elsif($package eq "04") {
+<input type="hidden" name="pkg" value="04">
+<input type="hidden" name="item" value="a-6814^A1FUL^Course 2: Fulfillment USD $1,250^250.00^1^^^^^">
+% } elsif($package eq "05") {
+<input type="hidden" name="pkg" value="05">
+<input type="hidden" name="item" value="a-6814^A1BAL^Course 3: Balance USD $1,250^250.00^1^^^^^">
+% } elsif($package eq "06") {
+<input type="hidden" name="pkg" value="06">
+<input type="hidden" name="item" value="a-6814^A1PRO^Course 4: Process USD $1,250^250.00^1^^^^^">
+% } elsif($package eq "07") {
+<input type="hidden" name="pkg" value="07">
+<input type="hidden" name="item" value="a-6814^A1ITB^Course 5: Synergy USD $1,250^250.00^1^^^^^">
+% } elsif($package eq "08") {
+<input type="hidden" name="pkg" value="08">
+<input type="hidden" name="item" value="a-6814^CERT^Certification USD $5,100^1200.00^1^^^^^">
+% }
+
+
+<!-- Program Assistants -->
+% if($package eq '01' or $package eq '02' or $package eq '03'){
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend">Please tell us which Program Advisor assisted you:</div>
+
+
+<div>
+
+
+<select name="op30">
+<option value="">-- Please Select --</option>
+<option value="">-- No one assisted me --</option>
+<Option Value=" Assisted by Alison Simmons">Alison Simmons</Option>
+<Option Value=" Assisted by Carla Hamby">Carla Hamby</Option>
+<Option Value=" Assisted by Debra Martin">Debra Martin</Option>
+   <option Value=" Assisted by Kate Benediktsson">Kate Benediktsson</option>
+<Option Value=" Assisted by Stephanie Lovinger">Stephanie Lovinger</option>
+</select>
+</p>
+
+  </select>
+
+</div>
+
+  
+</fieldset>
+
+</div>
+% }
+
+
+% if($package eq '01' or $package eq '02' or $package eq '03'){
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+
+<div class="legend"><a href="/coach-training/courses/#course_fundamentals">Course 1: Co-Active Fundamentals</a></div>
+
+<div>
+
+  <label id="l_fundloc1" for="fundloc1">Co-Active Fundamentals — <span>Course Dates</span></label>
+
+  <select id="fundloc1" name="op1">
+
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$fun_events){
+
+    <option value="<% $event->{fullprice} %>1st Fundamentals: <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Fundamentals - <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+
+
+
+  </select>
+
+</div>
+
+
+</fieldset>
+
+</div>
+% }
+
+% if($package eq '01' or $package eq '02' or $package eq '04'){
+
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend"><a href="/coach-training/courses/#course_fulfillment">Course 2: Fulfillment</a></div>
+
+<div>
+
+  <label id="l_fulfloc1" for="fulfloc1">Fulfillment — <span>Course Dates</span></label>
+
+  <select id="fulfloc1" name="op3">
+
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$ful_events){
+
+<option value="<% $event->{fullprice} %>1st Fulfillment:  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Fulfillment -  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+
+      
+
+  </select>
+
+</div>
+
+
+</fieldset>
+
+</div>
+% }
+
+% if($package eq '01' or $package eq '02' or $package eq '05'){
+
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend"><a href="/coach-training/courses/#course_balance">Course 3: Balance</a></div>
+
+<div>
+
+  <label id="l_balaloc1" for="balaloc1">Balance — <span>Course Dates</span></label>
+
+  <select id="balaloc1" name="op5">
+
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$bal_events){
+
+<option value="<% $event->{fullprice} %>1st Balance:  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Balance -  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+
+  </select>
+
+</div>
+
+
+</fieldset>
+
+</div>
+% }
+
+% if($package eq '01' or $package eq '02' or $package eq '06'){
+
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend"><a href="/coach-training/courses/#course_process">Course 4: Process</a></div>
+
+<div>
+
+  <label id="l_procloc1" for="procloc1">Process — <span>Course Dates</span></label>
+
+  <select id="procloc1" name="op7">
+
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$pro_events){
+
+<option value="<% $event->{fullprice} %>1st Process:  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Process -  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+
+  </select>
+
+</div>
+
+
+</fieldset>
+
+</div>
+% }
+
+% if($package eq '01' or $package eq '02' or $package eq '07'){
+
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend"><a href="/coach-training/courses/#course_inthebones">Course 5: Synergy</a></div>
+
+<div>
+
+  <label id="l_boneloc1" for="boneloc1">Synergy — <span>Course Dates</span></label>
+
+  <select id="boneloc1" name="op9">
+
+    <option value="">You have not made a course location selection.</option>
+
+% foreach my $event (@$itb_events){
+
+<option value="<% $event->{fullprice} %>1st Synergy:  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %>">Synergy -  <% $locs{$event->{location}} %> - <% $event->{start_date_formatted} %></option>
+
+% }
+
+  </select>
+
+</div>
+
+
+</fieldset>
+
+</div>
+% }
+
+% if($package eq "02") {
+<div class="fieldset">
+
+  <fieldset class="courseunit">
+
+<div class="legend"><a href="/coach-training/courses/#course_inthebones">Certification Starting Date</a></div>
+
+<div>
+
+
+<select name="op11">
+% foreach my $month (@month_select){
+<option value="Certification Starting Date: <% $month %>"><% $month %></option>
+% }
+</select>
+
+</div>
+
+</fieldset>
+
+</div>
+% }
+
+<p>
+<input id="agree" name="agree_to_policies" type="checkbox"> Yes, I have read and agree to <a class="pricingdetails" href="/_temp/policy.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>
+
+<input id="addtocart" name="addtocart" type="image" src="/res/img/submit_add_to_cart.gif" alt="Add to Cart" />
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="sidebar">
+
+
+<div class="pri">
+
+  <h1>Registration</h1>
+  
+<p>Before registering, please read our policies.</p>
+
+  <p>
+  <a class="pricingdetails" href="/_temp/policy.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">Click here to read CTI policies</a>
+</p>
+  
+  <p>Please make your choice for the course(s). If your course is not available, we will contact you to discuss other options. You will receive written notification of your enrollment status by email.</p>
+
+
+  
+
+  <p>Your enrollment in a course is based on the receipt of funds for both the deposit and balance due. In the process of enrolling you in your requested course, <abbr title="Coaches Training Institute">CTI</abbr> will notify you if there are insufficient funds. If we do not hear from you within 48 hours of our notification, your requested space in the course will be released. <strong>Please wait for confirmation of your enrollment before making travel plans. All course enrollments are subject to availability.</strong></p>
+
+
+
+
+</div>
+
+<div class="sec">
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+     <!-- ctaAreaId --><!-- & '/res/inc/id_cta-area.html' & --><!-- -->
+        
+        <!-- used for cross-browser stabilizion of layout -->
+        <div class="pageclear"></div>
+      <!-- /div -->
+  	 </div>
+
+
+	<!-- ctaAreaId --><& '/res/inc/id_tabbed-footer-1.html' &><!-- -->
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/cti_coaches.json?callback=twitterCallback2&amp;count=4"></script>
+<script type="text/javascript">
+	// Enable footer tab functionality
+	(function($) {
+		$('#footerMain .tabs a').click(function(event) {
+			// Prevent default click behavior
+			// ev.preventDefault();
+			event.preventDefault();
+
+			// Set up some variables and grab some resuable DOM references
+			var $t = $(this), // Quick ref for the clicked link
+				$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+				id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+				visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel (Tuck, Centers, Corporate)
+				tgtName = id.substr(6); // Get the name of the target panel to show, like above
+		
+			$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+			$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+		});
+
+	})(jQuery);
+</script>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-5715102-1");
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+
+</body>
+
+</html>
+<%once>
+use Date::Manip qw{ ParseDate UnixDate DateCalc Date_Cmp };
+</%once>
+<%init>
+my $args = $m->request_args();
+my $package = $args->{package};
+my @months = qw(January February March April May June July August September October November December);
+my ($mn,$yr)=(localtime)[4,5];
+$mn += 2;
+$yr += 1900;
+my @month_select;
+for(0..9) {
+  my $mon = $mn + $_;
+  if ($mon > 11) {
+    $yr++;
+    $mn -= 12;
+    $mon -= 12;
+  }
+  push (@month_select,"$months[$mon] $yr");
+}
+
+# (LEFT(site_data.site_code,2)=regions.region_code or LEFT(site_data.site_code,3)=regions.region_code)
+
+my $fun_events = $dbh->selectall_arrayref(
+
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id=\'3\' or course_type_id=\'139\') and event_calendar.location NOT LIKE \'%HOLD\' AND location NOT LIKE \'LON%\' AND location NOT LIKE \'MAN%\' and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+
+{ Columns => {} }); 
+
+
+# foreach (@$fun_events) {
+#  if( Date_Cmp(ParseDate('+3 weeks'),ParseDate($_->{start_date_formatted})) > 0){
+#   $_->{fullprice} = '*';
+#  }
+# }
+
+
+my $ful_events = $dbh->selectall_arrayref(
+
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id=\'4\' or course_type_id=\'140\') and event_calendar.location NOT LIKE \'%HOLD\' AND location NOT LIKE \'LON%\' AND location NOT LIKE \'MAN%\' and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+
+{ Columns => {} }); 
+
+# foreach (@$ful_events) {
+#  if( Date_Cmp(ParseDate('+3 weeks'),ParseDate($_->{start_date_formatted})) > 0){
+#   $_->{fullprice} = '*';
+#  }
+# }
+
+
+
+
+my $bal_events = $dbh->selectall_arrayref(
+
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id=\'5\' or course_type_id=\'141\') and event_calendar.location NOT LIKE \'%HOLD\' AND location NOT LIKE \'LON%\' AND location NOT LIKE \'MAN%\' and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+
+{ Columns => {} }); 
+
+#  foreach (@$bal_events) {
+#  if( Date_Cmp(ParseDate('+3 weeks'),ParseDate($_->{start_date_formatted})) > 0){
+#   $_->{fullprice} = '*';
+#  }
+# }
+
+
+
+
+my $pro_events = $dbh->selectall_arrayref(
+
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id=\'6\' or course_type_id=\'142\') and event_calendar.location NOT LIKE \'%HOLD\' AND location NOT LIKE \'LON%\' AND location NOT LIKE \'MAN%\' and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+
+{ Columns => {} }); 
+
+# foreach (@$pro_events) {
+#  if( Date_Cmp(ParseDate('+3 weeks'),ParseDate($_->{start_date_formatted})) > 0){
+#   $_->{fullprice} = '*';
+#  }
+# }
+
+
+
+
+my $itb_events = $dbh->selectall_arrayref(
+
+'SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id=\'7\' or course_type_id=\'143\') and event_calendar.location NOT LIKE \'%HOLD\' AND location NOT LIKE \'LON%\' AND location NOT LIKE \'MAN%\' and event NOT LIKE \'%FAST%\' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date',
+
+{ Columns => {} });
+
+# foreach (@$itb_events) {
+#  if( Date_Cmp(ParseDate('+3 weeks'),ParseDate($_->{start_date_formatted})) > 0){
+#   $_->{fullprice} = '*';
+#  }
+# }
+
+my $locations = $dbh->selectall_arrayref(
+'SELECT region,site_code,city,region_name FROM site_data,regions WHERE site_data.region=regions.region_code',
+{ Columns => {} });
+
+my %locs = map{ $_->{site_code} => "$_->{region_name} ($_->{city})"} @$locations;
+
+</%init>
+<%doc>
+1) get courses like so:
+SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE course_type_id='3' and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date
+
+2) get site_code x region to get region_name and city
+</%doc>
+
+

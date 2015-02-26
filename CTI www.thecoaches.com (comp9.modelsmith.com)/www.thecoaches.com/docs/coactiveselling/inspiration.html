@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="/res/css/mentor.css" />
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+ $('a.deletebtn').click( function() {
+   return confirm('Are you show you want to delete?');
+ });
+});
+</script>
+<style>
+
+.pri table { width:400px; }
+.pri table input#signin_username,
+.pri table input#signin_password { width:270px }
+#portraits { padding-left:30px; }
+.notify { color:#a00; border:solid 1px #ccc; background: #eee; padding:10px; font-size:1.1em;}
+
+table.events { width: 575px; }
+table.events th { text-align:left; font-size:1.1em; }
+
+
+table.events tr:nth-child(even) { background-color: #F0F5F8; border: solid 1px #AAD; }
+table.events tr:nth-child(odd) { background-color: #D9E6EE; border: solid 1px #AAD; }
+table.events tr:first-child { background-color: #EBE9DA; border: solid 1px #AAD; }
+
+.smaller { font-size:0.9em; }
+</style>
+<link rel="stylesheet" type="text/css" media="screen" href="/portal/css/main.css" />
+</head>
+<body>
+<div id="page">
+  <img id="portraits" src="/images/course-materials-portraits.png" />
+<div id="tools">
+  <!-- generalID --><!-- -->
+  <!-- eCommerceID --><!-- -->
+  <!-- courseMaterialsID --><ul id="ecommerce">
+<li><!--<a href="/" class="offsite">CTI <b>Home</b></a> &raquo;--> </li>
+
+</ul>
+<!-- -->
+</div>
+<div id="primary">
+  <!-- contactNavID --><!-- -->
+  <ul id="main-nav">
+  </ul>
+  
+<div id="broadcast">
+  <img src="/res/img/page-banners/content_coactiveselling_cti.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+  <map id="logobutton" name="logobutton">
+  <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+  </map>
+</div>
+
+
+<div id="content">
+
+<div id="main">
+  <div id="breadcrumbs">
+  </div>
+  <div class="sec">
+</div>
+  <div class="pri">
+<h1>Inspiration Page</h1>
+    
+    <p>Welcome <% $first_name %><br />&raquo; <a href="login.html?logout=1">Logout</a><br />&nbsp;</p>
+
+% if($role =~ m/leader/){
+       
+<!-- Upload form -->
+<h2>Upload File</h2>
+
+<FORM METHOD="POST" ENCTYPE="multipart/form-data" ACTION="inspiration.html">
+<p>Step 1: <INPUT TYPE="FILE" NAME="upfile"><BR>
+<br>
+ Step 2: Click on the Choose File button and choose your file from your hard drive. Then click on this <INPUT TYPE="SUBMIT" name="submit" VALUE="Upload"> button to upload it to the Leaders.<br><br>
+ Step 3: Please wait while the file is uploaded - it make take several minutes<br>
+</form>
+
+% }
+
+    
+    
+    <p>&nbsp;</p>
+
+    <p>Click a filename to download it.</p>
+
+    <p>&nbsp;</p>
+
+   
+    
+% foreach my $file (@files){
+
+    <p style="font-size:1.2em;">&raquo; <a target="_blank" href="documents/inspiration/<% $file->{filename} %>"><% $file->{filename} %></a>
+
+% if($role =~ m/leader/){
+&nbsp;&nbsp;&nbsp;<a class="deletebtn smaller" href="inspiration.html?action=delete&file_id=<% $file->{filename} %>">[delete this file]</a>
+% }
+    
+    </p>
+
+% }
+    
+
+  </div>
+
+</div>
+
+</p>
+
+
+<!-- ctaAreaId -->
+
+<div id="cta-area">
+
+</div>
+
+<!-- -->
+
+</div>
+
+
+<!-- used for cross-browser stabilizion of layout -->
+<div class="pageclear"></div>
+</div>
+<div id="footer">
+  <img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/>
+<div id="footer-content">
+  <!-- footerNavId --><div id="footer-nav">
+<div id="footer-legal">Copyright &#169; 2011 The Coaches Training Institute. All rights reserved. <a id="privacy-link" href="http://www.thecoaches.com/legal/privacy.html">Privacy Policy</a><span class="divider">&#160;|&#160;</span><a href="http://www.thecoaches.com/legal/disclosure.html">Disclosure</a></div>
+<ul id="quick-nav">
+</ul>
+</div>
+<!-- -->
+  <img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<%once>
+use DBI;
+use JSON;
+use Data::Dumper;
+use Date::Manip;
+</%once>
+<%init>
+my $username = $m->scomp('authen.mas');
+my $args     = $m->request_args();
+# Example: my ($addx)   = @{$args}{'add.x'};
+
+my ($file,$submit)   = @{$args}{'upfile','submit'};
+my $upload_path = '/www/www.thecoaches.com/docs/coactiveselling/documents/inspiration';
+my $result;
+my $data;
+
+my ($file_id,$action) = @{$args}{'file_id','action'};
+
+
+my ($id,$first_name,$last_name,$role) = $dbh->selectrow_array('SELECT id,first_name,last_name,role FROM selling_contact WHERE email=?',undef,$username);
+
+
+# leader
+if($role =~ m/leader/ and $file ne '' and $submit eq 'Upload'){
+  # uploads?
+  # process upload
+  my $q = $m->cgi_object() ;
+  my $h = $q->uploadInfo($file);
+  my $realFile = "$upload_path/$file";
+  
+  open (OUTFILE, ">$realFile");
+  binmode OUTFILE ;
+  my $buffer ;
+  while (my $bytesread=read($file,$buffer,1024)) {
+    print OUTFILE $buffer;
+  }
+  close OUTFILE;
+
+}
+
+if($role =~ m/leader/ and $action eq 'delete' and $file_id ne ''){
+ unlink "/www/www.thecoaches.com/docs/coactiveselling/documents/inspiration/$file_id";
+}
+
+
+
+my @files;
+while(</www/www.thecoaches.com/docs/coactiveselling/documents/inspiration/*>){
+
+    m|([^/]+)$|;
+    my $file = $1;
+    push(@files, { filename => $file } );
+
+}
+
+</%init>

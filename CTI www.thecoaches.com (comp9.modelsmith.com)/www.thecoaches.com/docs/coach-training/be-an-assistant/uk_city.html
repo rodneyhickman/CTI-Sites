@@ -1,0 +1,18 @@
+html_text_js = '<% $html %>';
+document.write(html_text_js);
+<%init>
+
+my $html = qq{
+<select name="City" onchange="showCoursesFor(this.options[this.selectedIndex].value);">
+<option value="none">Please select a city...</option>
+<option value="London">London</option>
+<option value="Manchester">Manchester</option>
+</select>
+};
+$html =~ s{\n}{}gxms;
+$html =~ s{\'}{\\'}gxms;
+
+</%init>
+<%flags>
+inherit => undef
+</%flags>

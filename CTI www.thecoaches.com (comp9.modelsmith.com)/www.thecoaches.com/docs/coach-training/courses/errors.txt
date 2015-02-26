@@ -1,0 +1,21 @@
+line 50 column 52 - Warning: unescaped & which should be written as &amp;
+line 50 column 81 - Warning: unescaped & which should be written as &amp;
+line 52 column 54 - Warning: unescaped & which should be written as &amp;
+line 52 column 85 - Warning: unescaped & which should be written as &amp;
+line 58 column 55 - Warning: unescaped & which should be written as &amp;
+line 58 column 88 - Warning: unescaped & which should be written as &amp;
+line 209 column 66 - Warning: unescaped & which should be written as &amp;
+line 209 column 107 - Warning: unescaped & which should be written as &amp;
+line 217 column 52 - Warning: unescaped & which should be written as &amp;
+line 217 column 82 - Warning: unescaped & which should be written as &amp;
+line 237 column 62 - Warning: unescaped & which should be written as &amp;
+line 237 column 94 - Warning: unescaped & which should be written as &amp;
+Info: Doctype given is "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Info: Document content looks like XHTML 1.0 Strict
+12 warnings, 0 errors were found!
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please fill bug reports and queries using the "tracker" on the Tidy web site.
+Additionally, questions can be sent to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium

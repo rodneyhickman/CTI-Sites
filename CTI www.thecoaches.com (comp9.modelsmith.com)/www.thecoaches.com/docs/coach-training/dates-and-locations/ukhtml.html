@@ -1,0 +1,12 @@
+<%flags>
+inherit => undef
+</%flags>
+document.write('<% $html %>');
+
+<%init>
+$r->headers_out->{'Cache-Control'} = 'no-cache';
+my $dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+my ($html) = $dbh->selectrow_array('SELECT html FROM calendar_cache WHERE id=7',undef);
+$html =~ s/\n/ \\\n/gms;
+$html =~ s/\'/\\'/gms;
+</%init>

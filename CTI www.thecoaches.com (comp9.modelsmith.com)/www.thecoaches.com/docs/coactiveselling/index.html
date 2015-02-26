@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Co-Active&reg; Sales Program</title>
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="/res/css/mentor.css" />
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+});
+</script>
+<style>
+.pri table { width:400px; }
+.pri table input#signin_username,
+.pri table input#signin_password { width:270px }
+#portraits { padding-left:30px; }
+.notify { color:#a00; border:solid 1px #ccc; background: #eee; padding:10px; font-size:1.1em;}
+#main h1 a { color: #689BBB; }
+pre {font-size:14px}
+audio {width:145px;}
+</style>
+<link rel="stylesheet" type="text/css" media="screen" href="/portal/css/main.css" />
+</head>
+<body>
+<div id="page">
+  <img id="portraits" src="/images/course-materials-portraits.png" />
+<div id="tools">
+  <!-- generalID --><!-- -->
+  <!-- eCommerceID --><!-- -->
+  <!-- courseMaterialsID --><ul id="ecommerce">
+<li><!--<a href="/" class="offsite">CTI <b>Home</b></a> &raquo;--> </li>
+
+</ul>
+<!-- -->
+</div>
+<div id="primary">
+  <!-- contactNavID --><!-- -->
+  <ul id="main-nav">
+  </ul>
+  
+<div id="broadcast">
+  <img src="/res/img/page-banners/content_coactiveselling_cti.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+  <map id="logobutton" name="logobutton">
+  <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+  </map>
+</div>
+
+
+<div id="content">
+
+<div id="main">
+<div style="float:right;width:120px;margin-right:50px;">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><a href="inspiration.html">For Instant Inspiration click here!</a></h1>
+</div>
+  
+  <div id="breadcrumbs">
+  </div>
+  <div class="sec">
+
+  </div>
+  <div class="pri">
+
+ <h1>Participant Page</h1>
+    
+    <p>Welcome <% $first_name %><br />&raquo; <a href="login.html?logout=1">Logout</a><br />&nbsp;</p>
+
+
+<!-- Audio files -->
+<div style="float:right;width:300px">
+<h2>Audio Downloads</h2>
+% my $count = 0;
+% foreach my $a (@audios){
+% $count++;
+<p>&nbsp;</p>
+<p>Audio <% $count %> – <% $a->{title} %><br />
+<!-- Runtime: <% $a->{min} %> minutes</p>  -->
+	<!-- HTML5 Audio code BEGIN -->
+ <audio controls="controls" preload="none" autobuffer="autobuffer" id="audio1"><!-- Audio tag, for HMTL5 compliant browsers -->
+  <source src="<% $a->{url} %>"    type="audio/mpeg" />
+
+  <!-- Flash player, for pre-HTML5 browsers -->
+  <object class="playerpreview" type="application/x-shockwave-flash" 
+          data="/res/swf/player_mp3_1.0.0.swf" width="145" height="20">
+    <param name="movie" value="/res/swf/player_mp3_1.0.0.swf" />
+    <param name="bgcolor" value="#085c68" />
+    <param name="FlashVars" value="mp3=<% $a->{url} %>" />
+    <embed href="/res/swf/player_mp3_1.0.0.swf" bgcolor="#085c68" width="145" 
+           height="20" name="movie" align="" 
+           type="application/x-shockwave-flash" flashvars="mp3=<% $a->{url} %>">
+    </embed>
+  </object>
+ </audio>
+
+ <div id="player_fallback"></div>
+ <script>
+  if (document.createElement('audio').canPlayType) {  /* if this is Firefox... */
+    if (!document.createElement('audio').canPlayType('audio/mpeg')) {  /* but cannot play MP3, then use Flash player */
+      swfobject.embedSWF(
+        "/res/swf/player_mp3_1.0.0.swf", 
+        "player_fallback", 
+        "145", 
+        "20", 
+        "9.0.0", 
+        "", 
+        {"mp3":"<% $a->{url} %>"}, 
+        {"bgcolor":"#085c68"});
+      $('#audio1').hide(); /* hide the audio element, assumes jQuery is loaded */
+    }
+  }
+ </script>
+ <a href="<% $a->{url} %>" target="_blank">Download MP3</a>
+<!-- HTML5 Audio code END -->
+% }
+</div>
+    
+<!-- File list -->
+<h2>Your files:</h2>
+<pre>
+% foreach my $f (@$files){
+% my ($base_url) = ($f->{directory} =~ m/(documents.*)/);
+<a href="<% $base_url %>/<% $f->{filename} %>" target="_blank"><% $f->{filename} %></a>
+
+% }
+</pre>
+
+
+    
+<!-- Upload form -->
+<h2>Upload File</h2>
+
+<FORM METHOD="POST" ENCTYPE="multipart/form-data" ACTION="upload.html">
+<p>Step 1: <INPUT TYPE="FILE" NAME="upfile"><BR>
+<br>
+ Step 2: Click on the Choose File button and choose your Webinar Action Steps or Podcall Action Steps workbook from your hard drive after you have done your homework. Then click on this <INPUT TYPE="SUBMIT" name="submit" VALUE="Upload"> button to upload it to the Leaders.<br><br>
+ Step 3: Please wait while the file is uploaded - it make take several minutes<br>
+</form>
+
+
+    
+<!-- <pre><% Dumper $data %></pre> -->
+ 
+  </div>
+
+</div>
+
+</p>
+
+
+<!-- ctaAreaId -->
+
+<div id="cta-area">
+
+</div>
+
+<!-- -->
+
+</div>
+
+
+<!-- used for cross-browser stabilizion of layout -->
+<div class="pageclear"></div>
+</div>
+<div id="footer">
+  <img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/>
+<div id="footer-content">
+  <!-- footerNavId --><div id="footer-nav">
+<div id="footer-legal">Copyright &#169; 2011 The Coaches Training Institute. All rights reserved. <a id="privacy-link" href="http://www.thecoaches.com/legal/privacy.html">Privacy Policy</a><span class="divider">&#160;|&#160;</span><a href="http://www.thecoaches.com/legal/disclosure.html">Disclosure</a></div>
+<ul id="quick-nav">
+</ul>
+</div>
+<!-- -->
+  <img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<%once>
+use DBI;
+use JSON;
+use Data::Dumper;
+use File::Copy;
+</%once>
+<%init>
+my $username = $m->scomp('authen.mas');
+my $args     = $m->request_args();
+# Example: my ($addx)   = @{$args}{'add.x'};
+my $result;
+my $data;
+my $upload_path = '/www/www.thecoaches.com/docs/coactiveselling/documents';
+
+
+
+my ($id,$first_name,$last_name,$role) = $dbh->selectrow_array('SELECT id,first_name,last_name FROM selling_contact WHERE email=?',undef,$username);
+
+if($id < 1){ # if not in database, get data from FileMaker
+    my $url = "http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/portal_account.php?postkey=fjgh15t&em=$username";
+    $result = `/usr/bin/curl '$url'`;
+    $data = decode_json($result);
+    $first_name = $data->{first_name};
+    my $key = random_key();
+    if($id < 1){
+      $dbh->do('INSERT INTO selling_contact (first_name,last_name,email,role,hash,created_at,modified_at) values (?,?,?,?,?,now(),now())',undef,$data->{first_name},$data->{last_name},$username,'client',$key,);
+    }
+}
+
+# if not leader, redirect
+if($role != '' && $role !~ m/client/){
+  $m->redirect('leader.html');
+}
+
+my $files = get_my_files($id,$upload_path,$dbh);
+
+my @audios = (
+ { title=>'Enrollment Demo Co-Active Sales Program', url=>'http://skibbins.audioacrobat.com/download/Enrollment_Demo_Co-Active_Sales_Program.mp3', min=>'???' },
+ { title=>'Sparkling Sample Sessions', url=>'http://skibbins.audioacrobat.com/download/4e6e3092-e7d9-20f6-2e5f-5aac6354c118.mp3', min=>'???' },
+ { title=>'Know what NO means', url=>'http://skibbins.audioacrobat.com/download/6482ab79-0488-ca5e-46b7-45dd26530478.mp3', min=>'???' },
+);
+
+
+
+
+sub random_key {
+    my $text = "bcdfghjkmnpqrstvwxyzABCDEFGHJKLMNPRSTUVWXYZ23456789";
+    my $length = int(rand() * 2) + 14;
+    my $x = 0;
+    my $key = "";
+    while ($x<$length) {
+      my $ranNo = int(rand() * length($text));
+      my $a = substr($text, $ranNo, 1);
+      $key .= $a; $x++;
+    }
+  return $key;
+}
+
+
+sub get_my_files{
+  my ($id,$upload_path,$dbh) = @_;
+  my $data;
+
+  my ($hash) = $dbh->selectrow_array('SELECT hash FROM selling_contact WHERE id=?',undef,$id);
+
+  # if directory does not exist, create it and copy files into it
+  if( ! -d "$upload_path/$hash" ){
+    mkdir "$upload_path/$hash","0777";
+    `chmod 777 "$upload_path/$hash"`;
+    my $pod_call = "Pod-Call-Action-Steps.docx";
+    my $webinar = "Webinar-Action-Steps.docx";
+    copy("$upload_path/$pod_call", "$upload_path/$hash");
+    $dbh->do('INSERT INTO selling_file (selling_contact_id,filename,directory,created_at,modified_at) values (?,?,?,now(),now())',undef,$id,$pod_call,"$upload_path/$hash");
+    copy("$upload_path/$webinar", "$upload_path/$hash");
+    $dbh->do('INSERT INTO selling_file (selling_contact_id,filename,directory,created_at,modified_at) values (?,?,?,now(),now())',undef,$id,$webinar,"$upload_path/$hash");
+  }
+
+  # get files and urls
+
+  my ($files) = $dbh->selectall_arrayref('SELECT filename,directory FROM selling_file WHERE selling_contact_id=?',{Columns=>{}},$id);
+  return $files; # array of files
+}
+
+
+</%init>

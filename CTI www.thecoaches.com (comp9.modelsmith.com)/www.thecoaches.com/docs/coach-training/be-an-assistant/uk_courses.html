@@ -1,0 +1,145 @@
+html_text_js = '<% $html %>';
+document.write(html_text_js);
+<%init>
+$r->headers_out->set('Cache-Control' => 'no-cache');
+# this is the long way to get just the cities, but this insures
+# that you only see cities where there are actual courses
+my $sql = <<'END_OF_SQL' ;
+SELECT fmid,event,event_calendar.region,location,start_date_formatted,end_date_formatted 
+FROM event_calendar,site_data WHERE 
+( course_type_id='3' OR
+  course_type_id='4' OR
+  course_type_id='5' OR
+  course_type_id='6' OR
+  course_type_id='7') AND
+event_calendar.location=site_data.site_code AND
+event_calendar.region='GB' AND
+event_calendar.location NOT LIKE '%HOLD' AND
+(TO_DAYS(start_date)-TO_DAYS(NOW()))>0 AND
+(TO_DAYS(start_date)-TO_DAYS(NOW()))<91
+ORDER BY start_date
+END_OF_SQL
+
+my $dbh = DBI->connect("DBI:mysql:CTIDATABASE",'cticoaches','');
+my $events = $dbh->selectall_arrayref($sql,{ Columns => {} }); 
+ 
+my %cities = (
+  'lon' => 'London',
+  'rea' => 'Reading',
+  'man' => 'Manchester',
+);
+
+
+foreach my $event (@$events) {
+my ($city_code) = ( $event->{location} =~ m/\A(...)/xms );
+$event->{city_code} = lc $city_code;
+} 
+
+
+my $html = qq{
+<strong>City:</strong>
+<select name="City" onchange="showCoursesFor(this.options[this.selectedIndex].value);">
+<option value="none">Please select a city...</option>
+};
+
+foreach my $city (sort values %cities){
+
+$html .= qq{
+<option value="$city">$city</option>
+};
+
+}
+
+$html .= qq{
+</select>
+</p>
+};
+
+foreach my $city (sort keys %cities){
+
+$html .= qq{
+<div id="$cities{$city}" style="display:none;">
+<p>
+Select 3 courses in your area beginning 4-6 weeks from now.
+You will be scheduled into the first course that has openings for assistants.
+<p>
+<b>First Choice - $cities{$city}</b>
+<p>
+<select name="1st_Choice_$cities{$city}">
+<option value="">Please select a course...</option>
+<option value="-----------------------">-----------------------</option>
+};
+
+
+foreach my $event (@$events){
+next unless $city eq $event->{city_code};
+
+$html .= qq{
+<option value="$event->{event} - $event->{start_date_formatted}">
+$event->{event} - $event->{start_date_formatted}
+</option>
+};
+
+}
+
+$html .= qq{
+</select>
+</p>
+<p>
+<p>
+<b>Second Choice - $cities{$city}</b>
+<p>
+<select name="2nd_Choice_$cities{$city}">
+<option value="">Please select a course...</option>
+<option value="-----------------------">-----------------------</option>
+};
+
+foreach my $event (@$events){
+next unless $city eq $event->{city_code};
+
+$html .= qq{
+<option value="$event->{event} - $event->{start_date_formatted}">
+$event->{event} - $event->{start_date_formatted}
+</option>
+};
+
+}
+
+$html .= qq{
+</select>
+</p>
+<p>
+<p>
+  <b>Third Choice - $cities{$city}</b>
+<p>
+<select name="3rd_Choice_$cities{$city}">
+<option value="">Please select a course...</option>
+<option value="-----------------------">-----------------------</option>
+};
+
+foreach my $event (@$events){
+next unless $city eq $event->{city_code};
+
+
+$html .= qq{
+<option value="$event->{event} - $event->{start_date_formatted}">
+$event->{event} - $event->{start_date_formatted}
+</option>
+};
+
+}
+
+$html .= qq{
+</select>
+</p>
+</div>
+};
+
+}
+
+$html =~ s{\n}{}gxms;
+$html =~ s{\'}{\\'}gxms;
+</%init>
+<%flags>
+inherit => undef
+</%flags>

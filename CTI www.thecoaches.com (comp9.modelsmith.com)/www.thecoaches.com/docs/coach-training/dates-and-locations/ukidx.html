@@ -1,0 +1,8 @@
+<%flags>
+inherit => undef
+</%flags>
+document.write('<% $idx %>');
+<%init>
+my ($idx) = $dbh->selectrow_array('SELECT idx FROM calendar_cache WHERE id=7',undef);
+$idx =~ s/\n/ \\\n/gms;
+</%init>

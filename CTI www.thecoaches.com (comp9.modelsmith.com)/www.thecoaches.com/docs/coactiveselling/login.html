@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Co-active Selling Login Page</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="language" content="en" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="The Coaches Training Institute (CTI)" />
+<meta name="copyright" content="Copyright &#169; 2009 The Coaches Training Institute. All rights reserved." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="/res/css/mentor.css" />
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+});
+</script>
+<style>
+.pri table { width:400px; }
+.pri table input#signin_username,
+.pri table input#signin_password { width:270px }
+</style>
+</head>
+<body>
+<div id="page">
+  <img id="portraits" src="/images/course-materials-portraits.png" />
+<div id="tools">
+  <!-- generalID --><!-- -->
+  <!-- eCommerceID --><!-- -->
+  <!-- courseMaterialsID --><& '/res/inc/id_course_materials.html' &><!-- -->
+</div>
+<div id="primary">
+  <!-- contactNavID --><!-- -->
+  <ul id="main-nav">
+  </ul>
+  
+<div id="broadcast">
+  <img src="/res/img/page-banners/content_coactiveselling_cti.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+  <map id="logobutton" name="logobutton">
+  <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+  </map>
+</div>
+
+
+
+
+<div id="content">
+
+<div id="main">
+  <div id="breadcrumbs">
+  </div>
+  <div class="sec">
+</div>
+  <div class="pri">
+
+
+
+
+<h1 id="main-headline">Please Sign-in</h1>
+
+
+
+
+
+
+
+
+% if($fm_available){
+% if($session_ok){
+ <p>You are logged is as <% $username %></p>
+% } else {
+
+% if($msg){
+ <p style="background-color:#ddd;color:#d00;padding:3px;"><% $msg %></p>
+% }
+ <form action="login.html" method="POST">
+  <input type="hidden" name="redirect" value="<% $redirect %>" />
+     <table>
+    <tr>
+  <th><label for="signin_username">Email address</label></th>
+  <td><input type="text" name="email" id="signin_username" /></td>
+</tr>
+<tr>
+  <th><label for="signin_password">Password</label></th>
+  <td><input type="password" name="password" id="signin_password" /></td>
+</tr>
+  <tr><td></td><td>
+  <input type="submit" value="Sign In" />
+  </td></tr>
+  <tr><td></td><td>
+   <a href="reset-password-request.html?r=<% $redirect %>">I'm not able to sign into my account</a> 
+  </td></tr>
+  </table>
+
+</form>
+% }
+ 
+% } else {
+ <p style="background-color:#ddd;color:#d00;padding:3px;">Our system is down for maintenance. Please try again later. Thank you.</p>
+% }    
+
+  </div>
+
+</div>
+
+
+
+  </p>
+
+
+
+
+
+
+
+<!-- ctaAreaId -->
+
+<div id="cta-area">
+
+</div>
+
+<!-- -->
+
+</div>
+
+
+
+
+
+<!-- used for cross-browser stabilizion of layout -->
+<div class="pageclear"></div>
+</div>
+<div id="footer">
+  <img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/>
+<div id="footer-content">
+  <!-- footerNavId --><& '/res/inc/id_footer-nav-course-matls.html' &><!-- -->
+  <img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<%flags>
+inherit => undef
+</%flags>
+<%once>
+ use CTI::Secret;
+ use Digest::SHA1;
+ use URI::Escape;
+ use Data::Dumper;
+</%once>
+<%init>
+$r->headers_out->{'Cache-Control'} = 'no-cache'; # required to prevent caching
+my $args       = $m->request_args();
+
+my ($email)    = @{$args}{'email'};
+$email =~ s/[^A-Za-z0-9\&\@\_\-\.]//gms; #untaint email address
+my ($password) = @{$args}{'password'};
+$password = substr($password, 0, 32); #limit to 32 characters
+my ($redirect) = @{$args}{'redirect'} || 'index.html';
+my ($logout)   = @{$args}{'logout'}   || 0;
+
+my $err    = '';
+my $url    = '';
+my $result = '';
+my $msg    = '';
+
+my %c = Apache2::Cookie->fetch;
+my ($username,$MAC);
+my %values;
+if(exists $c{selling_session}){
+  %values   = $c{selling_session}->value;
+  $username = lc $values{username}; # lower case so that it matches database
+  $MAC      = $values{MAC};
+}
+
+
+my $session_ok = $MAC eq Digest::SHA1::sha1_hex( $username, Secret::value() );
+if ($email && $password) {
+  # check password
+
+
+
+  my $em = uri_escape( $email,    '^A-Za-z0-9@.-_' );
+    my $pw = uri_escape( $password, '^A-Za-z0-9@.-_' );
+    $url = "http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/authenticate.php?postkey=fjgh15t&em=$em&pw=$pw";
+    $result = `/usr/bin/curl '$url'`;
+
+
+  if($result eq 'ok'){
+    # make login cookie
+    Apache2::Cookie->new
+      ( $r,
+        -name  => 'selling_session',
+        -value => { username => lc $email,
+                    MAC =>
+                      Digest::SHA1::sha1_hex
+                          ( lc $email, Secret::value() ) },
+        -path  => '/',
+        -domain => '.thecoaches.com',
+        -expires => '+12h',
+      )->bake($r);
+    $username = $email;
+    $session_ok = 1;
+  } else {
+    $session_ok = 0;  
+    $msg = "Incorrect email address or password. Please try again";
+  }
+}
+if ($logout){
+    # make login cookie
+    Apache2::Cookie->new
+      ( $r,
+        -name  => 'selling_session',
+        -value => { username => 'none',
+                    MAC =>
+                      Digest::SHA1::sha1_hex
+                          ( 'none', Secret::value() ) },
+        -path  => '/',
+        -domain => '.thecoaches.com',
+        -expires => '-1d',
+      )->bake($r);
+    $session_ok = 0;  
+    $m->redirect('login.html');
+}
+if ($session_ok) {
+  $m->redirect($redirect);
+}
+
+my $fm_url       = 'http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/abletogetrecord.php?postkey=fjgh15t&em=ping@me.com';
+my $fm_result    = `/usr/bin/curl '$fm_url'`;
+my $fm_available = $fm_result =~ m/ok/ ? 1 : 0;
+
+</%init>

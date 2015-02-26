@@ -1,0 +1,16 @@
+<%flags>
+inherit => undef
+</%flags>
+<%once>
+ use Data::Dumper;
+</%once>
+<%init>
+my ($rows) = $dbh->selectall_arrayref('SELECT start_date_formatted,call_time FROM event_calendar WHERE course_type_id=9',{Columns=>{}});
+
+my $js = "[\n";
+foreach my $row (@$rows){
+  $js .= qq{ "$row->{start_date_formatted} - $row->{call_time}" \n}; 
+}
+$js .= "]\n";
+</%init>
+<% $js %>
