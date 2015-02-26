@@ -1,0 +1,84 @@
+<!--
+You are free to copy and use this sample in accordance with the terms of the
+Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta property="fb:app_id" content="492914277433201"/>
+  <title>Google Visualization API Sample</title>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {packages: ['annotatedtimeline']});
+    function drawVisualization() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Date');
+      data.addColumn('number', 'Sold Pencils');
+      data.addColumn('string', 'title1');
+      data.addColumn('string', 'text1');
+      data.addColumn('number', 'Sold Pens');
+      data.addColumn('string', 'title2');
+      data.addColumn('string', 'text2');
+      data.addRows([
+        [new Date(2008, 1 ,1), 30000, null, null, 40645, null, null],
+        [new Date(2008, 1 ,2), 14045, null, null, 20374, null, null],
+        [new Date(2008, 1 ,3), 55022, null, null, 50766, null, null],
+        [new Date(2008, 1 ,4), 75284, null, null, 14334, 'Out of Stock', 'Ran out of stock on pens at 4pm'],
+        [new Date(2008, 1 ,5), 41476, 'Bought Pens', 'Bought 200k pens', 66467, null, null],
+        [new Date(2008, 1 ,6), 33322, null, null, 39463, null, null]
+      ]);
+    
+      var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
+          document.getElementById('visualization'));
+      annotatedtimeline.draw(data, {'displayAnnotations': true});
+    }
+    
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+</head>
+<body style="font-family: Arial;border: 0 none;">
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '492914277433201', // App ID from the App Dashboard
+      channelUrl : '//WWW.THECOACHES.COM/channel.html', // Channel File for x-domain communication
+      status     : true, // check the login status upon init?
+      cookie     : true, // set sessions cookies to allow your server to access the session?
+      xfbml      : true  // parse XFBML tags on this page?
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+
+  };
+
+  // Load the SDK's source Asynchronously
+  // Note that the debug version is being actively developed and might 
+  // contain some type checks that are overly strict. 
+  // Please report such bugs using the bugs tool.
+  (function(d, debug){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document, /*debug*/ false));
+</script>
+<div id="visualization" style="width: 800px; height: 400px;"></div>
+
+<div id="comments">
+<div style="float: left; padding-left:5px; min-height:500px" class="fb-comments" data-href="http://www.thecoaches.com/resources/multimedia/House-Of-You.html" data-num-posts="20" data-width="380"></div>
+</div>
+<script>
+function changeCommentsUrl(newUrl){
+// should refresh fb comments plugin for the "newUrl" variable
+document.getElementById('comments').innerHTML='<div style="float: left; padding-left:5px; min-height:500px" class="fb-comments" data-href="'+link+'" data-num-posts="20" data-width="380"></div>'; 
+FB.XFBML.parse(document.getElementById('comments'));
+}
+</script>
+</body>
+</html>
+​
