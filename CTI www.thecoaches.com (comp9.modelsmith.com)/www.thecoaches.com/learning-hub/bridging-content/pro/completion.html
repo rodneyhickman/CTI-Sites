@@ -1,0 +1,248 @@
+<?php
+	ini_set("include_path",".:../docs/res/inc/:../../docs/res/inc/:../../../docs/res/inc/:../../../../docs/res/inc/"); ?>
+<?php include 'learning-hub-login-check.php'; ?>
+
+<?php
+//	session_start(); is in the include above
+	$request_ok = 0;              // global var
+	$email = '';                  // global var
+	$name = '';                   // global var
+	$specials = array(
+			'coactive'          => 1,
+			'ctiuae'            => 'johan@pf-hi.com',
+			'ctiisrael'         => 'eiloty1@bezeqint.net',
+			'ctinordic'         => 'ulf@ctinorway.no',
+			'schoutenchina'     => 1,
+			'schouten&nelissen' => 1,
+			'elementalv'        => 1,
+			'schoutengermany'   => 'info@schoutengermany.de',
+			'test2'             => 'ping@me.com'
+		);                        // global var
+	$username =  $_SESSION['username'];
+	$specials_em = $specials[$username];     // global var
+
+	// If the form was submitted, validate and process it, else just show it.
+	// When the form is entered, '_submit_check' returns true and the form was submitted.
+	if (array_key_exists('_submit_check',$_POST)) {
+		// If validate_form() returns errors, pass them to show_form()
+		$form_errors = validate_form();
+		if (!empty($form_errors)) {
+			 // The submitted data is not valid, display with errors
+			 show_form($form_errors);
+		} else {
+			 // The submitted data is valid, so process it
+			 process_form();
+		}
+	} else {
+		// The form wasn't submitted, so display
+		show_form();
+	}
+	exit;
+
+	function validate_form( ) {
+		$val_error_msg = '';
+		if (preg_match('/@/',$GLOBALS['specials_em']) == 1) {
+			//  form is shown, validate it
+			if ($_POST['completion']  != 1) {
+				$val_error_msg = 'Nothing was entered - please try again.';
+			} else {
+				$GLOBALS['name'] = strtolower($_POST['name']);
+				$b4email = strtolower($_POST['email']);
+				$GLOBALS['email'] = preg_replace('/[^A-Za-z0-9&@_\.-]/s','',$b4email);   //untaint email address
+					// form fields are required, so check them
+					if ($GLOBALS['email'] == '' | $GLOBALS['name'] == '') {
+							$val_error_msg =  'Both name and email address must be entered, please try again.';
+					} else {
+							// flag 'OK' for procces routine
+							$GLOBALS["request_ok"] = 1;
+					}
+				}
+		} else {
+				// form not shown, flag 'OK' for procces routine
+				$GLOBALS["request_ok"] = 1;
+		}
+		return $val_error_msg;    // return either NULL or error message
+	}
+	
+	function process_form( ) {
+
+		if ($GLOBALS['request_ok'] == 1) {
+			//  save terms and conditions in filemaker
+			if (array_key_exists($GLOBALS['username'],$GLOBALS['specials'])) {
+				if (preg_match('/@/',$GLOBALS['specials_em']) == 1) {
+					//  have valid email in specials, so send completion email
+					$to = $GLOBALS['specials_em'];   
+					$subject  = "Subject: Bridging Content Completion";
+					$headers  = "From: webserver@thecoaches.com\r\n";
+					$headers .= "MIME-Version: 1.0\r\n";
+					$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+					//$headers .= "Cc: " . "\r\n";
+					//$headers .= "Bcc: " . "\r\n";
+					$body = '<p>'.$GLOBALS['name'].' ('.$GLOBALS['email'].') has completed the bridging content.</p>';
+					$sent = mail($to, $subject, $body, $headers);
+					if(!$sent){
+						// message was not sent
+						die("Should never get to: www.thecoaches.com/learning-hub/bridging-content ... process_form completion notify email not sent.");
+					}
+				}
+			} else {
+				//  2 filemaker calls
+				$result = file_get_contents("http://crm.thecoaches.com/fmi-test/webcomp2_newFM/set_bridging_content.php?postkey=fjgh15t&em={$GLOBALS['username']}&n=1");
+				$result = file_get_contents("http://crm.thecoaches.com/fmi-test/webcomp2_newFM/new_commlog.php?postkey=fjgh15t&em={$GLOBALS['username']}&m=Indicated%20finishing%20Bridging%20Content&r=Bridging%20Content%20web%20page");
+			}
+			// redirect to comp-thankyou.html
+			header('Location: comp-thankyou.html');
+		}
+		return;
+	}
+?>
+
+<?php function show_form($sf_error_msg='') { ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>CTI: Bridge Training: Process</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="language" content="en" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="The Coaches Training Institute (CTI)" />
+<meta name="copyright" content="Copyright &#169; 2014 The Coaches Training Institute. All rights reserved." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="http://www.thecoaches.com/assets/css/footer.css" /> 
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+});
+</script>
+</head>
+<body>
+<div id="page">
+ 
+<div id="tools">
+  <!-- generalID --><!-- -->
+  <!-- eCommerceID --><!-- -->
+  <!-- courseMaterialsID --><?php include 'id_course_materials.php'; ?><!-- -->
+</div>
+<div id="primary">
+  <!-- contactNavID --><!-- -->
+  <ul id="main-nav">
+  </ul>
+  
+<div id="broadcast">
+  <img src="/res/img/page-banners/content_course_BC.gif
+" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+  <map id="logobutton" name="logobutton">
+  <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+  </map>
+</div>
+
+
+
+
+<div id="content">
+
+<div id="main">
+  <div id="breadcrumbs">
+  </div>
+  <div class="sec">
+
+         <p class="bluecaps"><strong>PROCESS</strong></p>
+
+  <ul class="bulleted-arrowed">
+    <li><a href="pro-coaching.html"><strong class="psuedo-head">The Goal of Process Coaching</strong></a></li>
+  </ul>
+
+   <ul class="bulleted-arrowed">
+    <li><a href="completion.html"><strong class="psuedo-head">Completion</strong></a></li>
+  </ul> 
+         <p><br /> </p>
+         <p class="bluecaps"><strong>PREVIOUS</strong></p>
+          <ul class="bulleted-arrowed">
+            <li><a href="fun-co-active-model.html"><strong class="psuedo-head">Fundamentals</strong></a></li>
+          </ul>
+          <ul class="bulleted-arrowed">
+            <li><a href="ful-life.html"><strong class="psuedo-head">Fulfillment</strong></a></li>
+          </ul>
+          <ul class="bulleted-arrowed">
+            <li><a href="bal-formula.html"><strong class="psuedo-head">Balance</strong></a></li>
+          </ul>
+
+  </div>
+  <div class="pri">
+
+    <h1>PROCESS BRIDGING CONTENT COMPLETION</h1>
+
+    <p>In this course we explored the changes to the:
+
+    <ul>
+
+	&raquo; <strong>The Energy Pattern</strong><br />
+	  &raquo; <strong>Language Changes</strong><br />
+	</ul>
+    If you would like more information on these changes, please feel free to contact us to discuss the course and our upcoming schedules. Also, you will find more information on all Process Course  related topics, tools and resources on the <a href="/learning-hub/intermediate/process/resources.html" target="_blank">Learning Hub</a>.</p>
+<p>When you have completed reviewing this content please click the <strong>I am complete</strong> box. This will let us know you have completed the prerequisite for the course.</p>
+
+	<br /><br />
+
+	<p>
+         <form action="completion.html" id="completion_form" name="completion_form" method="post">
+    <input type="hidden" name="completion" value="1" />						<input type="hidden" name="_submit_check" value="1"/> 
+<?php if (preg_match('/@/',$GLOBALS['specials_em']) == 1) { ?>
+						*Name: <input type="text" name="name" value="" style="width:300px;" /><br /><br />
+						*Email: <input type="text" name="email" value="" style="width:300px;" /><br /><br />
+<?php } ?>
+    <input type="submit" name="complete_button" value="I am complete" />    </form>
+					<?php if ($sf_error_msg != '') {
+							echo '<p style="background-color:#ddd;color:#d00;padding:3px;">';
+							echo $sf_error_msg;
+							echo '</p>';
+						} ?>
+        
+
+    &nbsp;&nbsp;</p>
+
+	<br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    
+  </div>
+</div>
+
+  </p>
+
+
+
+<!-- ctaAreaId -->
+<div id="cta-area">
+</div>
+<!-- -->
+</div>
+
+
+<!-- used for cross-browser stabilizion of layout -->
+<div class="pageclear"></div>
+</div>
+<div id="footer">
+		<?php include 'id_footer-nav-learning-hub.php'; ?>
+</div>  <!-- end footer -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<?php return; } ?>

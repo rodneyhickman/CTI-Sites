@@ -1,0 +1,221 @@
+<?php
+require 'authen.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad - CUESTIONARIO_DIETÉTICO</title>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/main.css" />
+<script src="/docs/leadership/launchpad/js/smooth/mootools.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/nav.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/launch.css" />
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<script type="text/javascript" src="/docs/leadership/launchpad/js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ });
+</script>
+<style>
+textarea {width:100%;min-height:100px;}
+</style>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="http://www.thecoaches.com/"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="/docs/leadership/launchpad/images/int_header_launchpad-es.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+
+           
+
+
+           <h1 style="margin-top:20px">CUESTIONARIO DIETÉTICO</h1>
+           
+           
+		   <div id="checkbox">
+
+
+<?php
+   
+
+   
+
+ 
+   
+
+   if(isset($_POST['submit-btn'])){
+
+     // Get form values
+
+     $nombre                                            = $POST['nombre'];
+     $apellidos                                         = $POST['apellidos'];
+     $puedes_comer_carne_de_vacuno                      = $POST['puedes-comer-carne-de-vacuno'];
+     $puedes_comer_carne_de_cordero                     = $POST['puedes-comer-carne-de-cordero'];
+     $puedes_comer_carne_de_cerdo                       = $POST['puedes-comer-carne-de-cerdo'];
+     $puedes_comer_carne_de_ave                         = $POST['puedes-comer-carne-de-ave'];
+     $puedes_comer_marisco                              = $POST['puedes-comer-marisco'];
+     $eres_vegetarianoincluye_huevos_y_productos_lcteos = $POST['eres-vegetarianoincluye-huevos-y-productos-lcteos'];
+     $eres_vegano                                       = $POST['eres-vegano'];
+     $tienes_otras_restricciones_dietticas_importantes  = $POST['tienes-otras-restricciones-dietticas-importantes'];
+     $describe_las_restricciones_dietticas              = $POST['describe-las-restricciones-dietticas'];
+
+
+     // Create body of file
+     
+     $body .= "¿Nombre?: ".$nombre."\n";
+     $body .= "¿Apellidos?: ".$apellidos."\n";
+     $body .= "¿Puedes comer carne de vacuno?: ".$puedes_comer_carne_de_vacuno."\n";
+     $body .= "¿Puedes comer carne de cordero?: ".$puedes_comer_carne_de_cordero."\n";
+     $body .= "¿Puedes comer carne de cerdo?: ".$puedes_comer_carne_de_cerdo."\n";
+     $body .= "¿Puedes comer carne de ave?: ".$puedes_comer_carne_de_ave."\n";
+     $body .= "¿Puedes comer marisco?: ".$puedes_comer_marisco."\n";
+     $body .= "¿Eres vegetariano(incluye huevos y productos lácteos)?: ".$eres_vegetarianoincluye_huevos_y_productos_lcteos."\n";
+     $body .= "¿Eres vegano?.: ".$eres_vegano."\n";
+     $body .= "¿Tienes otras restricciones dietéticas importantes?.: ".$tienes_otras_restricciones_dietticas_importantes."\n";
+     $body .= "Describe las restricciones dietéticas: ".$describe_las_restricciones_dietticas."\n";
+
+     
+     // Get ID for this user
+
+     $dbhandle = mysql_connect($hostname, $dbuser, $password); 
+     $selected = mysql_select_db("CTIDATABASE",$dbhandle);
+
+     $result = mysql_query("SELECT id FROM launchpad_user WHERE username='".mysql_escape_string($username)."'");
+     $row = mysql_fetch_array($result);
+     $id = @$row['id'];
+     if($id < 1) {
+       mysql_query("INSERT INTO launchpad_user (username,created_at) VALUES ('".mysql_escape_string($username)."',NOW())");
+       $id = mysql_insert_id();
+     }
+
+     $_POST['id'] = $id;
+
+     $json = json_encode($_POST)."\n";
+     $filename = "/www/www.thecoaches.com/lib/launchpad_data/diet_form_for_$id.json";
+
+     // save document for this user, using ID from database
+     file_put_contents($filename, $json);
+
+     mysql_query("UPDATE launchpad_user SET diet_file_name='$filename' WHERE id=$id");
+
+?>
+
+<p>Gracias. <a href="home.html">Volver a la página de inicio</a></p>
+
+<?php
+   } else {
+?>
+
+<form class="pure-form pure-form-stacked" method="POST">
+<input type="hidden" name="submit-btn" value="1" />
+<fieldset>
+<label for="nombre">¿Nombre?</label>
+<input name="nombre" id="nombre" type="text" value="" />
+
+<label for="apellidos">¿Apellidos?</label>
+<input name="apellidos" id="apellidos" type="text" value="" />
+
+  <label for="puedes-comer-carne-de-vacuno">¿Puedes comer carne de vacuno?</label>
+   <input name="puedes-comer-carne-de-vacuno" id="puedes-comer-carne-de-vacuno" type="text" value="" />
+  
+   <label for="puedes-comer-carne-de-cordero">¿Puedes comer carne de cordero?</label>
+    <input name="puedes-comer-carne-de-cordero" id="puedes-comer-carne-de-cordero" type="text" value="" />
+
+ <label for="puedes-comer-carne-de-cerdo">¿Puedes comer carne de cerdo?</label>
+    <input name="puedes-comer-carne-de-cerdo" id="puedes-comer-carne-de-cerdo" type="text" value="" />
+  
+
+  <label for="puedes-comer-carne-de-ave">¿Puedes comer carne de ave?</label>
+    <input name="puedes-comer-carne-de-ave" id="puedes-comer-carne-de-ave" type="text" value="" />
+  
+
+ <label for="puedes-comer-marisco">¿Puedes comer marisco?</label>
+    <input name="puedes-comer-marisco" id="puedes-comer-marisco" type="text" value="" />
+
+  
+    <label for="eres-vegetarianoincluye-huevos-y-productos-lcteos">¿Eres vegetariano(incluye huevos y productos lácteos)?</label>
+    <input name="eres-vegetarianoincluye-huevos-y-productos-lcteos" id="eres-vegetarianoincluye-huevos-y-productos-lcteos" type="text" value="" />
+  
+
+  
+    <label for="eres-vegano">¿Eres vegano?.</label>
+    <input name="eres-vegano" id="eres-vegano" type="text" value="" />
+  
+
+  
+    <label for="tienes-otras-restricciones-dietticas-importantes">¿Tienes otras restricciones dietéticas importantes?.</label>
+    <input name="tienes-otras-restricciones-dietticas-importantes" id="tienes-otras-restricciones-dietticas-importantes" type="text" value="" />
+  
+
+  
+    <label for="describe-las-restricciones-dietticas">Describe las restricciones dietéticas</label>
+    <textarea name="describe-las-restricciones-dietticas" id="describe-las-restricciones-dietticas"></textarea><br>
+
+ <button type="submit" class="pure-button pure-button-primary">Guardar respuestas</button>
+  
+</fieldset>
+</form>
+
+<?php 
+} 
+?>
+  
+                   </div>
+            
+            
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+
+</html>
+   

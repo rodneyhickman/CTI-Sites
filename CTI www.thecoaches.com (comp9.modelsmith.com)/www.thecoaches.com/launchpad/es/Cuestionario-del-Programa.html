@@ -1,0 +1,415 @@
+<?php
+require 'authen.php';
+require '../xtea.class.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad - Cuestionario del Programa de Liderazgo</title>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/main.css" />
+<script src="/docs/leadership/launchpad/js/smooth/mootools.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/nav.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/launch.css" />
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<script type="text/javascript" src="/docs/leadership/launchpad/js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ });
+</script>
+<style>
+textarea {width:100%;min-height:100px;}
+div#checkbox{width:500px;}
+h3 {color:#a6a489; font-size:13px;}
+</style>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="http://www.thecoaches.com/"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="/docs/leadership/launchpad/images/int_header_launchpad-es.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+
+           
+
+
+           <h1 style="margin-top:20px">CTI	 LIDERAZGO: Cuestionario del Programa</h1>
+           
+
+
+          
+		   <div id="checkbox">
+
+
+<?php
+   
+
+   
+
+ 
+   
+
+   if(isset($_POST['submit-btn'])){
+
+     // Get form values
+
+    
+     $q1_nombre = $_POST['q1_nombre'];
+     $q2_correo_electrnico = $_POST['q2_correo-electrnico'];
+     $q3_edad = $_POST['q3_edad'];
+     $q4_gnero = $_POST['q4_gnero'];
+     $q5_nacionalidad = $_POST['q5_nacionalidad'];
+     $q6_estado_civil = $_POST['q6_estado-civil'];
+     $q7_profesin_actual = $_POST['q7_profesin-actual'];
+     $q8_profesiones_anterior = $_POST['q8_profesiones-anterior'];
+     $q9_cules_son_tus_objeti = $_POST['q9_cules-son-tus-objeti'];
+     $q10_cules_son_tus_fortal = $_POST['q10_cules-son-tus-fortal'];
+     $q11_qu_te_impide_consegu = $_POST['q11_qu-te-impide-consegu'];
+     $q12_cul_es_tu_relacin_co = $_POST['q12_cul-es-tu-relacin-co'];
+     $q13_cul_es_tu_relacin_co = $_POST['q13_cul-es-tu-relacin-co'];
+     $q14_cul_es_tu_relacin_co = $_POST['q14_cul-es-tu-relacin-co'];
+     $q15_cun_decidido_ests_a_ = $_POST['q15_cun-decidido-ests-a-'];
+     $q16_ests_o_has_estado_al = $_POST['q16_ests-o-has-estado-al'];
+     $q17_si_es_as_enumera_cun = $_POST['q17_si-es-as-enumera-cun'];
+     $q18_qu_impacto_ha_tenido = $_POST['q18_qu-impacto-ha-tenido'];
+     $q19_qu_cursos_de_cti_has = $_POST['q19_qu-cursos-de-cti-has'];
+     $q20_tienes_actualmente_o = $_POST['q20_tienes-actualmente-o'];
+     $q21_qu_impacto_ha_tenido = $_POST['q21_qu-impacto-ha-tenido'];
+     $q22_por_favor_describe_t = $_POST['q22_por-favor-describe-t'];
+     $q23_cmo_ha_influido_tu_r = $_POST['q23_cmo-ha-influido-tu-r'];
+     $q24_por_favor_describe_o = $_POST['q24_por-favor-describe-o'];
+     $q25_1_cul_es_tu_definici = $_POST['q25_1-cul-es-tu-definici'];
+     $q26_2_de_qu_formas_ests_ = $_POST['q26_2-de-qu-formas-ests-'];
+     $q27_3_de_todas_las_cosas = $_POST['q27_3-de-todas-las-cosas'];
+     $q28_4_considerando_tu_vi = $_POST['q28_4-considerando-tu-vi'];
+     $q29_5_si_pudieras_escoge = $_POST['q29_5-si-pudieras-escoge'];
+     $q30_6_qu_tendras_que_hac = $_POST['q30_6-qu-tendras-que-hac'];
+     $q31_7_con_qu_nmero_ests_ = $_POST['q31_7-con-qu-nmero-ests-'];
+     $q32_8_cmo_retornars_a_es = $_POST['q32_8-cmo-retornars-a-es'];
+     $q33_9_cmo_sabes_que_ests = $_POST['q33_9-cmo-sabes-que-ests'];
+     $q34_10_cuando_comiences_ = $_POST['q34_10-cuando-comiences-'];
+     $q35_11_yo_nac_en_este_mo = $_POST['q35_11-yo-nac-en-este-mo'];
+     $q36_12_qu_ms_quieres_que = $_POST['q36_12-qu-ms-quieres-que'];
+
+
+     $body .= "Nombre:: \n".$q1_nombre."\n\n";
+     $body .= "Correo electrónico:: \n".$q2_correo_electrnico."\n\n";
+     $body .= "Edad:: \n".$q3_edad."\n\n";
+     $body .= "Género:: \n".$q4_gnero."\n\n";
+     $body .= "Nacionalidad:: \n".$q5_nacionalidad."\n\n";
+     $body .= "Estado civil:: \n".$q6_estado_civil."\n\n";
+     $body .= "Profesión actual:: \n".$q7_profesin_actual."\n\n";
+     $body .= "Profesiones anteriores:: \n".$q8_profesiones_anterior."\n\n";
+     $body .= "¿Cuáles son tus objetivos personales y profesionales actuales?: \n".$q9_cules_son_tus_objeti."\n\n";
+     $body .= "¿Cuáles son tus fortalezas y cómo eres capaz de usarlas?: \n".$q10_cules_son_tus_fortal."\n\n";
+     $body .= "¿Qué te impide conseguir tus objetivos y sueños?: \n".$q11_qu_te_impide_consegu."\n\n";
+     $body .= "¿Cuál es tu relación con el fracaso?: \n".$q12_cul_es_tu_relacin_co."\n\n";
+     $body .= "¿Cuál es tu relación con la verdad?: \n".$q13_cul_es_tu_relacin_co."\n\n";
+     $body .= "¿Cuál es tu relación con la confrontación?: \n".$q14_cul_es_tu_relacin_co."\n\n";
+     $body .= "¿Cuán decidido estás a retar estas relaciones por el bien de tu desarrollo como líder?: \n".$q15_cun_decidido_ests_a_."\n\n";
+     $body .= "¿Estás o has estado alguna vez en terapia?: \n".$q16_ests_o_has_estado_al."\n\n";
+     $body .= "Si es así, enumera cuándo y por qué razón.: \n".$q17_si_es_as_enumera_cun."\n\n";
+     $body .= "¿Qué impacto ha tenido la terapia en tu desarrollo?: \n".$q18_qu_impacto_ha_tenido."\n\n";
+     $body .= "¿Qué cursos de CTI has realizado?: \n".$q19_qu_cursos_de_cti_has."\n\n";
+     $body .= "¿Tienes actualmente o has tenido un coach alguna vez?: \n".$q20_tienes_actualmente_o."\n\n";
+     $body .= "¿Qué impacto ha tenido el coaching en tu desarrollo?: \n".$q21_qu_impacto_ha_tenido."\n\n";
+     $body .= "Por favor, describe tus filiaciones religiosas o influencias espirituales.: \n".$q22_por_favor_describe_t."\n\n";
+     $body .= "¿Cómo ha influido tu ruta espiritual en tu desarrollo personal?: \n".$q23_cmo_ha_influido_tu_r."\n\n";
+     $body .= "Por favor, describe otras experiencias de crecimiento personal que hayan tenido un impacto significativo en ti y tu desarrollo personal.: \n".$q24_por_favor_describe_o."\n\n";
+     $body .= "1. ¿Cuál es tu definición de liderazgo?: \n".$q25_1_cul_es_tu_definici."\n\n";
+     $body .= "2. ¿De qué formas estás deseando que te reten, crecer y expandirte?: \n".$q26_2_de_qu_formas_ests_."\n\n";
+     $body .= "3. De todas las cosas posibles que podrías haber hecho para expandir tu liderazgo, ¿por qué escogiste este programa concreto?: \n".$q27_3_de_todas_las_cosas."\n\n";
+     $body .= "4. Considerando tu vida actual y compromisos, ¿cuán disponible estás para jugar \"a tope\" en el Programa de Liderazgo Co-Activo® en una escala del 1 al 10 (siendo 10 lo más alto)?: \n".$q28_4_considerando_tu_vi."\n\n";
+     $body .= "5. Si pudieras escoger cambiar ese número por otro, ¿qué número escogerías?: \n".$q29_5_si_pudieras_escoge."\n\n";
+     $body .= "6. ¿Qué tendrías que hacer para que eso fuese cierto?: \n".$q30_6_qu_tendras_que_hac."\n\n";
+     $body .= "7. ¿Con qué número estás dispuesto a comprometerte?: \n".$q31_7_con_qu_nmero_ests_."\n\n";
+     $body .= "8. ¿Cómo retornarás a ese nivel cuando las cosas vayan mal, cuando no tengas ganas o cuando se vuelva retador y quieras ocultarte?: \n".$q32_8_cmo_retornars_a_es."\n\n";
+     $body .= "9. ¿Cómo sabes que estás comprometido a hacer el camino? ¿Cuáles son tus pruebas?: \n".$q33_9_cmo_sabes_que_ests."\n\n";
+     $body .= "10. Cuando comiences este viaje de Liderazgo Co-Activo, es importante prestar atención al impacto que quieres tener en el mundo como líder. En servicio de esa conversación continua, completa la siguiente frase:: \n".$q34_10_cuando_comiences_."\n\n";
+     $body .= "11. Yo nací en este momento de la historia para…: \n".$q35_11_yo_nac_en_este_mo."\n\n";
+     $body .= "12. ¿Qué más quieres que sepamos?: \n".$q36_12_qu_ms_quieres_que."\n\n";
+
+
+     
+     // Get ID for this user
+
+     $dbhandle = mysql_connect($hostname, $dbuser, $password); 
+     $selected = mysql_select_db("CTIDATABASE",$dbhandle);
+
+     $result = mysql_query("SELECT id FROM launchpad_user WHERE username='".mysql_escape_string($username)."'");
+     $row = mysql_fetch_array($result);
+     $id = @$row['id'];
+     if($id < 1) {
+       mysql_query("INSERT INTO launchpad_user (username,created_at) VALUES ('".mysql_escape_string($username)."',NOW())");
+       $id = mysql_insert_id();
+     }
+
+
+     $json = json_encode($_POST)."\n";
+     $xtea = new XTEA($secret);
+     $json_encrypted = $xtea->Encrypt($json);
+
+     $filename = "/www/www.thecoaches.com/lib/launchpad_data/program_form_for_$id.json";
+
+     // save document for this user, using ID from database
+     file_put_contents($filename, $json_encrypted);
+
+     mysql_query("UPDATE launchpad_user SET program_file_name='$filename' WHERE id=$id");
+
+?>
+
+<p>Gracias. <a href="home.html">Volver a la página de inicio</a></p>
+
+<?php
+   } else {
+?>
+
+ 
+
+
+<form class="pure-form pure-form-stacked" method="POST"><input type="hidden" name="submit-btn" value="1" />
+  <fieldset>
+
+    <label for="q1_nombre">Nombre:</label>
+
+    <input name="q1_nombre" id="q1_nombre" type="text" value="" />
+
+    <label for="q2_correo-electrnico">Correo electrónico:</label>
+
+    <input name="q2_correo-electrnico" id="q2_correo-electrnico" type="text" value="" />
+
+    <label for="q3_edad">Edad:</label>
+
+    <input name="q3_edad" id="q3_edad" type="text" value="" />
+
+    <label for="q4_gnero">Género:</label>
+
+    <input name="q4_gnero" id="q4_gnero" type="text" value="" />
+
+    <label for="q5_nacionalidad">Nacionalidad:</label>
+
+    <input name="q5_nacionalidad" id="q5_nacionalidad" type="text" value="" />
+
+    <label for="q6_estado-civil">Estado civil:</label>
+
+    <input name="q6_estado-civil" id="q6_estado-civil" type="text" value="" />
+
+    <label for="q7_profesin-actual">Profesión actual:</label>
+
+    <input name="q7_profesin-actual" id="q7_profesin-actual" type="text" value="" />
+
+    <label for="q8_profesiones-anterior">Profesiones anteriores:</label>
+
+    <input name="q8_profesiones-anterior" id="q8_profesiones-anterior" type="text" value="" />
+
+<p><strong>Instrucciones:</strong> Estamos encantados de que hayas decidido unirte a nosotros en este viaje. El proceso de expansión de tu liderazgo comienza aquí. Por favor, utiliza este cuestionario de programa como herramienta para abrirte al proceso, ir más allá de tus límites actuales y retar las suposiciones que tienes sobre ti y tu capacidad como líder.
+NOTA IMPORTANTE: Cuando estés listo, debes completarlo y enviar el formulario 
+
+
+<h2>Relación contigo mismo y el mundo que te rodea:</h2>
+
+    <label for="q9_cules-son-tus-objeti">¿Cuáles son tus objetivos personales y profesionales actuales?</label>
+
+    <textarea name="q9_cules-son-tus-objeti" id="q9_cules-son-tus-objeti"></textarea>
+
+    <label for="q10_cules-son-tus-fortal">¿Cuáles son tus fortalezas y cómo eres capaz de usarlas?</label>
+
+    <textarea name="q10_cules-son-tus-fortal" id="q10_cules-son-tus-fortal"></textarea>
+
+    <label for="q11_qu-te-impide-consegu">¿Qué te impide conseguir tus objetivos y sueños?</label>
+
+    <textarea name="q11_qu-te-impide-consegu" id="q11_qu-te-impide-consegu"></textarea>
+
+    <label for="q12_cul-es-tu-relacin-co">¿Cuál es tu relación con el fracaso?</label>
+
+    <textarea name="q12_cul-es-tu-relacin-co" id="q12_cul-es-tu-relacin-co"></textarea>
+
+    <label for="q13_cul-es-tu-relacin-co">¿Cuál es tu relación con la verdad?</label>
+
+    <textarea name="q13_cul-es-tu-relacin-co" id="q13_cul-es-tu-relacin-co"></textarea>
+
+    <label for="q14_cul-es-tu-relacin-co">¿Cuál es tu relación con la confrontación?</label>
+
+    <textarea name="q14_cul-es-tu-relacin-co" id="q14_cul-es-tu-relacin-co"></textarea>
+
+    <label for="q15_cun-decidido-ests-a-">¿Cuán decidido estás a retar estas relaciones por el bien de tu desarrollo como líder?</label>
+
+    <textarea name="q15_cun-decidido-ests-a-" id="q15_cun-decidido-ests-a-"></textarea>
+
+<h2>Historial de Desarrollo:</h2>
+<h3>Terapéutico:</h3>
+
+    <label for="q16_ests-o-has-estado-al">¿Estás o has estado alguna vez en terapia?</label>
+
+    <textarea name="q16_ests-o-has-estado-al" id="q16_ests-o-has-estado-al"></textarea>
+
+    <label for="q17_si-es-as-enumera-cun">Si es así, enumera cuándo y por qué razón.</label>
+
+    <textarea name="q17_si-es-as-enumera-cun" id="q17_si-es-as-enumera-cun"></textarea>
+
+    <label for="q18_qu-impacto-ha-tenido">¿Qué impacto ha tenido la terapia en tu desarrollo?</label>
+
+    <textarea name="q18_qu-impacto-ha-tenido" id="q18_qu-impacto-ha-tenido"></textarea>
+
+
+<h3>Coaching:</h3>
+    <label for="q19_qu-cursos-de-cti-has">¿Qué cursos de CTI has realizado?</label>
+
+    <textarea name="q19_qu-cursos-de-cti-has" id="q19_qu-cursos-de-cti-has"></textarea>
+
+    <label for="q20_tienes-actualmente-o">¿Tienes actualmente o has tenido un coach alguna vez?</label>
+
+    <textarea name="q20_tienes-actualmente-o" id="q20_tienes-actualmente-o"></textarea>
+
+    <label for="q21_qu-impacto-ha-tenido">¿Qué impacto ha tenido el coaching en tu desarrollo?</label>
+
+    <textarea name="q21_qu-impacto-ha-tenido" id="q21_qu-impacto-ha-tenido"></textarea>
+
+
+<h3>Religioso:</h3>
+    <label for="q22_por-favor-describe-t">Por favor, describe tus filiaciones religiosas o influencias espirituales.</label>
+
+    <textarea name="q22_por-favor-describe-t" id="q22_por-favor-describe-t"></textarea>
+
+    <label for="q23_cmo-ha-influido-tu-r">¿Cómo ha influido tu ruta espiritual en tu desarrollo personal?</label>
+
+    <textarea name="q23_cmo-ha-influido-tu-r" id="q23_cmo-ha-influido-tu-r"></textarea>
+
+<h3>Otro crecimiento personal:</h3>
+    <label for="q24_por-favor-describe-o">Por favor, describe otras experiencias de crecimiento personal que hayan tenido un impacto significativo en ti y tu desarrollo personal.</label>
+
+    <textarea name="q24_por-favor-describe-o" id="q24_por-favor-describe-o"></textarea>
+
+
+<h2>Embarque en la Ruta del Liderazgo Co-Activo®:</h2>
+<p>El Programa de Liderazgo Co-Activo® es una oportunidad única de implicarte en una experiencia dinámica, rigurosa y que cambia la vida que te retará y hará que vayas más allá. Mientras te expandes, verás que las cosas que han estado fuera del alcance están más fácilmente a tu mano. Como con la mayoría de las cosas, el nivel hasta el que te expandas será directamente proporcional a tu nivel de compromiso en el programa.</p>
+
+    <label for="q25_1-cul-es-tu-definici">1. ¿Cuál es tu definición de liderazgo?</label>
+
+    <textarea name="q25_1-cul-es-tu-definici" id="q25_1-cul-es-tu-definici"></textarea>
+
+    <label for="q26_2-de-qu-formas-ests-">2. ¿De qué formas estás deseando que te reten, crecer y expandirte?</label>
+
+    <textarea name="q26_2-de-qu-formas-ests-" id="q26_2-de-qu-formas-ests-"></textarea>
+
+    <label for="q27_3-de-todas-las-cosas">3. De todas las cosas posibles que podrías haber hecho para expandir tu liderazgo, ¿por qué escogiste este programa concreto?</label>
+
+    <textarea name="q27_3-de-todas-las-cosas" id="q27_3-de-todas-las-cosas"></textarea>
+
+    <label for="q28_4-considerando-tu-vi">4. Considerando tu vida actual y compromisos, ¿cuán disponible estás para jugar "a tope" en el Programa de Liderazgo Co-Activo® en una escala del 1 al 10 (siendo 10 lo más alto)?</label>
+
+    <textarea name="q28_4-considerando-tu-vi" id="q28_4-considerando-tu-vi"></textarea>
+
+    <label for="q29_5-si-pudieras-escoge">5. Si pudieras escoger cambiar ese número por otro, ¿qué número escogerías?</label>
+
+    <textarea name="q29_5-si-pudieras-escoge" id="q29_5-si-pudieras-escoge"></textarea>
+
+    <label for="q30_6-qu-tendras-que-hac">6. ¿Qué tendrías que hacer para que eso fuese cierto?</label>
+
+    <textarea name="q30_6-qu-tendras-que-hac" id="q30_6-qu-tendras-que-hac"></textarea>
+
+    <label for="q31_7-con-qu-nmero-ests-">7. ¿Con qué número estás dispuesto a comprometerte?</label>
+
+    <textarea name="q31_7-con-qu-nmero-ests-" id="q31_7-con-qu-nmero-ests-"></textarea>
+
+    <label for="q32_8-cmo-retornars-a-es">8. ¿Cómo retornarás a ese nivel cuando las cosas vayan mal, cuando no tengas ganas o cuando se vuelva retador y quieras ocultarte?</label>
+
+    <textarea name="q32_8-cmo-retornars-a-es" id="q32_8-cmo-retornars-a-es"></textarea>
+
+    <label for="q33_9-cmo-sabes-que-ests">9. ¿Cómo sabes que estás comprometido a hacer el camino? ¿Cuáles son tus pruebas?</label>
+
+    <textarea name="q33_9-cmo-sabes-que-ests" id="q33_9-cmo-sabes-que-ests"></textarea>
+
+    <label for="q34_10-cuando-comiences-">10. Cuando comiences este viaje de Liderazgo Co-Activo, es importante prestar atención al impacto que quieres tener en el mundo como líder. En servicio de esa conversación continua, completa la siguiente frase:</label>
+
+    <input name="q34_10-cuando-comiences-" id="q34_10-cuando-comiences-" type="text" value="" />
+
+    <label for="q35_11-yo-nac-en-este-mo">11. Yo nací en este momento de la historia para…</label>
+
+    <textarea name="q35_11-yo-nac-en-este-mo" id="q35_11-yo-nac-en-este-mo"></textarea>
+
+    <label for="q36_12-qu-ms-quieres-que">12. ¿Qué más quieres que sepamos?</label>
+
+    <textarea name="q36_12-qu-ms-quieres-que" id="q36_12-qu-ms-quieres-que"></textarea>
+
+    <button type="submit" class="pure-button pure-button-primary">Guardar respuestas</button>
+  </fieldset>
+</form>
+
+                     
+
+
+<p>Gracias por el tiempo y atención que has dedicado a este cuestionario. Como dijimos al principio, tu viaje comienza ahora. Te animamos a que estés despierto y consciente de las formas en las que el aprendizaje ya se está revelando. Presta atención a los cambios sutiles en tu vida: es natural que cuando empiezas un programa que sostiene la posibilidad de tal cambio experimentes un rango más amplio de pensamientos, emociones y comportamientos. Puedes observar una nueva consciencia, sincronías, oportunidades inesperadas, ansiedad o incluso resistencia. Haz sitio para lo que sea que venga para ti. Te animamos a que te pongas en contacto con otros para recibir apoyo y ánimos. Sigue adelante… merecerá la pena ¡te lo prometemos!</p>
+
+<hr>
+
+<h2>Ley de protección de datos</h2>
+
+<p><em>En conformidad con la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal (LOPD), los datos suministrados por usted quedarán incorporados en un fichero automatizado creado por CTI y del que éste será responsable; dicho fichero será procesado exclusivamente para la finalidad de acciones de comunicación, registro y seguimiento de servicios que consume cada cliente y gestión de las relaciones comerciales. Estos se recogerán a través de los formularios correspondientes, los cuales solo contendrán los campos imprescindibles para poder prestar el servicio requerido por el Usuario. 
+Los datos de carácter personal serán tratados con el grado de protección adecuado. El usuario autoriza CTI para el tratamiento de sus datos ahora facilitados con la finalidad antes mencionada. El usuario autoriza expresamente a CTI a utilizar su correo electrónico para enviarle información u ofertas promociónales</em></p>
+<p><em>Todo lo expuesto se entiende sin perjuicio de los derechos de acceso, rectificación, cancelación y oposición que prevén las leyes vigentes y en especial la LOPD para lo que se podrá dirigir a CTI.</em></p>
+
+
+
+<?php 
+} 
+?>
+  
+                   </div>
+            
+            
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+
+</html>
+   

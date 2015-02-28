@@ -1,0 +1,543 @@
+<?php
+require 'authen.php';
+require '../xtea.class.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Leadership Launchpad - Preguntas Medicas</title>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/main.css" />
+<script src="/docs/leadership/launchpad/js/smooth/mootools.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/smooth/jd.gallery.js" type="text/javascript"></script>
+<script src="/docs/leadership/launchpad/js/nav.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/docs/leadership/launchpad/css/launch.css" />
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<script type="text/javascript" src="/docs/leadership/launchpad/js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ });
+</script>
+<style>
+textarea {width:100%;min-height:100px;}
+div#checkbox{width:500px;}
+h3 {color:#a6a489; font-size:13px;}
+</style>
+</head>
+
+<body>
+	
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+         	<div id="headernav">
+         	<ul>
+            	
+            </ul>
+            </div>	 
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		   <a href="http://www.thecoaches.com/"><img src="/docs/images/CTI-co-active-logo.jpg" class="logoblockLdr" /></a>
+         <div class="clear"></div>
+		  
+           <!-- Begin Sub nav -->
+           <!-- End Sub nav -->
+
+           <!-- Begin Left Col links -->
+           <!-- End Left Col links --> 
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+
+                
+                <!-- Begin Interiortop -->
+                <div id="interiortop"  style="border-bottom: 0px">
+				<img src="/docs/leadership/launchpad/images/int_header_launchpad-es.jpg" class="imgblock" />
+                </div>
+                <!-- End Interiortop -->
+                
+		 <div class="clear"></div>
+         <div id="maincontent">
+         
+
+           
+
+
+           <h1 style="margin-top:20px">PROGRAMA DE LIDERAZGO CO-ACTIVO
+FORMULARIO DE INFORMACIÓN MÉDICA & DESCARGO DE RESPONSABILIDADES</h1>
+           
+
+
+          
+		   <div id="checkbox">
+
+
+<?php
+   
+
+   
+
+ 
+   
+
+   if(isset($_POST['submit-btn'])){
+
+     // Get form values
+
+    
+   
+
+    
+     $q1_nombre = $_POST['q1_nombre'];
+     $q2_fecha_ = $_POST['q2_fecha-'];
+     $q3_email = $_POST['q3_email'];
+     $q4_comienzo_de_programa = $_POST['q4_comienzo-de-programa'];
+     $q5_edad_ = $_POST['q5_edad-'];
+     $q6_fecha_de_nacimiento_ = $_POST['q6_fecha-de-nacimiento-'];
+     $q7_sexo_ = $_POST['q7_sexo-'];
+     $q8_altura_ = $_POST['q8_altura-'];
+     $q9_peso = $_POST['q9_peso'];
+     $q10_padeces_alguna_incap = $_POST['q10_padeces-alguna-incap'];
+     $q11_solicitud_de_alojami = $_POST['q11_solicitud-de-alojami'];
+     $q12_presentas_alguna_con = $_POST['q12_presentas-alguna-con'];
+     $q13_esta_embarazada = $_POST['q13_esta-embarazada'];
+     $q14_en_caso_afirmativo_f = $_POST['q14_en-caso-afirmativo-f'];
+     $q15_historial_de_mareos_ = $_POST['q15_historial-de-mareos-'];
+     $q16_historial_de_enferme = $_POST['q16_historial-de-enferme'];
+     $q17_ojos = $_POST['q17_ojos'];
+     $q18_munecas = $_POST['q18_munecas'];
+     $q19_rodillas = $_POST['q19_rodillas'];
+     $q20_hipertension = $_POST['q20_hipertension'];
+     $q21_oidos = $_POST['q21_oidos'];
+     $q22_manos = $_POST['q22_manos'];
+     $q23_parte_inferior_de_la = $_POST['q23_parte-inferior-de-la'];
+     $q24_pulmones = $_POST['q24_pulmones'];
+     $q25_cabeza = $_POST['q25_cabeza'];
+     $q26_parte_superior_de_la = $_POST['q26_parte-superior-de-la'];
+     $q27_tobillos = $_POST['q27_tobillos'];
+     $q28_asma = $_POST['q28_asma'];
+     $q29_cuello = $_POST['q29_cuello'];
+     $q30_parte_inferior_de_la = $_POST['q30_parte-inferior-de-la'];
+     $q31_pies = $_POST['q31_pies'];
+     $q32_corazon = $_POST['q32_corazon'];
+     $q33_latigazo_cervical = $_POST['q33_latigazo-cervical'];
+     $q34_pelvis = $_POST['q34_pelvis'];
+     $q35_organos_internos = $_POST['q35_organos-internos'];
+     $q36_diabetes = $_POST['q36_diabetes'];
+     $q37_hombros = $_POST['q37_hombros'];
+     $q38_ingle = $_POST['q38_ingle'];
+     $q39_epilepsiaataques = $_POST['q39_epilepsiaataques'];
+     $q40_usa_lentes_de_contac = $_POST['q40_usa-lentes-de-contac'];
+     $q41_brazos = $_POST['q41_brazos'];
+     $q42_muslos = $_POST['q42_muslos'];
+     $q43_otras_enfermedade = $_POST['q43_otras-enfermedade'];
+     $q44_fuma = $_POST['q44_fuma'];
+     $q45_dislocaciones = $_POST['q45_dislocaciones'];
+     $q46_de_ser_asi_donde_ss_ = $_POST['q46_de-ser-asi-donde-ss-'];
+     $q47_alguna_vez_ha_fumado = $_POST['q47_alguna-vez-ha-fumado'];
+     $q48_explica_las_respuest = $_POST['q48_explica-las-respuest'];
+$q49_datos_de_contacto_de = $_POST['q49_datos-de-contacto-de'];
+$q50_fecha_de_comienzo_de = $_POST['q50_fecha-de-comienzo-de'];
+$q51_telefono_fijo = $_POST['q51_telefono-fijo'];
+$q52_telefono_trabajo = $_POST['q52_telefono-trabajo'];
+$q53_correo_electronico = $_POST['q53_correo-electronico'];
+$q54_direccion = $_POST['q54_direccion'];
+$q55_ciudad_pais_codigo_p = $_POST['q55_ciudad-pais-codigo-p'];
+
+$q57_contacto_en_caso_de_ = $_POST['q57_contacto-en-caso-de-'];
+$q58_telefono_del_trabajo = $_POST['q58_telefono-del-trabajo'];
+$q59_parentezco_telefono_ = $_POST['q59_parentezco-telefono-'];
+$q60_otro_telefono = $_POST['q60_otro-telefono'];
+$q61_num_de_poliza = $_POST['q61_num-de-poliza'];
+$q62_compania_aseguradora = $_POST['q62_compania-aseguradora'];
+$q63_otra_informacion_sob = $_POST['q63_otra-informacion-sob'];
+$q64_nombre_del_doctor_te = $_POST['q64_nombre-del-doctor-te'];
+$q65_alergias_comida_medi = $_POST['q65_alergias-comida-medi'];
+$q66_tomas_alguna_medicac = $_POST['q66_tomas-alguna-medicac'];
+$q67_no_con_que_motivo = $_POST['q67_no-con-que-motivo'];
+$q68_nombre_del_medicamen = $_POST['q68_nombre-del-medicamen'];
+
+     $body .= "NOMBRE:: \n".$q1_nombre."\n\n";
+     $body .= "FECHA: : \n".$q2_fecha_."\n\n";
+     $body .= "Email:: \n".$q3_email."\n\n";
+     $body .= "COMIENZO DE PROGRAMA:: \n".$q4_comienzo_de_programa."\n\n";
+     $body .= "Edad: : \n".$q5_edad_."\n\n";
+     $body .= "Fecha de Nacimiento: : \n".$q6_fecha_de_nacimiento_."\n\n";
+     $body .= "Sexo: : \n".$q7_sexo_."\n\n";
+     $body .= "Altura: : \n".$q8_altura_."\n\n";
+     $body .= "Peso:: \n".$q9_peso."\n\n";
+     $body .= "¿Padeces alguna incapacidad física limitante (temporal o permanente) que pueda afectar tu nivel de participación en el Programa Co-Activo de Liderazgo?:: \n".$q10_padeces_alguna_incap."\n\n";
+     $body .= "Solicitud de alojamiento para discapacitados físicos. Se llevará a cabo alojamiento de acuerdo a tal efecto si es factible . Especificar alguna si: \n".$q11_solicitud_de_alojami."\n\n";
+     $body .= "¿Presentas alguna condición emocional o psicológica que pueda afectar tu nivel de participación en el Programa Co- Activo de Liderazgo?:: \n".$q12_presentas_alguna_con."\n\n";
+     $body .= "Está embarazada?:: \n".$q13_esta_embarazada."\n\n";
+     $body .= "En caso afirmativo, fecha de parto:: \n".$q14_en_caso_afirmativo_f."\n\n";
+     $body .= "¿Historial de mareos o desmayos?:: \n".$q15_historial_de_mareos_."\n\n";
+     $body .= "¿Historial de enfermedad coronaria o ataque al corazón?:: \n".$q16_historial_de_enferme."\n\n";
+     $body .= "Ojos:: \n".$q17_ojos."\n\n";
+     $body .= "Muñecas:: \n".$q18_munecas."\n\n";
+     $body .= "Rodillas:: \n".$q19_rodillas."\n\n";
+     $body .= "Hipertensión:: \n".$q20_hipertension."\n\n";
+     $body .= "Oídos:: \n".$q21_oidos."\n\n";
+     $body .= "Manos:: \n".$q22_manos."\n\n";
+     $body .= "Parte inferior de las piernas:: \n".$q23_parte_inferior_de_la."\n\n";
+     $body .= "Pulmones:: \n".$q24_pulmones."\n\n";
+     $body .= "Cabeza:: \n".$q25_cabeza."\n\n";
+     $body .= "Parte superior de la espal:: \n".$q26_parte_superior_de_la."\n\n";
+     $body .= "Tobillos:: \n".$q27_tobillos."\n\n";
+     $body .= "Asma:: \n".$q28_asma."\n\n";
+     $body .= "Cuello:: \n".$q29_cuello."\n\n";
+     $body .= "Parte inferior de la espald:: \n".$q30_parte_inferior_de_la."\n\n";
+     $body .= "Pies:: \n".$q31_pies."\n\n";
+     $body .= "Corazón:: \n".$q32_corazon."\n\n";
+     $body .= "Latigazo cervical:: \n".$q33_latigazo_cervical."\n\n";
+     $body .= "Pelvis:: \n".$q34_pelvis."\n\n";
+     $body .= "Órganos internos:: \n".$q35_organos_internos."\n\n";
+     $body .= "Diabetes:: \n".$q36_diabetes."\n\n";
+     $body .= "Hombros:: \n".$q37_hombros."\n\n";
+     $body .= "Ingle:: \n".$q38_ingle."\n\n";
+     $body .= "Epilepsia/Ataques:: \n".$q39_epilepsiaataques."\n\n";
+     $body .= "Usa lentes de contacto:: \n".$q40_usa_lentes_de_contac."\n\n";
+     $body .= "Brazos:: \n".$q41_brazos."\n\n";
+     $body .= "Muslos:: \n".$q42_muslos."\n\n";
+     $body .= "Otras enfermedade:: \n".$q43_otras_enfermedade."\n\n";
+     $body .= "Fuma:: \n".$q44_fuma."\n\n";
+     $body .= "Dislocaciones:: \n".$q45_dislocaciones."\n\n";
+     $body .= "De ser así, ¿dónde? ss graves:: \n".$q46_de_ser_asi_donde_ss_."\n\n";
+     $body .= "¿Alguna vez ha fumado?:: \n".$q47_alguna_vez_ha_fumado."\n\n";
+     $body .= "Explica las respuestas afirmativas de arriba: \n".$q48_explica_las_respuest."\n\n";
+     $body .= "DATOS DE CONTACTO DEL PARTICIPANTE:: \n".$q49_datos_de_contacto_de."\n\n";
+$body .= "FECHA DE COMIENZO DEL PROGRAMA: : \n".$q50_fecha_de_comienzo_de."\n\n";
+$body .= "Teléfono (Fijo):: \n".$q51_telefono_fijo."\n\n";
+$body .= "Teléfono (Trabajo):: \n".$q52_telefono_trabajo."\n\n";
+$body .= "Correo electrónico:: \n".$q53_correo_electronico."\n\n";
+$body .= "Dirección:: \n".$q54_direccion."\n\n";
+$body .= "Ciudad, País, Código Postal:: \n".$q55_ciudad_pais_codigo_p."\n\n";
+
+$body .= "Contacto en caso de emergencia: Dirección:: \n".$q57_contacto_en_caso_de_."\n\n";
+$body .= "Teléfono del trabajo:: \n".$q58_telefono_del_trabajo."\n\n";
+$body .= "Parentezco: Teléfono fijo:: \n".$q59_parentezco_telefono_."\n\n";
+$body .= "Otro teléfono:: \n".$q60_otro_telefono."\n\n";
+$body .= "Núm de póliza.:: \n".$q61_num_de_poliza."\n\n";
+$body .= "Compañía Aseguradora:: \n".$q62_compania_aseguradora."\n\n";
+$body .= "Otra información sobre el seguro:: \n".$q63_otra_informacion_sob."\n\n";
+$body .= "Nombre del Doctor Teléfono del Doctor:: \n".$q64_nombre_del_doctor_te."\n\n";
+$body .= "Alergias (Comida, Medicamentos, Plantas, Insectos, etc.):: \n".$q65_alergias_comida_medi."\n\n";
+$body .= "¿Tomas alguna medicación en la actualidad?:: \n".$q66_tomas_alguna_medicac."\n\n";
+$body .= "No ¿Con qué motivo?:: \n".$q67_no_con_que_motivo."\n\n";
+$body .= "Nombre del medicamento(s): Dosis:: \n".$q68_nombre_del_medicamen."\n\n";
+
+
+     // Get ID for this user
+
+     $dbhandle = mysql_connect($hostname, $dbuser, $password); 
+     $selected = mysql_select_db("CTIDATABASE",$dbhandle);
+
+     $result = mysql_query("SELECT id FROM launchpad_user WHERE username='".mysql_escape_string($username)."'");
+     $row = mysql_fetch_array($result);
+     $id = @$row['id'];
+     if($id < 1) {
+       mysql_query("INSERT INTO launchpad_user (username,created_at) VALUES ('".mysql_escape_string($username)."',NOW())");
+       $id = mysql_insert_id();
+     }
+
+
+     $json = json_encode($_POST)."\n";
+     $xtea = new XTEA($secret);
+     $json_encrypted = $xtea->Encrypt($json);
+
+     $filename = "/www/www.thecoaches.com/lib/launchpad_data/med_form_for_$id.json";
+
+     // save document for this user, using ID from database
+     file_put_contents($filename, $json_encrypted);
+
+     mysql_query("UPDATE launchpad_user SET med_file_name='$filename' WHERE id=$id");
+
+?>
+
+<p>Gracias. <a href="home.html">Volver a la página de inicio</a></p>
+
+<?php
+   } else {
+?>
+
+ 
+
+
+<form class="pure-form pure-form-stacked" method="POST">
+  <input type="hidden" name="submit-btn" value="1" />
+  <fieldset>
+
+    <label for="q1_nombre">NOMBRE:</label>
+    <input name="q1_nombre" id="q1_nombre" type="text" value="" />
+
+    <label for="q2_fecha-">FECHA: </label>
+    <input name="q2_fecha-" id="q2_fecha-" type="text" value="" />
+
+    <label for="q3_email">Email:</label>
+    <input name="q3_email" id="q3_email" type="text" value="" />
+
+    <label for="q4_comienzo-de-programa">COMIENZO DE PROGRAMA:</label>
+    <input name="q4_comienzo-de-programa" id="q4_comienzo-de-programa" type="text" value="" />
+
+<p>Para que podamos proporcionarte un cuidado apropiado, por favor proporciona la información médica solicitada más abajo y a continuación lee y expresa tu consentimiento con el Descargo de Responsabilidades del Participante.
+Nuestros programas contemplan una variedad de actividades que a menudo incluyen calentamientos, juegos, resolución de iniciativa grupal, circuitos con cuerdas altas y bajas, y otras actividades de aventura rigurosamente físicas.El nivel de participación en una actividad del programa es considerado por decisión propia excepto en las situaciones donde los coordinadores del programa determinen que los factores de salud individuales puedan poner en riesgo al participante. Cada participante debe estar dispuesto a asumir el riesgo de que él o ella pueda sufrir daño emocional o físico.</p>
+
+<h2>SECCIÓN 1: INFORMACIÓN MÉDICA</h2>
+<p>Esta información es confidencial.</p>
+<p>Si padeces alguna lesión previa, condiciones pre-existentes, condiciones especiales o información médica pertinente (ej. cirugía reciente) indica SÍ y proporciona una explicación. De lo contrario, escribe NO.</p>
+
+    <label for="q5_edad-">Edad: </label>
+    <input name="q5_edad-" id="q5_edad-" type="text" value="" />
+
+    <label for="q6_fecha-de-nacimiento-">Fecha de Nacimiento: </label>
+    <input name="q6_fecha-de-nacimiento-" id="q6_fecha-de-nacimiento-" type="text" value="" />
+
+    <label for="q7_sexo-">Sexo: </label>
+    <input name="q7_sexo-" id="q7_sexo-" type="text" value="" />
+
+    <label for="q8_altura-">Altura: </label>
+    <input name="q8_altura-" id="q8_altura-" type="text" value="" />
+
+    <label for="q9_peso">Peso:</label>
+    <input name="q9_peso" id="q9_peso" type="text" value="" />
+
+<p>Si padeces alguna lesión previa, condiciones pre-existentes, condiciones especiales o información médica pertinente (ej. cirugía reciente) indica SÍ y proporciona una explicación al final de estas preguntas. De lo contrario, escribe NO.</p>
+
+    <label for="q10_padeces-alguna-incap">¿Padeces alguna incapacidad física limitante (temporal o permanente) que pueda afectar tu nivel de participación en el Programa Co-Activo de Liderazgo?:</label>
+    <input name="q10_padeces-alguna-incap" id="q10_padeces-alguna-incap" type="text" value="" />
+
+    <label for="q11_solicitud-de-alojami">Solicitud de alojamiento para discapacitados físicos. Se llevará a cabo alojamiento de acuerdo a tal efecto si es factible . Especificar alguna si</label>
+    <textarea name="q11_solicitud-de-alojami" id="q11_solicitud-de-alojami"></textarea>
+
+    <label for="q12_presentas-alguna-con">¿Presentas alguna condición emocional o psicológica que pueda afectar tu nivel de participación en el Programa Co- Activo de Liderazgo?:</label>
+    <input name="q12_presentas-alguna-con" id="q12_presentas-alguna-con" type="text" value="" />
+
+    <label for="q13_esta-embarazada">Está embarazada?:</label>
+    <input name="q13_esta-embarazada" id="q13_esta-embarazada" type="text" value="" />
+
+    <label for="q14_en-caso-afirmativo-f">En caso afirmativo, fecha de parto:</label>
+    <input name="q14_en-caso-afirmativo-f" id="q14_en-caso-afirmativo-f" type="text" value="" />
+
+    <label for="q15_historial-de-mareos-">¿Historial de mareos o desmayos?:</label>
+    <input name="q15_historial-de-mareos-" id="q15_historial-de-mareos-" type="text" value="" />
+
+    <label for="q16_historial-de-enferme">¿Historial de enfermedad coronaria o ataque al corazón?:</label>
+    <input name="q16_historial-de-enferme" id="q16_historial-de-enferme" type="text" value="" />
+
+    <label for="q17_ojos">Ojos:</label>
+    <input name="q17_ojos" id="q17_ojos" type="text" value="" />
+
+    <label for="q18_munecas">Muñecas:</label>
+    <input name="q18_munecas" id="q18_munecas" type="text" value="" />
+
+    <label for="q19_rodillas">Rodillas:</label>
+    <input name="q19_rodillas" id="q19_rodillas" type="text" value="" />
+
+    <label for="q20_hipertension">Hipertensión:</label>
+    <input name="q20_hipertension" id="q20_hipertension" type="text" value="" />
+
+    <label for="q21_oidos">Oídos:</label>
+    <input name="q21_oidos" id="q21_oidos" type="text" value="" />
+
+    <label for="q22_manos">Manos:</label>
+    <input name="q22_manos" id="q22_manos" type="text" value="" />
+
+    <label for="q23_parte-inferior-de-la">Parte inferior de las piernas:</label>
+    <input name="q23_parte-inferior-de-la" id="q23_parte-inferior-de-la" type="text" value="" />
+
+    <label for="q24_pulmones">Pulmones:</label>
+    <input name="q24_pulmones" id="q24_pulmones" type="text" value="" />
+
+    <label for="q25_cabeza">Cabeza:</label>
+    <input name="q25_cabeza" id="q25_cabeza" type="text" value="" />
+
+    <label for="q26_parte-superior-de-la">Parte superior de la espal:</label>
+    <input name="q26_parte-superior-de-la" id="q26_parte-superior-de-la" type="text" value="" />
+
+    <label for="q27_tobillos">Tobillos:</label>
+    <input name="q27_tobillos" id="q27_tobillos" type="text" value="" />
+
+    <label for="q28_asma">Asma:</label>
+    <input name="q28_asma" id="q28_asma" type="text" value="" />
+
+    <label for="q29_cuello">Cuello:</label>
+    <input name="q29_cuello" id="q29_cuello" type="text" value="" />
+
+    <label for="q30_parte-inferior-de-la">Parte inferior de la espald:</label>
+    <input name="q30_parte-inferior-de-la" id="q30_parte-inferior-de-la" type="text" value="" />
+
+    <label for="q31_pies">Pies:</label>
+    <input name="q31_pies" id="q31_pies" type="text" value="" />
+
+    <label for="q32_corazon">Corazón:</label>
+    <input name="q32_corazon" id="q32_corazon" type="text" value="" />
+
+    <label for="q33_latigazo-cervical">Latigazo cervical:</label>
+    <input name="q33_latigazo-cervical" id="q33_latigazo-cervical" type="text" value="" />
+
+    <label for="q34_pelvis">Pelvis:</label>
+    <input name="q34_pelvis" id="q34_pelvis" type="text" value="" />
+
+    <label for="q35_organos-internos">Órganos internos:</label>
+    <input name="q35_organos-internos" id="q35_organos-internos" type="text" value="" />
+
+    <label for="q36_diabetes">Diabetes:</label>
+    <input name="q36_diabetes" id="q36_diabetes" type="text" value="" />
+
+    <label for="q37_hombros">Hombros:</label>
+    <input name="q37_hombros" id="q37_hombros" type="text" value="" />
+
+    <label for="q38_ingle">Ingle:</label>
+    <input name="q38_ingle" id="q38_ingle" type="text" value="" />
+
+    <label for="q39_epilepsiaataques">Epilepsia/Ataques:</label>
+    <input name="q39_epilepsiaataques" id="q39_epilepsiaataques" type="text" value="" />
+
+    <label for="q40_usa-lentes-de-contac">Usa lentes de contacto:</label>
+    <input name="q40_usa-lentes-de-contac" id="q40_usa-lentes-de-contac" type="text" value="" />
+
+    <label for="q41_brazos">Brazos:</label>
+    <input name="q41_brazos" id="q41_brazos" type="text" value="" />
+
+    <label for="q42_muslos">Muslos:</label>
+    <input name="q42_muslos" id="q42_muslos" type="text" value="" />
+
+    <label for="q43_otras-enfermedade">Otras enfermedade:</label>
+    <input name="q43_otras-enfermedade" id="q43_otras-enfermedade" type="text" value="" />
+
+    <label for="q44_fuma">Fuma:</label>
+    <input name="q44_fuma" id="q44_fuma" type="text" value="" />
+
+    <label for="q45_dislocaciones">Dislocaciones:</label>
+    <input name="q45_dislocaciones" id="q45_dislocaciones" type="text" value="" />
+
+    <label for="q46_de-ser-asi-donde-ss-">De ser así, ¿dónde? ss graves:</label>
+    <input name="q46_de-ser-asi-donde-ss-" id="q46_de-ser-asi-donde-ss-" type="text" value="" />
+
+    <label for="q47_alguna-vez-ha-fumado">¿Alguna vez ha fumado?:</label>
+    <input name="q47_alguna-vez-ha-fumado" id="q47_alguna-vez-ha-fumado" type="text" value="" />
+
+    <label for="q48_explica-las-respuest">Explica las respuestas afirmativas de arriba</label>
+    <textarea name="q48_explica-las-respuest" id="q48_explica-las-respuest"></textarea>
+
+  <label for="q49_datos-de-contacto-de">DATOS DE CONTACTO DEL PARTICIPANTE:</label>
+    <input name="q49_datos-de-contacto-de" id="q49_datos-de-contacto-de" type="text" value="" />
+
+    <label for="q50_fecha-de-comienzo-de">FECHA DE COMIENZO DEL PROGRAMA: </label>
+    <input name="q50_fecha-de-comienzo-de" id="q50_fecha-de-comienzo-de" type="text" value="" />
+
+    <label for="q51_telefono-fijo">Teléfono (Fijo):</label>
+    <input name="q51_telefono-fijo" id="q51_telefono-fijo" type="text" value="" />
+
+    <label for="q52_telefono-trabajo">Teléfono (Trabajo):</label>
+    <input name="q52_telefono-trabajo" id="q52_telefono-trabajo" type="text" value="" />
+
+    <label for="q53_correo-electronico">Correo electrónico:</label>
+    <input name="q53_correo-electronico" id="q53_correo-electronico" type="text" value="" />
+
+    <label for="q54_direccion">Dirección:</label>
+    <input name="q54_direccion" id="q54_direccion" type="text" value="" />
+
+    <label for="q55_ciudad-pais-codigo-p">Ciudad, País, Código Postal:</label>
+    <input name="q55_ciudad-pais-codigo-p" id="q55_ciudad-pais-codigo-p" type="text" value="" />
+
+  
+<h3>INFORMACIÓN DE CONTACTO EN CASO DE EMERGENCIA</h3>
+    <label for="q57_contacto-en-caso-de-">Contacto en caso de emergencia: Dirección:</label>
+    <input name="q57_contacto-en-caso-de-" id="q57_contacto-en-caso-de-" type="text" value="" />
+
+    <label for="q58_telefono-del-trabajo">Teléfono del trabajo:</label>
+    <input name="q58_telefono-del-trabajo" id="q58_telefono-del-trabajo" type="text" value="" />
+
+    <label for="q59_parentezco-telefono-">Parentezco: Teléfono fijo:</label>
+    <input name="q59_parentezco-telefono-" id="q59_parentezco-telefono-" type="text" value="" />
+
+    <label for="q60_otro-telefono">Otro teléfono:</label>
+    <input name="q60_otro-telefono" id="q60_otro-telefono" type="text" value="" />
+
+    <label for="q61_num-de-poliza">Núm de póliza.:</label>
+    <input name="q61_num-de-poliza" id="q61_num-de-poliza" type="text" value="" />
+
+    <label for="q62_compania-aseguradora">Compañía Aseguradora**:</label>
+    <input name="q62_compania-aseguradora" id="q62_compania-aseguradora" type="text" value="" />
+<p>**Si no dispones de seguro médico esperamos que obtengas un seguro de incidentes/viaje para cada retiro.</p>
+
+
+    <label for="q63_otra-informacion-sob">Otra información sobre el seguro:</label>
+    <input name="q63_otra-informacion-sob" id="q63_otra-informacion-sob" type="text" value="" />
+
+    <label for="q64_nombre-del-doctor-te">Nombre del Doctor Teléfono del Doctor:</label>
+    <input name="q64_nombre-del-doctor-te" id="q64_nombre-del-doctor-te" type="text" value="" />
+
+    <label for="q65_alergias-comida-medi">Alergias (Comida, Medicamentos, Plantas, Insectos, etc.):</label>
+    <input name="q65_alergias-comida-medi" id="q65_alergias-comida-medi" type="text" value="" />
+
+    <label for="q66_tomas-alguna-medicac">¿Tomas alguna medicación en la actualidad?:</label>
+    <input name="q66_tomas-alguna-medicac" id="q66_tomas-alguna-medicac" type="text" value="" />
+
+    <label for="q67_no-con-que-motivo">No ¿Con qué motivo?:</label>
+    <input name="q67_no-con-que-motivo" id="q67_no-con-que-motivo" type="text" value="" />
+
+    <label for="q68_nombre-del-medicamen">Nombre del medicamento(s): Dosis:</label>
+    <input name="q68_nombre-del-medicamen" id="q68_nombre-del-medicamen" type="text" value="" />
+
+
+
+
+<h1>DESCARGO DE RESPONSABILIDADES</h1>
+<h2>SECCIÓN 2: DESCARGO DE RESPONSABILIDADES DEL PARTICIPANTE</h2>
+<p>RECONOZCO que existe un elemento significativo de riesgo en cualquier deporte o actividad asociada al aire libre, incluyendo competiciones de cuerdas y programas de aventura.
+RECONOZCO que The Coaches Training Institute y cada uno de los empleados y agentes toman todas las medidas de seguridad razonables en el funcionamiento de este programa. RECONOZCO que mi participación en un programa de liderazgo requerirá que mire a mí mismo de distintas maneras en ocasiones y que esto pueda afectar a mis emociones. Reconozco que los cambios en mi persona puedan conllevar algunos retos emocionales. Estoy preparado para experimentar un amplio abanico de emociones, saber que estos altibajos son requisitos muy probables para el crecimiento personal como líder. HE SIDO INFORMADO de que ciertas partes del programa son rigurosas y potencialmente arriesgadas o físicamente exigentes y que pueden pedirme caminar, correr, hacer estiramientos, escalar,empujar, tirar y desarrollar otras actividades rigurosamente físicas y potencialmente arriesgadas y peligrosas.
+ESTOY VOLUNTARIAMENTE DE ACUERDO en participar en el Programa de Liderazgo Co-Activo dirigido en las fechas especificadas por The Coaches Training Institute y sus empleados y agentes..
+ACEPTO obtener opinión médica cualificada y discutiré mis consideraciones físicas con The Coaches Training Institute si dudo de mi capacidad para participar. ESTOY DE ACUERDO en participar únicamente en la medida de mis condiciones médicas, físicas, emocionales u otras condiciones, no ponerme en riesgo ni hacer peligrar a los demás participantes o miembros del Programa. ACEPTO asumir plena responsabilidad de mis actos y sus consecuencias y de cualquier otra molestia como resultado de cualquier circunstancia o daño a mi persona y/o propiedades. ACEPTO que mi seguro personal y cualquier otro proporcionado o mantenido por cualquier otra persona o entidad, en mi nombre reemplazará y será utilizado antes de la cobertura de seguro que pueda proporcionar The Coaches Training Institute.ESTOY DE ACUERDO en proporcionar el nombre y número de póliza de mi Seguro de Salud al personal del Programa antes del primer retiro y los posibles cambios o actualizaciones con anteioridad a los tres retiros adicionales durante el programa de liderazgo. POR EL PRESENTE ACEPTO INDEMNIFICAR Y LIBERO DE TODA RESPONSABILIDAD a The Coaches Training Institute y los directivos, directores, trabajadores, empleados, asociados, coordinadores, líderes y sus agentes, de cualquier responsabilidad, reclamación o demanda
+(excepto aquellas que provengan de negligencia de las partes anterirormente mencionadas) que yo, mis herederos, albaceas, administradores, procuradores, adjudicadores, representantes personales o legales, y todos los miembros de mi familia, puedan ahora o en el futuro tener por daño o pérdida de cualquier tipo como resultado de mi participación en este Programa. ACEPTO que cualquier disputa concerniente a este acuerdo
+será presentado a arbitraje en el condado de Marin, California, de acuerdo a las leyes de la Asociación Americana de Arbitraje</p>
+<p>HE LEÍDO, ENTIENDO Y ACEPTO LOS TÉRMINOS Y CONDICIONES AQUÍ EXPRESADOS y reconozco que este acuerdo se hará efectivo y vinculante a mi persona y mis herederos de aquí en adelante.</p>
+
+
+    <button type="submit" class="pure-button pure-button-primary">Guardar respuestas</button>
+  </fieldset>
+</form>
+
+<hr>
+
+<h2>Ley de protección de datos</h2>
+
+<p><em>En conformidad con la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal (LOPD), los datos suministrados por usted quedarán incorporados en un fichero automatizado creado por CTI y del que éste será responsable; dicho fichero será procesado exclusivamente para la finalidad de acciones de comunicación, registro y seguimiento de servicios que consume cada cliente y gestión de las relaciones comerciales. Estos se recogerán a través de los formularios correspondientes, los cuales solo contendrán los campos imprescindibles para poder prestar el servicio requerido por el Usuario. 
+Los datos de carácter personal serán tratados con el grado de protección adecuado. El usuario autoriza CTI para el tratamiento de sus datos ahora facilitados con la finalidad antes mencionada. El usuario autoriza expresamente a CTI a utilizar su correo electrónico para enviarle información u ofertas promociónales</em></p>
+<p><em>Todo lo expuesto se entiende sin perjuicio de los derechos de acceso, rectificación, cancelación y oposición que prevén las leyes vigentes y en especial la LOPD para lo que se podrá dirigir a CTI.</em></p>
+
+
+
+<?php 
+} 
+?>
+  
+                   </div>
+            
+            
+         </div>
+         <!-- End Main Content -->
+         
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+
+</html>
+   
