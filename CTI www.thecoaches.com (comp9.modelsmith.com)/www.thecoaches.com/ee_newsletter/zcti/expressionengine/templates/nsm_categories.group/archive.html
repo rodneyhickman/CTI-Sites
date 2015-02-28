@@ -1,0 +1,50 @@
+<div style="background:#fff000; padding:9px;">{total_queries} Queries - {elapsed_time} seconds</div>
+
+{exp:nsm_categories:archive
+	enable="entries"
+	target_category="13"
+}
+{if category_count == 1}
+<p>
+	Total number of categories being displayed: {category_absolute_total_results} <br />
+	Total number of entries being displayed for all categories: {channel_entries_total_results}
+</p>
+<ul>
+{/if}
+<li><strong>{category_name}</strong>
+	<ul>
+		<li>&#123;category_id&#125;: <strong>{category_id}</strong></li>
+		<li>&#123;category_count&#125;: <strong>{category_count}</strong> of {category_total_results}</li>
+		<li>&#123;category_is_target&#125;: {category_is_target}</li>
+		<li>
+			&#123;category_channel_entries_total_results&#125;: 
+			<strong>{category_channel_entries_total_results}</strong>
+		</li>
+		<li>&#123;category_channel_entries&#125;&hellip;&#123;category_channel_entries&#125;
+			<ul>
+				{if category_channel_entries_total_results}
+					{category_channel_entries}
+					<li class="{switch='one|two|three'}">
+						<ul>
+							<li>
+								&#123;category_channel_entry_count&#125;: 
+								<strong>{category_channel_entry_count}</strong> 
+								of {category_channel_entries_total_results} 
+								<small>{count} of {channel_entries_total_results} overall</small>
+							</li>
+							<li>&#123;entry_title&#125;: <strong>{title}</strong></li>
+							<li>&#123;entry_id&#125;: <strong>{entry_id}</strong></li>
+							<li>&#123;entry_url_title&#125;: <strong>{url_title}</strong></li>
+						</ul>
+					</li>
+					{/category_channel_entries}
+				{if:else}
+					<li>No results fool!</li>
+				{/if}
+			</ul>
+		</li>
+		<li>&#123;category_children_total_results&#125;: {category_children_total_results}</li>
+	</ul>
+</li>
+{/exp:nsm_categories:archive}
+</ul>
