@@ -1,0 +1,16 @@
+TODO:
+
+June 29, 2012
+* (DONE) create function to return leaders by name
+* (DONE) create leader name filter
+
+* create output that collates answers
+** (DONE) create output template using questions
+** (DONE) add collated answers
+*** (DONE) all answers for non-ranges
+*** (DONE) percentages for ranges
+
+see example: http://www.thecoaches.com/surveys/admin/leader?key=KAD-ZX23-2ZW4-CMZL&survey_id=1
+
+
+* add key for leaderSuccess, so that Jennet can send to leader
