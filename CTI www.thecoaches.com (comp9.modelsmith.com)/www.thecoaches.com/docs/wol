@@ -1,0 +1,69 @@
+<%flags>
+inherit => undef
+</%flags>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/wol.css" />
+</head>
+<body style="background:none;margin:0;padding:0;">
+         <div id="results">
+         	<div id="wheel">
+<img src="http://www.thecoaches.com/cgi-bin/wol.cgi?q1=<% $qcar/10 %>&q2=<% $qfun/10 %>&q3=<% $qmon/10 %>&q4=<% $qphys/10 %>&q5=<% $qpers/10 %>&q6=<% $qheal/10 %>&q7=<% $qffam/10 %>&q8=<% $qsig/10 %>" alt="" width="300" height="300" />
+                </div>
+            
+            <div id="chart">
+              <table width="350" border="1" cellpadding="0" cellspacing="1" bordercolor="#FFFFFF" style="margin-top:60px">
+                <tr>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Career</td>
+                  <td width="45" height="30" bgcolor="6ac4eb" style="font-weight: bold; text-align:center"><% $qcar %>%</td>
+                  <td width="10"></td>
+                  <td width="45" height="30" bgcolor="f8a863" style="font-weight: bold; text-align:center"><% $qpers %>%</td>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Personal Growth</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Fun and Recreation</td>
+                  <td width="45" height="30" bgcolor="ffd457" style="font-weight: bold; text-align:center"><% $qfun %>%</td>
+                  <td width="10"></td>
+                  <td width="45" height="30" bgcolor="4d8dc4" style="font-weight: bold; text-align:center"><% $qheal %>%</td>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Health &amp; Well-being</td>
+                </tr>
+
+                
+                <tr>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Money and Finances</td>
+                  <td width="45" height="30" bgcolor="e15b8c" style="font-weight: bold; text-align:center"><% $qmon %>%</td>
+                  <td width="10"></td>
+                  <td width="45" height="30" bgcolor="946cb2" style="font-weight: bold; text-align:center"><% $qffam %>%</td>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Friendships &amp; Family</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Phys. Environment</td>
+                  <td width="45" height="30" bgcolor="d4686c" style="font-weight: bold; text-align:center"><% $qphys %>%</td>
+                  <td width="10"></td>
+                  <td width="45" height="30" bgcolor="75cb81" style="font-weight: bold; text-align:center"><% $qsig %>%</td>
+                  <td bgcolor="#E1E1E1" style="padding-left: 5px">Love/Romance</td>
+                </tr>
+              </table>
+            </div>
+            
+         </div>
+         <!-- End Results -->
+</body>
+</html>
+<%once>
+use Math::Round qw(round);
+</%once>
+<%init>
+my $args = $m->request_args();
+
+my $qfun = round( 1.07526 * ($args->{q11} + $args->{q12} + $args->{q13} + $args->{q14}) / 4); 
+my $qphys = round( 1.07526 * ($args->{q21} + $args->{q22} + $args->{q23} + $args->{q24}) / 4); 
+my $qpers = round( 1.07526 * ($args->{q31} + $args->{q32} + $args->{q33} + $args->{q34}) / 4); 
+my $qheal = round( 1.07526 * ($args->{q41} + $args->{q42} + $args->{q43} + $args->{q44} + $args->{q45}) / 5); 
+my $qmon = round( 1.07526 * ($args->{q51} + $args->{q52} + $args->{q53} + $args->{q54}) / 4); 
+my $qffam = round( 1.07526 * ($args->{q61} + $args->{q62} + $args->{q63} + $args->{q64} + $args->{q65} + $args->{q71} + $args->{q72} + $args->{q73} + $args->{q74}) / 9); 
+my $qcar = round( 1.07526 * ($args->{q81} + $args->{q82} + $args->{q83} + $args->{q84} + $args->{q85}) / 5); 
+my $qsig = round( 1.01 * ($args->{q91} + $args->{q92} + $args->{q93} + $args->{q94}) / 4); 
+
+</%init>
+   

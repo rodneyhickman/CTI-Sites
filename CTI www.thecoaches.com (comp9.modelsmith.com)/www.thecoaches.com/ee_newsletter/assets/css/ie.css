@@ -1,0 +1,23 @@
+IFRAME { top: -6px; }
+.mainContent {
+    display: table;
+}
+.main {
+	display: table;
+}
+.contentWrapper {
+	display: table;
+}
+
+ul.mainNav li.logo { width: 350px !important; }
+
+table tbody>tr {background-color: #ffffff; vertical-align: middle; border-bottom: 1px solid #bbbbbb; height: 27px; }
+table tbody>tr.alt {background-color: #e6f3fb; /* border-top: 3px solid #FFF; border-bottom: 3px solid #FFF; */ }
+
+tr:first-child + tr,
+tr:first-child + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr  {background-color: #e6f3fb; /* border-top: 3px solid #FFF; border-bottom: 3px solid #FFF; */ }

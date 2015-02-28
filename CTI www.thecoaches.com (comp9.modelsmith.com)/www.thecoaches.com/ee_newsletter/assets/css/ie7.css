@@ -1,0 +1,20 @@
+/* ----------------- HEADER CONTENT -------------------- */
+
+/* ul.headerNav, ul#ecommerce { list-style: none; display: block; height: 12px; line-height: 12px; padding: 0; margin-bottom: 3px; } */
+/* ul#ecommerce { float: right; }
+ul.headerNav li, ul#ecommerce li { float: left;	} */
+/*ul.headerNav li a, ul#ecommerce li a { font-family: "Georgia", serif; display: block; color: #32110A; margin: 0; font-weight: 300; padding: 0 10px; margin-right: 10px; border-right: 1px solid #000000; text-transform: none; font-size: 11px; text-align: left; text-decoration: none; width: auto; }
+ul.headerNav li a:hover, ul#ecommerce li a:hover { text-decoration: underline; }
+.divider { float: left; } */
+
+ul#ecommerce {position: relative; top: -27px; }
+ul.headerNav, ul#ecommerce { margin-bottom: 3px; }
+ul.mainNav { padding-bottom: 10px; }
+
+tr:first-child + tr,
+tr:first-child + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr,
+tr:first-child + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr  {background-color: #e6f3fb; /* border-top: 3px solid #FFF; border-bottom: 3px solid #FFF; */ }

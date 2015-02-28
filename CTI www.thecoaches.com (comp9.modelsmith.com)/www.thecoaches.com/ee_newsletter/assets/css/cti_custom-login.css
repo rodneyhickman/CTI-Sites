@@ -1,0 +1,6 @@
+/* home */
+body { background: #bdba9d; padding-top: 15px; }
+a { color: rgb(50, 17, 10); font-weight: bold; text-decoration: underline; }
+a:hover { color: rgb(50, 108, 145); }
+div.os-page-header { height: 100px; }
+.os-form select, .os-form input { background: #EFEFEF; border: 1px solid #AAA; margin-bottom: 5px; }

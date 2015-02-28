@@ -1,0 +1,46 @@
+/*---------------- MAINNAV -----------------*/
+
+ul.blogNav { height: 35px; background: #FFFFFF; display: inline-table; margin: 0; padding: 50px 0 0 0; position: relative; list-style: none; width: 100%; z-index: 100;-webkit-border-radius: 8px 8px 0px 0px; border-radius: 8px 8px 0px 0px; }
+ul.blogNav li.level-1 { float: left; padding: 0; height: 39px; position: relative; border-top: 4px solid #FFF; width: auto !important; }
+ul.blogNav li.level-1 a { display: block; height: 39px; line-height: 39px; text-transform: uppercase; color: #6a5854; font-size: 12px; padding: 0 15px; width: auto !important; text-decoration: none; font-family: "Arial", sans-serif; font-weight: bold; }
+
+ul.blogNav li.level-1.logo { text-indent: -9999px; float: left; top: -10px; width: 455px !important; }
+ul.blogNav li.level-1.logo a { background: #FFF url(../img/logo-coactive.png) no-repeat; width: 148px !important; height: 34px; float: right;}
+ul.blogNav li.level-1.logo:hover { background: #FFF; }
+ul.blogNav li:hover a { color: #32110A; }
+ul.blogNav li.here a, ul.blogNav li.parent-here a {  }
+ul.blogNav li.level-1 ul { display: none; list-style: none; margin: 0; padding: 10px 0 0; position: absolute; width: 250px; }
+ul.blogNav li.level-1:hover { background: #f3f3ea; }
+ul.blogNav li.level-1.here a, ul.blogNav li.level-1.parent-here a { color: #32110A; }
+body.home ul.blogNav li.level-1:hover { background: #FFF; }
+ul.blogNav li.level-1:hover ul { display: block; background: #f3f3ea; padding: 25px 0 15px 0; }
+ul.blogNav li.level-1 ul li { display: block; border-bottom: 1px solid #BBB; margin: 0 10px; padding: 0px 0 0px 0; }
+ul.blogNav li.level-1 ul li a { display: block; height: 26px; line-height: 26px; text-transform: none; color: #32110A; font-size: 13px; padding: 0 15px; text-decoration: none; font-family: "Arial", sans-serif; font-weight: normal; }
+ul.blogNav li.level-1 ul li.has-children a { height: 26px; }
+ul.blogNav li.level-1 ul li a:hover,
+ul.blogNav li.level-1 ul li a.here { color: #000000; background: #D6D5C1; }
+ul.blogNav li.level-1 ul li.level-2 ul { display: block; list-style: none; margin: 0; padding: 0; position: relative; width: 200px; border-width: 0; }
+/* HIDE 3rd LEVEL IN SUB-NAV */
+ul.blogNav li.level-1 ul li.level-2 ul { display: none !important; }
+ul.blogNav li.level-1 ul li.level-2 ul li { display: block; width: 200px; }
+ul.blogNav li.level-1 ul li.level-2 ul li a { width: 180px; display: block; height: 19px; line-height: 19px; text-transform: none; color: #888888; font-size: 12px; padding: 0 0 0 20px; text-decoration: none; font-weight: normal; font-family: "Arial", sans-serif; }
+ul.blogNav li.level-1 ul li.level-2 ul li a:hover,
+ul.blogNav li.level-1 ul li.level-2 ul li a.here { color: #000000; }
+
+
+ul.blogNav li.level-1#nav-sub-coach-training:hover, ul.blogNav li.level-1.here#nav-sub-coach-training:hover { border-top: 4px solid #689bbc; }
+ul.blogNav li.level-1.here#nav-sub-coach-training, ul.blogNav li.level-1.parent-here#nav-sub-coach-training { border-top: 4px solid #9dc4dd; }
+ul.blogNav li.level-1#nav-sub-coach-training:hover ul { border-bottom: 8px solid #689bbc; }
+
+ul.blogNav li.level-1#nav-sub-why-cti:hover, ul.blogNav li.level-1.here#nav-sub-why-cti:hover { border-top: 4px solid #e4bd38; }
+ul.blogNav li.level-1.here#nav-sub-why-cti, ul.blogNav li.level-1.parent-here#nav-sub-why-cti { border-top: 4px solid #f4e1a1; }
+ul.blogNav li.level-1#nav-sub-why-cti:hover ul { border-bottom: 8px solid #e4bd38; }
+
+ul.blogNav li.level-1#nav-sub-leadership:hover, ul.blogNav li.level-1.here#nav-sub-leadership:hover { border-top: 4px solid #ce6928; }
+ul.blogNav li.level-1.here#nav-sub-leadership, ul.blogNav li.level-1.parent-here#nav-sub-leadership { border-top: 4px solid #e2af8f; }
+ul.blogNav li.level-1#nav-sub-leadership:hover ul { border-bottom: 8px solid #ce6928; }
+
+ul.blogNav li.level-1#nav-sub-for-organizations:hover, ul.blogNav li.level-1.here#nav-sub-for-organizations:hover { border-top: 4px solid #852f2d; }
+ul.blogNav li.level-1.here#nav-sub-for-organizations, ul.blogNav li.level-1.parent-here#nav-sub-for-organizations { border-top: 4px solid #bb8583; }
+ul.blogNav li.level-1#nav-sub-for-organizations:hover ul { border-bottom: 8px solid #852f2d; }
+

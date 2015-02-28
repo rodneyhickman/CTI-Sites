@@ -1,0 +1,41 @@
+/*
+body, h1, h2, h3, ol, ul, div, dl, dd, dt {
+    width: auto;
+    border: 0;
+    margin: 0 5%;
+    padding: 0;
+    overflow: visible;
+    position: relative;
+	display: block;
+	float: none;
+}
+*/
+div.headerWrapper, div.bannerWrapper, #footerWrapper, .breadcrumb { display:none !important; }
+dt, dd {
+	float: none !important;
+	text-align: left !important;
+	width: 100% !important; 
+	margin-right: 0 !important;
+}
+.contentWrapper, .mainContent { width: 960px; display: block;}
+.main {width: 570px; display: block; float: left; margin-right: 25px; padding: 0;}
+#sidebar {width: 300px; display: block; float: right; background: none;}
+#sidebar .subnav a:after {display: none;}
+.footerSpace {display: none;}
+#sidebar div { page-break: ' '; }
+
+/* By default links are blue. For optimal legibility change them to black */
+p a {color: #000}
+
+/* Show the URL after each link, whereby internal links are preceeded by the site's URL */
+p a:after, h3 a:after, h4 a:after, li a:after, .sidebarItem a:after, a#webinar-link:after {
+	content: " (http://www.thecoaches.com/" attr(href) ")";
+	font-size: 80%;
+	word-wrap: break-word;
+	display: none;
+}
+
+/* External links don't get this treatment */
+p a[href^="http://"]:after, p a[href^="https://"]:after {
+	content: " (" attr(href) ")";
+}

@@ -1,0 +1,40 @@
+body { background: #bdba9d; padding-top: 15px; 
+font-family: "Arial", sans-serif; font-size: 10pt;
+}
+h2{ font-size:20px; 
+font-weight:bold;
+color: #4b3905;
+padding-bottom:4px;
+margin-top:8px !important;
+}
+h1{ font-size:17px; 
+font-weight:bold;
+padding:5px 0;
+}
+td.homepageCell table.block td { vertical-align: top; height:1px !important; } 
+table { empty-cells: show }
+
+#os-layout-element-15 p { padding-top:8px; padding-left:9px;}
+
+#ptc_Personal-Info {
+display:none;
+}
+
+/*#806*/
+div.os-slbuttonbar:nth-of-type(1) {
+    display: none;
+}
+
+
+.Table .page-subTitleText:nth-of-type(2)
+{
+	 display: none !important;
+}
+.Table tr:nth-child(4), .Table tr:nth-child(5), .Table tr:nth-child(6), .Table tr:nth-child(7) {
+    display: none;
+}
+ 
+/*div.os-left h1:nth-of-type(1) {
+    display: none;
+}
+ */
