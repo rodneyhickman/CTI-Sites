@@ -1,0 +1,4 @@
+% $m->call_next();
+<%init>
+    my $username = $m->scomp('../authen.mas');
+</%init>
