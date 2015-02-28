@@ -1,0 +1,151 @@
+<?php 
+ $html ='<div class="container">';
+$html .='<h1>Survey Results for '.$leader_name.'</h1>';
+ 
+ foreach($collated_answers as $ca):  
+ 
+$question           = $ca['question'];
+$content            = preg_replace('/<[^>]*>/',' ', $question['content']);
+$answers            = $ca['answers'];
+$formmatted_answers = @$ca['formatted_answers'];
+ 
+$html .='<div class="question">';
+$html .='<h2>'.$question['heading'].'</h2>';
+$html .='<p>'.$content.'</p>';
+
+
+ if(count($answers) > 0):  
+$html .='<div class="answer">'.$formmatted_answers.'</div>';
+  endif; 
+
+$html .='</div>';
+
+ endforeach; 
+
+
+$html .='</div>';
+ 
+echo $html;
+
+$html_1="<style>
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+font-family: Arial, sans-serif;
+font-weight: bold;
+margin: 0 0 10px 0;
+}
+
+h1,h2 { 
+margin-top:10px;
+}
+
+h1 { 
+font-size: 20px;
+}
+
+h2 { 
+font-size: 16px;
+}
+p,th,td,li { 
+font-family: Georgia, serif;
+margin: 0 0 10px 0;
+font-size: 14px;
+line-height:16px;
+}
+
+.container { 
+width:900px;
+margin:20px auto;
+}
+
+.question { 
+background:#CCFFCC;
+padding: 10px;
+margin:20px 0;
+border-radius:3px;
+ }
+.answer { 
+background:#FFFFFF;
+border:solid 1px #aaeeaa;
+}
+
+.answer p,td { 
+margin:0;
+padding:2px;
+}
+
+.answer table { 
+width:100%;
+margin:0;
+}
+.answer tr:nth-child(even),
+.answer p:nth-child(even) { 
+background:#eee;
+}
+</style>";
+
+$html_1 .= $html;
+$html1 = utf8_encode($html_1);
+//==============================================================
+//==============================================================
+//==============================================================
+require("/pdf/mpdf.php");
+
+//$file = 'people.txt';
+// Open the file to get existing content
+//$current = file_get_contents($file);
+// Append a new person to the file
+//$current = $html1;
+// Write the contents back to the file
+//file_put_contents($file, $current);
+
+$mpdf=new mPDF(); 
+
+$mpdf->WriteHTML($html1);
+$content = $mpdf->Output('', 'S');
+$mpdf->Output('/pdf2014/'.trim($leader_name).' 2013.pdf','F');
+?>

@@ -1,0 +1,211 @@
+# CTI Co-active Sales Class schema
+#
+# To update project after schema change, do:
+# (backup database)
+# symfony propel:build-model
+# symfony propel:build-sql
+# symfony propel:insert-sql
+# (restore database)
+#
+#
+propel:
+#
+#
+  profile_group:
+    id:       {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+
+    created_at:
+    updated_at:
+
+    extra1:   longvarchar
+    extra2:   longvarchar
+    extra3:   longvarchar
+    extra4:   longvarchar
+    extra5:   longvarchar
+    extra6:   longvarchar
+    extra7:   longvarchar
+    extra8:   longvarchar
+    extra9:   longvarchar
+    extra10:  longvarchar
+#
+#
+  profile:
+    id:       {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    fmid:     {type: INTEGER}
+    name:     longvarchar
+    email:    longvarchar
+    purpose:  longvarchar
+    
+    created_at:
+    updated_at:
+
+    extra1:   longvarchar
+    extra2:   longvarchar
+    extra3:   longvarchar
+    extra4:   longvarchar
+    extra5:   longvarchar
+    extra6:   longvarchar
+    extra7:   longvarchar
+    extra8:   longvarchar
+    extra9:   longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+# the purpose of this table is to provide a way for Jennet to send a secure link to a leader so they can view the results
+#
+  leader:
+    id:       {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    name:     longvarchar
+    survey_id: {type: INTEGER, foreignTable: survey, foreignReference: id }
+    retrieval_key: longvarchar
+    created_at:
+    updated_at:
+
+    extra1:   longvarchar
+    extra2:   longvarchar
+    extra3:   longvarchar
+    extra4:   longvarchar
+    extra5:   longvarchar
+    extra6:   longvarchar
+    extra7:   longvarchar
+    extra8:   longvarchar
+    extra9:   longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+  survey:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    title:  longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+#
+#
+  question:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    survey_id: {type: INTEGER, foreignTable: survey, foreignReference: id }
+
+    heading: longvarchar
+    content: longvarchar
+    next_id: {type: INTEGER}
+    is_range: varchar(3)
+    source_text: longvarchar
+    
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+#
+# answer_set is a proxy object. It is used to represent a set of answers for a particular question when displayed in the screen
+#
+  answer_set:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+#
+#
+  answer:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    profile_group_id: {type: INTEGER, foreignTable: profile_group, foreignReference: id, onDelete: cascade}
+    question_id: {type: INTEGER, foreignTable: question, foreignReference: id, onDelete: cascade}
+    response: longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+#	
+  archive:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    profile_group_id: {type: INTEGER, foreignTable: profile_group, foreignReference: id, onDelete: cascade}
+    question_id: {type: INTEGER, foreignTable: question, foreignReference: id, onDelete: cascade}
+    response: longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
