@@ -1,0 +1,56 @@
+<div id="cta-area" style="margin-top: 20px;">
+<!-- img src="/res/img/index-buckets-fpo.gif" style="margin-top: 20px;" / -->
+
+
+
+<!-- FOUR SEPARATE BUCKETS
+================================== -->
+
+<dl class="cta" id="cta1" style="height:140px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:60px; vertical-align:bottom;"><a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>"><img src="/res/img/bucket_header_questions.gif" width="230" height="60" alt="Questions?" /></a></dt>
+
+<dd style="padding-left:26px; width:180px; font-size:1.0em;">Do you want to hear more about Co-active Coaching? Feel free to contact <abbr title="Coaches Training Institute">CTI</abbr> at 1.800.691.6008 or <a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>" style="color:#000000;font-size:1.1em; text-decoration:underline;">click here to schedule a call.</a></dd>
+
+</dl>
+
+<dl class="cta" id="cta2" style="height:140px;padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:57px; vertical-align:bottom;"><a href="<% $booking_link %>" border="0"><img src="/res/img/bucket_header_webinar.gif" width="185" height="57" alt="Learn More!" style="padding-left:20px;" /></a></dt>
+
+<dd style="padding-left:28px; width:180px;color:#000000;font-size:1.0em;">Learn more about our Co-active Coaching program by joining a free live info call. <a href="<% $booking_link %>" style="color:#000000; text-decoration:underline;">Click to join</a>&nbsp;&raquo;</dd>
+
+
+
+</dl>
+
+<dl class="cta" id="cta3" style="height:140px;width:233px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:98px; vertical-align:bottom;"><a href="http://www.coactivesummit.com"><img src="/res/img/bucket_header_first-global-conf.gif" width="213" height="98" alt="The First Global Co-active &reg; Conference" style="padding-left:20px;" /></a></dt>
+
+<dd style="padding-left:26px; width:180px; font-size:1.0em;">Don't miss this <a href="http://www.coactivesummit.com" style="text-decoration:underline;">ground-breaking and transformative event.</span></a></dd>
+
+</dl>
+
+
+<dl class="cta" id="cta4" style="height:140px;">
+
+<dt style="height:83px; vertical-align:bottom;"><a href="/coach-training/business-builder" border="0"><img src="/res/img/bucket_header_biz-builder.gif" width="211" height="83" alt="Business Builder" style="padding-left:20px;" /></a></dt>
+
+<dd style="padding-left:28px; width:187px; color:#000000; font-size:1.0em;">Where do YOU stop for small business directions? <a href="/coach-training/business-builder" style="color:#000000; text-decoration:underline;">Learn&nbsp;more</a>&nbsp;&raquo;</dd>
+
+</dl>
+
+
+<!-- ==============================
+FOUR SEPARATE BUCKETS -->
+
+
+</div>
+<%args>
+$params => ''
+</%args>
+<%init>
+my ($booking_link) = $dbh->selectrow_array("select booking_link from event_calendar where course_type_id=120 and `event` like 'fun%' order by fmid desc limit 1",undef);
+</%init>
+

@@ -1,0 +1,84 @@
+<div id="cta-area" style="margin-top: 20px;">
+
+
+<!-- FOUR SEPARATE BUCKETS
+================================== -->
+
+<dl class="cta" id="cta1" style="height:140px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:60px; vertical-align:bottom;"><a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>"><img src="/res/img/bucket_header_questions.gif" width="230" height="60" alt="Questions?" /></a></dt>
+
+<dd style="padding-left:26px; width:180px; font-size:1.0em;">Want to learn more about Co&#8209;active Coaching? Call us at 1.800.691.6008, <a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>" style="color:#000000; text-decoration:underline;">schedule a call</a>, or <a href="<% $booking_link %>" style="color:#000000; text-decoration:underline;">sign up for a FREE webinar</a>&nbsp;&raquo;</dd>
+
+</dl>
+
+
+<!--
+<dl class="cta" id="cta2" style="height:140px;padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat; margin-top: 26px;">
+
+<dt style="height:57px; vertical-align:bottom;"><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/" border="0"><img src="/res/img/bucket_header_lc.gif" width="185" height="57" alt="Learn More!" style="padding-left:20px;" /></a></dt>
+
+<dd style="padding-left:28px; width:180px;color:#000000;font-size:1.0em;">Transform your practice with <br />the Leadership Circle profile! <br /><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/" style="color:#000000; text-decoration:underline;">Learn more</a>&nbsp;&raquo;</dd>
+-->
+
+ 
+<dl class="cta" id="cta2" style="height:140px;padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat; margin-top: 26px;">
+
+<dt style="height: 57px; vertical-align: bottom; position: relative; top: 12px; left: 25px;"><a href="http://player.vimeo.com/video/28840615?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" rel="shadowbox;width=629;height=354">
+		<img class="size-full wp-image-76 alignleft" title="Henry Kimsey-House" src="http://www.coactivesummit.com/images/slider-Henry-Kimsey-House-horz-sm.jpg" alt="Henry Kimsey-House" width="174" height="85" border="0" /></a></dt>
+	<dd style="padding-left: 25px; width: 190px; color: rgb(0, 0, 0); font-size: 1em; position: relative; top: 20px;"><p>Watch CTI Co-Founder, Henry Kimsey-House <a href="http://player.vimeo.com/video/28840615?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" rel="shadowbox;width=629;height=354" style="text-decoration: underline;">talk about the power of Co-active coaching.</a></p></dd>
+</dl>
+ 
+
+<!-- Temporary San Jose special until Aug 2011
+<dl class="cta" id="cta2" style="height:140px;padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat; margin-top: 26px;">
+
+<dt style="height: 57px; vertical-align: bottom; position: relative; top: 12px; left: 25px;">
+<h1>Fundamentals <br />Coming to San Jose, CA</h1>
+</dt>
+<dd style="padding-left: 25px; width: 190px; color: rgb(0, 0, 0); font-size: 1em; position: relative; top: 20px;">
+<p>CTI is expanding to the South Bay with Fundamentals on August 5-7, 2011. <a href="http://www.thecoaches.com/coach-training/courses/course_fundamentals.html" style="text-decoration: underline;">Learn more.</a></p>
+</dd>
+</dl> -->
+
+
+<!-- Coactive Summit -->
+<!--
+<dl class="cta" id="cta3" style="height:140px;width:233px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+<dt style="height:98px; vertical-align:bottom;"><a href="http://www.coactivesummit.com"><img src="/res/img/bucket_header_first-global-conf.gif" width="213" height="98" alt="The First Global Co-active &reg; Conference" style="padding-left:20px;" /></a></dt>
+<dd style="padding-left:26px; width:180px; font-size:1.0em;">Don't miss this <a href="http://www.coactivesummit.com" style="text-decoration:underline;">ground-breaking and transformative event.</span></a></dd>
+</dl>
+-->
+
+<!-- Business Builder -->
+<dl class="cta" id="cta3" style="height:140px;width:233px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+<dt style="height:83px; vertical-align:bottom;"><a href="/coach-training/business-builder" border="0"><img src="/res/img/bucket_header_biz-builder.gif" width="211" height="83" alt="Business Builder" style="padding-left:20px;" /></a></dt>
+<dd style="padding-left:28px; width:187px; color:#000000; font-size:1.0em;">Where do YOU stop for small business directions? <a href="/coach-training/business-builder" style="color:#000000; text-decoration:underline;">Learn&nbsp;more</a>&nbsp;&raquo;</dd>
+</dl>
+
+
+
+
+<!-- Leadership Circle -->
+<dl class="cta" id="cta4" style="height:140px; margin-top: 26px;">
+
+<dt style="height:57px; vertical-align:bottom;"><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/" border="0"><img src="/res/img/bucket_header_lc.gif" width="185" height="57" alt="Learn More!" style="padding-left:20px;" /></a></dt>
+
+<dd style="padding-left:28px; width:180px;color:#000000;font-size:1.0em;">Transform your practice with <br />the Leadership Circle profile! <br /><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/" style="color:#000000; text-decoration:underline;">Learn more</a>&nbsp;&raquo;</dd>
+
+
+
+
+
+<!-- ==============================
+FOUR SEPARATE BUCKETS -->
+
+
+</div>
+<%args>
+$params => ''
+</%args>
+<%init>
+my ($booking_link) = $dbh->selectrow_array("select booking_link from event_calendar where course_type_id=120 and `event` like 'fun%' order by fmid desc limit 1",undef);
+</%init>
+

@@ -1,0 +1,91 @@
+<div id="cta-area" style="width:920px;">
+
+<!-- dl class="cta" style="width: 643px; margin-bottom: 20px;">
+<img src="/res/img/index-buckets-footer-fpo.gif" />
+</dl -->
+
+<!--
+<dl class="cta" id="cta1">
+
+<dt><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/<% $params %>"><img src="http://www.thecoaches.com/res/img/cta_assessment.gif" width="195" height="42" alt="Assessments and Tools" /></a></dt>
+
+<dd><a href="http://www.thecoaches.com/coach-training/assessments-and-tools/" style="color:#699bbc;"><b><span style="font-size:1.2em">The Leadership Circle Profile</span><br />The breakthrough 360 degree profile that gives you the whole picture</b></a>.<br />
+
+</dd>
+</dl>
+
+
+<dl class="cta" id="cta2">
+
+<dt><a href="http://www.coactivenetwork.com/<% $params %>"><img src="http://www.thecoaches.com/res/img/cta_join-our-network.gif" width="195" height="42" alt="Join Our Network" /></a></dt>
+
+<dd><a href="http://www.coactivenetwork.com/<% $params %>">The universal gathering place for <abbr title="Coaches Training Institute">CTI</abbr> graduates to assemble in one central community
+
+<span class="arrowlink">.</span>
+
+</a></dd>
+
+</dl>
+
+<dl class="cta" id="cta3">
+
+<dt><a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>"><img src="http://www.thecoaches.com/res/img/cta_schedule-a-call.gif" width="195" height="42" alt="Schedule a Call" /></a></dt>
+
+<dd><a href="http://www.thecoaches.com/contact/schedule-a-call/<% $params %>">Do you want to hear more about Co-Active Coaching? Please feel free to contact <abbr title="Coaches Training Institute">CTI</abbr> at 1.800.691.6008 or click here to register
+
+<span class="arrowlink">.</span>
+
+</a></dd>
+
+</dl>
+-->
+<dl class="cta" id="cta1" style="width:227px; height:140px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat; margin-left:10px;">
+
+<dt style="height:98px; vertical-align:bottom;"><a href="/coactive-conference/"><img src="/res/img/bucket_header_first-global-conf.gif" width="213" height="98" alt="The First Global Co-active &reg; Conference" style="padding-left:0px;" /></a></dt>
+
+<dd style="padding-left:5px; width:180px; font-size:1.0em;"><a href="/coactive-conference/">Don't miss this ground-breaking and transformative event.</span></a></dd>
+
+</dl>
+
+<dl class="cta" id="cta2" style="height:140px;width:211px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:83px; vertical-align:bottom;"><a href="/coach-training/business-builder" border="0"><img src="/res/img/bucket_header_biz-builder.gif" width="211" height="83" alt="Business Builder" style="padding-left:0px;" /></a></dt>
+
+<dd style="padding-left:10px; width:187px; color:#000000; font-size:1.0em;">Where do YOU stop for small business directions? <a href="/coach-training/business-builder" style="color:#000000; text-decoration:underline;">Learn more </a>&raquo;</dd>
+
+</dl>
+
+<dl class="cta" id="cta3" style="height:140px; padding-right:1px; background:url('/res/img/bucket_div.gif')top right no-repeat;">
+
+<dt style="height:57px; vertical-align:bottom;"><a href="<% $booking_link %>" border="0"><img src="/res/img/bucket_header_learn-more.gif" width="185" height="57" alt="Learn More!" style="padding-left:0px;" /></a></dt>
+
+<dd style="padding-left:8px; width:180px;color:#000000;font-size:1.0em;">Learn more about our Co-active Coaching program by joining a free webinar. <a href="<% $booking_link %>" style="color:#000000; text-decoration:underline;">Click to join </a>&raquo;</dd>
+
+</dl>
+<dl class="cta" id="cta4" style="height:140px; margin-top:24px; margin-left:18px;">
+
+<dt><img src="http://www.thecoaches.com/res/img/cta_newsletter-sign-up.gif" width="195" height="42" alt="Newsletter Sign-Up" /></dt>
+
+<dd>
+
+
+
+<form name="optin" id="optin" methog="GET" action="http://ww2.thecoaches.com/contact/newsletter/">
+<input type="hidden" NAME="OILB_MAIL_PREF" VALUE="multi-part">
+<input id="e" name="e" type="text" /><input VALUE="Submit" onClick="javascript:popUp('');document.optin.submit();" id="submit" name="submit" type="image" src="http://www.thecoaches.com/res/img/arrow_submit.jpg" alt="&gt;" />
+<label id="label_newsletter" for="newsletter">Enter your email address above</label>
+<INPUT TYPE="HIDDEN" NAME="commitcontact" VALUE="true"><INPUT TYPE="HIDDEN" NAME="builderType" VALUE="free">
+</form>
+
+</dd>
+
+</dl>
+
+</div>
+<%args>
+$params => ''
+</%args>
+<%init>
+my ($booking_link) = $dbh->selectrow_array("select booking_link from event_calendar where course_type_id=120 and `event` like 'fun%' order by fmid desc limit 1",undef);
+</%init>
+

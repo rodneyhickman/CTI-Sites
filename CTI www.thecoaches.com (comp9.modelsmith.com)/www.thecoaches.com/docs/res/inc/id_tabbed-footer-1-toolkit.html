@@ -1,0 +1,40 @@
+  		<!-- Begin FOOTER -->
+			<div id="id_tabbed-footer.html">
+				<!-- footer TABS go here if needed using id=footerMain on div -->
+			    
+			<!-- End FOOTER -->			
+			
+			<!-- The following code is the old footer style that has links; removed by bb Jan 31,2013 and replaced 
+				by new footer style matching new EE CTI site. -->
+<!-- 			<div id="footer">
+				< ! -- img id="cti-logo-tagged" src="/res/img/cti-changing-business-transforming-lives.gif" width="176" height="57" alt="cit: changing business. transforming lives."/ -- >
+				<div id="footer-content">
+					< ! -- footerNavId -- >< & '/res/inc/id_footer-nav.html' & >
+					<img id="icf-logo" src="/res/img/icf-logo.gif" width="74" height="57" alt="International Coach Federation"/>
+				</div>
+			</div>   -->
+		<div id="footer">
+				<div id="footer-content" style="position: relative; left: -15px;">
+					<div id="footer-nav" style=" width: 960px; margin-top: 10px; float: left; font-size: 0.94em; line-height: 120%; padding-bottom: 2px; padding-top: 5px;"> 
+						<ul class="social-icons" style=" width: 960px; margin-top: 10px;">
+				            <li class="twitter-icon" style="float: left; display: block; margin: 0 35px 0 0; clear: none;"><a href="http://twitter.com/cti_coaches/" target="_blank">Follow Us on Twitter</a></li>
+										<li class="facebook-icon" style="float: left; display: block; margin: 0; clear: none;"><a href="https://www.facebook.com/CTICoaches/">Join Us on Facebook</a></li>
+										<li style="float: right; display: block; margin: 0; clear: none;"><img id="coactive-footer-logo" src="http://www.thecoaches.com/res/img/new_coactive_footer_logo.png" width="224" height="88" alt="Coactive Logo" style="margin-right: 35px;"/></li>
+						</ul>  <br />  
+				        <div class="clear">&nbsp;</div>       
+				        <div id="footer-legal" style="width: 500px; position: relative; top: -70px; margin-bottom: 5px;">Copyright &copy; 2010-<?php	echo date('Y'); ?> The Coaches Training Institute. All rights reserved.</div>
+					</div>
+					<p>&nbsp;</p>
+				</div>
+		</div>  <!-- end footer -->
+ </div>
+	</div>
+
+
+<%init>
+my $args = $m->request_args();
+if(exists $args->{cpcc}){
+  # record referer
+}
+my ($booking_link) = $dbh->selectrow_array("select booking_link from event_calendar where course_type_id=120 and `event` like 'fun%' order by fmid desc limit 1",undef);
+</%init>
