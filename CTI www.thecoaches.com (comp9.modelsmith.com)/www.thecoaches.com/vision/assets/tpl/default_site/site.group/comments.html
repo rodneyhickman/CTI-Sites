@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8">
+        <title>The Hedgehog &amp; the Waterfall</title>
+        <meta name="description" content="">
+        <!-- <meta name="viewport" content="width=device-width"> -->
+
+        <link rel="stylesheet" href="/vision/assets/css/normalize.min.css">
+        <link rel="stylesheet" href="/vision/assets/css/main.css">
+        <link rel="stylesheet" href="/vision/assets/css/fonts/stylesheet.css">
+        <link rel="stylesheet" href="/vision/assets/css/vision.css">
+		<link rel="stylesheet" href="/vision/assets/css/jplayer.css">
+	    <link rel="icon" type="image/png" href="/vision/assets/img/favicon.png">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/vision/assets/css/ie.css">
+            <script type="text/javascript">
+			 document.createElement('header');
+			 document.createElement('hgroup');
+			 document.createElement('nav');
+			 document.createElement('menu');
+			 document.createElement('section');
+			 document.createElement('article');
+			 document.createElement('aside');
+			 document.createElement('footer');
+			</script>
+		<![endif]-->
+    	<!--[if lt IE 8]>
+    		<link rel="stylesheet" href="/vision/assets/css/ie7.css">
+        <![endif]-->
+    	
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/vision/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+   		<link rel="stylesheet" href="/vision/assets/js/libs/css/styles.css" />
+   		<style type="text/css">
+	   		h1 {
+				border-bottom: 1px solid #bcac82;
+			    text-align: left;
+			    color: #54391A;
+			    font-family: 'BAGLight','Arial','Helvetica',sans-serif;
+			    font-size: 23px;
+			    font-weight: normal;
+			    margin-bottom: 10px;
+			    margin-top: 12px;
+			    padding-bottom: 7px;
+			}
+   		</style>
+       
+    </head>
+    <body style="background: #f0dfb3 none !important;">
+        <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+        
+        <!-- div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script -->
+    	
+    	
+    	<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+            {exp:channel:entries limit="1"}
+            
+            	<!-- DISORIENTING EVENT -->
+		        <article>
+		        {if url_title == 'your-chasm'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What is the chasm in your life — what feels like an impossibly deep barrier to you?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_disorienting_event"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field == 'do_not_share_chasm'}<span class="hide"></span>{/if}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_is_the_chasm_in_your_life'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'ctis-chasm'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What is the chasm CTI is facing?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_disorienting_event"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_is_the_chasm_cti_is_facing'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments two" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'global-chasm'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What global chasms can CTI help humanity cross?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_disorienting_event"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_global_chasms_can_cti'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments three" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+		        {/if}
+				
+				</article>
+			
+            	<!-- THE STRUGGLE -->
+		        <article>
+                {if url_title == 'my-superpower'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What am I good at? (What’s my superpower?)</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_the_struggle"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field == 'do_not_share_superpower'}<span class="hide"></span>{/if}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_am_i_good_at'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments four" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'my-inadequacies'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What are my inadequacies or limiting beliefs?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_the_struggle"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field == 'do_not_share_inadequacies'}<span class="hide"></span>{/if}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_are_my_inadequacies'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments five" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'ctis-struggle'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What is CTI best at, internally? What does it struggle with?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_the_struggle"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_is_cti_best_at'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments six" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				</article>
+			
+            	<!-- DISCOVERY -->
+		        <article>
+                {if url_title == 'where-do-i-lead-best'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	How does my piece connect with the pieces of others? From where do I lead best? How do I best serve and empower others?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_discovery"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field == 'do_not_share_lead'}<span class="hide"></span>{/if}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'how_does_my_piece_connect'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'ctis-dam'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What dam holds CTI back?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_discovery"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_dam_holds_cti_back'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'ctis-superpower'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What does CTI do best, with regard to its competition? (What’s CTI’s superpower?)</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_discovery"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_does_cti_do_best'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				</article>
+			
+            	<!-- NEW WORLD -->
+		        <article>
+                {if url_title == 'potential-energy-source'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What is it behind the dam that provides all that potential richness and energy?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_new_world"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_is_it_behind_the_dam'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'what-paradigm-shift'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What paradigm shift might be represented by the dam giving way to a powerful waterfall?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_new_world"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_paradigm_shift'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				{if url_title == 'new-land'}
+                	<h1><span style="font-size: .6em; font-weight: 500;">Viewing Responses to:</span><br/>
+                	What will that fertile, full-of-possibility new land look like after CTI tends and nurtures it? What might it mean to “tend and nurture”?</h1>
+                    <section class="left" style="overflow: auto; width: 45%;">
+                    <h4>WHAT PEOPLE ARE SAYING:</h4>
+                    {exp:forms:entries form_name="homework_new_world"}
+						<p style="font-size: 14px; line-height: 18px;">
+						{forms:fields}
+							{if forms:field_name == 'your_name'}<em>{forms:field} -- </em>{/if}
+							{if forms:field_name == 'what_will_that_fertile'}<span>{forms:field}</span>{/if}
+						{/forms:fields}
+						</p>
+					{/exp:forms:entries}
+					</section>
+                    <section class="right" class="comments one" style="overflow: auto; width: 45%;">
+                        <h4>JOIN THE DISCUSSION:</h4>
+                        <fb:comments href="{page_url}" width="420" num_posts="100"></fb:comments>
+                        <!-- <div class="fb-comments" data-href="{page_url}" data-width="430" data-num-posts="100"></div> -->
+		            </section>
+                {/if}
+				
+				</article>
+			{/exp:channel:entries}
+            
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/vision/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script -->
+		
+		<script src="/vision/assets/js/plugins.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function() {
+				$("span.hide").parent().css('display', 'none');
+			});
+		</script>
+		<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

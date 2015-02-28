@@ -1,0 +1,36 @@
+.interior p span span.firstcharacter {
+    line-height: 150px;
+    margin: 0 10px 0 -30px;
+}
+.dform_element label,
+.dform_element.dform_file_upload.dftop_label {
+	display: block !important;
+	/* width: 350px; */
+	height: auto !important;
+}
+.dform_element.dform_textarea {
+	padding-bottom: 0 !important;
+}
+.dform_textarea > .dform_label {
+	display: none!important;
+	/* width: 250px; */
+}
+.dform_file_upload {
+	width: 250px;
+	float: right;
+	/* padding-left: 35px; */
+}
+#slideshow {
+	height: 1700px !important;
+}
+/*
+.homework h2.fable .initial-a,
+.homework h2.fable .initial-t,
+.homework h2.fable .initial-d {
+	float: none;
+	top: 20px;
+}
+*/
+ol li.launch {
+	margin-left: 0 !important;
+}

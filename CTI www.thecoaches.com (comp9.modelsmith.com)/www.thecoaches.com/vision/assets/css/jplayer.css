@@ -1,0 +1,53 @@
+nav.actions {
+	margin-top: 0;
+}
+nav.actions ol {
+	padding: 0;
+	display: inline-block;
+}
+nav.actions ol li a,
+div.jp-audio div.jp-type-single a.jp-play,
+div.jp-audio div.jp-type-single a.jp-pause {
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    color: #3f8891;
+    font-family: 'BAGLight', 'Arial', 'Helvetica', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 51px;
+    margin: 0;
+    padding: 0 0 0 64px;
+    text-decoration: none;
+    text-transform: lowercase;
+    text-align: left;
+    width: auto;
+}
+nav.actions ol li.play {
+    width: 150px;
+}
+nav.actions ol li.launch {
+    margin-left: 40px;
+    /* display: inline-table; */
+}
+nav.actions ul li.launch a,
+nav.actions ol li.launch a {
+    background: transparent url("../img/ico_launchFable.png") no-repeat scroll left center;
+}
+nav.actions ul li.play a.jp-play,
+nav.actions ol li.play a.jp-play,
+div.jp-audio div.jp-type-single a.jp-play {
+    padding: 0 0 0 54px;
+    background: transparent url("../img/ico_playAudio.png") no-repeat scroll left center;
+}
+nav.actions ul li.play a.jp-play.playing,
+nav.actions ol li.play a.jp-play.playing,
+div.jp-audio div.jp-type-single a.jp-pause {
+    padding: 0 0 0 54px;
+    background: transparent url("../img/ico_pauseAudio.png") no-repeat scroll left center;
+}
+
+div.jp-jplayer,
+div.jp-audio,
+div.jp-audio div {
+	display: block !important;
+}

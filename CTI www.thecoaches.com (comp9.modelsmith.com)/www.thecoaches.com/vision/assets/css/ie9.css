@@ -1,0 +1,19 @@
+.dform_element label,
+.dform_element.dform_file_upload.dftop_label,
+.dform_label {
+	/* display: block !important; */
+	/* width: 250px; */
+}
+.dform_text_input label { display: block !important; }
+.dform_textarea > .dform_label {
+	/* display: none !important; */
+	/* width: 250px; */
+}
+.dform_file_upload {
+	width: 250px;
+	float: right;
+	padding-left: 0;
+}
+#slideshow {
+	height: 1600px !important;
+}

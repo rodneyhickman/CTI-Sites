@@ -1,0 +1,11 @@
+http://www.thecoaches.com/vision/
+
+
+Jan 30, 2013
+* create PHP to accept photo download
+* create test page with fields and file download using http://jquery.malsup.com/form/progress3.html
+
+* create admin page to view results
+** admin login
+** index page with most recent submission at top
+** page to show submission

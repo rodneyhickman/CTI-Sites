@@ -1,0 +1,54 @@
+
+/* change the ID to match your slider */
+#slideshow { /* width: 960px; height: 2470px;  */ list-style: none; overflow: hidden; }
+
+
+/* Overall Wrapper */
+div.anythingSlider { display: block; margin: 0 auto; overflow: hidden; /* needed for Opera and Safari */ position: relative; padding: 65px 0 0; top: -65px; height: 1530px !important; }
+.main.wrapper.panel { height: 1325px !important; }
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow { /* overflow: hidden; */ position: relative; left: -960px; width: 100%; height: 100%; }
+/* anythingSlider base (original element) */
+.anythingBase { background: transparent; list-style: none; position: absolute; /* overflow: visible !important; */ top: 0; /* left: -1920 !important; */ margin: 0; padding: 0; }
+
+/* all panels inside the slider */
+.anythingBase .panel { background: transparent;	display: block;	overflow: hidden; float: left; padding: 0; margin: 0; /* opacity: 0; filter: filter(opacity=0); */ }
+.anythingBase .panel.activePage { opacity: 1; filter: filter(opacity=100); }
+.anythingBase .panel.vertical { float: none; }
+
+/*
+li#two,
+li#three,
+li#four {
+	display: none;
+}
+li#two.submitted,
+li#three.submitted,
+li#four.submitted {
+	display: block;
+}
+*/
+
+/* Navigation Arrows */
+/* div.anythingSlider .arrow { top: 50%; position: fixed; display: block; } */
+/* div.anythingSlider .arrow a { height: 36px; width: 36px; background: url(../img/icon-arrows-round.png) no-repeat; text-indent: -9999px; display: block; outline: 0; } */
+/* hide text, target the span so IE7 doesn't text-indent the link */
+/* div.anythingSlider .arrow a span { display: block; visibility: hidden; } */
+/* back arrow */
+/*
+div.anythingSlider .back { left: 60px; }
+div.anythingSlider .back a { background-position: 0 -36px; }
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover {  }
+div.anythingSlider .back.disabled { display: none; }
+*/ /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+/* forward arrow */
+/*
+div.anythingSlider .forward { right: 60px; }
+div.anythingSlider .forward a { background-position: 0 0; }
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover {  }
+div.anythingSlider .forward.disabled { display: none; }
+*/ /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+
+
+/* probably not necessary, but added just in case */
+div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .anythingControls ul a, div.anythingSlider .arrow a, div.anythingSlider .start-stop { transition-duration: 0; -o-transition-duration: 0; -moz-transition-duration: 0; -webkit-transition-duration: 0; }

@@ -1,0 +1,133 @@
+body {
+	background: #ecd8a6 url(../img/bg_page.jpg) center top no-repeat;
+}
+.wrapper {
+	margin-left: 0;
+}
+#slideshow,
+#slideshow DIV#feature {
+	background-color: transparent !important;
+}
+#nav a {
+	float: left;
+}
+nav.sub li:first-child + li + li {
+    border-left: none;
+	width: 209px;
+	margin-left: 40px;
+}
+
+.interior p span span.firstcharacter {
+    line-height: 110px;
+    margin: -30px -20px 10px -30px;
+}
+input[type="file"] {
+	width: 350px;
+}
+textarea {
+	float: left;
+}
+h2.fable {
+	white-space: nowrap;
+	margin-left: 25px;
+}
+h2.fable .initial-d {
+	background: transparent url("../img/init_cap_D.png") no-repeat scroll right center;
+    font-size:0;
+	display:block;
+	line-height:0;
+	text-indent: -9999px;
+	height: 64px;
+	width: 60px;
+	text-transform: capitalize;
+	float: left;
+}
+h2.fable .initial-t {
+	background: transparent url("../img/init_cap_T.png") no-repeat scroll right center;
+    font-size:0;
+	display:block;
+	line-height:0;
+	text-indent: -9999px;
+	height: 64px;
+	width: 60px;
+	text-transform: capitalize;
+	float: left;
+}
+h2.fable .initial-a {
+	background: transparent url("../img/init_cap_A.png") no-repeat scroll right center;
+    font-size:0;
+	display:block;
+	line-height:0;
+	text-indent: -9999px;
+	height: 64px;
+	width: 60px;
+	text-transform: capitalize;
+	float: left;
+}
+h2.fable .initial-s {
+	background: transparent url("../img/init_cap_S.png") no-repeat scroll right center;
+    font-size:0;
+	display:block;
+	line-height:0;
+	text-indent: -9999px;
+	height: 64px;
+	width: 48px;
+	text-transform: capitalize;
+	float: left;
+}
+.homework h2.fable .initial-d {
+	background: transparent url("../img/init_cap_D_teal.png") no-repeat scroll right center;
+	width: 50px;
+}
+.homework h2.fable .initial-t {
+	background: transparent url("../img/init_cap_T_teal.png") no-repeat scroll right center;
+	width: 50px;
+}
+.homework h2.fable .initial-a {
+	background: transparent url("../img/init_cap_A_teal.png") no-repeat scroll right center;
+}
+
+.comments p.submitted,
+.comments div.fb-comments.fb_iframe_widget,
+.homework .thank-you {
+	display: none;
+}
+.comments div.fb-comments.fb_iframe_widget.submitted,
+.homework .thank-you.submitted {
+	display: block !important;
+}
+.homework .form.submitted {
+	position: relative;
+   	top: 72px;
+}
+.homework .thank-you.submitted {
+   	position: relative;
+   	width: 890px;
+   	border-bottom: 1px solid #E3D5B0;
+   	margin-bottom: 10px;
+   	padding-bottom: 7px;
+}
+.footer-container {
+	width: 100%;
+}
+.dform_element label,
+.dform_element.dform_file_upload.dftop_label,
+.dform_label {
+	display: block !important;
+	/* width: 250px; */
+}
+.dform_textarea > .dform_label {
+	display: none!important;
+	/* width: 250px; */
+}
+.dform_file_upload {
+	width: 250px;
+	float: left;
+	padding-left: 35px;
+}
+#slideshow {
+	height: 1600px !important;
+}
+.dform_container TEXTAREA {
+	height: 140px;
+}

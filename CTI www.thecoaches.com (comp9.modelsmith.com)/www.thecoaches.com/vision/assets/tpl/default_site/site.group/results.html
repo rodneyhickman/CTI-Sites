@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8">
+        <title>Mission &amp; Vision</title>
+        <meta name="description" content="">
+        <!-- <meta name="viewport" content="width=device-width"> -->
+
+        <link rel="stylesheet" href="/vision/assets/css/normalize.min.css">
+        <link rel="stylesheet" href="/vision/assets/css/main.css">
+        <link rel="stylesheet" href="/vision/assets/css/fonts/stylesheet.css">
+        <link rel="stylesheet" href="/vision/assets/css/vision.css">
+		<link rel="stylesheet" href="/vision/assets/css/jplayer.css">
+	    <link rel="icon" type="image/png" href="/vision/assets/img/favicon.png">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/vision/assets/css/ie.css">
+            <script type="text/javascript">
+			 document.createElement('header');
+			 document.createElement('hgroup');
+			 document.createElement('nav');
+			 document.createElement('menu');
+			 document.createElement('section');
+			 document.createElement('article');
+			 document.createElement('aside');
+			 document.createElement('footer');
+			</script>
+		<![endif]-->
+    	<!--[if lt IE 8]>
+    		<link rel="stylesheet" href="/vision/assets/css/ie7.css">
+        <![endif]-->
+    	
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/vision/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script -->
+        <link rel="stylesheet" href="/vision/assets/js/libs/css/styles.css" />
+   		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   	</head>
+    <body class="mission-vision interior">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+							
+		<div class="header-container">
+            <header class="wrapper clearfix">
+                <nav>
+                    <ul>
+                        <!-- li>
+                        	<a href="{path='vision/farthest-shore'}">The Farthest Shore</a>
+		                </li -->
+		                <li style="padding-right: 12px;">
+                        	<a href="{path='mission-vision'}">Discovering the Co-Active Mission &amp; Vision</a>
+		                </li>
+		                <li>
+                        	<a href="{path='/'}">The Hedgehog &amp; the Waterfall</a>
+		                </li>
+                    </ul>
+                </nav>
+                <h1 class="title">Co-Active</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+				<nav class="sub clearfix">
+                    <ul>
+                        <li></li>
+		            </ul>
+                </nav>
+                
+                <article class="homework">
+                    <section style="width: 800px;">
+                        <ul style="margin: 0; padding: 0; list-style: none;">
+                        {exp:file:entries orderby="random" dynamic="no" limit="80"}
+                        	{exp:imgsizer:size src="{title}" width="125" height="125" base_path="/www/www.thecoaches.com/vision/images/uploads/" base_cache="/www/www.thecoaches.com/vision/images/uploads/images/sized/"}
+                        	<li style="display: block; float: left;"><img src="http://www.thecoaches.com/vision/images/uploads{sized}" width="100" height="100" /></li>
+                        	{/exp:imgsizer:size}
+                        {/exp:file:entries}
+                        </ul>
+                        <!-- span class="answers submitted">
+	                       	<span class="thank-you">
+		                    	<p><span>Thank you for sharing your ideas.</span> You will receive an email link when we the results have been compiled.</p>
+		                    	<p><a href="{path='results'}" style="background: none !important; padding-left: 0 !important;">View the Results</a></p>
+		                    </span>
+	                	</span -->
+	                </section>
+                </article>
+				
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+			   <p>&copy; 2013 The Coaches Training Institute. All rights reserved.</p>
+            </footer>
+        </div>
+	    <div class="mission-wrapper">
+    		<div class="panel">
+    			<div style="background: #ffffff; padding-botton: 35px; display: table;">
+    				<h2 class="fable" style="margin-top: 0; margin-bottom: 20px;"><span class="initial-m">M</span>ission Statement</h2>
+				    <p>Introducing the new, co-created, co-articulated, and co-owned Mission Statement for CTI.</p>
+    			</div>
+    			<p>&nbsp;</p>
+    			<div style="background: #ffffff; padding-botton: 35px; display: table;">
+    				<h2 class="fable" style="margin-top: 0; margin-bottom: 20px;"><span class="initial-v">V</span>ision Statement</h2>
+	        	    <p>Introducing the new, co-created, co-articulated, and co-owned Vision Statement for CTI.</p>
+    			</div>
+    		</div>
+    	</div>
+        <div class="modal">
+    		<div class="panel">
+    			<h2 class="fable" style="margin-top: 0; margin-bottom: 20px;"><span class="initial-t">T</span>he Far Shore</h2>
+	            <p>We have reached the far shore &ndash; the votes have been counted and the results are in!</p>
+    			<p>We have done something extraordinarily difficult and important &ndash; put our work and our purpose into words. Thanks to you.</p>
+    			<p>Now it's up to all of us to live by them.</p>
+    			<p>Introducing the new, co-created, co-articulated, and co-owned Mission and Vision Statements for CTI.</p>
+    			<p><a href="#">See the results of our work</a></p>
+    		</div>
+    	</div>
+    	<!--
+		<div id="overlay" style="display:none; z-index: 1001;">
+			<div id="dialog" class="dialog">Thank you for completing your homework. Your responses are uploading. This may take a moment depending on the size of any images you may have included.<br /><br />
+				<img src="http://www.thecoaches.com/vision/assets/img/uploading.gif" width="120" height="124" />
+			</div>
+		</div>
+		-->
+		
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/vision/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
+		<script src="/vision/assets/js/jquery.cookie.js"></script>
+		<script src="/vision/assets/js/utilities.js"></script>
+		<script type="text/javascript">
+		// check cookie homework four
+	    var statusreveal = $.cookie("statusreveal")
+	
+	    if (statusreveal != null) {
+	        $(".modal").addClass('closed');
+		    // $(".comments.four p,.comments.four div.fb-comments").addClass('submitted');
+			// $('#tabs-3 ul li').removeClass('active');
+			// $('#tabs-3 ul li.homework-4').addClass('active');
+			// $('#tabs-3 #tab-10').css('display', 'none');
+			// $('#tabs-3 #tab-11').css('display', 'block');
+		}
+	
+	    // set cookie
+	    $(".modal .panel a").mouseup(function(e){
+       		$.cookie('statusreveal', 'closed', { expires: 365, path: '/' });
+        	$(".modal").addClass('closed');
+    	    // $(".comments.four p,.comments.four div.fb-comments").addClass('submitted');
+    	    // $('#overlay').css('height', $(document.body).height() + 'px')
+		    // $('#overlay').show()
+		    // $('#dialog').html($(element).html())
+		    // centerMe('#dialog')
+		    scroll(0, 0);
+			//	return false;
+	    });
+	    </script>
+		<script type="text/javascript">
+		/*
+$(function(){
+	        $('.modal').css({'height':(($(window).height())0)+'px'});
+	
+	        $(window).resize(function(){
+	        $('.modal').css({'height':(($(window).height())0)+'px'});
+	        });
+	    });
+*/
+	    </script>
+		
+		
+		<!-- script src="/vision/assets/js/utilities.js"></script -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
