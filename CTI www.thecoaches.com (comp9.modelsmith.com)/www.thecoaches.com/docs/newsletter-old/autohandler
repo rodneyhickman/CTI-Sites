@@ -1,0 +1,32 @@
+
+% $m->call_next;
+
+<%flags>
+ inherit => '/secondlevelhandler'
+</%flags>
+<%method sidebar>
+<& sidebar.html &>
+</%method>
+<%method left_nav_image>
+<& left_nav_image.html &>
+</%method>
+<%method left_nav_main>
+<& left_nav_main.html &>
+</%method>
+<%method left_nav_second>
+<& left_nav_second.html &>
+</%method>
+<%method darkened_menu>
+thisMenuName='nav0';
+</%method>
+<%method crumbs>
+<%args>
+$link => 0
+</%args>
+<& PARENT:crumbs, link => 1 &> &gt;
+% if($link){
+<a href="/Newsletter/">Newsletter</a>
+% } else {
+Newsletter
+% }
+</%method>

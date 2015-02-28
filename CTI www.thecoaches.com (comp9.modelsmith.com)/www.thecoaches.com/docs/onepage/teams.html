@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+<style type="text/css">
+		.tip			{ width:310px; font-family:Verdana,arial; background:url(images/tip-text.gif) left top repeat-y; }
+		.tip-top		{ background:url(images/tip-top.gif) top left no-repeat; height:14px; width:310px; }
+		.tip-title		{ color:#333; font-weight:bold; margin:0 20px 0 20px; text-align: left; }
+		.tip-text		{ color:#333; padding:10px 20px 8px 20px; text-align: left; }
+		.tip-bottom		{ background:url(images/tip-bottom.gif) left bottom no-repeat; width:310px; height:21px; }
+	</style>
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2"><a href="relationship.html">Relationship</a></li>
+        <li class="nav3"><a href="learning.html">Learning</a></li>
+        <li class="nav4"><a href="action.html">Action</a></li>
+        <li class="nav5 active"><a href="#">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Empowering the Strength of Teams</h1>
+      <h2>Purpose</h2>
+      <p>The principles, contexts, and cornerstones of Co-Active coaching are powerful when used with teams of people as well as with individuals.  It is a model to fuel human interaction, connection, authenticity, and performance that is relevant 1:1 and for a leader with his/her team.  In this section you’ll find resources and tools to use with groups.</p>
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Empowering the Strength of Teams.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+                <p><a href="pdfs/18Team_v1.01.pdf" class="tipz" title="Team Meeting Agenda Template::Template for planning effective meetings that empower teams.">Team Meeting Agenda Template</a></p>
+      <p><a href="pdfs/19Team_v1.01.pdf" class="tipz" title="Team Action/Reflection Worksheet::Model and structure to support leaders in reinforcing that team’s take time to learn and grow from their experience as part of day-to-day work.">Team Action/Reflection Worksheet</a></p>
+      <p><a href="pdfs/20Team_v1.01.pdf" class="tipz" title="Team &#8220;Big A&#8221; Agenda Check::Worksheet to shift team conversation to issues and opportunities that matter most.">Team &#8220;Big A&#8221; Agenda Check</a></p>
+      <p><a href="pdfs/21Team_v1.01.pdf" class="tipz" title="Co-Active Coaching Skills for Teams::Tips for applying skills of Co-Active coaching for teams.">Co-Active Coaching Skills for Teams</a></p>
+
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

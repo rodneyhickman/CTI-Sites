@@ -1,0 +1,149 @@
+.expandBox {
+	float: left;
+	margin: 15px 0 5px 0px;
+	padding: 3px 0 0 5px;
+	width: 450px;
+	background-color: #cce0ee;
+	}
+#icon {
+	float: left;
+	}
+
+.clickme{
+	margin: 0px auto;
+	width: 380px;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid red;
+	}
+
+span.innercontents {
+	padding: 10px;
+	display: block;
+	}
+.accordion-click1 {
+	background: #fff;
+	width: 450px;
+	margin: 0px 0px 0px 0px !important;
+	cursor: pointer;
+	}
+.accordion-click1:hover {
+	text-decoration: underline;
+	color:#75286a;
+	}
+	
+.accordion-click8 {
+	background: #fff;
+	width: 380px;
+	margin: 2px 0px 0px 15px !important;
+	cursor: pointer;
+	}
+.accordion-click8:hover {
+	text-decoration: underline;
+	color: #41769c;
+	}
+#expandBox a:link {
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px dotted #6895b5;
+	color: #5d8bac;
+	}
+#expandBox a:visited {
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px dotted #6895b5;
+	color: #5d8bac;
+	}
+.accordion-content8 {
+	width: 420px;
+	margin: 0px 0px 0px 0px !important;
+	padding-left: 0px;
+	}
+.accordion-content8 ul li {
+	margin-left: 15px;
+	list-style: disc;
+	}
+.border {
+		/*border: 1px solid #999;*/
+	border-top: 0px solid #C0C0C0;
+	/*border-right: 1px solid #D0D0D0;
+	border-left: 1px solid #D0D0D0;*/
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+.collapse a{
+	color: #999;
+	height: 15px;
+	display: block;
+	margin-left: 0px;
+	padding-top: 1px;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid #DDD;
+	}
+.collapse a:hover {
+	color: #333;
+	background: #DDD;
+	}
+.accordion-content8 p {
+	float: left;
+	margin: 0px 0 0 15px !important;
+	width: 400px;
+	padding: 0px 10px 10px 0px;
+	}
+.accordion-content1 img {
+	display: block;
+	float: left;
+	margin: 10px 10px 20px 10px;
+	}
+#hor-wrapper{
+	width: 400px;
+	overflow: hidden;
+	}
+.redplus {
+	font-weight: bold;
+	color: #C91920;
+	font-size: 9px;
+	margin-left: 3px;
+	}
+.darkheader {
+	font-weight: normal;
+	font-size: 11px;
+	}
+.expand {
+	font-weight: bold;
+	color: #6895b5;
+	}
+.normalgrey {
+	font-weight: normal;
+	margin-left: 3px;
+	font-size: 11px;
+	}	
+
+.lab {
+ /*border-top: 1px solid #b4c9d5;
+ border-right: 1px solid #b4c9d5;
+ border-bottom: 1px solid #b4c9d5;
+ border-left: 8px solid #b4c9d5;*/
+ color: #444;
+ display: block;
+ height: 15px;
+ padding-left: 8px;
+ padding-top: 2px;
+	}
+ .red {
+ font: 12px "Verdana", verdana, sans-serif;
+ color: #b85536;
+ font-weight: bold;
+ }
+ 
+ .moreinfo {
+ font: 12px "Verdana", verdana, sans-serif;
+ font-weight: bold;
+ padding-top: 15px;
+ line-height: 1.4em;
+ color: #3f624c;
+}

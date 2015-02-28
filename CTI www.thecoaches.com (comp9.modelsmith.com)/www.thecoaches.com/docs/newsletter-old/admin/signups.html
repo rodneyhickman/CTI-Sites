@@ -1,0 +1,49 @@
+<form name="myform" action="signups.html" method="POST">
+
+<p style="color:red">
+<% $err %>
+</p>
+<h1>Signups Administration</h1>
+
+
+<p>&nbsp;</p>
+
+<h2>Download Signups File</h2>
+<p>
+<input type="submit" name="submit" value="Download Signups File"> File will be downloaded in Excel (tab-delimited) format.
+
+
+<p>&nbsp;</p>
+
+<h2>Delete Old Signups</h2>
+<p>
+This option allows you to clear old signups by record id number. Please refer to the downloaded file for the id numbers.
+<p>
+Enter id numbers or id ranges separated by commas. Example: 34,35,36,39-56<br>
+<textarea name="ids" rows="8" cols="50"></textarea><br> 
+<input type="submit" name="submit" value="Delete Old Signups" onClick="document.myform.action='confirm.html';return true;"> You will be ask to confirm.
+
+</form>
+
+<%init>
+my $args = $m->request_args;
+
+my $err;
+#my $err = Dumper $args;
+
+my $sql2 = <<EOT ;
+INSERT INTO signup_schedule ('command','cmd_data','ts') values (?,?,NOW());
+EOT
+
+TRY: {
+    if($args->{'submit'} eq 'Download Signups File'){
+      $m->redirect('signups_list.xls');
+	last;
+    }
+
+    if($args->{'submit'} eq 'Delete Old Signups'){
+
+	last;
+    }
+}
+</%init>

@@ -1,0 +1,11 @@
+<%flags>
+inherit => undef
+</%flags>
+<%init>
+my $signups = $dbh->selectall_arrayref('SELECT * from signup_request ORDER BY ts DESC',{ Columns => {} });
+</%init>
+<% join("\t",qw(id email first last city state country datestamp) ) %>
+% foreach my $signup (@$signups){
+% my ($year,$mon,$day) = ( $signup->{ts} =~ m/^(\d\d\d\d)(\d\d)(\d\d)/ );
+<% join("\t",( map{ $signup->{$_} } qw(id email first last city state country) ),"$mon/$day/$year" ) %>
+% }

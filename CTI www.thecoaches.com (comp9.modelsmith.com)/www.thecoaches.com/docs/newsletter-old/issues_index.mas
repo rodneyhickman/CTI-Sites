@@ -1,0 +1,36 @@
+% foreach my $issue (reverse @issues){
+<a href="<% $issue->[0] %>"><% $issue->[1] %></a><br>
+% }
+
+
+<%init>
+my %months = (
+'01'  => 'January',
+'02'  => 'February',
+'03'  => 'March',
+'04'  => 'April',
+'05'  => 'May',
+'06'  => 'June',
+'07'  => 'July',
+'08'  => 'August',
+'09'  => 'September',
+'10' => 'October',
+'11' => 'November',
+'12' => 'December',
+);
+
+my $c    = $m->current_comp;
+my $base = $c->source_dir;
+
+my @issues;
+foreach my $dir (sort <$base/*>){ 
+  next unless $dir =~ m/(\d\d\d\d)$/;
+  my $year = $1;
+  foreach my $page (sort <$base/$year/*.html>){
+    next unless $page =~ m/(\d\d)\.html$/;
+    my $issue = $1;
+    push(@issues,["$year/$issue.html" => "$months{$issue} $year"]);
+  }
+}
+
+</%init>

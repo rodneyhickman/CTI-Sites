@@ -1,0 +1,2 @@
+rsync -nvazCSHe "ssh -l ctiadmin" --rsync-path=/export/home/ctiadmin/bin/rsync \
+. corp.theblr.com:/export/home/www/thecoaches/mason/newsletter/.

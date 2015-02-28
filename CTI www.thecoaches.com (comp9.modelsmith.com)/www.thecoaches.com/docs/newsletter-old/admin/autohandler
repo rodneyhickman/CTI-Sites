@@ -1,0 +1,4 @@
+<%flags>
+inherit => '/norailshandler'
+</%flags>
+%$m->call_next;

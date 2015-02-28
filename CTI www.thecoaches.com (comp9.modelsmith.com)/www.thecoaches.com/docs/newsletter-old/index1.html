@@ -1,0 +1,84 @@
+<p class="textTitle">
+The INQUIRY - Newsletter Sign-up
+
+<p>
+Enter your email address to sign up for the Inquiry, CTI's semi-monthly newsletter.
+
+% if($msg){
+<p><font color="red"><% $msg %></font>
+% }
+
+<p>
+<form action="index1.html" method="POST">
+<table border="0">
+<tr><td align="right">Email:</td>
+<td><input type="text" name="email"> &nbsp;(required)</td></tr>
+<tr><td align="right">Confirm Email:</td>
+<td><input type="text" name="confirm"> &nbsp;(required)</td></tr>
+
+<tr><td align="right">First Name:</td>
+<td><input type="text" name="first"></td></tr>
+<tr><td align="right">Last Name:</td>
+<td><input type="text" name="last"></td></tr>
+<tr><td align="right">City:</td>
+<td><input type="text" name="city"></td></tr>
+<tr><td align="right">State/Province:</td>
+<td><input type="text" name="state"></td></tr>
+
+<tr><td align="right">Country:</td>
+<td><select name="country">
+<option value="---">-- Select a Country --</option>
+<& countries.mas &>
+</select> &nbsp;(required)
+</td></tr>
+
+<tr><td></td><td><input type="submit" name="submit" value="Sign Me Up"></td></tr>
+</table>
+</form>
+
+<hr>
+
+<p class="textTitle">
+Past Issues Index
+
+<p>
+<& issues_index.mas &>
+
+<p>
+&nbsp;
+
+<hr>
+
+
+<%init>
+#'
+my $args = $m->request_args;
+my $msg;
+
+TRY:
+{
+  if($args->{submit} eq 'Sign Me Up' and $args->{email} =~ m/\@/){
+    if($args->{email} eq $args->{confirm}){
+      my $sth = $dbh->prepare('INSERT INTO signup_request ( email,first,last,city,state,country ) VALUES ( ?,?,?,?,?,? )');
+      $sth->execute( $args->{email},
+		     $args->{first},
+		     $args->{last},
+		     $args->{city},
+		     $args->{state},
+		     $args->{country}
+		   );
+      $m->redirect('signup.html'); # go to thank you page
+      $msg = $sth->errstr;
+    }
+    # show error
+    $msg = 'Email addresses did not match. Please try again.';
+    last;
+  }
+}
+
+</%init>
+
+
+<%method title>
+CTI Inquiry Newsletter
+</%method>

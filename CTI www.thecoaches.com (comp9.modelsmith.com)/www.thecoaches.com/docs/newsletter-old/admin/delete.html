@@ -1,0 +1,62 @@
+<p style="color:red">
+<% $err %>
+
+<h1>Delete Ids</h1>
+
+<p>
+The following ids have been scheduled for deletion. They will be deleted around 10PM PST:
+
+<p style="color:red">
+<% $ids %>
+
+<p>
+<a href="signups.html">Go back to signups admin page</a>
+
+<%init>
+my $args = $m->request_args;
+my $ids  = $args->{ids};
+my $err;
+
+my $sql2 = <<EOT ;
+INSERT INTO signup_commands (command,cmd_data,ts) values (?,?,NOW())
+EOT
+
+TRY: {
+    if($args->{'submit'} ne 'Yes'){
+      $m->redirect('signups.html');
+      last;
+    }
+
+    if($args->{'submit'} eq 'Yes'){
+      $dbh->do($sql2,undef,'DELETE',$ids);
+      $err = $dbh->errstr;
+      last;
+    }
+}
+
+# the following subroutine is used in the cron script to expand $ids
+sub expand {
+  my $range = shift;
+  my @result;
+
+  $range =~ s/[^\d\-\,]//gs; #remove extraneous characters
+  my @items = split(/,/,$range);
+  foreach (@items){
+    m/^\d+$/ and push(@result,$_) and next;
+    my ($start,$finish) = split /-/;
+    push(@result,($start .. $finish)) if $start < $finish;
+  }
+  return @result;
+}
+</%init>
+<%doc>
+mysql> desc signup_commands;
++----------+----------+------+-----+---------+----------------+
+| Field    | Type     | Null | Key | Default | Extra          |
++----------+----------+------+-----+---------+----------------+
+| id       | int(10)  |      | PRI | NULL    | auto_increment |
+| command  | tinytext | YES  |     | NULL    |                |
+| cmd_data | text     | YES  |     | NULL    |                |
+| ts       | datetime | YES  |     | NULL    |                |
++----------+----------+------+-----+---------+----------------+
+</%doc>

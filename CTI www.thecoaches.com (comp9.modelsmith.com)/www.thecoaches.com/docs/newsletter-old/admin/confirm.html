@@ -1,0 +1,20 @@
+<form name="myform" action="delete.html" method="POST"> 
+<input type="hidden" name="ids" value="<% $ids %>">
+
+<h1>Confirm Deletion</h1>
+
+<p>
+Are you sure that you want to delete the following ids:
+<p style="color:red">
+<% $ids %>
+<p>&nbsp;
+
+<p>
+<input type="submit" name="submit" value="Yes">
+<input type="submit" name="submit" value="No, go back">
+
+</form>
+<%init>
+my $args = $m->request_args;
+my $ids = $args->{ids};
+</%init>
