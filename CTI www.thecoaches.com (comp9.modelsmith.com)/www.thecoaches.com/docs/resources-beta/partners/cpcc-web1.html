@@ -1,0 +1,79 @@
+<html>
+<head>
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+$('#codemedium').hide();
+$('#codelarge').hide();
+
+$("#logosize").change(function() {
+  var size = $(this).val();
+  if(size == 'small'){
+    $('#codesmall').show();
+    $('#codemedium').hide();
+    $('#codelarge').hide();
+  }
+  if(size == 'medium'){
+    $('#codesmall').hide();
+    $('#codemedium').show();
+    $('#codelarge').hide();
+  }
+  if(size == 'large'){
+    $('#codesmall').hide();
+    $('#codemedium').hide();
+    $('#codelarge').show();
+  }
+
+});
+
+});
+</script>
+</head>
+<body>
+<h1>CTI CPCC Web Logo</h1>
+
+
+<p>Select a size:</p>
+<select id="logosize">
+  <option value="small">Small</option>
+  <option value="medium">Medium</option>
+  <option value="large">Large</option>
+</select>
+
+<div id="codesmall">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/cpccs.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/cpccs.js"></script>
+</div>
+
+<div id="codemedium">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/cpccm.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/cpccm.js"></script>
+</div>
+
+<div id="codelarge">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/cpccl.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/cpccl.js"></script>
+</div>
+
+
+</body>
+</html>
