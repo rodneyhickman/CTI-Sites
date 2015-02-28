@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+<style type="text/css">
+		.tip			{ width:310px; font-family:Verdana,arial; background:url(images/tip-text.gif) left top repeat-y; }
+		.tip-top		{ background:url(images/tip-top.gif) top left no-repeat; height:14px; width:310px; }
+		.tip-title		{ color:#333; font-weight:bold; margin:0 20px 0 20px; text-align: left; }
+		.tip-text		{ color:#333; padding:10px 20px 8px 20px; text-align: left; }
+		.tip-bottom		{ background:url(images/tip-bottom.gif) left bottom no-repeat; width:310px; height:21px; }
+	</style>
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2 active"><a href="#">Relationship</a></li>
+        <li class="nav3"><a href="learning.html">Learning</a></li>
+        <li class="nav4"><a href="action.html">Action</a></li>
+        <li class="nav5"><a href="teams.html">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Building the Foundation - Relationship</h1>
+            <h2>Purpose</h2>
+      <p>A climate of open and positive relationship is the foundation for using Co-Active coaching in a way yields the most powerful results – without strong relationships, efforts to support development in others will accomplish little. A powerful Co-Active relationship is characterized by a mutual investment of the leader and employee (or team) to create a relationship that will most support the growth and performance of the employee (or team). In the diagram below, arrows depict the investment made by both parties, with a return arrow to the employee signifying that the overall focus is on that person’s learning and performance.</p>
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Building the Foundation - Relationship.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+                <p><a href="pdfs/01Relationship_v1.01.pdf" class="tipz" title="Professional Network Relationship Assessment::Diagnostic tool to support identifying network of strategic relationships, and assess greatest strengths and weaknesses.">Professional Network Relationship Assessment</a></p>
+      <p><a href="pdfs/02Relationship_v1.01.pdf" class="tipz" title="Individual/Team Relationship Assessment::Diagnostic tool to support assessing the relative strengths and weaknesses of key individual or team relationships.">Individual/Team Relationship Assessment</a></p>
+      <p><a href="pdfs/03Relationship_v1.01.pdf" class="tipz" title="Designing the Alliance Worksheet::Worksheet to assist in forming a powerful alliance with others, including sample dialogue.">Designing the Alliance Worksheet</a></p>
+      <p><a href="pdfs/04Relationship_v1.01.pdf" class="tipz" title="On-Boarding Conversation Guide::Guide for planning early conversations with new employees to support creation of powerful relationships from the start.">On-Boarding Conversation Guide</a></p>
+      <p><a href="pdfs/05Relationship_v1.01.pdf" class="tipz" title="Coaching Leadership Style::Model for assessing leadership situations where coaching skills can be most (or least) productive, along with other leadership styles.">Coaching Leadership Style</a></p>
+      <p><a href="pdfs/06Relationship_v1.01.pdf" class="tipz" title="Reinforcing A Learning Culture Model::Model depicting a learning cycle that can be reinforced by leaders asking good questions.">Reinforcing A Learning Culture Model</a></p>
+      <p><a href="pdfs/07Relationship_v1.01.pdf" class="tipz" title="Upward Feedback Guide::Tips for establishing “upward feedback” to support an organizational learning environment.">Upward Feedback Guide</a></p>
+      <p><a href="pdfs/08Relationship_v1.01.pdf" class="tipz" title="Balancing employee satisfaction and organizational contribution matrix::Model to assess and balance coaching focus on both employee satisfaction and organizational contribution.">Balancing employee satisfaction and organizational contribution matrix</a></p>
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

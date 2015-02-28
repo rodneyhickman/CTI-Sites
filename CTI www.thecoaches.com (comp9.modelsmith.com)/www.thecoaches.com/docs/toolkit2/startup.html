@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2"><a href="selection.html">Relationship</a></li>
+        <li class="nav3 active"><a href="#">Learning</a></li>
+        <li class="nav4"><a href="implementation.html">Action</a></li>
+        <li class="nav5"><a href="measurement.html">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Start-up &amp; Assessment</h1>
+          <p>This section includes tools to help understand the business context, assess the developmental needs of the individual and design the alliance between the coach, the client and the organizational stake holders.</p>
+          
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Start-up &amp; Assessment.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+      <p><a href="pdfs/ICC_f5-Tool03_start.pdf" class="tipz" title="Using Co-Active Coaching with Assessment Data::Guidelines for including assessments in the coaching process.">Using Co-Active Coaching with Assessment Data</a></p>
+      <p><a href="pdfs/ICC_f5-Tool04_start.pdf" class="tipz" title="Organization Context and Assessment Plan::Tool to understand the organizational environment in which the client works.">Organization Context and Assessment Plan</a></p>
+      <p><a href="pdfs/ICC_f5-Tool05_start.pdf" class="tipz" title="Coaching Readiness Checklist — Coach::Tool for the coach to assess a clients readiness for coaching.">Coaching Readiness Checklist — Coach</a></p>
+      <p><a href="pdfs/ICC_f5-Tool06_start.pdf" class="tipz" title="Designing the Coaching Alliance::Tool to design the coach/client alliance.">Designing the Coaching Alliance</a></p>
+      <p><a href="pdfs/ICC_f5-Tool07_start.pdf" class="tipz" title="Client Profile::This questionnaire gets the client thinking about what they want from the coaching.">Client Profile</a></p>
+      <p><a href="pdfs/ICC_f5-Tool08_start.pdf" class="tipz" title="360 Interview Guide::Coach’s Interview for client’s colleagues.">360 Interview Guide</a></p>
+      <p><a href="pdfs/ICC_f5-Tool09_start.pdf" class="tipz" title="360 Interview Feedback Summary::Helps with collating the feedback from the 360 interviews.">360 Interview Feedback Summary</a></p>
+      <p><a href="pdfs/ICC_f5-Tool10_start.pdf" class="tipz" title="Performance Awareness Appraisal::Tool for clients to assess the importance of skills and their proficiency in those skills.">Performance Awareness Appraisal</a></p>
+      <p><a href="pdfs/ICC_f5-Tool11_start.pdf" class="tipz" title="Job Performance Wheel::Tool for clients to assess their satisfaction with areas of their job performance.">Job Performance Wheel</a></p>
+      <p><a href="pdfs/ICC_f5-Tool12_start.pdf" class="tipz" title="Management/Leadership Wheel::Tool for clients to assess their satisfaction with their leadership abilities.">Management/Leadership Wheel</a></p>
+
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

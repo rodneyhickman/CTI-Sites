@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2"><a href="selection.html">Relationship</a></li>
+        <li class="nav3"><a href="startup.html">Learning</a></li>
+        <li class="nav4 active"><a href="#">Action</a></li>
+        <li class="nav5"><a href="measurement.html">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Implementation</h1>
+          <p>These tools support the longest stage of the coaching relationship which is about ongoing learning and performance improvement.  They will help you navigate ethical dilemmas, clarify your clients purpose, values and vision while holding them accountable for their goals and action plans.</p>
+         
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Implementation.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+                <p><a href="pdfs/ICC_f5-Tool13_implement.pdf" class="tipz" title="Ethics and Legal Considerations for Co-Active Coaches::Guidelines for dealing with ethical dilemmas.">Ethics and Legal Considerations for Co-Active Coaches</a></p>
+                <p><a href="pdfs/ICC_f5-Tool14_implement.pdf" class="tipz" title="Client's Coaching Session Planning::Client tool to plan outcomes for a coaching session.">Client's Coaching Session Planning</a></p>
+      			<p><a href="pdfs/ICC_f5-Tool15_implement.pdf" class="tipz" title="Coach's Coaching Session Planning::Coach tool to plan coaching session.">Coach's Coaching Session Planning</a></p>
+                <p><a href="pdfs/ICC_f5-Tool16_implement.pdf" class="tipz" title="Action Planning and Accountability Worksheet::Worksheet to outline and ensure accountability is used correctly.">Action Planning and Accountability Worksheet</a></p>
+                <p><a href="pdfs/ICC_f5-Tool17_implement.pdf" class="tipz" title="Identifying Purpose and Creating Alignment Worksheet::Tool to raise awareness of the degree of alignment between the individual, team and organization mission, vision and values.">Identifying Purpose and Creating Alignment Worksheet</a></p>
+     			<p><a href="pdfs/ICC_f5-Tool18_implement.pdf" class="tipz" title="Alignment Conversation Guide::Need description.">Alignment Conversation Guide</a></p>
+                <p><a href="pdfs/ICC_f5-Tool19_implement.pdf" class="tipz" title="Vision Worksheet::Client tool to articulate a clear and compelling vision statement.">Vision Worksheet</a></p>
+                <p><a href="pdfs/ICC_f5-Tool20_implement.pdf" class="tipz" title="Values Worksheet::Client tool for discovery, clarification and prioritization of values for individuals and groups.">Values Worksheet</a></p>
+
+
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

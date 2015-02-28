@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2 active"><a href="#">Relationship</a></li>
+        <li class="nav3"><a href="startup.html">Learning</a></li>
+        <li class="nav4"><a href="implementation.html">Action</a></li>
+        <li class="nav5"><a href="measurement.html">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Selection</h1>
+          <p>These tools are designed to support the organization in the process of identifying individuals for coaching, determining their readiness and matching them to an appropriate coach.</p>
+
+      
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Selection.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+                <p><a href="pdfs/ICC_f5-Tool01_select.pdf" class="tipz" title="Coaching Request Form::This form helps leaders articulate their reasons for requesting a coach.">Coaching Request Form</a></p>
+      <p><a href="pdfs/ICC_f5-Tool02_select.pdf" class="tipz" title="Coaching Readiness Checklist — Client::This form helps determine whether or not coaching will be an effective learning strategy for an individual.">Coaching Readiness Checklist — Client</a></p>
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

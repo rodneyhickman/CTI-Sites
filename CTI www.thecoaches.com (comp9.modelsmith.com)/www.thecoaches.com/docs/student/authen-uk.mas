@@ -1,0 +1,18 @@
+<%once>
+  use Apache2::Const qw(:common);
+  use Digest::SHA1;
+  use CTI::Secret;
+</%once>
+<%init>
+ my %c = eval{ Apache2::Cookie->fetch };
+ my ($username,$MAC);
+ my %values;
+ if(exists $c{sessionuk}){
+  %values   = $c{sessionuk}->value;
+  $username = lc $values{username}; # lower case so that it matches database
+  $MAC      = $values{MAC};
+ }
+ $m->redirect('login-uk.html')
+  unless $MAC eq Digest::SHA1::sha1_hex( $username, Secret::value() );
+ $m->print($username);
+</%init>

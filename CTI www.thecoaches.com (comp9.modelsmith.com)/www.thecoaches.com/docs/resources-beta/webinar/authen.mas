@@ -1,0 +1,22 @@
+<%once>
+  #use Apache2::Const qw(:common);
+  use Digest::SHA1;
+  use CTI::Secret;
+  use Apache2::Cookie;
+</%once>
+<%init>
+ my %c = Apache2::Cookie->fetch;
+ my ($username,$MAC);
+ my %values;
+ if(exists $c{webinar_pass}){
+  %values   = $c{webinar_pass}->value;
+  $username = lc $values{username}; # lower case so that it matches database
+  $MAC      = $values{MAC};
+ }
+ my $uri = $r->uri;
+ $uri =~ s/<.*//; # remove any XSS stuff
+ $uri =~ s/\&.*//; # remove any XSS stuff
+ $m->redirect('signin.html?redirect='.$uri)
+  unless $MAC eq Digest::SHA1::sha1_hex( $username, Secret::value() );
+ $m->print($username);
+</%init>

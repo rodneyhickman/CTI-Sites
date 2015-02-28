@@ -1,0 +1,140 @@
+#expandBox {
+	float: left;
+	margin-left: 15px;
+	width: 420px;
+	}
+#icon {
+	float: left;
+	}
+
+.clickme{
+	margin: 0px auto;
+	width: 400px;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid red;
+	}
+
+span.innercontents {
+	padding: 10px;
+	display: block;
+	}
+.accordion-click1 {
+	background: #fff;
+	width: 480px;
+	margin: 0px 0px 0px 0px !important;
+	cursor: pointer;
+	}
+.accordion-click1:hover {
+	text-decoration: underline;
+	color:#75286a;
+	}
+	
+.accordion-click8 {
+	background: #fff;
+	width: 420px;
+	margin: 0px 0px 0px 0px !important;
+	cursor: pointer;
+	}
+#expandBox a:link {
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px dotted #6895b5;
+	color: #5d8bac;
+	}
+#expandBox a:visited {
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px dotted #6895b5;
+	color: #5d8bac;
+	}
+.accordion-content8 {
+	width: 420px;
+	margin: 0px 0px 10px 76px !important;
+	padding-left: 0px;
+	}
+.accordion-content8 ul li {
+	margin-left: 0px;
+	list-style: none;
+	}
+.border {
+		/*border: 1px solid #999;*/
+	border-top: 0px solid #C0C0C0;
+	/*border-right: 1px solid #D0D0D0;
+	border-left: 1px solid #D0D0D0;*/
+	border-bottom: 1px dotted #999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+.collapse a{
+	color: #999;
+	margin-left: 15px;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: none;
+	}
+.collapse a:hover {
+	color: #333;
+	}
+.accordion-content8 p {
+	float: left;
+	margin: 0px 0 0 0px !important;
+	width: 410px;
+	padding: 0px 10px 10px 0px;
+	}
+.accordion-content1 img {
+	display: block;
+	float: left;
+	margin: 10px 10px 20px 10px;
+	}
+#hor-wrapper{
+	width: 400px;
+	overflow: hidden;
+	}
+.redplus {
+	font-weight: bold;
+	color: #C91920;
+	font-size: 9px;
+	margin-left: 3px;
+	}
+.darkheader {
+	font-weight: normal;
+	font-size: 11px;
+	}
+.expand {
+	font-weight: bold;
+	color: #6895b5;
+	}
+.expand a {
+	border-bottom: none;
+	}
+.normalgrey {
+	font-weight: normal;
+	margin-left: 3px;
+	font-size: 11px;
+	}	
+
+.lab {
+ /*border-top: 1px solid #b4c9d5;
+ border-right: 1px solid #b4c9d5;
+ border-bottom: 1px solid #b4c9d5;
+ border-left: 8px solid #b4c9d5;*/
+ color: #444;
+ display: block;
+ height: 15px;
+ padding-left: 8px;
+ padding-top: 2px;
+	}
+ .red {
+ font: 12px "Verdana", verdana, sans-serif;
+ color: #b85536;
+ font-weight: bold;
+ }
+ 
+ .moreinfo {
+ font: 12px "Verdana", verdana, sans-serif;
+ font-weight: bold;
+ padding-top: 15px;
+ line-height: 1.4em;
+ color: #3f624c;
+}

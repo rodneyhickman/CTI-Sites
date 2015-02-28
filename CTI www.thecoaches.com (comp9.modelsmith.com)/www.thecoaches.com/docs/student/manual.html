@@ -1,0 +1,42 @@
+<%once>
+use CTI::Secret;
+use Digest::SHA1;
+use URI::Escape;
+</%once>
+<%init>
+
+my $args     = $m->request_args();
+
+my ($k) = @{$args}{'k'};
+$k =~ s/[^A-Za-z0-9]//gms; #untaint k
+
+
+my $err    = '';
+my $url    = '';
+my $result = '';
+my $email  = '';
+my $key_ok = 0;
+
+
+if($k ne ''){
+
+  # match key to database to get $username
+
+  ($email) = $dbh->selectrow_array('SELECT username FROM auth_users WHERE passwd=? LIMIT 1',undef,$k);
+
+  if($email ne ''){
+
+    # add commlog entry that link was clicked
+
+    my $em = uri_escape( $email, '^A-Za-z0-9@.-_' );
+    $url = "http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/new_commlog.php?postkey=fjgh15t&em=$em&m=Course%20materials%20link%20was%20clicked&r=Terms%20and%20conditions%20web%20page";
+    $result = `/usr/bin/curl --max-time 3 '$url'`;
+
+#    $m->redirect('/coach-training/course-materials/fundamentals.html'); # redirec to course materials page
+   $m->redirect('/learning-hub/fundamentals/'); # redirec to course materials page
+  }
+}
+
+
+$m->redirect('/index.html');
+</%init>

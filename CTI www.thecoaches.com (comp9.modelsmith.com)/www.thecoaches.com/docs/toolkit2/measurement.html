@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CTI Leadership Toolkit</title>
+<link media="all" type="text/css" rel="stylesheet" href="css/toolkit.css"/>
+<link media="all" type="text/css" rel="stylesheet" href="css/moo.css"/>
+
+	<script type="text/javascript" src="js/moo1.2.js"></script>
+	<script type="text/javascript">
+		
+		//when the dom is ready
+		window.addEvent('domready', function() {
+			
+			
+			//store titles and text
+			$$('a.tipz').each(function(element,index) {
+				var content = element.get('title').split('::');
+				element.store('tip:title', content[0]);
+				element.store('tip:text', content[1]);
+			});
+			
+			//create the tooltips
+			var tipz = new Tips('.tipz',{
+				className: 'tipz',
+				fixed: false,
+				hideDelay: 50,
+				showDelay: 50
+			});
+			
+			//customize
+			/*
+			tipz.addEvents({
+				'show': function(tip) {
+					tip.fade('in');
+				},
+				'hide': function(tip) {
+					tip.fade('out');
+				}
+			});
+			*/
+			
+		});
+	</script>
+
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  
+  <!-- Begin Header -->
+  <div id="header">
+    <img src="images/logo.jpg" />
+    <img src="images/header.jpg" />
+    <div class="clear"></div>
+      <ul class="nav">
+        <li class="nav1"><a href="index.html">Overview</a></li>
+        <li class="nav2"><a href="selection.html">Relationship</a></li>
+        <li class="nav3"><a href="startup.html">Learning</a></li>
+        <li class="nav4"><a href="implementation.html">Action</a></li>
+        <li class="nav5 active"><a href="#">Teams</a></li>
+      </ul>
+  </div>
+  <!-- End Header -->
+    
+    <div class="clear"></div>
+	
+    <div id="contentLeft"></div>
+    
+    <!-- Begin Content -->
+    <div id="content">
+	  <h1>Measurement &amp; Closure</h1>
+          <p>These tools are to create a measurement strategy to assess the effectiveness of the internal coaching process.  These tools also support internal coaches in bringing coaching engagements to completion with clarity and intention.</p>
+         
+	  <div id="toolsHeader"><h3>Tools</h3></div>
+	  <p>The following tools and resources are designed to support <em>Measurement &amp; Closure.</em> <strong>Roll over the tool names to see a description. Click on the tool name to download the tool as a PDF.</strong></p>
+                <p><a href="pdfs/ICC_f5-Tool21_measure.pdf" class="tipz" title="Measuring the Effectiveness of Coaching::Guide to assist the coach in creating a measurement strategy.">Measuring the Effectiveness of Coaching</a></p>
+                <p><a href="pdfs/ICC_f5-Tool22_measure.pdf" class="tipz" title="Measurement Strategy Worksheet::Worksheet that prompts thinking about goals and strategies for measuring effectiveness of the coaching process.">Measurement Strategy Worksheet</a></p>
+                <p><a href="pdfs/ICC_f5-Tool22_measure.pdf" class="tipz" title="360 Interim Evaluation::Coach tool for interviewing client colleagues for feedback on the observed change in client performance.">360 Interim Evaluation</a></p>
+                <p><a href="pdfs/ICC_f5-Tool23_measure.pdf" class="tipz" title="Coach’s Feedback::Tool for client to assess effectiveness of the coach.">Coach’s Feedback</a></p>
+      			<p><a href="pdfs/ICC_f5-Tool25_measure.pdf" class="tipz" title="Coaching Completion Checklist::Checklist for a clear and intentional completion of the coaching relationship.">Coaching Completion Checklist</a></p>
+                <p><a href="pdfs/ICC_f5-Tool26_measure.pdf" class="tipz" title="Coaching Skills Assessment Tool::Tool for coach’s self assessment.">Coaching Skills Assessment Tool</a></p>
+                <p><a href="pdfs/ICC_f5-Tool27_measure.pdf" class="tipz" title="Client Survey: Measuring Results of Caoching::Client assessment of coaching effectiveness.">Client Survey: Measuring Results of Caoching</a></p>
+                <p><a href="pdfs/ICC_f5-Tool28_measure.pdf" class="tipz" title="Client Manager/Key Stakeholder Survey::Manager/Stakeholder assessment of coaching effectiveness.">Client Manager/Key Stakeholder Survey</a></p>
+
+  </div>
+    <!-- End Content -->	
+<div class="clear"></div>
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

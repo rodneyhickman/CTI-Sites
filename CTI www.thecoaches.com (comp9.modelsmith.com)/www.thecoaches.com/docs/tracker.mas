@@ -1,0 +1,13 @@
+<%once>
+  use Apache2::Const qw(:common);
+</%once>
+<%init>
+ my %c = Apache2::Cookie->fetch;
+ my ($tracking_id);
+ my %values;
+ if(exists $c{session_tid}){
+  %values   = $c{session_tid}->value;
+  $tracking_id = $values{val};
+ }
+ $m->print($tracking_id);
+</%init>
