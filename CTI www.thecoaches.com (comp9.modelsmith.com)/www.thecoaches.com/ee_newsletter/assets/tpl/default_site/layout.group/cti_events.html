@@ -1,0 +1,25 @@
+	{exp:channel:entries channel="" rdf="off" limit="1" disable="trackbacks|member_data" status="open|closed" entry_id="{embed:entry_id}"}
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+	
+		<div class="main">
+			<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="no" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+			<h2 style="margin-top: 0;">{if cf_alternate_title}{cf_alternate_title}{if:else}{title}{/if}</h2>
+	{/exp:channel:entries}
+			{exp:channel:entries channel="cti_events" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open" show_future_entries="yes" show_expired="no" orderby="date" sort="asc"}
+				<div class="calendar-entry">
+					<div class="date">
+						<p class="month">{entry_date format="%M"}</p>
+						<p class="day">{entry_date format="%j"}</p>
+					</div>
+					<div class="info">
+						<!-- strong>{title}</strong -->
+						{cf_primary_body}
+					</div>
+				</div>				
+			{/exp:channel:entries}
+		</div>
+	{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" status="open"}
+		{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		{embed="includes/_footer" entry_id="{embed:entry_id}"}
+
+	{/exp:channel:entries}

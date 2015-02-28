@@ -1,0 +1,31 @@
+{exp:forms:form form_name="free_book_chapters_registration"}
+
+<p style="margin-left: 190px;">Fields marked with an * are mandatory</p>
+
+{if "{forms:total_form_errors}" > 0}
+<strong style="color:red">Sorry, your submission contained some errors:</strong>
+<ul>
+        {forms:form_errors}
+                <li>{forms:error}</li>
+        {/forms:form_errors}
+</ul>
+{/if}
+
+{if forms:closed} FORM IS CLOSED! {/if}
+{if forms:no_form} NO FORM FOUND! {/if}
+
+{forms:fields}
+        {forms:field}
+{/forms:fields}
+
+{/exp:forms:form}
+
+<script language="JavaScript" type="text/javascript">
+function gotoCoachTrainingPage() {
+	window.location.href="http://www.thecoaches.com/why-cti/buy-the-free-book";
+};
+
+$(document).ready(function() {
+	$(".dfinput_full").append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='button' value='Cancel' onclick='gotoCoachTrainingPage();'>");
+});
+</script>

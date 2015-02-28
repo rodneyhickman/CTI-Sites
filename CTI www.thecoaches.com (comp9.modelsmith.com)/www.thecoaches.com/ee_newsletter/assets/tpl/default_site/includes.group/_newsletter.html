@@ -1,0 +1,22 @@
+{exp:forms:form form_name="newsletter_requests"}
+
+<p style="margin-left: 190px;">* All fields are required</p>
+
+{if "{forms:total_form_errors}" > 0}
+<strong style="color:red">Sorry, the your submission contained some errors:</strong>
+<ul>
+        {forms:form_errors}
+                <li>{forms:error}</li>
+        {/forms:form_errors}
+</ul>
+{/if}
+
+{if forms:closed} FORM IS CLOSED! {/if}
+{if forms:no_form} NO FORM FOUND! {/if}
+
+{forms:fields}
+        {forms:field}
+{/forms:fields}
+
+{/exp:forms:form}
+<div style="margin-left: 192px;"><a href="{site_url}privacy">Privacy Policy</a></div>

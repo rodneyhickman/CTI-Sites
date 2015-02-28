@@ -1,0 +1,71 @@
+	{exp:channel:entries channel="basic_page" rdf="off" disable="trackbacks|member_data" limit="1" status="open|closed" entry_id="{embed:entry_id}"}
+	
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+		<div class="main" {if segment_2 == "profiles-testimonials"}style="width: 920px;"{/if}>
+			<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="no" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+						
+
+			<h2 style="margin-top: 0;">{if cf_alternate_title}{cf_alternate_title}{if:else}{title}{/if}</h2>
+			
+				{if cf_primary_vimeo_id}
+				<div style="margin-bottom: 25px;">
+					<iframe src="http://player.vimeo.com/video/{cf_primary_vimeo_id}?portrait=0&title=0&byline=0" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				</div>
+				{/if}
+				
+				{cf_top_section_text}
+								
+				{if cf_primary_personnel}
+					{cf_primary_personnel}
+						<div class="personnel clearfix">
+							<img src="{mx_personnel_image}" width="108" height="115" />
+		
+							<div class="personnelText">
+								<strong>{mx_personnel_name}, {mx_personnel_title}</strong>
+								{mx_personnel_bio}
+							</div>
+						</div>
+					{/cf_primary_personnel}
+				{/if}
+				
+				{if cf_primary_faqs}
+				<div id="accordion">
+					{cf_primary_faqs}
+					<h3><a href="#">{mx_faq_title}</a></h3>
+					<div>
+						{mx_faq_answer}
+					</div>
+					{/cf_primary_faqs}
+				</div>
+				{/if}
+		
+		<form action="/docs/form.html" method="post" enctype="application/x-www-form-urlencoded" name="assisting" style="margin-bottom: 0" onsubmit="javascript:return hasAgreed(this)">
+			<input name="recipient" value="assisting@thecoaches.com" type="hidden">
+			<input name="subject" value="Co-Active Coaching Assistant Sign-up Form" type="hidden">
+			<input name="redirect" value="{site_url}coach-training/assisting/thank-you/" type="hidden">
+  			
+  			<p><input name="agree_to_requirements" type="checkbox">&nbsp;<strong>&nbsp;I agree to the above requirements</strong></p>
+			
+			{cf_primary_body}
+			
+			<p><strong>City:</strong>&nbsp;&nbsp;<script src="/data/assisting-portal.js"></script></p>
+                        <div id="name-phone-email-block">
+			<p style="margin-top: 30px;"><strong>Name:</strong><br /><input size="40" name="Full_Name" type="text"></p>
+			<p><strong>Phone:</strong><br /><input size="40" name="Phone" type="text"></p>
+			<p><strong>Email:</strong><br /><input size="40" name="Email" type="text"></p>
+                        </div>
+	<div id="portal-block" style="display:none;"><p>The Register button will take you to our web-based Student Portal.  Log on using the email address you have provided for 
+CTI communications and the password you were assigned.  If you have not received a password, do not remember your password, 
+or wish to change your password, please click I’m not able to login. You will be prompted for your email and sent a link to choose a new password.</p>
+<p>Please email CTI Customer Service at <a href="mailto:Registration@coactive.com">Registration@coactive.com</a> should you have any questions.</p></div>
+			<p><input name="Submit" value="Register" type="submit" style="margin-top: 10px; height: 24px;">&nbsp;&nbsp;&nbsp;Please press the Register button once only.</p>
+		</form>
+			
+			
+		</div>
+		{if segment_2 != "profiles-testimonials"}
+			{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		{/if}
+		{embed="includes/_footer" entry_id="{embed:entry_id}"}
+
+	{/exp:channel:entries}

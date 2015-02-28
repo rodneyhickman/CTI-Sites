@@ -1,0 +1,256 @@
+	{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="not closed"}
+	
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+		<div class="main" {if segment_2 == "profiles"}style="width: 930px; margin-left: 15px;"{/if}>
+			{if cf_primary_tw_retweet == 'y' && cf_primary_twitter_text != ''}
+			<div style="float: right;">
+			<!-- retweet icon: spaces become +, # sign is %23 -->
+				<!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="{cf_primary_twitter_url}" data-text="{cf_primary_twitter_text}" data-size="large" data-count="none">Tweet It!</a> -->
+				<!-- a href="http://twitter.com/home?status=RT @CTI_Coaches - {cf_primary_twitter_text} {cf_primary_twitter_url}" class="twtr-btn"><img src="/assets/img/twitter-bird-light-bgs.png" /> Tweet It!</a -->
+				<a href="{cf_primary_twitter_text}" class="twtr-btn"><img src="/assets/img/twitter-bird-light-bgs.png" /> Tweet It!</a>
+				<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+			</div>
+			{/if}
+			
+			{if cf_primary_tw_retweet == 'y' && cf_primary_twitter_text != ''}
+			<span class="breadcrumb" style="display: inline-block; width: 500px;">
+			{if:else}
+			<span class="breadcrumb" style="display: inline-block; width: auto;">
+			{/if}
+				{if segment_1 == 'events' OR segment_1 == 'jobs' OR segment_1 == 'privacy' OR segment_1 == 'disclosure' OR segment_1 == 'contact-us' OR segment_1 == 'cti-international' OR segment_1 == 'pressroom' OR segment_1 == 'policies'}
+				{exp:structure:breadcrumb inc_home="no" here_as_title="yes" separator="/" wrap_separator="span"}
+				{if:else}
+				{exp:structure:breadcrumb inc_home="yes" here_as_title="yes" separator="/" wrap_separator="span"}
+				{/if}
+			</span>
+						
+			{if segment_2 == "profiles"}
+				{embed="includes/_profiles_nav" entry_id="{embed:entry_id}"}
+			{/if}
+			{if segment_2 == 'certification' && segment_4 == ''}{/if}
+			
+			<h2 style="margin-top: 0;">{if cf_alternate_title}{cf_alternate_title}{if:else}{title}{/if}
+			{if cf_sub_head}<div class="red">{cf_sub_head}</div>{/if}</h2>
+
+			{if cf_top_section_text}{cf_top_section_text}{/if}
+			
+			{if cf_primary_vimeo_id}
+			<div style="margin-bottom: 25px;">
+				<iframe src="http://player.vimeo.com/video/{cf_primary_vimeo_id}?portrait=0&title=0&byline=0" width="600" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+			{if:elseif cf_primary_youtube_id}
+			<div style="margin-bottom: 25px;">
+				<iframe title="YouTube video player" id="videoObject" class="youtube-player" type="text/html" width="600" height="450" src="http://www.youtube.com/embed/{cf_primary_youtube_id}?rel=0" frameborder="0" allowFullScreen></iframe>
+			</div>
+			{/if}
+			
+			{if cf_primary_audio}
+			<!-- AudioAcrobat.com Player code BEGIN -->
+			<div class="aaplayer">
+				<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_primary_audio}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=ap03" height="20" width="164" frameborder="0" scrolling="no"></iframe>
+				<p><a rel="enclosure" href="http://www.audioacrobat.com/export/{cf_primary_audio}.mp3">
+				<img src="http://www.audioacrobat.com/images/buttons/downloadmp3.gif" width="72" height="16" border="0" alt="MP3 File"/></a></p>
+			</div> 
+			<!-- AudioAcrobat.com Player code END -->
+			{/if}
+			{if segment_1 == 'pressroom' && segment_3 == ''}
+			{embed="includes/_press_releases_list" entry_id="{embed:entry_id}"}
+			{/if}
+			{if segment_2 == 'cti-international' && segment_3 == ''}
+				{embed="includes/_cti_international"}
+			{/if}
+			{cf_primary_body}
+			
+			
+			
+			{if segment_2 == 'newsletter' && segment_3 == ''}
+				{embed="includes/_newsletter"}
+			{/if}
+			
+			
+			{if segment_2 == "disrupt-your-life-in-a-good-way" OR segment_2 == "henry-on-the-radio"}
+			  	{embed="includes/_blog_post_list"} 
+		    {/if}
+			
+			{if segment_2 == "profiles"}
+				{embed="includes/_profiles_body_content" entry_id="{embed:entry_id}"}
+			{/if}
+			
+			{if cf_primary_personnel}
+				{cf_primary_personnel limit="200"}
+					<div class="personnel clearfix">
+						{exp:ce_img:pair src="{mx_personnel_image}" width="108" height="115" crop="yes"}
+						<img src="{made}" width="{width}" height="{height}" />
+						{/exp:ce_img:pair}
+						<div class="personnelText">
+							<strong>{mx_personnel_name}{if mx_personnel_cert}, {mx_personnel_cert}{/if}{if mx_personnel_title}<br />{mx_personnel_title}{/if}</strong>
+							{mx_personnel_bio}
+						</div>
+					</div>
+				{/cf_primary_personnel}
+			{/if}
+			
+			
+			{if cf_primary_faqs}
+				<div id="accordion">
+					{cf_primary_faqs}
+					{if mx_header_row == 'y'}
+					<h2>{mx_faq_title}</h2>
+					{if:else}
+					<h3><a href="#">{mx_faq_title}</a></h3>
+					<div>
+						{mx_faq_answer}
+					</div>
+					{/if}
+					{/cf_primary_faqs}
+				</div>
+			{/if}
+			{if segment_1 == "coach-training" && segment_2 == "dates-locations"}
+			<div class="clear"></div>
+			<form>
+			<label for="category_selector">
+			<select id="category_selector" onChange="MM_jumpMenu('parent',this,1)">
+			<option selected>Select a location to jump to its dates</option>
+				<script src="http://www.thecoaches.com/data/us_calendar.js?mode=cities"></script>
+			</select>
+			</label>
+			</form>
+			<div style="margin-top: 50px;">
+				<script type="text/javascript" src="http://www.thecoaches.com/data/us_calendar.js?mode=location"></script>
+				<script type="text/javascript" src="http://www.thecoaches.com/data/us_calendar.js"></script>
+			</div>
+			{/if}
+
+<!-- Starting Webinar Registration -->
+			{if segment_1 == "coach-training" && segment_2 == "coach-training-webinar-registration"}
+				<div class="clear"></div>
+				{embed="includes/_coach_training_webinar_registration"}
+			{/if}
+			{if segment_1 == "leadership" && segment_2 == "leadership-webinar-registration"}
+				<div class="clear"></div>
+				{embed="includes/_leadership_webinar_registration"}
+			{/if}
+<!-- Ending Webinar Registration -->
+
+
+<!-- Starting Free Book Chapters Registration -->
+
+			{if segment_1 == "why-cti" && segment_2 == "free-book-chapters-registration"}
+				<div class="clear"></div>
+				{embed="includes/_free_book_chapters_registration"}
+			{/if}
+
+<!-- Ending Free Book Chapters Registration -->
+
+
+<!--Testing code by madrone team-->
+	 
+	{if  segment_1 == 'dev-page' && segment_2 == ''}
+		<div class="clear"></div>
+		{embed="includes/_dev_form_page"}	
+	{/if}
+	<!--Testing code by madrone team-->
+
+	<!--Testing code by madrone team-->
+	 
+	{if  segment_1 == 'search' && segment_2 == 'results'}
+		<div class="clear"></div>
+		{embed="includes/_search_results"}	
+	 {/if}
+	<!--Testing code by madrone team-->
+	
+
+
+			{if segment_2 == 'schedule-a-call'}
+			<div class="pri">
+			           
+				<form action="/docs/form.html" method="post" id="schedform">
+					<input type="hidden" name="fmlead" value="1">
+					<input name="oid" value="00D4000000079yK" type="hidden">
+					
+					<!--
+					NOTE: These fields are optional debugging elements.  Please uncomment
+					these lines if you wish to test in debug mode.
+					<input type="hidden" name="debugEmail"
+					value="davidmeyer@bisability.com">
+					<input name="retURL" value="http://www.thecoaches.com/contact/schedule-a-call/thank-you.html" type="hidden">
+					-->
+					              
+					<label for="first_name">First Name</label>
+					<input id="first_name" maxlength="40" name="first_name" size="20" type="text" style="width: 300px; margin-bottom: 10px;"><br/>
+					<label for="last_name">Last Name</label>
+					<input id="last_name" maxlength="80" name="last_name" size="20" type="text" style="width: 300px; margin-bottom: 10px;"><br/>
+					<label for="phone">Phone</label>
+					<input id="phone" maxlength="40" name="phone" size="20" type="text" style="width: 300px; margin-bottom: 10px;"><br/>
+					<label for="email">Email</label>
+					<input id="email" maxlength="80" name="email" size="20" type="text" style="width: 300px; margin-bottom: 10px;"><br/>
+					
+					<label for="lead_source">How did you hear about us?</label>
+					<select id="lead_source" name="lead_source" style="width: 150px; margin-bottom: 10px;">
+						<option value="">--None--</option>
+						<option value="Advertisement">Advertisement</option>
+						<option value="Employee Referral">Employee Referral</option>
+						<option value="External Referral">External Referral</option>
+						<option value="Partner">Partner</option>
+						<option value="Public Relations">Public Relations</option>
+						<option value="Seminar - Internal">Seminar - Internal</option>
+						<option value="Seminar - Partner">Seminar - Partner</option>
+						<option value="Trade Show">Trade Show</option>
+						<option value="Web">Web</option>
+						<option value="Word of mouth">Word of mouth</option>
+						<option value="Other">Other</option>
+					</select><br/>
+					<label for="time_zone">Time Zone:</label>
+					<select id="00N40000001OeVs" name="00N40000001OeVs"  style="width: 150px; margin-bottom: 10px;">
+						<option value="">--None--</option>
+						<option value="Pacific">Pacific</option>
+						<option value="Mountain">Mountain</option>
+						<option value="Central">Central</option>
+						<option value="Eastern">Eastern</option>
+						<option value="Other - International">Other - International</option>
+					</select><br/>
+					<label for="best_time">Best Time to Contact Me:</label>
+					<input id="00N40000001OeVx" maxlength="244" name="00N40000001OeVx" size="20" type="text" style="width: 150px; margin-bottom: 10px;"><br/>
+					<label for="message">Message:</label>
+					<textarea id="00N40000001OeVt" name="00N40000001OeVt" rows="7" type="text" wrap="soft" style="width: 300px; background-color: #ebe9da; margin-bottom: 10px;"></textarea><br/>
+					
+					<div id="submitbtn">
+						<input id="Button1" name="submit1" value="Submit" type="submit">
+					</div>
+					<div id="submitpgr"><img src="/images/1-0.gif"></div>
+					
+					  
+					<input name="recipient" value="admissions@coactive.com" type="hidden">
+					<input name="subject" value="PROGRAM ADVISOR FORM (www.thecoaches.com/contact/schedule-a-call/)" type="hidden">
+					<input name="redirect" value="/contact-us/schedule-a-call-thank-you" type="hidden">
+				
+				</form>
+			</div>
+          
+			{/if}
+			
+			{if cf_primary_fb_commenting == 'y'}
+				<div id="fb-root"></div>
+				<script type="text/javascript">
+				  window.fbAsyncInit = function() {
+				    FB.init({appId: '147654581923112', status: true, cookie: true, xfbml: true});
+				  };
+				  (function() {
+				    var e = document.createElement('script'); e.async = true;
+				    e.src = document.location.protocol +
+				      '//connect.facebook.net/en_US/all.js';
+				    document.getElementById('fb-root').appendChild(e);
+				  }());
+				</script>
+				<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+				<fb:comments xid="{if cf_custom_xid}{cf_custom_xid}{if:else}CTI_{url_title}{/if}" numposts="11"  canpost="true" width="600" href="{page_url}">
+				</fb:comments>
+			{/if}
+			
+		</div>
+		{if segment_2 != "profiles"}
+			{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		{/if}
+		{embed="includes/_footer" entry_id="{embed:entry_id}"}
+
+	{/exp:channel:entries}

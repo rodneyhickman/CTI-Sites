@@ -1,0 +1,140 @@
+{exp:channel:entries channel="leader_spark|leader_spark_listing" limit="1" disable="trackbacks|member_data|category_fields|pagination" status="open"}
+
+		{embed="includes/_header_leaderspark"}
+						<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="633" align="left">
+							<tr>
+								<td style="padding: 0 40px 10px 40px; border-left: 1px solid #69add0; border-right: 1px solid #69add0;" valign="top" align="center" width="633">						
+									<div id="content" mc:edit>
+										<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="100%">
+											<tr>
+												<td valign="top">
+													<p align="right"><strong>{entry_date format="%F"}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<strong>{entry_date format="%Y"}</strong></p>
+													<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="100%">
+														<tr>
+															<td valign="top">
+																{cf_article_content}
+																<a name="{row_count}"></a>
+																<div style="width: 537px; border-bottom: 1px solid #a9d672; padding-bottom: 5px;">
+																	<h3>{mx_article_header}</h3>
+																	{exp:nsm_transplant:body}
+																		{mx_article_body}
+																		{if cf_image_text}
+																	 		{cf_image_text}
+																	 			{exp:nsm_transplant:content id="photo-text{row_count}"}
+																	 			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="100%">
+																					<tr>
+																						{if mx_image_text_size == "160"}
+																						<td style="padding: 0 12px 10px 0;" valign="top" width="160">
+																							{!-- exp:imgsizer:size src="{mx_image_text_file}" width="160" height="{height}" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" --}
+																								<img src="{mx_image_text_file}" width="160" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" />
+																							{!-- /exp:imgsizer:size --}
+																						</td>
+																						{if:else}
+																		 				<td style="padding: 0 12px 10px 0;" valign="top" width="225">
+																		 					{!-- exp:imgsizer:size src="{mx_image_text_file}" width="225" --}
+																								<img src="{mx_image_text_file}" width="225" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" />
+																							{!-- /exp:imgsizer:size --}
+																						</td>
+																						{/if}
+																						<td valign="top">{mx_image_text_copy}</td>
+																					</tr>
+																				</table>
+																				{/exp:nsm_transplant:content}
+																			{/cf_image_text}
+																		{/if}
+																		{if cf_image_table}
+																	 		{cf_image_table}
+																	 			{exp:nsm_transplant:content id="image-table{row_count}"}
+																	 				<table bgcolor="#FFFFFF" cellpadding="3" cellspacing="0" border="0" width="100%" height="210">
+																						<tr>
+																							<td valign="top" width="33%" align="center" height="150">
+																								<!-- /editable -->
+																									{if mx_image_table_size == "105"}
+																										{!-- exp:imgsizer:size src="{mx_image_table_file_1}" width="105" --}
+																											<img src="{mx_image_table_file_1}" width="105" alt="{mx_image_table_alt_1}" title="{mx_image_table_alt_1}" />
+																										{!-- /exp:imgsizer:size --}
+																									{if:else}
+																					 					{!-- exp:imgsizer:size src="{mx_image_table_file_1}" width="150" --}
+																											<img src="{mx_image_table_file_1}" width="150" alt="{mx_image_table_alt_1}" title="{mx_image_table_alt_1}" />
+																										{!-- /exp:imgsizer:size --}
+																									{/if}
+																					 			<!-- /editable -->
+																							</td>
+																							<td valign="top" width="33%" align="center" height="150">
+																								<!-- /editable -->
+																									{if mx_image_table_size == "105"}
+																										{!-- exp:imgsizer:size src="{mx_image_table_file_2}" width="105" --}
+																											<img src="{mx_image_table_file_2}" width="105" alt="{mx_image_table_alt_2}" title="{mx_image_table_alt_2}" />
+																										{!-- /exp:imgsizer:size --}
+																									{if:else}
+																					 					{!-- exp:imgsizer:size src="{mx_image_table_file_2}" width="150" --}
+																											<img src="{mx_image_table_file_2}" width="150" alt="{mx_image_table_alt_2}" title="{mx_image_table_alt_2}" />
+																										{!-- /exp:imgsizer:size --}
+																									{/if}
+																					 			<!-- /editable -->
+																							</td>
+																							{if mx_image_table_file_3}
+																								<td valign="top" width="33%" align="center" height="150">
+																									<!-- /editable -->
+																										{if mx_image_table_size == "105"}
+																											{!-- exp:imgsizer:size src="{mx_image_table_file_3}" width="105" --}
+																												<img src="{mx_image_table_file_3}" width="105" alt="{mx_image_table_alt_3}" title="{mx_image_table_alt_3}" />
+																											{!-- /exp:imgsizer:size --}
+																										{if:else}
+																						 					{!-- exp:imgsizer:size src="{mx_image_table_file_3}" width="150" --}
+																												<img src="{mx_image_table_file_3}" width="150" alt="{mx_image_table_alt_3}" title="{mx_image_table_alt_3}" />
+																											{!-- /exp:imgsizer:size --}
+																										{/if}
+																						 			<!-- /editable -->
+																								</td>
+																							{/if}
+																						</tr>
+																						<tr>
+																							<td valign="top" width="33%" align="center" height="30">
+																								<p>{mx_image_table_alt_1}</p>
+																							</td>
+																							<td valign="top" width="33%" align="center" height="30">
+																								<p>{mx_image_table_alt_2}</p>
+																							</td>
+																							{if mx_image_table_file_3}
+																								<td valign="top" width="33%" align="center" height="30">
+																									<p>{mx_image_table_alt_3}</p>
+																								</td>
+																							{/if}
+																						</tr>
+																					</table>
+																				{/exp:nsm_transplant:content}
+																			{/cf_image_table}
+																		{/if}
+																	{/exp:nsm_transplant:body}
+																	{if mx_more_article_url}<p><a href="{mx_more_article_url}#{row_count}"><img src="http://www.thecoaches.com/emails/ctius/images/btn_read_leader-spark.gif" width="93" height="20" alt="Read More" title="Read More" /></a></p>{/if}
+																</div>
+																{/cf_article_content}
+																
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td><br />
+													<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="100%">
+														<tr height="32">
+															<td width="32"><a href="http://twitter.com/cti_coaches/"><img src="http://www.thecoaches.com/res/img/twitter_icon.png" width="23" height="23" alt="" /></a></td>
+															<td align="left"><a href="http://twitter.com/cti_coaches/" style="text-decoration: none;">Follow Us on Twitter</a></td>
+														</tr>
+														<tr height="32">
+															<td width="32"><a href="https://www.facebook.com/CTICoaches/"><img src="http://www.thecoaches.com/res/img/facebook_icon.png" width="23" height="23" alt="" /></td>
+															<td align="left"><a href="https://www.facebook.com/CTICoaches/" style="text-decoration: none;">Join Us on Facebook</a></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										
+										</table>
+									</div>
+								</td>
+							</tr>
+						</table>
+{embed="includes/_footer_leaderspark"}
+{/exp:channel:entries}

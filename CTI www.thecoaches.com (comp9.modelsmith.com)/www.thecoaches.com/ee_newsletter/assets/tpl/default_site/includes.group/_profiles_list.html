@@ -1,0 +1,19 @@
+
+		{if segment_1 == 'coach-training'}
+		{exp:channel:entries channel="profile" dynamic="no" rdf="off" disable="trackbacks|member_data" status="not closed" fixed_order="{embed:entry_id}"}
+		{url_title}
+		{/exp:channel:entries}		
+		{/if}
+
+		{if segment_1 == 'leadership'}
+		{exp:channel:entries channel="profile_leadership" dynamic="no" rdf="off" disable="trackbacks|member_data" status="not closed" fixed_order="{embed:entry_id}"}
+		{url_title}
+		{/exp:channel:entries}		
+		{/if}
+
+		{if segment_1 == 'for-organizations'}
+		{exp:channel:entries channel="profile_organization" dynamic="no" rdf="off" disable="trackbacks|member_data" status="not closed" fixed_order="{embed:entry_id}"}
+		{url_title}
+		{/exp:channel:entries}		
+		{/if}
+

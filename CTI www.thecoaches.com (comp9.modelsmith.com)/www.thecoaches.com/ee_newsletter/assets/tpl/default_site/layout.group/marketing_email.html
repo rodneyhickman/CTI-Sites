@@ -1,0 +1,109 @@
+{exp:channel:entries channel="marketing_emails|marketing_email_listing" limit="1" disable="trackbacks|member_data|category_fields|pagination" status="open"}
+
+{embed="includes/_header_us_marketing"}
+
+<table width="{if cf_sidebar != 'n'}580{if:else}626{/if}" height="436" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="{if cf_sidebar != 'n'}400{if:else}580{/if}" valign="top" style="{if cf_sidebar != 'n'}padding-right: 8px; border-right: 1px solid #7cb2ce; {if:else}padding-right: 25px; border-width: 0; {/if}padding-left: 20px; padding-bottom:33px;">
+			{if cf_headline}<h1 style="font-weight: normal;">{cf_headline}</h1>{/if}
+			{if cf_subhead}<h3 style="color: #689bbc; font-weight: bold; font-size: 18px;">{cf_subhead}</h3>{/if}
+
+			{exp:nsm_transplant:body}
+			 	{cf_body_copy}
+				{if cf_image_text}
+			 		{cf_image_text}
+			 			{exp:nsm_transplant:content id="photo-text{row_count}"}
+			 			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" width="100%">
+							<tr>
+								{if mx_image_text_size == "160"}
+								<td style="padding: 0 12px 10px 0;" valign="top" width="160">
+									{!-- exp:imgsizer:size src="{mx_image_text_file}" width="160" height="{height}" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" --}
+										<img src="{mx_image_text_file}" width="160" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" />
+									{!-- /exp:imgsizer:size --}
+								</td>
+								{if:else}
+				 				<td style="padding: 0 12px 10px 0;" valign="top" width="225">
+				 					{!-- exp:imgsizer:size src="{mx_image_text_file}" width="225" --}
+										<img src="{mx_image_text_file}" width="225" alt="{mx_image_text_alt}" title="{mx_image_text_alt}" />
+									{!-- /exp:imgsizer:size --}
+								</td>
+								{/if}
+								<td valign="top">{mx_image_text_copy}</td>
+							</tr>
+						</table>
+						{/exp:nsm_transplant:content}
+					{/cf_image_text}
+				{/if}
+				{if cf_image_table}
+			 		{cf_image_table}
+			 			{exp:nsm_transplant:content id="image-table{row_count}"}
+			 				<table bgcolor="#FFFFFF" cellpadding="3" cellspacing="0" border="0" width="100%" height="210">
+								<tr>
+									<td valign="top" width="33%" align="center" height="150">
+										<!-- /editable -->
+											{if mx_image_table_size == "105"}
+												{!-- exp:imgsizer:size src="{mx_image_table_file_1}" width="105" --}
+													<img src="{mx_image_table_file_1}" width="105" alt="{mx_image_table_alt_1}" title="{mx_image_table_alt_1}" />
+												{!-- /exp:imgsizer:size --}
+											{if:else}
+							 					{!-- exp:imgsizer:size src="{mx_image_table_file_1}" width="150" --}
+													<img src="{mx_image_table_file_1}" width="150" alt="{mx_image_table_alt_1}" title="{mx_image_table_alt_1}" />
+												{!-- /exp:imgsizer:size --}
+											{/if}
+							 			<!-- /editable -->
+									</td>
+									<td valign="top" width="33%" align="center" height="150">
+										<!-- /editable -->
+											{if mx_image_table_size == "105"}
+												{!-- exp:imgsizer:size src="{mx_image_table_file_2}" width="105" --}
+													<img src="{mx_image_table_file_2}" width="105" alt="{mx_image_table_alt_2}" title="{mx_image_table_alt_2}" />
+												{!-- /exp:imgsizer:size --}
+											{if:else}
+							 					{!-- exp:imgsizer:size src="{mx_image_table_file_2}" width="150" --}
+													<img src="{mx_image_table_file_2}" width="150" alt="{mx_image_table_alt_2}" title="{mx_image_table_alt_2}" />
+												{!-- /exp:imgsizer:size --}
+											{/if}
+							 			<!-- /editable -->
+									</td>
+									{if mx_image_table_file_3}
+										<td valign="top" width="33%" align="center" height="150">
+											<!-- /editable -->
+												{if mx_image_table_size == "105"}
+													{!-- exp:imgsizer:size src="{mx_image_table_file_3}" width="105" --}
+														<img src="{mx_image_table_file_3}" width="105" alt="{mx_image_table_alt_3}" title="{mx_image_table_alt_3}" />
+													{!-- /exp:imgsizer:size --}
+												{if:else}
+								 					{!-- exp:imgsizer:size src="{mx_image_table_file_3}" width="150" --}
+														<img src="{mx_image_table_file_3}" width="150" alt="{mx_image_table_alt_3}" title="{mx_image_table_alt_3}" />
+													{!-- /exp:imgsizer:size --}
+												{/if}
+								 			<!-- /editable -->
+										</td>
+									{/if}
+								</tr>
+								<tr>
+									<td valign="top" width="33%" align="center" height="30">
+										<p>{mx_image_table_alt_1}</p>
+									</td>
+									<td valign="top" width="33%" align="center" height="30">
+										<p>{mx_image_table_alt_2}</p>
+									</td>
+									{if mx_image_table_file_3}
+										<td valign="top" width="33%" align="center" height="30">
+											<p>{mx_image_table_alt_3}</p>
+										</td>
+									{/if}
+								</tr>
+							</table>
+						{/exp:nsm_transplant:content}
+					{/cf_image_table}
+				{/if}
+			{/exp:nsm_transplant:body}
+		</td>
+		{if cf_sidebar == "y"}{embed="includes/_sidebar_standard"}{if:elseif cf_sidebar == "t"}{embed="includes/_sidebar_testimonial"}{/if}
+	</tr>
+</table>
+{if cf_email_locale == "us"}{embed="includes/_footer_us_marketing"}{if:elseif cf_email_locale == "uk"}{embed="includes/_footer_uk_marketing"}{/if}
+
+{/exp:channel:entries}
+

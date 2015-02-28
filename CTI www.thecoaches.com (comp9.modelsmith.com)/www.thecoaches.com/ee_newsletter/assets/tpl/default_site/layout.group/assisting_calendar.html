@@ -1,0 +1,18 @@
+	{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="open|closed"}
+	
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+		<div class="main">
+			<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="no" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+			<h2 style="margin-top: 0;">{if cf_alternate_title}{cf_alternate_title}{if:else}{title}{/if}</h2>
+			
+			{cf_primary_body}
+			
+			<script src="/data/us_assisting_calendar.js"></script>			
+			
+		</div>
+
+		{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+
+		{embed="includes/_footer" entry_id="{embed:entry_id}"}
+
+	{/exp:channel:entries}

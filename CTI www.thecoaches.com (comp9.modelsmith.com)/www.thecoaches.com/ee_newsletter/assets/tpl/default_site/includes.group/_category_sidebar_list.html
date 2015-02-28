@@ -1,0 +1,10 @@
+				<h2>Categories</h2>
+	            {if segment_2 == 'henry-on-the-radio'}
+	            {exp:channel:categories channel="hkh_blog" category_group="4" category="{category_id}" relaxed_categories="yes" dynamic="no" show_empty="no" limit="12"}
+					<a href="{path='categories/disrupt-your-life-in-a-good-way/{category_url_title}/{category_id}'}">{category_name}</a>
+				{/exp:channel:categories}
+                {if:else}
+                {exp:channel:categories channel="kkh_blog" category_group="3" category="{category_id}" relaxed_categories="yes" dynamic="no" show_empty="no" limit="12"}
+					<a href="{path='categories/henry-on-the-radio/{category_url_title}/{category_id}'}">{category_name}</a>
+				{/exp:channel:categories}
+				{/if}

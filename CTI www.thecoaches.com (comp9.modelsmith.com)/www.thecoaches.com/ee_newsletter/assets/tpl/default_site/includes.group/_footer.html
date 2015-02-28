@@ -1,0 +1,481 @@
+		</div>
+		<div class="footerSpace"></div>
+	</div>
+	<!-- Begin FOOTER -->
+			<div id="footerWrapper">
+				<!-- footer TABS -->
+			    <div id="footerMain" style="position: relative; top: -3px;">
+			        <div class="wrapperFooterNav">
+			            <ul class="tabs activeCTI" id="home-promo">
+			                <li id="tabCTI"><a href="#footerCTI">CTI</a></li>
+			                <li id="tabSpecials"><a href="#footerSpecials">Spotlight</a></li>
+			                <li id="tabNews"><a href="#footerNews" title="Specials">Tweets</a></li>
+			                <li id="tabBlog"><a href="#footerBlog" title="News">Blog</a></li>
+			            </ul>
+			        </div>
+			
+			        <!-- footer CTI -->
+			        <div id="footerCTI" class="panel" style="display:block;">
+			            <div class="wrapperFooter">
+			                <div class="footer">
+			                    <div class="one-col">
+				                    <h3>Questions?</h3>
+				                	<div>
+				                	<p>Do you have questions about our coach training or leadership retreat programs?</p>
+				                	<span style="font-size: 18px;">800-691-6008</span><br />
+				                	or 415-451-6000 
+				                	<p><a href="#" id="webinar-fun-footer" class="footer">Click here to sign up</a><script src="/data/webinar_footer.js?mode=fun"></script>
+				                	
+				                	 for a <br />free webinar on our Coach Training program.</p>
+				              	<!-- <p><a id="webinar-link-footer1" class="whatever1" href="#">Click here to sign up</a><script src="/data/webinar_lead.js?mode=lead&id=webinar-link-footer"></script>
+				                	
+				                	 for a <br />free webinar on our Leadership Retreat program.</p>-->
+				                	 		 <p><a href="#" id="webinar-lead-footer" class="footer">Click here to sign up</a><script src="/data/webinar_footer.js?mode=lead"></script>
+				                	
+				                	 for a <br />free webinar on our Leadership Retreat program.</p></div>
+				                	
+				                	<ul class="social-icons">
+				                	<li class="newsletter-icon"><a href="{path='/contact-us/newsletter/'}">Sign-up for our Newsletter</a></li>
+                                    <li class="twitter-icon"><a href="http://twitter.com/cti_coaches/" target="_blank">Follow Us on Twitter</a></li>
+                                    <li class="facebook-icon"><a href="https://www.facebook.com/CTICoaches/">Join Us on Facebook</a></li>
+                                    </ul>    
+				                	
+				                </div>
+			                    <div class="two-col">
+				                    <h3>Upcoming Events</h3>
+				                    <ul style="display: block; height: auto; margin: 0; overflow: hidden; vertical-align: top;">
+
+									{exp:channel:entries channel="cti_events" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open|closed|Training|Leadership|Organizations" show_future_entries="yes" show_expired="no" orderby="entry_date" sort="asc" limit="4"}
+										<li>
+											<div class="calendar-entry calendar-entry-left">
+											  <div class="calendar-page">
+											  <p class="month">{entry_date format="%M"}</p>
+											  <p class="day">{entry_date format="%j"}</p>
+											  </div>
+											  <div class="calendar-info" style="height: 70px;">
+											  {!-- exp:eehive_hacksaw words = "16" append = "…" --}{cf_primary_body}{!-- /exp:eehive_hacksaw --}
+											  </div>
+											  <div class="clear"></div>
+											</div>
+										</li>
+									{/exp:channel:entries}
+									</ul>
+								     <a href="{path='/community/events-calendar'}" style="text-decoration: none; font-size: 12px; font-weight: normal; text-transform: none; display: block;">View our events calendar &raquo;</a>
+				                </div>
+				                <div class="col-three">
+				                	<h3>Co-Active in Organizations</h3>
+				                	<p>CTI is a pioneer in positioning coaching and relationship management as core leadership competencies. <br />
+                                                        <p>To learn more about CTI's impactful work in developing leaders and fostering collaborative relationships in organizations around the world, please contact Poorni Bid, <a href="mailto:poorni@coactive.com">poorni@coactive.com</a>.  </p>
+							<p><a href="http://www.thecoaches.com/email/images/Co_Active_Solutions_for_Organizations.pdf">Click HERE</a> for additional information.</p>
+	                                                <p>Bring Co-Active into your organization!</p>
+				                </div>
+				                <div class="clear"></div>
+				            </div>
+			            </div>
+			        </div>
+					 <!-- footer SPOTLIGHT -->
+			        <div id="footerSpecials" class="panel" style="display:none;">
+			            <div class="wrapperFooter">
+			        	{exp:channel:entries channel="footer" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open|closed|Training|Leadership|Organizations" limit="1"}
+			               <div class="footer">
+			                    <div class="one-col">
+				                    <h3>WANT TO LEARN MORE? </h3>				                    
+				                	{cf_footer_learn}
+				                </div>
+			                    <div class="two-col">				                    
+			                    <h3>Special Events </h3>
+				                
+					          	{cf_footer_specials}
+
+				                </div>
+				                
+				                 <div class="col-three">
+				                	<h3>Co-Active in Organizations</h3>
+				                	<p>CTI is a pioneer in positioning coaching and relationship management as core leadership competencies. <br />
+                                                        <p>To learn more about CTI's impactful work in developing leaders and fostering collaborative relationships in organizations around the world, please contact Poorni Bid, <a href="mailto:poorni@coactive.com">poorni@coactive.com</a>, or 1-800-691-6008, Option 4.  </p>
+							<p><a href="http://www.thecoaches.com/email/images/Co_Active_Solutions_for_Organizations.pdf">Click HERE</a> for additional information.</p>
+	                                                <p>Bring Co-Active into your organization!</p>		
+				                </div>
+				            </div>
+			            {/exp:channel:entries}
+			        	</div>
+			        </div>
+					<!-- footer NEWS -->
+			        <div id="footerNews" class="panel" style="display:none;">
+			            <div class="wrapperFooter">
+			                <div class="footer">
+			                    <div class="one-col">
+				                    <div style="margin-top: 5px;">
+		                            	<a href="https://twitter.com/cti_coaches/" target="_blank" id="twitter-link" style="display:inline;">
+		                            		<img src="/assets/img/index-lower-twitter-2.gif" alt="Follow CTI on Twitter" />
+		                            	</a>
+										<!-- end News -->
+									</div>
+				                </div>
+				                <div class="two-col">
+				                    <!--<h3>News Updates</h3>-->
+				                	<div style="margin-left: 8px;">
+		                                <!-- begin News -->
+									    <div id="home-specials">
+									    
+									    	<div id="twitter_div">
+									    		<a class="twitter-timeline"  href="https://twitter.com/CTI_Coaches"  data-widget-id="351812917890543616" data-chrome="transparent">Tweets by @CTI_Coaches</a>
+									    		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+									    		<!-- script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+												<script>
+												new TWTR.Widget({
+												  version: 2,
+												  type: 'profile',
+												  interval: 30000,
+												  title: '',
+												  subject: '',
+												  width: 425,
+												  height: 320,
+												  theme: {
+												    shell: {
+												      background: 'transparent',
+												      color: '#ffffff'
+												    },
+												    tweets: {
+												      background: 'transparent',
+												      color: '#666666',
+												      links: '#004a8f'
+												    }
+												  },
+												  features: {
+												    scrollbar: false,
+												    loop: false,
+												    live: true,
+												    avatars: true,
+												    behavior: 'all'
+												  }
+												}).render().setUser('CTI_Coaches').start();
+												</script -->
+											</div>
+										</div>
+										<!-- end News -->
+									</div>
+				                </div>
+				                <div class="col-three">
+				                	<h3>Co-Active in Organizations</h3>
+				                	<p>CTI is a pioneer in positioning coaching and relationship management as core leadership competencies. <br />
+                                                        <p>To learn more about CTI's impactful work in developing leaders and fostering collaborative relationships in organizations around the world, please contact Poorni Bid, <a href="mailto:poorni@coactive.com">poorni@coactive.com</a>, or 1-800-691-6008, Option 4.  </p>
+							<p><a href="http://www.thecoaches.com/email/images/Co_Active_Solutions_for_Organizations.pdf">Click HERE</a> for additional information.</p>
+	                                                <p>Bring Co-Active into your organization!</p>		
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+			    
+			        <!-- footer BLOG -->
+			        <div id="footerBlog" class="panel" style="display:none;">
+			            <div class="wrapperFooter">
+			            {exp:channel:entries channel="footer" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open|closed|Training|Leadership|Organizations" limit="1"}
+			                <div class="footer">
+		                        <div class="one-col">
+			                    <h3>Spotlight on:</h3>
+			                	<div style="margin-left: 8px;">
+			                	{cf_footer_spotlight}
+								</div>
+			                </div>
+			        	{/exp:channel:entries}
+			                <div class="two-col">
+				                	<h3>Blog Updates</h3>
+				                	<div style="margin-left: 8px;">
+				                		<!-- begin Blog -->
+										<div id="home-news"></div>
+										<!-- end Blog -->
+									</div>
+				                </div>
+				                <div class="col-three">
+				                	<h3>Co-Active in Organizations</h3>
+				                	<p>CTI is a pioneer in positioning coaching and relationship management as core leadership competencies. <br />
+                                                        <p>To learn more about CTI's impactful work in developing leaders and fostering collaborative relationships in organizations around the world, please contact Poorni Bid, <a href="mailto:poorni@coactive.com">poorni@coactive.com</a>, or 1-800-691-6008, Option 4.  </p>
+							<p><a href="http://www.thecoaches.com/email/images/Co_Active_Solutions_for_Organizations.pdf">Click HERE</a> for additional information.</p>
+	                                                <p>Bring Co-Active into your organization!</p>		
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+			    </div>
+			    
+			<!-- End FOOTER -->
+			
+			<div id="footer">
+				<div id="footer-content">
+					<!-- footerNavId -->
+					<div id="footer-nav">
+					{exp:channel:entries channel="footer" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open|closed|Training|Leadership|Organizations" limit="1"}
+					{cf_footer_utility}
+					{/exp:channel:entries}
+					</div>
+					<img id="coactive-footer-logo" src="/assets/img/new_coactive_footer_logo.png" width="224" height="88" alt="Coactive Logo" style="margin-right: 35px;"/><!-- -->
+					<div style="height: 57px; display: table; margin-bottom: 35px; width: 655px;">
+						<div style="height: 57px; float: left; padding-right: 25px; margin-right: 25px; border-right: 1px solid #999999;">
+							<img id="icf-logo" src="http://www.thecoaches.com/email/images/ACTP_web2.png" width="140" height="54" alt="International Coach Federation"/>
+						</div>
+						<div style="height: 57px; float: left; padding-right: 25px; margin-right: 25px; ">
+							<img id="ace-logo" src="/assets/img/ACE_CREDIT_logo-footer-sm.png" width="74" height="57" alt="American Council on Education"/>
+						</div>
+											</div>
+				</div>
+			</div>
+			
+			
+			
+			
+	
+	<!-- JavaScript at the bottom for fast page loading -->
+	
+	<!-- Twitter feed -->
+	<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+	<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/cti_coaches.json?callback=twitterCallback2&amp;count=4"></script>
+	
+	{if segment_1 == '' OR segment_1 == 'new-page'}
+	<!-- HOME PAGE SLIDESHOW -->
+	<script type="text/javascript" src="/assets/js/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#slideshow").cycle({
+		  fx: 'fade',
+		  timeout: 8500,
+		  speed:   1200,
+		  pager:   '#nav',
+		 // pagerEvent: 'mouseover',
+		  pause:   1
+		 // before:  onBefore
+		});
+	});
+	</script>
+	
+	<!-- HOME PAGE CAROUSEL-TICKER -->
+	<script type="text/javascript" src="/assets/js/jcarousellite_1.0.1.pack.js"></script>
+	<script type="text/javascript">
+	$( function()
+	{
+	    $( '#ticker' ).jCarouselLite(
+	    {
+	        vertical: true,
+	        visible:  4,
+	        auto:     4000,
+	        speed:    750
+	    });
+	});
+	</script>
+	{/if}
+	
+	{if segment_2 != 'dates-locations'}
+	<!-- ACCORDION -->
+	<script type="text/javascript">
+	$(function() {
+		$( "#accordion" ).accordion({
+			autoHeight: false,
+			header: 'h3',
+			active: false,
+			collapsible: true
+		});
+	});
+	</script>
+	{/if}
+	
+	
+	<script type="text/javascript">
+		// Enable footer tab functionality
+		(function($) {
+			$('#footerMain .tabs a').click(function(event) {
+				// Prevent default click behavior
+				// ev.preventDefault();
+				event.preventDefault();
+	
+				// Set up some variables and grab some resuable DOM references
+				var $t = $(this), // Quick ref for the clicked link
+					$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+					id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+					visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel (Tuck, Centers, Corporate)
+					tgtName = id.substr(6); // Get the name of the target panel to show, like above
+			
+				$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+				$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+			});
+	
+		})(jQuery);
+	</script>
+	<script language="JavaScript" type="text/javascript">
+		var html = '';
+		var count = 0;
+		$(document).ready(function() {
+		$.get('http://www.thecoaches.com/blog/feed/', function(xml){
+		        $("item", xml).each(function(){
+		                count++;
+		                if(count > 3) return false;
+		                $(this).find("link").each(function(){
+		                        html += "<div class='blog-entry'><strong><a href='" + getNodeText(this) +"'> ";
+		                }).end().find("title").each(function(){
+		                        html += getNodeText(this) + "</a></strong>";
+		                }).end().find("description").each(function(){
+		                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+		                }).end().find("link").each(function(){
+		                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
+		                });
+		        });
+		        $("#home-news").html(html);
+		});
+		                        
+		var myRe     = /\/#(.+)$/; // grab just the anchor
+		var loc = $(location).attr('href');
+		var myArray  = myRe.exec(loc);   // get just the *.html portion of the URL
+			if ( myArray ) {
+				var anchor = myArray[1];
+		
+				if(anchor=='specials'){
+                    $('#home-promo li').removeClass('home-promo-active');
+                    $('#tabSpecials').addClass('home-promo-active');
+                    $('#home-promo').removeClass('activeCTI');
+                    $('#home-promo').addClass('activeSpecials');
+                    $('.panel').hide();
+                    $('#footerSpecials').show();
+				}
+			}                        
+		});
+		
+		function getNodeText(node)
+		{
+		        var text = "";
+		        if(node.text) text = node.text;
+		        if(node.firstChild) text = node.firstChild.nodeValue;
+		        return text;
+		}
+	</script>
+	
+	<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry1 li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry2 li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+
+
+
+
+
+
+
+
+	
+	
+	<!-- end scripts -->
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $("img").each(function() { if($(this).css("float").match(/left/i)) { $(this).css("margin-left", "0"); } else if($(this).css("float").match(/right/i)) { $(this).css("margin-right", "0"); } });                
+        });
+    </script>
+    
+
+	
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+	       mathiasbynens.be/notes/async-analytics-snippet -->
+	<script type="text/javascript">
+	    var _gaq=[['_setAccount','UA-5715102-1'],['_trackPageview']];
+	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	    s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	<form action="" style="display: none;" method="get" id="form1">
+    	<div class="fields" id="selectCountry3">
+	        <input type="hidden" id="inputBox" />
+        </div>
+    </form>
+	<div class="ctiIntl"></div>	
+    <script type="text/javascript">
+        var _mfq = _mfq || [];
+        (function () {
+        var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/8f555c70-b54e-4371-a95a-1adbb8a7a406.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
+    </script>								
+</body>
+</html>

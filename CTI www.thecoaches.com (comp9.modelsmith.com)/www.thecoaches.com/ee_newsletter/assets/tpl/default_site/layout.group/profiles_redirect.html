@@ -1,0 +1,15 @@
+	{exp:channel:entries channel="" limit="1" rdf="off" disable="trackbacks|member_data" status="not closed" entry_id="{embed:entry_id}"}
+		
+		{if segment_1 == 'coach-training'}
+		{redirect="coach-training/profiles/{pl_featured_profile status="Training"}{url_title}{/pl_featured_profile}"}
+		{/if}
+		
+		{if segment_1 == 'leadership'}
+		{redirect="leadership/profiles/{pl_featured_profile status="Leadership"}{url_title}{/pl_featured_profile}"}
+		{/if}
+
+		{if segment_1 == 'for-organizations'}
+		{redirect="for-organizations/profiles/{pl_featured_profile status="Organizations"}{url_title}{/pl_featured_profile}"}
+		{/if}
+		
+	{/exp:channel:entries}

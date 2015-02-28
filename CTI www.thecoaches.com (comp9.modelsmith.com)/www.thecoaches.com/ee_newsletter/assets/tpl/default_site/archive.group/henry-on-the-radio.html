@@ -1,0 +1,27 @@
+	{exp:channel:entries channel="" dynamic="no" limit="1" disable="member_data|pagination|trackbacks" rdf="off" status="open|closed"}
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+	{/exp:channel:entries}
+
+		<div class="main">
+
+			{exp:channel:entries channel="hkh_blog" rdf="off" disable="trackbacks|member_data|categories|category_fields|pagination" status="open" limit="1"}
+			<h2>{entry_date format="%M %Y"}</h2>
+			{/exp:channel:entries}
+			
+			{exp:channel:entries channel="hkh_blog" rdf="off" disable="trackbacks|member_data" limit="25" status="open" sort="desc" orderby="date" paginate="bottom"}
+				<h4><strong><a href="{path='{page_uri}'}">{title}</a></strong></h4>
+				<p style="margin-bottom: 5px;">{entry_date format="%M %d, %Y"} posted by {author}</p>
+				<!-- begin CONTENT MAIN -->
+				<div style="margin-bottom: 20px;">{exp:eehive_hacksaw words="28" append="..."}{cf_primary_body}{/exp:eehive_hacksaw}</div>
+				{paginate}
+					<p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+				{/paginate}
+			{/exp:channel:entries}	 			
+	    </div>
+
+	{exp:channel:entries channel="" limit="1" disable="member_data|pagination|trackbacks" rdf="off" status="open|closed"}
+	    {embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		<div class="clear"></div>
+	{embed="includes/_footer" entry_id="{embed:entry_id}"}
+	{/exp:channel:entries}
+	

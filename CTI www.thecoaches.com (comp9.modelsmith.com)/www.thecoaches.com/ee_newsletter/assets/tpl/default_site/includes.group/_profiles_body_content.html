@@ -1,0 +1,179 @@
+			<div id="main-testimonial" style="background: url('{site_url}assets/img/bg_prof-sidebar.gif') no-repeat scroll 630px 315px #FFFFFF; display: table; width: 930px;">
+				{if segment_1 == 'coach-training'}
+				{exp:channel:entries channel="profile" limit="1" rdf="off" disable="trackbacks|member_data" status="not closed" entry_id="{embed:entry_id}"}
+				
+				<!-- begin pri-testimonial -->
+				<div class="pri-testimonial" style="height: 300px">
+					<!-- begin TESTIMONIAL FEATURE -->
+					<div id="testimonial-feature">
+						<div class="testimonial-visual">        					
+                		  	<div style="position: relative; height: 300px; width: 470px; overflow: hidden; float: left;">
+						      	{if cf_profiles_vimeo_id}
+						      	<iframe src="http://player.vimeo.com/video/{cf_profiles_vimeo_id}" width="550" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="position: absolute; left: -38px;"></iframe>
+						      	{if:elseif cf_profiles_photo}
+						      	{exp:ce_img:single src="{cf_profiles_photo}" width="470" height="300" crop="yes" allow_scale_larger="yes"}
+						      	{/if}
+					      	</div>
+						</div>
+						<div class="testimonial-quote blue">{cf_profiles_main_quote}</div>
+					</div>
+
+					
+					
+					<!-- begin NARROW COL -->
+					<div class="narrow-col" style="width: 600px; margin-right: 20px;">
+						{if cf_audio_acrobat_id_1}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="display: inline-table; width: 600px; margin: 12px 0; border-bottom: 1px dotted #cccccc; padding: 0 0 22px;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_1}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_1}</div>
+						</div>
+						{/if}
+						{if cf_audio_acrobat_id_2}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="width: 600px; margin: 12px 0 0; display: inline-table; padding: 0;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_2}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_2}</div>
+						</div>
+						{/if}
+						<!-- div style="margin: -7px 70px 0px 0px; float: right; border-left: solid white 6px; "><script type="text/javascript">insert_social_bookmarking();</script></div -->
+	      				<!-- end TESTIMONIAL FEATURE -->							
+						{if cf_audio_acrobat_id_1}<div class="first-child">{/if}
+						{cf_profiles_copy}
+						{if cf_audio_acrobat_id_1}</div>{/if}
+						<span class="blue">{cf_profiles_secondary_quote}</span>
+						<p class="bottom-photo-name" style="clear: both;">{cf_profiles_caption}</p>
+						<img class="bottom-photo" src="{cf_profiles_footer_photo}" style="float: right;" />
+					</div>
+					<!-- end NARROW COL -->
+				</div>
+				<!-- end pri-testimonial -->
+				
+				{/exp:channel:entries}	
+				{/if}	
+				
+				{if segment_1 == 'leadership'}
+				{exp:channel:entries channel="profile_leadership" limit="1" rdf="off" disable="trackbacks|member_data" status="not closed" entry_id="{embed:entry_id}"}
+				
+				<!-- begin pri-testimonial -->
+				<div class="pri-testimonial">
+					<!-- begin TESTIMONIAL FEATURE -->
+					<div id="testimonial-feature">
+						<div class="testimonial-visual">        					
+                		  	<div style="position: relative; height: 300px; width: 470px; overflow: hidden; float: left;">
+						      	{if cf_profiles_vimeo_id}
+						      	<iframe src="http://player.vimeo.com/video/{cf_profiles_vimeo_id}" width="550" height="{if segment_3 == 'celeste-schenk'}370{if:else}320{/if}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="position: absolute; left: -38px; top: -6px; {if segment_3 == 'celeste-schenk'}top: -30px;{/if}"></iframe>
+						      	{if:elseif cf_profiles_photo}
+						      	{exp:ce_img:single src="{cf_profiles_photo}" width="470" height="300" crop="yes" allow_scale_larger="yes"}
+						      	{/if}
+					      	</div>
+						</div>
+						<div class="testimonial-quote orange">{cf_profiles_main_quote}</div>
+					</div>
+					
+					<!-- div style="margin: -7px 70px 0px 0px; float: right; border-left: solid white 6px; "><script type="text/javascript">insert_social_bookmarking();</script></div -->
+      				<!-- end TESTIMONIAL FEATURE -->							
+					
+					
+					
+					<!-- begin NARROW COL -->
+					<div class="narrow-col" style="width: 600px; margin-right: 20px;">
+						{if cf_audio_acrobat_id_1}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="display: inline-table; width: 600px; margin: 12px 0; border-bottom: 1px dotted #cccccc; padding: 0 0 22px;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_1}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_1}</div>
+						</div>
+						{/if}
+						{if cf_audio_acrobat_id_2}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="width: 600px; margin: 12px 0 0; display: inline-table; padding: 0;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_2}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_2}</div>
+						</div>
+						{/if}
+						{if cf_audio_acrobat_id_1}<div class="first-child">{/if}
+						{cf_profiles_copy}
+						{if cf_audio_acrobat_id_1}</div>{/if}
+						<span class="orange">{cf_profiles_secondary_quote}</span>
+						<p class="bottom-photo-name" style="clear: both;">{cf_profiles_caption}</p>
+						<img class="bottom-photo" src="{cf_profiles_footer_photo}" style="float: right;" />
+					</div>
+					<!-- end NARROW COL -->
+				</div>
+				<!-- end pri-testimonial -->
+				
+				{/exp:channel:entries}	
+				{/if}	
+				
+				{if segment_1 == 'for-organizations'}
+				{exp:channel:entries channel="profile_organization" limit="1" rdf="off" disable="trackbacks|member_data" status="not closed" entry_id="{embed:entry_id}"}
+				
+				<!-- begin pri-testimonial -->
+				<div class="pri-testimonial">
+					<!-- begin TESTIMONIAL FEATURE -->
+					<div id="testimonial-feature">
+						<div class="testimonial-visual">        					
+                		  	<div style="position: relative; height: 300px; width: 470px; overflow: hidden; float: left;">
+						      	{if cf_profiles_vimeo_id}
+						      	<iframe src="http://player.vimeo.com/video/{cf_profiles_vimeo_id}" width="550" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="position: absolute; left: -38px;"></iframe>
+						      	{if:elseif cf_profiles_photo}
+						      	{exp:ce_img:single src="{cf_profiles_photo}" width="470" height="300" crop="yes" allow_scale_larger="yes"}
+						      	{/if}
+					      	</div>
+						</div>
+						<div class="testimonial-quote red">{cf_profiles_main_quote}</div>
+					</div>
+					<!-- div style="margin: -7px 70px 0px 0px; float: right; border-left: solid white 6px; "><script type="text/javascript">insert_social_bookmarking();</script></div -->
+      				<!-- end TESTIMONIAL FEATURE -->							
+
+					<!-- begin NARROW COL -->
+					<div class="narrow-col" style="width: 600px; margin-right: 20px;">
+						{if cf_audio_acrobat_id_1}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="display: inline-table; width: 600px; margin: 12px 0; border-bottom: 1px dotted #cccccc; padding: 0 0 22px;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_1}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_1}</div>
+						</div>
+						{/if}
+						{if cf_audio_acrobat_id_2}
+						<!-- AudioAcrobat.com Player code BEGIN -->
+						<div class="profile-audio" style="width: 600px; margin: 12px 0 0; display: inline-table; padding: 0;">
+							<div class="aaplayer" style="width: 80px; float: left">
+								<iframe src="http://www.audioacrobat.com/playweb?audioid={cf_audio_acrobat_id_2}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+							</div>
+							<!-- AudioAcrobat.com Player code END -->
+							<div style="width: 520px; float: right; margin-top: 3px;">{cf_audio_description_2}</div>
+						</div>
+						{/if}
+						{if cf_audio_acrobat_id_1}<div class="first-child">{/if}
+						{cf_profiles_copy}
+						{if cf_audio_acrobat_id_1}</div>{/if}
+						<span class="red">{cf_profiles_secondary_quote}</span>
+						<p class="bottom-photo-name" style="clear: both;">{cf_profiles_caption}</p>
+						<img class="bottom-photo" src="{cf_profiles_footer_photo}" style="float: right;" />
+					</div>
+					<!-- end NARROW COL -->
+				</div>
+				<!-- end pri-testimonial -->
+				
+				{/exp:channel:entries}	
+				{/if}	
+				{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+			</div>
+			<!-- end main-testimonial -->

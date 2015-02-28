@@ -1,0 +1,18 @@
+
+AddHandler php5-script .php
+
+# BEGIN ExpressionEngine Rewrite
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteBase /
+
+# add trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule ^(.*)$ $1/ [L,R=301]
+
+RewriteCond $1 !^(assets|images|themes|uploads|zcti|index\.php|admin\.php) [NC]
+RewriteRule ^(.*)$ /index.php/$1 [L]
+</IfModule>
+# END ExpressionEngine Rewrite

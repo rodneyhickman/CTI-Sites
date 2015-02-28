@@ -1,0 +1,307 @@
+<!doctype html>
+{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="not closed" entry_id="{embed:entry_id}"}
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	{exp:seo_lite entry_id="{entry_id}"}
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-control" content="public">
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	     More info: h5bp.com/i/378 -->
+	{if segment_2 == 'connect-locally' OR segment_2 == 'events-calendar'}
+	<meta http-equiv="Pragma" content="no-cache"> 
+	{/if}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<!-- title>{site_name} &raquo; {title}</title>
+	<meta name='keywords' content='{meta_keywords}' />
+	<meta name='description' content='{meta_description}' / -->
+	
+	
+	
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width">
+
+	<meta property="fb:app_id" content="492914277433201" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+	<link type="image/ico" href="/assets/img/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/primary.css">
+	<!--[if gt IE 8]><link rel="stylesheet" href="/assets/css/ie9.css"><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie.css"><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" href="/assets/css/ie7.css"><![endif]-->
+	<link rel="stylesheet" href="/assets/css/footer.css">
+	<link rel="stylesheet" href="/assets/css/testimonial.css">
+	<link rel="stylesheet" href="/assets/js/development-bundle/themes/pepper-grinder/jquery.ui.all.css">
+	<style type="text/css">
+		 .process-instruction {
+		 	width: 330px; height: 110px; position: absolute; left: 27px; top: 42px; font-size: 16px; color: #bbbbbb; font-weight: bold;
+		 } 
+		 .diagram-description {
+		 	position: absolute; left: 0; bottom: 0; visibility: hidden; width: 531px; height: 156px; background: transparent no-repeat center center;
+		 } 
+		 .process-text {
+		 	width: 330px; height: 110px; position: absolute; left: 27px; top: 12px;
+		 }
+		 .process-text h3 {
+		 	color: #83a13d; font-size: 15px; margin-bottom: 3px;
+		 }
+		 .process-text p {
+		  	color: #333333; font-size: .95em;
+		  }
+
+                  /* LIST #2 */
+#list2 { width:320px; }
+#list2 ul {  font-family:Georgia, Times, serif; font-size:24px; padding-left:35px; list-style:none;}
+#list2 ul li { }
+#list2 ul li  { padding:8px; font-style:normal;  font-size:12px; }
+
+#list2 ul li:before {
+		 content: "\00BB \0020";
+	     }
+
+	</style>
+	<link media="print" href="/assets/css/print.css" rel="stylesheet">
+	<script type="text/javascript">
+		function show(object,val) {
+			document.getElementById(object).style.visibility = val;
+		}
+	</script>
+    	
+	<style type="text/css">
+    ul.liCol {
+	    padding: 0;
+	    margin: 0;
+	    list-style: none;
+	    float: left;
+	    /*
+		-moz-column-count: 2; -moz-column-gap: 30px;
+	    -webkit-column-count: 2; -webkit-column-gap: 30px;
+	    column-count: 2; column-gap: 30px;
+		*/
+	}
+    ul.liCol li {
+	    margin: 0 0 12px 0;
+	    width: 250px;
+	}
+    </style>
+
+      <style>  
+ form.gsc-search-box {
+    
+    margin: -9px 0 -17px !important;
+     
+}
+.gsc-input-box {
+	float:right !important;
+   
+    width: 220px !important;
+}
+.gsc-control-cse table{ margin-bottom:0px;border-collapse:inherit;}
+
+.gsc-webResult .gsc-result{line-height:20px !important;}
+.gcsc-branding{display:none;}
+
+.gsc-control-cse header, .header{
+line-height:1px !important;}
+
+.gsc-control-cse table tbody > tr:nth-of-type(2n+1) td{border:none !important;}
+
+.gsc-control-cse table.gsc-search-box td {
+    vertical-align: bottom;
+}
+
+.gsc-control-cse{height:50px !important;}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.gsc-control-cse{height:60px !important;}
+.gsc-input{padding:0px !important;}
+.gsc-search-button{padding:0px !important;}
+}
+
+.gsc-input{padding:0px  !important;}
+.gsc-search-button{padding:0px  !important;}
+
+/* IE6, IE7, IE8 */
+/* IE 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .gsc-control-cse { height:60px !important; }
+}
+
+.gsc-table-cell-thumbnail .gsc-thumbnail { border:none;}
+.gsib_b, .gsib_a{padding:0px !important;}
+.gsc-control-cse{background:none !important;}
+.cse .gsc-control-cse, .gsc-control-cse{padding:0px !important; border:0px !important;}
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2{margin-top: 11px !important;
+    padding: 6px !important;}
+#gsc-i-id1{background:none !important;}
+.gsc-input{ box-shadow:0 !important;}
+.gsc-result{border:0px !important;}
+</style>      
+	
+	
+	<!-- script type="text/javascript" src="http://use.typekit.com/kvp1yxh.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script -->
+	
+	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+	
+	<!-- All JavaScript at the bottom, except this Modernizr build.
+	     Modernizr enables HTML5 elements & feature detects for optimal performance.
+	     Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<!-- script type="text/javascript" src="{site_url}assets/js/libs/modernizr-2.5.2.min.js"></script -->
+	
+	
+	<script type="text/javascript" src="http://use.typekit.com/guz2yef.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{site_url}assets/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="/assets/js/libs/jquery-ui-1.8.22.custom.min.js"></script>
+	
+	{if segment_2 == "dates-locations"}
+		<script src="http://cdn.jquerytools.org/1.2.3/full/jquery.tools.min.js"></script>
+		<script language="JavaScript" type="text/javascript">
+		function MM_jumpMenu(targ,selObj,restore){ //v3.0
+		eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+		if (restore) selObj.selectedIndex=0;
+		}
+		</script>
+	{/if}
+	
+	{if segment_2 == "schedule-a-call"}
+	<script type="text/javascript">
+	google.setOnLoadCallback(function() {
+	$('#submitpgr').hide(); // hide spinning wheel
+	
+	$.validator.addMethod("phonenumber", function(value, element) { 
+	  return this.optional(element) || /^(\d\d\d-\d\d\d\-\d\d\d\d|\+[\d -]+)$/.test(value); 
+	}, "Please provide the phone number as XXX-XXX-XXXX<br />or +XXX XXX-XXX-XXXX");
+	
+	$('#schedform').validate({ // add validation to form
+	    rules: {
+	      first_name:  { required: true },
+	      phone:       { required: true, phonenumber: true },
+	      email:       { required: true, email: true },
+	      lead_source: { required: true },
+	      '00N40000001OeVs': { required: true },
+	      '00N40000001OeVx': { required: true }
+	    },
+	    submitHandler: function(form) {
+	      // this section is run when submit button is pressed
+	
+	      // (the following obsolete as of 3/15/10, T. Beutel)
+	      //$.get('/form.html', $('input,textarea,select').serialize(), function(data) {
+	        //alert(data);
+	      //});
+	
+	      $('#submitbtn').hide(); // hide submit button
+	      $('#submitpgr').show(); // show spinning wheel
+	
+	      // now delay 2 seconds and then submit the form. The delay is to allow
+	      // the $.get() above to complete
+	      setTimeout('document.forms[0].submit()',2000); 
+	    }
+	 });
+	});
+	</script>
+	<style type="text/css">
+		label.error { margin:0 0 0 10px; color:#c00; }
+		form label { width: 175px; margin-right: 10px; display: inline-block; text-align: right; }
+		form #submitbtn { padding-left: 185px; }
+		form #submitbtn input[type="submit"] {  padding: 3px 4px; display: block; } 
+		form #submitpgr { margin-left: 200px; margin-top: 5px; }
+		form #submitpgr img { display: none; }
+		form input[type="text"] {border: 1px solid #777777; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; padding: 5px 6px; background-color: #f6f4eb;}
+		form textarea {border: 1px solid #777777; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; padding: 5px 6px; background-color: #f6f4eb !important;}
+		form input[type="text"]:active,
+		form input[type="text"]:focus {background-color: #ffffff;}
+		form textarea:active,
+		form textarea:focus {background-color: #ffffff !important;}
+	</style>
+	{/if}
+	
+{if segment_2 == "pricing-registration"}
+	<script type="text/javascript" src="http://www.thecoaches.com/res/js/lytebox.js"></script>
+	{/if}
+	{if logged_in}
+ 	{exp:eezedit add="no" size="24" entry_id="{entry_id}"}
+ 	<link href="/assets/js/shadowbox-3.0.3/shadowbox.css" type="text/css" rel="stylesheet" media="screen" />
+ 	<script type="text/javascript" src="/assets/js/shadowbox-3.0.3/shadowbox.js"></script>
+	<script type="text/javascript">
+	Shadowbox.init({
+	    // a darker overlay looks better on this particular site
+	    overlayOpacity: 0.7,
+	    // setupDemos is defined in assets/demo.js
+	    language: 'en',
+	    players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv'] 
+	});
+	</script>
+ 	{/if}
+ 	
+</head>
+<body class="{if segment_1 != 'why-cti' && segment_1 != 'coach-training' && segment_1 != 'leadership' && segment_1 != 'for-organizations' && segment_1 != 'community' && segment_1 != 'disrupt-your-life-in-a-good-way' && segment_1 != 'henry-on-the-radio' && segment_1 != ''}top-level{if:elseif segment_1}{segment_1}{if:else}home{/if} {if segment_1 == 'pressroom'}pressroom{/if}">
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<div class="headerWrapper">
+	<!--[if lte IE 8]><div class="header"><![endif]-->
+	<header>
+		<!-- begin #nav -->
+  		<ul class="headerNav">
+ 
+		</ul>
+		<!-- eCommerceID -->
+		<ul id="ecommerce">
+			 
+		</ul>
+            		
+	
+		
+		<ul class="mainNav">		 
+  			<li class="logo level-1"><a href="{path='/'}">Coactive</a></li>
+		</ul>
+
+	</header>
+	<!--[if lte IE 8]></div><![endif]-->
+	</div>
+	{if segment_1 != 'disrupt-your-life-in-a-good-way' && segment_1 != 'henry-on-the-radio' && segment_2 != 'disrupt-your-life-in-a-good-way' && segment_2 != 'henry-on-the-radio' && segment_1 != ''}
+		{if segment_1 == 'why-cti' && segment_2 != '' OR segment_1 == 'coach-training' && segment_2 != '' OR segment_1 == 'leadership' && segment_2 != '' OR segment_1 == 'for-organizations' && segment_2 != '' OR segment_1 == 'community' && segment_2 != '' OR segment_1 == 'events' OR segment_1 == 'policies' OR segment_1 == 'jobs' OR segment_1 == 'privacy' OR segment_1 == 'disclosure' OR segment_1 == 'contact-us' OR segment_1 == 'cti-international' OR segment_1 == 'pressroom' OR segment_1 == 'info'}
+		<div class="bannerWrapper">
+			<div class="interiorBanner">
+				{if segment_1 == "contact-us" OR segment_1 == 'privacy' OR segment_1 == 'disclosure' OR segment_1 == 'info'}
+	  				<h1 style="text-transform: none; font-size: 24px; padding-top: 80px;">changing business. transforming lives.</h1>
+	  			{if:else}
+	  				<h1>{structure:top:title}</h1>
+	  			{/if}
+	  		</div>
+		</div>
+		{/if}
+	{/if}
+	
+	{if  segment_1 == 'student-resources' && segment_2 == ''}
+		<div class="bannerWrapper">
+			<div class="interiorBanner"> 
+	  				<h1>{structure:top:title}</h1>	  			 
+	  		</div>
+		</div>	
+	{/if}
+
+	<!--Testing code by madrone team-->
+	 
+	{if  segment_1 == 'dev-page' && segment_2 == ''}
+		<div class="bannerWrapper">
+			<div class="interiorBanner"> 
+	  				<h1>{structure:top:title}</h1>	  			 
+	  		</div>
+		</div>	
+	{/if}
+	<!--Testing code by madrone team-->
+	
+	<div class="contentWrapper">
+		<div role="main" class='mainContent{if segment_2 == "dates-locations"} locations{/if}' {if segment_2 == "building-business" && segment_3 == ''}style="overflow: visible;"{/if}{if segment_1 == '' OR segment_2 == 'profiles'}style="background-image: none;"{/if}>
+{/exp:channel:entries}				

@@ -1,0 +1,46 @@
+{exp:channel:entries channel="kkh_blog|hkh_blog" limit="1" disable="categories|category_fields|member_data|pagination|trackbacks" rdf="off" status="open|closed"}
+	{embed="includes/_header"}
+
+		<div class="main">
+    		<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="no" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+			
+		    <h2 style="margin-top: 0;">{title}</h2>
+			
+			{if cf_primary_vimeo_id}
+			<div style="margin-bottom: 25px;">
+				<iframe src="http://player.vimeo.com/video/{cf_primary_vimeo_id}?portrait=0&title=0&byline=0" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+			{if:elseif cf_primary_youtube_id}
+			<div style="margin-bottom: 25px;">
+				<iframe title="YouTube video player" id="videoObject" class="youtube-player" type="text/html" width="600" height="337" src="http://www.youtube.com/embed/{cf_primary_youtube_id}?rel=0" frameborder="0" allowFullScreen></iframe>
+			</div>
+			{/if}
+			
+			{cf_primary_body}
+		
+			<div id="fb-root"></div>
+				<script type="text/javascript">
+				  window.fbAsyncInit = function() {
+				    FB.init({appId: '147654581923112', status: true, cookie: true, xfbml: true});
+				  };
+				  (function() {
+				    var e = document.createElement('script'); e.async = true;
+				    e.src = document.location.protocol +
+				      '//connect.facebook.net/en_US/all.js';
+				    document.getElementById('fb-root').appendChild(e);
+				  }());
+				</script>
+				<fb:comments xid="{if cf_custom_xid}{cf_custom_xid}{if:else}CTI_{url_title}{/if}" numposts="11"  canpost="true" width="600" href="{page_url}">
+				</fb:comments>
+			
+			
+        
+	    </div>
+	    
+	    {embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+	
+		<div class="clear"></div>
+
+	{embed="includes/_footer" entry_id="{embed:entry_id}"}
+	
+{/exp:channel:entries}

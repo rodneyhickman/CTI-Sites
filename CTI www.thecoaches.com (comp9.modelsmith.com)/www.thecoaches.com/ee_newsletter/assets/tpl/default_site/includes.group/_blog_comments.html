@@ -1,0 +1,66 @@
+{exp:comment:entries channel="{embed:channel}" dynamic="no" limit="1" entry_id="{embed:entry_id}" parse="inward"}
+	<h2 class="comment-response" style="margin: 20px 0 7px 0;">
+		{if total_comments == 1}
+		One Comment
+		{/if}
+		{if total_comments >= 2}
+		{total_comments} Comments
+		{/if}
+	</h2>
+{/exp:comment:entries}
+	
+	<ul class="comments" style="list-style: none; margin: 0; padding: 0; border-bottom: 1px dotted #cccccc; border-top: 1px dotted #cccccc;">
+
+	{exp:comment:entries channel="{embed:channel}" dynamic="no" sort="asc" limit="20" entry_id="{embed:entry_id}" parse="inward"}
+		<li>
+			<!-- div>
+			{if avatar}
+				<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar" />	
+			{/if}
+			{if avatar == ""}
+				<img src="{site_url}uploads/content/blog-avatar-example.gif" width="50" height="43" alt="{author}'s avatar" />	
+			{/if}
+		
+			</div -->
+			<div>
+				<h3 style="color: #80A03F; font-size: 19px; font-weight: normal; margin-bottom: 5px;">{url_as_author} says:</h3> 
+				<p class="date">{comment_date format="%M %d, %Y"} at {comment_date format="%g:%i %a"}</p>
+				<p>{comment}</p>
+			</div>
+		</li>
+	{/exp:comment:entries}
+	</ul>
+	
+<script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'clean'
+ };
+</script>
+
+{exp:comment:form channel="{embed:channel}" preview="channel/preview" entry_id="{embed:entry_id}" parse="inward"}
+	<h3 class="comment-response">Leave a Reply</h3>
+	
+	{if logged_out}
+	<p><em>Your email address will not be published.</em></p>
+	<p>Name: *<br /><input type="text" name="name" value="" size="50" style="width: 498px; padding: 2px 4px; border: 1px solid #818181; margin: 3px 0;" /></p>
+	<p>Email: *<br /><input type="text" name="email" value="" size="50" style="width: 498px; padding: 2px 4px; border: 1px solid #818181; margin: 3px 0;" /></p>
+	<p>Website: <br /><input type="text" name="url" value="" size="50" style="width: 498px; padding: 2px 4px; border: 1px solid #818181; margin: 3px 0;" /></p>
+	{/if}
+	<p><textarea name="comment" cols="70" rows="10">{comment}</textarea></p>
+	<p><input type="checkbox" name="save_info" value="yes" {save_info} />&nbsp;&nbsp;Remember my personal information</p>
+	<p><input type="checkbox" name="notify_me" value="yes" {notify_me} />&nbsp;&nbsp;Notify me of follow-up comments?</p>
+	
+	<h3>Please enter the words you see into the box below</h3>
+	<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LeFhdcSAAAAAJa34IJ-SNzfAJSA6GLk2HPeXIHs"></script>
+  	<noscript>
+    	<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeFhdcSAAAAAJa34IJ-SNzfAJSA6GLk2HPeXIHs" height="300" width="500" frameborder="0"></iframe><br>
+    	<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+    	<input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+  	</noscript>
+	
+	<div class="clear">&nbsp;</div>
+	<input type="submit" name="submit" value="Submit" />
+	<!-- <input type="submit" name="preview" value="Preview" /> -->
+	
+{/exp:comment:form}
+

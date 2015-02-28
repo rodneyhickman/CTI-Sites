@@ -1,0 +1,223 @@
+{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" category_id="{embed:category_id}" limit="1" status="open|closed|Training|Leadership|Organizations" entry_id="{embed:entry_id}"}
+	<div id="sidebar" {if segment_2 == "dates-locations"}class="locations"{/if} {if segment_2 == "building-business" && segment_3 == ''}style="margin-bottom: 0; padding-bottom: 3200px;"{/if}>
+		<div class="subnav">
+			<ul>
+				{if segment_1 == 'categories'}
+				{exp:structure:nav start_from="/community" include_ul="no"}
+				{if:else}
+				{exp:structure:nav start_from="/{segment_1}" include_ul="no"}
+				{/if}
+			</ul>
+		</div>
+		{cf_sidebar_audio}
+		{if mx_above_nav == 'y'}
+			{if mx_audio_id}
+				<div class="sidebarItem clearfix">
+					<h2>{mx_audio_title}</h2>
+					<div class="speaker-thumb" style="font-size: 0.92em; line-height: 14px;">
+						{exp:ce_img:single src="{mx_audio_image}" width="72" crop="yes" attributes='style="float: left; margin: 0 14px 25px 0; width: 72px;"'} 
+						{mx_audio_description}
+						<div class="aaplayer">
+							<iframe src="http://www.audioacrobat.com/playweb?audioid={mx_audio_id}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+					<p style="padding-bottom: 18px; margin-bottom: 0;">
+					<a href="{if mx_more_btn_url}{mx_more_btn_url}{if:else}{site_url}leadership/resources/{/if}" class="sidebarBtn {if mx_more_button_color}{mx_more_button_color}{if:else}r{/if}">{if mx_more_btn_text}{mx_more_btn_text}{if:else}Listen to more Interviews{/if}</a>
+					</p>
+				</div>
+				<div class="clear"></div>
+			{/if}
+		{/if}
+		{/cf_sidebar_audio}
+		{cf_primary_sidebar}
+		{if mx_above_nav == 'y'}
+			<div class="sidebarItem">
+				{if mx_header}<h2>{mx_header}</h2>{/if}
+				{if segment_3 == 'co-active-thinkpal'}
+					{if mx_image}
+							{exp:ce_img:single src="{mx_image}" width="140" crop="yes" attributes='style="display: block;"'}
+					{/if}
+				{if:else}
+					{if mx_image}
+						{if mx_size == "n"}
+							{exp:ce_img:single src="{mx_image}" width="100" crop="yes" attributes='class="thumbnail"'}
+						{if:else}
+							<div style="position: relative; width: 260px; height: 170px; overflow: hidden;">
+							{exp:ce_img:single src="{mx_image}" width="260" height="170" crop="yes" allow_scale_larger="yes" attributes='class="full"' }
+							</div>
+						{/if}
+					{/if}
+				{/if}
+				
+				{if mx_vimeo}
+				<div style="position: relative; width: 260px; height: 170px; overflow: hidden;">
+				<iframe src="http://player.vimeo.com/video/{mx_vimeo}" width="300" height="170" frameborder="0" style="margin-bottom: 0; left: -20px; position: absolute;" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				</div>
+				<div class="clear"></div>
+				{/if}
+				
+				
+				<div>
+					{mx_content}
+				</div>
+				
+				{if mx_button_link}
+					<a href='{mx_button_link}' class='sidebarBtn {if mx_button_color}{mx_button_color}{if:else}r{/if}'>{mx_button_text}</a>
+				{if:elseif mx_external_link}
+					<a href='http://{mx_external_link}' target='_blank' class='sidebarBtn {if mx_button_color}{mx_button_color}{if:else}r{/if}'>{mx_button_text}</a>
+				{if:else}
+				
+				{/if}
+			
+			</div>
+			<div class="clear"></div>
+		{/if}
+		{/cf_primary_sidebar}
+		
+		{if segment_1 == "leadership" AND (segment_2 == "" OR segment_2 == "program-overview" OR segment_2 == "retreats" OR segment_2 == "dates-locations" OR segment_2 == "program-faqs" OR segment_2 == "pricing-registration" OR segment_2 == "faculty" OR segment_2 == "college-equivalence" OR segment_2 == "profiles" OR segment_2 == "resources" OR segment_2 == "leader-from-within" OR segment_2 == "the-leadership-way") AND (segment_3 == "" OR segment_3 == "why-lead" OR segment_3 == "interview-with-program-leaders" OR segment_3 == "leadership-whats-your-stake" OR segment_3 == "women-in-leadership" OR segment_3 == "books" OR segment_3 == "why-co-active-leadership-1" OR segment_3 == "what-is-co-active-leadership" OR segment_3 == "retreat-locations") }
+		<div class="sidebarItem clearfix">
+			<h2>Want more information?</h2>
+			<p><strong><em>Attend a free, LIVE webinar.</em></strong> <a href="#" id="webinar-link-lead" class="sidebarBtn r">Attend&nbsp;a&nbsp;FREE&nbsp;webinar</a><script src="/data/webinar.js?mode=lead"></script></p>
+                        <p><strong><em>Can't make that date?</em></strong> <a href="http://www.thecoaches.com/leadership/resources/webinars/why-co-active-leadership-1" id="webinar-link" class="sidebarBtn r">Listen to a PRE-RECORDED webinar</a></p><br />
+</div>
+		<div class="clear"></div>
+		{/if}
+		{if segment_1 == "coach-training" AND (segment_2 == "" OR segment_2 == "pricing-registration" OR segment_2 == "faqs") }
+		<div class="sidebarItem clearfix">
+			<h2>Want more information? Here’s how:</h2>
+			<p><strong><em>Attend a free, LIVE webinar.</em></strong> <a href="#" id="sidebar-link-fun" class="sidebarBtn r">Attend&nbsp;a&nbsp;FREE&nbsp;webinar</a><script src="/data/webinar_sidebar.js?mode=fund&id=sidebar-link-fun"></script></p><br />
+                        <p><strong><em>Can't make that date?</em></strong> <a href="http://www.thecoaches.com/coach-training/coach-training-webinar-registration" id="webinar-link" class="sidebarBtn r">Listen to a PRE-RECORDED webinar</a></p><br />
+                        <p><strong><em>Speak with a Program Advisor:</em></strong><br> <a href="http://www.thecoaches.com/contact-us/schedule-a-call/" id="webinar-link" class="sidebarBtn r">Schedule a call</a></p>
+		</div>
+		<div class="clear"></div>
+		{/if}
+		{if segment_1 == "coach-training" AND segment_2 == "certification" && segment_3 == ''}
+		<div class="sidebarItem clearfix">
+			<h2>Questions About Coach Training?</h2>
+						
+			<p><strong><em>Attend a free, LIVE webinar.</em></strong> <a id="sidebar-link-fun" class="sidebarBtn r" href="#">Attend&nbsp;a&nbsp;FREE&nbsp;&nbsp;webinar</a>
+			<script src="/data/webinar_sidebar.js?mode=fund&id=sidebar-link-fun"></script></p>
+			
+		</div>
+		<div class="clear"></div>
+		{/if}
+
+	{cf_sidebar_audio}
+	{if mx_above_nav == ''}
+		{if mx_audio_id}
+			<div class="sidebarItem clearfix">
+				<h2>{mx_audio_title}</h2>
+				<div class="speaker-thumb" style="font-size: 0.92em; line-height: 14px;">
+					{exp:ce_img:single src="{mx_audio_image}" width="72" crop="yes" attributes='style="float: left; margin: 0 14px 25px 0; width: 72px;"'} 
+					{mx_audio_description}
+					<div class="aaplayer">
+						<iframe src="http://www.audioacrobat.com/playweb?audioid={mx_audio_id}&amp;buffer=5&amp;shape=2&amp;fc=FFCC00&amp;pc=AAAAFF&amp;kc=888800&amp;bc=FFFFFF&amp;brand=1&amp;player=bp03" height="20" width="60" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+				<p>
+					<a href="{if mx_more_btn_url}{mx_more_btn_url}{if:else}{site_url}leadership/resources/{/if}" class="sidebarBtn {if mx_more_button_color}{mx_more_button_color}{if:else}r{/if}">{if mx_more_btn_text}{mx_more_btn_text}{if:else}Listen to more Interviews{/if}</a>
+				</p>
+			</div>
+			<div class="clear"></div>
+		{/if}
+	{/if}
+	{/cf_sidebar_audio}
+	{related_entries id="cf_primary_testimonial"}
+		<div class="sidebarItem">
+			{exp:ce_img:single src="{cf_testimonial_image}" width="260" height="170" crop="yes" allow_scale_larger="yes" attributes='class="full"'}
+			<div>
+				<p style="margin-bottom: 0;"><em>{cf_testimonial_text}</em></p>
+				{cf_testimonial_attribute}
+			</div>
+		</div>
+	{/related_entries}
+	{!-- if segment_1 == 'for-organizations'}
+		<div style="margin: 12px 0;">
+			<a href="{site_url}for-organizations/organizational-training"><img src="/images/more_info.gif"></a><br />
+		</div>
+	{/if --}
+	{cf_primary_sidebar}
+	{if mx_above_nav == ''}
+		<div class="sidebarItem">
+			{if mx_header}<h2>{mx_header}</h2>{/if}
+			{if segment_3 == 'co-active-thinkpal'}
+				{if mx_image}
+						{exp:ce_img:single src="{mx_image}" width="140" crop="yes" attributes='style="display: block;"'}
+				{/if}
+			{if:else}
+				{if mx_image}
+					{if mx_size == "n"}
+						{exp:ce_img:single src="{mx_image}" width="100" crop="yes" attributes='class="thumbnail"'}
+					{if:else}
+					<div style="position: relative; width: 260px; height: 170px; overflow: hidden;">
+						{exp:ce_img:single src="{mx_image}" width="260" height="170" crop="yes" allow_scale_larger="yes" attributes='class="full"' }
+					</div>
+					{/if}
+				{/if}
+			{/if}
+			
+			{if mx_vimeo}
+			<div style="position: relative; width: 260px; height: 170px; overflow: hidden;">
+				<iframe src="http://player.vimeo.com/video/{mx_vimeo}" width="300" height="170" frameborder="0" style="margin-bottom: 0; left: -20px; position: absolute;" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				</div>
+			<div class="clear"></div>
+			{/if}
+			
+			
+			<div>
+				{mx_content}
+			</div>
+			
+			{if mx_button_link}
+				<a href='{mx_button_link}' class='sidebarBtn {if mx_button_color}{mx_button_color}{if:else}r{/if}'>{mx_button_text}</a>
+			{if:elseif mx_external_link}
+				<a href='http://{mx_external_link}' target='_blank' class='sidebarBtn {if mx_button_color}{mx_button_color}{if:else}r{/if}'>{mx_button_text}</a>
+			{if:else}
+			
+			{/if}
+			
+		</div>
+		<div class="clear"></div>
+	{/if}
+	{/cf_primary_sidebar}
+	{if segment_1 == 'coach-training' && segment_2 == 'profiles'}
+		<div class="sidebarItem">
+			<h2>Coach Training Dates &amp; Locations</h2>
+			<script src="http://www.thecoaches.com/data/us_calendar.js?mode=index"></script>
+		</div>
+	{/if}
+{/exp:channel:entries}
+{exp:channel:entries channel="connect" dynamic="no" rdf="off" sort="asc" disable="trackbacks|member_data" status="virtual" show_expired="no"}
+	{if segment_1 == 'community' && segment_2 == 'connect-locally'}
+
+		<div class="sidebarItem">
+			<h2>Upcoming Virtual Events!</h2>
+            <ul class="calendar">
+
+				{reverse_related_entries channel="cti_events" status="not closed" show_future_entries="yes" show_expired="no" orderby="entry_date" sort="asc"}
+                                {if expiration_date > current_time}
+
+				<li>
+					<div class="calendar-entry calendar-entry-left">
+						<div class="calendar-page">
+					  		<p class="month">{entry_date format="%M"}</p>
+					  		<p class="day">{entry_date format="%j"}</p>
+						</div>
+						<div class="calendar-info">
+					  	{!-- exp:eehive_hacksaw words = "16" append = "…" --}{cf_primary_body}{!-- /exp:eehive_hacksaw --}
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+                                {/if}
+				{/reverse_related_entries}
+
+			</ul>
+		     <a href="{path='/community/events-calendar'}" style="text-decoration: none; font-size: 12px; font-weight: normal; text-transform: none; display: block;">View our events calendar &raquo;</a>
+        </div>
+
+	{/if}
+{/exp:channel:entries}
+			
+	</div>
+	

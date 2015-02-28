@@ -1,0 +1,108 @@
+	{exp:channel:entries channel="home_page" rdf="off" disable="trackbacks|member_data" limit="1" status="open|closed"}
+	
+		{embed="includes/_header"}
+		
+			<div id="slideshowWrapper" class="clearfix">
+		  		<div id="nav"></div>
+		  		<div id="slideshow">
+			  		<div id="" class="feature active" style="width: 940px; height: 347px;">
+						<img src="/assets/img/img_home_why.jpg" alt="Why CTI" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="why">
+								<li class="why"><a href="/why-cti" class="here">Why CTI?</a></li>
+								<li class="train"><a href="/coach-training">Coach Training</a></li>
+								<li class="leader"><a href="/leadership">Leadership</a></li>
+								<li class="org"><a href="/for-organizations">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 940px; height: 347px;">
+						<img src="/assets/img/img_home_train.jpg" alt="Coach Training" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="train">
+								<li class="why"><a href="/why-cti">Why CTI?</a></li>
+								<li class="train"><a href="/coach-training" class="here">Coach Training</a></li>
+								<li class="leader"><a href="/leadership">Leadership</a></li>
+								<li class="org"><a href="/for-organizations">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 940px; height: 347px;">
+						<img src="/assets/img/img_home_leader-1.jpg" alt="Leadership Development" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="leader">
+								<li class="why"><a href="/why-cti">Why CTI?</a></li>
+								<li class="train"><a href="/coach-training">Coach Training</a></li>
+								<li class="leader"><a href="/leadership" class="here">Leadership</a></li>
+								<li class="org"><a href="/for-organizations">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="" class="feature" style="width: 940px; height: 347px;">
+						<img src="/assets/img/img_home_org.jpg" alt="Organizational Development" style="position: absolute;" />
+						<div class="featureNav">
+							<ul class="org">
+								<li class="why"><a href="/why-cti">Why CTI?</a></li>
+								<li class="train"><a href="/coach-training">Coach Training</a></li>
+								<li class="leader"><a href="/leadership">Leadership</a></li>
+								<li class="org"><a href="/for-organizations" class="here">For Organizations</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col one">
+				<h3>Questions about coach training?</h3>
+				{cf_home_block_01}
+				<a id="webinar-link" class="webinar" href="#">Sign up for a free webinar</a>
+				<script src="/data/webinar.js?mode=fun"></script>
+				
+				<h3 style="margin-top: 35px;">Transform Your Coaching Business</h3>
+				{cf_home_block_02}
+						
+			</div>
+			
+			<div class="col two">
+				<h3>Why Choose CTI?</h3>
+				<div id="ticker">
+					<ul>
+						{cf_home_block_03}
+						<li>{mx_home_rotate}</li>
+						{/cf_home_block_03}
+					</ul>
+		        </div>
+			</div>
+			
+			<div class="col three">
+				{!-- embed="includes/_column_promo" --}
+				{cf_right_column_promo_summit limit="1" sort="random"}
+					{if mx_quote}
+						<div class="quote">
+			    				{mx_quote}
+			    			</div>
+					{/if}
+					{if mx_description}
+						<div class="description">
+		        				{mx_description}
+		        			</div>
+		        		{/if}
+		        	{/cf_right_column_promo_summit}
+				{cf_right_column_promo limit="1" sort="random"}
+					{if mx_quote}
+						<div class="quote">
+			    				{mx_quote}
+			    			</div>
+					{/if}
+					{if mx_description}
+						<div class="description">
+		        				{mx_description}
+		        			</div>
+		        		{/if}
+		        	{/cf_right_column_promo}
+		        
+		    	</div>
+
+		{embed="includes/_footer"}
+
+	{/exp:channel:entries}

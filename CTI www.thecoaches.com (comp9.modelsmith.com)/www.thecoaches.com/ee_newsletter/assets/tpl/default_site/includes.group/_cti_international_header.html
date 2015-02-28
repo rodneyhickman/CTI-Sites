@@ -1,0 +1,8 @@
+{exp:channel:entries channel="cti_international" rdf="off" dynamic="no" orderby="title" exclude="709" sort="asc" disable="trackbacks|member_data|categories|category_fields|pagination" status="not closed"}
+	<li class="dynamic">{cf_countries}
+		<a href="{mx_country_url}" {if url_title != 'canada' && url_title != 'united-states'}target="_blank"{if:else}  onClick="document.getElementById('ctiIntl').className=this.title; document.getElementById('inputBox').value=this.title" title="{url_title}"{/if} style="background-image: url({mx_country_flag});">{/cf_countries}{title}</a>
+	</li>
+{/exp:channel:entries}
+	<li class="static">
+		<a href="{path='/why-cti/cti-international'}">All International Locations</a>
+	</li>

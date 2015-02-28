@@ -1,0 +1,41 @@
+{exp:channel:entries channel="" dynamic="no" limit="1" disable="member_data|pagination|trackbacks" rdf="off" status="open|closed"}
+	{embed="includes/_header" entry_id="{embed:entry_id}"}
+{/exp:channel:entries}
+
+		<div class="main">
+			{if segment_1 == 'categories'}
+			<span class="breadcrumb" style="display: inline-block; width: auto;"><a href="http://www.thecoaches.com/community/">Community</a> <span>/</span> <a href="http://www.thecoaches.com/community/{segment_2}/">{if segment_2 == 'henry-on-the-radio'}Henry on the Radio{if:else}Disrupt Your Life in a Good Way{/if}</a> </span>
+			{if:else}
+			{exp:structure:nav start_from="/{segment_1}" include_ul="no"}
+			{/if}
+			
+			{if segment_3 != ''}
+				{exp:channel:entries channel="hkh_blog" dynamic="no" rdf="off" category="{segment_4}" disable="trackbacks|member_data" limit="1" status="open" sort="desc" orderby="date"}
+					<h2>{categories}{category_name}{/categories}</h2>
+				{/exp:channel:entries}	 
+				{exp:channel:entries channel="hkh_blog" dynamic="no" rdf="off" category="{segment_4}" disable="trackbacks|member_data" limit="20" status="open" sort="desc" orderby="date" paginate="bottom"}
+					<h4><strong><a href="{path='{page_uri}'}">{title}</a></strong></h4>
+					<p style="margin-bottom: 5px;">{entry_date format="%M %d, %Y"} posted by {author}</p>
+					<!-- begin CONTENT MAIN -->
+					<div style="margin-bottom: 20px;">{exp:eehive_hacksaw words="28" append="..."}{cf_primary_body}{/exp:eehive_hacksaw}</div>
+					{paginate}
+						<p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+					{/paginate}
+				{/exp:channel:entries}	 
+			{if:else}
+		    	<h1>Blog Categories</h1>
+				{exp:channel:categories channel="hkh_blog" category='{category_id}' relaxed_categories="yes" show_empty="no" limit="1"}
+					<a href="{path='categories/{category_url_title}'}">
+						<h2>{category_name}</h2>
+						<!-- begin CONTENT MAIN -->
+						<div style="margin-bottom: 20px;">{exp:eehive_hacksaw words="28" append="..."}{category_description}{/exp:eehive_hacksaw}</div>
+					</a>
+				{/exp:channel:categories}			
+			{/if}
+	    </div>
+
+{exp:channel:entries channel="" limit="1" disable="member_data|pagination|trackbacks" rdf="off" status="open|closed"}
+	    {embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		<div class="clear"></div>
+	{embed="includes/_footer" entry_id="{embed:entry_id}"}
+{/exp:channel:entries}

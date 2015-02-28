@@ -1,0 +1,33 @@
+		<ul class="testimonialsNav">
+			{if segment_1 == 'coach-training'}
+			{exp:channel:entries channel="profile" dynamic="no" rdf="off" disable="trackbacks|member_data" sort="asc" status="open|closed|Training|Leadership|Organizations" entry_id="{embed:entry_id}"}
+			<li class="head">
+				<a href="{page_url}">
+					<img src="{cf_profiles_thumb}" />
+					<div>{count}</div>
+				</a>
+			</li>
+			{/exp:channel:entries}
+			{/if}
+			{if segment_1 == 'leadership'}
+			{exp:channel:entries channel="profile_leadership" dynamic="no" rdf="off" disable="trackbacks|member_data" sort="asc" status="open|closed|Training|Leadership|Organizations" entry_id="{embed:entry_id}"}
+			<li class="head">
+				<a href="{page_url}">
+					<img src="{cf_profiles_thumb}" />
+					<div>{count}</div>
+				</a>
+			</li>
+			{/exp:channel:entries}
+			{/if}
+			{if segment_1 == 'for-organizations'}
+			{exp:channel:entries channel="profile_organization" dynamic="no" rdf="off" disable="trackbacks|member_data" sort="asc" status="open|closed|Training|Leadership|Organizations" entry_id="{embed:entry_id}"}
+			<li class="head">
+				<a href="{page_url}">
+					<img src="{cf_profiles_thumb}" />
+					<div>{count}</div>
+				</a>
+			</li>
+			{/exp:channel:entries}
+			{/if}
+		</ul>
+		<div class="clear"></div>

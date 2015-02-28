@@ -1,0 +1,35 @@
+{exp:channel:entries channel="business_builder|business_builder_listing" limit="1" disable="trackbacks|member_data|category_fields|pagination" status="open"}
+
+		{embed="includes/_header_business_builder"}
+			<td valign="top" style="padding: 0 12px 30px;" {if cf_bb_sidebar == 'y'}width="379"{if:else}width="579"{/if}>
+				<h4 style="font-family: Arial,Helvetica,sans-serif; font-size: 23px; font-weight: normal; color: #689bbc; margin: 0px;">{cf_headline}</h4>
+				
+				{exp:nsm_transplant:body}
+			 	{cf_body_copy}
+				{cf_body_image}
+	 			{exp:nsm_transplant:content id="image{row_count}"}
+	 				{if mx_image_size == "100"}
+						{exp:imgsizer:size src="{mx_image_file}" width="100"}
+							<img src="{sized}" width="{width}" height="{height}" alt="{mx_image_alt}" title="{mx_image_alt}" />
+						{/exp:imgsizer:size}
+					{if:elseif mx_image_size == "250"}
+						{exp:imgsizer:size src="{mx_image_file}" width="250"}
+							<img src="{sized}" width="{width}" height="{height}" alt="{mx_image_alt}" title="{mx_image_alt}" />
+						{/exp:imgsizer:size}
+					{if:else}
+	 					{exp:imgsizer:size src="{mx_image_file}" width="400"}
+							<img src="{sized}" width="{width}" height="{height}" alt="{mx_image_alt}" title="{mx_image_alt}" />
+						{/exp:imgsizer:size}
+					{/if}
+	 			{/exp:nsm_transplant:content}
+				{/cf_body_image}
+			{/exp:nsm_transplant:body}
+		
+		</td>
+		{if cf_bb_sidebar == "y"}{embed="includes/_sidebar_business_builder"}{/if}
+		
+		</tr>
+	</table>
+	{if cf_email_locale == "us"}{embed="includes/_footer_us_marketing"}{if:elseif cf_email_locale == "uk"}{embed="includes/_footer_uk_marketing"}{/if}
+		
+{/exp:channel:entries}

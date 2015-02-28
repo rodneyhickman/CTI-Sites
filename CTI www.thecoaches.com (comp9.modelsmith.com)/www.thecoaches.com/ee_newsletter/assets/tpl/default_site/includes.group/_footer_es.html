@@ -1,0 +1,289 @@
+		</div>
+		<div class="footerSpace" align="center" >
+<!--<a title="CTI" target="_blank" href="http://www.thecoaches.com">For more information about CTI</a>-->
+ 
+</div>
+
+	</div>
+	<!-- Begin FOOTER -->
+			<div id="footerWrapper">
+			<style>
+    #quick-nav{ display:none !important;}
+    </style>
+			<div id="footer">
+				<div id="footer-content">
+					<!-- footerNavId -->
+					<div id="footer-nav">
+					{exp:channel:entries channel="footer" rdf="off" dynamic="no" disable="trackbacks|member_data|categories|category_fields|pagination" status="open|closed|Training|Leadership|Organizations" limit="1"}
+					{cf_footer_utility}
+					{/exp:channel:entries}
+					</div>
+					<img id="coactive-footer-logo" src="/assets/img/new_coactive_footer_logo.png" width="224" height="88" alt="Coactive Logo" style="margin-right: 35px;"/><!-- -->
+					<div style="height: 57px; display: table; margin-bottom: 35px; width: 655px;">
+						<div style="height: 57px; float: left; padding-right: 25px; margin-right: 25px; border-right: 0px solid #999999;">
+							<img id="icf-logo" src="http://www.thecoaches.com/email/images/ACTP_web2.png" width="140" height="54" alt="International Coach Federation"/>
+						</div>
+						<div style="height: 57px; float: left; padding-right: 25px; margin-right: 25px;display:none; ">
+							<img id="ace-logo" src="/assets/img/ACE_CREDIT_logo-footer-sm.png" width="74" height="57" alt="American Council on Education"/>
+						</div>
+											</div>
+				</div>
+			</div>
+			
+			
+			
+			
+	
+	<!-- JavaScript at the bottom for fast page loading -->
+	
+	<!-- Twitter feed -->
+	<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+	<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/cti_coaches.json?callback=twitterCallback2&amp;count=4"></script>
+	
+	{if segment_1 == '' OR segment_1 == 'new-page'}
+	<!-- HOME PAGE SLIDESHOW -->
+	<script type="text/javascript" src="/assets/js/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#slideshow").cycle({
+		  fx: 'fade',
+		  timeout: 8500,
+		  speed:   1200,
+		  pager:   '#nav',
+		 // pagerEvent: 'mouseover',
+		  pause:   1
+		 // before:  onBefore
+		});
+	});
+	</script>
+	
+	<!-- HOME PAGE CAROUSEL-TICKER -->
+	<script type="text/javascript" src="/assets/js/jcarousellite_1.0.1.pack.js"></script>
+	<script type="text/javascript">
+	$( function()
+	{
+	    $( '#ticker' ).jCarouselLite(
+	    {
+	        vertical: true,
+	        visible:  4,
+	        auto:     4000,
+	        speed:    750
+	    });
+	});
+	</script>
+	{/if}
+	
+	{if segment_2 != 'dates-locations'}
+	<!-- ACCORDION -->
+	<script type="text/javascript">
+	$(function() {
+		$( "#accordion" ).accordion({
+			autoHeight: false,
+			header: 'h3',
+			active: false,
+			collapsible: true
+		});
+	});
+	</script>
+	{/if}
+	
+	
+	<script type="text/javascript">
+		// Enable footer tab functionality
+		(function($) {
+			$('#footerMain .tabs a').click(function(event) {
+				// Prevent default click behavior
+				// ev.preventDefault();
+				event.preventDefault();
+	
+				// Set up some variables and grab some resuable DOM references
+				var $t = $(this), // Quick ref for the clicked link
+					$fm = $('#footerMain').eq(0), // Quick ref for the containing footer div
+					id = $t.attr('href').split('#')[1], // Get the id out of this link's href
+					visName = $('.panel:visible', $fm).get(0).id.substr(6), // Get the name of the currently showing panel (Tuck, Centers, Corporate)
+					tgtName = id.substr(6); // Get the name of the target panel to show, like above
+			
+				$('.tabs', $fm).removeClass('active'+visName).addClass('active'+tgtName); // Change indicator class for proper tab styling
+				$('.panel', $fm).hide().siblings('#'+id).show(); // Swap which panel is visible
+			});
+	
+		})(jQuery);
+	</script>
+	<script language="JavaScript" type="text/javascript">
+		var html = '';
+		var count = 0;
+		$(document).ready(function() {
+		$.get('http://www.thecoaches.com/blog/feed/', function(xml){
+		        $("item", xml).each(function(){
+		                count++;
+		                if(count > 3) return false;
+		                $(this).find("link").each(function(){
+		                        html += "<div class='blog-entry'><strong><a href='" + getNodeText(this) +"'> ";
+		                }).end().find("title").each(function(){
+		                        html += getNodeText(this) + "</a></strong>";
+		                }).end().find("description").each(function(){
+		                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+		                }).end().find("link").each(function(){
+		                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
+		                });
+		        });
+		        $("#home-news").html(html);
+		});
+		                        
+		var myRe     = /\/#(.+)$/; // grab just the anchor
+		var loc = $(location).attr('href');
+		var myArray  = myRe.exec(loc);   // get just the *.html portion of the URL
+			if ( myArray ) {
+				var anchor = myArray[1];
+		
+				if(anchor=='specials'){
+                    $('#home-promo li').removeClass('home-promo-active');
+                    $('#tabSpecials').addClass('home-promo-active');
+                    $('#home-promo').removeClass('activeCTI');
+                    $('#home-promo').addClass('activeSpecials');
+                    $('.panel').hide();
+                    $('#footerSpecials').show();
+				}
+			}                        
+		});
+		
+		function getNodeText(node)
+		{
+		        var text = "";
+		        if(node.text) text = node.text;
+		        if(node.firstChild) text = node.firstChild.nodeValue;
+		        return text;
+		}
+	</script>
+	
+	<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry1 li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		var cookie = $.cookie('setCountry');
+		
+		// If the cookie has been set in a previous page load, show it in the div directly:
+		if(!cookie) $('#ctiIntl').addClass("united-states").show();
+		if(cookie) $('#ctiIntl').addClass(cookie).show();
+		// if(cookie) $('.ctiIntl').text(cookie).show();
+							   
+		$('#selectCountry2 li a[title]').click(function(){
+			var text = $('#inputBox').val();
+			
+			// Setting a cookie with a 7 day validity:
+			$.cookie('setCountry',text,{expires: 7, path: '/', domain: 'www.thecoaches.com'});
+			
+			// $('.country').addClass(text);
+				$('#ctiIntl').removeClass(cookie);
+				$('#ctiIntl').addClass(text);
+			
+			// e.preventDefault();
+		});
+		
+		$('#form1').submit(function(e){ e.preventDefault(); })
+		
+	})
+	
+	</script>
+
+
+
+
+
+
+
+
+	
+	
+	<!-- end scripts -->
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $("img").each(function() { if($(this).css("float").match(/left/i)) { $(this).css("margin-left", "0"); } else if($(this).css("float").match(/right/i)) { $(this).css("margin-right", "0"); } });                
+        });
+    </script>
+    
+
+	
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+	       mathiasbynens.be/notes/async-analytics-snippet -->
+	<script type="text/javascript">
+	    var _gaq=[['_setAccount','UA-5715102-1'],['_trackPageview']];
+	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	    s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	<form action="" style="display: none;" method="get" id="form1">
+    	<div class="fields" id="selectCountry3">
+	        <input type="hidden" id="inputBox" />
+        </div>
+    </form>
+	<div class="ctiIntl"></div>	
+    <script type="text/javascript">
+        var _mfq = _mfq || [];
+        (function () {
+        var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/8f555c70-b54e-4371-a95a-1adbb8a7a406.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
+    </script>								
+</body>
+</html>

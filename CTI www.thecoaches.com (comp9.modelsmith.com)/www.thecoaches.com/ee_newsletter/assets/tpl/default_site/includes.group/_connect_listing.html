@@ -1,0 +1,44 @@
+		{exp:channel:entries channel="connect" dynamic="no" rdf="off" sort="asc" disable="trackbacks|member_data" status="open"}
+			<div style="display: inline-table; margin-bottom: 20px;">
+			{if cf_primary_personnel}<a name="{url_title}"></a>
+				<h3 class="connect" style="font-size: 18px;">{title}</h3>
+				{cf_primary_personnel}
+				<div class="personnel connectPersonnel">
+					{exp:ce_img:pair src="{mx_personnel_image}" width="108" height="115" crop="yes" allow_scale_larger="yes"}
+					<img src="{made}" width="{width}" height="{height}" />
+					{/exp:ce_img:pair}
+					<div class="personnelText">
+						<strong>{mx_personnel_name}{if mx_personnel_cert}, {mx_personnel_cert}{/if}{if mx_personnel_title}<br />{mx_personnel_title}{/if}</strong>
+						{mx_personnel_bio}
+					</div>
+				</div>
+				{/cf_primary_personnel}
+			{/if}
+				<h3 class="connect" style="font-weight: normal; text-transform: uppercase;">Upcoming Events in {title}</h3>
+				<ul class="connectEvent">
+				{reverse_related_entries channel="cti_events" status="open" orderby="entry_date" sort="asc"}
+					{if expiration_date > current_time}
+					<li>
+						<div class="calendar-entry" style="height: 50px; width: 430px; margin-right: 0;">
+							<div class="calendar-page">
+								<p class="month">{entry_date format="%M"}</p>
+								<p class="day">{entry_date format="%j"}</p>
+							</div>
+							<div class="calendar-info" style="width: 375px;">
+							{!-- exp:eehive_hacksaw words = "16" append = "…" --}{cf_primary_body}{!-- /exp:eehive_hacksaw --}
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					{/if}
+					{if no_reverse_related_entries}
+					<li><p style="margin: 0;">Check back soon for events in this location.</p></li>
+					{/if}
+					{if current_time > expiration_date OR status == 'closed'}
+					<li><p style="margin: 0;">Check back soon for events in this location.</p></li>
+					{/if}
+				{/reverse_related_entries}
+				</ul>
+			</div>			
+		{/exp:channel:entries}
+	

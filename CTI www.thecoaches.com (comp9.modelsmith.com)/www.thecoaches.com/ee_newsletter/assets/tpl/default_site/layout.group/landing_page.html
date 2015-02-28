@@ -1,0 +1,91 @@
+	{exp:channel:entries channel="landing_page|landing_page_coach" rdf="off" disable="trackbacks|member_data" limit="1" status="open|closed" entry_id="{embed:entry_id}"}
+	{embed="includes/_header"}
+		<script type="text/javascript">
+			if (document.images) {
+			    img1 = new Image();
+			    img1.src = "{site_url}assets/img/layer-default.png";
+			    img2 = new Image();
+			    img2.src = "{site_url}assets/img/layer-fun.png";
+			    img3 = new Image();
+			    img3.src = "{site_url}assets/img/layer-fulfillment.png";
+			    img4 = new Image();
+			    img4.src = "{site_url}assets/img/layer-balance.png";
+			    img5 = new Image();
+			    img5.src = "{site_url}assets/img/layer-process.png";
+			    img6 = new Image();
+			    img6.src = "{site_url}assets/img/layer-synergy.png";
+			    img7 = new Image();
+			    img7.src = "{site_url}assets/img/layer-cert.png";
+			}
+		</script>
+		<div class="main">
+			<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="yes" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+			
+			
+			{exp:nsm_transplant:body}
+			
+				{cf_primary_body}			
+
+				    {exp:nsm_transplant:content id="path_diagram"}
+				    	
+						<div style="width: 531px; height: 292px; position: relative; margin-left: 30px;">
+			          		<img src="{site_url}assets/img/curriculum-map.png" usemap="#curriculum-map" border="0" style="position: absolute; left: 0; bottom: 0;" />
+			          		<div class="diagram-description" style="visibility: visible; background-image: url('{site_url}assets/img/layer-default1.png');">
+			          			<div class="process-instruction">Hover your mouse over each step above to reveal a brief course description.<br /><br />Click each step for more details.</div>
+			          		</div>
+			          		<div class="diagram-description" id="fundamentals" style="background-image: url('{site_url}assets/img/layer-fun1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3>1. Fundamentals</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_one}</p>
+			          			</div>
+			          		</div>
+			          		<div class="diagram-description" id="fulfillment" style="background-image: url('{site_url}assets/img/layer-fulfillment1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3 style="color: #ef953e;">2. Fulfillment</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_two}</p>
+			          			</div>
+			          		</div>
+			          		<div class="diagram-description" id="balance" style="background-image: url('{site_url}assets/img/layer-balance1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3 style="color: #ef953e;">3. Balance</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_three}</p>
+			          			</div>
+			          		</div>
+			          		<div class="diagram-description" id="process" style="background-image: url('{site_url}assets/img/layer-process1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3 style="color: #ef953e;">4. Process</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_four}</p>
+			          			</div>
+			          		</div>
+			          		<div class="diagram-description" id="synergy" style="background-image: url('{site_url}assets/img/layer-synergy1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3 style="color: #ef953e;">5. Synergy</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_five}</p>
+			          			</div>
+			          		</div>
+			          		<div class="diagram-description" id="certification" style="background-image: url('{site_url}assets/img/layer-cert1.png'); visibility: hidden;" >
+			          			<div class="process-text">
+			          				<h3 style="color: #73aac6;">6. Certification</h3>
+			          				<p style="line-height: 17px; margin-bottom: 0;">{cf_primary_path_six}</p>
+			          			</div>
+			          		</div>
+			          	</div>
+			          	
+			        {/exp:nsm_transplant:content}
+
+			
+			{/exp:nsm_transplant:body}
+		  	<map name="curriculum-map">
+				<area shape="poly" coords="10,5,111,5,111,28,88,29,87,57,113,87,90,123,9,123" href="{path='/coach-training/courses/co-active-coaching-fundamentals'}" style="outline: none;" alt="Fundamentals" onmouseover="show('fundamentals','visible')" onmouseout="show('fundamentals','hidden')">	
+				<area shape="poly" coords="170,29,170,45,164,57,186,89,163,122,90,123,114,88,87,58,87,29" href="{path='/coach-training/courses/fulfillment'}" style="outline: none;" alt="Fulfillment" onmouseover="show('fulfillment','visible')" onmouseout="show('fulfillment','hidden')">
+				<area shape="poly" coords="170,4,231,4,232,57,259,88,241,123,164,123,185,87,163,59,170,45" href="{path='/coach-training/courses/balance'}" style="outline: none;" alt="Balance" onmouseover="show('balance','visible')" onmouseout="show('balance','hidden')">
+				<area shape="poly" coords="232,29,308,29,309,57,333,87,311,124,241,123,257,87,232,55" href="{path='/coach-training/courses/process'}" style="outline: none;" alt="Process" onmouseover="show('process','visible')" onmouseout="show('process','hidden')">
+				<area shape="poly" coords="308,4,379,4,379,57,406,85,385,123,312,123,332,86,309,56" href="{path='/coach-training/courses/synergy'}" style="outline: none;" alt="Synergy" onmouseover="show('synergy','visible')" onmouseout="show('synergy','hidden')">
+				<area shape="poly" coords="379,24,483,24,515,91,492,123,385,123,405,86,379,55" href="{path='/coach-training/certification'}" style="outline: none;" alt="Certification" onmouseover="show('certification','visible')" onmouseout="show('certification','hidden')">
+			</map>
+	    
+		</div>
+		{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		{embed="includes/_footer"}
+
+	{/exp:channel:entries}

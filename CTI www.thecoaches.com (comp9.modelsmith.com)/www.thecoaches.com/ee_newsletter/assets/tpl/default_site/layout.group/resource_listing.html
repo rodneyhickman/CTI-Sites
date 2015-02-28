@@ -1,0 +1,147 @@
+{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" status="open|closed"}
+
+	{embed="includes/_header" entry_id="{embed:entry_id}"}
+	<div class="main" {if segment_2 == "profiles-testimonials"}style="width: 920px;"{/if}>
+		<span class="breadcrumb" style="display: inline-block; width: auto;">{exp:structure:breadcrumb inc_home="yes" here_as_title="yes" separator="/" wrap_separator="span"}</span>
+
+		<h2 style="margin-top: 0;">{title}</h2>
+		{if cf_primary_body}{cf_primary_body}{/if}
+		
+{/exp:channel:entries}
+									
+		{if segment_3 == "coaching-tools"}
+			<ul class="no-bullets" style="padding-left: 0;">
+			{exp:nsm_categories:archive channel="resources_coach_tools" style="nested"}
+			  <li>
+			    <h3>{category_name}</h3>
+				<ul>
+				{category_channel_entries}
+				
+					<li {if article_series == 'y'}style="margin-left: 20px;"{/if}>{if cf_article_series_title == 'y'}<strong>{title}</strong>{if:else}<a href="{if cf_primary_pdf}{cf_primary_pdf}{if:else}{page_url}{/if}">{title}</a>{/if}</li>
+	          		
+	          		
+	          	{/category_channel_entries}	    
+				</ul>
+			  </li>
+			{/exp:nsm_categories:archive}
+			</ul>
+		{/if}
+		
+		{if segment_1 == "coach-training" AND segment_3 == "books"}
+			{exp:nsm_categories:archive channel="resources_coach_books" style="nested"}
+			<ul class="books clearfix">
+			  <li class="clearfix" style="width: 100%;">
+			    <h3>{category_name}</h3>
+				<ul class="clearfix" style="width: 625px;">
+				{category_channel_entries}
+	          		<li><a href="{cf_books_amazon_link}" target="_blank">{exp:ce_img:single src="{cf_books_cover_image}" height="115"}{title}{if cf_books_author}<br /><span>{cf_books_author}</span>{/if}</a></li>
+	          	{/category_channel_entries}	    
+				</ul>
+			  </li>
+			</ul>
+			{/exp:nsm_categories:archive}
+		{/if}
+		
+		
+		{!-- if segment_1 == "for-organizations" AND segment_3 == ""}
+			<ul class="no-bullets">
+			{exp:channel:entries channel="resources_corporate_tools" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+				<li><a href="{if cf_primary_pdf}{cf_primary_pdf}{if:else}{page_url}{/if}">{title}</a></li>
+			{/exp:channel:entries}
+			</ul>
+		{/if --}
+		{if segment_1 == "for-organizations" AND segment_3 == "books"}
+			<ul class="books clearfix">
+			  <li class="clearfix" style="width: 100%;">
+				<ul class="clearfix" style="width: 625px;">
+				{exp:channel:entries channel="resources_organizations_books" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+	          		<li class=""><a href="{cf_books_amazon_link}" target="_blank">{exp:ce_img:single src="{cf_books_cover_image}" height="115"}{title}{if cf_books_author}<br /><span>{cf_books_author}</span>{/if}</a></li>
+    			{/exp:channel:entries}
+				</ul>
+			  </li>
+			</ul>
+			<!--
+			{!-- exp:nsm_categories:archive channel="resources_organizations_books" style="nested"}
+			<ul class="books clearfix">
+			  <li class="clearfix" style="width: 100%;">
+			    <h3>{category_name}</h3>
+				<ul class="clearfix" style="width: 625px;">
+				{category_channel_entries}
+	          		<li><a href="{cf_books_amazon_link}" target="_blank">{exp:ce_img:single src="{cf_books_cover_image}" height="115"}{title}{if cf_books_author}<br /><span>{cf_books_author}</span>{/if}</a></li>
+	          	{/category_channel_entries}	    
+				</ul>
+			  </li>
+			</ul>
+			{/exp:nsm_categories:archive --}
+			-->
+			
+		{/if}
+		
+		
+		{if segment_1 == "coach-training" AND segment_3 == "webinars"}
+			<ul class="no-bullets">
+			{exp:channel:entries channel="resources_coach_webinar" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+				<li><a href="{page_url}">{title}</a></li>
+			{/exp:channel:entries}
+			</ul>
+		{/if}
+		
+		{if segment_1 == "leadership" AND segment_3 == "articles"}
+			<ul class="no-bullets">
+			{exp:channel:entries channel="resources_coach_training_articles" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+				{if cf_primary_pdf}
+				<li><a href="{cf_primary_pdf}">{title}</a></li>
+				{if:else}
+				<li><a href="{page_url}">{title}</a></li>
+				{/if}
+			{/exp:channel:entries}
+			</ul>
+		{/if}
+		
+		{if segment_1 == "leadership" AND segment_3 == "webinars"}
+			<ul class="no-bullets">
+			{exp:channel:entries channel="resources_leadership_webinars" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+				<li><a href="{page_url}">{title}</a></li>
+			{/exp:channel:entries}
+			</ul>
+		{/if}
+		
+		{if segment_1 == "leadership" AND segment_3 == "books"}
+			<ul class="books clearfix">
+			  <li class="clearfix" style="width: 100%;">
+				<ul class="clearfix" style="width: 625px;">
+				{exp:channel:entries channel="resources_leadership_books" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+	          		<li class=""><a href="{cf_books_amazon_link}" target="_blank">{exp:ce_img:single src="{cf_books_cover_image}" height="115"}{title}{if cf_books_author}<br /><span>{cf_books_author}</span>{/if}</a></li>
+    			{/exp:channel:entries}
+				</ul>
+			  </li>
+			</ul>
+		{/if}
+		
+		{if segment_1 == "why-cti" AND segment_3 == "faculty-authored-books"}
+			<ul class="books clearfix">
+			  <li class="clearfix" style="width: 100%;">
+				<ul class="clearfix" style="width: 625px;">
+				{exp:channel:entries channel="resources_faculty_books" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+	          		<li class=""><a href="{cf_books_amazon_link}" target="_blank">{exp:ce_img:single src="{cf_books_cover_image}" height="115"}{title}{if cf_books_author}<br /><span>{cf_books_author}</span>{/if}</a></li>
+    			{/exp:channel:entries}
+				</ul>
+			  </li>
+			</ul>
+		{/if}
+		
+		{if segment_1 == "leadership" AND segment_3 == "audio"}
+			<ul class="no-bullets">
+			{exp:channel:entries channel="resources_leadership_audio" rdf="off" dynamic="no" disable="trackbacks|member_data" status="open"}
+				<li><a href="{page_url}">{title}</a></li>
+			{/exp:channel:entries}
+			</ul>
+		{/if}
+		
+	</div>
+	
+	{if segment_2 != "profiles-testimonials"}
+		{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+	{/if}
+	
+	{embed="includes/_footer" entry_id="{embed:entry_id}"}

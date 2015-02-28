@@ -1,0 +1,86 @@
+	{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="open"}
+	
+		{embed="includes/_header" entry_id="{embed:entry_id}"}
+		<div class="main" {if segment_2 == "profiles"}style="width: 900px;"{/if}>
+			{if cf_primary_tw_retweet == 'y' && cf_primary_twitter_text != ''}
+			<div style="float: right;">
+			<!-- retweet icon: spaces become +, # sign is %23 -->
+				<!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="{cf_primary_twitter_url}" data-text="{cf_primary_twitter_text}" data-size="large" data-count="none">Tweet It!</a> -->
+				<!-- a href="http://twitter.com/home?status=RT @CTI_Coaches - {cf_primary_twitter_text} {cf_primary_twitter_url}" class="twtr-btn"><img src="/assets/img/twitter-bird-light-bgs.png" /> Tweet It!</a -->
+				<a href="{cf_primary_twitter_text}" class="twtr-btn"><img src="/assets/img/twitter-bird-light-bgs.png" /> Tweet It!</a>
+				<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+			</div>
+			{/if}
+			
+			{if cf_primary_tw_retweet == 'y' && cf_primary_twitter_text != ''}
+			<span class="breadcrumb" style="display: inline-block; width: 500px;">
+			{if:else}
+			<span class="breadcrumb" style="display: inline-block; width: auto;">
+			{/if}
+			
+			{exp:structure:breadcrumb inc_home="yes" here_as_title="yes" separator="/" wrap_separator="span"}
+			</span>
+									
+			<h2>{title}</h2>
+								
+			{if cf_top_section_text}{cf_top_section_text}{/if}
+	{/exp:channel:entries}		
+			
+		<div class="connect" style="display: inline-table; clear: both;">
+			<script language="JavaScript">
+			<!--
+			function MM_jumpMenu(targ,selObj,restore){ //v3.0
+			eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+			if (restore) selObj.selectedIndex=0;
+			}
+			//-->
+			</script>
+			<!-- <h3 class="connect" style="margin: 0 0 10px;">Find out what's happening by city: </h3> -->
+			<form style="display: table; clear: both;">
+				<label for="category_selector">
+					<select id="category_selector" onChange="MM_jumpMenu('parent',this,1)" style="width: 150px; clear: both;">
+						{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="open"}
+						<option value="{page_url}" selected="selected">{title}</option>
+						{/exp:channel:entries}
+						{exp:channel:entries channel="connect" dynamic="no" rdf="off" orderby="title" sort="asc" disable="trackbacks|member_data" status="open"}
+							<option value="#{url_title}">{title}</option>
+						{/exp:channel:entries}
+					</select>
+				</label>
+			</form>
+			{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="open|closed"}
+										
+				{cf_primary_body}
+			
+			{/exp:channel:entries}							
+			
+		</div>
+	
+	{embed="includes/_connect_listing" entry_id="{embed:entry_id}"}
+			
+	{exp:channel:entries channel="" rdf="off" disable="trackbacks|member_data" limit="1" status="open"}					
+						
+			{if cf_primary_fb_commenting == 'y'}
+				<div id="fb-root"></div>
+				<script type="text/javascript">
+				  window.fbAsyncInit = function() {
+				    FB.init({appId: '147654581923112', status: true, cookie: true, xfbml: true});
+				  };
+				  (function() {
+				    var e = document.createElement('script'); e.async = true;
+				    e.src = document.location.protocol +
+				      '//connect.facebook.net/en_US/all.js';
+				    document.getElementById('fb-root').appendChild(e);
+				  }());
+				</script>
+				<fb:comments xid="CTI_{url_title}" numposts="11"  canpost="true" width="600" href="{page_url}">
+				</fb:comments>
+			{/if}
+			
+		</div>
+		{if segment_2 != "profiles"}
+			{embed="includes/_sidebar" entry_id="{embed:entry_id}"}
+		{/if}
+		{embed="includes/_footer" entry_id="{embed:entry_id}"}
+
+	{/exp:channel:entries}
