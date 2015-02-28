@@ -1,0 +1,99 @@
+# CTI Marketing Calendar Class schema
+#
+# To update project after schema change, do:
+# (backup database)
+# symfony propel:build-model; symfony propel:build-sql; symfony propel:insert-sql
+# (restore database)
+#
+#
+# NOTES:
+# DO not use "group" as a table name
+#
+#
+propel:
+#
+#
+  event:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    #profile_id: {type: INTEGER, foreignTable: profile, foreignReference: id, onDelete: cascade}
+    fmid: {type: INTEGER}
+    course_type_id: {type: INTEGER}
+    name: longvarchar
+    start_date: timestamp
+    end_date: timestamp
+    publish: varchar(20)
+    location: longvarchar
+    region: longvarchar
+    call_time: longvarchar
+    booking_link: longvarchar
+    description: longvarchar
+    pod_name: longvarchar
+    leader_name: longvarchar
+    url: longvarchar
+
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+
+
+  calendar:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    name: longvarchar
+    created_at:
+    updated_at:
+
+    extra1:  longvarchar
+    extra2:  longvarchar
+    extra3:  longvarchar
+    extra4:  longvarchar
+    extra5:  longvarchar
+    extra6:  longvarchar
+    extra7:  longvarchar
+    extra8:  longvarchar
+    extra9:  longvarchar
+    extra10:  longvarchar
+    extra11:  longvarchar
+    extra12:  longvarchar
+    extra13:  longvarchar
+    extra14:  longvarchar
+    extra15:  longvarchar
+    extra16:  longvarchar
+    extra17:  longvarchar
+    extra18:  longvarchar
+    extra19:  longvarchar
+    extra20:  longvarchar
+    
+  site_data:
+    id: {type: INTEGER, primaryKey: true, required: true, autoIncrement: true}
+    site_code: longvarchar
+    site_name: longvarchar
+    address: longvarchar
+    city: longvarchar
+    state: longvarchar
+    zip: longvarchar
+    region: longvarchar
+    hotel_phone: longvarchar
+    site_url: longvarchar
+    country: longvarchar
+    directions: longvarchar
+    directions_url: longvarchar

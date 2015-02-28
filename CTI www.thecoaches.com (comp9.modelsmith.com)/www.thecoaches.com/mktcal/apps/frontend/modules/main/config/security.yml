@@ -1,0 +1,50 @@
+all:
+  is_secure: false
+
+index:
+  is_secure: false
+
+event:
+  is_secure: false
+
+quarter:
+  is_secure: false
+
+year:
+  is_secure: false
+
+problem:
+  is_secure: false
+
+login:
+  is_secure: false
+
+logout:
+  is_secure: false
+
+loginProcess:
+  is_secure: false
+
+requestNewPassword:
+  is_secure: false
+
+requestNewPasswordProcess:
+  is_secure: false
+
+newPassword:
+  is_secure: false
+
+newPasswordProcess:
+  is_secure: false
+
+newEvent:
+  is_secure: false
+
+manageEvents:
+  is_secure: false
+
+editEvent:
+  is_secure: false  
+
+deleteEvent:
+  is_secure: false

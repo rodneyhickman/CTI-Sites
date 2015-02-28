@@ -1,0 +1,2 @@
+rsync -nvCazSHe "ssh -l ctiadmin" --rsync-path=/export/home/ctiadmin/bin/rsync \
+. corp.theblr.com:/opt/apache270/lib/perl/Apache/.

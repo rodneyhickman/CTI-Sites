@@ -1,0 +1,33 @@
+#
+# To update project after schema change, do:
+# (backup database)
+# symfony propel:build-model; symfony propel:build-sql; symfony propel:insert-sql
+# (restore database)
+
+http://www.thecoaches.com/mktcal/admin/updateEvents
+http://www.thecoaches.com/mktcal/frontend_dev.php/admin/updateEvents
+
+curl 'http://crm.thecoaches.com/fmi-test/webcomp2_newFM/geteventsJSON.php?start=40&range=5'
+
+[{"fmid":"19172","course_type_id":"6","event":"Process (ala carte) - Fast Track","date":"11\/12\/2013","edate":"11\/14\/2013","region":"ATL","location":"ATX-CROW","publish":"Don't Publish","call_time":"Fast Track\/ Midweek","student_count":"","pod_name":"","leader_name":"","assistant_count":"","assistant_wait_count":"","booking_link":"http:\/\/www.thecoaches.com\/pdfs\/TBA.pdf","mod_id":"01\/28\/2013 10:16:29","mod_date":"01\/28\/2013","mod_time":"10:16:29"}]
+
+
+Plan: 6/3/13
+* (DONE) Change header
+* (DONE) Link flower to correct URL
+* (DONE) Create quarter function
+* Create monthly calendar function EventPeer::getMonth( $month, $year )
+* Create yearly calendar (stacked format)
+* Create quarterly calendar, horz format
+
+
+Plan: 5/28/13
+* add site table
+* add script for updating site table
+
+
+Plan: 5/23/13
+* Add region filter for update
+* 
+
+

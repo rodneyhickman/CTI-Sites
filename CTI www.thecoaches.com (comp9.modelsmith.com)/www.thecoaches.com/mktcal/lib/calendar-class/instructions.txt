@@ -1,0 +1,197 @@
+Copyright 2011 Dustin J. Czysz. Do not redistribute.
+
+Instructions for PHP Calendar Class w/Google
+=================================================
+
+Thank you again for your purchase! 
+
+For more information and documentation please visit:
+http://www.klovera.com/php-calendar-class
+
+
+Regards,
+
+Klovera (Dustin J. Czysz)
+http://codecanyon.net/user/klovera
+
+
+REQUIREMENTS:
+---------------------------
+- PHP5
+- PHP compiled with the Calendar Functions (http://www.php.net/manual/en/ref.calendar.php)
+
+
+Basic Implementation:
+---------------------------
+
+1. Include the calendar.class.php file
+
+	include('calendar.class.php');
+	
+2. Create an instance and echo
+
+	$cal = new CALENDAR();
+	echo $cal->showcal();
+	
+
+Display Types:
+---------------------------
+
+	$cal = new CALENDAR('full'); // options are full,mini,list,mini-list
+	echo $cal->showcal();
+
+	
+Color Scheme:
+---------------------------
+
+	$cal = new CALENDAR(); // defaults to full
+	$cal->basecolor = 'CC6666'; // any hex value
+	echo $cal->showcal();
+	
+	
+Start Date:
+---------------------------
+
+	$cal = new CALENDAR('full','2012-6'); // format YYYY-M
+	echo $cal->showcal();
+	
+	
+Add Event(s):
+---------------------------
+
+	$cal = new CALENDAR(); // defaults to full
+	$cal->addEvent(
+		array(
+			"title"=>"Event Title", 			// (required)
+			"from"=>"2010-1-6", 				// (required) YYYY-M-D
+			"to"=>"2010-1-8", 					// (required) YYYY-M-D
+			"starttime"=>"5:30am", 				// (optional)
+			"endtime"=>"7:30pm", 				// (optional)
+			"color"=>"#D8E5F9", 				// (required)
+			"location"=>"City, State", 			// (optional)
+			"details"=>"Lorem ipsum ... ", 		// (optional)
+			"link"=>"http://www.klovera.com" 	// (optional)
+		)
+	);
+	echo $cal->showcal();
+	
+	
+Add Google Calendar:
+---------------------------
+Note: You can find the Google Calendar XML feed in the calendar settings at Google. 
+Either the public or private XML feed will work.
+
+	$cal = new CALENDAR(); // full is default
+	$cal->addGoogleCalendar(
+		array(
+		'xmlfeed'=>'http://www.google.com/calendar/feeds/ckvf91cpb85v3crjn0mpnn53u4%40group.calendar.google.com/public/basic', // (required)
+		'color'=>'#D6FFD6', // (required)
+		'link'=>'http://www.klovera.com' // (optional) all events will link here
+		)
+	);
+	echo $cal->showcal();
+	
+	
+All Options:
+---------------------------
+These are all the options that can be set when creating an instance of the calendar.
+For more info view the calendar.class.inc file.
+
+	$cal = new CALENDAR('full','2011-1',true);	// displaytype, date, staticdisplaytype
+	$cal->css = 'default';						// path to css file ('default' = default css, 'disable' = no css)
+	$cal->js = 'default';						// path to js file ('default' = default js, 'disable' = no js)
+	$cal->weekstartday = 0;						// week start day (0-6 e.g. 0 = Sunday, 1 = Monday, etc.)
+	$cal->jqueryinclude = true;					// includes jquery from google (true,false)
+	$cal->monthselector = true;					// month/year select box (true=show selector,false=show month name)
+	$cal->yearoffset = 5;						// monthselector range of years (int)
+	$cal->weeknumbers = 'left';					// adds a column for week numbers (left,right,false)
+	$cal->weeknumrotate = true;					// rotate weeknumbers 90 degrees (true,false) *currently only firefox is supported*
+	$cal->weeknames = 2;						// controls how weekdays are displayed. (1=full,2=abbrev,3=single char)
+	$cal->monthnames = 1;						// controls how weekdays are displayed. (1=full,2=abbrev)
+	$cal->basecolor = '7D9AC0';					// base color for color scheme (hex)
+	$cal->minicalwidth = '240px';				// width of mini calendar
+	$cal->minilistwidth = '200px';				// width of mini event list
+	$cal->minilinkbase = '';					// base url for links on mini calendar (blank=disabled)
+	$cal->tipwidth = '150px';					// width of the minical hover tip
+	$cal->basesize = '10px';					// all sizes scale on this value
+	$cal->eventlistbg = 'ffffff';				// event list view bg color
+	$cal->eventemptytext = 'No additional details.';	// default text in event view when details is empty
+	$cal->dateformat = 'F j, Y';				// default date format
+	$cal->timeformat = 'g:ia';						// default time format
+	$cal->font = '"Lucida Grande","Lucida Sans Unicode",sans-serif';	// font used to display the calendar
+	$cal->linktarget = '_blank';				// link target frame or window
+	$cal->listlimit = 10;						// limit the number of events in list
+	
+	
+Override Color Scheme:
+---------------------------
+The color scheme colors below are all automatically generated from $cal->basecolor.
+If you would like to set them manually you can do so as follows:
+
+	$cal->linkcolor = '[any hex]'; // e.g. ffff00
+	$cal->calgradient = '[any hex]'; // e.g. ffff00
+	$cal->nodatecolor = '[any hex]'; // e.g. ffff00
+	$cal->nodatetextcolor = '[any hex]'; // e.g. ffff00
+	$cal->weekdaycolor1 = '[any hex]'; // e.g. ffff00
+	$cal->weekdaycolor2 = '[any hex]'; // e.g. ffff00
+	$cal->currentdaycolor1 = '[any hex]'; // e.g. ffff00
+	$cal->currentdaycolor2 = '[any hex]'; // e.g. ffff00
+	$cal->weekendcolor1 = '[any hex]'; // e.g. ffff00
+	$cal->weekendcolor2 = '[any hex]'; // e.g. ffff00
+	$cal->bordercolor = '[any hex]'; // e.g. ffff00
+	$cal->datetextcolor = '[any hex]'; // e.g. ffff00
+	$cal->headingtextcolor = '[any hex]'; // e.g. ffff00
+	$cal->headingcolor1 = '[any hex]'; // e.g. ffff00
+	$cal->headingcolor2 = '[any hex]'; // e.g. ffff00
+	$cal->shadowcolor = '[any hex]'; // e.g. ffff00
+
+
+Multiple Instances per Page:
+--------------------------------
+To create multiple calendars per page you may do the following:
+
+$cal = new CALENDAR();
+...
+echo $cal->showcal();
+
+$cal2 = new CALENDAR();
+...
+echo $cal2->showcal();
+
+$cal3 = new CALENDAR();
+...
+echo $cal3->showcal();
+
+etc.
+
+
+Tips:
+=============================
+	
+Static Displaytypes:
+--------------------------------
+All instances of a calendar will always have the same displaytype (full,mini,list,mini-list) unless you set
+the staticdisplaytype parameter when creating the instance.
+
+E.g.
+
+	$cal = new CALENDAR('mini','',true); 
+	echo $cal->showcal();
+	
+	Parameter Explanation:
+	mini 	= displaytype 			(the displaytype when first loaded)
+	'' 		= date 					(today if blank)
+	true 	= staticdisplaytype 	(This calendar will always display as the value passed in the first parameter. In this case 'mini'.)
+	
+	
+Dynamic Settings:
+-------------------------------
+Try passing the displaytype,date,color,etc as GET/POST/SESSION variables to create interactive apps.
+A simple example of using session variables to set the calendar color can be found at:
+http://www.klovera.com/demo/scripts/calendar/color-play.php
+
+
+
+
+
+EOF

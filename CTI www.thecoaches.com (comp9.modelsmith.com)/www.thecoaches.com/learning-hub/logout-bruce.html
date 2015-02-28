@@ -1,0 +1,15 @@
+<?php
+	session_start();
+	if ($_SESSION['logged_in'] == 'yes') { 
+		/* log out of session
+		*/
+		$data = date('c').", IP:".$_SERVER['REMOTE_ADDR'].", Session User name:".$_SESSION['username'].", Logged_in flag:".$_SESSION['logged_in'].", session_id():".session_id().", User Agent:".$_SERVER['HTTP_USER_AGENT']."\n";
+		echo "<html><body><p>";
+		echo $data;
+		echo "<b /><b />Logged out of session\n</p></body></html>";
+		unset($_SESSION['logged_in']);
+		unset($_SESSION['username']);
+	} else {
+		echo "<html><body>You are not logged in\n</body></html>";
+	}
+?>
