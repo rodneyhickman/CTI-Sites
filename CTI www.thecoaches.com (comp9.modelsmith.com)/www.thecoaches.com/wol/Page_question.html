@@ -1,0 +1,1159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Description" CONTENT="The Coaches Training Institute">
+<META HTTP-EQUIV="Keywords" CONTENT="Coaching, Co-Active Coaching, Coach Training, Leadership, Relationship Coaching, Co-Active Network">
+<title>Wheel of life</title>
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" href="/docs/css/flora.all.css" type="text/css" media="screen" title="Flora (Default)">
+<script type="text/javascript" src="/docs/js/jquery.js"></script>
+<script type="text/javascript" src="/docs/js/jquery.dimensions.js"></script>
+<script type="text/javascript" src="/docs/js/ui.mouse.js"></script>
+<script type="text/javascript" src="/docs/js/ui.slider.js"></script>
+<script type="text/javascript">
+$(document).ready( function(){
+
+  // initialize document
+  $('.ui-slider-1').slider();  // create all sliders 
+  $('.section').hide();        // hide all sections ( '.section' means all elements with class="section" )
+  $('#section1').show();       // show section 1    ( '#section1' means element with id="section1" )
+
+  // attach button event handlers
+  $('.next-btn').click( // when clicked, do the following
+    function() {
+      //var parentId = $(this).parent().attr('id'); // get the parent id ie. 'section1'
+      var parentId = $(this).parent().parent().parent().parent().parent().parent().attr('id'); // get the parent id ie. 'section1'
+
+      var myRe = /section(\d+)/;              // capture the numeric portion of the id 
+      var myArray = myRe.exec(parentId);      // put capture into array
+      var nextNum = parseInt(myArray[1]) + 1; // increment it
+ 
+      var section = '#section' + nextNum;     // create new id
+
+      $(this).parent().parent().parent().parent().parent().parent().hide();                // hide current section
+      $(section).show();                      // show next section
+    });
+
+  $('.prev-btn').click(
+    function() {
+      var parentId = $(this).parent().parent().parent().parent().parent().parent().attr('id'); // get the parent id ie. 'section2'
+
+      var myRe = /section(\d+)/;              // capture the numeric portion of the id
+      var myArray = myRe.exec(parentId);      // put capture into array
+      var prevNum = parseInt(myArray[1]) - 1; // increment it
+
+      var section = '#section' + prevNum;     // create new id
+
+      $(this).parent().parent().parent().parent().parent().parent().hide();                // hide current section
+      $(section).show();                      // show next section
+    });
+
+    $('#wolForm').submit( function(){
+      // alert('submitting...');
+      // populate all .slider-values
+      $('.slider-value').each( function(){
+         var value = $(this).parent().find('.ui-slider-1').slider('value');
+         $(this).attr('value',value);
+      });
+    });
+
+    $('#check').click( function() {
+      alert('foo: '+$('#foo').slider('value'));
+    });
+});
+</script>
+<style type="text/css">
+<!-- #Questab {
+   height:450px;
+   }
+	 above here may not be used -->
+.section-table {
+   width:500px;  <!-- shelly width:700px; -->
+	 padding: 0 5px 0 5px;
+   }
+.headrow {
+   text-align:left;
+   }
+h1 {
+	color:#689BBC;
+	font-size:22px;
+	}
+p {
+	font-size:12px;
+	}
+td {
+	text-align:right;
+	font-size:12px;
+	}
+#divinfo {
+	 float:right;
+   width:150px;  <!-- shelly width:200px; -->
+	 padding: 0 5px 0 5px;
+   }
+.next-btn {
+	 margin-left:15px;margin-right:15px; width:70px;
+   border-top: 1px solid #080808;
+   background: #e4ecf2;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e4eef5), to(#e4ecf2));
+   background: -webkit-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -moz-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -ms-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -o-linear-gradient(top, #e4eef5, #e4ecf2);
+   padding: 5px 10px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #050005;
+   font-size: 8px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.next-btn:hover {
+   border-top-color: #c1c6c9;
+   background: #c1c6c9;
+   color: #000000;
+   }
+.next-btn:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }	 
+.prev-btn {
+	 margin-left:15px;margin-right:15px; width:70px;
+   border-top: 1px solid #080808;
+   background: #e4ecf2;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e4eef5), to(#e4ecf2));
+   background: -webkit-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -moz-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -ms-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -o-linear-gradient(top, #e4eef5, #e4ecf2);
+   padding: 5px 10px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #050005;
+   font-size: 8px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.prev-btn:hover {
+   border-top-color: #c1c6c9;
+   background: #c1c6c9;
+   color: #000000;
+   }
+.prev-btn:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }	 
+.sub-btn {
+   border-top: 1px solid #080808;
+   background: #e4ecf2;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e4eef5), to(#e4ecf2));
+   background: -webkit-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -moz-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -ms-linear-gradient(top, #e4eef5, #e4ecf2);
+   background: -o-linear-gradient(top, #e4eef5, #e4ecf2);
+   padding: 5px 10px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #050005;
+   font-size: 8px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.sub-btn:hover {
+   border-top-color: #c1c6c9;
+   background: #c1c6c9;
+   color: #000000;
+   }
+.sub-btn:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }	 
+</style> 
+</head>
+<body style="font-family: arial,helvetica,sans-serif;width:680px;">  <!-- shelly width:920px; -->
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+		 <!-- Begin Header  remove style for shelly width -->
+		 <!-- <div id="header" style="overflow:hidden;width:670px;">
+			<img src="/docs/res/img/page-banners/content-assessment-wheel.jpg" width="920" height="123" alt="assessment wheel banner" />
+		 </div>  remove for now per Kevin, this page only accessed from toolkit page -->
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column  empty for now -->
+		 <div id="leftcolumn">
+     </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column-->
+		 <div id="rightcolumn">
+                
+					<!-- Begin Interiortop empty for now-->
+					<div id="interiortop"  style="border-bottom: 0px">
+					</div>
+					<!-- End Interiortop -->
+				 <div class="clear"></div>
+				 
+         <div id="maincontent">
+         <div id="wheeltool">
+         
+           <p style="font-size: 11px; border-bottom: 0px solid #ccc; margin-bottom: 10px">
+           
+           <form name="wheeloflife" action="wheel_of_life.php" id="wolForm" method="post">
+
+
+<!--<input type="button" value="check" id="check">-->
+
+<!--  =================== Question Section begins ============  -->
+<div id="section2" class="section">
+
+<h1> Fun and Recreation (2 of 9) </h1> 
+
+<!-- dont display per Kevin
+ <div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+  <!-- Make question table a uniform height -->
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" ></td>
+<td width="50%"  valign="top"></td>
+</tr> -->
+
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I regularly take the time I need to experience play, adventure and leisure.</p></td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q11" class="slider-value" value="" />
+<div class='ui-slider-1' style="margin:10px;width:205px;" id="foo">
+<div class='ui-slider-handle'></div>
+</div></td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I know what activities renew me and bring me alive and I participate in them regularly.</p></td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q12" class="slider-value" value="" />
+<div class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div></td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I create plenty of space in my life to relax and enjoy myself and others.</p></td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q13" class="slider-value" value="" />
+<div id='q13' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div></td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I create fun for myself and others.</p></td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q14" class="slider-value" value="" />
+<div id='q14' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div></td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!--<input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+          shelly position top: 620px; left: 420px; -->
+<!--<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 500px;">
+          shelly position top: 620px; left: 500px; -->
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section4" class="section">
+
+<h1> Physical Environment (4 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td> 
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I feel nourished and supported by my home.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q21" class="slider-value" value="" />
+<div id='q21' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am surrounded by things that I love and have meaning to me.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q22" class="slider-value" value="" />
+<div id='q22' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+The level of order in my surroundings is appropriate to my needs. (it serves me)
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q23" class="slider-value" value="" />
+<div id='q23' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+My wardrobe is a clear expression of who I am. I love being in the clothes I wear.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q24" class="slider-value" value="" />
+<div id='q24' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 500px;"> -->
+
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section5" class="section">
+
+<h1> Personal Growth (5 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I have a belief system that sustains me no matter what circumstances life throws at me.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q31" class="slider-value" value="" />
+<div id='q31' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am engaged in the unfolding story of my life and approach each day as an adventure.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q32" class="slider-value" value="" />
+<div id='q32' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I regularly experience living a life that I love and loving who I am becoming.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q33" class="slider-value" value="" />
+<div id='q33' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I regularly engage in activities and learning that grow and expand me.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q34" class="slider-value" value="" />
+<div id='q34' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 500px;">
+ -->
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section6" class="section">
+
+<h1> Health and Well Being (6 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I approach my health in a proactive and generative way, rather than crisis management mode.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q41" class="slider-value" value="" />
+<div id='q41' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am satisfied with my level of vitality and well being.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q42" class="slider-value" value="" />
+<div id='q42' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I have support systems and structures in place that allow me to easily maintain my health and well being.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q43" class="slider-value" value="" />
+<div id='q43' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am conscious of my body and fitness level and take responsibility for my physical well-being.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q44" class="slider-value" value="" />
+<div id='q44' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I know what works for me to maintain my health and I consistently do it.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q45" class="slider-value" value="" />
+<div id='q45' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 760px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 760px; left: 500px;">
+ -->
+
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section3" class="section">
+<h1> Money and Finances (3 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I have enough money to do the things I want to do and to accomplish the things that are important to me.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q51" class="slider-value" value="" />
+<div id='q51' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I manage my money and financial affairs and records well.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q52" class="slider-value" value="" />
+<div id='q52' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am free from worry and anxiety about money.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q53" class="slider-value" value="" />
+<div id='q53' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+My financial future feels robust and sustainable.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q54" class="slider-value" value="" />
+<div id='q54' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+
+<!-- CONTINUE BUTTOM question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 500px;">
+ -->
+
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section7" class="section">
+<h1> Friendships (7 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I have a sufficient number of great friends.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q61" class="slider-value" value="" />
+<div id='q61' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+My friendships nourish and sustain me.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q62" class="slider-value" value="" />
+<div id='q62' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am a good friend and I make myself available to my friendships.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q63" class="slider-value" value="" />
+<div id='q63' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I trust the relationships I have with my friends.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q64" class="slider-value" value="" />
+<div id='q64' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I love and make the most of the time I spend with my friends.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q65" class="slider-value" value="" />
+<div id='q65' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 640px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 640px; left: 500px;">
+ -->
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section8" class="section">
+<h1> Family (8 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am satisfied with the level of contact I have with my family.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q71" class="slider-value" value="" />
+<div id='q71' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+Nothing feels hidden or witheld in my relationships with family members.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q72" class="slider-value" value="" />
+<div id='q72' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am satisfied with the role I play and the level of contribution I have in my family.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q73" class="slider-value" value="" />
+<div id='q73' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I have created the experience of family in my life, whether or not it is with my biological relatives.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q74" class="slider-value" value="" />
+<div id='q74' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr>
+</table>
+
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 500px;">
+ -->
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section1" class="section">
+<h1> Career (1 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I love my work.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q81" class="slider-value" value="" />
+<div id='q81' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I feel my talents and skills are well used in my work.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q82" class="slider-value" value="" />
+<div id='q82' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I enjoy my work environment and the people with whom I work.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q83" class="slider-value" value="" />
+<div id='q83' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I see opportunity for growth and development in my position.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q84" class="slider-value" value="" />
+<div id='q84' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I feel like I have found my right livelihood.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q85" class="slider-value" value="" />
+<div id='q85' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Next" class="next-btn" style="">
+</span></td></tr></table>
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!--<input type="button" value="Previous" class="prev-btn" style="margin-left:25px; width:70px; position: absolute; top: 500px; left: 18px;">&nbsp;&nbsp;-->
+<!--<input type="button" value="Next" class="next-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 640px; left: 500px;">        -->
+
+
+</div>
+
+
+<!--  =================== Question Section begins ============  -->
+<div id="section9" class="section">
+<h1> Significant Other and Romance (9 of 9) </h1> 
+
+<!-- dont display per Kevin
+<div id="divinfo" style="">
+<p>
+<br /><br /><br /><br /><br /><br />
+If you would like further information on the Assessment Wheel of the Coaches Training Institute's world-renowned courses please contact a Program Advisor 415-451-6000 or Toll Free 1-800-691-6008
+</p>
+</div> -->
+
+<!--   question table starts here  -->
+<table class="section-table" border="0" cellpadding="10">
+<!-- <tr>
+<td width="50%" valign="top" > </td>
+<td width="50%"  valign="top"> </td>
+</tr>
+ -->
+<tr>
+<td class="headrow" width="50%" valign="middle" >
+<p style="font-size:12px; color:#999999">
+Rate your agreement with the following statements using the sliding scale.</p>
+</td>
+<td class="headrow" width="50%"  valign="top">
+<img src="/docs/images/wheel-scale2.jpg" style="padding-left:8px;padding-top:7px;" alt="" /><br />
+Don't Agree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Highly Agree
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am open to creating an intimate loving relationship.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q91" class="slider-value" value="" />
+<div id='q91' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am free from past resentments or blame in the area of intimate relationships.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q92" class="slider-value" value="" />
+<div id='q92' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I am willing to risk myself for the sake of intimacy.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q93" class="slider-value" value="" />
+<div id='q93' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" >
+<p>
+I create romance in my life.
+</p>
+</td>
+<td width="50%"  valign="top">
+<input type="hidden" name="q94" class="slider-value" value="" />
+<div id='q94' class='ui-slider-1' style="margin:10px;width:205px;">
+<div class='ui-slider-handle'></div>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" ></td>
+<td style="" width="50%" valign="top" ><span style="float:right;">
+<input type="button" value="Previous" class="prev-btn" style="">&nbsp;&nbsp;
+<!-- <input type="button" value="Next" class="next-btn" style=""> -->
+<input type="submit" value="Submit Survey" name="submit" class="sub-btn"  style="margin-left:15px;margin-right:15px; width:100px;" /></span></td></tr>
+</table>
+
+
+<!-- CONTINUE BUTTON question section goes here   -->
+<!-- <input type="button" value="Previous" class="prev-btn" style="margin-left:25px;margin-right:25px; width:70px; position: absolute; top: 620px; left: 420px;">&nbsp;&nbsp;
+ -->
+<!--  SUBMIT BUTTON for survey goes here -->
+<!-- <input type="submit" value="Submit Survey" name="submit" class="sub-btn"  style="margin-left:25px;margin-right:25px; width:100px; position: absolute; top: 620px; left: 500px;" />
+ -->
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+</form>
+           </p>
+           
+           </div>
+           <!-- End Wheel Tool -->
+           
+           </div>
+           <!-- End Main Content -->
+         
+		 </div>
+	 <!-- End Right Column -->
+     
+   </div>
+   <!-- End Wrapper -->
+</body>
+</html>
