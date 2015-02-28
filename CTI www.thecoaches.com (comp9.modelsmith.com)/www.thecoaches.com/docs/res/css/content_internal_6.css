@@ -1,0 +1,40 @@
+/* properties specific to internal template #5 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; padding-bottom: 48px;}
+
+div#content div#main {width: 900px; margin: 0px; padding: 0px; padding-right: 10px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+
+
+div#content div#main h1 {padding-top: 0px; margin-top: 20px; margin-bottom: 24px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.2em; margin-top: 15px; margin-bottom: 1px;}
+
+div#content div#main h3 {font-size: .7em; margin-top: 15px; margin-bottom: 1px;}
+
+
+
+div#content div#main div.pri {float: left; width: 900px; float: left; text-align: left;}
+
+div#content div#main div.pri img {float: left;}
+
+div#content div#main div.pri div.bio {float: right; width: 665px; margin-left: 25px;}
+
+
+
+div#content div#main div.sec {float: left; width: 900px; float: left; text-align: left;}
+
+div#content div#main div.sec img {float: left;}
+
+div#content div#main div.sec div.bio {float: right; width: 665px; margin-left: 25px;}
+
+
+
+
+
+div.biowrap {float: left; border-top: 1px solid #32110a; margin-top: 15px; margin-bottom: 15px; width: 900px;}
+

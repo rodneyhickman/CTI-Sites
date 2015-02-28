@@ -1,0 +1,61 @@
+/* properties specific to the learning-hub pages   */
+/* as displayed with the new Expression Engine site.  */
+/* Some are additions and some are overrides.  */
+
+/* Global to Learning-Hub  */
+div.pri p.lightbluecaps {
+    color: #81ABC8;
+    text-transform: uppercase;
+}	
+div.pri h3 {
+    color: #81ABC8;
+}	
+.accessibility-hide {
+    display: none;
+    visibility: hidden;
+}
+.breadcrumbs {}
+.buttonlh {
+    background: none repeat scroll 0 0 #8E8469;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 1px solid #000000;
+    box-shadow: 0 1px 0 #000000;
+    color: white;
+    display: none;
+    font-family: Georgia,serif;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    vertical-align: middle;
+}
+.here {
+		text-decoration: none;
+	}
+.int {}
+.main {
+		width: 910px;
+	}
+.pri {
+		text-align: left;
+		float: left;
+    width: 650px;
+	}
+.sec {
+		text-align: left;
+		float: left;
+    margin-right: 15px;
+    width: 114px;
+	}
+
+
+/* Specific to main landing page /learning-hub/index.html  */
+.hiddenLH {
+		display:none;
+	}
+
+
+/* Specific to Fundamentals pages  */
+
+
+/* Specific to Intermediate pages  */

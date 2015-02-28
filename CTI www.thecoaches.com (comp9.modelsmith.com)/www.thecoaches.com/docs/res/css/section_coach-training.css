@@ -1,0 +1,43 @@
+/* augmentative to coaches-training-institute.css */
+
+h1 {color: #699bbc;}
+
+/*h2 {color: #699bbc;}*/
+h2 {color: #32110a;}
+
+li.current {background-image: url('/res/img/nav-indicators/coach-training.jpg');}
+
+li.current a {color: #699bbc !important;}
+
+div#sub-nav ul#section-nav li {float: left; font-weight: bold; display: inline; font-size: 0.85em; line-height: 100%; margin: 0px; margin-right: 14px; padding: 0px; padding-bottom: 10px;}
+
+div#sub-nav {background-color: #ffffff; color: #32110a; background-image: url('/res/img/bkgds/divider_sub-nav_coach-training_content.jpg'); background-repeat: no-repeat; background-position: top;}
+
+div.sub-nav {background-image: url('/res/img/bkgds/divider_sub-nav_coach-training.jpg') ! important;}
+
+
+
+div#sub-nav ul#section-nav li a:hover {color: #699bbc;}
+
+h1.main-headline2 { line-height:28px; }
+
+hr.brown-rule { border:solid 2px #222; }
+ul.biz-builder-list { list-style-position:inside; padding:0; margin:0 0 15px 2px;  }
+p.coach-blue,
+span.coach-blue,
+p.coach-blue a{ color:#699BBC; }
+p.coach-blue a{ text-decoration:underline; }
+
+div.biz-btn-section { float:left;}
+div.padding-40 { padding:0 40px; }
+div.vertical-sep {  border-right:solid 2px #bbb2a0 }
+div.biz-sidebar { padding:15px; }
+div.biz-sidebar p{ font-size:1.05em !important;  }
+
+/*
+
+div#content div#sidebar a:hover {color: #699bbc;}
+
+a:hover.taglink {color: #699bbc;}
+
+*/

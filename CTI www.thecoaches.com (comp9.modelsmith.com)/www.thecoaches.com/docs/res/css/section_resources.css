@@ -1,0 +1,52 @@
+/* augmentative to coaches-training-institute.css */
+
+h1 {color: #534b72;}
+
+h2 {color: #32110a;}
+/*h2 {color: #534b72;}*/
+
+li.current {background-image: url('/res/img/nav-indicators/resources.jpg');}
+
+li.current a {color: #534b72 !important;}
+
+div#sub-nav {background-color: #ffffff; color: #32110a; background-image: url('/res/img/bkgds/divider_sub-nav_resources_content.jpg'); background-repeat: no-repeat; background-position: top;}
+
+div.sub-nav {background-image: url('/res/img/bkgds/divider_sub-nav_resources.jpg') ! important;}
+
+div#sub-nav ul#section-nav li a:hover {color: #534b72;}
+
+
+
+h1.main-headline2 { line-height:28px; }
+
+hr.brown-rule { border:solid 2px #222; }
+ul.biz-builder-list { list-style-position:inside; padding:0; margin:0 0 15px 2px;  }
+p.coach-blue,
+span.coach-blue,
+p.coach-blue a{ color:#534B72; }
+p.coach-blue a{ text-decoration:underline; }
+
+div.biz-btn-section { float:left;}
+div.padding-40 { padding:0 40px; }
+div.vertical-sep {  border-right:solid 2px #bbb2a0 }
+div.biz-sidebar { padding:15px; }
+div.biz-sidebar p{ font-size:1.05em !important;  }
+
+/* Calendar Classes */
+.calendar-entry-left { margin-bottom: 20px; border-bottom: 1px solid #d5d0b8; width:310px; float:left; padding-bottom: 20px; min-height: 115px;}
+.calendar-entry-right { margin-bottom: 20px; border-bottom: 1px solid #d5d0b8; width:323px; float:right; padding-bottom: 20px; min-height: 115px;}
+.calendar-page { background: #4c839f; width: 35px; float: left; margin-left: 0px; margin-right: 12px; color: #FFF; font-size: 8px; font-weight: bold; text-align: center; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; }
+p.month { margin-bottom: 0px; padding: 4px 0px; line-height: 1.0em; text-transform: uppercase; }
+p.day { background: #d5d1c3; margin-bottom: 0px; color: #66514a; font-size: 18px; padding: 4px 0px; -moz-border-radius-bottomleft: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; }
+.calendar-info { float: left; width: 255px; font-size: 11px; line-height: 1.4em; }
+.calendar-info p { font-size: 1.2em; line-height: 1.2em; }
+.calendar-info p.calendar-learn a { font-size: .83em; }
+.clear { clear: both; }
+
+/*
+
+div#content div#sidebar a:hover {color: #534b72;}
+
+a:hover.taglink {color: #534b72;}
+
+*/

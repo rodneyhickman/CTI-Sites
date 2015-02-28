@@ -1,0 +1,444 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* augmentative to coaches-training-institute.css */
+h1 {color: #dfbf44;}
+
+h2 {color: #32110a;}
+/*h2 {color: #dfbf44;}*/
+
+li.current {background-image: url('/res/img/nav-indicators/why-cti.jpg');}
+
+li.current a {color: #dfbf44;}
+
+div#sub-nav {background-color: #ffffff; color: #32110a; background-image: url('/res/img/bkgds/divider_sub-nav_why-cti_content.jpg'); background-repeat: no-repeat; background-position: bottom;}
+
+div.sub-nav {background-image: url('/res/img/bkgds/divider_sub-nav_why-cti.jpg') ! important;}
+
+div#sub-nav ul#section-nav li a:hover {color: #dfbf44;}
+
+/*
+
+div#content div#sidebar a:hover {color: #dfbf44;}
+
+a:hover.taglink {color: #dfbf44;}
+
+*/
+/* global styles by element */
+
+body {margin: 0px; padding: 0px; background: #bcb99d url('/res/img/bkgds/cti_background.jpg') no-repeat center top;  font-family: arial, helvetica, sans-serif; font-size: 104%; line-height: 109%; padding-top: 10px; color: #32110a;}
+
+div {margin: 0px; padding: 0px; vertical-align: top;}
+
+img {border: 0px none; outline: none;}
+
+h1 {font-size: 1.9em; padding: 0px; margin-top: 24px; margin-bottom: 20px; font-weight: normal; color: #32110a;}
+
+h2 {font-size: 1.2em; padding: 0px; margin-top: 20px; margin-bottom: 10px; font-weight: bold; color: #32110a;}
+
+h3 {font-size: 1.0em; padding: 0px; margin-top: 0px; margin-bottom: 10px; font-weight: bold; color: #32110a; line-height: 100%;}
+
+p {margin-top: 0px; padding-top: 0px;}
+
+ul {margin-left: 25px; padding-left: 0px; list-style-type: disc; list-style-position: outside; display: block;} 
+
+li {display: list-item;} 
+
+abbr {border: 0px none;}
+
+dfn {font-weight: normal; font-style: normal;}
+
+dl {display: block;}
+
+p {font-size: 1.0em;}
+
+dt {font-weight: bold; font-style: normal; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px;}
+
+dd {font-weight: normal; font-style: normal; margin: 0px; padding: 0px;}
+
+blockquote {margin: 0px; padding: 0px; font-style: italic; text-align: left; font-size: 0.99em;}
+
+blockquote:before {content: "";}
+
+blockquote:after {content: "";}
+
+cite {display: inline; font-style: normal;}
+
+blockquote cite {display: block; font-weight: bold;}
+
+code {display: block; text-align: left; margin-bottom: 15px;}
+
+label {display: inline; font-weight: normal;}
+
+form {margin: 0px; padding: 0px;}
+
+input {margin-top: 0px; background-color: #ebe9da;}
+
+table {clear: both; text-align: left; border: 0px none; padding: 0px; margin: 0px; border-spacing:0px; border-collapse: collapse; width: 100%;}
+
+caption {text-align: left; font-size: 1.3em; font-weight: bold; padding-top: 20px; padding-bottom: 7px;}
+
+th {padding-left: 10px; padding-right: 10px; font-weight: bold;}
+
+td {padding-left: 10px; padding-right: 10px;}
+
+strong {font-weight: bold; font-style: normal;}
+
+sup {font-size: 60%; vertical-align: top; line-height: 100%;}
+
+fieldset {border: 0px none;}
+
+a {color: #32110a; text-decoration: underline;}
+
+a:hover {color: #5da1cd; text-decoration: underline;}
+
+dd a:hover {color: #32110a;}
+
+
+
+
+
+/* global page component styles */
+
+div#page {width: 940px; margin-left: auto; margin-right: auto; font-size: 0.7em;}
+
+div#primary {background-image: url('/res/img/bkgds/div_page_top.gif'); background-repeat: no-repeat; padding-top: 30px; padding-left: 10px; padding-right: 10px; padding-bottom: 8px; clear: both; background-color: #ffffff; margin-bottom: 0px;}
+
+div#broadcast {clear: both;}
+
+div#content {width: 900px; float: left; padding-left: 10px; padding-right: 10px; padding-bottom: 0px; padding-top: 0px; margin-bottom: 0px; background-color: #ffffff; clear: both;}
+
+div#content div#main {float: left; width: 900px; padding: 0px; text-align: left;}
+
+
+
+
+
+/* global tools header styles */
+
+div#tools {font-family: Georgia, "Times New Roman", Times, serif; float: left; width: 900px; height: auto; padding-right: 20px; padding-left: 20px; padding-top: 5px; padding-bottom: 4px; clear: both; line-height: 100%;}
+
+div#tools ul {margin-left: 0px; margin-top: 0px; margin-bottom: 0px; list-style-type: none; list-style-position: inside; display: inline; vertical-align: middle;} 
+
+div#tools li {display: inline; font-size: 0.95em; vertical-align: middle; padding-bottom: 3px;}
+
+div#tools ul#general {float: left;}
+
+div#tools ul#ecommerce {float: right; padding-top: 2px; padding-bottom: 3px;} 
+
+div#tools ul#ecommerce li {padding-bottom: 0px;} 
+
+div#tools ul#ecommerce a#checkout {padding-right: 21px; background-image: url('/res/img/bkgds/a_checkout.gif'); background-repeat: no-repeat; background-position: right;}
+
+div#tools li#socbook {margin-right: 16px;  padding-bottom: 0px;}
+
+div#tools a {color: #32110a; text-decoration: none;}
+
+div#tools a:hover {color: #32110a; text-decoration: underline;}
+
+
+
+
+
+/* global contact nav */
+
+ul#contact-nav {font-family: Georgia, "Times New Roman", Times, serif; list-style-type: none; margin: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 3px;}
+
+
+
+ul#contact-nav li {color: #837a75; text-align: right; font-size: 0.92em; line-height: 110%; margin-top: 10px;}
+
+
+
+ul#contact-nav li a {color: #7f7777; text-decoration: none;}
+
+ul#contact-nav li a:hover {color: #32110a; text-decoration: underline;}
+
+ul#contact-nav li#contacttop {margin-top: 3px;}
+
+
+
+/* global main nav */
+
+ul#main-nav {float: left; width: 850px; margin: 12px 0px 0px 0px; list-style: none; padding: 0px; padding-left: 10px;} 
+
+ul#main-nav li {float: left; font-weight: bold; display: inline; font-size: 1em; line-height: 100%; margin: 0px; margin-top: 2px; margin-right: 25px; padding: 0px; padding-bottom: 10px;}
+
+ul#main-nav li a {text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; font-weight: bold;}
+
+ul#main-nav a:hover {color: #988884;}
+
+
+
+
+
+/* global sub-nav styles */
+
+div#sub-nav {float: left; width: 900px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; line-height: 100%;}
+
+div#sub-nav ul#section-nav {float: left; width: 900px; margin: 0px; list-style: none; padding: 0px;} 
+
+div#sub-nav ul#section-nav li {float: left; font-weight: bold; display: inline; font-size: 0.85em; line-height: 100%; margin: 0px; margin-right: 25px; padding: 0px; padding-bottom: 10px;}
+
+div#sub-nav ul#section-nav li a {text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; font-weight: bold;}
+
+
+
+
+
+/* global breadcrumb styles */
+
+div#breadcrumbs {font-family: Georgia, "Times New Roman", Times, serif; font-style: italic; padding-top: 7px; padding-bottom: 10px;}
+
+div#breadcrumbs p {line-height: 100%; padding: 0px; margin: 0px; font-size: 0.95em;}
+
+
+
+
+
+
+
+/* global sidebar styles */
+
+div#sidebar .notes {margin-bottom: 30px ! important; padding-top: 30px; border-top: 2px solid #ffffff;}
+
+div#sidebar h2 { color:#8F1313; font-family:Georgia,serif; font-size:18px; font-weight:normal; margin-left:30px; margin-top:40px; }
+
+div#sidebar ul li { font-family:Georgia,serif; font-size:11px; margin-left:22px; }
+
+/* global calls to action (cta) styles */
+
+div#cta-area {border-left: 0px none; border-right: 0px none; border-bottom: 0px none; border-top: 3px double; padding-top: 10px; float: left;}
+
+div#cta-area dl.cta {height: 112px; width: 192px; float: left; border: 1px solid #ffffff; margin-left: 5px; margin-right: 6px; padding: 5px; padding-bottom: 2px;}
+
+div#cta-area dl.cta dt {height: 42px; width: 100%; padding: 0px; margin: 0px; position: relative;}
+
+div#cta-area dl.cta dt a {position: absolute; bottom: 0px;}
+
+div#cta-area dl.cta dd {position: relative; height: 70px; width: 100%; font-size: 0.94em; line-height: 142%; padding: 0px; margin-top: -4px;}
+
+div#cta-area dl.cta dd a {text-decoration: none;}
+
+div#cta-area dl.cta dd a:hover {text-decoration: underline;}
+
+div#cta-area form#subscribe {position: relative;}
+
+div#cta-area input#newsletter {position: absolute; top: 2px; left: 0px; width: 160px; height: 17px; margin: 0px; border: 1px solid #cccccc;}
+
+div#cta-area input#submit {position: absolute; top: 2px; right: 0px;}
+
+div#cta-area label#label_newsletter {display: block; position: absolute; top: 26px;}
+
+
+
+
+
+/* global footer styles */
+
+div#footer {background-image: url('/res/img/bkgds/hr_foothr.gif'); background-repeat: no-repeat; padding-top: 8px;}
+
+div#footer img {vertical-align: middle;}
+
+div#footer img#cti-logo-tagged {float: left;}
+
+div#footer div#footer-content {float: right; width: 744px;}
+
+div#footer div#footer-content div#footer-nav {float: left; width: 500px; font-size: 0.94em; padding-top: 15px; padding-bottom: 50px; line-height: 120%;}
+
+div#footer div#footer-content div#footer-nav div#footer-legal {margin-bottom: 5px;}
+
+div#footer div#footer-content div#footer-nav a#privacy-link {margin-left: 20px;}
+
+div#footer div#footer-content div#footer-nav ul {margin-left: 0px; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; list-style-type: none; list-style-position: inside; display: inline; vertical-align: middle;} 
+
+div#footer div#footer-content div#footer-nav li {display: inline; vertical-align: middle;}
+
+div#footer div#footer-content img#icf-logo {float: right;}
+
+
+
+/* general decorative list styles */
+
+ul.bulleted-gt {list-style-type: none; padding: 0; padding-right: 0.2em; margin: 0;}
+
+ul.bulleted-gt li {background-image: url('/res/img/bkgds/li_icon_bulleted-gt.gif'); background-repeat: no-repeat; background-position: 0 0.5em; padding-left: .6em; line-height: 100%; margin-bottom: .5em; font-size: 0.9em;}
+
+ul.bulleted-gt li a {line-height: 130%;}
+
+
+
+ul.bulleted-arrowed {list-style-type: none; padding: 0; margin: 0;}
+
+ul.bulleted-arrowed li {font-size: 0.96em; background-image: url('/res/img/bkgds/standard_arrow_icon.gif'); background-repeat: no-repeat; background-position: 0 0.35em; padding-left: 1.45em; line-height: 170%;}
+
+ul.bulleted-arrowed li a {text-decoration: none;}
+
+ul.bulleted-arrowed li a:hover {text-decoration: underline;}
+
+
+
+/* general classes */
+
+div.pageclear {height: 1px; width: 900px; clear: both;}
+
+span.divider {padding-left: 5px; padding-right: 5px;}
+
+a.force-typical {color: #32110a ! important; text-decoration: underline ! important;}
+
+a.taglink {font-weight: bold; text-decoration: none;}
+
+a:hover.taglink {text-decoration: underline;}
+
+
+
+a.here {text-decoration: none; color: #32110a; font-weight: normal;}
+
+a:hover.here {text-decoration: none ! important; color: #32110a; font-weight: normal;}
+
+
+
+img.arrow-link {vertical-align: middle;}
+
+li.current {background-position: center bottom; background-repeat: no-repeat;}
+
+.bold {font-weight: bold ! important;}
+
+.black {color: #32110a ! important;}
+
+.normtext {font-style: normal;}
+
+.arrowlink {padding-right: 17px; background-image: url('/res/img/bkgds/standard_arrow_icon.gif'); background-repeat: no-repeat; background-position: right;}
+
+.accessibility-hide {display: none; visibility: hidden;}
+
+.tight {margin: 0; padding: 0; line-height: 100%;}
+
+.flatbottom {margin-bottom: 0; padding-bottom: 0;}
+
+/*.first {margin-top: 0 ! important; padding-top: 0 ! important;}*/
+.first {}
+
+.psuedo-head {display: block; font-weight: bold; text-transform: uppercase;}
+
+.followsh2 {margin-top: 4px ! important; padding-top: 0 ! important;}
+
+cite.override {display: inline; font-weight: normal;}
+
+.showstuff {cursor: pointer; font-family: Georgia, "Times New Roman", Times, serif; font-style: italic;}
+
+.hidestuff {cursor: pointer; font-family: Georgia, "Times New Roman", Times, serif; font-style: italic;}h1 {
+	color: #dfbf44;
+}
+h2 {
+	color: #32110a;
+}
+/*h2 {color: #dfbf44;}*/
+
+li.current {
+	background-image: url('/res/img/nav-indicators/why-cti.jpg');
+}
+li.current a {
+	color: #dfbf44;
+}
+div#sub-nav {
+	background-color: #ffffff;
+	color: #32110a;
+	background-image: url('/res/img/bkgds/divider_sub-nav_why-cti_content.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+div.sub-nav {
+	background-image: url('/res/img/bkgds/divider_sub-nav_why-cti.jpg') ! important;
+}
+div#sub-nav ul#section-nav li a:hover {
+	color: #dfbf44;
+}
+
+/*
+
+div#content div#sidebar a:hover {color: #dfbf44;}
+
+a:hover.taglink {color: #dfbf44;}
+
+*/
+/* properties specific to internal template #11 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_coactive-conf_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 105px;}
+
+div#content div#main {width: 657px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#main div.pri {text-align: left;}
+
+div#content div#main div.sec {text-align: left;}
+
+div#content div#main h1 {padding-top: 0px; margin-top: 10px; margin-bottom: 24px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.2em; margin-top: 20px; margin-bottom: 0px;}
+
+div#content div#sidebar {float: right; width: 228px; margin: 0 10px 0 0; padding: 0px;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+div#sidebar .notes {padding-bottom: 25px ! important; padding-top: 5px; border-top: 0px none; border-bottom: 2px solid #ffffff;}
+
+div#sidebar .notes a {font-weight: bold;}
+
+div#sidebar .notes a:hover {font-weight: bold;}
+
+
+
+div#content div#main div.pri dl {margin-top: 26px;}
+
+div#content div#main div.pri dt {border-top: 1px solid #32110a; padding-top: 25px; margin-bottom: 0px;}
+
+div#content div#main div.pri dd {padding-bottom: 4px;}
+
+div#content div#sidebar div.pri blockquote {margin: 10px; margin-top: 15px;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px;}
+
+
+
+/* specific to buy the book */
+
+div#buythebook {margin-top: 0px ! important; padding-top: 0px ! important;}
+
+div#buythebook h2 {margin-top: 0px; padding-top: 0px; padding-bottom: 25px;}
+
+div#buythebook cite {display: inline; font-weight: normal;}
+
+/* Conference Specific Content */
+
+/* Co-active Conference Content */
+div#content div#conf-content {float: left; width: 630px; padding-right: 24px; padding-left: 24px; padding-bottom: 35px; background-repeat: repeat-y; background-position: bottom right;font-family:Georgia, "Times New Roman", Times, serif;}
+
+div#content div#conf-content-reg {float: left; width: 630px; padding-right: 0px; padding-left: 24px; padding-bottom: 0px; background-repeat: repeat-y; background-position: bottom right;font-family:Georgia, "Times New Roman", Times, serif;}
+
+div#conf-content h1 {font-size: 2.0em; padding: 0px; margin-top: 24px; margin-bottom: 10px; font-weight: normal; color: #c3a240; font-family:Georgia, "Times New Roman", Times, serif;}
+div#content div#main h1 {margin-bottom: 15px; font-size: 2.1em;}
+
+div#conf-content h2 {font-size: 1.6em; padding: 0px; margin-top: 24px; margin-bottom: 10px; font-weight: normal; color: #c3a240;font-family:Georgia, "Times New Roman", Times, serif;}
+div#content div#main h2 {font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;}
+
+div#conf-content h1#conf-headline {font-size: 1.0em; padding: 0px; margin-top: 0px; margin-bottom: 10px; font-weight: normal; color: #32110a; height:178px; width:10630px; background:url('/res/img/content-headlines/hdr_co-active-conf.gif') top right no-repeat; margin-left:-10000px;}
+
+div#conf-content-reg h1#conf-headline-reg {font-size: 1.0em; padding: 0px; margin-top: -10px; margin-bottom: 10px; font-weight: normal; color: #32110a; height:105px; width:10246px; background:url('/res/img/content-headlines/hdr_co-active-conf-reg.gif') top right no-repeat; margin-left:-10000px;}
+
+div#sidebar h1#conf-headline {font-size: 1.0em; padding: 0px; margin-top: 40px; margin-bottom: 10px; font-weight: normal; color: #32110a; height:168px; width:10195px; background:url('/res/img/content-headlines/hdr_co-active-conf-sidebar.gif') top right no-repeat; margin-left:-10000px;}
+
+div#content div#sidebar p.call {font-size: 1.2em; padding: 0px; margin: 10px 20px 10px 30px; font-family:Georgia, "Times New Roman", Times, serif;}
+
+div#content div#sidebar img.sidebar-btn {margin-left:30px;}
+
+.underline { text-decoration:underline;}
+
+span.content-sub p {font-size:0.97em;}
+
+img.right {float: right;}
+
+.addthis_toolbox  { margin:35px 0 0 26px; }

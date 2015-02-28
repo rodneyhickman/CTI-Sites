@@ -1,0 +1,8 @@
+<p><% $result %></p>
+
+<%init>
+my $result = ref ($dbh);
+if(ref($dbh) eq 'Apache::DBI::db'){
+$result = 1;
+}
+</%init>

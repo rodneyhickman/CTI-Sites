@@ -1,0 +1,143 @@
+/* properties for section hub pages */
+
+div#broadcast {height: 310px;}
+
+/* div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/hub_content_sidebar.gif'); background-repeat: repeat-y; background-position: right;} */
+
+div#content {width: 909px; padding-right: 0px; background-image: url('/res/img/bkgds/hub_content_sidebar.gif'); background-repeat: repeat-y; background-position: right; border-right: 10px solid white; margin-left: -10px; padding-left: 21px;}
+
+div#content div#main {width: 510px;}
+
+div#content div#sidebar {float: right; width: 314px; padding: 25px;}
+
+
+
+/* content styles for pages pre-destined to use this content stylesheet */
+
+div#content div#hub-content {float: left; width: 500px; padding-right: 24px; padding-bottom: 35px; background-image: none; background-repeat: repeat-y; background-position: bottom right;}
+
+div#sidebar div#testimonials {float: left; width: 314px; }
+
+div#sidebar div.related-links, 
+div#sidebar div.related-links ul, 
+div#sidebar div.related-links ul li, 
+div#sidebar div.related-links ul li a {
+	text-decoration: underline;
+	font-size: 1em;
+	list-style: none;
+	margin: 0;
+}
+
+div#content div#main div#hub-content h2 {margin-bottom: 0px; padding-bottom: 0px;}
+
+div#sidebar div.sidebar-section {
+	margin-bottom: 15px;
+}
+
+div#sidebar div.sidebar-section div.sidebar-section-header {
+	color:#2e76a8;
+	font-weight: 700;
+	font-size: 1.2em;
+	line-height: 24px;
+	border-bottom: 1px solid #2e76a8;
+	text-transform: uppercase; 
+	margin-bottom: 10px;
+}
+
+div#sidebar div.sidebar-section div.sidebar-section-content {
+	color:#000000;
+	font-size: 0.95em;
+	margin-bottom: 10px;
+}
+
+div#sidebar div.sidebar-section div.sidebar-section-content p {
+	margin-bottom: 2px;
+}
+
+div#sidebar div.sidebar-section div.sidebar-section-content p.subhead {
+	color:#000000;
+	font-size: 0.95em;
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+div.sidebar-section-content a.btn-inline {
+	background-color: #831d11;
+	color: white;
+	text-transform: uppercase;
+	font-size: .79em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 2px 4px;
+	text-decoration: none;
+	border-bottom: 1px solid #b8a59e;
+	border-right: 1px solid #b8a59e;
+	white-space: nowrap;
+}
+	
+div.sidebar-section-content a.btn-inline-media {
+	background-color: #8e8469;
+	color: white;
+	text-transform: uppercase;
+	font-size: .83em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 7px;
+	text-decoration: none;
+	border-bottom: 1px solid #c6c3ba;
+	border-right: 1px solid #c6c3ba;
+	white-space: nowrap;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+	
+div.sidebar-section-content div#testimonials {
+	float: left; 
+	width: 314px; 
+}
+
+div.sidebar-section-content div#testimonials blockquote {
+	font-weight: bold;
+	font-style: normal;
+	font-size: .92em;
+	line-height: 14px;
+	margin-top: 10px;
+}
+
+div.sidebar-section-content div#testimonials blockquote cite {
+	font-style: normal;
+	font-weight: normal;
+	display: inline;
+}
+
+div.sidebar-section-content div.speaker-thumb img {
+	float:left;
+	width: 72px;
+	margin:0px 14px 25px 0;
+}
+div.sidebar-section-content div.speaker-thumb div.aaplayer img {
+	float:left;
+	margin: 3px 0 0 85px;
+}
+
+div.sidebar-section-content div.speaker-thumb div {
+	margin:0 0 14px 0;
+}
+
+div.sidebar-section-content div.speaker-thumb {
+	font-size: .92em;
+	line-height: 14px;
+}
+
+
+
+/* related links styles */
+
+div#related-links h2 {text-transform: uppercase; color: #32110a; font-size: 0.9em; font-weight: bolder; margin-top: 0px;}
+
+
+
+
+

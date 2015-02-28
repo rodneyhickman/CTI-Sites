@@ -1,0 +1,68 @@
+
+form table { 
+background-color:#ddf;
+border:solid 1px #aad;
+width: 300px;
+}
+form table th,td {
+padding:10px 10px 10px 10px;
+border:none;
+}
+form table th {
+font-weight:bold; 
+}
+
+
+form table td ul { 
+list-style-position:outside;
+padding:0;margin:0;
+                      }
+form table td ul li { 
+padding:0 0 8px 0;
+list-style: none;
+}
+
+#coachlist { 
+margin-top:20px;
+}
+#coachlist table { 
+background-color:#fff;
+width: 300px;
+}
+#coachlist table th,td {
+vertical-align:top;
+padding:10px 10px 10px 10px;
+border:none;
+}
+#coachlist table th {
+font-weight:bold; 
+}
+#coachlist table td ul { 
+list-style-position:outside;
+padding:0;margin:0;
+}
+#coachlist table td ul li { 
+padding:0 0 8px 0;
+list-style: none;
+}
+
+
+
+#mentornav
+{ 
+float:right;
+}
+
+
+ul.error_list { 
+list-style-type:disc;
+}
+ul.error_list li{ 
+color:#b00; 
+}
+
+.alert { 
+padding:10px;
+background:#eee;
+border:solid 3px #a44;
+}

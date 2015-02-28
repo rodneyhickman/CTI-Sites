@@ -1,0 +1,10 @@
+.holiday { 
+padding-top:10px;
+}
+.holiday p { 
+padding:4px;
+border:solid 2px #822;
+background:#efe;
+text-align:center;
+border-radius:5px;
+}

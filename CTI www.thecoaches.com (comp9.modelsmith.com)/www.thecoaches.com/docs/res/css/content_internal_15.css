@@ -1,0 +1,56 @@
+/* properties specific to internal template #11 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px;  padding-bottom: 55px;}
+
+div#content div#main {width: 657px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#main div.pri {text-align: left;}
+
+div#content div#main div.sec {text-align: left;}
+
+div#content div#main h1 {padding-top: 0px; margin-top: 20px; margin-bottom: 24px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.2em; margin-top: 20px; margin-bottom: 0px;}
+
+div#content div#sidebar h1 { margin-left:10px; }
+
+div#content div#sidebar {float: left; width: 228px; margin: 0px 25px 0px 0px; padding: 0px;min-height:700px;}
+
+div#content div#sidebar {background-image: url('/res/img/bkgds/internal_11_content.gif'); background-repeat: repeat-y; background-position: left; }
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+div#sidebar .notes {padding-bottom: 25px ! important; padding-top: 5px; border-top: 0px none; border-bottom: 2px solid #ffffff;}
+
+div#sidebar .notes a {font-weight: bold;}
+
+div#sidebar .notes a:hover {font-weight: bold;}
+
+
+
+div#content div#main div.pri dl {margin-top: 26px;}
+
+div#content div#main div.pri dt {border-top: 1px solid #32110a; padding-top: 25px; margin-bottom: 0px;}
+
+div#content div#main div.pri dd {padding-bottom: 4px;}
+
+div#content div#sidebar div.pri blockquote {margin: 10px; margin-top: 15px;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px;}
+
+div#content div#main div.pri li { margin-top:10px; }
+
+
+
+
+/* specific to buy the book */
+
+div#buythebook {margin-top: 0px ! important; padding-top: 0px ! important;}
+
+div#buythebook h2 {margin-top: 0px; padding-top: 0px; padding-bottom: 25px;}
+
+div#buythebook cite {display: inline; font-weight: normal;}

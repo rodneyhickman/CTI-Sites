@@ -1,0 +1,19 @@
+#main .sec { 
+width: 900px !important;
+}
+
+.campaign-left { 
+
+float:left;
+width:490px;
+margin:0 30px 0 0;
+
+}
+
+.campaign-right {
+
+float:left;
+width:375px;
+
+
+}

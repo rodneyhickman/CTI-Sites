@@ -1,0 +1,32 @@
+/* properties for section hub pages */
+
+div#broadcast {height: 310px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/hub_content.gif'); background-repeat: repeat-y; background-position: right;}
+
+div#content div#main {width: 452px;}
+
+div#content div#sidebar {float: right; width: 458px;}
+
+
+
+/* content styles for pages pre-destined to use this content stylesheet */
+
+div#content div#hub-content {float: left; width: 427px; padding-right: 24px; padding-bottom: 35px; background-image: url('/res/img/bkgds/hub_vertical_divide.gif'); background-repeat: repeat-y; background-position: bottom right;}
+
+div#sidebar div#testimonials {float: left; width: 184px; padding: 20px; padding-right: 25px; padding-top: 45px;}
+
+div#sidebar div#related-links {float: right; width: 184px; padding: 15px; padding-left: 19px; padding-top: 45px;}
+
+div#content div#main div#hub-content h2 {margin-bottom: 0px; padding-bottom: 0px;}
+
+
+
+/* related links styles */
+
+div#related-links h2 {text-transform: uppercase; color: #32110a; font-size: 0.9em; font-weight: bolder; margin-top: 0px;}
+
+
+
+
+

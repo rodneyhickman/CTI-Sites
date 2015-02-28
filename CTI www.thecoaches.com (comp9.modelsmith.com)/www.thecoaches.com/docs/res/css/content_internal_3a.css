@@ -1,0 +1,67 @@
+/* properties specific to internal template #3 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_3_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 105px;}
+
+div#content div#main {width: 535px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#sidebar {float: right; width: 345px; margin: 0px; padding: 0px;}
+
+div#content div#sidebar h2 {line-height: 100%; color: #311109; margin-top: 3px;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+h1 {margin-top: 0px; padding-top: 0px;}
+
+h2 {font-size: 1.2em; margin-top: 25px; margin-bottom: 0px; padding-top: 0px;}
+
+div#content div#sidebar h2 {margin-bottom: 16px; font-size: 0.99em; text-transform: uppercase;}
+
+div#content div#sidebar div.sec h2 {text-align: left; color: #32110a;}
+
+
+
+div#content div.pri {float: left; width: 520px;}
+
+div#content div.pri dt {line-height: 100%; margin-top: 35px;}
+
+div#content div.pri dd {margin-top: 0px;}
+
+
+
+div#content div#sidebar div.pri {float: left; width: 140px; padding-left: 15px; padding-right: 15px; padding-top: 14px; text-align: left;}
+
+div#content div#sidebar div.sec {float: right; width: 140px; padding-left: 15px; padding-right: 15px; padding-top: 14px; margin-right: 0px;text-align: left;}
+
+div#content div#sidebar div.sec ul {margin-left: 0px; padding-left: 10px; line-height: inherit;}
+
+div#content div#sidebar div.sec ul li {padding-bottom: 10px;}
+
+
+
+div#main form {margin-top: 20px;}
+
+form div.bulletradio {width: 140px; text-align: left; margin-bottom: 20px; clear: both;}
+
+form div.bulletradio input {float: left;}
+
+form div.bulletradio p {float: right; width: 95px; padding-right: 20px;}
+
+form div.bulletradio p label {font-weight: bold;}
+
+form div.bulletradio p a.pricingdetails {display: block;}
+
+form input#register {margin-top: 13px;}
+
+
+
+
+
+dl#course-descriptions h2 {font-size: 1.0em;}
+
+dl#course-descriptions ul {margin-bottom: 20px;}
+
+dl#course-descriptions dt h2 a:hover {text-decoration: underline; color: #32110a ! important;}

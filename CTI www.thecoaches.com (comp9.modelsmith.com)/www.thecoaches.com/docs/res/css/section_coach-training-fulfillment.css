@@ -1,0 +1,37 @@
+/* augmentative to coaches-training-institute.css */
+
+h1 {color: #d47233;}
+
+/*h2 {color: #699bbc;}*/
+h2 {color: #32110a;}
+
+li.current {background-image: url('/res/img/nav-indicators/coach-training-fulfillment.jpg');}
+
+li.current a {color: #d47233;}
+
+div#sub-nav ul#section-nav li {float: left; font-weight: bold; display: inline; font-size: 0.85em; line-height: 100%; margin: 0px; margin-right: 18px; padding: 0px; padding-bottom: 10px;}
+
+div#sub-nav {background-color: #ffffff; color: #32110a; background-image: url('/res/img/bkgds/divider_sub-nav_coach-training_content-fulfillment.jpg'); background-repeat: no-repeat; background-position: bottom;}
+
+div.sub-nav {background-image: url('/res/img/bkgds/divider_sub-nav_coach-training.jpg') ! important;}
+
+
+
+div#sub-nav ul#section-nav li a:hover {color: #d47233;}
+
+div#content ul.left-nav {  float: left; font-weight: bold; font-size: 1.0em; list-style:none; width: 200px;  }
+
+div#content ul.left-nav li { }
+
+div#content ul.left-nav li.current a { color: #d47233;  }
+
+
+
+
+/*
+
+div#content div#sidebar a:hover {color: #699bbc;}
+
+a:hover.taglink {color: #699bbc;}
+
+*/

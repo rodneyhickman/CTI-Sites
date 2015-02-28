@@ -1,0 +1,219 @@
+/* properties specific to internal template #11 */
+
+div#page img#portraits {
+    position: absolute;
+    right: 415px;
+    top: 24px;
+}
+div#broadcast {height: 124px;}
+div#broadcast-lh {height: 124px; padding-top: 30px;}
+
+
+
+div#content {width: 910px; padding-right: 0px;  background-repeat: repeat-y; background-position: right; padding-bottom: 105px;}
+
+div#content div#main {width: 910px; margin: 0px; padding: 0px; }
+
+div#content div#main div#breadcrumbs {margin-bottom: 18px;}
+
+div#content div#main div.pri {text-align: left;}
+
+div#content div#main div.sec {text-align: left;}
+
+div#content div#main h1 {padding-top: 0px; margin-top: 20px; margin-bottom: 24px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.4em; margin-top: 20px; margin-bottom: 0px;}
+
+div#content div#sidebar {float: right; width: 228px; margin: 0px; padding: 0px;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+div#sidebar .notes {padding-bottom: 25px ! important; padding-top: 5px; border-top: 0px none; border-bottom: 2px solid #ffffff;}
+
+div#sidebar .notes a {font-weight: bold;}
+
+div#sidebar .notes a:hover {font-weight: bold;}
+
+
+
+div#content div#main div.pri dl {margin-top: 26px;}
+
+div#content div#main div.pri dt {border-top: 1px solid #32110a; padding-top: 25px; margin-bottom: 0px;}
+
+div#content div#main div.pri dd {padding-bottom: 4px;}
+
+div#content div#sidebar div.pri blockquote {width:200px;margin: 10px; margin-top: 15px;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px;}
+
+div#content p.bluecaps { text-transform: uppercase; color: #689bbc; }
+div#content p.lightbluecaps { text-transform: uppercase; color: #81ABC8; }
+div#content p.greencaps { text-transform: uppercase; color: #838d4a; ;}
+div#content p.orangecaps { text-transform: uppercase; color: #d47233; }
+div#content p.redcaps { text-transform: uppercase; color: #8a2629; }
+div#content p.navycaps { text-transform: uppercase; color: #465074; }
+
+div#content hr.lightdouble { height:4px; color: #eae9da; background-color: #eae9da;margin:20px 0 20px 0; }
+
+div#content h2 { color: #689bbc; }
+
+div#content .bal h1,
+div#content .bal h2 { color: #838d4a; }
+
+div#content .ful h1,
+div#content .ful h2 { color: #d47233; }
+
+div#content .pro h1,
+div#content .pro h2 { color: #8a2629; }
+
+div#content .syn h1,
+div#content .syn h2 { color: #465074; }
+
+div#content .int h2 { color: #81ABC8; }
+div#content .int h1 { color: #92E0DE; }
+
+
+div#content .left150 { margin-left: 150px; }
+
+div#content hr.left150 { margin-left: 150px; }
+
+div#content table.formlist { border:none; width:400px;}
+
+div#content table.formlist td { border:none; margin-left:0; padding-left:0;}
+
+
+
+/* specific to buy the book */
+
+div#buythebook {margin-top: 0px ! important; padding-top: 0px ! important;}
+
+div#buythebook h2 {margin-top: 0px; padding-top: 0px; padding-bottom: 25px;}
+
+div#buythebook cite {display: inline; font-weight: normal;}
+
+
+
+
+
+div#content div.pri {float: left; width: 650px;}
+
+div#content div.pri dt {line-height: 100%; margin-top: 20px;}
+
+div#content div.pri dd {margin-top: 0px;}
+
+
+
+
+div#content div.sec {float: left; width: 114px; margin-right: 15px;}
+
+div#content div.sec ul {margin-top: 20px;}
+
+div#content div.sec ul li {line-height: 14px; background-position: 0 0.14em; margin-top:5px; font-family: Arial; font-size:11px; }
+
+div#content div.sec ul li .psuedo-head {text-transform: none; font-size: 13px; margin-top:14px;  }
+
+
+div#content div.pri ol { margin-left:-25px; }
+div#content div.pri ol li { margin-bottom:10px; }
+
+form {margin-top: 20px;}
+
+form div.bulletradio {width: 140px; text-align: left; margin-bottom: 20px; clear: both;}
+
+form div.bulletradio input {float: left;}
+
+form div.bulletradio p {float: right; width: 120px; padding-right: 20px;}
+
+form div.bulletradio p label {font-weight: bold;}
+form div.bulletradio img {margin-top:8px;margin-bottom:15px;}
+
+form div.bulletradio p a.pricingdetails {display: block;}
+
+form input#register {margin-top: 13px;}
+
+
+.small-image-placeholder { 
+text-align:center;
+padding:10px;
+border:solid 1px #000;
+font-size:18px;
+font-weight:bold;
+}
+
+.small-image-placeholder a {
+color: #689bbc;
+text-decoration:none;
+} 
+
+.small-image-placeholder a:hover {
+text-decoration:underline;
+} 
+
+.top-anchor { 
+margin-left:20px;
+color:#689bbc;
+text-decoration:none;
+font-size:13px;
+}
+
+.top-anchor:hover { 
+color:#22f;
+text-decoration:underline;
+}
+
+.centered { 
+text-align:center;
+}
+
+#main-headline { 
+text-transform:uppercase;
+line-height:24px;
+}
+
+
+.column { 
+float:left;
+width:300px;
+margin-right:20px;
+}
+.column h2 { 
+padding-bottom:10px;
+}
+
+/* specific to learning-hub bridging-content */
+
+.bcflowsize  {
+  font-size:10pt;
+  font-weight:bold;
+}
+
+.buttonlh {
+   border-top: 1px solid #000000;
+   background: #8e8469;
+   padding: 5px 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+			display:none;
+   }  /* CTI asked to remove this button, and display none was the easiest way to do it.  
+		The button is only used for the learning-hub pages (all languages). */
+.buttonlh:hover {
+   border-top-color: #a79d84;
+   background: #a79d84;
+   color: #ccc;
+   }
+.buttonlh:active {
+   border-top-color: #665d47;
+   background: #665d47;
+   }
+
+

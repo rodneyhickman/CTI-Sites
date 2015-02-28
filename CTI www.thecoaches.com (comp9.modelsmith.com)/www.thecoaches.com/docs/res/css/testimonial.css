@@ -1,0 +1,111 @@
+div#content {padding-bottom: 0px !important;}
+div#breadcrumbs {
+	float: left;
+	margin-right: 30px;
+	}
+div#content div#sidebar-testimonial {float: left; width: 185px; margin: 0px 0 0 0px; padding: 0px; }
+div#content div#main-testimonial {width: 715px; margin: 0px; padding: 0px; float: left;}
+div#content div.pri-testimonial {float: left; width: 715px; padding: 0px; margin: 0px; }
+div#testimonial-selector {
+	height: 51px;
+	float: left;
+	margin-bottom: 4px;
+	}
+div#testimonial-selector .head {
+	width: 47px;
+	font-size: 11px;
+	font-weight: bold;
+	float: left;
+	}
+div#testimonial-selector .head img {
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	}
+div#testimonial-selector .head.current {
+	color: #7f2d2f;
+	}
+div#testimonial-selector .head.current img {
+	opacity:1;
+	filter:alpha(opacity=100);
+	}
+ul.subnav-testimonial {
+	list-style: none;
+	margin: 0;
+	}
+ul.subnav-testimonial li {
+	font-weight: bold;
+	line-height: 2.5em;
+	padding: 0 0 0 17px;
+	background-image: url(/res/prof/testimonial-sub-bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0 8px;
+	}
+ul.subnav-testimonial li a {
+	text-decoration: none;
+	}
+div#testimonial-feature {
+	height: 254px;
+	width: 725px;
+	background-image: url(/res/prof/testimonial-feature-bg.gif);
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	padding: 0px;
+	}
+.testimonial-visual {
+	float: left;
+	padding:0px; margin:0px;
+	}
+.testimonial-visual img {
+	display: inline;
+	clear: none;
+	}
+.testimonial-quote {
+	float: left;
+	width: 270px;
+	padding: 20px;
+	color: #7f2d2f;
+	font-size: 20px;
+	line-height: 1.5em;
+	}
+.red {
+	color: #7f2d2f;
+	}
+.testimonial-introtext {
+	border-top: 2px solid #e1e0ce;
+	border-bottom: 2px solid #e1e0ce;
+	padding: 15px 0 10px 0;
+	font-size: 16px;
+	line-height: 1.7em;
+	}
+.bottom-photo {
+	margin-bottom: 0;
+	float: right;
+	}
+.bottom-photo-name {
+	margin-bottom: 0px;
+	margin-top: 100px;
+	}
+.soc-icon-join {
+	margin: 140px 0 20px 0px;
+	}
+.soc-icon {
+	padding: 7px 0 0 38px;
+	height: 31px;
+	font-size: 11px;
+	line-height: 1.1em;
+	margin: 5px 0 0 0px;
+	background-position: left;
+	background-repeat: no-repeat;
+	}
+.soc-icon a {
+	text-decoration: none;
+	}
+.twitter {
+	background-image: url(/res/prof/soc-icon-twitter.jpg);
+	}
+.facebook {
+	background-image: url(/res/prof/soc-icon-facebook.jpg);
+	}
+.narrow-col {
+	width: 645px;
+	}	

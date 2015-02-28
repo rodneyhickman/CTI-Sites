@@ -1,0 +1,37 @@
+/* global styles by element */
+
+body {margin: 0px; padding: 15px; font-family: arial, helvetica, sans-serif; font-size: 80%; line-height: 111%; color: #32110a;}
+
+div {margin: 0px; padding: 0px; vertical-align: top;}
+
+div#pricing-header {margin-bottom: 25px; margin-left: 10px;}
+
+h1 {font-size: 1.9em; padding: 0px; margin: 0px; font-weight: normal; color: #32110a; line-height: 105%;}
+
+table {clear: both; text-align: left; border: 0px none; padding: 0px; margin: 0px; border-spacing:0px; border-collapse: collapse; width: 100%;}
+
+caption {text-align: left; font-size: 1.3em; font-weight: bold; padding-top: 0px; padding-bottom: 25px; line-height: 100%;}
+
+th {padding: 10px; padding-bottom: 0px; font-size: 0.85em; font-weight: bold; text-align: left; background-color: #ffffff; border-bottom: 1px solid #32110a;}
+
+td {padding: 10px; font-size: 0.91em; text-align: left; border-right: 1px solid #ffffff; vertical-align: top;}
+
+td.price {font-weight: bold;}
+
+td ul {margin-top: 4px; padding-top: 0px;}
+
+tr {background-color: #d9e6ee;}
+
+tr.alt {background-color: #f0f5f8;}
+
+strong {font-weight: bold; font-style: normal;}
+
+
+
+span.coursename {font-style: italic;}
+
+span.savings {font-style: normal; font-weight: normal; display: block;}
+
+span.title {display: block; font-weight: bold;}
+
+td.jam {text-align: left; background-color: #ffffff; padding-top: 25px; font-size: 1.4em}

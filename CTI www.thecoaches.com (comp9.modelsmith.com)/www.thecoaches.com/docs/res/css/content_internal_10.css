@@ -1,0 +1,39 @@
+/* properties specific to internal template #10 */
+
+div#broadcast {height: 124px;}
+
+div#content {width: 910px; padding-right: 0px; background-image: url('/res/img/bkgds/internal_10_content.gif'); background-repeat: repeat-y; background-position: right; padding-bottom: 10px;}
+
+div#content div#main {width: 657px; margin: 0px; padding: 0px;}
+
+div#content div#main div#breadcrumbs {margin-bottom: 19px;}
+
+div#content div#main div.pri {float: left; width: 657px; margin-left: 0px; padding-right: 0px;}
+
+div#content div#main div.pri p#intro {color: #534b72; font-weight: bold;}
+
+div#content div#main div.sec {float: left; width: 657px; margin-left: 0px; margin-top: 30px; padding-right: 0px; padding-bottom: 5px;}
+
+div#content div#main div.sec div#bci {float: left; width: 301px; margin: 0px; padding: 0px; padding-right: 28px; padding-bottom: 65px; border-right: 1px solid #32110a;}
+
+div#content div#main div.sec div#iod {float: right; width: 301px; margin: 0px; padding: 0px; padding-left: 26px;}
+
+div#content div#main div.pri ul {margin-top: 19px;}
+
+div#content div#main div.pri h1 {padding-top: 0px; margin-top: 1px; margin-bottom: 6px; font-size: 1.9em;}
+
+div#content div#main h2 {font-size: 1.2em; margin-top: 20px; margin-bottom: 0px; padding-top: 0px;}
+
+div#content div#main div.sec h2 {margin-top: 20px; margin-bottom: 1px;}
+
+div#content div#sidebar {float: right; width: 228px; margin: 0px; padding: 0px;}
+
+div#content div#sidebar p {line-height: 130%; font-size: 0.98em;}
+
+div#content div#sidebar div.pri blockquote {margin: 12px; margin-top: 20px; text-align: left;}
+
+div#content div#sidebar div.pri blockquote cite {margin: 0px;}
+
+
+
+a.bizdevlink {display: block; margin-bottom: 18px;}
