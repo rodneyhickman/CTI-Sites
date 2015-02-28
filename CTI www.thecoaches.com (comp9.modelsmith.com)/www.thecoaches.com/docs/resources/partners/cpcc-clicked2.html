@@ -1,0 +1,13 @@
+<pre><% $result %></pre>
+<%once>
+use URI::Escape;
+</%once>
+<%init>
+my $username = $m->scomp('authen.mas');
+
+# save terms-and-conditions date in FileMaker
+my $em = uri_escape( $username, '^A-Za-z0-9@.-_' );
+my $url = "http://webcomp.modelsmith.com/fmi-test/webcomp2_newFM/set_terms.php?postkey=fjgh15t&em=$em&n=2";
+my $result = `/usr/bin/curl '$url'`;
+
+</%init>

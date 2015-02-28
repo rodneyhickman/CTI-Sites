@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.3.2");
+google.setOnLoadCallback(function() {
+$('#codemedium').hide();
+$('#codelarge').hide();
+
+$("#logosize").change(function() {
+  var size = $(this).val();
+  if(size == 'small'){
+    $('#codesmall').show();
+    $('#codemedium').hide();
+    $('#codelarge').hide();
+  }
+  if(size == 'medium'){
+    $('#codesmall').hide();
+    $('#codemedium').show();
+    $('#codelarge').hide();
+  }
+  if(size == 'large'){
+    $('#codesmall').hide();
+    $('#codemedium').hide();
+    $('#codelarge').show();
+  }
+
+});
+
+});
+</script>
+</head>
+<body>
+<h1>CTI CPCC Web Logo</h1>
+
+
+<p>Select a size:</p>
+<select id="logosize">
+  <option value="small">Small</option>
+  <option value="medium">Medium</option>
+  <option value="large">Large</option>
+</select>
+
+<div id="codesmall">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccs.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccs.js"></script>
+
+  <p>If you prefer not to use HTML, you can also download this logo directly by <a target="_blank" href="/docs/images/CPCC_LOGOs.gif">clicking here</a>.<br />(Depending on your browser, you may need to File->Save As from the menu)</p>
+</div>
+
+<div id="codemedium">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccm.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccm.js"></script>
+
+  <p>If you prefer not to use HTML, you can also download this logo directly by <a target="_blank" href="/docs/images/CPCC_LOGO.gif">clicking here</a>.<br />(Depending on your browser, you may need to File->Save As from the menu)</p>
+</div>
+
+<div id="codelarge">
+<p>Please copy and paste the following HTML code into your web page:</p>
+<textarea rows="2" cols="80">
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccl.js"></script>
+</textarea>
+
+
+<p>The logo will appear as follows:</p>
+<script type="text/javascript" src="http://www.thecoaches.com/data/cpccl.js"></script>
+  <p>If you prefer not to use HTML, you can also download this logo directly by <a target="_blank" href="/docs/images/CPCC_LOGOl.gif">clicking here</a>.<br />(Depending on your browser, you may need to File->Save As from the menu)</p>
+
+</div>
+
+
+</body>
+</html>
