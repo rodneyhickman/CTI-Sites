@@ -1,0 +1,266 @@
+﻿<?php
+	ini_set("include_path",".:../docs/res/inc/:../../docs/res/inc/:../../../docs/res/inc/:../../../../docs/res/inc/");
+	session_start();
+	if(!isset($_SESSION['org_referer'])) {
+		/* save referring url */
+		$_SESSION['org_referer'] = $_SERVER['PHP_SELF'];
+	}
+
+	If ($_SESSION['logged_in'] != 'yes') { 
+		/* redirect to login page */
+		header("Location: http://www.thecoaches.com/learning-hub/loginLH.html?redirect=".$_SESSION['org_referer']);
+		/* For good order don't risk the code below the redirect
+		to be executed when we redirect. */
+		exit;
+	}
+?>
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>CTI: Learning Hub: Intermediate</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="language" content="en" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="The Coaches Training Institute (CTI)" />
+<meta name="copyright" content="Copyright &#169; 2014 The Coaches Training Institute. All rights reserved." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="http://www.thecoaches.com/assets/css/footer.css" /> 
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+});
+</script>
+</head>
+<body>
+    <div id="page">
+
+        <div id="tools">
+            <!-- generalID --><!-- -->
+            <!-- eCommerceID --><!-- -->
+            <!-- courseMaterialsID --><?php include 'id_course_materials.php'; ?><!-- -->
+        </div>
+        <div id="primary">
+            <!-- contactNavID --><!-- -->
+            <ul id="main-nav"></ul>
+
+            <div id="broadcast">
+                <img src="/res/img/page-banners/content_course_int.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+                <map id="logobutton" name="logobutton">
+                    <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+                </map>
+            </div>
+
+
+
+
+            <div id="content">
+
+                <div id="main">
+                    <div id="breadcrumbs">
+                        <p>
+                            <span id="youarehere" class="accessibility-hide">You are here:&#160;</span>
+                            <!-- <a href="/learning-hub/">Learning Hub</a><span class="divider">&#160;||&#160; -->
+                            <a href="/learning-hub/es/intermediate/">Intermediate</a><span class="divider">
+                                &#160;||&#160;
+                                <a href="/learning-hub/es/intermediate/" class="here">Overview</a>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="sec">
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/fulfillment/"><strong class="psuedo-head">Fulfillment</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/balance/"><strong class="psuedo-head">Balance</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/process/"><strong class="psuedo-head">Process</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/synergy/"><strong class="psuedo-head">Synergy</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/glossary.html"><strong class="psuedo-head">Glossary</strong></a></li>
+                        </ul>
+
+                        <br /><br /><br />
+                        <a class="buttonlh" href="/learning-hub/loginLH.html?logout=1">Sign-out</a>
+
+
+
+                    </div>
+                    <a name="before"></a>
+                    <div class="pri int">
+
+                        <h1>Curr&#237;culum del Curso Intermedio (Intermediate Course)</h1>
+
+
+                        <p class="lightbluecaps">
+                            LA MAYOR&#205;A DE LAS PERSONAS QUE TERMINAN EL CURSO DE FUNDAMENTALS (FUNDAMENTOS) DEL <i>COACHING CO-ACTIVO</i><i><sup>&#174;</sup></i>,
+                            atra&#237;das por la visi&#243;n y el impacto del <i>coaching</i>, quieren m&#225;s. nuestros cursos intermedios son intensivos e incluyen una amplia
+                            gama de conocimientos pr&#225;cticos que mejorar&#193;n inmediatamente la calidad de tu <i>coaching</i>, siempre que lo practiques y cualesquiera que
+                            sean tus clientes.
+                        </p>
+
+                        <h2>C&#243;mo utilizar el Centro de aprendizaje</h2>
+                        <p>
+                            Existe un enlace en la columna de la izquierda de cada una de las p&#225;ginas de los cursos del Curr&#237;culum intermedio. Utiliza estos enlaces para
+                            navegar por el contenido y los recursos de cada uno de ellos.
+                        </p>
+                        <p>
+                            Cada curso incluye instrucciones sobre lo que has de hacer, as&#237; como su propia secci&#243;n de <b>Recursos</b>, en la que encontrar&#225;s toda
+                            una serie de <b>Herramientas</b>, <b>Temas</b> y <b>Recursos de negocio</b> cuando proceda.
+                        </p>
+                        <p>Pincha en <a href=" http://www.thecoaches.com/learning-hub/es/intermediate/fulfillment/">Fulfillment (Plenitud)</a> para empezar.</p>
+
+                        <h2>Cursos del &#8220;Core Curriculum&#8221;</h2>
+                        <p>Los siguientes cursos intermedios son de tres d&#237;as completos de duraci&#243;n y deben cursarse por orden.</p>
+
+                        <p>
+                            <strong>Fulfillment (Plenitud)</strong><br />
+                            Hacer <i>coaching</i> a los clientes en el &#225;rea de Plenitud consiste en que se deshagan de sus prejuicios y limitaciones y den el paso para crear
+                            una vida centrada en lo que de verdad les motiva.
+                        </p>
+                        <p>En el curso de Plenitud aprender&#225;s a:</p>
+                        <ul>
+                            &raquo; Utilizar los viajes interiores y las im&#225;genes para ayudar a los clientes a definir una visi&#243;n del
+                            futuro que van a crear.
+                            <br />
+                            &raquo; Ayudar a los clientes a identificar los valores que les son &#250;nicos y en evaluar su nivel de
+                            satisfacci&#243;n a la hora de vivir en sinton&#237;a con dichos valores.
+                            <br />
+                            &raquo; Identificar las influencias contraproducentes.
+                            <br />
+                            &raquo; Empezar a crear una relaci&#243;n con un nuevo cliente.
+                            <br />
+                            &raquo; Dise&#241;ar una Sesi&#243;n de descubrimiento inicial.</p>
+                        </ul>
+                        <p>
+                            <strong>Balance (Equilibrio)</strong><br />
+                            Nuestras vidas las vivimos en constante movimiento. Es f&#225;cil olvidar que, con respecto a lo que hacemos, tenemos la capacidad de elegir. El        <i>coaching</i> de Equilibrio consiste en guiar a nuestros clientes para que realicen elecciones poderosas y para que seleccionen aquellas experiencias
+                            que m&#225;s les importan en lugar de ir de cabeza por empe&#241;arse en tenerlo todo.
+                        </p>
+                        <p>
+                            En este curso, aprender&#225;s a:
+                        </p>
+                        <ul>
+                            &raquo; Invitar a tus clientes a que contemplen cualquier situaci&#243;n desde una serie de perspectivas.
+                            <br />
+                            &raquo; Hacer
+                            <i>coaching</i> a tus clientes para que realicen elecciones y en particular para que elijan una perspectiva entre aquellas que hayan
+                            explorado.
+                            <br />
+                            &raquo; Incitar a tus clientes a que dise&#241;en un plan de acci&#243;n que les motive, a partir de la perspectiva
+                            que hayan elegido
+                            <br />
+                            &raquo; Hacer que tus clientes se comprometan.
+                            <br />
+                            &raquo; Utilizar estructuras para que tus clientes se mantengan en la acci&#243;n.
+                            <br />
+                        </ul>
+                        <p>
+                            <strong>Process (Proceso)</strong><br />
+                            PEl <i>coaching</i> de Proceso consiste en apoyar a tus clientes para que est&#233;n presentes con aquello que est&#225;n experimentando en el r&#237;o
+                            de sus vidas. Aunque a veces resulte inc&#243;moda, la experiencia emocional de tus clientes es importante. Aquello que experimentamos en cada momento
+                            es una fuente de gran energ&#237;a y dinamismo. Ser testigo y sostener a tus clientes en su experiencia, desordenada y a veces confusa, les
+                            permitir&#225; sentir que alguien les conoce bien. Y en ese espejo conseguir&#225;n conocerse m&#225;s plenamente a s&#237; mismos.
+                        </p>
+                        <p>
+                            En el curso, aprender&#225;s a:
+                        </p>
+                        <ul>
+                            &raquo; Trabajar con tus clientes temas que tengan carga emocional.
+                            <br />
+                            &raquo; Desarrollar tu propia capacidad de seguir presente en situaciones dif&#237;ciles.
+                            <br />
+                            &raquo; Utilizar las habilidades del
+                            <i>coaching</i> de proceso para que tus clientes permanezcan en la experiencia de cada momento en lugar de hablar de
+                            lo que est&#225;n experimentando.
+                            <br />
+                            &raquo; Integrar los tres principios del
+                            <i>coaching </i>co-activo.
+                        </ul>
+                        <p>
+                            <strong>Synergy (Sinergia)</strong><br />
+                            El <i>coaching </i>co-activo no consiste en aplicar t&#233;cnicas sacadas de un &#8220;manual de normas&#8221; externo y est&#225;tico. Por el
+                            contrario, el <i>coach</i> co-activo genera aquello que m&#225;s falta hace en cada momento. Sinergia se centra en que incorpores literalmente el
+                            modelo de <i>coaching </i>co-activo y confiere a tu <i>coaching </i>un grado mayor de impacto y profesionalidad.
+                        </p>
+                        <p>
+                            Al t&#233;rmino de este curso, ser&#225;s capaz de:
+                        </p>
+                        <ul>
+                            &raquo; Acceder a un registro mayor con la voz y con el cuerpo para que tu
+                            <i>coaching</i> produzca mayor impacto.
+                            <br />
+                            &raquo; Crear en cada momento, y no a partir de una reglas previamente establecidas.
+                            <br />
+                            &raquo; Utilizar la fuerza de una historia en tu coaching.
+                            <br />
+                            &raquo; Incorporar tu propia creatividad y capacidad a partir de los pilares, contextos y habilidades del modelo de
+                            <i>coaching </i>co-activo.
+                        </ul>
+                        <h2>Horas de formaci&#243;n de los cursos intermedios</h2>
+                        <p>
+                            Una vez que finalices el &#8220;core curriculum&#8221; tendr&#225;s contabilizadas 104 horas de formaci&#243;n como <i>coach</i> co-activo profesional.
+                            Muchos participantes citan estas horas como parte de su desarrollo profesional y, en algunos casos, pueden utilizar una fracci&#243;n de las mismas
+                            para cumplir determinados requisitos de formaci&#243;n acad&#233;micos o profesionales. CTI est&#225; reconocida como organizaci&#243;n acreditada de
+                            formaci&#243;n en <i>coaching </i>&#160;por la International Coach Federation (ICF &#8211; Federaci&#243;n internacional de coaching).
+                        </p>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+                </p>
+
+
+
+                <!-- ctaAreaId -->
+                <div id="cta-area">
+                </div>
+                <!-- -->
+            </div>
+
+
+            <!-- used for cross-browser stabilizion of layout -->
+            <div class="pageclear"></div>
+        </div>
+        <div id="footer">
+            <?php include 'id_footer-nav-learning-hub.php'; ?>
+        </div>  <!-- end footer -->
+    </div>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

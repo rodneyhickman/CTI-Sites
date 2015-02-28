@@ -1,0 +1,928 @@
+﻿<?php
+	ini_set("include_path",".:../docs/res/inc/:../../docs/res/inc/:../../../docs/res/inc/:../../../../docs/res/inc/");
+	session_start();
+	if(!isset($_SESSION['org_referer'])) {
+		/* save referring url */
+		$_SESSION['org_referer'] = $_SERVER['PHP_SELF'];
+	}
+
+	If ($_SESSION['logged_in'] != 'yes') { 
+		/* redirect to login page */
+		header("Location: http://www.thecoaches.com/learning-hub/loginLH.html?redirect=".$_SESSION['org_referer']);
+		/* For good order don't risk the code below the redirect
+		to be executed when we redirect. */
+		exit;
+	}
+?>
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>CTI: Learning Hub: Glossary</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="language" content="en" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="The Coaches Training Institute (CTI)" />
+<meta name="copyright" content="Copyright &#169; 2014 The Coaches Training Institute. All rights reserved." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/res/css/coaches-training-institute.css" />
+<link rel="stylesheet" type="text/css" href="/res/css/section_coach-training.css" />
+
+<link rel="stylesheet" type="text/css" href="/res/css/content_internal_11c.css" /> 
+<link rel="stylesheet" type="text/css" href="http://www.thecoaches.com/assets/css/footer.css" /> 
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+google.load("jquery", "1.4.2");
+google.setOnLoadCallback(function() {
+
+var previousText = "";
+$('.pri h2').each(function(){      // for each h2 inside class="pri"
+  var thisText = $(this).text();   // grab the text
+  var anchorText = thisText.replace(/(.).*/g, "$1");   // use a regexp to get just the first letter 
+  if(anchorText != previousText){  // if this letter is not the same as the previous letter
+    var anchorLink = '<a name="' + anchorText + '"></a>';  // create an anchor
+    $(this).before(anchorLink);    // and place it before the h2 tag
+    previousText = anchorText;
+  }
+});
+
+});
+</script>
+</head>
+<body>
+    <div id="page">
+
+        <div id="tools">
+            <!-- generalID --><!-- -->
+            <!-- eCommerceID --><!-- -->
+            <!-- courseMaterialsID --><?php include 'id_course_materials.php'; ?><!-- -->
+        </div>
+        <div id="primary">
+            <!-- contactNavID --><!-- -->
+            <ul id="main-nav"></ul>
+
+            <div id="broadcast">
+                <img src="/res/img/page-banners/content_course_materials-gl.gif" width="920" height="124" alt="Coach Training" usemap="#logobutton" />
+                <map id="logobutton" name="logobutton">
+                    <area shape="rect" coords="822,0,899,103" href="/" title="CTI Home" alt="CTI Home" />
+                </map>
+            </div>
+
+
+
+
+            <div id="content">
+
+                <div id="main">
+                    <div id="breadcrumbs">
+                        <p><span id="youarehere" class="accessibility-hide">You are here:&#160;</span> <a href="/learning-hub/es/intermediate/">Intermediate</a><span class="divider">&#160;||&#160;</span><a href="/learning-hub/es/intermediate/glossary.html" class="here">Glosario</a></p>
+                        <div style="margin: -5px 0 0px 0px; float: right; "></div>
+                    </div>
+                    <div class="sec">
+
+
+
+                        <ul class="bulleted-arrowed">
+                            <li>
+                                <a href="/learning-hub/es/intermediate/fulfillment/"><strong class="psuedo-head">Fulfillment</strong></a><br />
+                                <a href="/learning-hub/es/intermediate/fulfillment/#before">&raquo; Antes del curso</a><br />
+                                <a href="/learning-hub/es/intermediate/fulfillment/#during">&raquo; Durante el curso</a><br />
+                                <a href="/learning-hub/es/intermediate/fulfillment/#after">&raquo; Despu&#233;s del curso</a><br />
+                                <a href="/learning-hub/es/intermediate/fulfillment/resources.html">&raquo; Recursos</a>
+                            </li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/balance/"><strong class="psuedo-head">Balance</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/process/"><strong class="psuedo-head">Process</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/synergy/"><strong class="psuedo-head">Synergy</strong></a></li>
+                        </ul>
+
+                        <ul class="bulleted-arrowed">
+                            <li><a href="/learning-hub/es/intermediate/glossary.html"><strong class="psuedo-head">Glosario</strong></a></li>
+                        </ul>
+
+                        <br /><br /><br />
+                        <a class="buttonlh" href="/learning-hub/loginLH.html?logout=1">Sign-out</a>
+
+
+                    </div>
+                    <div class="pri">
+
+
+                        <a name="top"></a>
+
+                        <h1 id="main-headline">GLOSARIO</h1>
+
+
+
+                        <!--   <p class="image-placeholder">Glossary text and image</p> -->
+
+                        <div class="centered">
+                            <img src="/docs/images/hub-fun-glossary.png" width="549" height="129" />
+                        </div>
+
+                        <p class="small-image-placeholder">
+                            <a href="#A">A</a>&nbsp;
+                            <a href="#B">B</a>&nbsp;
+                            <a href="#C">C</a>&nbsp;
+                            <a href="#D">D</a>&nbsp;
+                            <a href="#E">E</a>&nbsp;
+                            <a href="#F">F</a>&nbsp;
+                            <a href="#G">G</a>&nbsp;
+                            <a href="#H">H</a>&nbsp;
+                            <a href="#I">I</a>&nbsp;
+                            <a href="#J">J</a>&nbsp;
+                            <a href="#K">K</a>&nbsp;
+                            <a href="#L">L</a>&nbsp;
+                            <a href="#M">M</a>&nbsp;
+                            <a href="#N">N</a>&nbsp;
+                            <a href="#O">O</a>&nbsp;
+                            <a href="#P">P</a>&nbsp;
+                            <a href="#Q">Q</a>&nbsp;
+                            <a href="#R">R</a>&nbsp;
+                            <a href="#S">S</a>&nbsp;
+                            <a href="#T">T</a>&nbsp;
+                            <a href="#U">U</a>&nbsp;
+                            <a href="#V">V</a>&nbsp;
+                            <a href="#W">W</a>&nbsp;
+                            <a href="#X">X</a>&nbsp;
+                            <a href="#Y">Y</a>&nbsp;
+                            <a href="#Z">Z</a>&nbsp;
+                        </p>
+
+
+
+
+
+
+                        <p>
+                            <!--StartFragment-->
+
+                            <h2><span style="color: black;">Aclarar (o clarificar)</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        </p>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Cuando el cliente no es capaz de articular claramente lo que quiere o ad&#243;nde se dirige, el <i>coach </i>clarifica su experiencia. La
+                                aclaraci&#243;n puede utilizarse ante una sensaci&#243;n imprecisa por parte del cliente del resultado al que aspira, de su confusi&#243;n o de su
+                                inseguridad. Esta habilidad representa una aplicaci&#243;n sin&#233;rgica de hacer preguntas, recontextualizar y articular lo que est&#225; pasando. Es
+                                particularmente &#250;til durante el proceso de descubrimiento.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Alianza dise&#241;ada</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El dise&#241;o de la alianza empieza durante el primer encuentro o sesi&#243;n de descubrimiento. Cada relaci&#243;n de <i>coaching</i> se dise&#241;a
+                                a medida para satisfacer las necesidades de las personas implicadas en ella. Tanto el <i>coach</i> como el cliente se involucran de manera &#237;ntima
+                                para dise&#241;ar aquella relaci&#243;n de coaching que resulte m&#225;s beneficiosa para el cliente. Las alianzas dise&#241;adas suelen evolucionar
+                                con el tiempo y han de ser revisadas con regularidad.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Articular lo que est&#225; pasando</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Esta habilidad consiste en decirle al cliente lo que observas que est&#225; haciendo; puede ser lo que est&#233;s oyendo desde el nivel 2 de escucha, o
+                                puede que le se&#241;ales lo que ha omitido decir, bas&#225;ndote en el nivel 3 de escucha y en tu consciencia. En ocasiones, resulta poderoso repetir
+                                sencillamente las palabras del cliente ante &#233;l de manera que &#233;ste se pueda escucharse a s&#237;
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="margin-left: .5in;">
+                            <span style="color: black;">
+                                <em>
+                                    &ldquo;<i>Debbie, s&#233; lo mucho que te importa cambiar tu relaci&#243;n con tu padre</i>, y sin embargo estoy oyendo que est&#225;s interactuando
+                                    con &#233;l de la manera en que siempre lo has hecho.&rdquo;
+                                </em>
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="margin-left: .5in;"><span style="color: black;"><em>&ldquo;Te molesta que tu jefe no haya teniendo en cuenta tu carga de trabajo al asignarte este nuevo proyecto.&rdquo;</em></span></p>
+                        <p class="MsoNormal" style="margin-left: .5in;"><span style="color: black;"><em>&ldquo;Estamos verdaderamente atascados aqu&#237; en esta sesi&#243;n de coaching.&rdquo;</em></span></p>
+
+                        <h2><span style="color: black;">Atraer</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Atraer es al mismo tiempo una habilidad vital y una habilidad de <i>coaching</i>. Involucrarte de manera aut&#233;ntica con las personas y generarles
+                                ilusi&#243;n, entusiasmo y vivacidad forman parte de una comunicaci&#243;n eficaz, tanto si est&#225;s hablando con tus hijos como con un cliente, con
+                                un empleado o con tu jefe. Los <i>coaches</i> atraen a los clientes hacia las posibilidades de su yo m&#225;s excelso, m&#225;s magnificente, y
+                                tambi&#233;n hacia los distintos aspectos del <i>coaching</i>. Por ejemplo, a lo largo de la existencia de una relaci&#243;n de <i>coaching</i>, el        <i>coach</i> puede atraer o ganarse al cliente para que pruebe diferentes perspectivas, recorra el tubo arriba o el tubo abajo, asuma un reto y/o
+                                decida ignorar al Saboteador. Todas estas &#225;reas hacia las cuales atraer al cliente para que participe plenamente en ellas refuerzan la potencia
+                                del <i>coaching</i>.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Autenticidad y registro</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El <i>coach</i> debe operar desde un lugar de verdad, integridad y autenticidad personal. Este tipo de <i>coaching</i> expresa una profunda
+                                preocupaci&#243;n por el cliente, con un estilo personal aut&#233;ntico. Existen tres atributos de la autenticidad y el registro:
+                            </span>
+                            <ol>
+                                <li>La conexi&#243;n: <i>coach </i>y cliente han de estar &#237;ntimamente conectados; ello crea un espacio seguro en el que el        <i>coach </i>puede exhortar al cliente.</li>
+                                <li>
+                                    Vivacidad. Del <i>coach</i> y de la relaci&#243;n debe emanar una sensaci&#243;n de vivacidad. Exhortar al cliente no
+                                    dar&#225; resultado en un ambiente neutro o apagado.
+                                </li>
+                                <li>
+                                    Audaz valent&#237;a: el <i>coach </i>ha de ser valiente y estar dispuesto a asumir grandes riesgos &#8211; incluida la
+                                    posibilidad de que el cliente se sienta ofendido&#8211;, si el fin es apoyar a &#233;ste para que alcance sus objetivos.
+                                </li>
+                            </ol>
+                        </p>
+
+                        <h2><span style="color: black;">Autogesti&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Es la habilidad del <i>coach</i> de hacerse invisible para centrarse en sostener la agenda del cliente. Esto significa hacer caso omiso de todas sus
+                                opiniones, preferencias, juicios y creencias con el fin de reflejar y sostener la agenda del cliente. Otro aspecto de la autogesti&#243;n se refiere a
+                                gestionar el Saboteador del cliente. El <i>coach</i> puede ayudar al cliente a identificar el Saboteador y proporcionarle herramientas para manejarlo.
+                                Desahogarse tambi&#233;n es una herramienta de autogesti&#243;n tanto para el <i>coach</i> como para el cliente.
+                            </span>
+                        </p>
+
+                        <h2>
+                            <span style="color: black;">
+                                <i>Brainstorming </i>
+                                <b>(Tormenta de ideas)</b>
+                            </span> <a href="#top" class="top-anchor">Top</a>
+                        </h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Con esta habilidad, <i>coach</i> y cliente generan ideas, alternativas y posibles soluciones. Puede que algunas de las ideas propuestas resulten
+                                absurdas o inviables. Se trata tan s&#243;lo de un ejercicio creativo para ampliar las posibilidades que tiene el cliente. Ni el <i>coach </i>ni el
+                                cliente se aferran a ninguna de las ideas sugeridas.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Calibrado</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Se trata de una estructura que ayuda al cliente a localizar su punto de partida, su punto de destino deseado y el estado actual de su proceso de
+                                crecimiento y desarrollo. El calibrado tambi&#233;n le permite al cliente medir sus avances en direcci&#243;n a un determinado sue&#241;o o meta.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Centrarse en la totalidad de la persona</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Las personas somos sistemas complejos y &#250;nicos en los que cada una de las partes ejercen un impacto sobre los dem&#225;s aspectos. Es importante
+                                incluir todos los aspectos del ser humano: mente, cuerpo, esp&#237;ritu y emoci&#243;n.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Cliente</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                <ol>
+                                    <li>Persona que contrata los servicios o consejos profesionales de otra (el cliente de un abogado).</li>
+                                    <li>Persona que recibe un servicio.</li>
+                                </ol>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;"><i>Coaching </i>co-activo&#174;</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Alianza poderosa dise&#241;ada para impulsar y reforzar el proceso continuo de aprendizaje, eficacia y plenitud del ser humano a lo largo de su
+                                existencia.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Compromiso</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Existe una diferencia fundamental entre objetivos y compromisos. El objetivo el resultado externo y visible; el compromiso es el impulso interno que
+                                dio lugar originalmente a dicho objetivo. Cuando le preguntamos a un cliente: &#8220;&#191;Con qu&#233; est&#225;s comprometido?&#8221;, suscitamos en
+                                &#233;l &#160;una introspecci&#243;n m&#225;s profunda que si le preguntamos &#8220;&#191;Cu&#225;l es tu objetivo?&#8221;. En algunos casos es
+                                necesario comprender el compromiso para poder establecer los objetivos; en otros casos, aclarar el compromiso conduce a un cambio de objetivos.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Curiosidad</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                En el <i>coaching</i> co-activo&#174; partimos de la convicci&#243;n de que el cliente es una persona creativa, que est&#225; llena de recursos y que
+                                tiene las respuestas. Esto significa que el trabajo del <i>coach</i> consiste en mostrar curiosidad y hacer preguntas. Preguntas provocadoras,
+                                abiertas, que invitan. Las preguntas que invitan al cliente a mirar en una determinada direcci&#243;n, pero la invitaci&#243;n no implica que exista
+                                una conclusi&#243;n preconcebida.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                La curiosidad es un estado que invita al juego y en la que cabe maravillarse por todo. As&#237; ocurre cuando el <i>coach</i> dice: &#8220;Me pregunto
+                                qu&#233; es lo que quieres&#8221;, &#8220;Me pregunto c&#243;mo ser&#237;a tu vida si pudieras dise&#241;arla como te gustar&#237;a&#8221;, &#8220;Me
+                                pregunto con qu&#233; te sientes realmente comprometida&#8221;, &#8220;Me pregunto qu&#233; te impide hacerlo&#8221;. La curiosidad es un espacio
+                                ilimitado y abierto a la exploraci&#243;n. <i>Coach</i> y cliente entran juntos en este espacio para echar una ojeada.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                Curioso significa en cierto modo menos peligroso. La curiosidad tiende a reducir el riesgo de emitir un juicio y a disipar el malestar que &#233;ste
+                                pueda generar. No hay nada malo en contemplar las cosas con curiosidad. S&#243;lo estamos siendo curiosos. Y, sin embargo, la curiosidad es algo muy
+                                poderoso por las posibilidades que ofrece de sorprendernos y de encontrar una verdad que no esper&#225;bamos. Es como un juego infantil: &#161;Mira lo
+                                que he encontrado! Y es muy emocionante mirar las cosas con curiosidad.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Danzar en este momento</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Lo que m&#225;s creativo resulta es trabajar con lo que surge en cada momento y no a partir de un plan r&#237;gido previamente establecido. La
+                                relaci&#243;n es un toma y daca fluido. Todo aquello que ocurre representa una oportunidad de aprender y de moverse.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Desafiar</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Desafiar o plantear retos supone pedirle al cliente que vaya m&#225;s all&#225; de los l&#237;mites que se ha impuesto y que haga TAMBALEAR LA MANERA
+                                EN QUE SE VE A S&#205; MISMO. Cuando planteamos un reto a un cliente, &#233;ste a menudo responde con una contraoferta mayor que la que se habr&#237;a
+                                permitido hacer de no hab&#233;rsele planteado ning&#250;n reto.
+                                <br />
+                                Pongamos por caso que un cliente QUIERE un puesto de trabajo de alto nivel que acaba de ser ofertado en otro departamento. El cliente cree que
+                                estar&#225; preparado para optar a dicho puesto dentro de un a&#241;o. T&#250; le planteas un reto: &#8220;&#161;Te reto a que solicites ese puesto de
+                                trabajo ahora!&#8221;. El cliente har&#225; una contraoferta: &#8220;Quedar&#233; con mi jefe y le pedir&#233; que me recomiende al responsable del
+                                departamento.&#8221;
+                                <br />
+                                Al igual que hacer una petici&#243;n, desafiar incluye una acci&#243;n espec&#237;fica, as&#237; como las condiciones para que el cliente la lleve a
+                                cabo y la fecha o el plazo en que lo har&#225;. Hay tres posibles respuestas a un desaf&#237;o:
+                            </span>
+                            <ol>
+                                <li>S&#237;,</li>
+                                <li>No,</li>
+                                <li>Contraoferta</li>
+                            </ol>
+                        </p>
+
+                        <h2><span style="color: black;">Desahogarse</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Se trata de una habilidad beneficiosa tanto para el cliente como para el <i>coach</i>. Cuando el cliente est&#225; preocupado por algo que interfiere
+                                con su capacidad para estar plenamente presente o incluso de emprender acciones, el <i>coach</i> escucha activamente y le ayuda a desahogarse. Tanto el
+                                cliente como el <i>coach</i> tienen la intenci&#243;n de ventilar la emoci&#243;n de la situaci&#243;n. La escucha activa permite que el cliente se
+                                desahogue temporalmente y se centre en el siguiente paso. Si el <i>coach</i> se engancha en exceso en la interacci&#243;n con un cliente o si se
+                                preocupa demasiado por los problemas relacionados con el cliente, tambi&#233;n &#233;l puede desahogarse. Puede llamar a un colega o a un amigo y
+                                compartir con ellos su experiencia o sus preocupaciones, para poder estar de nuevo plenamente presente con el cliente.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Distinguir</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Una manera de ayudar a los clientes a que contemplen una situaci&#243;n desde una perspectiva nueva es ayudarles a distinguir entre dos o m&#225;s
+                                conceptos, hechos o ideas. En este caso, se han mezclado dos hechos que as&#237; conforman una creencia que desempodera. La creencia se percibe como un
+                                hecho cierto, cuando no lo es. Es preciso distinguir los hechos diferenciados para que el cliente tenga mayor acceso a sus recursos. Por ejemplo:
+                            </span>
+                            <ul>
+                                <li>Fallar y el fracaso (&#8220;Como he fallado, soy un fracasado&#8221;).</li>
+                                <li>El dinero y el &#233;xito (&#8220;Si gano mucho dinero significa que tengo &#233;xito&#8221;).</li>
+                            </ul>
+                        </p>
+
+                        <h2><span style="color: black;">Elegir</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Elegir es segundo paso de la f&#243;rmula de Equilibrio. Una vez que el cliente ha explorado las diferentes perspectivas de una situaci&#243;n y se ha
+                                dado cuenta de que &#233;stas son m&#250;ltiples y que no est&#225; atascado en una &#8220;verdad&#8221; &#250;nica, el cliente puede elegir qu&#233;
+                                perspectiva le ser&#225; de mayor utilidad. Poder elegir es crucial, porque cuando un cliente est&#225; en situaci&#243;n de poder elegir, deja de ser
+                                v&#237;ctima de las circunstancias y puede decidir libremente c&#243;mo afrontar la situaci&#243;n. As&#237; por ejemplo, si a una persona la despiden
+                                de su trabajo, una perspectiva inicial ser&#237;a pensar que es una fracasada. Pero si lo contemplamos desde otras perspectivas, esa persona puede
+                                considerar el despido como una oportunidad para dedicarse a su verdadera pasi&#243;n. Estar totalmente en situaci&#243;n de elegir le permite al
+                                cliente empezar a explorar nuevas oportunidades con confianza.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Escucha</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El <i>coach</i> escucha atentamente cuando el cliente expresa sus valores, compromisos y su prop&#243;sito a trav&#233;s de sus palabras y de sus
+                                gestos. Escuchar atentamente significa escuchar en busca de algo. El <i>coach</i> escucha con consciencia, con un prop&#243;sito y una orientaci&#243;n
+                                que proceden de la alianza dise&#241;ada con el cliente. El <i>coach</i> escucha atento a la agenda del cliente, no a su propia agenda con el cliente.
+                                CTI llama escucha de nivel 1 a escuchar tus propios pensamientos, juicios y opiniones acerca de la historia del cliente; escucha de nivel 2 una escucha
+                                enfocada en el cliente; y escucha de nivel 3 la escucha global.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                Todo lo que ocurre en el <i>coaching</i> depende de la escucha: especialmente, la escucha prestando atenci&#243;n a la agenda del cliente. El        <i>coach</i> escucha atentamente para advertir se&#241;ales de vitalidad, las elecciones del cliente en cada momento y si esas opciones llevan a
+                                &#233;ste hacia el equilibrio o lo alejan de &#233;l. La escucha es, pues, la puerta por la que pasa todo el <i>coaching</i>.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">Hay dos aspectos fundamentales en la escucha:</span>
+                            <ol>
+                                <li>
+                                    <i>Atenci&#243;n:</i> ser conscientes de lo que percibimos a trav&#233;s de nuestros sentidos (o&#237;do, vista e
+                                    intuici&#243;n). Prestamos atenci&#243;n a toda la informaci&#243;n que recibimos. Notamos la respiraci&#243;n por tel&#233;fono, el ritmo del habla,
+                                    la modulaci&#243;n de la voz. Percibimos la tensi&#243;n que hay detr&#225;s de las palabras, la dureza o la suavidad, la vacilaci&#243;n o la rabia en
+                                    el tono de voz.
+                                </li>
+                                <li>
+                                    <i>Impacto</i>: lo que hacemos con lo nuestra escucha. &#191;Qu&#233; impacto tiene el <i>coach</i> en el cliente? La manera
+                                    en que el <i>coach</i> escucha y lo que &#233;ste hace con su escucha tiene un impacto en el cliente.
+                                </li>
+                            </ol>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                <i>Tres niveles de escucha</i>
+                                </h3>
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                Nivel 1: Escucha interna
+                                <ul>
+                                    <li>La atenci&#243;n se centra en nosotros mismos, en el sonido de nuestra voz interior.</li>
+                                    <li>Escuchamos nuestros propios pensamientos, opiniones, juicios, sentimientos y conclusiones.</li>
+                                    <li>Es el nivel en el que debe estar el cliente.</li>
+                                    <li>
+                                        Cuando el coach est&#225; en el nivel 1, no es consciente del cliente ni del impacto que est&#225; teniendo
+                                        en el cliente.
+                                    </li>
+                                </ul>
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                Nivel 2: Escucha enfocada
+                                <ul>
+                                    <li>La atenci&#243;n se centra fijamente en la otra persona: la escucha va dirigida al cliente.</li>
+                                    <li>
+                                        El <i>coach</i> presta atenci&#243;n a las palabras, las expresiones, las emociones, a lo que no se dice, a los valores, a la visi&#243;n, a lo que
+                                        le da energ&#237;a&#8230;
+                                    </li>
+                                    <li>Impacto en el cliente: &#191;siente motivaci&#243;n (resonancia) o desmotivaci&#243;n (disonancia)?</li>
+                                </ul>
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                Nivel 3: Escucha global
+                                <ul>
+                                    <li>La atenci&#243;n es sutil; escuchamos en un c&#237;rculo de 360 grados.</li>
+                                    <li>La consciencia lo incluye de todo: lo que se ve, se oye, se huele y se siente.</li>
+                                    <li>Permite acceder m&#225;s f&#225;cilmente a nuestra intuici&#243;n.</li>
+                                    <li>El coach es consciente del impacto en el cliente y puede &#8220;danzar&#8221; con ello.</li>
+                                </ul>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Establecer metas</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Los clientes alcanzan su m&#225;ximo potencial cuando establecen metas y las persiguen. Las metas mantienen a los clientes enfocados y les hacen seguir
+                                el camino de quienes est&#225;n llegando a ser. Las metas no son lo mismo que la acci&#243;n; son el resultado deseado de la acci&#243;n.
+                            </span>
+                        </p>
+                        <p class="MsoNormal"><span style="color: black;">Hay muchas versiones de las siglas &#8220;SMART&#8221; aplicadas a las metas. &#201;sta es la versi&#243;n de CTI</span></p>
+                        <p class="MsoNormal" style="text-indent: .25in;"><span style="color: black;">S = Specific (Espec&#237;fico)</span></p>
+                        <p class="MsoNormal" style="text-indent: .25in;"><span style="color: black;">M = Measurable&#160; (Medible)</span></p>
+                        <p class="MsoNormal" style="text-indent: .25in;"><span style="color: black;">A = Accountable (Responsable)</span></p>
+                        <p class="MsoNormal" style="text-indent: .25in;"><span style="color: black;">R = Resonant (Resonante)</span></p>
+                        <p class="MsoNormal" style="text-indent: .25in;"><span style="color: black;">T = Thrilling (Emocionante)</span></p>
+
+                        <h2><span style="color: black;">Estructuras</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Las estructuras son los mecanismos que le recuerdan al cliente su visi&#243;n, sus objetivos, sus prop&#243;sitos y las acciones que debe llevar a cabo
+                                inmediatamente. Algunos ejemplos de estructuras son <i>collages</i>, calendarios, mensajes en el contestador, avisos en el despertador, etc.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Geograf&#237;a</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La relaci&#243;n entre <i>coach</i> y cliente se desarrolla en el espacio y en el tiempo. Tanto en el <i>coaching</i> presencial como en el
+                                telef&#243;nico, se crea un entorno en el que tiene lugar el <i>coaching</i>: las sensaciones, la postura, el clima&#8230;; este entorno presenta
+                                m&#250;ltiples cualidades que denominamos &#8220;geograf&#237;a&#8221;. A menudo confundimos el concepto con lo que es exclusivamente la postura de
+                                nuestro cuerpo, sin que tengamos en cuenta la posici&#243;n de nuestro cuerpo en el espacio, en el entorno. Explorar las emociones, la postura del
+                                cuerpo y el tono y la cadencia de la voz nos permite captar profundamente y comprender mejor al cliente. Como <i>coach</i> y tambi&#233;n como cliente,
+                                de hecho siempre creamos geograf&#237;a, aun sin ser conscientes de ello; pero ser conscientes de la geograf&#237;a hace que el <i>coaching</i> sea
+                                mucho m&#225;s eficaz. El objetivo es ser consciente de la geograf&#237;a que creas como <i>coach</i> y darte cuenta de lo que sucede cuando t&#250; o
+                                tu cliente cambi&#225;is de geograf&#237;a.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                El cuerpo es un excelente indicador de nuestra geograf&#237;a. Si, por ejemplo, el cliente est&#225; un poco confuso, el <i>coach</i> pedir&#225; al
+                                cliente que cambie de postura o de lugar en la habitaci&#243;n, o simplemente que mueva su cuerpo. El <i>coach</i> le har&#225; observar al cliente que
+                                ese cambio de postura tal vez le lleve a un cambio de humor o de estado de &#225;nimo, a que piense con mayor claridad, a que se le ocurra una nueva
+                                perspectiva y a que cambie su energ&#237;a. Se trata, de hecho, de un cambio en la geograf&#237;a del cliente.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Identificar el tema</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                <ol>
+                                    <li>
+                                        El coaching de Equilibrio empieza con un tema bien definido que es significativo para el cliente. Es importante identificar
+                                        el tema mismo, deslind&#225;ndolo de otras perspectivas anidadas en &#233;l. Si el cliente empieza la sesi&#243;n con una afirmaci&#243;n del tipo
+                                        &#8220;estoy atascado en mi relaci&#243;n con un cliente&#8221;, el tema es &#8220;mi relaci&#243;n con un cliente&#8221; y la primera perspectiva es
+                                        &#8220;atascado&#8221;. Si empiezas el trabajo de Equilibrio incluyendo &#8220;atascado&#8221; en el tema, no tardar&#225;s en empantanarte en el
+                                        coaching. Distingue y separa siempre el tema de las perspectivas anidadas en el mismo.
+                                    </li>
+                                    <li>
+                                        En sesiones de <i>coaching</i> de Plenitud o de Proceso, identificar el tema puede equivaler a aclarar con el cliente cu&#225;l es su agenda para
+                                        esa sesi&#243;n.
+                                    </li>
+                                </ol>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Impulsar la acci&#243;n y profundizar en el aprendizaje</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Este contexto utiliza todas las dem&#225;s habilidades de <i>coaching</i>, haciendo especial hincapi&#233; en hacer que el cliente avance. Esto puede
+                                conseguirse mediante una petici&#243;n o una pregunta poderosa; tambi&#233;n sintetizando, para que algo llegue a realizarse durante la sesi&#243;n. Se
+                                puede impulsar la acci&#243;n enfocando al cliente hacia su meta, o reencuadrando el contexto, de modo que el cliente pueda emprender una acci&#243;n
+                                libremente. Dar reconocimiento al cliente tambi&#233;n puede servir para impulsar la acci&#243;n. El impulso m&#225;s potente se produce cuando el        <i>coach</i> le dice al cliente &#8220;&#161;HAZLO AHORA!&#8221; durante la sesi&#243;n de coaching. Esto da lugar a un apoyo y a una celebraci&#243;n
+                                inmediatos si la acci&#243;n se lleva a cabo.
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                El cliente descubre r&#225;pidamente que hay un segundo aspecto de la relaci&#243;n de <i>coaching</i> y que &#233;ste complementa a la acci&#243;n:
+                                aprende de las acciones que emprende&#8230; Y, por cierto, aprende tambi&#233;n de las acciones que no emprende. En efecto, esto se convierte en una
+                                v&#237;a para un aprendizaje m&#225;s profundo. Por eso llamamos a este segundo aspecto del coaching &#8220;profundizar en el aprendizaje&#8221;
+                            </span>
+                        </p>
+
+
+                        <h2><span style="color: black;">Integraci&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Observar&#225;s y experimentar&#225;s que puedes hacer <i>coaching</i> sobre un tema desde cualquiera de los tres principios &#8211;Plenitud,
+                                Equilibrio y Proceso&#8211; y que el cliente se beneficiar&#225; de ello. Cada principio lleva al cliente a un sitio diferente, y los tres
+                                funcionar&#225;n. A veces, el tema que plantea el cliente conduce de manera natural a uno de los principios. Algunas interacciones de <i>coaching</i>
+                                se centrar&#225;n todo el tiempo en uno de ellos exclusivamente, mientras que &#160;otras abordar&#225;n los tres. No hay una forma
+                                &#8220;correcta&#8221; de hacerlo. S&#243;lo tienes que escoger y ver c&#243;mo reacciona el cliente. La integraci&#243;n es la habilidad para escoger
+                                un punto de partida y saber que puedes cambiar de v&#237;a si es preciso, recurriendo para ello a todo lo que sabes acerca del <i>coaching</i>
+                                co-activo.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Interrumpir</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                De vez en cuanto, es posible que el <i>coach</i> tenga que entrometerse, interrumpir a su cliente o vapulear a alguno que se pone a hablar y hablar o a
+                                otro que se est&#225; enga&#241;ando a s&#237; mismo. El <i>coach</i> lo hace en nombre de la agenda del cliente, generalmente orientando a &#233;ste
+                                en una direcci&#243;n espec&#237;fica, &#8220;Para un momento.&#160; &#191;Cu&#225;l es la esencia de esto que est&#225;s diciendo?&#8221;. En algunas
+                                culturas, interrumpir se considera de mala educaci&#243;n. CTI (The Coaches Training Institute) considera la interrupci&#243;n como una forma de ser
+                                directo con el cliente, con el fin de que &#233;ste pueda evaluar sinceramente una situaci&#243;n y abordarla sin ambages. A veces la interrupci&#243;n
+                                introduce la cruda verdad, por ejemplo en frases como: &#8220;Te est&#225;s enga&#241;ando a ti mismo&#8221;. Otras veces se limita a se&#241;alar lo
+                                que est&#225; ocurriendo en ese momento, por ejemplo: &#8220;Est&#225;s eludiendo el tema&#8221;.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Intuici&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Intuir es el proceso de acceder al conocimiento interno y de confiar en &#233;l. La intuici&#243;n es un conocimiento directo, libre de las barreras de
+                                la mente. El proceso de la intuici&#243;n es no lineal y no racional. A veces la informaci&#243;n que el <i>coach</i> recibe a trav&#233;s de la
+                                intuici&#243;n no tiene l&#243;gica aparente; sin embargo, suele resultar &#250;til para el cliente. Intuir supone asumir riesgos y confiar en tus
+                                impulsos.
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="margin-left: .5in;"><span style="color: black;"><em>&ldquo;Tengo el presentimiento de que&#8230;.&rdquo;</em></span></p>
+                        <p class="MsoNormal" style="margin-left: .5in;"><span style="color: black;"><em>&ldquo;Me pregunto si&#8230;.&rdquo;</em></span></p>
+
+                        <h2><span style="color: black;">La persona y no el problema</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El principal error que m&#225;s frecuentemente vemos que se repite entre los <i>coaches </i>es que se olvidan de que le est&#225;n haciendo        <i>coaching</i> a un cliente; porque a menudo se piensan que est&#225;n resolviendo un problema. Han perdido la perspectiva del aspecto m&#225;s
+                                relevante del <i>coaching</i>: esa &#8220;cosa&#8221; es la persona, una persona que est&#225; viva y que respira, que tienen sentada en frente o que
+                                les habla al otro lado de la l&#237;nea de tel&#233;fono. Pero estos <i>coaches</i> se enredan tratando de imaginar, de entender, de dise&#241;ar
+                                maniobras y estrategias. En resumen, simplemente, se enredan pensando demasiado. El resultado de ello es un <i>coaching</i> que se centra demasiado en
+                                resolver el problema, en lograr que el problema desaparezca. El mejor <i>coaching</i> se produce cuando el <i>coach</i> se centra en hacerle        <i>coaching</i> a la persona, y no al problema.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Las personas, por naturaleza, son creativas, completas y est&#225;n llenas de recursos</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Se trata de uno de los pilares del Modelo co-activo&#174; y de un elemento clave del <i>coaching</i> co-activo&#174;. El cliente es una persona, por
+                                naturaleza, creativa, completa y est&#225; llena de recursos.
+                                <ul>
+                                    <li>No hay nada roto o que necesite arreglo.</li>
+                                    <li>Las personas tienen, por naturaleza, la capacidad de superar los retos a los que se enfrentan.</li>
+                                    <li>El <i>coach</i> tiene las preguntas, el cliente tiene las respuestas.</li>
+                                </ul>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Met&#225;fora</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Utilizamos las met&#225;foras para ilustrar alg&#250;n aspecto y dibujar una imagen verbal de ello para el cliente.
+                                <ul>
+                                    <li><i>&#8220;Tu mente es como una pelota de ping-pong que va de una opci&#243;n a otra&#8220;.</i></li>
+                                    <li><i>&#8220;Est&#225;s a punto de alcanzar la meta.&#160; &#161;Vamos, puedes ganar la carrera!&#8221;</i></li>
+                                </ul>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Metavisi&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La metavisi&#243;n es la imagen general o perspectiva general de algo. El <i>coach</i> da un paso atr&#225;s (o le pide al cliente que lo haga) para
+                                distanciarse de los temas m&#225;s inmediatos del cliente y le devuelve reflejado a &#233;ste lo que ve desde la claridad que ofrece esta nueva
+                                perspectiva expandida.
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="margin-left: .5in;"><span style="color: black;"><em>&ldquo;Si tu vida fuera como una carretera y la sobrevol&#225;ramos en helic&#243;ptero, &#191;qu&#233; crees que ver&#237;amos?&rdquo;</em></span></p>
+
+                        <h2><span style="color: black;">Otorgar el poder a la relaci&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La relaci&#243;n de <i>coaching</i> es tiene una entidad distinta del cliente y del <i>coach</i>. El poder del <i>coaching</i> reside en la
+                                relaci&#243;n entre <i>coach</i> y cliente, y no en alguna de esas dos personas. Al otorgar el poder a la relaci&#243;n, tanto el <i>coach </i>como el
+                                cliente asumen la responsabilidad de crear aquella relaci&#243;n de <i>coaching</i> que m&#225;s plenamente le sirva al cliente.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Pedir permiso</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Esta habilidad permite que cliente haga que la relaci&#243;n de <i>coaching </i>tenga acceso a &#225;reas de inter&#233;s especialmente &#237;ntimas y
+                                a veces inc&#243;modas.
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Por ejemplo: &#8220;&#191;Me permites que te diga la cruda verdad?&#8221;. &#8220;&#191;Puedo hacerte <i>coaching</i> sobre esta cuesti&#243;n?&#8221;.
+                                &#8220;&#191;Me permites que te diga lo que veo?&#8221;.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Perspectivas</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La perspectiva es uno de los regalos que el <i>coach</i> aporta a la relaci&#243;n de <i>coaching</i>: no se trata de la perspectiva
+                                &#8220;correcta&#8221;, sino simplemente otros puntos de vista. Crear perspectiva significa ampliar la visi&#243;n que tiene el cliente cuando
+                                contempla las circunstancias de su vida. Parte del <i>coaching</i> consiste en invitar al cliente a que vea su vida, o determinados temas de &#233;sta,
+                                desde distintos &#225;ngulos. Cuando el cliente s&#243;lo ve las cosas desde una &#250;nica perspectiva (como es costumbre hacerlo), tiene menos
+                                recursos y es posible que se sienta v&#237;ctima de las circunstancias. Si es capaz de volver a examinar su punto de vista, ser&#225; capaz de ver
+                                otras posibilidades y de cambiar.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Petici&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Una de las habilidades de <i>coaching</i> m&#225;s potentes es la de hacerle al cliente una petici&#243;n. &#201;sta, basada en la agenda del cliente,
+                                est&#225; pensada para impulsar al cliente a la acci&#243;n. La petici&#243;n incluye una acci&#243;n determinada, unas condiciones de cumplimiento y
+                                una fecha o un plazo para su realizaci&#243;n. Hay tres respuestas posibles ante una petici&#243;n:
+                                <ol>
+                                    <li>S&#237;</li>
+                                    <li>No</li>
+                                    <li>Contraoferta</li>
+                                </ol>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Planificaci&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El coach ayuda al cliente a articular la direcci&#243;n que desea tomar y realiza activamente el seguimiento de sus progresos. El cliente suele
+                                aprovechar el apoyo que el <i>coach </i>le presta para la planificaci&#243;n y la gesti&#243;n del tiempo cuando &#233;ste le ayuda a desarrollar sus
+                                habilidades en estas materias.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Pregunta de reflexi&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Cuando el <i>coach </i>le hace al cliente una pregunta poderosa para que se la lleve como tarea, su intenci&#243;n es que &#233;ste profundice en el
+                                aprendizaje, suscitando en &#233;l una mayor reflexi&#243;n. El cliente debe indagar sobre esta pregunta en el plazo entre sesiones de <i>coaching </i>
+                                o durante periodos de tiempo m&#225;s prolongados, y observar qu&#233; le sugiere. La pregunta de reflexi&#243;n suele basarse en alguna situaci&#243;n
+                                particular relacionada con el cliente en un momento dado. Una pregunta de reflexi&#243;n tiene m&#250;ltiples respuestas, y ninguna de ellas es la
+                                correcta:
+                                <ul>
+                                    <li><i>&#8220;&#191;Qu&#233; est&#225;s tolerando?&#8221;</i></li>
+                                    <li><i>&#8220;&#191;Qu&#233; es no dejarte intimidar?&#8221;</i></li>
+                                    <li><i>&#8220;&#191;Qu&#233; es desaf&#237;o?&#8221;</i></li>
+                                </ul>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Preguntas poderosas</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Una pregunta poderosa evoca claridad, invita a la acci&#243;n, al descubrimiento, a la introspecci&#243;n o al compromiso. Crea mayores posibilidades,
+                                nuevos aprendizajes o una visi&#243;n m&#225;s clara. Las preguntas poderosas son preguntas abiertas que no suscitan una respuesta s&#237; o no. Se
+                                derivan del hecho de sostener la agenda del cliente y o bien impulsan al cliente a la acci&#243;n o bien le sirven para profundizar en su aprendizaje.
+                                <ul>
+                                    <li><i>&#8220;&#191;Qu&#233; quieres?&#8220;</i></li>
+                                    <li><i>&#8220;&#191;Cu&#225;l es el siguiente paso?&#8220;</i></li>
+                                    <li><i>&#8220;&#191;Por d&#243;nde empezar&#225;s?&#8220;</i></li>
+                                    <li><i>&#8220;&#191;Qu&#233; te supone esto?&#8220;</i></li>
+                                    <li><i>&#8220;&#191;Qu&#233; es importante que recuerdes?&#8220;</i></li>
+                                </ul>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Reconocimiento</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El reconocimiento se dirige al yo y a la persona que el cliente ha tenido que ser para llevar a cabo la acci&#243;n que se propuso realizar o para
+                                alcanzar el grado de conciencia que consigui&#243;. Es la articulaci&#243;n de tu profundo reconocimiento de la otra persona.
+                            </span>
+                        </p>
+                        <p class="MsoNormal" style="margin-left: .5in;">
+                            <span style="color: black;">
+                                <em>
+                                    &ldquo;Reconozco el valor que has tenido que tener para presentarte a esta sesi&#243;n, sabiendo que ten&#237;as cosas delicadas que compartir
+                                    conmigo hoy&rdquo;
+                                </em>
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Reencuadrar o recontextualizar</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Reencuadrar supone facilitarle al cliente otra perspectiva. Cuando un <i>coach</i> reencuadra una situaci&#243;n, vuelve a la informaci&#243;n original
+                                y la interpreta de otra manera. Por ejemplo, &#160;a una clienta le acaban de comunicar que ha quedado en segunda posici&#243;n como candidata a un
+                                puesto de muy alto nivel en un mercado muy competitivo. Est&#225; decepcionada y se cuestiona su competencia profesional. El <i>coach</i>
+                                recontextualiza la situaci&#243;n se&#241;alando que ser seleccionada como segunda candidata en un mercado tan competitivo es prueba del elevado nivel
+                                de sus conocimientos experto y de su experiencia.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Resonancia/Disonancia</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Cuando hay resonancia, el cliente est&#225; honrando (respetando y cultivando) sus valores y el <i>coach</i> puede percibir el yo verdadero del
+                                cliente; hay una sensaci&#243;n de vivacidad que emana del cliente. La disonancia indica la presencia del Saboteador.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Respaldar</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Respaldar al cliente significa defender su posici&#243;n cuando duda sus capacidades o se las cuestiona. A pesar de las dudas que el cliente pueda
+                                tener sobre s&#237; mismo, el <i>coach</i> sabe claramente qui&#233;n es el cliente y sabe que es capaz de mucho m&#225;s de lo que cree. EL RESPALDO
+                                SE SUELE ORIENTAR HACIA EL FUTURO. Cuando el cliente se encuentra en horas &#8220;bajas&#8221;, el coach ya est&#225; en el siguiente pico, agitando un
+                                estandarte y dici&#233;ndole: &#8220;&#161;Venga, puedes hacerlo!&#8221;.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Responsabilidad</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La responsabilidad consiste en hacer que tu cliente responda de lo que dice que va a hacer. Se basa en tres preguntas:
+                                <ol>
+                                    <li>&#191;Qu&#233; vas a hacer?</li>
+                                    <li>&#191;Cu&#225;ndo lo vas a hacer?</li>
+                                    <li>&#191;C&#243;mo sabr&#233; yo que lo has hecho?</li>
+                                </ol>
+                            </span>
+                        </p>
+                        <p class="MsoNormal">
+                            <span style="color: black;">
+                                La responsabilidad no implica rega&#241;ar ni juzgar. Por el contrario, el <i>coach </i>traslada al cliente la responsabilidad frente a su visi&#243;n
+                                o su compromiso y le pide que rinda cuentas de los resultados de las acciones que se haya planteado acometer.&#160; En caso necesario, hacer que el
+                                cliente se responsabilice incluye tambi&#233;n la definici&#243;n de nuevas acciones que emprender.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Saboteador</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El concepto de Saboteador encarna un grupo de procesos mentales y de sentimientos que mantienen el <i>status quo </i>en nuestras vidas. A menudo se
+                                presenta como una estructura que nos protege, pero en realidad nos impide avanzar y alcanzar lo que de verdad queremos en la vida. El Saboteador, igual
+                                que nuestra mente, siempre estar&#225; con nosotros. No es ni bueno ni malo, sencillamente est&#225; ah&#237;. El Saboteador pierde su poder sobre
+                                nosotros cuando somos capaces de identificarlo por lo que es, de sopesar nuestras opciones ante una determinada situaci&#243;n y luego de elegir
+                                conscientemente aquello que realmente deseamos en ese momento.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Ser testigo</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Ser testigo de un cliente en su experiencia es algo a la vez sencillo y profundo. Ser testigo significa que el <i>coach</i> est&#225; plenamente
+                                comprometido con el cliente en cada momento y plenamente presente con &#233;l en su experiencia. Ser testigo supone una poderosa conexi&#243;n, que va
+                                m&#225;s all&#225; de pensar o comprender. Cuando el <i>coach</i> es testigo del cliente, crea un espacio acogedor y amplio en el que el cliente puede
+                                conectar con la experiencia plena de su vida.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Sintetizar</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Sintetizar es la habilidad de la brevedad y de la capacidad de s&#237;ntesis tanto por parte del <i>coach </i>como del cliente.&#160; Tambi&#233;n se
+                                refiere a que los clientes vayan a la esencia de lo que quieren decir en lugar de ponerse a contar historias largas y descriptivas.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Sostener el foco</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Una vez que el cliente ha definido una direcci&#243;n o un curso de acci&#243;n, el trabajo del <i>coach</i> consiste en mantener al cliente
+                                progresando por esa v&#237;a. Los clientes suelen distraerse con los acontecimientos de su vida diaria, con sentimientos impactantes que les suscita su
+                                Saboteador o por la fuerza de otras opciones que est&#225;n a su alcance. El <i>coach</i> le recuerda permanentemente a su cliente cu&#225;l es su foco
+                                y le ayuda a reorientar su energ&#237;a hacia los resultados que desea obtener y hacia sus opciones.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Sostener la agenda del cliente</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Sostener la agenda del cliente es un aspecto fundamental del <i>coaching</i> co-activo&#174;. Cuando el coach<i> </i>sostiene la agenda del cliente,
+                                renuncia a tener sus propias opiniones, juicios y respuestas con vistas a facilitar la plenitud, el equilibrio y el proceso del cliente. El        <i>coach</i> sigue la pauta marcada por el cliente sin saber la respuesta adecuada, sin dar soluciones y sin decirle a &#233;ste lo que tiene que
+                                hacer. Sostener la agenda del cliente requiere que el <i>coach </i>ponga toda su atenci&#243;n en el cliente y en la agenda del cliente, y no en su
+                                propia agenda para el cliente.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Suscitar la transformaci&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                La vida por naturaleza se transforma y evoluciona. El trabajo del <i>coach</i> consiste en invocar las m&#225;ximas posibilidades para el cliente.<br />
+                                Al suscitar la transformaci&#243;n, el <i>coach</i> se posiciona con audacia y arrojo a favor de su cliente para que &#233;ste encarne con m&#225;xima
+                                valent&#237;a su yo m&#225;s poderoso.
+                                <<br />
+                                Esto se puede producir cuando el <i>coach </i>le pide al cliente o bien que d&#233; un paso, cosa que posiblemente le asuste, que lo acerque de algo
+                                que quiere en su vida, y que lo haga con valent&#237;a, o cuando desaf&#237;a al cliente a que supere sus resistencias o sus temores para enfrentarse
+                                plenamente a algo.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Tomar el mando</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                El <i>coach</i> elige y dirige el camino del <i>coaching</i> en nombre de la agenda del cliente. Hay ocasiones en las que el cliente se desorienta
+                                debido a sus circunstancias cotidianas y se olvida de lo que m&#225;s le importa. Es en ese momento cuando el coach necesita tomar el mando y llevar el        <i>coaching</i> de vuelta a lo que es m&#225;s relevante para el cliente.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Valores</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Tus valores representan qui&#233;n eres ahora mismo. Son principios que consideras que son muy valiosos en tu vida. La gente suele confundir los
+                                valores con sus principios morales. Los valores no se eligen. Son inherentes a tu persona y son tan espec&#237;ficamente tuyos como tus huellas
+                                dactilares.
+                            </span>
+                        </p>
+
+                        <h2><span style="color: black;">Visi&#243;n</span> <a href="#top" class="top-anchor">Top</a></h2>
+                        <p class="MsoNormal" style="text-indent: .25in;">
+                            <span style="color: black;">
+                                Se trata de una imagen mental polifac&#233;tica que define e inspira personalmente al cliente y le lleva a emprender acciones y a crear esa imagen en
+                                su vida real. Una visi&#243;n poderosa es sensual, emocionante y magn&#233;tica e inspira constantemente al cliente para que la haga realidad.&#160; La
+                                visi&#243;n proporciona al cliente una direcci&#243;n y tambi&#233;n puede aportar significado a su vida.
+                            </span>
+                        </p>
+
+
+
+                        <!--EndFragment--></p>
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- ctaAreaId -->
+                <div id="cta-area">
+                </div>
+                <!-- -->
+            </div>
+
+
+            <!-- used for cross-browser stabilizion of layout -->
+            <div class="pageclear"></div>
+        </div>
+        <div id="footer">
+            <?php include 'id_footer-nav-learning-hub.php'; ?>
+        </div>  <!-- end footer -->
+    </div>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5715102-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
