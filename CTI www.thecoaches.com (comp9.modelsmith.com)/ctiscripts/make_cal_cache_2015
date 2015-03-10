@@ -64,6 +64,12 @@ $state_list = {
         'region_messages' => {
         }
       },
+	   'Hawaii' => {
+        'regions' => [ 'HI' ],
+        'contact' => 'For more information, please contact your Regional Program Advisor, Jayson Krause at <a href="tel:+18006916008">1-800-691-6008</a>, etc. 1674 or contact <a href="mailto:admissions@coactive.com">Admissions@coactive.com</a>',
+        'region_messages' => {         
+        }
+      },
       'Illinois' => {
         'regions' => [ 'CHI' ],
         'contact' => 'For more information, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
@@ -527,13 +533,13 @@ sub make_region_iterator {
      region_name => 'San Francisco Bay Area, CA ',
     });
   }
-  # if ( grep { $_->{region_code} eq 'DC'} @regions ) {
-  #   # ### adding DCFT
-  #   push(@regions,{ 
-  #     region_code => 'DCFT',
-  #     region_name => 'Washington, DC Metro ',
-  #   });
-  # }
+  if ( grep { $_->{region_code} eq 'DC'} @regions ) {
+     # ### adding DCFT
+     push(@regions,{ 
+       region_code => 'DCFT',
+       region_name => 'Washington, DC Metro ',
+     });
+  }
   if ( grep { $_->{region_code} eq 'SC'} @regions ) {
     # ### removing SC and adding SCLA and SCSD
     @regions = grep { $_->{region_code} ne 'SC'} @regions;
@@ -664,7 +670,13 @@ sub make_grid_html {
 
 
     # BUSINESS RULE EXCEPTION: rename for orlando or any fast track
-      if ($region->{region_code} eq 'ORL'
+	  if ($region->{region_code} eq 'DCFT'
+            and $region->{region_code} =~ m/ FT \z /xms
+          ) {
+        $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Series</b>';
+        $region->{region_weekend} = '';
+      } 
+      elsif ($region->{region_code} eq 'ORL'
             or $region->{region_code} =~ m/ FT \z /xms
           ) {
         $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Cohort Series</b>';
@@ -1044,7 +1056,7 @@ sub make_course_iterator {
   my $courses = [ ];
 
   # fill course array with fast track courses if this is a fast track region code
-  if ($region->{region_code} =~ m/FT$/) {  # i.e. 'SRFT'
+  if ($region->{region_code} =~ m/FT$/) {  # i.e. 'SRFT' or 'DCFT'
     #allow only fasttrack courses
     foreach my $course (@$courses1) {
       if ($course->{call_time} =~ m/fast/i) {
@@ -1175,7 +1187,7 @@ sub make_course_iterator {
 
       # BUSINESS RULE EXCEPTION = mark 'midweek' or 'weekend' for certain regions, but do not mark for fast track because
       # fast-track series usually have both midweek and weekend courses
-      if ( $course->{call_time} !~ /fast/i && ( $course->{region} eq 'SR' || $course->{region} eq 'NY' || $course->{region} eq 'CGY' || $course->{region} eq 'MN' || $course->{region} eq 'TOR') ) {
+      if ( $course->{call_time} !~ /fast/i && ( $course->{region} eq 'SR' || $course->{region} eq 'DC' ||$course->{region} eq 'NY' || $course->{region} eq 'CGY' || $course->{region} eq 'MN' || $course->{region} eq 'TOR') ) {
         if ( $course->{day_of_week} eq 'Friday' || $course->{call_time} =~ m/weekend/i || $course->{call_time} eq '0'){
           $course->{weekend} = 1;
           $preferred_call_time = 'weekend'; 
