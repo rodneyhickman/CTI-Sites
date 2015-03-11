@@ -30,14 +30,14 @@ $locationsRegionCode = array( );
 $result = mysql_query('SELECT region,site_code,city,state,region_name,regions.country,region_code FROM site_data,regions WHERE site_data.region=regions.region_code');
 while($row=mysql_fetch_assoc($result)){
    
-    $locations[$row['site_code']] = $row['state'].' ('.$row['city'].')'; // create array of region_names and cities
+    $locations[$row['site_code']] = $row['region_name'].' ('.$row['city'].')'; // create array of region_names and cities
     $locationsStates[$row['site_code']] = $row['state'];
     $locationsCities[$row['site_code']] = $row['city'];   
     $locationsCountry[$row['site_code']] = $row['country'];   
     $locationsRegionCode[$row['site_code']] = $row['region_code'];   
 }
 
-$fun = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' AND location NOT LIKE 'Beijing' and event NOT LIKE '%FAST%' and region NOT LIKE 'GB' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$fun = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'SG%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' AND location NOT LIKE 'Beijing' and event NOT LIKE '%FAST%' and region NOT LIKE 'GB' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $fun_courses = array( );
 while($row=mysql_fetch_assoc($fun)){
     
@@ -54,7 +54,7 @@ while($row=mysql_fetch_assoc($fun)){
         case stristr($switchString, 'Charlotte'):
         case stristr($switchString, 'Philadelphia'):
         case stristr($switchString, 'Dallas/Fort Worth'):
-        case stristr($switchString, 'Ft. Lauderdale'):
+        case stristr($switchString, 'Ft Lauderdale'):
         case stristr($switchString, 'Seattle'):
         case stristr($switchString, 'Edmonton'):
         case stristr($switchString, 'Halifax'):
@@ -412,22 +412,6 @@ CoursePackage.prototype.course = function(link,title,legend,label,op,courses) {
     return html;
 }
 
-function compareFastTrackCoursesByDate(a,b){
-    var string1 = a['course1'];
-    var sections1 = string1.split('-');
-    var courseDate1 = Date.parse(sections1[2]);
-    
-    var string2 = b['course1'];
-    var sections2 = string2.split('-');
-    var courseDate2 = Date.parse(sections2[2]);
-    
-    if(courseDate1 < courseDate2)
-        return -1;
-    if(courseDate1 > courseDate2)
-        return 1;
-    return 0;
-}
-
 CoursePackage.prototype.fasttrack = function( ){
     var html = '';
     html += '<div class="fieldset"><fieldset class="courseunit"><div class="legend">Fast Track Series</div><div>';
@@ -437,7 +421,6 @@ CoursePackage.prototype.fasttrack = function( ){
     html += '<input type="hidden" name="op3" id="op3" value="" />';
     html += '<input type="hidden" name="op4" id="op4" value="" />';
     html += '<input type="hidden" name="op5" id="op5" value="" /></div>';
-    this.fasttrack_courses.sort(compareFastTrackCoursesByDate);
     for(i=0;i<this.fasttrack_courses.length;i++){
         var ft = this.fasttrack_courses[i];
         html += '<input onclick="setops('+ft['id']+')" type="radio" name="series_selection" value="'+ft['id']+'">';
@@ -962,64 +945,4 @@ return null;
 
 function convertMonth( month ){
 if(month.match(/jan/i)){ return 0; }
-if(month.match(/feb/i)){ return 1; }
-if(month.match(/mar/i)){ return 2; }
-if(month.match(/apr/i)){ return 3; }
-if(month.match(/may/i)){ return 4; }
-if(month.match(/jun/i)){ return 5; }
-if(month.match(/jul/i)){ return 6; }
-if(month.match(/aug/i)){ return 7; }
-if(month.match(/sep/i)){ return 8; }
-if(month.match(/oct/i)){ return 9; }
-if(month.match(/nov/i)){ return 10; }
-if(month.match(/dec/i)){ return 11; }
-return 0;
-}
-
-function setFullPrice( sel ){
- // Example: a-6814^A1FUL^Course 2: Fulfillment USD $1,150^250.00^1^^^^^
-  
- return sel.replace(/(([0-9]+)\,)?([0-9]+)([^\^0-9]*)\^(\d+)\.00/,"$1$3$4^$2$3.00");
-}
-
-function setops(track_id){
-document.getElementById('op1').value=document.getElementById('op1_'+track_id).value;
-document.getElementById('op2').value=document.getElementById('op2_'+track_id).value;
-document.getElementById('op3').value=document.getElementById('op3_'+track_id).value;
-document.getElementById('op4').value=document.getElementById('op4_'+track_id).value;
-document.getElementById('op5').value=document.getElementById('op5_'+track_id).value;
-}
-
-// ------------------------------------------------------------------------------------------------------------
-
-var sing = false;
-var url = document.URL;
-if (url.match(/s$/)){
-    sing = true;
-    window.console && console.log('Singapore');
-}
- 
-var html = '';
-
-courses = <?php echo $courses_json ?>;
-
-fasttrack = <?php echo $fasttrack_json ?>;
-
-
-
-
-var course_package = new CoursePackage(courses,fasttrack);
-
-html += course_package.renderHeader(sing);
-html += course_package.renderAdvisor();
-html += course_package.renderCourses();
-html += course_package.renderCertification();
-html += course_package.renderEntrepreneur();
-html += course_package.renderCoactiveSales();
-html += course_package.renderCoactiveMarketing();
-html += course_package.renderPolicies();
-html += course_package.renderCartButton();
-
-document.write(html);
-
-
+if(month.matc

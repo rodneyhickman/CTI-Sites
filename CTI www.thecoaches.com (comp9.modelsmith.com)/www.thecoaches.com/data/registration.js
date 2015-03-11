@@ -353,6 +353,22 @@ CoursePackage.prototype.course = function(link,title,legend,label,op,courses) {
     return html;
 }
 
+function compareFastTrackCoursesByDate(a,b){
+    var string1 = a['course1'];
+    var sections1 = string1.split('-');
+    var courseDate1 = Date.parse(sections1[2]);
+    
+    var string2 = b['course1'];
+    var sections2 = string2.split('-');
+    var courseDate2 = Date.parse(sections2[2]);
+    
+    if(courseDate1 < courseDate2)
+        return -1;
+    if(courseDate1 > courseDate2)
+        return 1;
+    return 0;
+}
+
 CoursePackage.prototype.fasttrack = function( ){
     var html = '';
     html += '<div class="fieldset"><fieldset class="courseunit"><div class="legend">Fast Track Series</div><div>';
@@ -362,6 +378,7 @@ CoursePackage.prototype.fasttrack = function( ){
     html += '<input type="hidden" name="op3" id="op3" value="" />';
     html += '<input type="hidden" name="op4" id="op4" value="" />';
     html += '<input type="hidden" name="op5" id="op5" value="" /></div>';
+    this.fasttrack_courses.sort(compareFastTrackCoursesByDate);
     for(i=0;i<this.fasttrack_courses.length;i++){
         var ft = this.fasttrack_courses[i];
         html += '<input onclick="setops('+ft['id']+')" type="radio" name="series_selection" value="'+ft['id']+'">';
@@ -492,6 +509,7 @@ CoursePackage.prototype.renderAdvisor = function() {
         {' No one assisted':'-- No one assisted me --'},
         {' Assisted by Amy Anderson':'Amy Anderson'},
         {' Assisted by Carla Hamby':'Carla Hamby'},
+        {' Assisted by Dana Fulenwider':'Dana Fulenwider'},
         {' Assisted by Debra Martin':'Debra Martin'},
         {' Assisted by Erin Hutchins':'Erin Hutchins'},
         {' Assisted by Rachel Suckle':'Rachel Suckle'},
