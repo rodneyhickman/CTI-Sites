@@ -72,31 +72,35 @@ while($row=mysql_fetch_assoc($fun)){
 }
 
 
-$ful = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='4' or course_type_id='140') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'SG%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$ful = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='4' or course_type_id='140') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $ful_courses = array( );
 while($row=mysql_fetch_assoc($ful)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $ful_courses[] = $row;
 }
 
-$bal = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='5' or course_type_id='141') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'SG%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$bal = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='5' or course_type_id='141') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $bal_courses = array( );
 while($row=mysql_fetch_assoc($bal)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $bal_courses[] = $row;
 }
 
-$pro = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='6' or course_type_id='142') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'SG%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$pro = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='6' or course_type_id='142') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $pro_courses = array( );
 while($row=mysql_fetch_assoc($pro)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $pro_courses[] = $row;
 }
 
-$syn = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'SG%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$syn = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $syn_courses = array( );
 while($row=mysql_fetch_assoc($syn)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $syn_courses[] = $row;
 }
 
@@ -105,6 +109,7 @@ $cas = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted
 $cas_courses = array( );
 while($row=mysql_fetch_assoc($cas)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $cas_courses[] = $row;
 }
 
@@ -112,6 +117,7 @@ $cam = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted
 $cam_courses = array( );
 while($row=mysql_fetch_assoc($cam)){
     $row['location'] = $locations[$row['location']];
+    $row['price'] = "";
     $cam_courses[] = $row;
 }
 
@@ -135,6 +141,7 @@ $fun_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_for
 $fun_ft_courses = array( );
 while($row=mysql_fetch_assoc($fun_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
+    $row['price'] = "";
     $fun_ft_courses[] = $row;
 }
 
@@ -142,6 +149,7 @@ $ful_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_for
 $ful_ft_courses = array( );
 while($row=mysql_fetch_assoc($ful_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
+    $row['price'] = "";
     $ful_ft_courses[] = $row;
 }
 
@@ -149,6 +157,7 @@ $bal_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_for
 $bal_ft_courses = array( );
 while($row=mysql_fetch_assoc($bal_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
+    $row['price'] = "";
     $bal_ft_courses[] = $row;
 }
 
@@ -156,6 +165,7 @@ $pro_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_for
 $pro_ft_courses = array( );
 while($row=mysql_fetch_assoc($pro_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
+    $row['price'] = "";
     $pro_ft_courses[] = $row;
 }
 
@@ -163,6 +173,7 @@ $syn_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_for
 $syn_ft_courses = array( );
 while($row=mysql_fetch_assoc($syn_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
+    $row['price'] = "";
     $syn_ft_courses[] = $row;
 }
 
