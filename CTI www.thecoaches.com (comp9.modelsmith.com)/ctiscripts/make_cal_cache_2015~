@@ -82,13 +82,13 @@ $state_list = {
         'region_messages' => {
         }
       },
-#      'New Jersey' => {
-#        'regions' => [ 'NJ' ],
-#        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
-#        'region_messages' => {
-#          'NJ' => 'NEW CITY! Introductory Price $699USD'
-#        }
-#      },
+      'New Jersey' => {
+        'regions' => [ 'NJ' ],
+        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+        'region_messages' => {
+          'NJ' => 'NEW CITY! Introductory Price $699USD'
+        }
+      },
       'New York' => {
         'regions' => [ 'NY' ],
         'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',

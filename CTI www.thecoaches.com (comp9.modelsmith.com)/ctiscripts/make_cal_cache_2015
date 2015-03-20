@@ -28,103 +28,103 @@ $state_list = {
     states => {
       'California' => {
         'regions' => [ 'SC', 'SJ', 'SR', 'SD' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Carla Hamby at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1645',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Carla Hamby at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1645',
         'region_messages' => {
           'SCSD' => 'NEW CITY! Introductory Price $699USD',
         },
         'region_overrides' => {
           'CA' => {
-            'contact' => '* Co-Active Coaching Fundamentals for Business Professionals is designed specifically for those who are currently working in a manager or leadership role inside an organization. For more information, contact Poorni: <a href="mailto:">poorni@coactive.com</a>, <a href="tel:+14155261617">415-526-1617</a>.',
+            'contact' => '* Co-Active Coaching Fundamentals for Business Professionals is designed specifically for those who are currently working in a manager or leadership role inside an organization. For more information <b>and future dates</b>, contact Poorni: <a href="mailto:">poorni@coactive.com</a>, <a href="tel:+14155261617">415-526-1617</a>.',
             'region_name' => 'Palo Alto, CA - Co-Active Coaching Fundamentals for Business Professionals*',
           }
         }
       },
       'Colorado' => {
         'regions' => [ 'DVR' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
         'region_messages' => {
         }
       },
       'District Of Columbia' => {
         'regions' => [ 'DC' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
         'region_messages' => {
         }
       },
       'Florida' => {
         'regions' => [ 'FL', 'MIA', 'ORL' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
           'FLFL' => 'NEW CITY! Introductory Price $699USD'
         }
       },
       'Georgia' => {
         'regions' => [ 'ATL' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
         }
       },
 	   'Hawaii' => {
         'regions' => [ 'HI' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Jayson Krause at <a href="tel:+18006916008">1-800-691-6008</a>, etc. 1674 or contact <a href="mailto:admissions@coactive.com">Admissions@coactive.com</a>',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Jayson Krause at <a href="tel:+18006916008">1-800-691-6008</a>, etc. 1674 or contact <a href="mailto:admissions@coactive.com">Admissions@coactive.com</a>',
         'region_messages' => {         
         }
       },
       'Illinois' => {
         'regions' => [ 'CHI' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
         'region_messages' => {
         }
       },
       'Massachusetts' => {
         'regions' => [ 'BOS' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
         'region_messages' => {
         }
       },
       'Minnesota' => {
         'regions' => [ 'MN' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
         'region_messages' => {
         }
       },
 #      'New Jersey' => {
 #        'regions' => [ 'NJ' ],
-#        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+#        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
 #        'region_messages' => {
 #          'NJ' => 'NEW CITY! Introductory Price $699USD'
 #        }
 #      },
       'New York' => {
         'regions' => [ 'NY' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
         'region_messages' => {
         }
       },
       'North Carolina' => {
         'regions' => [ 'NC' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
           'NCCHA' => 'NEW CITY! Introductory Price $699USD'
         }
       },
       'Pennsylvania' => {
         'regions' => [ 'PA' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
         'region_messages' => {
           'PA' => 'NEW CITY! Introductory Price $699USD'
         }
       },
       'Texas' => {
         'regions' => [ 'TX','DAL','DFW','AUS' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
           'DFW' => 'NEW CITY! Introductory Price - $699USD*'
         }
       },
       'Washington' => {
         'regions' => [ 'WA' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
         'region_messages' => {
           'WA' => 'NEW CITY! Introductory Price $699USD'
         }
@@ -135,27 +135,27 @@ $state_list = {
     'states' => {
       'Alberta' => {
         'regions' => [ 'CAL', 'CGY', 'CLG', 'EDM' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
         'region_messages' => {
           'EDM' => 'NEW CITY! Introductory Price $699USD'
         }
       },
       'British Columbia' => {
         'regions' => [ 'VAN' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
         'region_messages' => {
         }
       },
       'Nova Scotia' => {
         'regions' => [ 'HAL' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Debra Martin  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1633',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Debra Martin  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1633',
         'region_messages' => {
           'HAL' => 'NEW CITY! Introductory Price $699USD'
         }
       },
       'Ontario' => {
         'regions' => [ 'LON', 'TOR', 'OTT', 'ON' ],
-        'contact' => 'For more information, please contact your Regional Program Advisor, Debra Martin at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1633',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Debra Martin at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1633',
         'region_messages' => {
           'LON' => 'NEW CITY! Introductory Price $699USD',
           'ON' => 'NEW CITY! Introductory Price $699USD'
