@@ -54,7 +54,7 @@ while($row=mysql_fetch_assoc($fun)){
         case stristr($switchString, 'Charlotte'):
         case stristr($switchString, 'Philadelphia'):
         case stristr($switchString, 'Dallas/Fort Worth'):
-        case stristr($switchString, 'Ft. Lauderdale'):
+        case stristr($switchString, 'Fort Lauderdale'):
         case stristr($switchString, 'Seattle'):
         case stristr($switchString, 'Edmonton'):
         case stristr($switchString, 'Halifax'):
