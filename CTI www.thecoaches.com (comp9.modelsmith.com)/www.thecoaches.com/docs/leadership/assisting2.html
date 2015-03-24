@@ -64,7 +64,7 @@ Strict//EN"
 	                }).end().find("title").each(function(){
 	                        html += getNodeText(this) + "</a></strong>";
 	                }).end().find("description").each(function(){
-	                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" […]<br />";
+	                        html += "<p style='font-size: 12px;'>" + getNodeText(this).substring(0, 150) +" [???]<br />";
 	                }).end().find("link").each(function(){
 	                        html += "<a href='" +getNodeText(this) + "'>Continue reading &raquo;</a></p></div>";
 	                });

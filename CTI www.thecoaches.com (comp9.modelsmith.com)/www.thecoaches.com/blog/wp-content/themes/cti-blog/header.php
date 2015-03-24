@@ -338,7 +338,7 @@ li#nav-sub-community:hover ul { border-bottom: 8px solid #7f9d39; }
 	</li>
 
 	<li class="dynamic">
-		<a href="http://www.augere.es/" target="_blank" style="background-image: url(http://www.thecoaches.com/ee_newsletter/images/uploads/img_flag_spain.png);">Spain</a>
+		<a href="http://coactivo.com" target="_blank" style="background-image: url(http://www.thecoaches.com/ee_newsletter/images/uploads/img_flag_spain.png);">Spain</a>
 	</li>
 
 	<li class="dynamic">
