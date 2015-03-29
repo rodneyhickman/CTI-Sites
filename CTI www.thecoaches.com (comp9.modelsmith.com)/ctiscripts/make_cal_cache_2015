@@ -1187,7 +1187,7 @@ sub make_course_iterator {
 
       # BUSINESS RULE EXCEPTION = mark 'midweek' or 'weekend' for certain regions, but do not mark for fast track because
       # fast-track series usually have both midweek and weekend courses
-      if ( $course->{call_time} !~ /fast/i && ( $course->{region} eq 'SR' || $course->{region} eq 'DC' ||$course->{region} eq 'NY' || $course->{region} eq 'CGY' || $course->{region} eq 'MN' || $course->{region} eq 'TOR') ) {
+      if ( $course->{call_time} !~ /fast/i && ( $course->{region} eq 'VAN' || $course->{region} eq 'SR' || $course->{region} eq 'DC' ||$course->{region} eq 'NY' || $course->{region} eq 'CGY' || $course->{region} eq 'MN' || $course->{region} eq 'TOR') ) {
         if ( $course->{day_of_week} eq 'Friday' || $course->{call_time} =~ m/weekend/i || $course->{call_time} eq '0'){
           $course->{weekend} = 1;
           $preferred_call_time = 'weekend'; 

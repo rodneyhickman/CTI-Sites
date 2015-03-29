@@ -50,10 +50,11 @@ while($row=mysql_fetch_assoc($fun)){
          
     $switchString = $row['city'];
 
+
     switch(true) {
         case stristr($switchString, 'Charlotte'):
         case stristr($switchString, 'Philadelphia'):
-        case stristr($switchString, 'Dallas/Fort Worth'):
+        case stristr($switchString, 'Irving'):
         case stristr($switchString, 'Fort Lauderdale'):
         case stristr($switchString, 'Seattle'):
         case stristr($switchString, 'Edmonton'):
@@ -96,7 +97,7 @@ while($row=mysql_fetch_assoc($pro)){
     $pro_courses[] = $row;
 }
 
-$syn = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$syn = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event NOT LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $syn_courses = array( );
 while($row=mysql_fetch_assoc($syn)){
     $row['location'] = $locations[$row['location']];
@@ -137,7 +138,7 @@ $courses_json = json_encode($courses);
 
 
 
-$fun_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$fun_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $fun_ft_courses = array( );
 while($row=mysql_fetch_assoc($fun_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
@@ -145,7 +146,7 @@ while($row=mysql_fetch_assoc($fun_ft)){
     $fun_ft_courses[] = $row;
 }
 
-$ful_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='4' or course_type_id='140') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$ful_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='4' or course_type_id='140') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $ful_ft_courses = array( );
 while($row=mysql_fetch_assoc($ful_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
@@ -153,7 +154,7 @@ while($row=mysql_fetch_assoc($ful_ft)){
     $ful_ft_courses[] = $row;
 }
 
-$bal_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='5' or course_type_id='141') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$bal_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='5' or course_type_id='141') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $bal_ft_courses = array( );
 while($row=mysql_fetch_assoc($bal_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
@@ -161,7 +162,7 @@ while($row=mysql_fetch_assoc($bal_ft)){
     $bal_ft_courses[] = $row;
 }
 
-$pro_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='6' or course_type_id='142') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$pro_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='6' or course_type_id='142') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $pro_ft_courses = array( );
 while($row=mysql_fetch_assoc($pro_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
@@ -169,7 +170,7 @@ while($row=mysql_fetch_assoc($pro_ft)){
     $pro_ft_courses[] = $row;
 }
 
-$syn_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0");
+$syn_ft = mysql_query("SELECT id,fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='7' or course_type_id='143') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'LON%' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' and event LIKE '%FAST%' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $syn_ft_courses = array( );
 while($row=mysql_fetch_assoc($syn_ft)){
     $row['location'] = $locations[$row['location']]; // change location code into something more meaningful, like the region_name and city (see above)
@@ -402,6 +403,7 @@ function courseCompareByLocation(a,b)
         return -1;
     if (a.city > b.city)
         return 1;
+ return 0;
 }
 
 CoursePackage.prototype.course = function(link,title,legend,label,op,courses) {
