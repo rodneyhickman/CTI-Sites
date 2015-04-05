@@ -563,10 +563,10 @@ sub make_region_iterator {
       region_code => 'FLFL',
       region_name => 'Ft. Lauderdale, FL',
     });  
-    # push(@regions,{ 
-    #   region_code => 'FLORL',
-    #   region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Orlando, FL</span>',
-    # });
+    push(@regions,{ 
+       region_code => 'FLORL',
+       region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Orlando, FL</span>',
+    });
   }
   if ( grep { $_->{region_code} eq 'NC'} @regions ) {
     # ### removing NC and adding NCCHA and NCRA
@@ -575,10 +575,10 @@ sub make_region_iterator {
       region_code => 'NCCHA',
       region_name => 'Charlotte, NC',
      });  
-     # push(@regions,{ 
-     #   region_code => 'NCRA',
-     #   region_name => 'North Carolina<br>&nbsp&nbsp;<span style="font-size:92%">Raleigh, NC</span>',
-     # });
+     push(@regions,{ 
+       region_code => 'NCRA',
+       region_name => 'North Carolina<br>&nbsp&nbsp;<span style="font-size:92%">Raleigh, NC</span>',
+     });
   }
     # ### done with business rules
 
@@ -676,12 +676,12 @@ sub make_grid_html {
         $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Series</b>';
         $region->{region_weekend} = '';
       } 
-      elsif ($region->{region_code} eq 'ORL'
-            or $region->{region_code} =~ m/ FT \z /xms
-          ) {
-        $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Cohort Series</b>';
-        $region->{region_weekend} = '';
-      } 
+      #elsif ($region->{region_code} eq 'ORL'
+      #      or $region->{region_code} =~ m/ FT \z /xms
+      #    ) {
+      #  $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Cohort Series</b>';
+      #  $region->{region_weekend} = '';
+      #} 
       elsif ( $region->{region_code} eq 'CA') { # don't display weekend for Palo Alto
         $region->{region_weekend} = '';
       }
@@ -991,11 +991,68 @@ sub make_series_iterator {
       $course_it->('ful'),
       $course_it->('fun'),
     ];
+    my $updated_series = update_completed_dates($series);
 ### series: $series
-    return $series;
+    return $updated_series;
   };
 }
 
+
+sub update_completed_dates {
+  my ($series) = @_;
+
+  # $series order is itb, pro, bal, ful, fun
+
+  # if series does not have synergy (itb), then don't bother
+  if ($series->[0]->{'date'} eq ''){
+    return $series;
+  }
+  
+  my $itb_fmid = $series->[0]->{'fmid'};
+
+
+  my $itb_date = $series->[0]->{'start_date_formatted'};
+  my $pro_date = $series->[1]->{'start_date_formatted'};
+  my $bal_date = $series->[2]->{'start_date_formatted'};
+  my $ful_date = $series->[3]->{'start_date_formatted'};
+  my $fun_date = $series->[4]->{'start_date_formatted'};
+
+
+  my $list_of_series =  $dbh->selectall_arrayref('SELECT * FROM course_series_archive WHERE itb_fmid=? LIMIT 1',{Columns=>{}},$itb_fmid);
+
+  my $archived_series = { };
+  if (scalar @$list_of_series > 0) {
+    $archived_series = $list_of_series->[0];
+  }
+
+  if ($pro_date =~ m/Completed/) {
+    $pro_date = $archived_series->{'pro_date'} || 'Completed';
+    $series->[1]->{'start_date_formatted'} = '<span style="text-decoration:line-through;">'.$pro_date.'</span>';
+  }
+
+  if ($bal_date =~ m/Completed/) {
+    $bal_date = $archived_series->{'bal_date'} || 'Completed';
+    $series->[2]->{'start_date_formatted'} = '<span style="text-decoration:line-through;">'.$bal_date.'</span>';
+  }
+  
+  if ($ful_date =~ m/Completed/) {
+    $ful_date = $archived_series->{'ful_date'} || 'Completed';
+    $series->[3]->{'start_date_formatted'} = '<span style="text-decoration:line-through;">'.$ful_date.'</span>';
+  }
+  
+  if ($fun_date =~ m/Completed/) {
+    $fun_date = $archived_series->{'fun_date'} || 'Completed';
+    $series->[4]->{'start_date_formatted'} = '<span style="text-decoration:line-through;">'.$fun_date.'</span>';
+  }
+    
+  # save the series if it isn't already
+  if (scalar @$list_of_series < 1) {
+    $dbh->do('INSERT INTO course_series_archive (itb_fmid,fun_date,ful_date,bal_date,pro_date,itb_date,updated_at) value (?,?,?,?,?,?,NOW())',undef,
+             $itb_fmid,$fun_date,$ful_date,$bal_date,$pro_date,$itb_date);
+  }
+
+  return $series;
+}
 
 sub make_course_iterator {
   my ($region) = @_;
@@ -1035,9 +1092,9 @@ sub make_course_iterator {
   elsif($region_code eq 'FLFL') {
     $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'FTL%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
   }
-  elsif($region_code eq 'FLORL') {
-    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND city LIKE 'orlando%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
-  }
+  #elsif($region_code eq 'FLORL') {
+  #  $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND city LIKE 'orlando%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
+  #}
   elsif($region_code eq 'NCCHA') {
     $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'CHAR%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'NC');
   }
@@ -1088,7 +1145,7 @@ sub make_course_iterator {
 
   my $date                   = '2040-01-01 00:00:00'; # a date far in the future
 
- 
+  
 
   return Iterator { # return the farthest course of type "$type"
     my $type        = shift;  # $type will be one of fun, ful, bal, pro, itb  (synergy = itb)
@@ -1203,6 +1260,8 @@ sub make_course_iterator {
 
       $date = $course->{start_date};
 
+      
+
       # if course starts today and it is past 2PM Pacific time, then show completed
       my $pst_hour = UnixDate( Date_ConvTZ(ParseDate("now"), "", "PST"), "%H");
       if ( Date_Cmp( ParseDate($course->{start_date}), ParseDate("today") ) == 0 and $pst_hour >= 14) {
@@ -1213,6 +1272,8 @@ sub make_course_iterator {
     elsif ($series_not_stand_alone) { # course is empty, most likely because it was in the past
       my $empty_course = { start_date_formatted => '<span style="text-decoration:line-through;">Completed</span>' };
       return $empty_course;
+      # search archive table for previous dates that are now completed
+      # get dates associated with Synergy (ITB) course
     }
     return undef;
   };

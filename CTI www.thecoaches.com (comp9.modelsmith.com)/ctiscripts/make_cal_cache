@@ -153,11 +153,11 @@ sub make_grid_html {
 
     my @grid_sorted = sort by_series_dates @grid;
 
-    # BUSINESS RULE EXCEPTION: rename for fast track
-    if ($region->{region_code} eq 'ORL' 
-        or $region->{region_code} =~ m/ FT \z /xms) {
-      $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK</b>';
-    }
+#    # BUSINESS RULE EXCEPTION: rename for fast track
+#    if ($region->{region_code} eq 'ORL' 
+#        or $region->{region_code} =~ m/ FT \z /xms) {
+#      $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK</b>';
+#    }
 
     my $vars = {
       region => $region,

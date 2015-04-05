@@ -37,7 +37,7 @@ while($row=mysql_fetch_assoc($result)){
     $locationsRegionCode[$row['site_code']] = $row['region_code'];   
 }
 
-$fun = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' AND location NOT LIKE 'Beijing' and event NOT LIKE '%FAST%' and region NOT LIKE 'GB' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
+$fun = mysql_query("SELECT fmid,location,start_date_formatted,end_date_formatted FROM event_calendar WHERE (course_type_id='3' or course_type_id='139') and event_calendar.location NOT LIKE '%HOLD' AND location NOT LIKE 'MAN%' AND location NOT LIKE 'Luxumbourg' AND location NOT LIKE 'SG%' AND location NOT LIKE 'Beijing' and event NOT LIKE '%FAST%' and region NOT LIKE 'GB' and (TO_DAYS(start_date)-TO_DAYS(NOW()))>0 ORDER BY start_date");
 $fun_courses = array( );
 while($row=mysql_fetch_assoc($fun)){
     
@@ -50,7 +50,6 @@ while($row=mysql_fetch_assoc($fun)){
          
     $switchString = $row['city'];
 
-
     switch(true) {
         case stristr($switchString, 'Charlotte'):
         case stristr($switchString, 'Philadelphia'):
@@ -61,6 +60,7 @@ while($row=mysql_fetch_assoc($fun)){
         case stristr($switchString, 'Halifax'):
         case stristr($switchString, 'London'):
         case stristr($switchString, 'San Diego'):
+        case stristr($switchString, 'Raleigh'):
             //case "New Jersey (city TBD)":
             $row['price'] = "$699"; // price must match the price in renderCourses
             break;
