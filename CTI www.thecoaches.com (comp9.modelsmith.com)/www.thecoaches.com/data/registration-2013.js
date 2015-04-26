@@ -61,9 +61,11 @@ while($row=mysql_fetch_assoc($fun)){
         case stristr($switchString, 'London'):
         case stristr($switchString, 'San Diego'):
         case stristr($switchString, 'Raleigh'):
+        case stristr($switchString, 'Orlando'):
             //case "New Jersey (city TBD)":
             $row['price'] = "$699"; // price must match the price in renderCourses
             break;
+                  
         default:
             $row['price'] = "$925"; // price must match the price in renderCourses
             break;

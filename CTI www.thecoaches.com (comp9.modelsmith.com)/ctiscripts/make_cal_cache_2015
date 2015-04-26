@@ -52,10 +52,11 @@ $state_list = {
         }
       },
       'Florida' => {
-        'regions' => [ 'FL', 'MIA', 'ORL' ],
+        'regions' => [ 'FL', 'MIA', 'ORL', 'FLORL' ],
         'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
-          'FLFL' => 'NEW CITY! Introductory Price $699USD'
+          'FLFL' => 'NEW CITY! Introductory Price $699USD',
+		  'FLORL' => 'NEW CITY! Introductory Price $699USD'		  
         }
       },
       'Georgia' => {
@@ -105,16 +106,17 @@ $state_list = {
         'regions' => [ 'NC' ],
         'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
         'region_messages' => {
-          'NCCHA' => 'NEW CITY! Introductory Price $699USD'
+          'NCCHA' => 'NEW CITY! Introductory Price $699USD',
+		  'NCRA' => 'NEW CITY! Introductory Price $699USD'		 
         }
       },
-      'Pennsylvania' => {
-        'regions' => [ 'PA' ],
-        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
-        'region_messages' => {
-          'PA' => 'NEW CITY! Introductory Price $699USD'
-        }
-      },
+#      'Pennsylvania' => {
+#        'regions' => [ 'PA' ],
+#        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Amy Anderson at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1612',
+#        'region_messages' => {
+#          'PA' => 'NEW CITY! Introductory Price $699USD'
+#        }
+#      },
       'Texas' => {
         'regions' => [ 'TX','DAL','DFW','AUS' ],
         'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Tammy Hibler at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1613',
@@ -142,9 +144,7 @@ $state_list = {
       },
       'British Columbia' => {
         'regions' => [ 'VAN' ],
-        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655',
-        'region_messages' => {
-        }
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Sue Jordon  at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1655'
       },
       'Nova Scotia' => {
         'regions' => [ 'HAL' ],
@@ -159,6 +159,7 @@ $state_list = {
         'region_messages' => {
           'LON' => 'NEW CITY! Introductory Price $699USD',
           'ON' => 'NEW CITY! Introductory Price $699USD'
+
         }
       },
     }
@@ -526,13 +527,13 @@ sub make_region_iterator {
 
   # ### doing business rule exceptions
 
-  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
+#  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
     # ### adding SRFT
-    push(@regions,{ 
-     region_code => 'SRFT',
-     region_name => 'San Francisco Bay Area, CA ',
-    });
-  }
+#    push(@regions,{ 
+#    region_code => 'SRFT',
+#     region_name => 'San Francisco Bay Area, CA ',
+#    });
+#  }
   if ( grep { $_->{region_code} eq 'DC'} @regions ) {
      # ### adding DCFT
      push(@regions,{ 
@@ -559,13 +560,13 @@ sub make_region_iterator {
     #   region_code => 'FLMIA',
     #   region_name => 'Miami, FL',
     # });
-    push(@regions,{ 
-      region_code => 'FLFL',
-      region_name => 'Ft. Lauderdale, FL',
-    });  
+    #push(@regions,{ 
+    #  region_code => 'FLFL',
+    #  region_name => 'Fort Lauderdale, FL',
+    #});  
     push(@regions,{ 
        region_code => 'FLORL',
-       region_name => 'Florida<br>&nbsp&nbsp;<span style="font-size:92%">Orlando, FL</span>',
+       region_name => '<span style="font-size:92%">Orlando, FL</span>',
     });
   }
   if ( grep { $_->{region_code} eq 'NC'} @regions ) {
@@ -1092,9 +1093,9 @@ sub make_course_iterator {
   elsif($region_code eq 'FLFL') {
     $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'FTL%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
   }
-  #elsif($region_code eq 'FLORL') {
-  #  $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND city LIKE 'orlando%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
-  #}
+  elsif($region_code eq 'FLORL') {
+    $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'ORL%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'FL');
+  }
   elsif($region_code eq 'NCCHA') {
     $courses1 =  $dbh->selectall_arrayref("SELECT * from event_calendar where region=? AND location LIKE 'CHAR%' and TO_DAYS(start_date)-TO_DAYS(now())>= 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC",{Columns=>{}},'NC');
   }
