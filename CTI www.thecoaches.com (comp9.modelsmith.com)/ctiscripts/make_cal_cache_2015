@@ -28,7 +28,7 @@ $state_list = {
     states => {
       'California' => {
         'regions' => [ 'SC', 'SJ', 'SR', 'SD' ],
-        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Carla Hamby at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1645',
+        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Carla Hamby at <a href="tel:+14155261645">1-415-526-1645</a> or <a href="mailto:Carla@coactive.com">Carla@coactive.com</a> ',
         'region_messages' => {
           'SCSD' => 'NEW CITY! Introductory Price $699USD',
         },
@@ -527,13 +527,13 @@ sub make_region_iterator {
 
   # ### doing business rule exceptions
 
-#  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
+  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
     # ### adding SRFT
-#    push(@regions,{ 
-#    region_code => 'SRFT',
-#     region_name => 'San Francisco Bay Area, CA ',
-#    });
-#  }
+    push(@regions,{ 
+    region_code => 'SRFT',
+     region_name => 'San Rafael, CA ',
+    });
+  }
   if ( grep { $_->{region_code} eq 'DC'} @regions ) {
      # ### adding DCFT
      push(@regions,{ 
@@ -672,6 +672,12 @@ sub make_grid_html {
 
     # BUSINESS RULE EXCEPTION: rename for orlando or any fast track
 	  if ($region->{region_code} eq 'DCFT'
+            and $region->{region_code} =~ m/ FT \z /xms
+          ) {
+        $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Series</b>';
+        $region->{region_weekend} = '';
+      } 
+	  elsif ($region->{region_code} eq 'SRFT'
             and $region->{region_code} =~ m/ FT \z /xms
           ) {
         $region->{region_name} .= '&nbsp;&nbsp;&nbsp;<b style="font-size:80%;color:#a00;">FAST TRACK Series</b>';
