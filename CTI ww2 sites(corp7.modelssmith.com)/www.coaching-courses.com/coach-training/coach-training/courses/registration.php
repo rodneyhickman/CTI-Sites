@@ -55,7 +55,7 @@ insert_social_bookmarking();
 </script> <noscript><a href="index.html#main-headline" class="accessibility-hide">Headline</a><span class="divider accessibility-hide">&nbsp;|&nbsp;</span></noscript>
         </li>
 
-        <li><a href="../../index.html">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
+        <li><a href="http://www.coaching-courses.com">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
 
         <li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&nbsp;|&nbsp;</span></li>
 
@@ -138,7 +138,7 @@ insert_social_bookmarking();
       <div id="content">
         <div id="main">
           <div id="breadcrumbs">
-            <p><span id="youarehere" class="accessibility-hide">You are here:&nbsp;</span> <a href="../../index.html">Home</a><span class="divider">&nbsp;||&nbsp;</span><a href="../index.html">Coach Training</a><span class="divider">&nbsp;||&nbsp;</span><a href="index.html" class="here">Courses</a></p>
+            <p><span id="youarehere" class="accessibility-hide">You are here:&nbsp;</span> <a href="http://www.coaching-courses.com">Home</a><span class="divider">&nbsp;||&nbsp;</span><a href="../index.html">Coach Training</a><span class="divider">&nbsp;||&nbsp;</span><a href="index.html" class="here">Courses</a></p>
           </div>
 
           <div class="pri">
@@ -317,7 +317,7 @@ function popUp(url)
           </div>
 
           <ul id="quick-nav">
-            <li><a href="../../index.html">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
+            <li><a href="http://www.coaching-courses.com">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
 
             <li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&nbsp;|&nbsp;</span></li>
 

@@ -43,7 +43,7 @@ insert_social_bookmarking();
 //]]>
 </script> <noscript><a href="index.html#main-headline" class="accessibility-hide">Headline</a><span class="divider accessibility-hide">&nbsp;|&nbsp;</span></noscript>
         </li>
-        <li><a href="../../index.html">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
+        <li><a href="http://www.coaching-courses.com">Home</a><span class="divider">&nbsp;|&nbsp;</span></li>
         <li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&nbsp;|&nbsp;</span></li>
         <li><a href="http://www.coactivenetwork.com/webx?ctiFindACoach@@" class="offsite">Find A Coach</a><span class="divider">&nbsp;|&nbsp;</span></li>
  <!--       <li><a href="../../contact/newsletter/index.html"><abbr title="Electronic Mail Newsletter">e-Newsletter</abbr></a><span class="divider">&nbsp;|&nbsp;</span></li>  -->
@@ -119,7 +119,7 @@ insert_social_bookmarking();
   
 <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
 <div id="breadcrumbs">
-  <p style="margin-bottom: 0"><span id="youarehere" class="accessibility-hide">You are here:&#160;</span> <a href="../index.html">Home</a><span class="divider">&#160;||&#160;</span><a href="index.html">Coach Training</a><span class="divider">&#160;||&#160;</span>Authentic Public Speaking for Co-Active Coaches</p>
+  <p style="margin-bottom: 0"><span id="youarehere" class="accessibility-hide">You are here:&#160;</span> <a href="http://www.coaching-courses.com">Home</a><span class="divider">&#160;||&#160;</span><a href="index.html">Coach Training</a><span class="divider">&#160;||&#160;</span>Authentic Public Speaking for Co-Active Coaches</p>
 </div>
 <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
 <h1 id="main-headline" style="margin-top: 0; margin-bottom: 0;"><span style="margin-bottom: 0">Presence: Authentic Public Speaking for Co-Active Coaches</span></h1>
@@ -255,7 +255,7 @@ function popUp(url)
 <div id="footer-legal">Copyright &#169; 2012 The Coaches Training Institute. All rights reserved. <a id="privacy-link" href="../../legal/privacy.html">Privacy Policy</a><span class="divider">&#160;|&#160;</span><a href="../../legal/disclosure.html">Disclosure</a></div>
 <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
 <ul id="quick-nav" style="margin-top: 0; margin-bottom: 0;">
-<li><a href="../../index.html">Home</a><span class="divider">&#160;|&#160;</span></li>
+<li><a href="http://www.coaching-courses.com">Home</a><span class="divider">&#160;|&#160;</span></li>
 <li><a href="http://www.coactivenetwork.com/" class="offsite">Co-active Network</a><span class="divider">&#160;|&#160;</span></li>
 <li><a href="../../jobs/index.html">Jobs</a><span class="divider">&#160;|&#160;</span></li>
 <li><a href="../../contact/index.html">Contact Us</a></li>
