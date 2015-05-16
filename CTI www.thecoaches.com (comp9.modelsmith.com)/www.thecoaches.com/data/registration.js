@@ -1,6 +1,6 @@
 /* registration.js
    by Thomas Beutel for Coaches Training Institute
-   Copyright 2012 Coaches Training Institute
+   Copyright 2015 Coaches Training Institute
 */
 <?php
 
@@ -404,7 +404,7 @@ CoursePackage.prototype.renderHeader = function(sing) {
     var html = '';
     if(sing){ // singapore prices
     if(this.number == 1 || this.number == 8){
-        html += this.header('Package A: Co-Active Coaching Skills Pathway','$6,700','$1,800','1060.00','a-6814'); //Package A: Co-Active Coaching Skills Pathway
+        html += this.header('Package A: Co-Active Coaching Skills Pathway','$6,700','$1,200','1060.00','a-6814'); //Package A: Co-Active Coaching Skills Pathway
     }
     if(this.number == 2 || this.number == 9){
         html += this.header('Package B: Certif	ied Professional Co-Active Coach Pathway','$11,800','$1,750','2000.00','a-6814'); //Package B: Certified Professional Co-Active Coach Pathway
@@ -413,22 +413,22 @@ CoursePackage.prototype.renderHeader = function(sing) {
         html += this.header('Individual Course: Fundamentals','$1,000','','1000.00','a-6814'); //Individual Course: 
     }
     if(this.number == 4){
-        html += this.header('Individual Course: Fulfillment','$1,600','','250.00','a-6814'); //Individual Course: 
+        html += this.header('Individual Course: Fulfillment','$1,725','','250.00','a-6814'); //Individual Course: 
     }
     if(this.number == 5){
-        html += this.header('Individual Course: Balance','$1,600','','250.00','a-6814'); //Individual Course: 
+        html += this.header('Individual Course: Balance','$1,725','','250.00','a-6814'); //Individual Course: 
     }
     if(this.number == 6){
-        html += this.header('Individual Course: Process','$1,600','','250.00','a-6814'); //Individual Course: 
+        html += this.header('Individual Course: Process','$1,725','','250.00','a-6814'); //Individual Course: 
     }
     if(this.number == 7){
         //html += this.header('Individual Course: Synergy','$1,600','','250.00','cart1161');
-        html += this.header('Individual Course: Synergy','$1,600','','250.00','a-6814'); //Individual Course: 
+        html += this.header('Individual Course: Synergy','$1,725','','250.00','a-6814'); //Individual Course: 
     }
     }
     else { // USA prices
     if(this.number == 1 || this.number == 8){
-        html += this.header('Package A: Co-Active Coaching Skills Pathway','$5,225','$1,400','985.00','a-6814'); //Package A: Co-Active Coaching Skills Pathway
+        html += this.header('Package A: Co-Active Coaching Skills Pathway','$5,225','$1,400','1800.00','a-6814'); //Package A: Co-Active Coaching Skills Pathway
     }
     if(this.number == 2 || this.number == 9){
         html += this.header('Package B: Certified Professional Co-Active Coach Pathway','$10,225','$2,050','1185.00','a-6814'); //Package B: Certified Professional Co-Active Coach Pathway
@@ -490,7 +490,7 @@ CoursePackage.prototype.header = function(course,price,savings,deposit,cart){
 CoursePackage.prototype.renderPolicies = function() {
     var html = '';
     html += '<p><input id="agree" name="agree_to_policies" type="checkbox"> Yes, I have read and agree to ';
-    html += '<a class="pricingdetails" href="/docs/_temp/policy-2013.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
+    html += '<a class="pricingdetails" href="/policies" target="_blank" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
     return html;
 }
 
@@ -710,7 +710,7 @@ function adjustTotalPrice(form){
    bal_price = 1600; bal_discount = 350;
    pro_price = 1600; pro_discount = 350;
    itb_price = 1600; itb_discount = 350;
-   form.item.value = "a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $6,000 - Package A^985.00^1^^^^^"; 
+   form.item.value = "a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $6,700 - Package A^1800.00^1^^^^^"; 
  }
  else if(form.pkg && (form.pkg.value=="01" || form.pkg.value=="08")){
    package_deposit = 985;
@@ -755,36 +755,36 @@ else if(form.pkg && (form.pkg.value=="10" || form.pkg.value=="11")){
    package_deposit = fun_price;
  } 
  else if(form.pkg && form.pkg.value=="04" && singaporeSelected(form)){
-   ful_price = 1600; ful_discount = 350;
+   ful_price = 1725; ful_discount = 250;
    package_deposit = ful_discount;
- form.item.value = "a-6814^A1FUL^Course 2: Fulfillment USD $1,600^350.00^1^^^^^";
+ form.item.value = "a-6814^A1FUL^Course 2: Fulfillment USD $1,725^250.00^1^^^^^";
  }
  else if(form.pkg && form.pkg.value=="04"){
    ful_price = 1350; ful_discount = 315;
    package_deposit = ful_discount;
  } 
  else if(form.pkg && form.pkg.value=="05" && singaporeSelected(form)){
-   bal_price = 1600; bal_discount = 350;
+   bal_price = 1600725; bal_discount = 250;
    package_deposit = bal_discount;
- form.item.value = "a-6814^A1BAL^Course 3: Balance USD $1,600^350.00^1^^^^^";
+ form.item.value = "a-6814^A1BAL^Course 3: Balance USD $1,725^250.00^1^^^^^";
  }
  else if(form.pkg && form.pkg.value=="05"){
    bal_price = 1350; bal_discount = 315;
    package_deposit = bal_discount;
  } 
  else if(form.pkg && form.pkg.value=="06" && singaporeSelected(form)){
-   pro_price = 1600; pro_discount = 350;
+   pro_price = 1725; pro_discount = 250;
    package_deposit = pro_discount;
- form.item.value = "a-6814^A1PRO^Course 4: Process USD $1,600^350.00^1^^^^^";
+ form.item.value = "a-6814^A1PRO^Course 4: Process USD $1,725^250.00^1^^^^^";
  }
  else if(form.pkg && form.pkg.value=="06"){
    pro_price = 1350; pro_discount = 315;
    package_deposit = pro_discount;
  } 
  else if(form.pkg && form.pkg.value=="07" && singaporeSelected(form)){
-   itb_price = 1600; itb_discount = 350;
+   itb_price = 1725; itb_discount = 250;
    package_deposit = itb_discount;
- form.item.value = "a-6814^A1ITB^Course 5: Synergy USD $1,600^350.00^1^^^^^";
+ form.item.value = "a-6814^A1ITB^Course 5: Synergy USD $1,725^250.00^1^^^^^";
  } 
  else if(form.pkg && form.pkg.value=="07"){
    itb_price = 1350; itb_discount = 315;

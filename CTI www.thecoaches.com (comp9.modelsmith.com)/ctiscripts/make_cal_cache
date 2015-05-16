@@ -282,10 +282,10 @@ sub make_region_iterator {
   # uncomment the following, and add the series above in make_series_iterator
 
   if ($country eq 'United States') {  
-    push(@regions,{ 
-      region_code => 'SRFT',
-      region_name => 'San Francisco Bay Area, CA ',
-    });
+ #   push(@regions,{ 
+ #     region_code => 'SRFT',
+ #     region_name => 'San Francisco Bay Area, CA ',
+ #   });
     push(@regions,{ 
       region_code => 'SCOC',
       region_name => 'Orange County, CA ',
@@ -324,9 +324,9 @@ sub make_course_iterator {
   my $region_code = $region->{region_code}; 
 
   # exceptions
-  if($region_code eq 'SRFT') {
-    $region_code = 'SR';
-  }
+#  if($region_code eq 'SRFT') {
+#    $region_code = 'SR';
+#  }
 
   my $courses1 =  $dbh->selectall_arrayref('SELECT * from event_calendar where fmid!=15745 AND region=? and TO_DAYS(start_date)-TO_DAYS(now())> 0 and (course_type_id=3 OR course_type_id=4 OR course_type_id=5 OR course_type_id=6 OR course_type_id=7) ORDER BY start_date DESC',{Columns=>{}},$region_code);
 

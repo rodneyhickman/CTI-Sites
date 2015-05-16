@@ -65,12 +65,12 @@ $state_list = {
         'region_messages' => {
         }
       },
-	   'Hawaii' => {
-        'regions' => [ 'HI' ],
-        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Jayson Krause at <a href="tel:+18006916008">1-800-691-6008</a>, etc. 1674 or contact <a href="mailto:admissions@coactive.com">Admissions@coactive.com</a>',
-        'region_messages' => {         
-        }
-      },
+#	   'Hawaii' => {
+#        'regions' => [ 'HI' ],
+#        'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Jayson Krause at <a href="tel:+18006916008">1-800-691-6008</a>, etc. 1674 or contact <a href="mailto:admissions@coactive.com">Admissions@coactive.com</a>',
+#        'region_messages' => {         
+#        }
+#      },
       'Illinois' => {
         'regions' => [ 'CHI' ],
         'contact' => 'For more information <b>and future dates</b>, please contact your Regional Program Advisor, Dana Fulenwider at <a href="tel:+18006916008">1-800-691-6008</a>, ext. 1608',
@@ -527,13 +527,13 @@ sub make_region_iterator {
 
   # ### doing business rule exceptions
 
-  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
+#  if ( grep { $_->{region_code} eq 'SR'} @regions ) {
     # ### adding SRFT
-    push(@regions,{ 
-    region_code => 'SRFT',
-     region_name => 'San Rafael, CA ',
-    });
-  }
+#    push(@regions,{ 
+#    region_code => 'SRFT',
+#     region_name => 'San Francisco Bay Area, CA ',
+#    });
+#  }
   if ( grep { $_->{region_code} eq 'DC'} @regions ) {
      # ### adding DCFT
      push(@regions,{ 

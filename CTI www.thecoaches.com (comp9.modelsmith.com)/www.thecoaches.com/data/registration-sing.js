@@ -411,7 +411,7 @@ CoursePackage.prototype.header = function(course,price,savings,deposit,cart){
 CoursePackage.prototype.renderPolicies = function() {
     var html = '';
     html += '<p><input id="agree" name="agree_to_policies" type="checkbox"> Yes, I have read and agree to ';
-    html += '<a class="pricingdetails" href="/docs/_temp/policy.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
+    html += '<a class="pricingdetails" href="/policies" target="_blank" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
     return html;
 }
 
@@ -533,7 +533,7 @@ function adjustTotalPrice(form){
    bal_price = 1600; bal_discount = 350;
    pro_price = 1600; pro_discount = 350;
    itb_price = 1600; itb_discount = 350;
-   form.item.value = "a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $6,000 - Package A^985.00^1^^^^^"; 
+   form.item.value = "a-6814^A2FUN^Co-Active Coaching Skills Pathway, USD $6,700 - Package A^1800.00^1^^^^^"; 
  }
  else if(form.pkg && (form.pkg.value=="01" || form.pkg.value=="08")){
    package_deposit = 985;
@@ -581,7 +581,7 @@ else if(form.pkg && (form.pkg.value=="02" || form.pkg.value=="09")){
  else if(form.pkg && form.pkg.value=="05" && singaporeSelected(form)){
    bal_price = 1600; bal_discount = 350;
    package_deposit = bal_discount;
- form.item.value = "a-6814^A1BAL^Course 3: Balance USD $1,600^350.00^1^^^^^";
+ form.item.value = "a-6814^A1BAL^Course 3: Balance USD $1,725^250.00^1^^^^^";
  }
  else if(form.pkg && form.pkg.value=="05"){
    bal_price = 1350; bal_discount = 250;

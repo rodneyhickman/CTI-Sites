@@ -564,7 +564,7 @@ CoursePackage.prototype.header = function(course,price,savings,deposit,cart){
 CoursePackage.prototype.renderPolicies = function() {
     var html = '';
     html += '<p><input id="agree" name="agree_to_policies" type="checkbox"> Yes, I have read and agree to ';
-    html += '<a class="pricingdetails" href="/docs/_temp/policy-2013.html" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
+    html += '<a class="pricingdetails" href="/policies" target="_blank" rel="lyteframe" rev="width: 800px; height: 500px; scrolling: auto;" title="CTI Policies">CTI Policies</a></p>';
     return html;
 }
 

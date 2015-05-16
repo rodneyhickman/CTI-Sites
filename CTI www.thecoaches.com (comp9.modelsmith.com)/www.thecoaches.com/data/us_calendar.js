@@ -74,5 +74,6 @@ $html = preg_replace('/\n/'," \\\n",$html); // change <cr> to \<cr>
 $html = preg_replace('/\'/'," \\'",$html);  // change \' to \\'   
 
 ?>
+<!-- generated: <?php echo date('Y-m-d H:i:s') ?> -->
 document.write('<?php echo $html ?>');
 <?php echo $scripts; ?>
