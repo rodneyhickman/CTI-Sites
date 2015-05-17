@@ -560,10 +560,10 @@ sub make_region_iterator {
     #   region_code => 'FLMIA',
     #   region_name => 'Miami, FL',
     # });
-    #push(@regions,{ 
-    #  region_code => 'FLFL',
-    #  region_name => 'Fort Lauderdale, FL',
-    #});  
+    push(@regions,{ 
+      region_code => 'FLFL',
+      region_name => 'Fort Lauderdale, FL',
+    });  
     push(@regions,{ 
        region_code => 'FLORL',
        region_name => '<span style="font-size:92%">Orlando, FL</span>',
@@ -578,7 +578,7 @@ sub make_region_iterator {
      });  
      push(@regions,{ 
        region_code => 'NCRA',
-       region_name => 'North Carolina<br>&nbsp&nbsp;<span style="font-size:92%">Raleigh, NC</span>',
+       region_name => '<span style="font-size:92%">Raleigh, NC</span>',
      });
   }
     # ### done with business rules
@@ -1266,8 +1266,6 @@ sub make_course_iterator {
        # if $course->{start_date_formatted} !~ m/May/i; # shorten January to Jan, etc.
 
       $date = $course->{start_date};
-
-      
 
       # if course starts today and it is past 2PM Pacific time, then show completed
       my $pst_hour = UnixDate( Date_ConvTZ(ParseDate("now"), "", "PST"), "%H");
